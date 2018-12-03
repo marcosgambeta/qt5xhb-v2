@@ -1,0 +1,130 @@
+#
+# Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+#
+# Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+#
+# Makefile for Android
+#
+
+QT_BIN_DIR = $(QTDIR)/bin
+QT_INC_DIR = $(QTDIR)/include
+QT_LIB_DIR = $(QTDIR)/lib
+
+# lista de módulos
+include mak/modules1.mak
+
+# checa presença dos módulos na instalação do Qt Framework
+include mak/modules2.mak
+
+#
+# Configuração do Harbour
+#
+
+HB_BIN_DIR = $(HBDIR)/bin
+HB_INC_DIR = $(HBDIR)/include
+
+#
+# Configuração do Qt5xHb
+#
+
+QT5XHB_INC_DIR = include
+QT5XHB_OBJ_DIR = obj/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_LIB_DIR = lib/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_SRC_DIR = source
+
+#
+# Extensões para objetos e bibliotecas
+#
+
+OBJEXT = .o
+LIBEXT = .a
+LIBPRE = lib
+
+HB = $(HB_BIN_DIR)/harbour
+
+PRGFLAGS = -n -w3 -gc3
+
+PRGINCLUDES = -I$(QT5XHB_INC_DIR) -I$(HB_INC_DIR) 
+
+#
+# Configuração do compilador C++
+#
+
+CC = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-g++
+
+CFLAGS =
+CFLAGS += -c -Wno-psabi -march=armv5te -mtune=xscale -msoft-float -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -std=gnu++0x -O2 -Os -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Wall -Wno-psabi -W -D_REENTRANT -fPIE
+CFLAGS += -DQT_OS_ANDROID_GCC_48_WORKAROUND
+CFLAGS += -DQT_NO_DEBUG
+# ative a linha abaixo para compilar sem checagem de parametros
+# CFLAGS += -DQT5XHB_DONT_CHECK_PARAMETERS
+include mak/modules3.mak
+
+CINCLUDES =
+CINCLUDES += -I$(QTDIR)/mkspecs/android-g++
+CINCLUDES += -I$(QT_INC_DIR)
+include mak/modules4.mak
+CINCLUDES += -I$(NDKDIR)/sources/cxx-stl/gnu-libstdc++/$(NDKGCCVER)/include
+CINCLUDES += -I$(NDKDIR)/sources/cxx-stl/gnu-libstdc++/$(NDKGCCVER)/libs/$(NDKGCCARCH)/include
+CINCLUDES += -I$(NDKDIR)/platforms/android-$(NDKAPIVER)/arch-$(NDKAPIARCH)/usr/include
+CINCLUDES += -I$(QT5XHB_INC_DIR)
+CINCLUDES += -I$(QT5XHB_SRC_DIR)
+CINCLUDES += -I$(HB_INC_DIR)
+
+#
+# Configuração do ar
+#
+
+LINK = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-ar
+LFLAGS = rc
+
+#
+# Configuração do moc
+#
+
+MOC = $(QT_BIN_DIR)/moc
+
+MOCFLAGS =
+MOCFLAGS += -DQT_OS_ANDROID_GCC_48_WORKAROUND
+MOCFLAGS += -DQT_NO_DEBUG
+include mak/modules5.mak
+
+MOCINCLUDES =
+MOCINCLUDES += -I$(QTDIR)/mkspecs/android-g++
+MOCINCLUDES += -I$(QT_INC_DIR)
+include mak/modules6.mak
+
+#
+# Objetos
+#
+
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/dummy$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qtdefs$(OBJEXT)
+
+include mak/modules7.mak
+
+#
+# Bibliotecas
+#
+
+ALLLIBS =
+include mak/modules8.mak
+
+#
+# Regras para o make
+#
+
+all: $(ALLLIBS)
+
+LINK_CMD = $(LINK) $(LFLAGS) $@ $^
+HB_CMD = $(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+CC_CMD = $(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
+
+include mak/rules1.mak
+include mak/rules2.mak
+
+include mak/modules9.mak

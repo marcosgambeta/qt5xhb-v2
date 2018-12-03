@@ -1,0 +1,109 @@
+#
+# Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+#
+# Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+#
+# Makefile for Windows/MSVC
+#
+
+QT_BIN_DIR = $(QTDIR)/bin
+QT_INC_DIR = $(QTDIR)/include
+QT_LIB_DIR = $(QTDIR)/lib
+
+# lista de módulos
+include mak/modules1.mak
+
+# checa presença dos módulos na instalação do Qt Framework
+include mak/modules2.mak
+
+# pastas do [x]Harbour
+HB_BIN_DIR = $(HBDIR)/bin
+HB_INC_DIR = $(HBDIR)/include
+
+# pastas do Qt5xHb
+QT5XHB_INC_DIR = include
+QT5XHB_OBJ_DIR = obj/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_LIB_DIR = lib/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_SRC_DIR = source
+
+# extensões para objetos e bibliotecas
+OBJEXT = .obj
+LIBEXT = .lib
+LIBPRE =
+
+HB = $(HB_BIN_DIR)/harbour
+
+# PRGFLAGS
+PRGFLAGS = -n -w3 -gc3
+ifeq ($(HBCOMP),xharbour)
+   PRGFLAGS = -n -w2
+endif
+
+# PRGINCLUDES
+PRGINCLUDES = -I$(QT5XHB_INC_DIR) -I$(HB_INC_DIR) 
+
+CC = cl
+
+# CFLAGS
+CFLAGS = /c /nologo /TP -DUNICODE /EHsc
+CFLAGS += -DQT_DLL
+CFLAGS += -DQT_NO_DEBUG
+CFLAGS += -DQT_THREAD_SUPPORT
+ifeq ($(HBCOMP),xharbour)
+   CFLAGS += -DNOMINMAX
+endif
+# ative a linha abaixo para compilar sem checagem de parametros
+# CFLAGS += -DQT5XHB_DONT_CHECK_PARAMETERS
+include mak/modules3.mak
+
+# CINCLUDES
+CINCLUDES =
+CINCLUDES += -I$(QT_INC_DIR)
+ifneq ($(wildcard $(QT_INC_DIR)/QtANGLE/.*),)
+   CINCLUDES += -I$(QT_INC_DIR)/QtANGLE
+endif
+include mak/modules4.mak
+CINCLUDES += -I$(QT5XHB_INC_DIR)
+CINCLUDES += -I$(QT5XHB_SRC_DIR)
+CINCLUDES += -I$(HB_INC_DIR)
+
+LINK = link
+LFLAGS = /lib
+
+# pasta do moc
+MOC = $(QT_BIN_DIR)/moc
+
+MOCFLAGS =
+MOCFLAGS += -DQT_NO_DEBUG
+include mak/modules5.mak
+
+MOCINCLUDES =
+MOCINCLUDES += -I$(QT_INC_DIR)
+include mak/modules6.mak
+
+# include mak/*.mak
+include mak/modules7.mak
+
+# OBJECTS
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/dummy$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qtdefs$(OBJEXT)
+
+# ALLLIBS
+ALLLIBS =
+include mak/modules8.mak
+
+all: $(ALLLIBS)
+
+LINK_CMD = $(LINK) $(LFLAGS) /out:$@ $^
+HB_CMD = $(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+CC_CMD = $(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+
+include mak/rules1.mak
+include mak/rules2.mak
+
+# include mak/*Mocs.mak
+include mak/modules9.mak
