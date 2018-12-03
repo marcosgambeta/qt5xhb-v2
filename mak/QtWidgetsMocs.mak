@@ -4,8 +4,6 @@
 # Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QAbstractButtonSlotsMoc.cpp           : $(QT5XHB_SRC_DIR)/QtWidgets/QAbstractButtonSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QAbstractItemDelegateSlotsMoc.cpp     : $(QT5XHB_SRC_DIR)/QtWidgets/QAbstractItemDelegateSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QAbstractItemViewSlotsMoc.cpp         : $(QT5XHB_SRC_DIR)/QtWidgets/QAbstractItemViewSlots.h
