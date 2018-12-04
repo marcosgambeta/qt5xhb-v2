@@ -152,4 +152,11 @@ $signal=5,2,0|error(QBluetoothSocket::SocketError)
 $signal=5,2,0|stateChanged(QBluetoothSocket::SocketState)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|connected()
+$signal=5,2,0|disconnected()
+$signal=5,2,0|error( QBluetoothSocket::SocketError error )
+$signal=5,2,0|stateChanged( QBluetoothSocket::SocketState state )
+$endSlotsClass
+
 #pragma ENDDUMP

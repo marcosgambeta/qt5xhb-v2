@@ -101,4 +101,9 @@ $signal=5,2,0|newConnection()
 $signal=5,2,0|error(QBluetoothServer::Error)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|newConnection()
+$signal=5,2,0|error( QBluetoothServer::Error error )
+$endSlotsClass
+
 #pragma ENDDUMP

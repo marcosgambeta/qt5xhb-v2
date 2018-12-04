@@ -41,4 +41,8 @@ $beginSignals
 $signal=5,2,0|finished(QBluetoothTransferReply*)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|finished( QBluetoothTransferReply * reply )
+$endSlotsClass
+
 #pragma ENDDUMP

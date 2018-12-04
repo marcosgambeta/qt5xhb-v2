@@ -85,4 +85,11 @@ $signal=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
 $signal=5,2,0|canceled()
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|deviceDiscovered( const QBluetoothDeviceInfo & info )
+$signal=5,2,0|finished()
+$signal=5,2,0|error( QBluetoothDeviceDiscoveryAgent::Error error )
+$signal=5,2,0|canceled()
+$endSlotsClass
+
 #pragma ENDDUMP
