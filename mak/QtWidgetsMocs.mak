@@ -22,8 +22,6 @@ $(QT5XHB_OBJ_DIR)/QButtonGroupSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtWi
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QCalendarWidgetSlotsMoc.cpp           : $(QT5XHB_SRC_DIR)/QtWidgets/QCalendarWidgetSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QCheckBoxSlotsMoc.cpp                 : $(QT5XHB_SRC_DIR)/QtWidgets/QCheckBoxSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QColorDialogSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtWidgets/QColorDialogSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QColumnViewSlotsMoc.cpp               : $(QT5XHB_SRC_DIR)/QtWidgets/QColumnViewSlots.h

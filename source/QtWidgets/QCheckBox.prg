@@ -50,6 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCheckBox>
@@ -259,11 +260,56 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
   }
 }
 
-void QCheckBoxSlots_connect_signal ( const QString & signal, const QString & slot );
-
 HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
 {
-  QCheckBoxSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCheckBox * sender = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "stateChanged(int)" );
+
+      QObject::connect(sender, &QCheckBox::stateChanged, [sender](int state) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "stateChanged(int)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QCHECKBOX" );
+          PHB_ITEM pstate = hb_itemPutNI( NULL, state );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+          hb_itemRelease( psender );
+          hb_itemRelease( pstate );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCheckBox * sender = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(int)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 #pragma ENDDUMP
