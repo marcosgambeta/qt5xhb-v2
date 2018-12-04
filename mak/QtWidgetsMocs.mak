@@ -12,8 +12,6 @@ $(QT5XHB_OBJ_DIR)/QAbstractSliderSlotsMoc.cpp           : $(QT5XHB_SRC_DIR)/QtWi
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QAbstractSpinBoxSlotsMoc.cpp          : $(QT5XHB_SRC_DIR)/QtWidgets/QAbstractSpinBoxSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QActionSlotsMoc.cpp                   : $(QT5XHB_SRC_DIR)/QtWidgets/QActionSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QActionGroupSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtWidgets/QActionGroupSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QApplicationSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtWidgets/QApplicationSlots.h
@@ -37,8 +35,6 @@ $(QT5XHB_OBJ_DIR)/QDateTimeEditSlotsMoc.cpp             : $(QT5XHB_SRC_DIR)/QtWi
 $(QT5XHB_OBJ_DIR)/QDesktopWidgetSlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtWidgets/QDesktopWidgetSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QDialogButtonBoxSlotsMoc.cpp          : $(QT5XHB_SRC_DIR)/QtWidgets/QDialogButtonBoxSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QDialogSlotsMoc.cpp                   : $(QT5XHB_SRC_DIR)/QtWidgets/QDialogSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QDockWidgetSlotsMoc.cpp               : $(QT5XHB_SRC_DIR)/QtWidgets/QDockWidgetSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@

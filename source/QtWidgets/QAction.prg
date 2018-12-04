@@ -107,6 +107,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAction>
@@ -1625,26 +1626,208 @@ HB_FUNC_STATIC( QACTION_TRIGGER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QActionSlots_connect_signal ( const QString & signal, const QString & slot );
-
 HB_FUNC_STATIC( QACTION_ONCHANGED )
 {
-  QActionSlots_connect_signal( "changed()", "changed()" );
+  if( hb_pcount() == 1 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "changed()" );
+
+      QObject::connect(sender, &QAction::changed, [sender]() {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "changed()" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QACTION" );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+          hb_itemRelease( psender );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "changed()" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QACTION_ONHOVERED )
 {
-  QActionSlots_connect_signal( "hovered()", "hovered()" );
+  if( hb_pcount() == 1 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "hovered()" );
+
+      QObject::connect(sender, &QAction::hovered, [sender]() {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "hovered()" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QACTION" );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+          hb_itemRelease( psender );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "hovered()" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QACTION_ONTOGGLED )
 {
-  QActionSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "toggled(bool)" );
+
+      QObject::connect(sender, &QAction::toggled, [sender](bool checked) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "toggled(bool)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QACTION" );
+          PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
+          hb_itemRelease( psender );
+          hb_itemRelease( pchecked );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "toggled(bool)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 {
-  QActionSlots_connect_signal( "triggered(bool)", "triggered(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "triggered(bool)" );
+
+      QObject::connect(sender, &QAction::triggered, [sender](bool checked) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "triggered(bool)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QACTION" );
+          PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
+          hb_itemRelease( psender );
+          hb_itemRelease( pchecked );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "triggered(bool)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 #pragma ENDDUMP

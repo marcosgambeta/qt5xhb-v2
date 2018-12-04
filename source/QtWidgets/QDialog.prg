@@ -65,6 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDialog>
@@ -560,21 +561,157 @@ HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDialogSlots_connect_signal ( const QString & signal, const QString & slot );
-
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
-  QDialogSlots_connect_signal( "accepted()", "accepted()" );
+  if( hb_pcount() == 1 )
+  {
+    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "accepted()" );
+
+      QObject::connect(sender, &QDialog::accepted, [sender]() {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "accepted()" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QDIALOG" );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+          hb_itemRelease( psender );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "accepted()" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+
 }
 
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
-  QDialogSlots_connect_signal( "finished(int)", "finished(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "finished(int)" );
+
+      QObject::connect(sender, &QDialog::finished, [sender](int result) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "finished(int)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QDIALOG" );
+          PHB_ITEM presult = hb_itemPutNI( NULL, result );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, presult );
+          hb_itemRelease( psender );
+          hb_itemRelease( presult );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(int)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
-  QDialogSlots_connect_signal( "rejected()", "rejected()" );
+  if( hb_pcount() == 1 )
+  {
+    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "rejected()" );
+
+      QObject::connect(sender, &QDialog::rejected, [sender]() {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "rejected()" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QDIALOG" );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+          hb_itemRelease( psender );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rejected()" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 #pragma ENDDUMP
