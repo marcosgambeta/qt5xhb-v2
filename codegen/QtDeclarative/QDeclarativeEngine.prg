@@ -113,4 +113,9 @@ $signal=|quit()
 $signal=|warnings(QList<QDeclarativeError>)
 $endSignals
 
+$beginSlotsClass
+$signal=|quit()
+$signal=|warnings( const QList<QDeclarativeError> & warnings )
+$endSlotsClass
+
 #pragma ENDDUMP

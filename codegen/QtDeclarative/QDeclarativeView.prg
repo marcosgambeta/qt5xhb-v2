@@ -94,4 +94,9 @@ $signal=|sceneResized(QSize)
 $signal=|statusChanged(QDeclarativeView::Status)
 $endSignals
 
+$beginSlotsClass
+$signal=|sceneResized( QSize size )
+$signal=|statusChanged( QDeclarativeView::Status status )
+$endSlotsClass
+
 #pragma ENDDUMP

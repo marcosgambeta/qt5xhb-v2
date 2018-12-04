@@ -111,4 +111,9 @@ $signal=|progressChanged(qreal)
 $signal=|statusChanged(QDeclarativeComponent::Status)
 $endSignals
 
+$beginSlotsClass
+$signal=|progressChanged( qreal progress )
+$signal=|statusChanged( QDeclarativeComponent::Status status )
+$endSlotsClass
+
 #pragma ENDDUMP

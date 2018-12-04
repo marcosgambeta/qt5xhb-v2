@@ -60,4 +60,8 @@ $beginSignals
 $signal=|valueChanged(QString,QVariant)
 $endSignals
 
+$beginSlotsClass
+$signal=|valueChanged( const QString & key, const QVariant & value )
+$endSlotsClass
+
 #pragma ENDDUMP
