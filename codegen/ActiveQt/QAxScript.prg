@@ -86,4 +86,13 @@ $endGroup
 $signal=|stateChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|entered()
+$signal=|error( int code, const QString & description, int sourcePosition, const QString & sourceText )
+$signal=|finished()
+$signal=|finished( const QVariant & result )
+$signal=|finished( int code, const QString & source, const QString & description, const QString & help )
+$signal=|stateChanged( int state )
+$endSlotsClass
+
 #pragma ENDDUMP
