@@ -177,4 +177,15 @@ $signal=|rotationYChanged(float)
 $signal=|rotationZChanged(float)
 $endSignals
 
+$beginSlotsClass
+$signal=|scaleChanged( float scale )
+$signal=|scale3DChanged( const QVector3D & scale )
+$signal=|rotationChanged( const QQuaternion & rotation )
+$signal=|translationChanged( const QVector3D & translation )
+$signal=|matrixChanged()
+$signal=|rotationXChanged( float rotationX )
+$signal=|rotationYChanged( float rotationY )
+$signal=|rotationZChanged( float rotationZ )
+$endSlotsClass
+
 #pragma ENDDUMP

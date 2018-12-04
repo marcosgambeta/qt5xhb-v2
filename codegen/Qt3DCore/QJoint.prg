@@ -142,4 +142,15 @@ $signal=|rotationZChanged(float)
 $signal=|nameChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|scaleChanged( const QVector3D & scale )
+$signal=|rotationChanged( const QQuaternion & rotation )
+$signal=|translationChanged( const QVector3D & translation )
+$signal=|inverseBindMatrixChanged( const QMatrix4x4 & inverseBindMatrix )
+$signal=|rotationXChanged( float rotationX )
+$signal=|rotationYChanged( float rotationY )
+$signal=|rotationZChanged( float rotationZ )
+$signal=|nameChanged( const QString & name )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -58,4 +58,10 @@ $signal=|addedToEntity(QEntity*)
 $signal=|removedFromEntity(QEntity*)
 $endSignals
 
+$beginSlotsClass
+$signal=|shareableChanged( bool isShareable )
+$signal=|addedToEntity( QEntity * entity )
+$signal=|removedFromEntity( QEntity * entity )
+$endSlotsClass
+
 #pragma ENDDUMP

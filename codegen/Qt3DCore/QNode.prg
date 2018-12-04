@@ -116,4 +116,11 @@ $signal=|defaultPropertyTrackingModeChanged(QNode::PropertyTrackingMode)
 $signal=|nodeDestroyed()
 $endSignals
 
+$beginSlotsClass
+$signal=|parentChanged( QObject * parent )
+$signal=|enabledChanged( bool enabled )
+$signal=|defaultPropertyTrackingModeChanged( QNode::PropertyTrackingMode mode )
+$signal=|nodeDestroyed()
+$endSlotsClass
+
 #pragma ENDDUMP

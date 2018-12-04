@@ -49,4 +49,8 @@ $beginSignals
 $signal=|jointCountChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|jointCountChanged( int jointCount )
+$endSlotsClass
+
 #pragma ENDDUMP
