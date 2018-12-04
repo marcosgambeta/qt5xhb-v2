@@ -86,4 +86,10 @@ $signal=|serviceUnregistered(QString)
 $signal=|serviceOwnerChanged(QString,QString,QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|serviceRegistered( const QString & service )
+$signal=|serviceUnregistered( const QString & service )
+$signal=|serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
+$endSlotsClass
+
 #pragma ENDDUMP

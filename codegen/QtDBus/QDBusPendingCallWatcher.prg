@@ -42,4 +42,8 @@ $beginSignals
 $signal=|finished(QDBusPendingCallWatcher*)
 $endSignals
 
+$beginSlotsClass
+$signal=|finished( QDBusPendingCallWatcher * self )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -58,4 +58,8 @@ $beginSignals
 $signal=|newConnection(QDBusConnection)
 $endSignals
 
+$beginSlotsClass
+$signal=|newConnection( const QDBusConnection & connection )
+$endSlotsClass
+
 #pragma ENDDUMP

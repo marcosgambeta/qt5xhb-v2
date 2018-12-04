@@ -71,4 +71,11 @@ $signal=|serviceOwnerChanged(QString,QString,QString)
 $signal=|callWithCallbackFailed(QDBusError,QDBusMessage)
 $endSignals
 
+$beginSlotsClass
+$signal=|serviceRegistered( const QString & service )
+$signal=|serviceUnregistered( const QString & service )
+$signal=|serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
+$signal=|callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
+$endSlotsClass
+
 #pragma ENDDUMP
