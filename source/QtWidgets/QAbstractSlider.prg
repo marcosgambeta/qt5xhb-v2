@@ -71,6 +71,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractSlider>
@@ -695,36 +696,314 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QAbstractSliderSlots_connect_signal ( const QString & signal, const QString & slot );
-
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 {
-  QAbstractSliderSlots_connect_signal( "actionTriggered(int)", "actionTriggered(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "actionTriggered(int)" );
+
+      QObject::connect(sender, &QAbstractSlider::actionTriggered, [sender](int action) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "actionTriggered(int)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
+          PHB_ITEM paction = hb_itemPutNI( NULL, action );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
+          hb_itemRelease( psender );
+          hb_itemRelease( paction );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "actionTriggered(int)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 {
-  QAbstractSliderSlots_connect_signal( "rangeChanged(int,int)", "rangeChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "rangeChanged(int,int)" );
+
+      QObject::connect(sender, &QAbstractSlider::rangeChanged, [sender](int min, int max) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "rangeChanged(int,int)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
+          PHB_ITEM pmin = hb_itemPutNI( NULL, min );
+          PHB_ITEM pmax = hb_itemPutNI( NULL, max );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
+          hb_itemRelease( psender );
+          hb_itemRelease( pmin );
+          hb_itemRelease( pmax );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rangeChanged(int,int)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 {
-  QAbstractSliderSlots_connect_signal( "sliderMoved(int)", "sliderMoved(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "sliderMoved(int)" );
+
+      QObject::connect(sender, &QAbstractSlider::sliderMoved, [sender](int value) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "sliderMoved(int)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
+          PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+          hb_itemRelease( psender );
+          hb_itemRelease( pvalue );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliderMoved(int)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 {
-  QAbstractSliderSlots_connect_signal( "sliderPressed()", "sliderPressed()" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "sliderPressed()" );
+
+      QObject::connect(sender, &QAbstractSlider::sliderPressed, [sender]() {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "sliderPressed()" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+          hb_itemRelease( psender );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliderPressed()" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 {
-  QAbstractSliderSlots_connect_signal( "sliderReleased()", "sliderReleased()" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "sliderReleased()" );
+
+      QObject::connect(sender, &QAbstractSlider::sliderReleased, [sender]() {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "sliderReleased()" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+          hb_itemRelease( psender );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliderReleased()" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 {
-  QAbstractSliderSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "valueChanged(int)" );
+
+      QObject::connect(sender, &QAbstractSlider::valueChanged, [sender](int value) {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "valueChanged(int)" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
+          PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+          hb_itemRelease( psender );
+          hb_itemRelease( pvalue );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueChanged(int)" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 #pragma ENDDUMP
