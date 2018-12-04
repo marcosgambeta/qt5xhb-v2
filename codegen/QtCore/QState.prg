@@ -122,4 +122,9 @@ $signal=|finished()
 $signal=|propertiesAssigned()
 $endSignals
 
+$beginSlotsClass
+$signal=|finished()
+$signal=|propertiesAssigned()
+$endSlotsClass
+
 #pragma ENDDUMP

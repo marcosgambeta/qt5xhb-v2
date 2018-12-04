@@ -245,4 +245,8 @@ $beginSignals
 $signal=|aboutToQuit()
 $endSignals
 
+$beginSlotsClass
+$signal=|aboutToQuit()
+$endSlotsClass
+
 #pragma ENDDUMP

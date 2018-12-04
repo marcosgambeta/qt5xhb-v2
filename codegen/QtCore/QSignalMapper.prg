@@ -154,4 +154,11 @@ $signal=|mapped(QObject*)
 $endGroup
 $endSignals
 
+$beginSlotsClass
+$signal=|mapped( int arg )
+$signal=|mapped( const QString & arg )
+$signal=|mapped( QWidget * arg )
+$signal=|mapped( QObject * arg )
+$endSlotsClass
+
 #pragma ENDDUMP

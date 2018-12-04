@@ -149,4 +149,25 @@ $signal=|rowsMoved(QModelIndex,int,int,QModelIndex,int)
 $signal=|rowsRemoved(QModelIndex,int,int)
 $endSignals
 
+$beginSlotsClass
+$signal=|columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
+$signal=|columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+$signal=|columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
+$signal=|columnsInserted( const QModelIndex & parent, int start, int end )
+$signal=|columnsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+$signal=|columnsRemoved( const QModelIndex & parent, int start, int end )
+$signal=|dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+$signal=|headerDataChanged( Qt::Orientation orientation, int first, int last )
+$signal=|layoutAboutToBeChanged()
+$signal=|layoutChanged()
+$signal=|modelAboutToBeReset()
+$signal=|modelReset()
+$signal=|rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
+$signal=|rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+$signal=|rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
+$signal=|rowsInserted( const QModelIndex & parent, int start, int end )
+$signal=|rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+$signal=|rowsRemoved( const QModelIndex & parent, int start, int end )
+$endSlotsClass
+
 #pragma ENDDUMP

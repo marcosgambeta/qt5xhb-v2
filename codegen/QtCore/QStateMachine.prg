@@ -116,4 +116,9 @@ $signal=|started()
 $signal=|stopped()
 $endSignals
 
+$beginSlotsClass
+$signal=|started()
+$signal=|stopped()
+$endSlotsClass
+
 #pragma ENDDUMP

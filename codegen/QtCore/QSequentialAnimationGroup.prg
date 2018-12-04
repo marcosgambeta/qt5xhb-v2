@@ -50,4 +50,8 @@ $beginSignals
 $signal=|currentAnimationChanged(QAbstractAnimation*)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentAnimationChanged ( QAbstractAnimation * current )
+$endSlotsClass
+
 #pragma ENDDUMP

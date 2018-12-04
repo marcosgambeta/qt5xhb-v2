@@ -239,4 +239,11 @@ $signal=|readChannelFinished()
 $signal=|readyRead()
 $endSignals
 
+$beginSlotsClass
+$signal=|aboutToClose()
+$signal=|bytesWritten( qint64 bytes )
+$signal=|readChannelFinished()
+$signal=|readyRead()
+$endSlotsClass
+
 #pragma ENDDUMP

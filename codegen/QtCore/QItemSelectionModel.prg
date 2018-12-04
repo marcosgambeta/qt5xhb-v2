@@ -138,4 +138,11 @@ $signal=|currentRowChanged(QModelIndex,QModelIndex)
 $signal=|currentColumnChanged(QModelIndex,QModelIndex)
 $endSignals
 
+$beginSlotsClass
+$signal=|selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
+$signal=|currentChanged( const QModelIndex & current, const QModelIndex & previous )
+$signal=|currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
+$signal=|currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
+$endSlotsClass
+
 #pragma ENDDUMP

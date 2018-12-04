@@ -86,4 +86,8 @@ $beginSignals
 $signal=|timeout()
 $endSignals
 
+$beginSlotsClass
+$signal=|timeout()
+$endSlotsClass
+
 #pragma ENDDUMP

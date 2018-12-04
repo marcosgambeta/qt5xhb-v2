@@ -63,4 +63,8 @@ $beginSignals
 $signal=|valueChanged(QVariant)
 $endSignals
 
+$beginSlotsClass
+$signal=|valueChanged( const QVariant & value )
+$endSlotsClass
+
 #pragma ENDDUMP

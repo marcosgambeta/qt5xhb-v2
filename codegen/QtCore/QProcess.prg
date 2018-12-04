@@ -291,4 +291,14 @@ $signal=|stateChanged(QProcess::ProcessState)
 $signal=5,6,0|errorOccurred(QProcess::ProcessError)
 $endSignals
 
+$beginSlotsClass
+$signal=|error( QProcess::ProcessError error )
+$signal=|finished( int exitCode, QProcess::ExitStatus exitStatus )
+$signal=|readyReadStandardError()
+$signal=|readyReadStandardOutput()
+$signal=|started()
+$signal=|stateChanged( QProcess::ProcessState newState )
+$signal=5,6,0|errorOccurred( QProcess::ProcessError error )
+$endSlotsClass
+
 #pragma ENDDUMP

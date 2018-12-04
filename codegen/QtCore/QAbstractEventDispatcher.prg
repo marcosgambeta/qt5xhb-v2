@@ -114,4 +114,9 @@ $signal=|aboutToBlock()
 $signal=|awake()
 $endSignals
 
+$beginSlotsClass
+$signal=|aboutToBlock()
+$signal=|awake()
+$endSlotsClass
+
 #pragma ENDDUMP

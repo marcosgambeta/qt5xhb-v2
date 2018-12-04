@@ -43,4 +43,9 @@ $signal=|entered()
 $signal=|exited()
 $endSignals
 
+$beginSlotsClass
+$signal=|entered()
+$signal=|exited()
+$endSlotsClass
+
 #pragma ENDDUMP

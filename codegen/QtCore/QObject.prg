@@ -1404,6 +1404,11 @@ $signal=|destroyed(QObject*)
 $signal=|objectNameChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|destroyed( QObject * obj = 0 )
+$signal=|objectNameChanged( const QString & objectName )
+$endSlotsClass
+
 $extraMethods
 
 #pragma ENDDUMP

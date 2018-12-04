@@ -79,4 +79,9 @@ $signal=|directoryChanged(QString)
 $signal=|fileChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|directoryChanged( const QString & path )
+$signal=|fileChanged( const QString & path )
+$endSlotsClass
+
 #pragma ENDDUMP

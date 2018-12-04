@@ -64,4 +64,8 @@ $beginSignals
 $signal=|triggered()
 $endSignals
 
+$beginSlotsClass
+$signal=|triggered()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -89,4 +89,11 @@ $signal=|finished()
 $signal=|stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentLoopChanged( int currentLoop )
+$signal=|directionChanged( QAbstractAnimation::Direction newDirection )
+$signal=|finished()
+$signal=|stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
+$endSlotsClass
+
 #pragma ENDDUMP

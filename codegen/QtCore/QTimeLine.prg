@@ -123,4 +123,11 @@ $signal=|stateChanged(QTimeLine::State)
 $signal=|valueChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|finished()
+$signal=|frameChanged( int frame )
+$signal=|stateChanged( QTimeLine::State newState )
+$signal=|valueChanged( qreal value )
+$endSlotsClass
+
 #pragma ENDDUMP
