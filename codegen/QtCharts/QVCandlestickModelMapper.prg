@@ -123,4 +123,18 @@ $signal=5,8,0|openRowChanged()
 $signal=5,8,0|timestampRowChanged()
 $endSignals
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+using namespace QtCharts;
+#endif
+
+$beginSlotsClass
+$signal=5,8,0|closeRowChanged()
+$signal=5,8,0|firstSetColumnChanged()
+$signal=5,8,0|highRowChanged()
+$signal=5,8,0|lastSetColumnChanged()
+$signal=5,8,0|lowRowChanged()
+$signal=5,8,0|openRowChanged()
+$signal=5,8,0|timestampRowChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

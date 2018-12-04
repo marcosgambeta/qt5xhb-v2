@@ -176,4 +176,17 @@ $signal=5,7,0|reverseMarkersChanged(bool)
 $signal=5,7,0|showToolTipsChanged(bool)
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|backgroundVisibleChanged( bool visible )
+$signal=5,7,0|borderColorChanged( QColor color )
+$signal=5,7,0|colorChanged( QColor color )
+$signal=5,7,0|fontChanged( QFont font )
+$signal=5,7,0|labelColorChanged( QColor color )
+$signal=5,9,0|markerShapeChanged( QLegend::MarkerShape shape )
+$signal=5,7,0|reverseMarkersChanged( bool reverseMarkers )
+$signal=5,7,0|showToolTipsChanged( bool showToolTips )
+$endSlotsClass
+
 #pragma ENDDUMP

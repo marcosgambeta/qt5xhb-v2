@@ -95,4 +95,11 @@ $signal=5,7,0|categoriesChanged()
 $signal=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|categoriesChanged()
+$signal=5,7,0|labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
+$endSlotsClass
+
 #pragma ENDDUMP

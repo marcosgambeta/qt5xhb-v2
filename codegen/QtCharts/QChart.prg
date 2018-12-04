@@ -304,4 +304,10 @@ $beginSignals
 $signal=5,7,0|plotAreaChanged(QRectF)
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|plotAreaChanged( const QRectF & plotArea )
+$endSlotsClass
+
 #pragma ENDDUMP

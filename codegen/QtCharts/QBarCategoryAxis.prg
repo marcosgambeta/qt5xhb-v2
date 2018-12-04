@@ -133,4 +133,14 @@ $signal=5,7,0|minChanged(QString)
 $signal=5,7,0|rangeChanged(QString,QString)
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|categoriesChanged()
+$signal=5,7,0|countChanged()
+$signal=5,7,0|maxChanged( const QString & max )
+$signal=5,7,0|minChanged( const QString & min )
+$signal=5,7,0|rangeChanged( const QString & min, const QString & max )
+$endSlotsClass
+
 #pragma ENDDUMP

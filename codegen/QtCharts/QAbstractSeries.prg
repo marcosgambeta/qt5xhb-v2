@@ -112,4 +112,13 @@ $signal=5,7,0|useOpenGLChanged()
 $signal=5,7,0|visibleChanged()
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|nameChanged()
+$signal=5,7,0|opacityChanged()
+$signal=5,7,0|useOpenGLChanged()
+$signal=5,7,0|visibleChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

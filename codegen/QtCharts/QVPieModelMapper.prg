@@ -110,4 +110,15 @@ $signal=5,7,0|seriesReplaced()
 $signal=5,7,0|valuesColumnChanged()
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|firstRowChanged()
+$signal=5,7,0|labelsColumnChanged()
+$signal=5,7,0|modelReplaced()
+$signal=5,7,0|rowCountChanged()
+$signal=5,7,0|seriesReplaced()
+$signal=5,7,0|valuesColumnChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

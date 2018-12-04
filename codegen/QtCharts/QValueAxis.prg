@@ -109,4 +109,15 @@ $signal=5,7,0|rangeChanged(qreal,qreal)
 $signal=5,7,0|tickCountChanged(int)
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|labelFormatChanged( const QString & format )
+$signal=5,7,0|maxChanged( qreal max )
+$signal=5,7,0|minChanged( qreal min )
+$signal=5,7,0|minorTickCountChanged( int tickCount )
+$signal=5,7,0|rangeChanged( qreal min, qreal max )
+$signal=5,7,0|tickCountChanged( int tickCount )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -102,4 +102,13 @@ $signal=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
 $signal=5,7,0|markerSizeChanged(qreal)
 $endSignals
 
+using namespace QtCharts;
+
+$beginSlotsClass
+$signal=5,7,0|borderColorChanged( QColor color )
+$signal=5,7,0|colorChanged( QColor color )
+$signal=5,7,0|markerShapeChanged( QScatterSeries::MarkerShape shape )
+$signal=5,7,0|markerSizeChanged( qreal size )
+$endSlotsClass
+
 #pragma ENDDUMP
