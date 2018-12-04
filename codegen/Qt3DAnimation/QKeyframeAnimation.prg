@@ -92,4 +92,13 @@ $signal=|startModeChanged(QKeyframeAnimation::RepeatMode)
 $signal=|endModeChanged(QKeyframeAnimation::RepeatMode)
 $endSignals
 
+$beginSlotsClass
+$signal=|framePositionsChanged( const QVector<float> & positions )
+$signal=|targetChanged( Qt3DCore::QTransform * target )
+$signal=|easingChanged( const QEasingCurve & easing )
+$signal=|targetNameChanged( const QString & name )
+$signal=|startModeChanged( QKeyframeAnimation::RepeatMode startMode )
+$signal=|endModeChanged( QKeyframeAnimation::RepeatMode endMode )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -51,4 +51,8 @@ $beginSignals
 $signal=|attributeNamesChanged(QStringList)
 $endSignals
 
+$beginSlotsClass
+$signal=|attributeNamesChanged( const QStringList & attributeNames )
+$endSlotsClass
+
 #pragma ENDDUMP

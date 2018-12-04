@@ -50,4 +50,8 @@ $beginSignals
 $signal=|playbackRateChanged(double)
 $endSignals
 
+$beginSlotsClass
+$signal=|playbackRateChanged( double playbackRate )
+$endSlotsClass
+
 #pragma ENDDUMP

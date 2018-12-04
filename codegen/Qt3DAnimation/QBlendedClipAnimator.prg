@@ -51,4 +51,8 @@ $beginSignals
 $signal=|blendTreeChanged(QAbstractClipBlendNode*)
 $endSignals
 
+$beginSlotsClass
+$signal=|blendTreeChanged( QAbstractClipBlendNode * blendTree )
+$endSlotsClass
+
 #pragma ENDDUMP

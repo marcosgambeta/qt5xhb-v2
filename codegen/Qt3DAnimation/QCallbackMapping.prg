@@ -55,4 +55,8 @@ $beginSignals
 $signal=|channelNameChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|channelNameChanged( QString channelName )
+$endSlotsClass
+
 #pragma ENDDUMP

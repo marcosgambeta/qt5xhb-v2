@@ -63,4 +63,9 @@ $signal=|sourceChanged(QUrl)
 $signal=|statusChanged(QAnimationClipLoader::Status)
 $endSignals
 
+$beginSlotsClass
+$signal=|sourceChanged( const QUrl & source )
+$signal=|statusChanged( QAnimationClipLoader::Status status )
+$endSlotsClass
+
 #pragma ENDDUMP

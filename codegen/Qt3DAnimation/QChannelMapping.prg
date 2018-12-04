@@ -69,4 +69,10 @@ $signal=|targetChanged(Qt3DCore::QNode*)
 $signal=|propertyChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|channelNameChanged( QString channelName )
+$signal=|targetChanged( Qt3DCore::QNode * target )
+$signal=|propertyChanged( QString property )
+$endSlotsClass
+
 #pragma ENDDUMP

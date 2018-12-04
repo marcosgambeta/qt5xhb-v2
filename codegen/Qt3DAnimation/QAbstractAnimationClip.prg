@@ -49,4 +49,8 @@ $beginSignals
 $signal=|durationChanged(float)
 $endSignals
 
+$beginSlotsClass
+$signal=|durationChanged( float duration )
+$endSlotsClass
+
 #pragma ENDDUMP

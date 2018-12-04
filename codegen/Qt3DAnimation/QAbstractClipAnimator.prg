@@ -81,4 +81,11 @@ $signal=|loopCountChanged(int)
 $signal=|clockChanged(Qt3DAnimation::QClock*)
 $endSignals
 
+$beginSlotsClass
+$signal=|runningChanged( bool running )
+$signal=|channelMapperChanged( Qt3DAnimation::QChannelMapper * channelMapper )
+$signal=|loopCountChanged( int loops )
+$signal=|clockChanged( Qt3DAnimation::QClock * clock )
+$endSlotsClass
+
 #pragma ENDDUMP

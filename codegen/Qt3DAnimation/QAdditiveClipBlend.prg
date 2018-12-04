@@ -70,4 +70,10 @@ $signal=baseClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
 $signal=additiveClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
 $endSignals
 
+$beginSlotsClass
+$signal=|additiveFactorChanged( float additiveFactor )
+$signal=|baseClipChanged( Qt3DAnimation::QAbstractClipBlendNode * baseClip )
+$signal=|additiveClipChanged( Qt3DAnimation::QAbstractClipBlendNode * additiveClip )
+$endSlotsClass
+
 #pragma ENDDUMP

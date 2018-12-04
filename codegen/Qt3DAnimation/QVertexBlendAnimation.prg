@@ -75,4 +75,11 @@ $signal=|targetChanged(Qt3DRender::QGeometryRenderer*)
 $signal=|targetNameChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|targetPositionsChanged( const QVector<float> & targetPositions )
+$signal=|interpolatorChanged( float interpolator )
+$signal=|targetChanged( Qt3DRender::QGeometryRenderer * target )
+$signal=|targetNameChanged( const QString & name )
+$endSlotsClass
+
 #pragma ENDDUMP

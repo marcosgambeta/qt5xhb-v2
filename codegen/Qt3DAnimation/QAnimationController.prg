@@ -104,4 +104,13 @@ $signal=|entityChanged(Qt3DCore::QEntity*)
 $signal=|recursiveChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|activeAnimationGroupChanged( int index )
+$signal=|positionChanged( float position )
+$signal=|positionScaleChanged( float scale )
+$signal=|positionOffsetChanged( float offset )
+$signal=|entityChanged( Qt3DCore::QEntity * entity )
+$signal=|recursiveChanged( bool recursive )
+$endSlotsClass
+
 #pragma ENDDUMP

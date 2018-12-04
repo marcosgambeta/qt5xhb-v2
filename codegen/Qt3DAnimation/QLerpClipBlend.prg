@@ -66,4 +66,10 @@ $signal=|startClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
 $signal=|endClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
 $endSignals
 
+$beginSlotsClass
+$signal=|blendFactorChanged( float blendFactor )
+$signal=|startClipChanged( Qt3DAnimation::QAbstractClipBlendNode * startClip )
+$signal=|endClipChanged( Qt3DAnimation::QAbstractClipBlendNode * endClip )
+$endSlotsClass
+
 #pragma ENDDUMP

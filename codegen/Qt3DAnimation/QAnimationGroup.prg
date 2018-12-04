@@ -71,4 +71,10 @@ $signal=|positionChanged(float)
 $signal=|durationChanged(float)
 $endSignals
 
+$beginSlotsClass
+$signal=|nameChanged( const QString & name )
+$signal=|positionChanged( float position )
+$signal=|durationChanged( float duration )
+$endSlotsClass
+
 #pragma ENDDUMP

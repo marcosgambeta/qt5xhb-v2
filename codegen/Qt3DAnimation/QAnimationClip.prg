@@ -50,4 +50,8 @@ $beginSignals
 $signal=|clipDataChanged|Qt3DAnimation::QAnimationClipData
 $endSignals
 
+$beginSlotsClass
+$signal=|clipDataChanged( Qt3DAnimation::QAnimationClipData clipData )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -93,4 +93,13 @@ $signal=|methodChanged(QMorphingAnimation::Method)
 $signal=|easingChanged(QEasingCurve)
 $endSignals
 
+$beginSlotsClass
+$signal=|targetPositionsChanged( const QVector<float> & targetPositions )
+$signal=|interpolatorChanged( float interpolator )
+$signal=|targetChanged( Qt3DRender::QGeometryRenderer * target )
+$signal=|targetNameChanged( const QString & name )
+$signal=|methodChanged( QMorphingAnimation::Method method )
+$signal=|easingChanged( const QEasingCurve & easing )
+$endSlotsClass
+
 #pragma ENDDUMP

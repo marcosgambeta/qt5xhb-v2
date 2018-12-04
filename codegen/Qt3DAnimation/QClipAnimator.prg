@@ -51,4 +51,8 @@ $beginSignals
 $signal=|clipChanged(Qt3DAnimation::QAbstractAnimationClip*)
 $endSignals
 
+$beginSlotsClass
+$signal=|clipChanged( Qt3DAnimation::QAbstractAnimationClip * clip )
+$endSlotsClass
+
 #pragma ENDDUMP

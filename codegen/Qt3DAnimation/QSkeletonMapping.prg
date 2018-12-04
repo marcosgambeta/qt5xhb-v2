@@ -50,4 +50,8 @@ $beginSignals
 $signal=|skeletonChanged(Qt3DCore::QAbstractSkeleton*)
 $endSignals
 
+$beginSlotsClass
+$signal=|skeletonChanged( Qt3DCore::QAbstractSkeleton * skeleton )
+$endSlotsClass
+
 #pragma ENDDUMP
