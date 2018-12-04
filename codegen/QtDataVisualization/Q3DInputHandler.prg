@@ -102,4 +102,13 @@ $signal=|zoomAtTargetEnabledChanged(bool)
 $signal=|zoomEnabledChanged(bool)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|rotationEnabledChanged( bool enable )
+$signal=|selectionEnabledChanged( bool enable )
+$signal=|zoomAtTargetEnabledChanged( bool enable )
+$signal=|zoomEnabledChanged( bool enable )
+$endSlotsClass
+
 #pragma ENDDUMP

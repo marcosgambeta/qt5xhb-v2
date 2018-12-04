@@ -96,4 +96,12 @@ $signal=|positionChanged(QPoint)
 $signal=|sceneChanged(Q3DScene*)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|inputViewChanged( QAbstract3DInputHandler::InputView view )
+$signal=|positionChanged( const QPoint & position )
+$signal=|sceneChanged( Q3DScene * scene )
+$endSlotsClass
+
 #pragma ENDDUMP

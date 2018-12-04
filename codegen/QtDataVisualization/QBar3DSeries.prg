@@ -100,4 +100,12 @@ $signal=|meshAngleChanged(float)
 $signal=|selectedBarChanged(QPoint)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|dataProxyChanged( QBarDataProxy * proxy )
+$signal=|selectedBarChanged( const QPoint & position )
+$signal=|meshAngleChanged( float angle )
+$endSlotsClass
+
 #pragma ENDDUMP

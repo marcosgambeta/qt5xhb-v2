@@ -53,4 +53,10 @@ $beginSignals
 $signal=|labelsChanged()
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|labelsChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

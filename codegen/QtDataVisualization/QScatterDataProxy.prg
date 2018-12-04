@@ -103,4 +103,16 @@ $signal=|itemsRemoved(int,int)
 $signal=|seriesChanged(QScatter3DSeries*)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|arrayReset()
+$signal=|itemCountChanged( int count )
+$signal=|itemsAdded( int startIndex, int count )
+$signal=|itemsChanged( int startIndex, int count )
+$signal=|itemsInserted( int startIndex, int count )
+$signal=|itemsRemoved( int startIndex, int count )
+$signal=|seriesChanged( QScatter3DSeries * series )
+$endSlotsClass
+
 #pragma ENDDUMP

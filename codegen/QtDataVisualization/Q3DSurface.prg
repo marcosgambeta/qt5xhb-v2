@@ -112,4 +112,14 @@ $signal=|flipHorizontalGridChanged(bool)
 $signal=|selectedSeriesChanged(QSurface3DSeries*)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|axisXChanged( QValue3DAxis * axis )
+$signal=|axisYChanged( QValue3DAxis * axis )
+$signal=|axisZChanged( QValue3DAxis * axis )
+$signal=|flipHorizontalGridChanged( bool flip )
+$signal=|selectedSeriesChanged( QSurface3DSeries * series )
+$endSlotsClass
+
 #pragma ENDDUMP

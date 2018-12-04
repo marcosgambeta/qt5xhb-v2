@@ -87,4 +87,12 @@ $signal=|baseChanged(qreal)
 $signal=|showEdgeLabelsChanged(bool)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|autoSubGridChanged( bool enabled )
+$signal=|baseChanged( qreal base )
+$signal=|showEdgeLabelsChanged( bool enabled )
+$endSlotsClass
+
 #pragma ENDDUMP

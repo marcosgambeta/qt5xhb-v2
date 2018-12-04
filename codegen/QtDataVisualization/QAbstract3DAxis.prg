@@ -148,4 +148,19 @@ $signal=|titleFixedChanged(bool)
 $signal=|titleVisibilityChanged(bool)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|titleChanged( const QString & newTitle )
+$signal=|labelsChanged()
+$signal=|orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
+$signal=|minChanged( float value )
+$signal=|maxChanged( float value )
+$signal=|rangeChanged( float min, float max )
+$signal=|autoAdjustRangeChanged( bool autoAdjust )
+$signal=|labelAutoRotationChanged( float angle )
+$signal=|titleVisibilityChanged( bool visible )
+$signal=|titleFixedChanged( bool fixed )
+$endSlotsClass
+
 #pragma ENDDUMP

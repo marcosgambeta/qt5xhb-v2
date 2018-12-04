@@ -69,4 +69,10 @@ $beginSignals
 $signal=|positionChanged(QVector3D)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|positionChanged( const QVector3D & position )
+$endSlotsClass
+
 #pragma ENDDUMP

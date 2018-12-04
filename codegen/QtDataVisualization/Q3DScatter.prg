@@ -101,4 +101,13 @@ $signal=|axisZChanged(QValue3DAxis*)
 $signal=|selectedSeriesChanged(QScatter3DSeries*)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|axisXChanged( QValue3DAxis * axis )
+$signal=|axisYChanged( QValue3DAxis * axis )
+$signal=|axisZChanged( QValue3DAxis * axis )
+$signal=|selectedSeriesChanged( QScatter3DSeries * series )
+$endSlotsClass
+
 #pragma ENDDUMP

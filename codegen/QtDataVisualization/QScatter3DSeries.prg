@@ -102,4 +102,12 @@ $signal=|itemSizeChanged(float)
 $signal=|selectedItemChanged(int)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|dataProxyChanged( QScatterDataProxy * proxy )
+$signal=|itemSizeChanged( float size )
+$signal=|selectedItemChanged( int index )
+$endSlotsClass
+
 #pragma ENDDUMP

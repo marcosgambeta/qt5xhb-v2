@@ -170,4 +170,19 @@ $signal=|selectedSeriesChanged(QBar3DSeries*)
 $signal=|valueAxisChanged(QValue3DAxis*)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|multiSeriesUniformChanged( bool uniform )
+$signal=|barThicknessChanged( float thicknessRatio )
+$signal=|barSpacingChanged( const QSizeF & spacing )
+$signal=|barSpacingRelativeChanged( bool relative )
+$signal=|rowAxisChanged( QCategory3DAxis * axis )
+$signal=|columnAxisChanged( QCategory3DAxis * axis )
+$signal=|valueAxisChanged( QValue3DAxis * axis )
+$signal=|primarySeriesChanged( QBar3DSeries * series )
+$signal=|selectedSeriesChanged( QBar3DSeries * series )
+$signal=|floorLevelChanged( float level )
+$endSlotsClass
+
 #pragma ENDDUMP

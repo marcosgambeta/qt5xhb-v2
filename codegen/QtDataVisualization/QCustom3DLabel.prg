@@ -141,4 +141,16 @@ $signal=|textChanged(QString)
 $signal=|textColorChanged(QColor)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|backgroundColorChanged( const QColor & color )
+$signal=|backgroundEnabledChanged( bool enabled )
+$signal=|borderEnabledChanged( bool enabled )
+$signal=|facingCameraChanged( bool enabled )
+$signal=|fontChanged( const QFont & font )
+$signal=|textChanged( const QString & text )
+$signal=|textColorChanged( const QColor & color )
+$endSlotsClass
+
 #pragma ENDDUMP

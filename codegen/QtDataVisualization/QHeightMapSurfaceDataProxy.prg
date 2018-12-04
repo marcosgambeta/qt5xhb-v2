@@ -143,4 +143,15 @@ $signal=|minXValueChanged(float)
 $signal=|minZValueChanged(float)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|heightMapChanged( const QImage & image )
+$signal=|heightMapFileChanged( const QString & filename )
+$signal=|minXValueChanged( float value )
+$signal=|maxXValueChanged( float value )
+$signal=|minZValueChanged( float value )
+$signal=|maxZValueChanged( float value )
+$endSlotsClass
+
 #pragma ENDDUMP

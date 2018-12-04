@@ -53,4 +53,10 @@ $beginSignals
 $signal=5,9,0|autoPositionChanged(bool)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=5,9,0|autoPositionChanged( bool autoPosition )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -162,4 +162,18 @@ $signal=|rowsRemoved(int,int)
 $signal=|seriesChanged(QSurface3DSeries*)
 $endSignals
 
+using namespace QtDataVisualization;
+
+$beginSlotsClass
+$signal=|arrayReset()
+$signal=|columnCountChanged( int count )
+$signal=|itemChanged( int rowIndex, int columnIndex )
+$signal=|rowCountChanged( int count )
+$signal=|rowsAdded( int startIndex, int count )
+$signal=|rowsChanged( int startIndex, int count )
+$signal=|rowsInserted( int startIndex, int count )
+$signal=|rowsRemoved( int startIndex, int count )
+$signal=|seriesChanged( QSurface3DSeries * series )
+$endSlotsClass
+
 #pragma ENDDUMP
