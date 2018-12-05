@@ -212,4 +212,12 @@ $signal=|lastWindowClosed()
 $signal=|screenAdded(QScreen*)
 $endSignals
 
+$beginSlotsClass
+$signal=|focusObjectChanged( QObject * focusObject )
+$signal=|focusWindowChanged( QWindow * focusWindow )
+$signal=|fontDatabaseChanged()
+$signal=|lastWindowClosed()
+$signal=|screenAdded( QScreen * screen )
+$endSlotsClass
+
 #pragma ENDDUMP

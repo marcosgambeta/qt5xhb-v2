@@ -115,4 +115,11 @@ $signal=|findBufferChanged()
 $signal=|selectionChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|changed( QClipboard::Mode mode )
+$signal=|dataChanged()
+$signal=|findBufferChanged()
+$signal=|selectionChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

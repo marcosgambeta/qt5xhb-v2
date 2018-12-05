@@ -69,4 +69,11 @@ $signal=|update(QRectF)
 $signal=|updateBlock(QTextBlock)
 $endSignals
 
+$beginSlotsClass
+$signal=|documentSizeChanged( const QSizeF & newSize )
+$signal=|pageCountChanged( int newPages )
+$signal=|update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
+$signal=|updateBlock( const QTextBlock & block )
+$endSlotsClass
+
 #pragma ENDDUMP

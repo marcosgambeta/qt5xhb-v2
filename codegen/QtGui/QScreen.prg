@@ -136,4 +136,15 @@ $signal=|orientationChanged(Qt::ScreenOrientation)
 $signal=|refreshRateChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|geometryChanged( const QRect & geometry )
+$signal=|physicalSizeChanged( const QSizeF & size )
+$signal=|physicalDotsPerInchChanged( qreal dpi )
+$signal=|logicalDotsPerInchChanged( qreal dpi )
+$signal=|virtualGeometryChanged( const QRect & rect )
+$signal=|primaryOrientationChanged( Qt::ScreenOrientation orientation )
+$signal=|orientationChanged( Qt::ScreenOrientation orientation )
+$signal=|refreshRateChanged( qreal refreshRate )
+$endSlotsClass
+
 #pragma ENDDUMP

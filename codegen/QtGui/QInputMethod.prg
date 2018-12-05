@@ -85,4 +85,13 @@ $signal=|localeChanged()
 $signal=|visibleChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|animatingChanged()
+$signal=|cursorRectangleChanged()
+$signal=|inputDirectionChanged( Qt::LayoutDirection newDirection )
+$signal=|keyboardRectangleChanged()
+$signal=|localeChanged()
+$signal=|visibleChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

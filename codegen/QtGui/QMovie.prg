@@ -161,4 +161,14 @@ $signal=|stateChanged(QMovie::MovieState)
 $signal=|updated(QRect)
 $endSignals
 
+$beginSlotsClass
+$signal=|error( QImageReader::ImageReaderError error )
+$signal=|finished()
+$signal=|frameChanged( int frameNumber )
+$signal=|resized( const QSize & size )
+$signal=|started()
+$signal=|stateChanged( QMovie::MovieState state )
+$signal=|updated( const QRect & rect )
+$endSlotsClass
+
 #pragma ENDDUMP

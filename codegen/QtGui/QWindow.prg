@@ -347,4 +347,16 @@ $signal=|xChanged(int)
 $signal=|yChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|contentOrientationChanged( Qt::ScreenOrientation orientation )
+$signal=|focusObjectChanged( QObject * focusObject )
+$signal=|heightChanged( int arg )
+$signal=|screenChanged( QScreen * screen )
+$signal=|visibleChanged( bool arg )
+$signal=|widthChanged( int arg )
+$signal=|windowModalityChanged( Qt::WindowModality windowModality )
+$signal=|xChanged( int arg )
+$signal=|yChanged( int arg )
+$endSlotsClass
+
 #pragma ENDDUMP

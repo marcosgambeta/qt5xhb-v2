@@ -64,4 +64,8 @@ $beginSignals
 $signal=|regularExpressionChanged(QRegularExpression)
 $endSignals
 
+$beginSlotsClass
+$signal=|regularExpressionChanged( const QRegularExpression & re )
+$endSlotsClass
+
 #pragma ENDDUMP

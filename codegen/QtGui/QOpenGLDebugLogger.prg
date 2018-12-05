@@ -63,4 +63,8 @@ $beginSignals
 $signal=|messageLogged(QOpenGLDebugMessage)
 $endSignals
 
+$beginSlotsClass
+$signal=|messageLogged( const QOpenGLDebugMessage & debugMessage )
+$endSlotsClass
+
 #pragma ENDDUMP

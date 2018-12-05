@@ -72,4 +72,8 @@ $beginSignals
 $signal=|screenChanged(QScreen*)
 $endSignals
 
+$beginSlotsClass
+$signal=|screenChanged( QScreen * screen )
+$endSlotsClass
+
 #pragma ENDDUMP

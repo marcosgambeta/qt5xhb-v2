@@ -96,4 +96,8 @@ $beginSignals
 $signal=|aboutToBeDestroyed()
 $endSignals
 
+$beginSlotsClass
+$signal=|aboutToBeDestroyed()
+$endSlotsClass
+
 #pragma ENDDUMP

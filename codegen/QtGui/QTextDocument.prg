@@ -368,4 +368,16 @@ $signal=|blockCountChanged(int)
 $signal=|documentLayoutChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|contentsChange( int from, int charsRemoves, int charsAdded )
+$signal=|contentsChanged()
+$signal=|undoAvailable( bool b )
+$signal=|redoAvailable( bool b )
+$signal=|undoCommandAdded()
+$signal=|modificationChanged( bool m )
+$signal=|cursorPositionChanged( const QTextCursor & cursor )
+$signal=|blockCountChanged( int newBlockCount )
+$signal=|documentLayoutChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -103,4 +103,9 @@ $signal=|actionChanged(Qt::DropAction)
 $signal=|targetChanged(QObject*)
 $endSignals
 
+$beginSlotsClass
+$signal=|actionChanged( Qt::DropAction action )
+$signal=|targetChanged( QObject * newTarget )
+$endSlotsClass
+
 #pragma ENDDUMP

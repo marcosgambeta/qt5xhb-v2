@@ -330,4 +330,8 @@ $beginSignals
 $signal=|itemChanged(QStandardItem*)
 $endSignals
 
+$beginSlotsClass
+$signal=|itemChanged( QStandardItem * item )
+$endSlotsClass
+
 #pragma ENDDUMP
