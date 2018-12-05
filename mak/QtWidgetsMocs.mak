@@ -8,8 +8,6 @@ $(QT5XHB_OBJ_DIR)/QAbstractItemDelegateSlotsMoc.cpp     : $(QT5XHB_SRC_DIR)/QtWi
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QAbstractItemViewSlotsMoc.cpp         : $(QT5XHB_SRC_DIR)/QtWidgets/QAbstractItemViewSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QAbstractSpinBoxSlotsMoc.cpp          : $(QT5XHB_SRC_DIR)/QtWidgets/QAbstractSpinBoxSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QActionGroupSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtWidgets/QActionGroupSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QApplicationSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtWidgets/QApplicationSlots.h

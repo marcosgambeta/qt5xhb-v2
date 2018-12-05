@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractSpinBox>
@@ -963,11 +964,54 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
 #endif
 }
 
-void QAbstractSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot );
-
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
-  QAbstractSpinBoxSlots_connect_signal( "editingFinished()", "editingFinished()" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractSpinBox * sender = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_connection( sender, "editingFinished()" );
+
+      QObject::connect(sender, &QAbstractSpinBox::editingFinished, [sender]() {
+        QObject * object = qobject_cast<QObject *>( sender );
+
+        PHB_ITEM cb = Signals2_return_codeblock( object, "editingFinished()" );
+
+        if( cb )
+        {
+          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSPINBOX" );
+          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+          hb_itemRelease( psender );
+        }
+
+      });
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractSpinBox * sender = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "editingFinished()" );
+
+      // TODO: disconnection
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
 }
 
 #pragma ENDDUMP
