@@ -56,4 +56,8 @@ $beginSignals
 $signal=|propertyChanged(QString,QVariant)
 $endSignals
 
+$beginSlotsClass
+$signal=|propertyChanged( const QString & name, const QVariant & value )
+$endSlotsClass
+
 #pragma ENDDUMP

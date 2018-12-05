@@ -116,4 +116,10 @@ $signal=|formWindowAdded(QDesignerFormWindowInterface*)
 $signal=|formWindowRemoved(QDesignerFormWindowInterface*)
 $endSignals
 
+$beginSlotsClass
+$signal=|activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
+$signal=|formWindowAdded( QDesignerFormWindowInterface * formWindow )
+$signal=|formWindowRemoved( QDesignerFormWindowInterface * formWindow )
+$endSlotsClass
+
 #pragma ENDDUMP
