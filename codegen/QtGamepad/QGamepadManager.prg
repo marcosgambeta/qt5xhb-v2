@@ -80,4 +80,16 @@ $signal=5,9,0|gamepadConnected(int)
 $signal=5,9,0|gamepadDisconnected(int)
 $endSignals
 
+$beginSlotsClass
+$signal=5,9,0|connectedGamepadsChanged()
+$signal=5,9,0|gamepadConnected( int deviceId )
+$signal=5,9,0|gamepadDisconnected( int deviceId )
+$signal=5,9,0|gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
+$signal=5,9,0|gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
+$signal=5,9,0|gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
+$signal=5,9,0|buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
+$signal=5,9,0|axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
+$signal=5,9,0|configurationCanceled( int deviceId )
+$endSlotsClass
+
 #pragma ENDDUMP
