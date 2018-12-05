@@ -94,4 +94,9 @@ $signal=|setCurrentIndex(int)
 $signal=|setCurrentWidget(QWidget*)
 $endSignals
 
+$beginSlotsClass
+$signal=|setCurrentIndex( int index )
+$signal=|setCurrentWidget( QWidget * widget )
+$endSlotsClass
+
 #pragma ENDDUMP

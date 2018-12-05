@@ -67,4 +67,12 @@ $signal=|yScaleChanged()
 $signal=|zScaleChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|originChanged()
+$signal=|scaleChanged()
+$signal=|xScaleChanged()
+$signal=|yScaleChanged()
+$signal=|zScaleChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

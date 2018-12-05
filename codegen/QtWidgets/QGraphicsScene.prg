@@ -441,4 +441,10 @@ $signal=|sceneRectChanged(QRectF)
 $signal=|selectionChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|changed( const QList<QRectF> & region )
+$signal=|sceneRectChanged( const QRectF & rect )
+$signal=|selectionChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -225,4 +225,11 @@ $signal=5,2,0|tabBarClicked(int)
 $signal=5,2,0|tabBarDoubleClicked(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentChanged( int index )
+$signal=|tabCloseRequested( int index )
+$signal=5,2,0|tabBarClicked( int index )
+$signal=5,2,0|tabBarDoubleClicked( int index )
+$endSlotsClass
+
 #pragma ENDDUMP

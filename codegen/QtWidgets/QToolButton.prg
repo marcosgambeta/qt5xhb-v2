@@ -84,4 +84,8 @@ $beginSignals
 $signal=|triggered(QAction*)
 $endSignals
 
+$beginSlotsClass
+$signal=|triggered( QAction * action )
+$endSlotsClass
+
 #pragma ENDDUMP

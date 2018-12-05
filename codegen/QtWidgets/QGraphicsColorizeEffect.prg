@@ -49,4 +49,9 @@ $signal=|colorChanged(QColor)
 $signal=|strengthChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|colorChanged( const QColor & color )
+$signal=|strengthChanged( qreal strength )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -70,4 +70,9 @@ $signal=5,2,0|editingFinished()
 $signal=5,2,0|keySequenceChanged(QKeySequence)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|editingFinished()
+$signal=5,2,0|keySequenceChanged( const QKeySequence & keySequence )
+$endSlotsClass
+
 #pragma ENDDUMP

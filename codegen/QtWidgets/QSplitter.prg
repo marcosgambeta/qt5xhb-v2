@@ -127,4 +127,8 @@ $beginSignals
 $signal=|splitterMoved(int,int)
 $endSignals
 
+$beginSlotsClass
+$signal=|splitterMoved( int pos, int index )
+$endSlotsClass
+
 #pragma ENDDUMP

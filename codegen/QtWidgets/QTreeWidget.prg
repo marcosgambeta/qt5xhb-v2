@@ -217,4 +217,17 @@ $signal=|itemPressed(QTreeWidgetItem*,int)
 $signal=|itemSelectionChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
+$signal=|itemActivated( QTreeWidgetItem * item, int column )
+$signal=|itemChanged( QTreeWidgetItem * item, int column )
+$signal=|itemClicked( QTreeWidgetItem * item, int column )
+$signal=|itemCollapsed( QTreeWidgetItem * item )
+$signal=|itemDoubleClicked( QTreeWidgetItem * item, int column )
+$signal=|itemEntered( QTreeWidgetItem * item, int column )
+$signal=|itemExpanded( QTreeWidgetItem * item )
+$signal=|itemPressed( QTreeWidgetItem * item, int column )
+$signal=|itemSelectionChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

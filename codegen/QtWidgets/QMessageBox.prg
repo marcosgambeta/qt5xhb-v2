@@ -268,4 +268,8 @@ $beginSignals
 $signal=|buttonClicked(QAbstractButton*)
 $endSignals
 
+$beginSlotsClass
+$signal=|buttonClicked( QAbstractButton * button )
+$endSlotsClass
+
 #pragma ENDDUMP

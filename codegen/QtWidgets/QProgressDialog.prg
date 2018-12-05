@@ -130,4 +130,8 @@ $beginSignals
 $signal=|canceled()
 $endSignals
 
+$beginSlotsClass
+$signal=|canceled()
+$endSlotsClass
+
 #pragma ENDDUMP

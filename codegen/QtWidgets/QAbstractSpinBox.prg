@@ -135,4 +135,8 @@ $beginSignals
 $signal=|editingFinished()
 $endSignals
 
+$beginSlotsClass
+$signal=|editingFinished()
+$endSlotsClass
+
 #pragma ENDDUMP

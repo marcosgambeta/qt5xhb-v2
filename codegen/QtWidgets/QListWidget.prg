@@ -238,4 +238,17 @@ $signal=|itemPressed(QListWidgetItem*)
 $signal=|itemSelectionChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
+$signal=|currentRowChanged( int currentRow )
+$signal=|currentTextChanged( const QString & currentText )
+$signal=|itemActivated( QListWidgetItem * item )
+$signal=|itemChanged( QListWidgetItem * item )
+$signal=|itemClicked( QListWidgetItem * item )
+$signal=|itemDoubleClicked( QListWidgetItem * item )
+$signal=|itemEntered( QListWidgetItem * item )
+$signal=|itemPressed( QListWidgetItem * item )
+$signal=|itemSelectionChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

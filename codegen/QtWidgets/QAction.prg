@@ -253,4 +253,11 @@ $signal=|toggled(bool)
 $signal=|triggered(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|changed()
+$signal=|hovered()
+$signal=|toggled( bool checked )
+$signal=|triggered( bool checked = false )
+$endSlotsClass
+
 #pragma ENDDUMP

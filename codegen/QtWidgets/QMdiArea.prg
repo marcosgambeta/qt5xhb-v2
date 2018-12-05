@@ -134,4 +134,8 @@ $beginSignals
 $signal=|subWindowActivated(QMdiSubWindow*)
 $endSignals
 
+$beginSlotsClass
+$signal=|subWindowActivated( QMdiSubWindow * window )
+$endSlotsClass
+
 #pragma ENDDUMP

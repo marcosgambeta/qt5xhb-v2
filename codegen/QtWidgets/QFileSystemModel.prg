@@ -196,4 +196,10 @@ $signal=|fileRenamed(QString,QString,QString)
 $signal=|rootPathChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|directoryLoaded( const QString & path )
+$signal=|fileRenamed( const QString & path, const QString & oldName, const QString & newName )
+$signal=|rootPathChanged( const QString & newPath )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -98,4 +98,9 @@ $signal=|hovered(QAction*)
 $signal=|triggered(QAction*)
 $endSignals
 
+$beginSlotsClass
+$signal=|hovered( QAction * action )
+$signal=|triggered( QAction * action )
+$endSlotsClass
+
 #pragma ENDDUMP

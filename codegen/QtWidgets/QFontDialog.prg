@@ -112,4 +112,9 @@ $signal=|currentFontChanged(QFont)
 $signal=|fontSelected(QFont)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentFontChanged( const QFont & font )
+$signal=|fontSelected( const QFont & font )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -87,4 +87,9 @@ $signal=|valueChanged(QString)
 $endGroup
 $endSignals
 
+$beginSlotsClass
+$signal=|valueChanged( int value )
+$signal=|valueChanged( const QString & text )
+$endSlotsClass
+
 #pragma ENDDUMP

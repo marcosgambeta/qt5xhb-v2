@@ -207,4 +207,15 @@ $signal=|topLevelChanged(bool)
 $signal=|visibilityChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|actionTriggered( QAction * action )
+$signal=|allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
+$signal=|iconSizeChanged( const QSize & iconSize )
+$signal=|movableChanged( bool movable )
+$signal=|orientationChanged( Qt::Orientation orientation )
+$signal=|toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
+$signal=|topLevelChanged( bool topLevel )
+$signal=|visibilityChanged( bool visible )
+$endSlotsClass
+
 #pragma ENDDUMP

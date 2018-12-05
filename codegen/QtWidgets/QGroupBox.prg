@@ -92,4 +92,9 @@ $signal=|clicked(bool)
 $signal=|toggled(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|clicked( bool checked = false )
+$signal=|toggled( bool on )
+$endSlotsClass
+
 #pragma ENDDUMP

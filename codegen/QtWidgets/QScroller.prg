@@ -196,4 +196,9 @@ $signal=|scrollerPropertiesChanged(QScrollerProperties)
 $signal=|stateChanged(QScroller::State)
 $endSignals
 
+$beginSlotsClass
+$signal=|scrollerPropertiesChanged( const QScrollerProperties & newProperties )
+$signal=|stateChanged( QScroller::State newState )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -163,4 +163,12 @@ $signal=|pageAdded(int)
 $signal=|pageRemoved(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentIdChanged( int id )
+$signal=|customButtonClicked( int which )
+$signal=|helpRequested()
+$signal=|pageAdded( int id )
+$signal=|pageRemoved( int id )
+$endSlotsClass
+
 #pragma ENDDUMP

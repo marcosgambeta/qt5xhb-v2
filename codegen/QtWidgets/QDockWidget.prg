@@ -100,4 +100,12 @@ $signal=|topLevelChanged(bool)
 $signal=|visibilityChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
+$signal=|dockLocationChanged( Qt::DockWidgetArea area )
+$signal=|featuresChanged( QDockWidget::DockWidgetFeatures features )
+$signal=|topLevelChanged( bool topLevel )
+$signal=|visibilityChanged( bool visible )
+$endSlotsClass
+
 #pragma ENDDUMP

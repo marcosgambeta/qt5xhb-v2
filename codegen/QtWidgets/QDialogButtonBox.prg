@@ -138,4 +138,11 @@ $signal=|helpRequested()
 $signal=|rejected()
 $endSignals
 
+$beginSlotsClass
+$signal=|accepted()
+$signal=|clicked( QAbstractButton * button )
+$signal=|helpRequested()
+$signal=|rejected()
+$endSlotsClass
+
 #pragma ENDDUMP

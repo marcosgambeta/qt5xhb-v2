@@ -102,4 +102,10 @@ $signal=|colorChanged(QColor)
 $signal=|offsetChanged(QPointF)
 $endSignals
 
+$beginSlotsClass
+$signal=|blurRadiusChanged( qreal blurRadius )
+$signal=|colorChanged( const QColor & color )
+$signal=|offsetChanged( const QPointF & offset )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -228,4 +228,9 @@ $signal=|iconSizeChanged(QSize)
 $signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
 $endSignals
 
+$beginSlotsClass
+$signal=|iconSizeChanged( const QSize & iconSize )
+$signal=|toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
+$endSlotsClass
+
 #pragma ENDDUMP

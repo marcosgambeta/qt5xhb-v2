@@ -110,4 +110,13 @@ $signal=|sliderReleased()
 $signal=|valueChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|actionTriggered( int action )
+$signal=|rangeChanged( int min, int max )
+$signal=|sliderMoved( int value )
+$signal=|sliderPressed()
+$signal=|sliderReleased()
+$signal=|valueChanged( int value )
+$endSlotsClass
+
 #pragma ENDDUMP

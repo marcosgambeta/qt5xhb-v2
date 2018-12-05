@@ -76,4 +76,8 @@ $beginSignals
 $signal=|stateChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|stateChanged( int state )
+$endSlotsClass
+
 #pragma ENDDUMP

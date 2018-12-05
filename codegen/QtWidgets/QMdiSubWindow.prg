@@ -88,4 +88,9 @@ $signal=|aboutToActivate()
 $signal=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
 $endSignals
 
+$beginSlotsClass
+$signal=|aboutToActivate()
+$signal=|windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
+$endSlotsClass
+
 #pragma ENDDUMP

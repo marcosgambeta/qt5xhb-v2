@@ -95,4 +95,9 @@ $signal=|activated()
 $signal=|activatedAmbiguously()
 $endSignals
 
+$beginSlotsClass
+$signal=|activated()
+$signal=|activatedAmbiguously()
+$endSlotsClass
+
 #pragma ENDDUMP

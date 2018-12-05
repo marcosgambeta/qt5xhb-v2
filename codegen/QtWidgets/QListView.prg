@@ -132,4 +132,8 @@ $beginSignals
 $signal=|indexesMoved(QModelIndexList)
 $endSignals
 
+$beginSlotsClass
+$signal=|indexesMoved( const QModelIndexList & indexes )
+$endSlotsClass
+
 #pragma ENDDUMP

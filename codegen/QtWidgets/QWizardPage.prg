@@ -87,4 +87,8 @@ $beginSignals
 $signal=|completeChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|completeChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

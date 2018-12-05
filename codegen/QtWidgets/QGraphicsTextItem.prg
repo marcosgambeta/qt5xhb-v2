@@ -147,4 +147,9 @@ $signal=|linkActivated(QString)
 $signal=|linkHovered(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|linkActivated( const QString & link )
+$signal=|linkHovered( const QString & link )
+$endSlotsClass
+
 #pragma ENDDUMP

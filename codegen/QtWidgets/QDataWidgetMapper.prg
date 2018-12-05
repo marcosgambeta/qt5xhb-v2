@@ -137,4 +137,8 @@ $beginSignals
 $signal=|currentIndexChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentIndexChanged( int index )
+$endSlotsClass
+
 #pragma ENDDUMP

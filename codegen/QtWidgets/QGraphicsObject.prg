@@ -47,4 +47,16 @@ $signal=|yChanged()
 $signal=|zChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|enabledChanged()
+$signal=|opacityChanged()
+$signal=|parentChanged()
+$signal=|rotationChanged()
+$signal=|scaleChanged()
+$signal=|visibleChanged()
+$signal=|xChanged()
+$signal=|yChanged()
+$signal=|zChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

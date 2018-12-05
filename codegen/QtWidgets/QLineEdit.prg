@@ -311,4 +311,13 @@ $signal=|textChanged(QString)
 $signal=|textEdited(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|cursorPositionChanged( int iold, int inew )
+$signal=|editingFinished()
+$signal=|returnPressed()
+$signal=|selectionChanged()
+$signal=|textChanged( const QString & text )
+$signal=|textEdited( const QString & text )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -48,4 +48,8 @@ $beginSignals
 $signal=|enabledChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|enabledChanged( bool enabled )
+$endSlotsClass
+
 #pragma ENDDUMP

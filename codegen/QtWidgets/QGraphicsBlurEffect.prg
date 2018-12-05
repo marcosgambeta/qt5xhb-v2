@@ -52,4 +52,9 @@ $signal=|blurHintsChanged(QGraphicsBlurEffect::BlurHints)
 $signal=|blurRadiusChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
+$signal=|blurRadiusChanged( qreal radius )
+$endSlotsClass
+
 #pragma ENDDUMP

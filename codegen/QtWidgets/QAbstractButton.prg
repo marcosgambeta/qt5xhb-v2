@@ -201,4 +201,11 @@ $signal=|released()
 $signal=|toggled(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|clicked( bool checked = false )
+$signal=|pressed()
+$signal=|released()
+$signal=|toggled( bool checked )
+$endSlotsClass
+
 #pragma ENDDUMP

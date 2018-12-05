@@ -318,4 +318,14 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTEDC )
   HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED2 );
 }
 
+$beginSlotsClass
+$signal=|activated( int index )
+$signal=|activated( const QString & text )
+$signal=|currentIndexChanged( int index )
+$signal=|currentIndexChanged( const QString & text )
+$signal=|editTextChanged( const QString & text )
+$signal=|highlighted( int index )
+$signal=|highlighted( const QString & text )
+$endSlotsClass
+
 #pragma ENDDUMP

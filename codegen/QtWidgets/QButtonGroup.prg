@@ -102,4 +102,13 @@ $signal=|buttonReleased(int)
 $endGroup
 $endSignals
 
+$beginSlotsClass
+$signal=|buttonClicked( QAbstractButton * button )
+$signal=|buttonClicked( int id )
+$signal=|buttonPressed( QAbstractButton * button )
+$signal=|buttonPressed( int id )
+$signal=|buttonReleased( QAbstractButton * button )
+$signal=|buttonReleased( int id )
+$endSlotsClass
+
 #pragma ENDDUMP

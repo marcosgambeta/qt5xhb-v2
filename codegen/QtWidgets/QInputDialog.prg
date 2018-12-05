@@ -185,4 +185,13 @@ $signal=|textValueChanged(QString)
 $signal=|textValueSelected(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|doubleValueChanged( double value )
+$signal=|doubleValueSelected( double value )
+$signal=|intValueChanged( int value )
+$signal=|intValueSelected( int value )
+$signal=|textValueChanged( const QString & text )
+$signal=|textValueSelected( const QString & text )
+$endSlotsClass
+
 #pragma ENDDUMP

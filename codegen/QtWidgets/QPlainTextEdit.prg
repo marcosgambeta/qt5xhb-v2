@@ -263,4 +263,16 @@ $signal=|undoAvailable(bool)
 $signal=|updateRequest(QRect,int)
 $endSignals
 
+$beginSlotsClass
+$signal=|blockCountChanged( int newBlockCount )
+$signal=|copyAvailable( bool yes )
+$signal=|cursorPositionChanged()
+$signal=|modificationChanged( bool changed )
+$signal=|redoAvailable( bool available )
+$signal=|selectionChanged()
+$signal=|textChanged()
+$signal=|undoAvailable( bool available )
+$signal=|updateRequest( const QRect & rect, int dy )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -104,4 +104,14 @@ $signal=|historyChanged()
 $signal=|sourceChanged(QUrl)
 $endSignals
 
+$beginSlotsClass
+$signal=|anchorClicked( const QUrl & link )
+$signal=|backwardAvailable( bool available )
+$signal=|forwardAvailable( bool available )
+$signal=|highlighted( const QUrl & link )
+$signal=|highlighted( const QString & link )
+$signal=|historyChanged()
+$signal=|sourceChanged( const QUrl & src )
+$endSlotsClass
+
 #pragma ENDDUMP

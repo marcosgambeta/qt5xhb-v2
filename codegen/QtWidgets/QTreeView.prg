@@ -210,4 +210,9 @@ $signal=|collapsed(QModelIndex)
 $signal=|expanded(QModelIndex)
 $endSignals
 
+$beginSlotsClass
+$signal=|collapsed( const QModelIndex & index )
+$signal=|expanded( const QModelIndex & index )
+$endSlotsClass
+
 #pragma ENDDUMP

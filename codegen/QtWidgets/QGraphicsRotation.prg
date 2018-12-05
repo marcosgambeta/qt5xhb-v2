@@ -82,4 +82,10 @@ $signal=|axisChanged()
 $signal=|originChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|angleChanged()
+$signal=|axisChanged()
+$signal=|originChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

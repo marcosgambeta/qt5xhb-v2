@@ -200,4 +200,8 @@ $beginSignals
 $signal=|overflow()
 $endSignals
 
+$beginSlotsClass
+$signal=|overflow()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -286,4 +286,18 @@ $signal=|sectionResized(int,int,int)
 $signal=|sortIndicatorChanged(int,Qt::SortOrder)
 $endSignals
 
+$beginSlotsClass
+$signal=|geometriesChanged()
+$signal=|sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
+$signal=|sectionClicked( int logicalIndex )
+$signal=|sectionCountChanged( int oldCount, int newCount )
+$signal=|sectionDoubleClicked( int logicalIndex )
+$signal=|sectionEntered( int logicalIndex )
+$signal=|sectionHandleDoubleClicked( int logicalIndex )
+$signal=|sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
+$signal=|sectionPressed( int logicalIndex )
+$signal=|sectionResized( int logicalIndex, int oldSize, int newSize )
+$signal=|sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
+$endSlotsClass
+
 #pragma ENDDUMP

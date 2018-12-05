@@ -240,4 +240,10 @@ $signal=|tabCloseRequested(int)
 $signal=|tabMoved(int,int)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentChanged( int index )
+$signal=|tabCloseRequested( int index )
+$signal=|tabMoved( int from, int to )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -184,4 +184,11 @@ $signal=|currentPageChanged(int,int)
 $signal=|selectionChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|activated( const QDate & date )
+$signal=|clicked( const QDate & date )
+$signal=|currentPageChanged( int year, int month )
+$signal=|selectionChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -65,4 +65,11 @@ $signal=5,4,0|aboutToResize()
 $signal=5,4,0|resized()
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|aboutToCompose()
+$signal=5,4,0|frameSwapped()
+$signal=5,4,0|aboutToResize()
+$signal=5,4,0|resized()
+$endSlotsClass
+
 #pragma ENDDUMP

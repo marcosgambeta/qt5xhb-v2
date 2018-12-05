@@ -350,4 +350,14 @@ $signal=|textChanged()
 $signal=|undoAvailable(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|copyAvailable( bool yes )
+$signal=|currentCharFormatChanged( const QTextCharFormat & f )
+$signal=|cursorPositionChanged()
+$signal=|redoAvailable( bool available )
+$signal=|selectionChanged()
+$signal=|textChanged()
+$signal=|undoAvailable( bool available )
+$endSlotsClass
+
 #pragma ENDDUMP

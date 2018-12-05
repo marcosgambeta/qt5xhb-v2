@@ -87,4 +87,14 @@ $signal=|redoTextChanged(QString)
 $signal=|undoTextChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|activeStackChanged( QUndoStack * stack )
+$signal=|canRedoChanged( bool canRedo )
+$signal=|canUndoChanged( bool canUndo )
+$signal=|cleanChanged( bool clean )
+$signal=|indexChanged( int idx )
+$signal=|redoTextChanged( const QString & redoText )
+$signal=|undoTextChanged( const QString & undoText )
+$endSlotsClass
+
 #pragma ENDDUMP

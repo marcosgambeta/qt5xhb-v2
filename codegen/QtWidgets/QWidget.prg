@@ -1218,4 +1218,11 @@ $signal=|windowIconTextChanged(QString)
 $signal=|customContextMenuRequested(QPoint)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|windowTitleChanged( const QString & title )
+$signal=5,2,0|windowIconChanged( const QIcon & icon )
+$signal=|windowIconTextChanged( const QString & iconText )
+$signal=|customContextMenuRequested( const QPoint & pos )
+$endSlotsClass
+
 #pragma ENDDUMP

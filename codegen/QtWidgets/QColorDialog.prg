@@ -149,4 +149,9 @@ $signal=|colorSelected(QColor)
 $signal=|currentColorChanged(QColor)
 $endSignals
 
+$beginSlotsClass
+$signal=|colorSelected( const QColor & color )
+$signal=|currentColorChanged( const QColor & color )
+$endSlotsClass
+
 #pragma ENDDUMP

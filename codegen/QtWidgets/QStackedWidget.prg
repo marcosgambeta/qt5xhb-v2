@@ -67,4 +67,9 @@ $signal=|currentChanged(int)
 $signal=|widgetRemoved(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentChanged( int index )
+$signal=|widgetRemoved( int index )
+$endSlotsClass
+
 #pragma ENDDUMP

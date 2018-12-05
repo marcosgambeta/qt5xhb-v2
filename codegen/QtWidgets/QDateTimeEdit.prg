@@ -222,4 +222,10 @@ $signal=|dateTimeChanged(QDateTime)
 $signal=|timeChanged(QTime)
 $endSignals
 
+$beginSlotsClass
+$signal=|dateChanged( const QDate & date )
+$signal=|dateTimeChanged( const QDateTime & datetime )
+$signal=|timeChanged( const QTime & time )
+$endSlotsClass
+
 #pragma ENDDUMP

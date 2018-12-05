@@ -141,4 +141,10 @@ $signal=|screenCountChanged(int)
 $signal=|workAreaResized(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|resized( int screen )
+$signal=|screenCountChanged( int newCount )
+$signal=|workAreaResized( int screen )
+$endSlotsClass
+
 #pragma ENDDUMP

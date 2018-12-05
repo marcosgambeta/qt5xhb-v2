@@ -92,4 +92,10 @@ $signal=|finished(int)
 $signal=|rejected()
 $endSignals
 
+$beginSlotsClass
+$signal=|accepted()
+$signal=|finished( int result )
+$signal=|rejected()
+$endSlotsClass
+
 #pragma ENDDUMP

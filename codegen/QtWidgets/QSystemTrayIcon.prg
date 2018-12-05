@@ -103,4 +103,9 @@ $signal=|activated(QSystemTrayIcon::ActivationReason)
 $signal=|messageClicked()
 $endSignals
 
+$beginSlotsClass
+$signal=|activated( QSystemTrayIcon::ActivationReason reason )
+$signal=|messageClicked()
+$endSlotsClass
+
 #pragma ENDDUMP

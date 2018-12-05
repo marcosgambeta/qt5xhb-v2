@@ -99,4 +99,9 @@ $signal=|valueChanged(QString)
 $endGroup
 $endSignals
 
+$beginSlotsClass
+$signal=|valueChanged( double d )
+$signal=|valueChanged( const QString & text )
+$endSlotsClass
+
 #pragma ENDDUMP

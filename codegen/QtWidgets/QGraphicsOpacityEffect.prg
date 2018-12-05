@@ -49,4 +49,9 @@ $signal=|opacityChanged(qreal)
 $signal=|opacityMaskChanged(QBrush)
 $endSignals
 
+$beginSlotsClass
+$signal=|opacityChanged( qreal opacity )
+$signal=|opacityMaskChanged( const QBrush & mask )
+$endSlotsClass
+
 #pragma ENDDUMP

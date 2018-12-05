@@ -78,4 +78,8 @@ $beginSignals
 $signal=|updatePreviewWidget(QModelIndex)
 $endSignals
 
+$beginSlotsClass
+$signal=|updatePreviewWidget( const QModelIndex & index )
+$endSlotsClass
+
 #pragma ENDDUMP

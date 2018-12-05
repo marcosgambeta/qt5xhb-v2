@@ -68,4 +68,10 @@ $signal=|commitData(QWidget*)
 $signal=|sizeHintChanged(QModelIndex)
 $endSignals
 
+$beginSlotsClass
+$signal=|closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint )
+$signal=|commitData( QWidget * editor )
+$signal=|sizeHintChanged( const QModelIndex & index )
+$endSlotsClass
+
 #pragma ENDDUMP

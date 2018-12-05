@@ -178,4 +178,11 @@ $signal=|highlighted(QModelIndex)
 $endGroup
 $endSignals
 
+$beginSlotsClass
+$signal=|activated( const QString & text )
+$signal=|activated( const QModelIndex & index )
+$signal=|highlighted( const QString & text )
+$signal=|highlighted( const QModelIndex & index )
+$endSlotsClass
+
 #pragma ENDDUMP

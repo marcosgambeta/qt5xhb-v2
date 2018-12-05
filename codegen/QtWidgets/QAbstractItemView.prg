@@ -306,4 +306,13 @@ $signal=|pressed(QModelIndex)
 $signal=|viewportEntered()
 $endSignals
 
+$beginSlotsClass
+$signal=|activated( const QModelIndex & index )
+$signal=|clicked( const QModelIndex & index )
+$signal=|doubleClicked( const QModelIndex & index )
+$signal=|entered( const QModelIndex & index )
+$signal=|pressed( const QModelIndex & index )
+$signal=|viewportEntered()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -393,4 +393,14 @@ $signal=|lastWindowClosed()
 $signal=|saveStateRequest(QSessioManager)
 $endSignals
 
+$beginSlotsClass
+$signal=|aboutToReleaseGpuResources()
+$signal=|aboutToUseGpuResources()
+$signal=|commitDataRequest( QSessionManager & manager )
+$signal=|focusChanged( QWidget * old, QWidget * now )
+$signal=|fontDatabaseChanged()
+$signal=|lastWindowClosed()
+$signal=|saveStateRequest( QSessionManager & manager )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -76,4 +76,8 @@ $beginSignals
 $signal=|messageChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|messageChanged( const QString & message )
+$endSlotsClass
+
 #pragma ENDDUMP

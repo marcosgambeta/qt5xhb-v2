@@ -234,4 +234,8 @@ $beginSignals
 $signal=|geometryChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|geometryChanged()
+$endSlotsClass
+
 #pragma ENDDUMP
