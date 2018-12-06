@@ -98,4 +98,8 @@ $beginSignals
 $signal=5,1,0|objectCreated(QObject*,QUrl)
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|objectCreated( QObject * obj, const QUrl & url )
+$endSlotsClass
+
 #pragma ENDDUMP

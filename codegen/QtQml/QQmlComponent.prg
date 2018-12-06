@@ -170,4 +170,9 @@ $signal=|progressChanged(qreal)
 $signal=|statusChanged(QQmlComponent::Status)
 $endSignals
 
+$beginSlotsClass
+$signal=|progressChanged( qreal progress )
+$signal=|statusChanged( QQmlComponent::Status status )
+$endSlotsClass
+
 #pragma ENDDUMP

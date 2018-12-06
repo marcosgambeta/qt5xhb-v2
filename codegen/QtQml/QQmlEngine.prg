@@ -128,4 +128,8 @@ $beginSignals
 $signal=|quit()
 $endSignals
 
+$beginSlotsClass
+$signal=|quit()
+$endSlotsClass
+
 #pragma ENDDUMP
