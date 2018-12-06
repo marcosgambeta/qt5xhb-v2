@@ -141,4 +141,14 @@ $signal=|sceneGraphInitialized()
 $signal=|sceneGraphInvalidated()
 $endSignals
 
+$beginSlotsClass
+$signal=|afterRendering()
+$signal=|beforeRendering()
+$signal=|beforeSynchronizing()
+$signal=|colorChanged( const QColor & color )
+$signal=|frameSwapped()
+$signal=|sceneGraphInitialized()
+$signal=|sceneGraphInvalidated()
+$endSlotsClass
+
 #pragma ENDDUMP

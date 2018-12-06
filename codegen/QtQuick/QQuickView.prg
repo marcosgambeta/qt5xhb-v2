@@ -98,4 +98,8 @@ $beginSignals
 $signal=|statusChanged(QQuickView::Status)
 $endSignals
 
+$beginSlotsClass
+$signal=|statusChanged( QQuickView::Status status )
+$endSlotsClass
+
 #pragma ENDDUMP

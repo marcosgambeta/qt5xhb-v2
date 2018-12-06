@@ -99,4 +99,11 @@ $signal=|fillColorChanged()
 $signal=|renderTargetChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|contentsScaleChanged()
+$signal=|contentsSizeChanged()
+$signal=|fillColorChanged()
+$signal=|renderTargetChanged()
+$endSlotsClass
+
 #pragma ENDDUMP
