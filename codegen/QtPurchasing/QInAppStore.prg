@@ -57,4 +57,10 @@ $signal=|productUnknown(QInAppProduct::ProductType,QString)
 $signal=|transactionReady(QInAppTransaction*)
 $endSignals
 
+$beginSlotsClass
+$signal=|productRegistered( QInAppProduct * product )
+$signal=|productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
+$signal=|transactionReady( QInAppTransaction * transaction )
+$endSlotsClass
+
 #pragma ENDDUMP
