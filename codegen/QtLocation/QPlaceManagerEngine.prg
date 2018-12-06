@@ -103,4 +103,16 @@ $signal=5,4,0|categoryRemoved(QString,QString)
 $signal=5,4,0|dataChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|finished( QPlaceReply * reply )
+$signal=5,4,0|error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() )
+$signal=5,4,0|placeAdded( const QString & placeId )
+$signal=5,4,0|placeUpdated( const QString & placeId )
+$signal=5,4,0|placeRemoved( const QString & placeId )
+$signal=5,4,0|categoryAdded( const QPlaceCategory & category, const QString & parentCategoryId )
+$signal=5,4,0|categoryUpdated( const QPlaceCategory & category, const QString & parentCategoryId )
+$signal=5,4,0|categoryRemoved( const QString & categoryId, const QString & parentCategoryId )
+$signal=5,4,0|dataChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

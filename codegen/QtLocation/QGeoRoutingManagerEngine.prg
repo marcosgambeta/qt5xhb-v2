@@ -76,4 +76,9 @@ $signal=5,4,0|finished(QGeoRouteReply*)
 $signal=5,4,0|error(QGeoRouteReply*,QGeoRouteReply::Error,QString)
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|finished( QGeoRouteReply * reply )
+$signal=5,4,0|error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
+$endSlotsClass
+
 #pragma ENDDUMP

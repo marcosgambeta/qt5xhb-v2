@@ -77,4 +77,9 @@ $signal=5,4,0|finished(QGeoCodeReply*)
 $signal=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|finished( QGeoCodeReply * reply )
+$signal=5,4,0|error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -52,4 +52,9 @@ $signal=5,4,0|finished()
 $signal=5,4,0|error(QPlaceReply::Error,QString)
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|finished()
+$signal=5,4,0|error( QPlaceReply::Error error, const QString & errorString = QString() )
+$endSlotsClass
+
 #pragma ENDDUMP
