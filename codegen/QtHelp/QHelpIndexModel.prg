@@ -41,4 +41,9 @@ $signal=|indexCreated()
 $signal=|indexCreationStarted()
 $endSignals
 
+$beginSlotsClass
+$signal=|indexCreated()
+$signal=|indexCreationStarted()
+$endSlotsClass
+
 #pragma ENDDUMP

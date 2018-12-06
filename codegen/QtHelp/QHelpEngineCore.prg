@@ -136,4 +136,11 @@ $signal=|setupStarted()
 $signal=|warning(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentFilterChanged( const QString & newFilter )
+$signal=|setupFinished()
+$signal=|setupStarted()
+$signal=|warning( const QString & msg )
+$endSlotsClass
+
 #pragma ENDDUMP

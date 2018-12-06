@@ -36,4 +36,8 @@ $beginSignals
 $signal=|requestShowLink(QUrl)
 $endSignals
 
+$beginSlotsClass
+$signal=|requestShowLink( const QUrl & link )
+$endSlotsClass
+
 #pragma ENDDUMP

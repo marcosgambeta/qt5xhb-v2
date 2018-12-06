@@ -66,4 +66,11 @@ $signal=|searchingFinished(int)
 $signal=|searchingStarted()
 $endSignals
 
+$beginSlotsClass
+$signal=|indexingFinished()
+$signal=|indexingStarted()
+$signal=|searchingFinished( int hits )
+$signal=|searchingStarted()
+$endSlotsClass
+
 #pragma ENDDUMP

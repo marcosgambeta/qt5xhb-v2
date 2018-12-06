@@ -39,4 +39,8 @@ $beginSignals
 $signal=|search()
 $endSignals
 
+$beginSlotsClass
+$signal=|search()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -39,4 +39,8 @@ $beginSignals
 $signal=|linkActivated(QUrl,QString)
 $endSignals
 
+$beginSlotsClass
+$signal=|linkActivated( const QUrl & link, const QString & keyword )
+$endSlotsClass
+
 #pragma ENDDUMP

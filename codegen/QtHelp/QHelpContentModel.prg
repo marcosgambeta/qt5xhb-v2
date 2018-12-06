@@ -58,4 +58,9 @@ $signal=|contentsCreated()
 $signal=|contentsCreationStarted()
 $endSignals
 
+$beginSlotsClass
+$signal=|contentsCreated()
+$signal=|contentsCreationStarted()
+$endSlotsClass
+
 #pragma ENDDUMP
