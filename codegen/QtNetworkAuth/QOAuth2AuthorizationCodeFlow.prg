@@ -112,4 +112,8 @@ $beginSignals
 $signal=5,10,0|accessTokenUrlChanged(QUrl)
 $endSignals
 
+$beginSlotsClass
+$signal=5,10,0|accessTokenUrlChanged( const QUrl & accessTokenUrl )
+$endSlotsClass
+
 #pragma ENDDUMP

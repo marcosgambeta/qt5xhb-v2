@@ -151,4 +151,15 @@ $signal=5,10,0|stateChanged(QString)
 $signal=5,10,0|userAgentChanged(QString)
 $endSignals
 
+$beginSlotsClass
+%% $signal=|authorizationCallbackReceived( const QVariantMap & data )
+$signal=5,10,0|clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
+$signal=5,10,0|error( const QString & error, const QString & errorDescription, const QUrl & uri )
+$signal=5,10,0|expirationAtChanged( const QDateTime & expiration )
+$signal=5,10,0|responseTypeChanged( const QString & responseType )
+$signal=5,10,0|scopeChanged( const QString & scope )
+$signal=5,10,0|stateChanged( const QString & state )
+$signal=5,10,0|userAgentChanged( const QString & userAgent )
+$endSlotsClass
+
 #pragma ENDDUMP

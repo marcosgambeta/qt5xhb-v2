@@ -51,4 +51,11 @@ $signal=5,10,0|replyDataReceived(QByteArray)
 %% $signal=|tokensReceived(QVariantMap)
 $endSignals
 
+$beginSlotsClass
+$signal=5,10,0|callbackDataReceived( const QByteArray & data )
+%% $signal=|callbackReceived( const QVariantMap & values )
+$signal=5,10,0|replyDataReceived( const QByteArray & data )
+%% $signal=|tokensReceived( const QVariantMap & tokens )
+$endSlotsClass
+
 #pragma ENDDUMP

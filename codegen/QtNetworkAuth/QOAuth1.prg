@@ -144,4 +144,12 @@ $signal=5,10,0|tokenCredentialsUrlChanged(QUrl)
 $signal=5,10,0|tokenSecretChanged(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=5,10,0|clientSharedSecretChanged( const QString & credential )
+$signal=5,10,0|signatureMethodChanged( QOAuth1::SignatureMethod method )
+$signal=5,10,0|temporaryCredentialsUrlChanged( const QUrl & url )
+$signal=5,10,0|tokenCredentialsUrlChanged( const QUrl & url )
+$signal=5,10,0|tokenSecretChanged( const QString & token )
+$endSlotsClass
+
 #pragma ENDDUMP
