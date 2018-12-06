@@ -42,4 +42,8 @@ $beginSignals
 $signal=|configurationChanged(QNetworkConfiguration)
 $endSignals
 
+$beginSlotsClass
+$signal=|configurationChanged( const QNetworkConfiguration & configuration )
+$endSlotsClass
+
 #pragma ENDDUMP

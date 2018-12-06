@@ -56,4 +56,11 @@ $signal=|writableChanged(bool)
 $signal=|metaDataAvailableChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|metaDataChanged()
+$signal=|metaDataChanged( const QString & key, const QVariant & value )
+$signal=|writableChanged( bool writable )
+$signal=|metaDataAvailableChanged( bool available )
+$endSlotsClass
+
 #pragma ENDDUMP

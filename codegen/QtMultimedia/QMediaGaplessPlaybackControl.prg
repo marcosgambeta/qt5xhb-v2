@@ -53,4 +53,10 @@ $signal=|crossfadeTimeChanged(qreal)
 $signal=|nextMediaChanged(QMediaContent)
 $endSignals
 
+$beginSlotsClass
+$signal=|advancedToNextMedia()
+$signal=|crossfadeTimeChanged( qreal crossfadeTime )
+$signal=|nextMediaChanged( const QMediaContent & media )
+$endSlotsClass
+
 #pragma ENDDUMP

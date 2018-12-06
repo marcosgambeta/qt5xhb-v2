@@ -66,4 +66,11 @@ $signal=|focusPointModeChanged(QCameraFocus::FocusPointMode)
 $signal=|focusZonesChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|customFocusPointChanged( const QPointF & point )
+$signal=|focusModeChanged( QCameraFocus::FocusModes mode )
+$signal=|focusPointModeChanged( QCameraFocus::FocusPointMode mode )
+$signal=|focusZonesChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

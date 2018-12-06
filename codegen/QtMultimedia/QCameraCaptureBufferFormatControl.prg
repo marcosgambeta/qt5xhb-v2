@@ -45,4 +45,8 @@ $beginSignals
 $signal=|bufferFormatChanged(QVideoFrame::PixelFormat)
 $endSignals
 
+$beginSlotsClass
+$signal=|bufferFormatChanged( QVideoFrame::PixelFormat format )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -48,4 +48,8 @@ $beginSignals
 $signal=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
 $endSignals
 
+$beginSlotsClass
+$signal=|lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
+$endSlotsClass
+
 #pragma ENDDUMP

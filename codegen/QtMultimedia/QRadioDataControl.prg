@@ -69,4 +69,14 @@ $signal=|alternativeFrequenciesEnabledChanged(bool)
 $signal=|error(QRadioData::Error)
 $endSignals
 
+$beginSlotsClass
+$signal=|stationIdChanged( QString stationId )
+$signal=|programTypeChanged( QRadioData::ProgramType programType )
+$signal=|programTypeNameChanged( QString programTypeName )
+$signal=|stationNameChanged( QString stationName )
+$signal=|radioTextChanged( QString radioText )
+$signal=|alternativeFrequenciesEnabledChanged( bool enabled )
+$signal=|error( QRadioData::Error err )
+$endSlotsClass
+
 #pragma ENDDUMP

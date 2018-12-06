@@ -57,4 +57,14 @@ $signal=|imageSaved(int,QString)
 $signal=|readyForCaptureChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|error( int id, int error, const QString & errorString )
+$signal=|imageAvailable( int requestId, const QVideoFrame & buffer )
+$signal=|imageCaptured( int requestId, const QImage & preview )
+$signal=|imageExposed( int requestId )
+$signal=|imageMetadataAvailable( int id, const QString & key, const QVariant & value )
+$signal=|imageSaved( int requestId, const QString & fileName )
+$signal=|readyForCaptureChanged( bool ready )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -48,4 +48,8 @@ $beginSignals
 $signal=|flashReady(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|flashReady( bool ready )
+$endSlotsClass
+
 #pragma ENDDUMP

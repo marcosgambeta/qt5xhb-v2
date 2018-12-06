@@ -217,4 +217,20 @@ $signal=|statusChanged(QMediaRecorder::Status)
 $signal=|volumeChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|actualLocationChanged( const QUrl & location )
+$signal=|availabilityChanged( bool available )
+$signal=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$signal=|durationChanged( qint64 duration )
+$signal=|error( QMediaRecorder::Error error )
+$signal=|metaDataAvailableChanged( bool available )
+$signal=|metaDataChanged()
+$signal=|metaDataChanged( const QString & key, const QVariant & value )
+$signal=|metaDataWritableChanged( bool writable )
+$signal=|mutedChanged( bool muted )
+$signal=|stateChanged( QMediaRecorder::State state )
+$signal=|statusChanged( QMediaRecorder::Status status )
+$signal=|volumeChanged( qreal volume )
+$endSlotsClass
+
 #pragma ENDDUMP

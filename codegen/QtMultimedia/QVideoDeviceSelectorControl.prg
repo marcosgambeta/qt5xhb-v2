@@ -58,4 +58,10 @@ $signal=|selectedDeviceChanged(QString)
 $endGroup
 $endSignals
 
+$beginSlotsClass
+$signal=|devicesChanged()
+$signal=|selectedDeviceChanged( int index )
+$signal=|selectedDeviceChanged( const QString & name )
+$endSlotsClass
+
 #pragma ENDDUMP

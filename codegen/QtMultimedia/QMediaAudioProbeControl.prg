@@ -37,4 +37,9 @@ $signal=|audioBufferProbed(QAudioBuffer)
 $signal=|flush()
 $endSignals
 
+$beginSlotsClass
+$signal=|audioBufferProbed( const QAudioBuffer & buffer )
+$signal=|flush()
+$endSlotsClass
+
 #pragma ENDDUMP

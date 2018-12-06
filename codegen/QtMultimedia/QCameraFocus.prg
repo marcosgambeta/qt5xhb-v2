@@ -112,4 +112,12 @@ $signal=|maximumOpticalZoomChanged(qreal)
 $signal=|opticalZoomChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|digitalZoomChanged( qreal value )
+$signal=|focusZonesChanged()
+$signal=|maximumDigitalZoomChanged( qreal zoom )
+$signal=|maximumOpticalZoomChanged( qreal zoom )
+$signal=|opticalZoomChanged( qreal value )
+$endSlotsClass
+
 #pragma ENDDUMP

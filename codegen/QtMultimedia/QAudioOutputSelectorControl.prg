@@ -52,4 +52,9 @@ $signal=|activeOutputChanged(QString)
 $signal=|availableOutputsChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|activeOutputChanged( const QString & name )
+$signal=|availableOutputsChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

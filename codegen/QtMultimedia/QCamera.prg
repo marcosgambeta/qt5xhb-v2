@@ -294,4 +294,15 @@ $signal=|stateChanged(QCamera::State)
 $signal=|statusChanged(QCamera::Status)
 $endSignals
 
+$beginSlotsClass
+$signal=|captureModeChanged( QCamera::CaptureModes mode )
+$signal=|error( QCamera::Error value )
+$signal=|lockFailed()
+$signal=|lockStatusChanged( QCamera::LockStatus status, QCamera::LockChangeReason reason )
+$signal=|lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
+$signal=|locked()
+$signal=|stateChanged( QCamera::State state )
+$signal=|statusChanged( QCamera::Status status )
+$endSlotsClass
+
 #pragma ENDDUMP

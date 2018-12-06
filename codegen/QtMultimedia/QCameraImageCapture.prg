@@ -114,4 +114,16 @@ $signal=|imageSaved(int,QString)
 $signal=|readyForCaptureChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|bufferFormatChanged( QVideoFrame::PixelFormat format )
+$signal=|captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
+$signal=|error( int id, QCameraImageCapture::Error error, const QString & errorString )
+$signal=|imageAvailable( int id, const QVideoFrame & buffer )
+$signal=|imageCaptured( int id, const QImage & preview )
+$signal=|imageExposed( int id )
+$signal=|imageMetadataAvailable( int id, const QString & key, const QVariant & value )
+$signal=|imageSaved( int id, const QString & fileName )
+$signal=|readyForCaptureChanged( bool ready )
+$endSlotsClass
+
 #pragma ENDDUMP

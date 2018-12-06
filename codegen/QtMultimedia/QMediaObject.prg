@@ -94,4 +94,13 @@ $endGroup
 $signal=|notifyIntervalChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|availabilityChanged( bool available )
+$signal=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$signal=|metaDataAvailableChanged( bool available )
+$signal=|metaDataChanged()
+$signal=|metaDataChanged( const QString & key, const QVariant & value )
+$signal=|notifyIntervalChanged( int milliseconds )
+$endSlotsClass
+
 #pragma ENDDUMP

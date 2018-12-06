@@ -45,4 +45,8 @@ $beginSignals
 $signal=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
 $endSignals
 
+$beginSlotsClass
+$signal=|captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
+$endSlotsClass
+
 #pragma ENDDUMP

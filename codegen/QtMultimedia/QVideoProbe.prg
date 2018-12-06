@@ -67,4 +67,9 @@ $signal=|flush()
 $signal=|videoFrameProbed(QVideoFrame)
 $endSignals
 
+$beginSlotsClass
+$signal=|flush()
+$signal=|videoFrameProbed( const QVideoFrame & frame )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -53,4 +53,10 @@ $signal=|parameterRangeChanged(int)
 $signal=|requestedValueChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|actualValueChanged( int parameter )
+$signal=|parameterRangeChanged( int parameter )
+$signal=|requestedValueChanged( int parameter )
+$endSlotsClass
+
 #pragma ENDDUMP

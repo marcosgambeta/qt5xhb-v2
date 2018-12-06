@@ -61,4 +61,9 @@ $signal=|audioInputChanged(QString)
 $signal=|availableAudioInputsChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|audioInputChanged( const QString & name )
+$signal=|availableAudioInputsChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

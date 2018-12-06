@@ -95,4 +95,13 @@ $signal=|saturationChanged(int)
 $signal=|nativeSizeChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|fullScreenChanged( bool fullScreen )
+$signal=|brightnessChanged( int brightness )
+$signal=|contrastChanged( int contrast )
+$signal=|hueChanged( int hue )
+$signal=|saturationChanged( int saturation )
+$signal=|nativeSizeChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

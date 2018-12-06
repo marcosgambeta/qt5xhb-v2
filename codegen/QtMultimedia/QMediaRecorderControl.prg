@@ -77,4 +77,14 @@ $signal=|statusChanged(QMediaRecorder::Status)
 $signal=|volumeChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|actualLocationChanged( const QUrl & location )
+$signal=|durationChanged( qint64 duration )
+$signal=|error( int error, const QString & errorString )
+$signal=|mutedChanged( bool muted )
+$signal=|stateChanged( QMediaRecorder::State state )
+$signal=|statusChanged( QMediaRecorder::Status status )
+$signal=|volumeChanged( qreal gain )
+$endSlotsClass
+
 #pragma ENDDUMP

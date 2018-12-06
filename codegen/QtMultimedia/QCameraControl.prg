@@ -60,4 +60,11 @@ $signal=|stateChanged(QCamera::State)
 $signal=|statusChanged(QCamera::Status)
 $endSignals
 
+$beginSlotsClass
+$signal=|captureModeChanged( QCamera::CaptureModes mode )
+$signal=|error( int error, const QString & errorString )
+$signal=|stateChanged( QCamera::State state )
+$signal=|statusChanged( QCamera::Status status )
+$endSlotsClass
+
 #pragma ENDDUMP

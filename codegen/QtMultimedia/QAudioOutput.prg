@@ -143,4 +143,9 @@ $signal=|notify()
 $signal=|stateChanged(QAudio::State)
 $endSignals
 
+$beginSlotsClass
+$signal=|notify()
+$signal=|stateChanged( QAudio::State state )
+$endSlotsClass
+
 #pragma ENDDUMP

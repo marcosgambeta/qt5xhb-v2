@@ -117,4 +117,10 @@ $signal=|stateChanged(QAudio::State)
 $signal=|notify()
 $endSignals
 
+$beginSlotsClass
+$signal=|errorChanged( QAudio::Error error )
+$signal=|stateChanged( QAudio::State state )
+$signal=|notify()
+$endSlotsClass
+
 #pragma ENDDUMP

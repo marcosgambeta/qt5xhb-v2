@@ -62,4 +62,13 @@ $signal=|requestedDigitalZoomChanged(qreal)
 $signal=|requestedOpticalZoomChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|currentDigitalZoomChanged( qreal zoom )
+$signal=|currentOpticalZoomChanged( qreal zoom )
+$signal=|maximumDigitalZoomChanged( qreal zoom )
+$signal=|maximumOpticalZoomChanged( qreal zoom )
+$signal=|requestedDigitalZoomChanged( qreal zoom )
+$signal=|requestedOpticalZoomChanged( qreal zoom )
+$endSlotsClass
+
 #pragma ENDDUMP

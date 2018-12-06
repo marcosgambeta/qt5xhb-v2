@@ -132,4 +132,16 @@ $signal=|statusChanged()
 $signal=|categoryChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|sourceChanged()
+$signal=|loopCountChanged()
+$signal=|loopsRemainingChanged()
+$signal=|volumeChanged()
+$signal=|mutedChanged()
+$signal=|loadedChanged()
+$signal=|playingChanged()
+$signal=|statusChanged()
+$signal=|categoryChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -49,4 +49,10 @@ $endGroup
 $signal=|metaDataAvailableChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=|metaDataChanged()
+$signal=|metaDataChanged( const QString & key, const QVariant & value )
+$signal=|metaDataAvailableChanged( bool available )
+$endSlotsClass
+
 #pragma ENDDUMP

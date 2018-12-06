@@ -39,4 +39,8 @@ $beginSignals
 $signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
 $endSignals
 
+$beginSlotsClass
+$signal=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$endSlotsClass
+
 #pragma ENDDUMP

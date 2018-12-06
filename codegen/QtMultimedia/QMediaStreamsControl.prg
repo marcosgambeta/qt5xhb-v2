@@ -52,4 +52,9 @@ $signal=|activeStreamsChanged()
 $signal=|streamsChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|activeStreamsChanged()
+$signal=|streamsChanged()
+$endSlotsClass
+
 #pragma ENDDUMP
