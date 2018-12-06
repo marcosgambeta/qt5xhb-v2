@@ -70,4 +70,8 @@ $beginSignals
 $signal=|paintRequested(QPrinter*)
 $endSignals
 
+$beginSlotsClass
+$signal=|paintRequested( QPrinter * printer )
+$endSlotsClass
+
 #pragma ENDDUMP

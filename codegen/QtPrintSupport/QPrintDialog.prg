@@ -85,4 +85,8 @@ $beginSignals
 $signal=|accepted(QPrinter*)
 $endSignals
 
+$beginSlotsClass
+$signal=|accepted( QPrinter * printer )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -128,4 +128,9 @@ $signal=|paintRequested(QPrinter*)
 $signal=|previewChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|paintRequested( QPrinter * printer )
+$signal=|previewChanged()
+$endSlotsClass
+
 #pragma ENDDUMP
