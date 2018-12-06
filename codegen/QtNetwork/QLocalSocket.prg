@@ -139,4 +139,11 @@ $signal=|error(QLocalSocket::LocalSocketError)
 $signal=|stateChanged(QLocalSocket::LocalSocketState)
 $endSignals
 
+$beginSlotsClass
+$signal=|connected()
+$signal=|disconnected()
+$signal=|error( QLocalSocket::LocalSocketError socketError )
+$signal=|stateChanged( QLocalSocket::LocalSocketState socketState )
+$endSlotsClass
+
 #pragma ENDDUMP

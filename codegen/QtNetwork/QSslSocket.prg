@@ -438,4 +438,13 @@ $signal=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
 $signal=|sslErrors(QList<QSslError>)
 $endSignals
 
+$beginSlotsClass
+$signal=|encrypted()
+$signal=|encryptedBytesWritten( qint64 written )
+$signal=|modeChanged( QSslSocket::SslMode mode )
+$signal=|peerVerifyError( const QSslError & error )
+$signal=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
+$signal=|sslErrors( const QList<QSslError> & errors )
+$endSlotsClass
+
 #pragma ENDDUMP

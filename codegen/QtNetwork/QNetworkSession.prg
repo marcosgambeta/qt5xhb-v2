@@ -116,4 +116,14 @@ $signal=|stateChanged(QNetworkSession::State)
 $signal=|usagePoliciesChanged(QNetworkSession::UsagePolicies)
 $endSignals
 
+$beginSlotsClass
+$signal=|closed()
+$signal=|error( QNetworkSession::SessionError error )
+$signal=|newConfigurationActivated()
+$signal=|opened()
+$signal=|preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
+$signal=|stateChanged( QNetworkSession::State state )
+$signal=|usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
+$endSlotsClass
+
 #pragma ENDDUMP

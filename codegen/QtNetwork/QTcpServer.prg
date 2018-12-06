@@ -111,4 +111,9 @@ $signal=|acceptError(QAbstractSocket::SocketError)
 $signal=|newConnection()
 $endSignals
 
+$beginSlotsClass
+$signal=|acceptError( QAbstractSocket::SocketError socketError )
+$signal=|newConnection()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -121,4 +121,8 @@ $signal=|newConnection()
 $endSignals
 $endSignals
 
+$beginSlotsClass
+$signal=|newConnection()
+$endSlotsClass
+
 #pragma ENDDUMP

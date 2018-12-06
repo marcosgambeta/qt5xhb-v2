@@ -234,4 +234,15 @@ $signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
 $signal=|stateChanged(QAbstractSocket::SocketState)
 $endSignals
 
+$beginSlotsClass
+$signal=|connected()
+$signal=|disconnected()
+$signal=|error( QAbstractSocket::SocketError socketError )
+$signal=|hostFound()
+%% #ifndef QT_NO_NETWORKPROXY
+$signal=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+%% #endif
+$signal=|stateChanged( QAbstractSocket::SocketState socketState )
+$endSlotsClass
+
 #pragma ENDDUMP

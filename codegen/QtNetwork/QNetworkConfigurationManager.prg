@@ -63,4 +63,12 @@ $signal=|onlineStateChanged(bool)
 $signal=|updateCompleted()
 $endSignals
 
+$beginSlotsClass
+$signal=|configurationAdded( const QNetworkConfiguration & config )
+$signal=|configurationChanged( const QNetworkConfiguration & config )
+$signal=|configurationRemoved( const QNetworkConfiguration & config )
+$signal=|onlineStateChanged( bool isOnline )
+$signal=|updateCompleted()
+$endSlotsClass
+
 #pragma ENDDUMP

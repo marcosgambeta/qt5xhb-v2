@@ -152,4 +152,11 @@ $signal=|nameserverChanged(QHostAddress)
 $signal=|typeChanged(QDnsLookup::Type)
 $endSignals
 
+$beginSlotsClass
+$signal=|finished()
+$signal=|nameChanged( const QString & name )
+$signal=|nameserverChanged( const QHostAddress & nameserver )
+$signal=|typeChanged( QDnsLookup::Type type )
+$endSlotsClass
+
 #pragma ENDDUMP
