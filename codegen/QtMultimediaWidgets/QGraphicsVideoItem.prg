@@ -66,4 +66,8 @@ $beginSignals
 $signal=|nativeSizeChanged(QSizeF)
 $endSignals
 
+$beginSlotsClass
+$signal=|nativeSizeChanged( const QSizeF & size )
+$endSlotsClass
+
 #pragma ENDDUMP
