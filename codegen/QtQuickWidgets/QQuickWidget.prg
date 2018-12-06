@@ -116,4 +116,9 @@ $signal=5,3,0|statusChanged(QQuickWidget::Status)
 $signal=5,3,0|sceneGraphError(QQuickWindow::SceneGraphError,QString)
 $endSignals
 
+$beginSlotsClass
+$signal=5,3,0|statusChanged( QQuickWidget::Status status )
+$signal=5,3,0|sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
+$endSlotsClass
+
 #pragma ENDDUMP
