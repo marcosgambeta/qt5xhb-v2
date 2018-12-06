@@ -95,4 +95,11 @@ $signal=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
 $signal=5,2,0|error(QGeoAreaMonitorSource::Error)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+$signal=5,2,0|areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+$signal=5,2,0|monitorExpired( const QGeoAreaMonitorInfo & monitor )
+$signal=5,2,0|error( QGeoAreaMonitorSource::Error error )
+$endSlotsClass
+
 #pragma ENDDUMP

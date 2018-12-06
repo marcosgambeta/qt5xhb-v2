@@ -71,4 +71,11 @@ $signal=5,2,0|requestTimeout()
 $signal=5,2,0|error(QGeoSatelliteInfoSource::Error)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites )
+$signal=5,2,0|satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites )
+$signal=5,2,0|requestTimeout()
+$signal=5,2,0|error( QGeoSatelliteInfoSource::Error error )
+$endSlotsClass
+
 #pragma ENDDUMP
