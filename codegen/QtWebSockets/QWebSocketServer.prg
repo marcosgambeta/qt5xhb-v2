@@ -114,4 +114,14 @@ $signal=5,3,0|sslErrors(QList<QSslError>)
 $signal=5,3,0|closed()
 $endSignals
 
+$beginSlotsClass
+$signal=5,3,0|acceptError( QAbstractSocket::SocketError socketError )
+$signal=5,3,0|serverError( QWebSocketProtocol::CloseCode closeCode )
+$signal=5,3,0|originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
+$signal=5,3,0|newConnection()
+$signal=5,3,0|peerVerifyError( const QSslError & error )
+$signal=5,3,0|sslErrors( const QList<QSslError> & errors )
+$signal=5,3,0|closed()
+$endSlotsClass
+
 #pragma ENDDUMP
