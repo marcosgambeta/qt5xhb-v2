@@ -198,4 +198,8 @@ $beginSignals
 $signal=|repaintNeeded()
 $endSignals
 
+$beginSlotsClass
+$signal=|repaintNeeded()
+$endSlotsClass
+
 #pragma ENDDUMP
