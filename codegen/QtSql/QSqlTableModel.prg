@@ -180,4 +180,11 @@ $signal=|beforeUpdate(int,QSqlRecord)
 $signal=|primeInsert(int,QSqlRecord)
 $endSignals
 
+$beginSlotsClass
+$signal=|beforeDelete( int row )
+$signal=|beforeInsert( QSqlRecord & record )
+$signal=|beforeUpdate( int row, QSqlRecord & record )
+$signal=|primeInsert( int row, QSqlRecord & record )
+$endSlotsClass
+
 #pragma ENDDUMP

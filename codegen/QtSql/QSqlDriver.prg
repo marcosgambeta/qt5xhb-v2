@@ -116,4 +116,9 @@ $signal=|notification(QString,QSqlDriver::NotificationSource,QVariant)
 $endGroup
 $endSignals
 
+$beginSlotsClass
+$signal=|notification( const QString & name )
+$signal=|notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
+$endSlotsClass
+
 #pragma ENDDUMP
