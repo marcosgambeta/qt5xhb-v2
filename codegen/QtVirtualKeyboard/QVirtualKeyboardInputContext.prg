@@ -178,4 +178,23 @@ $signal=|anchorRectIntersectsClipRectChanged()
 $signal=|cursorRectIntersectsClipRectChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|preeditTextChanged()
+$signal=|inputMethodHintsChanged()
+$signal=|surroundingTextChanged()
+$signal=|selectedTextChanged()
+$signal=|anchorPositionChanged()
+$signal=|cursorPositionChanged()
+$signal=|anchorRectangleChanged()
+$signal=|cursorRectangleChanged()
+$signal=|shiftActiveChanged()
+$signal=|capsLockActiveChanged()
+$signal=|uppercaseChanged()
+$signal=|animatingChanged()
+$signal=|localeChanged()
+$signal=|selectionControlVisibleChanged()
+$signal=|anchorRectIntersectsClipRectChanged()
+$signal=|cursorRectIntersectsClipRectChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

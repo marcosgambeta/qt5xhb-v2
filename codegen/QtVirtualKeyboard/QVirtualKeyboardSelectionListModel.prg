@@ -59,4 +59,10 @@ $signal=|activeItemChanged(int)
 $signal=|itemSelected(int)
 $endSignals
 
+$beginSlotsClass
+$signal=|countChanged()
+$signal=|activeItemChanged( int index )
+$signal=|itemSelected( int index )
+$endSlotsClass
+
 #pragma ENDDUMP

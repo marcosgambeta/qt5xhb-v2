@@ -91,4 +91,13 @@ $signal=|canceledChanged(bool)
 $signal=|opacityChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=|traceIdChanged( int traceId )
+$signal=|channelsChanged()
+$signal=|lengthChanged( int length )
+$signal=|finalChanged( bool isFinal )
+$signal=|canceledChanged( bool isCanceled )
+$signal=|opacityChanged( qreal opacity )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -58,4 +58,10 @@ $signal=|selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type
 $signal=|selectionListsChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
+$signal=|selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type type, int index )
+$signal=|selectionListsChanged()
+$endSlotsClass
+
 #pragma ENDDUMP
