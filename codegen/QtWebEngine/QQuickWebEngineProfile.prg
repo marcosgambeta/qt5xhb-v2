@@ -214,4 +214,21 @@ $signal=|spellCheckLanguagesChanged()
 $signal=|storageNameChanged()
 $endSignals
 
+$beginSlotsClass
+$signal=|cachePathChanged()
+%% TODO: implementar ?
+%% $signal=|downloadFinished( QQuickWebEngineDownloadItem * download )
+%% $signal=|downloadRequested( QQuickWebEngineDownloadItem * download )
+$signal=|httpAcceptLanguageChanged()
+$signal=|httpCacheMaximumSizeChanged()
+$signal=|httpCacheTypeChanged()
+$signal=|httpUserAgentChanged()
+$signal=|offTheRecordChanged()
+$signal=|persistentCookiesPolicyChanged()
+$signal=|persistentStoragePathChanged()
+$signal=|spellCheckEnabledChanged()
+$signal=|spellCheckLanguagesChanged()
+$signal=|storageNameChanged()
+$endSlotsClass
+
 #pragma ENDDUMP

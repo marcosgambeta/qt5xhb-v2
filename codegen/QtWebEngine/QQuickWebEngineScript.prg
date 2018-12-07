@@ -109,4 +109,13 @@ $signal=|sourceUrlChanged(QUrl)
 $signal=|worldIdChanged(QQuickWebEngineScript::ScriptWorldId)
 $endSignals
 
+$beginSlotsClass
+$signal=|injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint )
+$signal=|nameChanged( const QString & name )
+$signal=|runOnSubframesChanged( bool on )
+$signal=|sourceCodeChanged( const QString & code )
+$signal=|sourceUrlChanged( const QUrl & url )
+$signal=|worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
+$endSlotsClass
+
 #pragma ENDDUMP
