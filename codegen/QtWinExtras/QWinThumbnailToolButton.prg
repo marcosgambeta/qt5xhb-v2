@@ -82,4 +82,9 @@ $signal=5,2,0|clicked()
 $signal=5,2,0|changed()
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|clicked()
+$signal=5,2,0|changed()
+$endSlotsClass
+
 #pragma ENDDUMP

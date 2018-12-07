@@ -95,4 +95,13 @@ $signal=5,2,0|pausedChanged(bool)
 $signal=5,2,0|stoppedChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=5,2,0|valueChanged( int value )
+$signal=5,2,0|minimumChanged( int minimum )
+$signal=5,2,0|maximumChanged( int maximum )
+$signal=5,2,0|visibilityChanged( bool visible )
+$signal=5,2,0|pausedChanged( bool paused )
+$signal=5,2,0|stoppedChanged( bool stopped )
+$endSlotsClass
+
 #pragma ENDDUMP
