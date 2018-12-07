@@ -72,4 +72,9 @@ $signal=|evaluationResumed()
 $signal=|evaluationSuspended()
 $endSignals
 
+$beginSlotsClass
+$signal=|evaluationResumed()
+$signal=|evaluationSuspended()
+$endSlotsClass
+
 #pragma ENDDUMP
