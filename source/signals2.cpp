@@ -65,10 +65,13 @@ bool Signals2_connect_signal ( QObject * object, QString signal, PHB_ITEM codebl
     if( i == -1 ) // nao encontrou posicao livre
     {
       // adiciona sinal na lista de sinais
+
       s_signals->list1 << object;
       s_signals->list2 << signal;
       s_signals->list3 << codeblock;
       s_signals->list4 << true;
+      QMetaObject::Connection connection;
+      s_signals->list5 << connection;
     }
     else // encontrou posicao livre
     {
@@ -77,6 +80,8 @@ bool Signals2_connect_signal ( QObject * object, QString signal, PHB_ITEM codebl
       s_signals->list2[i] = signal;
       s_signals->list3[i] = codeblock;
       s_signals->list4[i] = true;
+      QMetaObject::Connection connection;
+      s_signals->list5[i] = connection;
     }
     ret = true;
   }
@@ -115,6 +120,8 @@ bool Signals2_disconnect_signal ( QObject * object, QString signal )
         s_signals->list2[i] = "";
         s_signals->list3[i] = NULL;
         s_signals->list4[i] = false;
+        QMetaObject::Connection connection;
+        s_signals->list5[i] = connection;
         ret = true;
       }
     }
@@ -205,6 +212,8 @@ void Signals2_release_codeblocks ()
         s_signals->list2[i] = "";
         s_signals->list3[i] = NULL;
         s_signals->list4[i] = false;
+        QMetaObject::Connection connection;
+        s_signals->list5[i] = connection;
       }
     }
   }
@@ -237,6 +246,8 @@ void Signals2_disconnect_all_signals (QObject * obj, bool children)
           s_signals->list2[i] = "";
           s_signals->list3[i] = NULL;
           s_signals->list4[i] = false;
+          QMetaObject::Connection connection;
+          s_signals->list5[i] = connection;
         }
       }
     }
@@ -262,6 +273,8 @@ void Signals2_disconnect_all_signals (QObject * obj, bool children)
             s_signals->list2[ii] = "";
             s_signals->list3[ii] = NULL;
             s_signals->list4[ii] = false;
+            QMetaObject::Connection connection;
+            s_signals->list5[ii] = connection;
           }
         }
       }
@@ -463,4 +476,48 @@ PHB_ITEM Signals2_return_qobject ( QObject * ptr, const char * classname )
   }
 
   return pObject;
+}
+
+bool Signals2_store_connection ( QObject * s, QString signal, QMetaObject::Connection connection )
+{
+  // cria objeto da classe Signals, caso não tenha sido criado
+  if( s_signals == NULL )
+  {
+    s_signals = new Signals2(QCoreApplication::instance());
+  }
+  // valor de retorno
+  bool stored = false;
+  // armazena handle da conexão
+  for (int i = 0; i < s_signals->list1.size(); ++i)
+  {
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) s ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    {
+      s_signals->list5[i] = connection;
+      stored = true;
+      break;
+    }
+  }
+  return stored;
+}
+
+
+QMetaObject::Connection Signals2_get_connection ( QObject * s, QString signal )
+{
+  // cria objeto da classe Signals, caso não tenha sido criado
+  if( s_signals == NULL )
+  {
+    s_signals = new Signals2(QCoreApplication::instance());
+  }
+  // valor de retorno
+  QMetaObject::Connection connection;
+  // busca handle da conexão
+  for (int i = 0; i < s_signals->list1.size(); ++i)
+  {
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) s ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    {
+      connection = s_signals->list5.at(i);
+      break;
+    }
+  }
+  return connection;
 }
