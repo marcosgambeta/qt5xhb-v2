@@ -39,4 +39,8 @@ $beginSignals
 $signal=5,4,0|messageReceived(QJsonObject,QWebChannelAbstractTransport*)
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport )
+$endSlotsClass
+
 #pragma ENDDUMP

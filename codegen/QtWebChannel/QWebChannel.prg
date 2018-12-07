@@ -54,4 +54,8 @@ $beginSignals
 $signal=5,4,0|blockUpdatesChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|blockUpdatesChanged( bool block )
+$endSlotsClass
+
 #pragma ENDDUMP
