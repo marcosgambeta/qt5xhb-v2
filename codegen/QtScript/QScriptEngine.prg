@@ -288,4 +288,8 @@ $beginSignals
 $signal=|signalHandlerException(QScriptValue)
 $endSignals
 
+$beginSlotsClass
+$signal=|signalHandlerException( const QScriptValue & exception )
+$endSlotsClass
+
 #pragma ENDDUMP
