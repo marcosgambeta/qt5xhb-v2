@@ -90,4 +90,11 @@ $signal=5,8,0|framesWritten(qint64)
 $signal=5,8,0|stateChanged(QCanBusDevice::CanBusDeviceState)
 $endSignals
 
+$beginSlotsClass
+$signal=5,8,0|errorOccurred( QCanBusDevice::CanBusError )
+$signal=5,8,0|framesReceived()
+$signal=5,8,0|framesWritten( qint64 framesCount )
+$signal=5,8,0|stateChanged( QCanBusDevice::CanBusDeviceState state )
+$endSlotsClass
+
 #pragma ENDDUMP

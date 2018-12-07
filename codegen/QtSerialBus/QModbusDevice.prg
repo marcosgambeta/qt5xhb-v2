@@ -60,4 +60,9 @@ $signal=5,8,0|errorOccurred(QModbusDevice::Error)
 $signal=5,8,0|stateChanged(QModbusDevice::State)
 $endSignals
 
+$beginSlotsClass
+$signal=5,8,0|errorOccurred( QModbusDevice::Error error )
+$signal=5,8,0|stateChanged( QModbusDevice::State state )
+$endSlotsClass
+
 #pragma ENDDUMP

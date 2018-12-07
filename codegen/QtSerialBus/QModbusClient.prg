@@ -57,4 +57,8 @@ $beginSignals
 $signal=5,8,0|timeoutChanged(int)
 $endSignals
 
+$beginSlotsClass
+$signal=5,8,0|timeoutChanged( int newTimeout )
+$endSlotsClass
+
 #pragma ENDDUMP

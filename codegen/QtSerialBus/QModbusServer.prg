@@ -65,4 +65,8 @@ $beginSignals
 $signal=5,8,0|dataWritten(QModbusDataUnit::RegisterType,int,int)
 $endSignals
 
+$beginSlotsClass
+$signal=5,8,0|dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
+$endSlotsClass
+
 #pragma ENDDUMP
