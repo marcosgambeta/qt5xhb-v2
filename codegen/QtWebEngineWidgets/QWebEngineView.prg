@@ -111,4 +111,14 @@ $signal=5,4,0|urlChanged(QUrl)
 $signal=5,4,0|iconUrlChanged(QUrl)
 $endSignals
 
+$beginSlotsClass
+$signal=5,4,0|loadStarted()
+$signal=5,4,0|loadProgress( int progress )
+$signal=5,4,0|loadFinished( bool b )
+$signal=5,4,0|titleChanged( const QString & title )
+$signal=5,4,0|selectionChanged()
+$signal=5,4,0|urlChanged( const QUrl & url )
+$signal=5,4,0|iconUrlChanged( const QUrl & url )
+$endSlotsClass
+
 #pragma ENDDUMP
