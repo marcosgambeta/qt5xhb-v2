@@ -45,4 +45,8 @@ $beginSignals
 $signal=5,1,0|accelerationModeChanged(QAccelerometer::AccelerationMode)
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
+$endSlotsClass
+
 #pragma ENDDUMP

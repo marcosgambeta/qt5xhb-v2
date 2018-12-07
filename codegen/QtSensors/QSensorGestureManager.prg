@@ -48,4 +48,8 @@ $beginSignals
 $signal=5,1,0|newSensorGestureAvailable()
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|newSensorGestureAvailable()
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -47,4 +47,8 @@ $beginSignals
 $signal=5,1,0|returnGeoValuesChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|returnGeoValuesChanged( bool returnGeoValues )
+$endSlotsClass
+
 #pragma ENDDUMP

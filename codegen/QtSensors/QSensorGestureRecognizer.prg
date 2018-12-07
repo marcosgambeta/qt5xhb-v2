@@ -51,4 +51,8 @@ $beginSignals
 $signal=5,1,0|detected(QString)
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|detected( const QString & s )
+$endSlotsClass
+
 #pragma ENDDUMP

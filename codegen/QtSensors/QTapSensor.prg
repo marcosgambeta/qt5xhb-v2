@@ -45,4 +45,8 @@ $beginSignals
 $signal=5,1,0|returnDoubleTapEventsChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
+$endSlotsClass
+
 #pragma ENDDUMP

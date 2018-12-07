@@ -47,4 +47,8 @@ $beginSignals
 $signal=5,1,0|fieldOfViewChanged(qreal)
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|fieldOfViewChanged( qreal fieldOfView )
+$endSlotsClass
+
 #pragma ENDDUMP

@@ -45,4 +45,8 @@ $beginSignals
 $signal=5,1,0|hasZChanged(bool)
 $endSignals
 
+$beginSlotsClass
+$signal=5,1,0|hasZChanged( bool hasZ )
+$endSlotsClass
+
 #pragma ENDDUMP
