@@ -297,4 +297,18 @@ $signal=|titleChanged(QString)
 $signal=|urlChanged(QUrl)
 $endSignals
 
+$beginSlotsClass
+$signal=|contentsSizeChanged( const QSize & size )
+$signal=|iconChanged()
+$signal=|initialLayoutCompleted()
+$signal=|javaScriptWindowObjectCleared()
+$signal=|loadFinished( bool ok )
+$signal=|loadStarted()
+$signal=|pageChanged()
+%% TODO: check signal 'provisionalLoad' (not present in the documentation)
+%% $signal=|provisionalLoad()
+$signal=|titleChanged( const QString & title )
+$signal=|urlChanged( const QUrl & url )
+$endSlotsClass
+
 #pragma ENDDUMP

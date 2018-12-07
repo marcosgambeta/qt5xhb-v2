@@ -227,4 +227,16 @@ $signal=|titleChanged(QString)
 $signal=|urlChanged(QUrl)
 $endSignals
 
+$beginSlotsClass
+$signal=|iconChanged()
+$signal=|linkClicked( const QUrl & url )
+$signal=|loadFinished( bool ok )
+$signal=|loadProgress( int progress )
+$signal=|loadStarted()
+$signal=|selectionChanged()
+$signal=|statusBarMessage( const QString & text )
+$signal=|titleChanged( const QString & title )
+$signal=|urlChanged( const QUrl & url )
+$endSlotsClass
+
 #pragma ENDDUMP
