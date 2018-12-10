@@ -264,12 +264,11 @@ $method=|QString|buttonText|int
 $prototype=void setButtonText(int button, const QString &text)
 $method=|void|setButtonText|int,const QString &
 
-$beginSignals
-$signal=|buttonClicked(QAbstractButton*)
-$endSignals
+%% $beginSignals
+%% $signal=|buttonClicked(QAbstractButton*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|buttonClicked( QAbstractButton * button )
-$endSlotsClass
+$prototype=void buttonClicked( QAbstractButton * button )
+$signalMethod=|void|buttonClicked|QAbstractButton*
 
 #pragma ENDDUMP

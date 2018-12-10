@@ -204,30 +204,47 @@ $method=|void|expandItem|const QTreeWidgetItem *
 $prototype=void scrollToItem ( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QTreeWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
-$beginSignals
-$signal=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)
-$signal=|itemActivated(QTreeWidgetItem*,int)
-$signal=|itemChanged(QTreeWidgetItem*,int)
-$signal=|itemClicked(QTreeWidgetItem*,int)
-$signal=|itemCollapsed(QTreeWidgetItem*)
-$signal=|itemDoubleClicked(QTreeWidgetItem*,int)
-$signal=|itemEntered(QTreeWidgetItem*,int)
-$signal=|itemExpanded(QTreeWidgetItem*)
-$signal=|itemPressed(QTreeWidgetItem*,int)
-$signal=|itemSelectionChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)
+%% $signal=|itemActivated(QTreeWidgetItem*,int)
+%% $signal=|itemChanged(QTreeWidgetItem*,int)
+%% $signal=|itemClicked(QTreeWidgetItem*,int)
+%% $signal=|itemCollapsed(QTreeWidgetItem*)
+%% $signal=|itemDoubleClicked(QTreeWidgetItem*,int)
+%% $signal=|itemEntered(QTreeWidgetItem*,int)
+%% $signal=|itemExpanded(QTreeWidgetItem*)
+%% $signal=|itemPressed(QTreeWidgetItem*,int)
+%% $signal=|itemSelectionChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
-$signal=|itemActivated( QTreeWidgetItem * item, int column )
-$signal=|itemChanged( QTreeWidgetItem * item, int column )
-$signal=|itemClicked( QTreeWidgetItem * item, int column )
-$signal=|itemCollapsed( QTreeWidgetItem * item )
-$signal=|itemDoubleClicked( QTreeWidgetItem * item, int column )
-$signal=|itemEntered( QTreeWidgetItem * item, int column )
-$signal=|itemExpanded( QTreeWidgetItem * item )
-$signal=|itemPressed( QTreeWidgetItem * item, int column )
-$signal=|itemSelectionChanged()
-$endSlotsClass
+$prototype=void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
+$signalMethod=|void|currentItemChanged|QTreeWidgetItem*,QTreeWidgetItem*
+
+$prototype=void itemActivated( QTreeWidgetItem * item, int column )
+$signalMethod=|void|itemActivated|QTreeWidgetItem*,int
+
+$prototype=void itemChanged( QTreeWidgetItem * item, int column )
+$signalMethod=|void|itemChanged|QTreeWidgetItem*,int
+
+$prototype=void itemClicked( QTreeWidgetItem * item, int column )
+$signalMethod=|void|itemClicked|QTreeWidgetItem*,int
+
+$prototype=void itemCollapsed( QTreeWidgetItem * item )
+$signalMethod=|void|itemCollapsed|QTreeWidgetItem*
+
+$prototype=void itemDoubleClicked( QTreeWidgetItem * item, int column )
+$signalMethod=|void|itemDoubleClicked|QTreeWidgetItem*,int
+
+$prototype=void itemEntered( QTreeWidgetItem * item, int column )
+$signalMethod=|void|itemEntered|QTreeWidgetItem*,int
+
+$prototype=void itemExpanded( QTreeWidgetItem * item )
+$signalMethod=|void|itemExpanded|QTreeWidgetItem*
+
+$prototype=void itemPressed( QTreeWidgetItem * item, int column )
+$signalMethod=|void|itemPressed|QTreeWidgetItem*,int
+
+$prototype=void itemSelectionChanged()
+$signalMethod=|void|itemSelectionChanged|
 
 #pragma ENDDUMP

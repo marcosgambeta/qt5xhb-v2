@@ -123,12 +123,11 @@ $virtualMethod=|QSize|minimumSizeHint|
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-$beginSignals
-$signal=|splitterMoved(int,int)
-$endSignals
+%% $beginSignals
+%% $signal=|splitterMoved(int,int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|splitterMoved( int pos, int index )
-$endSlotsClass
+$prototype=void splitterMoved( int pos, int index )
+$signalMethod=|void|splitterMoved|int,int
 
 #pragma ENDDUMP

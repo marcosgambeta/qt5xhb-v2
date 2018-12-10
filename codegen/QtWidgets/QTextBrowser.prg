@@ -92,26 +92,37 @@ $virtualMethod=|void|reload|
 $prototype=virtual void setSource ( const QUrl & name )
 $virtualMethod=|void|setSource|const QUrl &
 
-$beginSignals
-$signal=|anchorClicked(QUrl)
-$signal=|backwardAvailable(bool)
-$signal=|forwardAvailable(bool)
-$beginGroup
-$signal=|highlighted(QUrl)
-$signal=|highlighted(QString)
-$endGroup
-$signal=|historyChanged()
-$signal=|sourceChanged(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=|anchorClicked(QUrl)
+%% $signal=|backwardAvailable(bool)
+%% $signal=|forwardAvailable(bool)
+%% $beginGroup
+%% $signal=|highlighted(QUrl)
+%% $signal=|highlighted(QString)
+%% $endGroup
+%% $signal=|historyChanged()
+%% $signal=|sourceChanged(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|anchorClicked( const QUrl & link )
-$signal=|backwardAvailable( bool available )
-$signal=|forwardAvailable( bool available )
-$signal=|highlighted( const QUrl & link )
-$signal=|highlighted( const QString & link )
-$signal=|historyChanged()
-$signal=|sourceChanged( const QUrl & src )
-$endSlotsClass
+$prototype=void anchorClicked( const QUrl & link )
+$signalMethod=|void|anchorClicked|QUrl
+
+$prototype=void backwardAvailable( bool available )
+$signalMethod=|void|backwardAvailable|bool
+
+$prototype=void forwardAvailable( bool available )
+$signalMethod=|void|forwardAvailable|bool
+
+$prototype=void highlighted( const QUrl & link )
+$signalMethod=|void|highlighted,highlighted1,QOverload<const QUrl &>|QUrl
+
+$prototype=void highlighted( const QString & link )
+$signalMethod=|void|highlighted,highlighted2,QOverload<const QString &>|QString
+
+$prototype=void historyChanged()
+$signalMethod=|void|historyChanged|
+
+$prototype=void sourceChanged( const QUrl & src )
+$signalMethod=|void|sourceChanged|QUrl
 
 #pragma ENDDUMP

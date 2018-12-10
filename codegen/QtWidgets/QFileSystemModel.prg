@@ -190,16 +190,19 @@ $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=Qt::DropActions supportedDropActions () const
 $method=|Qt::DropActions|supportedDropActions|
 
-$beginSignals
-$signal=|directoryLoaded(QString)
-$signal=|fileRenamed(QString,QString,QString)
-$signal=|rootPathChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|directoryLoaded(QString)
+%% $signal=|fileRenamed(QString,QString,QString)
+%% $signal=|rootPathChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|directoryLoaded( const QString & path )
-$signal=|fileRenamed( const QString & path, const QString & oldName, const QString & newName )
-$signal=|rootPathChanged( const QString & newPath )
-$endSlotsClass
+$prototype=void directoryLoaded( const QString & path )
+$signalMethod=|void|directoryLoaded|QString
+
+$prototype=void fileRenamed( const QString & path, const QString & oldName, const QString & newName )
+$signalMethod=|void|fileRenamed|QString,QString,QString
+
+$prototype=void rootPathChanged( const QString & newPath )
+$signalMethod=|void|rootPathChanged|QString
 
 #pragma ENDDUMP

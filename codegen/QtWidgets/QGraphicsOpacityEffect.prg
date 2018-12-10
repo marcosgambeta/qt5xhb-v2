@@ -44,14 +44,15 @@ $method=|void|setOpacity|qreal
 $prototype=void setOpacityMask ( const QBrush & mask )
 $method=|void|setOpacityMask|const QBrush &
 
-$beginSignals
-$signal=|opacityChanged(qreal)
-$signal=|opacityMaskChanged(QBrush)
-$endSignals
+%% $beginSignals
+%% $signal=|opacityChanged(qreal)
+%% $signal=|opacityMaskChanged(QBrush)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|opacityChanged( qreal opacity )
-$signal=|opacityMaskChanged( const QBrush & mask )
-$endSlotsClass
+$prototype=void opacityChanged( qreal opacity )
+$signalMethod=|void|opacityChanged|qreal
+
+$prototype=void opacityMaskChanged( const QBrush & mask )
+$signalMethod=|void|opacityMaskChanged|QBrush
 
 #pragma ENDDUMP

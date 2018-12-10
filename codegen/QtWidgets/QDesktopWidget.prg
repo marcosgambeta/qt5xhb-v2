@@ -135,16 +135,19 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 }
 $addMethod=screenNumber
 
-$beginSignals
-$signal=|resized(int)
-$signal=|screenCountChanged(int)
-$signal=|workAreaResized(int)
-$endSignals
+%% $beginSignals
+%% $signal=|resized(int)
+%% $signal=|screenCountChanged(int)
+%% $signal=|workAreaResized(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|resized( int screen )
-$signal=|screenCountChanged( int newCount )
-$signal=|workAreaResized( int screen )
-$endSlotsClass
+$prototype=void resized( int screen )
+$signalMethod=|void|resized|int
+
+$prototype=void screenCountChanged( int newCount )
+$signalMethod=|void|screenCountChanged|int
+
+$prototype=void workAreaResized( int screen )
+$signalMethod=|void|workAreaResized|int
 
 #pragma ENDDUMP

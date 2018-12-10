@@ -251,28 +251,43 @@ $method=|void|setPlainText|const QString &
 $prototype=void undo ()
 $method=|void|undo|
 
-$beginSignals
-$signal=|blockCountChanged(int)
-$signal=|copyAvailable(bool)
-$signal=|cursorPositionChanged()
-$signal=|modificationChanged(bool)
-$signal=|redoAvailable(bool)
-$signal=|selectionChanged()
-$signal=|textChanged()
-$signal=|undoAvailable(bool)
-$signal=|updateRequest(QRect,int)
-$endSignals
+%% $beginSignals
+%% $signal=|blockCountChanged(int)
+%% $signal=|copyAvailable(bool)
+%% $signal=|cursorPositionChanged()
+%% $signal=|modificationChanged(bool)
+%% $signal=|redoAvailable(bool)
+%% $signal=|selectionChanged()
+%% $signal=|textChanged()
+%% $signal=|undoAvailable(bool)
+%% $signal=|updateRequest(QRect,int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|blockCountChanged( int newBlockCount )
-$signal=|copyAvailable( bool yes )
-$signal=|cursorPositionChanged()
-$signal=|modificationChanged( bool changed )
-$signal=|redoAvailable( bool available )
-$signal=|selectionChanged()
-$signal=|textChanged()
-$signal=|undoAvailable( bool available )
-$signal=|updateRequest( const QRect & rect, int dy )
-$endSlotsClass
+$prototype=void blockCountChanged( int newBlockCount )
+$signalMethod=|void|blockCountChanged|int
+
+$prototype=void copyAvailable( bool yes )
+$signalMethod=|void|copyAvailable|bool
+
+$prototype=void cursorPositionChanged()
+$signalMethod=|void|cursorPositionChanged|
+
+$prototype=void modificationChanged( bool changed )
+$signalMethod=|void|modificationChanged|bool
+
+$prototype=void redoAvailable( bool available )
+$signalMethod=|void|redoAvailable|bool
+
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
+
+$prototype=void textChanged()
+$signalMethod=|void|textChanged|
+
+$prototype=void undoAvailable( bool available )
+$signalMethod=|void|undoAvailable|bool
+
+$prototype=void updateRequest( const QRect & rect, int dy )
+$signalMethod=|void|updateRequest|QRect,int
 
 #pragma ENDDUMP

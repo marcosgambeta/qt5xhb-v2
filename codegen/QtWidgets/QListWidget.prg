@@ -225,30 +225,47 @@ $method=|void|clear|
 $prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
-$beginSignals
-$signal=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
-$signal=|currentRowChanged(int)
-$signal=|currentTextChanged(QString)
-$signal=|itemActivated(QListWidgetItem*)
-$signal=|itemChanged(QListWidgetItem*)
-$signal=|itemClicked(QListWidgetItem*)
-$signal=|itemDoubleClicked(QListWidgetItem*)
-$signal=|itemEntered(QListWidgetItem*)
-$signal=|itemPressed(QListWidgetItem*)
-$signal=|itemSelectionChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
+%% $signal=|currentRowChanged(int)
+%% $signal=|currentTextChanged(QString)
+%% $signal=|itemActivated(QListWidgetItem*)
+%% $signal=|itemChanged(QListWidgetItem*)
+%% $signal=|itemClicked(QListWidgetItem*)
+%% $signal=|itemDoubleClicked(QListWidgetItem*)
+%% $signal=|itemEntered(QListWidgetItem*)
+%% $signal=|itemPressed(QListWidgetItem*)
+%% $signal=|itemSelectionChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
-$signal=|currentRowChanged( int currentRow )
-$signal=|currentTextChanged( const QString & currentText )
-$signal=|itemActivated( QListWidgetItem * item )
-$signal=|itemChanged( QListWidgetItem * item )
-$signal=|itemClicked( QListWidgetItem * item )
-$signal=|itemDoubleClicked( QListWidgetItem * item )
-$signal=|itemEntered( QListWidgetItem * item )
-$signal=|itemPressed( QListWidgetItem * item )
-$signal=|itemSelectionChanged()
-$endSlotsClass
+$prototype=void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
+$signalMethod=|void|currentItemChanged|QListWidgetItem*,QListWidgetItem*
+
+$prototype=void currentRowChanged( int currentRow )
+$signalMethod=|void|currentRowChanged|int
+
+$prototype=void currentTextChanged( const QString & currentText )
+$signalMethod=|void|currentTextChanged|QString
+
+$prototype=void itemActivated( QListWidgetItem * item )
+$signalMethod=|void|itemActivated|QListWidgetItem*
+
+$prototype=void itemChanged( QListWidgetItem * item )
+$signalMethod=|void|itemChanged|QListWidgetItem*
+
+$prototype=void itemClicked( QListWidgetItem * item )
+$signalMethod=|void|itemClicked|QListWidgetItem*
+
+$prototype=void itemDoubleClicked( QListWidgetItem * item )
+$signalMethod=|void|itemDoubleClicked|QListWidgetItem*
+
+$prototype=void itemEntered( QListWidgetItem * item )
+$signalMethod=|void|itemEntered|QListWidgetItem*
+
+$prototype=void itemPressed( QListWidgetItem * item )
+$signalMethod=|void|itemPressed|QListWidgetItem*
+
+$prototype=void itemSelectionChanged()
+$signalMethod=|void|itemSelectionChanged|
 
 #pragma ENDDUMP

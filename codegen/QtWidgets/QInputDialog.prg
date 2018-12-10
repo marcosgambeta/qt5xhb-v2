@@ -176,22 +176,31 @@ $staticMethod=|QString|getText|QWidget *,const QString &,const QString &,QLineEd
 $prototype=static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text = QString(), bool *ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
 $staticMethod=|QString|getMultiLineText|QWidget *,const QString &,const QString &,const QString &=QString(),bool *=0,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
 
-$beginSignals
-$signal=|doubleValueChanged(double)
-$signal=|doubleValueSelected(double)
-$signal=|intValueChanged(int)
-$signal=|intValueSelected(int)
-$signal=|textValueChanged(QString)
-$signal=|textValueSelected(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|doubleValueChanged(double)
+%% $signal=|doubleValueSelected(double)
+%% $signal=|intValueChanged(int)
+%% $signal=|intValueSelected(int)
+%% $signal=|textValueChanged(QString)
+%% $signal=|textValueSelected(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|doubleValueChanged( double value )
-$signal=|doubleValueSelected( double value )
-$signal=|intValueChanged( int value )
-$signal=|intValueSelected( int value )
-$signal=|textValueChanged( const QString & text )
-$signal=|textValueSelected( const QString & text )
-$endSlotsClass
+$prototype=void doubleValueChanged( double value )
+$signalMethod=|void|doubleValueChanged|double
+
+$prototype=void doubleValueSelected( double value )
+$signalMethod=|void|doubleValueSelected|double
+
+$prototype=void intValueChanged( int value )
+$signalMethod=|void|intValueChanged|int
+
+$prototype=void intValueSelected( int value )
+$signalMethod=|void|intValueSelected|int
+
+$prototype=void textValueChanged( const QString & text )
+$signalMethod=|void|textValueChanged|QString
+
+$prototype=void textValueSelected( const QString & text )
+$signalMethod=|void|textValueSelected|QString
 
 #pragma ENDDUMP

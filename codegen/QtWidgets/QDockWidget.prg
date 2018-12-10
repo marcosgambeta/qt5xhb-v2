@@ -92,20 +92,27 @@ $method=|QAction *|toggleViewAction|
 $prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-$beginSignals
-$signal=|allowedAreasChanged(Qt::DockWidgetAreas)
-$signal=|dockLocationChanged(Qt::DockWidgetArea)
-$signal=|featuresChanged(QDockWidget::DockWidgetFeatures)
-$signal=|topLevelChanged(bool)
-$signal=|visibilityChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|allowedAreasChanged(Qt::DockWidgetAreas)
+%% $signal=|dockLocationChanged(Qt::DockWidgetArea)
+%% $signal=|featuresChanged(QDockWidget::DockWidgetFeatures)
+%% $signal=|topLevelChanged(bool)
+%% $signal=|visibilityChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
-$signal=|dockLocationChanged( Qt::DockWidgetArea area )
-$signal=|featuresChanged( QDockWidget::DockWidgetFeatures features )
-$signal=|topLevelChanged( bool topLevel )
-$signal=|visibilityChanged( bool visible )
-$endSlotsClass
+$prototype=void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
+$signalMethod=|void|allowedAreasChanged|Qt::DockWidgetAreas
+
+$prototype=void dockLocationChanged( Qt::DockWidgetArea area )
+$signalMethod=|void|dockLocationChanged|Qt::DockWidgetArea
+
+$prototype=void featuresChanged( QDockWidget::DockWidgetFeatures features )
+$signalMethod=|void|featuresChanged|QDockWidget::DockWidgetFeatures
+
+$prototype=void topLevelChanged( bool topLevel )
+$signalMethod=|void|topLevelChanged|bool
+
+$prototype=void visibilityChanged( bool visible )
+$signalMethod=|void|visibilityChanged|bool
 
 #pragma ENDDUMP

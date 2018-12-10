@@ -93,14 +93,15 @@ $method=|void|setExclusive|bool
 $prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
-$beginSignals
-$signal=|hovered(QAction*)
-$signal=|triggered(QAction*)
-$endSignals
+%% $beginSignals
+%% $signal=|hovered(QAction*)
+%% $signal=|triggered(QAction*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|hovered( QAction * action )
-$signal=|triggered( QAction * action )
-$endSlotsClass
+$prototype=void hovered( QAction * action )
+$signalMethod=|void|hovered|QAction*
+
+$prototype=void triggered( QAction * action )
+$signalMethod=|void|triggered|QAction*
 
 #pragma ENDDUMP

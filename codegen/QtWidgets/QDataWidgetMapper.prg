@@ -133,12 +133,11 @@ $method=|void|toNext|
 $prototype=void toPrevious ()
 $method=|void|toPrevious|
 
-$beginSignals
-$signal=|currentIndexChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|currentIndexChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentIndexChanged( int index )
-$endSlotsClass
+$prototype=void currentIndexChanged( int index )
+$signalMethod=|void|currentIndexChanged|int
 
 #pragma ENDDUMP

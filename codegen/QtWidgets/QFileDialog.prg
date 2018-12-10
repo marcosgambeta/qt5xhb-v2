@@ -267,28 +267,43 @@ $staticMethod=|QUrl|getExistingDirectoryUrl|QWidget *=0,const QString &=QString(
 $prototype=static QList<QUrl> getOpenFileUrls (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
 $staticMethod=|QList<QUrl>|getOpenFileUrls|QWidget *=0,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=0,QFileDialog::Options=0,const QStringList &=QStringList()
 
-$beginSignals
-$signal=|currentChanged(QString)
-$signal=|directoryEntered(QString)
-$signal=|fileSelected(QString)
-$signal=|filesSelected(QStringList)
-$signal=|filterSelected(QString)
-$signal=|urlSelected(QUrl)
-$signal=|urlsSelected(QList<QUrl>)
-$signal=|currentUrlChanged(QUrl)
-$signal=|directoryUrlEntered(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=|currentChanged(QString)
+%% $signal=|directoryEntered(QString)
+%% $signal=|fileSelected(QString)
+%% $signal=|filesSelected(QStringList)
+%% $signal=|filterSelected(QString)
+%% $signal=|urlSelected(QUrl)
+%% $signal=|urlsSelected(QList<QUrl>)
+%% $signal=|currentUrlChanged(QUrl)
+%% $signal=|directoryUrlEntered(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentChanged( const QString & path )
-$signal=|directoryEntered( const QString & directory )
-$signal=|fileSelected( const QString & file )
-$signal=|filesSelected( const QStringList & selected )
-$signal=|filterSelected( const QString & filter )
-$signal=|urlSelected( const QUrl & url )
-$signal=|urlsSelected( const QList<QUrl> & urls )
-$signal=|currentUrlChanged( const QUrl & url )
-$signal=|directoryUrlEntered( const QUrl & directory )
-$endSlotsClass
+$prototype=void currentChanged( const QString & path )
+$signalMethod=|void|currentChanged|QString
+
+$prototype=void directoryEntered( const QString & directory )
+$signalMethod=|void|directoryEntered|QString
+
+$prototype=void fileSelected( const QString & file )
+$signalMethod=|void|fileSelected|QString
+
+$prototype=void filesSelected( const QStringList & selected )
+$signalMethod=|void|filesSelected|QStringList
+
+$prototype=void filterSelected( const QString & filter )
+$signalMethod=|void|filterSelected|QString
+
+$prototype=void urlSelected( const QUrl & url )
+$signalMethod=|void|urlSelected|QUrl
+
+$prototype=void urlsSelected( const QList<QUrl> & urls )
+$signalMethod=|void|urlsSelected|QList<QUrl>
+
+$prototype=void currentUrlChanged( const QUrl & url )
+$signalMethod=|void|currentUrlChanged|QUrl
+
+$prototype=void directoryUrlEntered( const QUrl & directory )
+$signalMethod=|void|directoryUrlEntered|QUrl
 
 #pragma ENDDUMP

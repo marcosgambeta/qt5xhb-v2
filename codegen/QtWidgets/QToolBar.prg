@@ -196,26 +196,39 @@ $method=|void|setIconSize|const QSize &
 $prototype=void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
-$beginSignals
-$signal=|actionTriggered(QAction*)
-$signal=|allowedAreasChanged(Qt::ToolBarAreas)
-$signal=|iconSizeChanged(QSize)
-$signal=|movableChanged(bool)
-$signal=|orientationChanged(Qt::Orientation)
-$signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
-$signal=|topLevelChanged(bool)
-$signal=|visibilityChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|actionTriggered(QAction*)
+%% $signal=|allowedAreasChanged(Qt::ToolBarAreas)
+%% $signal=|iconSizeChanged(QSize)
+%% $signal=|movableChanged(bool)
+%% $signal=|orientationChanged(Qt::Orientation)
+%% $signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+%% $signal=|topLevelChanged(bool)
+%% $signal=|visibilityChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|actionTriggered( QAction * action )
-$signal=|allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
-$signal=|iconSizeChanged( const QSize & iconSize )
-$signal=|movableChanged( bool movable )
-$signal=|orientationChanged( Qt::Orientation orientation )
-$signal=|toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
-$signal=|topLevelChanged( bool topLevel )
-$signal=|visibilityChanged( bool visible )
-$endSlotsClass
+$prototype=void actionTriggered( QAction * action )
+$signalMethod=|void|actionTriggered|QAction*
+
+$prototype=void allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
+$signalMethod=|void|allowedAreasChanged|Qt::ToolBarAreas
+
+$prototype=void iconSizeChanged( const QSize & iconSize )
+$signalMethod=|void|iconSizeChanged|QSize
+
+$prototype=void movableChanged( bool movable )
+$signalMethod=|void|movableChanged|bool
+
+$prototype=void orientationChanged( Qt::Orientation orientation )
+$signalMethod=|void|orientationChanged|Qt::Orientation
+
+$prototype=void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
+$signalMethod=|void|toolButtonStyleChanged|Qt::ToolButtonStyle
+
+$prototype=void topLevelChanged( bool topLevel )
+$signalMethod=|void|topLevelChanged|bool
+
+$prototype=void visibilityChanged( bool visible )
+$signalMethod=|void|visibilityChanged|bool
 
 #pragma ENDDUMP

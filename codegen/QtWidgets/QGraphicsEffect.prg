@@ -44,12 +44,11 @@ $method=|void|setEnabled|bool
 $prototype=void update ()
 $method=|void|update|
 
-$beginSignals
-$signal=|enabledChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|enabledChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|enabledChanged( bool enabled )
-$endSlotsClass
+$prototype=void enabledChanged( bool enabled )
+$signalMethod=|void|enabledChanged|bool
 
 #pragma ENDDUMP

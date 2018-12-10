@@ -90,14 +90,15 @@ $method=|void|setWhatsThis|const QString &
 $prototype=QString whatsThis() const
 $method=|QString|whatsThis|
 
-$beginSignals
-$signal=|activated()
-$signal=|activatedAmbiguously()
-$endSignals
+%% $beginSignals
+%% $signal=|activated()
+%% $signal=|activatedAmbiguously()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|activated()
-$signal=|activatedAmbiguously()
-$endSlotsClass
+$prototype=void activated()
+$signalMethod=|void|activated|
+
+$prototype=void activatedAmbiguously()
+$signalMethod=|void|activatedAmbiguously|
 
 #pragma ENDDUMP

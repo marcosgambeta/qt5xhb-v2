@@ -302,22 +302,31 @@ $method=|void|setClearButtonEnabled|bool
 $prototype=bool isClearButtonEnabled() const
 $method=|bool|isClearButtonEnabled|
 
-$beginSignals
-$signal=|cursorPositionChanged(int,int)
-$signal=|editingFinished()
-$signal=|returnPressed()
-$signal=|selectionChanged()
-$signal=|textChanged(QString)
-$signal=|textEdited(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|cursorPositionChanged(int,int)
+%% $signal=|editingFinished()
+%% $signal=|returnPressed()
+%% $signal=|selectionChanged()
+%% $signal=|textChanged(QString)
+%% $signal=|textEdited(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|cursorPositionChanged( int iold, int inew )
-$signal=|editingFinished()
-$signal=|returnPressed()
-$signal=|selectionChanged()
-$signal=|textChanged( const QString & text )
-$signal=|textEdited( const QString & text )
-$endSlotsClass
+$prototype=void cursorPositionChanged( int iold, int inew )
+$signalMethod=|void|cursorPositionChanged|int,int
+
+$prototype=void editingFinished()
+$signalMethod=|void|editingFinished|
+
+$prototype=void returnPressed()
+$signalMethod=|void|returnPressed|
+
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
+
+$prototype=void textChanged( const QString & text )
+$signalMethod=|void|textChanged|QString
+
+$prototype=void textEdited( const QString & text )
+$signalMethod=|void|textEdited|QString
 
 #pragma ENDDUMP

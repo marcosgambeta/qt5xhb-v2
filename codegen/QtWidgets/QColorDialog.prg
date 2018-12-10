@@ -144,14 +144,15 @@ $staticMethod=|QColor|standardColor|int
 $prototype=static void setStandardColor(int index, QColor color)
 $staticMethod=|void|setStandardColor|int,QColor
 
-$beginSignals
-$signal=|colorSelected(QColor)
-$signal=|currentColorChanged(QColor)
-$endSignals
+%% $beginSignals
+%% $signal=|colorSelected(QColor)
+%% $signal=|currentColorChanged(QColor)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|colorSelected( const QColor & color )
-$signal=|currentColorChanged( const QColor & color )
-$endSlotsClass
+$prototype=void colorSelected( const QColor & color )
+$signalMethod=|void|colorSelected|QColor
+
+$prototype=|currentColorChanged( const QColor & color )
+$signalMethod=|void|currentColorChanged|QColor
 
 #pragma ENDDUMP

@@ -230,12 +230,11 @@ $method=|bool|close|
 $prototype=static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 $staticMethod=|void|setTabOrder|QGraphicsWidget *,QGraphicsWidget *
 
-$beginSignals
-$signal=|geometryChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|geometryChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|geometryChanged()
-$endSlotsClass
+$prototype=void geometryChanged()
+$signalMethod=|void|geometryChanged|
 
 #pragma ENDDUMP

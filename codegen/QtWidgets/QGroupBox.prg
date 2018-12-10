@@ -87,14 +87,15 @@ $virtualMethod=|QSize|minimumSizeHint|
 $prototype=void setChecked ( bool checked )
 $method=|void|setChecked|bool
 
-$beginSignals
-$signal=|clicked(bool)
-$signal=|toggled(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|clicked(bool)
+%% $signal=|toggled(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|clicked( bool checked = false )
-$signal=|toggled( bool on )
-$endSlotsClass
+$prototype=void clicked( bool checked = false )
+$signalMethod=|void|clicked|bool
+
+$prototype=void toggled( bool on )
+$signalMethod=|void|toggled|bool
 
 #pragma ENDDUMP

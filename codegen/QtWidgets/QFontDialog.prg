@@ -107,14 +107,15 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 }
 $addMethod=getFont
 
-$beginSignals
-$signal=|currentFontChanged(QFont)
-$signal=|fontSelected(QFont)
-$endSignals
+%% $beginSignals
+%% $signal=|currentFontChanged(QFont)
+%% $signal=|fontSelected(QFont)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentFontChanged( const QFont & font )
-$signal=|fontSelected( const QFont & font )
-$endSlotsClass
+$prototype=void currentFontChanged( const QFont & font )
+$signalMethod=|void|currentFontChanged|QFont
+
+$prototype=void fontSelected( const QFont & font )
+$signalMethod=|void|fontSelected|QFont
 
 #pragma ENDDUMP

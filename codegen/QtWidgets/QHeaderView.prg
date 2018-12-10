@@ -272,32 +272,51 @@ $method=|void|setMaximumSectionSize|int
 $prototype=void doItemsLayout()
 $method=|void|doItemsLayout|
 
-$beginSignals
-$signal=|geometriesChanged()
-$signal=|sectionAutoResize(int,QHeaderView::ResizeMode)
-$signal=|sectionClicked(int)
-$signal=|sectionCountChanged(int,int)
-$signal=|sectionDoubleClicked(int)
-$signal=|sectionEntered(int)
-$signal=|sectionHandleDoubleClicked(int)
-$signal=|sectionMoved(int,int,int)
-$signal=|sectionPressed(int)
-$signal=|sectionResized(int,int,int)
-$signal=|sortIndicatorChanged(int,Qt::SortOrder)
-$endSignals
+%% $beginSignals
+%% $signal=|geometriesChanged()
+%% $signal=|sectionAutoResize(int,QHeaderView::ResizeMode)
+%% $signal=|sectionClicked(int)
+%% $signal=|sectionCountChanged(int,int)
+%% $signal=|sectionDoubleClicked(int)
+%% $signal=|sectionEntered(int)
+%% $signal=|sectionHandleDoubleClicked(int)
+%% $signal=|sectionMoved(int,int,int)
+%% $signal=|sectionPressed(int)
+%% $signal=|sectionResized(int,int,int)
+%% $signal=|sortIndicatorChanged(int,Qt::SortOrder)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|geometriesChanged()
-$signal=|sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
-$signal=|sectionClicked( int logicalIndex )
-$signal=|sectionCountChanged( int oldCount, int newCount )
-$signal=|sectionDoubleClicked( int logicalIndex )
-$signal=|sectionEntered( int logicalIndex )
-$signal=|sectionHandleDoubleClicked( int logicalIndex )
-$signal=|sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
-$signal=|sectionPressed( int logicalIndex )
-$signal=|sectionResized( int logicalIndex, int oldSize, int newSize )
-$signal=|sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
-$endSlotsClass
+$prototype=void geometriesChanged()
+$signalMethod=|void|geometriesChanged|
+
+$prototype=void sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
+%% TODO: check $signalMethod=|void|sectionAutoResize|int,QHeaderView::ResizeMode
+
+$prototype=void sectionClicked( int logicalIndex )
+$signalMethod=|void|sectionClicked|int
+
+$prototype=void sectionCountChanged( int oldCount, int newCount )
+$signalMethod=|void|sectionCountChanged|int,int
+
+$prototype=void sectionDoubleClicked( int logicalIndex )
+$signalMethod=|void|sectionDoubleClicked|int
+
+$prototype=void sectionEntered( int logicalIndex )
+$signalMethod=|void|sectionEntered|int
+
+$prototype=void sectionHandleDoubleClicked( int logicalIndex )
+$signalMethod=|void|sectionHandleDoubleClicked|int
+
+$prototype=void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
+$signalMethod=|void|sectionMoved|int,int,int
+
+$prototype=void sectionPressed( int logicalIndex )
+$signalMethod=|void|sectionPressed|int
+
+$prototype=void sectionResized( int logicalIndex, int oldSize, int newSize )
+$signalMethod=|void|sectionResized|int,int,int
+
+$prototype=void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
+$signalMethod=|void|sortIndicatorChanged|int,Qt::SortOrder
 
 #pragma ENDDUMP

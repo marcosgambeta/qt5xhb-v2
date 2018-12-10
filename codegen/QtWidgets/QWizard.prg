@@ -155,20 +155,27 @@ $method=|void|next|
 $prototype=void restart ()
 $method=|void|restart|
 
-$beginSignals
-$signal=|currentIdChanged(int)
-$signal=|customButtonClicked(int)
-$signal=|helpRequested()
-$signal=|pageAdded(int)
-$signal=|pageRemoved(int)
-$endSignals
+%% $beginSignals
+%% $signal=|currentIdChanged(int)
+%% $signal=|customButtonClicked(int)
+%% $signal=|helpRequested()
+%% $signal=|pageAdded(int)
+%% $signal=|pageRemoved(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentIdChanged( int id )
-$signal=|customButtonClicked( int which )
-$signal=|helpRequested()
-$signal=|pageAdded( int id )
-$signal=|pageRemoved( int id )
-$endSlotsClass
+$prototype=void currentIdChanged( int id )
+$signalMethod=|void|currentIdChanged|int
+
+$prototype=void customButtonClicked( int which )
+$signalMethod=|void|customButtonClicked|int
+
+$prototype=void helpRequested()
+$signalMethod=|void|helpRequested|
+
+$prototype=void pageAdded( int id )
+$signalMethod=|void|pageAdded|int
+
+$prototype=void pageRemoved( int id )
+$signalMethod=|void|pageRemoved|int
 
 #pragma ENDDUMP

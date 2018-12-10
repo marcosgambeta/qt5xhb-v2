@@ -126,12 +126,11 @@ $method=|void|setCancelButtonText|const QString &
 $prototype=void setRange ( int minimum, int maximum )
 $method=|void|setRange|int,int
 
-$beginSignals
-$signal=|canceled()
-$endSignals
+%% $beginSignals
+%% $signal=|canceled()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|canceled()
-$endSlotsClass
+$prototype=void canceled()
+$signalMethod=|void|canceled|
 
 #pragma ENDDUMP

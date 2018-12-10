@@ -383,24 +383,35 @@ $addMethod=widgetAt
 $prototype=static QIcon windowIcon ()
 $staticMethod=|QIcon|windowIcon|
 
-$beginSignals
-$signal=|aboutToReleaseGpuResources()
-$signal=|aboutToUseGpuResources()
-$signal=|commitDataRequest(QSessionManager)
-$signal=|focusChanged(QWidget*,QWidget*)
-$signal=|fontDatabaseChanged()
-$signal=|lastWindowClosed()
-$signal=|saveStateRequest(QSessioManager)
-$endSignals
+%% $beginSignals
+%% $signal=|aboutToReleaseGpuResources()
+%% $signal=|aboutToUseGpuResources()
+%% $signal=|commitDataRequest(QSessionManager)
+%% $signal=|focusChanged(QWidget*,QWidget*)
+%% $signal=|fontDatabaseChanged()
+%% $signal=|lastWindowClosed()
+%% $signal=|saveStateRequest(QSessioManager)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|aboutToReleaseGpuResources()
-$signal=|aboutToUseGpuResources()
-$signal=|commitDataRequest( QSessionManager & manager )
-$signal=|focusChanged( QWidget * old, QWidget * now )
-$signal=|fontDatabaseChanged()
-$signal=|lastWindowClosed()
-$signal=|saveStateRequest( QSessionManager & manager )
-$endSlotsClass
+$prototype=void aboutToReleaseGpuResources()
+%% TODO: check $signalMethod=|void|aboutToReleaseGpuResources|
+
+$prototype=void aboutToUseGpuResources()
+%% TODO: check $signalMethod=|void|aboutToUseGpuResources|
+
+$prototype=void commitDataRequest( QSessionManager & manager )
+%% TODO: fix $signalMethod=|void|commitDataRequest|QSessionManager
+
+$prototype=void focusChanged( QWidget * old, QWidget * now )
+$signalMethod=|void|focusChanged|QWidget*,QWidget*
+
+$prototype=void fontDatabaseChanged()
+$signalMethod=|void|fontDatabaseChanged|
+
+$prototype=void lastWindowClosed()
+$signalMethod=|void|lastWindowClosed|
+
+$prototype=void saveStateRequest( QSessionManager & manager )
+%% TODO: fix $signalMethod=|void|saveStateRequest|QSessionManager
 
 #pragma ENDDUMP

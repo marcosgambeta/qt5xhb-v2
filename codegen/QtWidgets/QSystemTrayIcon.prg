@@ -98,14 +98,15 @@ $staticMethod=|bool|isSystemTrayAvailable|
 $prototype=static bool supportsMessages()
 $staticMethod=|bool|supportsMessages|
 
-$beginSignals
-$signal=|activated(QSystemTrayIcon::ActivationReason)
-$signal=|messageClicked()
-$endSignals
+%% $beginSignals
+%% $signal=|activated(QSystemTrayIcon::ActivationReason)
+%% $signal=|messageClicked()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|activated( QSystemTrayIcon::ActivationReason reason )
-$signal=|messageClicked()
-$endSlotsClass
+$prototype=void activated( QSystemTrayIcon::ActivationReason reason )
+$signalMethod=|void|activated|QSystemTrayIcon::ActivationReason
+
+$prototype=void messageClicked()
+$signalMethod=|void|messageClicked|
 
 #pragma ENDDUMP

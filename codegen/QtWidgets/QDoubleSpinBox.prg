@@ -92,16 +92,17 @@ $virtualMethod=|void|fixup|QString &
 $prototype=virtual QValidator::State validate ( QString & text, int & pos ) const
 $virtualMethod=|QValidator::State|validate|QString &,int &
 
-$beginSignals
-$beginGroup
-$signal=|valueChanged(double)
-$signal=|valueChanged(QString)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|valueChanged(double)
+%% $signal=|valueChanged(QString)
+%% $endGroup
+%% $endSignals
 
-$beginSlotsClass
-$signal=|valueChanged( double d )
-$signal=|valueChanged( const QString & text )
-$endSlotsClass
+$prototype=void valueChanged( double d )
+$signalMethod=|void|valueChanged,valueChanged1,QOverload<double>|double
+
+$prototype=void valueChanged( const QString & text )
+$signalMethod=|void|valueChanged,valueChanged2,QOverload<const QString &>|QString
 
 #pragma ENDDUMP

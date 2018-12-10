@@ -340,24 +340,35 @@ $method=|void|zoomIn|int=1
 $prototype=void zoomOut ( int range = 1 )
 $method=|void|zoomOut|int=1
 
-$beginSignals
-$signal=|copyAvailable(bool)
-$signal=|currentCharFormatChanged(QTextCharFormat)
-$signal=|cursorPositionChanged()
-$signal=|redoAvailable(bool)
-$signal=|selectionChanged()
-$signal=|textChanged()
-$signal=|undoAvailable(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|copyAvailable(bool)
+%% $signal=|currentCharFormatChanged(QTextCharFormat)
+%% $signal=|cursorPositionChanged()
+%% $signal=|redoAvailable(bool)
+%% $signal=|selectionChanged()
+%% $signal=|textChanged()
+%% $signal=|undoAvailable(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|copyAvailable( bool yes )
-$signal=|currentCharFormatChanged( const QTextCharFormat & f )
-$signal=|cursorPositionChanged()
-$signal=|redoAvailable( bool available )
-$signal=|selectionChanged()
-$signal=|textChanged()
-$signal=|undoAvailable( bool available )
-$endSlotsClass
+$prototype=void copyAvailable( bool yes )
+$signalMethod=|void|copyAvailable|bool
+
+$prototype=void currentCharFormatChanged( const QTextCharFormat & f )
+$signalMethod=|void|currentCharFormatChanged|QTextCharFormat
+
+$prototype=void cursorPositionChanged()
+$signalMethod=|void|cursorPositionChanged|
+
+$prototype=void redoAvailable( bool available )
+$signalMethod=|void|redoAvailable|bool
+
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
+
+$prototype=void textChanged()
+$signalMethod=|void|textChanged|
+
+$prototype=void undoAvailable( bool available )
+$signalMethod=|void|undoAvailable|bool
 
 #pragma ENDDUMP

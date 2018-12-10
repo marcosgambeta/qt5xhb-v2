@@ -330,18 +330,23 @@ $method=5,1,0|void|setToolTipsVisible|bool
 $prototype=NSMenu * QMenu::toNSMenu()
 $method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
-$beginSignals
-$signal=|aboutToHide()
-$signal=|aboutToShow()
-$signal=|hovered(QAction*)
-$signal=|triggered(QAction*)
-$endSignals
+%% $beginSignals
+%% $signal=|aboutToHide()
+%% $signal=|aboutToShow()
+%% $signal=|hovered(QAction*)
+%% $signal=|triggered(QAction*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|aboutToHide()
-$signal=|aboutToShow()
-$signal=|hovered( QAction * action )
-$signal=|triggered( QAction * action )
-$endSlotsClass
+$prototype=void aboutToHide()
+$signalMethod=|void|aboutToHide|
+
+$prototype=void aboutToShow()
+$signalMethod=|void|aboutToShow|
+
+$prototype=void hovered( QAction * action )
+$signalMethod=|void|hovered|QAction*
+
+$prototype=void triggered( QAction * action )
+$signalMethod=|void|triggered|QAction*
 
 #pragma ENDDUMP

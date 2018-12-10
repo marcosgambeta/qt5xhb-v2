@@ -62,14 +62,15 @@ $method=|void|setCurrentIndex|int
 $prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
-$beginSignals
-$signal=|currentChanged(int)
-$signal=|widgetRemoved(int)
-$endSignals
+%% $beginSignals
+%% $signal=|currentChanged(int)
+%% $signal=|widgetRemoved(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentChanged( int index )
-$signal=|widgetRemoved( int index )
-$endSlotsClass
+$prototype=void currentChanged( int index )
+$signalMethod=|void|currentChanged|int
+
+$prototype=void widgetRemoved( int index )
+$signalMethod=|void|widgetRemoved|int
 
 #pragma ENDDUMP

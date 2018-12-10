@@ -194,18 +194,23 @@ $prototype=void changeEvent(QEvent *e) Q_DECL_OVERRIDE [protected]
 
 $prototype=void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE [protected]
 
-$beginSignals
-$signal=|clicked(bool)
-$signal=|pressed()
-$signal=|released()
-$signal=|toggled(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|clicked(bool)
+%% $signal=|pressed()
+%% $signal=|released()
+%% $signal=|toggled(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|clicked( bool checked = false )
-$signal=|pressed()
-$signal=|released()
-$signal=|toggled( bool checked )
-$endSlotsClass
+$prototype=void clicked( bool checked = false )
+$signalMethod=|void|clicked|bool
+
+$prototype=void pressed()
+$signalMethod=|void|pressed|
+
+$prototype=void released()
+$signalMethod=|void|released|
+
+$prototype=void toggled( bool checked )
+$signalMethod=|void|toggled|bool
 
 #pragma ENDDUMP

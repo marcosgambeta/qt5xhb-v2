@@ -1211,18 +1211,23 @@ $staticMethod=|void|setTabOrder|QWidget *,QWidget *
 $prototype=static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)
 $staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=0,Qt::WindowFlags=0
 
-$beginSignals
-$signal=5,2,0|windowTitleChanged(QString)
-$signal=5,2,0|windowIconChanged(QIcon)
-$signal=|windowIconTextChanged(QString)
-$signal=|customContextMenuRequested(QPoint)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|windowTitleChanged(QString)
+%% $signal=5,2,0|windowIconChanged(QIcon)
+%% $signal=|windowIconTextChanged(QString)
+%% $signal=|customContextMenuRequested(QPoint)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|windowTitleChanged( const QString & title )
-$signal=5,2,0|windowIconChanged( const QIcon & icon )
-$signal=|windowIconTextChanged( const QString & iconText )
-$signal=|customContextMenuRequested( const QPoint & pos )
-$endSlotsClass
+$prototype=void windowTitleChanged( const QString & title )
+$signalMethod=5,2,0|void|windowTitleChanged|QString
+
+$prototype=void windowIconChanged( const QIcon & icon )
+$signalMethod=5,2,0|void|windowIconChanged|QIcon
+
+$prototype=void windowIconTextChanged( const QString & iconText )
+$signalMethod=|void|windowIconTextChanged|QString
+
+$prototype=void customContextMenuRequested( const QPoint & pos )
+$signalMethod=|void|customContextMenuRequested|QPoint
 
 #pragma ENDDUMP

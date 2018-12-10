@@ -246,18 +246,23 @@ $method=|void|toggle|
 $prototype=void trigger ()
 $method=|void|trigger|
 
-$beginSignals
-$signal=|changed()
-$signal=|hovered()
-$signal=|toggled(bool)
-$signal=|triggered(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|changed()
+%% $signal=|hovered()
+%% $signal=|toggled(bool)
+%% $signal=|triggered(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|changed()
-$signal=|hovered()
-$signal=|toggled( bool checked )
-$signal=|triggered( bool checked = false )
-$endSlotsClass
+$prototype=void changed()
+$signalMethod=|void|changed|
+
+$prototype=void hovered()
+$signalMethod=|void|hovered|
+
+$prototype=void toggled( bool checked )
+$signalMethod=|void|toggled|bool
+
+$prototype=void triggered( bool checked = false )
+$signalMethod=|void|triggered|bool
 
 #pragma ENDDUMP

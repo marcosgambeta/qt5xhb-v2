@@ -101,22 +101,31 @@ $method=|bool|hasTracking|
 $prototype=void setTracking ( bool enable )
 $method=|void|setTracking|bool
 
-$beginSignals
-$signal=|actionTriggered(int)
-$signal=|rangeChanged(int,int)
-$signal=|sliderMoved(int)
-$signal=|sliderPressed()
-$signal=|sliderReleased()
-$signal=|valueChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|actionTriggered(int)
+%% $signal=|rangeChanged(int,int)
+%% $signal=|sliderMoved(int)
+%% $signal=|sliderPressed()
+%% $signal=|sliderReleased()
+%% $signal=|valueChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|actionTriggered( int action )
-$signal=|rangeChanged( int min, int max )
-$signal=|sliderMoved( int value )
-$signal=|sliderPressed()
-$signal=|sliderReleased()
-$signal=|valueChanged( int value )
-$endSlotsClass
+$prototype=void actionTriggered( int action )
+$signalMethod=|void|actionTriggered|int
+
+$prototype=void rangeChanged( int min, int max )
+$signalMethod=|void|rangeChanged|int,int
+
+$prototype=void sliderMoved( int value )
+$signalMethod=|void|sliderMoved|int
+
+$prototype=void sliderPressed()
+$signalMethod=|void|sliderPressed|
+
+$prototype=void sliderReleased()
+$signalMethod=|void|sliderReleased|
+
+$prototype=void valueChanged( int value )
+$signalMethod=|void|valueChanged|int
 
 #pragma ENDDUMP

@@ -83,12 +83,11 @@ $method=|void|setTitle|const QString &
 $prototype=virtual bool validatePage ()
 $virtualMethod=|bool|validatePage|
 
-$beginSignals
-$signal=|completeChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|completeChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|completeChanged()
-$endSlotsClass
+$prototype=void completeChanged()
+$signalMethod=|void|completeChanged|
 
 #pragma ENDDUMP

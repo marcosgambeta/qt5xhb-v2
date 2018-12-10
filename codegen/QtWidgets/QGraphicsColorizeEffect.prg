@@ -44,14 +44,15 @@ $method=|void|setColor|const QColor &
 $prototype=void setStrength ( qreal strength )
 $method=|void|setStrength|qreal
 
-$beginSignals
-$signal=|colorChanged(QColor)
-$signal=|strengthChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|colorChanged(QColor)
+%% $signal=|strengthChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|colorChanged( const QColor & color )
-$signal=|strengthChanged( qreal strength )
-$endSlotsClass
+$prototype=void colorChanged( const QColor & color )
+$signalMethod=|void|colorChanged|QColor
+
+$prototype=void strengthChanged( qreal strength )
+$signalMethod=|void|strengthChanged|qreal
 
 #pragma ENDDUMP

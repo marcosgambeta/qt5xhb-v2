@@ -131,18 +131,23 @@ $method=|QDialogButtonBox::StandardButton|standardButton|QAbstractButton *
 $prototype=StandardButtons standardButtons () const
 $method=|QDialogButtonBox::StandardButtons|standardButtons|
 
-$beginSignals
-$signal=|accepted()
-$signal=|clicked(QAbstractButton*)
-$signal=|helpRequested()
-$signal=|rejected()
-$endSignals
+%% $beginSignals
+%% $signal=|accepted()
+%% $signal=|clicked(QAbstractButton*)
+%% $signal=|helpRequested()
+%% $signal=|rejected()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|accepted()
-$signal=|clicked( QAbstractButton * button )
-$signal=|helpRequested()
-$signal=|rejected()
-$endSlotsClass
+$prototype=void accepted()
+$signalMethod=|void|accepted|
+
+$prototype=void clicked( QAbstractButton * button )
+$signalMethod=|void|clicked|QAbstractButton*
+
+$prototype=void helpRequested()
+$signalMethod=|void|helpRequested|
+
+$prototype=void rejected()
+$signalMethod=|void|rejected|
 
 #pragma ENDDUMP

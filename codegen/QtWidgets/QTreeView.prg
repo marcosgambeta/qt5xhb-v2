@@ -205,14 +205,15 @@ $method=|void|resizeColumnToContents|int
 $prototype=void showColumn ( int column )
 $method=|void|showColumn|int
 
-$beginSignals
-$signal=|collapsed(QModelIndex)
-$signal=|expanded(QModelIndex)
-$endSignals
+%% $beginSignals
+%% $signal=|collapsed(QModelIndex)
+%% $signal=|expanded(QModelIndex)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|collapsed( const QModelIndex & index )
-$signal=|expanded( const QModelIndex & index )
-$endSlotsClass
+$prototype=void collapsed( const QModelIndex & index )
+$signalMethod=|void|collapsed|QModelIndex
+
+$prototype=void expanded( const QModelIndex & index )
+$signalMethod=|void|expanded|QModelIndex
 
 #pragma ENDDUMP

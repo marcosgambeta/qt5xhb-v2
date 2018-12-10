@@ -83,14 +83,15 @@ $method=|void|showShaded|
 $prototype=void showSystemMenu ()
 $method=|void|showSystemMenu|
 
-$beginSignals
-$signal=|aboutToActivate()
-$signal=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
-$endSignals
+%% $beginSignals
+%% $signal=|aboutToActivate()
+%% $signal=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|aboutToActivate()
-$signal=|windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
-$endSlotsClass
+$prototype=void aboutToActivate()
+$signalMethod=|void|aboutToActivate|
+
+$prototype=void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
+$signalMethod=|void|windowStateChanged|Qt::WindowStates,Qt::WindowStates
 
 #pragma ENDDUMP

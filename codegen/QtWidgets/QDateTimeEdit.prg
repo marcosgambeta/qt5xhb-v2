@@ -216,16 +216,19 @@ $method=|void|setDateTime|const QDateTime &
 $prototype=void setTime ( const QTime & time )
 $method=|void|setTime|const QTime &
 
-$beginSignals
-$signal=|dateChanged(QDate)
-$signal=|dateTimeChanged(QDateTime)
-$signal=|timeChanged(QTime)
-$endSignals
+%% $beginSignals
+%% $signal=|dateChanged(QDate)
+%% $signal=|dateTimeChanged(QDateTime)
+%% $signal=|timeChanged(QTime)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|dateChanged( const QDate & date )
-$signal=|dateTimeChanged( const QDateTime & datetime )
-$signal=|timeChanged( const QTime & time )
-$endSlotsClass
+$prototype=void dateChanged( const QDate & date )
+$signalMethod=|void|dateChanged|QDate
+
+$prototype=void dateTimeChanged( const QDateTime & datetime )
+$signalMethod=|void|dateTimeChanged|QDateTime
+
+$prototype=void timeChanged( const QTime & time )
+$signalMethod=|void|timeChanged|QTime
 
 #pragma ENDDUMP

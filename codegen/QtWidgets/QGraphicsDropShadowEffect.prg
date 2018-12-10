@@ -96,16 +96,19 @@ $method=|void|setXOffset|qreal
 $prototype=void setYOffset ( qreal dy )
 $method=|void|setYOffset|qreal
 
-$beginSignals
-$signal=|blurRadiusChanged(qreal)
-$signal=|colorChanged(QColor)
-$signal=|offsetChanged(QPointF)
-$endSignals
+%% $beginSignals
+%% $signal=|blurRadiusChanged(qreal)
+%% $signal=|colorChanged(QColor)
+%% $signal=|offsetChanged(QPointF)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|blurRadiusChanged( qreal blurRadius )
-$signal=|colorChanged( const QColor & color )
-$signal=|offsetChanged( const QPointF & offset )
-$endSlotsClass
+$prototype=void blurRadiusChanged( qreal blurRadius )
+$signalMethod=|void|blurRadiusChanged|qreal
+
+$prototype=void colorChanged( const QColor & color )
+$signalMethod=|void|colorChanged|QColor
+
+$prototype=void offsetChanged( const QPointF & offset )
+$signalMethod=|void|offsetChanged|QPointF
 
 #pragma ENDDUMP

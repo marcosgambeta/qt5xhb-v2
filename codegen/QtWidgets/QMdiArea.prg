@@ -130,12 +130,11 @@ $method=|bool|tabsMovable|
 $prototype=void setTabsMovable ( bool movable )
 $method=|void|setTabsMovable|bool
 
-$beginSignals
-$signal=|subWindowActivated(QMdiSubWindow*)
-$endSignals
+%% $beginSignals
+%% $signal=|subWindowActivated(QMdiSubWindow*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|subWindowActivated( QMdiSubWindow * window )
-$endSlotsClass
+$prototype=void subWindowActivated( QMdiSubWindow * window )
+$signalMethod=|void|subWindowActivated|QMdiSubWindow*
 
 #pragma ENDDUMP

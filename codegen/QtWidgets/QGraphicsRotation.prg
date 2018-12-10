@@ -76,16 +76,19 @@ $method=|void|setOrigin|const QVector3D &
 $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $virtualMethod=|void|applyTo|QMatrix4x4 *
 
-$beginSignals
-$signal=|angleChanged()
-$signal=|axisChanged()
-$signal=|originChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|angleChanged()
+%% $signal=|axisChanged()
+%% $signal=|originChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|angleChanged()
-$signal=|axisChanged()
-$signal=|originChanged()
-$endSlotsClass
+$prototype=void angleChanged()
+$signalMethod=|void|angleChanged|
+
+$prototype=void axisChanged()
+$signalMethod=|void|axisChanged|
+
+$prototype=void originChanged()
+$signalMethod=|void|originChanged|
 
 #pragma ENDDUMP

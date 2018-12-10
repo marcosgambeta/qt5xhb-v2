@@ -86,16 +86,19 @@ $method=|void|setExtension|QWidget *
 $prototype=void showExtension(bool)
 $method=|void|showExtension|bool
 
-$beginSignals
-$signal=|accepted()
-$signal=|finished(int)
-$signal=|rejected()
-$endSignals
+%% $beginSignals
+%% $signal=|accepted()
+%% $signal=|finished(int)
+%% $signal=|rejected()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|accepted()
-$signal=|finished( int result )
-$signal=|rejected()
-$endSlotsClass
+$prototype=void accepted()
+$signalMethod=|void|accepted|
+
+$prototype=void finished( int result )
+$signalMethod=|void|finished|int
+
+$prototype=void rejected()
+$signalMethod=|void|rejected|
 
 #pragma ENDDUMP

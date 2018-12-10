@@ -80,16 +80,17 @@ $method=|int|displayIntegerBase|
 $prototype=void setDisplayIntegerBase(int base)
 $method=|void|setDisplayIntegerBase|int
 
-$beginSignals
-$beginGroup
-$signal=|valueChanged(int)
-$signal=|valueChanged(QString)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|valueChanged(int)
+%% $signal=|valueChanged(QString)
+%% $endGroup
+%% $endSignals
 
-$beginSlotsClass
-$signal=|valueChanged( int value )
-$signal=|valueChanged( const QString & text )
-$endSlotsClass
+$prototype=void valueChanged( int value )
+$signalMethod=|void|valueChanged,valueChanged1,QOverload<int>|int
+
+$prototype=void valueChanged( const QString & text )
+$signalMethod=|void|valueChanged,valueChanged2,QOverload<const QString &>|QString
 
 #pragma ENDDUMP

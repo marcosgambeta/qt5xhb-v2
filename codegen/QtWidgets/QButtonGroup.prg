@@ -87,28 +87,43 @@ $method=|void|setExclusive|bool
 $prototype=void setId ( QAbstractButton * button, int id )
 $method=|void|setId|QAbstractButton *,int
 
-$beginSignals
-$beginGroup
-$signal=|buttonClicked(QAbstractButton*)
-$signal=|buttonClicked(int)
-$endGroup
-$beginGroup
-$signal=|buttonPressed(QAbstractButton*)
-$signal=|buttonPressed(int)
-$endGroup
-$beginGroup
-$signal=|buttonReleased(QAbstractButton*)
-$signal=|buttonReleased(int)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|buttonClicked(QAbstractButton*)
+%% $signal=|buttonClicked(int)
+%% $endGroup
+%% $beginGroup
+%% $signal=|buttonPressed(QAbstractButton*)
+%% $signal=|buttonPressed(int)
+%% $endGroup
+%% $beginGroup
+%% $signal=|buttonReleased(QAbstractButton*)
+%% $signal=|buttonReleased(int)
+%% $endGroup
+%% $endSignals
 
-$beginSlotsClass
-$signal=|buttonClicked( QAbstractButton * button )
-$signal=|buttonClicked( int id )
-$signal=|buttonPressed( QAbstractButton * button )
-$signal=|buttonPressed( int id )
-$signal=|buttonReleased( QAbstractButton * button )
-$signal=|buttonReleased( int id )
-$endSlotsClass
+$prototype=void buttonClicked( QAbstractButton * button )
+$signalMethod=|void|buttonClicked,buttonClicked1,QOverload<QAbstractButton *>|QAbstractButton*
+
+$prototype=void buttonClicked( int id )
+$signalMethod=|void|buttonClicked,buttonClicked2,QOverload<int>|int
+
+$prototype=void buttonPressed( QAbstractButton * button )
+$signalMethod=|void|buttonPressed,buttonPressed1,QOverload<QAbstractButton *>|QAbstractButton*
+
+$prototype=void buttonPressed( int id )
+$signalMethod=|void|buttonPressed,buttonPressed2,QOverload<int>|int
+
+$prototype=void buttonReleased( QAbstractButton * button )
+$signalMethod=|void|buttonReleased,buttonReleased1,QOverload<QAbstractButton *>|QAbstractButton*
+
+$prototype=void buttonReleased( int id )
+$signalMethod=|void|buttonReleased,buttonReleased2,QOverload<int>|int
+
+$prototype=void buttonToggled( QAbstractButton * button, bool checked )
+%% TODO: fix $signalMethod=5,2,0|void|buttonToggled,buttonToggled1,QOverload<QAbstractButton *,bool>|QAbstractButton*,bool
+
+$prototype=void buttonToggled( int id, bool checked )
+%% TODO: fix $signalMethod=5,2,0|void|buttonToggled,buttonToggled2,QOverload<int,bool>|int,bool
 
 #pragma ENDDUMP

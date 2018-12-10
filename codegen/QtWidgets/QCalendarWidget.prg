@@ -177,18 +177,23 @@ $method=|void|showSelectedDate|
 $prototype=void showToday ()
 $method=|void|showToday|
 
-$beginSignals
-$signal=|activated(QDate)
-$signal=|clicked(QDate)
-$signal=|currentPageChanged(int,int)
-$signal=|selectionChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|activated(QDate)
+%% $signal=|clicked(QDate)
+%% $signal=|currentPageChanged(int,int)
+%% $signal=|selectionChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|activated( const QDate & date )
-$signal=|clicked( const QDate & date )
-$signal=|currentPageChanged( int year, int month )
-$signal=|selectionChanged()
-$endSlotsClass
+$prototype=void activated( const QDate & date )
+$signalMethod=|void|activated|QDate
+
+$prototype=void clicked( const QDate & date )
+$signalMethod=|void|clicked|QDate
+
+$prototype=void currentPageChanged( int year, int month )
+$signalMethod=|void|currentPageChanged|int,int
+
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
 
 #pragma ENDDUMP

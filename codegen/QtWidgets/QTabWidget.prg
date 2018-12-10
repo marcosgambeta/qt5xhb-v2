@@ -218,18 +218,23 @@ $method=5,4,0|void|setTabBarAutoHide|bool
 $prototype=QTabBar* tabBar() const
 $method=|QTabBar *|tabBar|
 
-$beginSignals
-$signal=|currentChanged(int)
-$signal=|tabCloseRequested(int)
-$signal=5,2,0|tabBarClicked(int)
-$signal=5,2,0|tabBarDoubleClicked(int)
-$endSignals
+%% $beginSignals
+%% $signal=|currentChanged(int)
+%% $signal=|tabCloseRequested(int)
+%% $signal=5,2,0|tabBarClicked(int)
+%% $signal=5,2,0|tabBarDoubleClicked(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentChanged( int index )
-$signal=|tabCloseRequested( int index )
-$signal=5,2,0|tabBarClicked( int index )
-$signal=5,2,0|tabBarDoubleClicked( int index )
-$endSlotsClass
+$prototype=void currentChanged( int index )
+$signalMethod=|void|currentChanged|int
+
+$prototype=void tabCloseRequested( int index )
+$signalMethod=|void|tabCloseRequested|int
+
+$prototype=void tabBarClicked( int index )
+$signalMethod=5,2,0|void|tabBarClicked|int
+
+$prototype=void tabBarDoubleClicked( int index )
+$signalMethod=5,2,0|void|tabBarDoubleClicked|int
 
 #pragma ENDDUMP

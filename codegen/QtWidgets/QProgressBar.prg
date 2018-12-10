@@ -101,12 +101,11 @@ $method=|void|setRange|int,int
 $prototype=void setValue ( int value )
 $method=|void|setValue|int
 
-$beginSignals
-$signal=|valueChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|valueChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|valueChanged( int value )
-$endSlotsClass
+$prototype=void valueChanged( int value )
+$signalMethod=|void|valueChanged|int
 
 #pragma ENDDUMP

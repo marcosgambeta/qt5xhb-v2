@@ -65,14 +65,15 @@ $method=5,2,0|void|setKeySequence|const QKeySequence &
 $prototype=void clear()
 $method=5,2,0|void|clear|
 
-$beginSignals
-$signal=5,2,0|editingFinished()
-$signal=5,2,0|keySequenceChanged(QKeySequence)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|editingFinished()
+%% $signal=5,2,0|keySequenceChanged(QKeySequence)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|editingFinished()
-$signal=5,2,0|keySequenceChanged( const QKeySequence & keySequence )
-$endSlotsClass
+$prototype=void editingFinished()
+$signalMethod=5,2,0|void|editingFinished|
+
+$prototype=void keySequenceChanged( const QKeySequence & keySequence )
+$signalMethod=5,2,0|void|keySequenceChanged|QKeySequence
 
 #pragma ENDDUMP

@@ -106,22 +106,31 @@ $method=|void|setIndex|int
 $prototype=void undo()
 $method=|void|undo|
 
-$beginSignals
-$signal=|canRedoChanged(bool)
-$signal=|canUndoChanged(bool)
-$signal=|cleanChanged(bool)
-$signal=|indexChanged(int)
-$signal=|redoTextChanged(QString)
-$signal=|undoTextChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|canRedoChanged(bool)
+%% $signal=|canUndoChanged(bool)
+%% $signal=|cleanChanged(bool)
+%% $signal=|indexChanged(int)
+%% $signal=|redoTextChanged(QString)
+%% $signal=|undoTextChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|canRedoChanged( bool canRedo )
-$signal=|canUndoChanged( bool canUndo )
-$signal=|cleanChanged( bool clean )
-$signal=|indexChanged( int idx )
-$signal=|redoTextChanged( const QString & redoText )
-$signal=|undoTextChanged( const QString & undoText )
-$endSlotsClass
+$prototype=void canRedoChanged( bool canRedo )
+$signalMethod=|void|canRedoChanged|bool
+
+$prototype=void canUndoChanged( bool canUndo )
+$signalMethod=|void|canUndoChanged|bool
+
+$prototype=void cleanChanged( bool clean )
+$signalMethod=|void|cleanChanged|bool
+
+$prototype=void indexChanged( int idx )
+$signalMethod=|void|indexChanged|int
+
+$prototype=void redoTextChanged( const QString & redoText )
+$signalMethod=|void|redoTextChanged|QString
+
+$prototype=void undoTextChanged( const QString & undoText )
+$signalMethod=|void|undoTextChanged|QString
 
 #pragma ENDDUMP

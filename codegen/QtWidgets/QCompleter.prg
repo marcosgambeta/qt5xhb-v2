@@ -167,22 +167,27 @@ $method=5,2,0|void|setFilterMode|Qt::MatchFlags
 $prototype=Qt::MatchFlags filterMode() const
 $method=5,2,0|Qt::MatchFlags|filterMode|
 
-$beginSignals
-$beginGroup
-$signal=|activated(QString)
-$signal=|activated(QModelIndex)
-$endGroup
-$beginGroup
-$signal=|highlighted(QString)
-$signal=|highlighted(QModelIndex)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|activated(QString)
+%% $signal=|activated(QModelIndex)
+%% $endGroup
+%% $beginGroup
+%% $signal=|highlighted(QString)
+%% $signal=|highlighted(QModelIndex)
+%% $endGroup
+%% $endSignals
 
-$beginSlotsClass
-$signal=|activated( const QString & text )
-$signal=|activated( const QModelIndex & index )
-$signal=|highlighted( const QString & text )
-$signal=|highlighted( const QModelIndex & index )
-$endSlotsClass
+$prototype=void activated( const QString & text )
+$signalMethod=|void|activated,activated1,QOverload<const QString &>|QString
+
+$prototype=void activated( const QModelIndex & index )
+$signalMethod=|void|activated,activated2,QOverload<const QModelIndex &>|QModelIndex
+
+$prototype=void highlighted( const QString & text )
+$signalMethod=|void|highlighted,highlighted1,QOverload<const QString &>|QString
+
+$prototype=void highlighted( const QModelIndex & index )
+$signalMethod=|void|highlighted,highlighted2,QOverload<const QModelIndex &>|QModelIndex
 
 #pragma ENDDUMP

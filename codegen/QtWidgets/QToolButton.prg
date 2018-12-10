@@ -80,12 +80,11 @@ $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 $prototype=void showMenu ()
 $method=|void|showMenu||#ifndef QT_NO_MENU
 
-$beginSignals
-$signal=|triggered(QAction*)
-$endSignals
+%% $beginSignals
+%% $signal=|triggered(QAction*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|triggered( QAction * action )
-$endSlotsClass
+$prototype=void triggered( QAction * action )
+$signalMethod=|void|triggered|QAction*
 
 #pragma ENDDUMP

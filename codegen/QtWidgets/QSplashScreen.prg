@@ -72,12 +72,11 @@ $method=|void|clearMessage|
 $prototype=void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 $method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black
 
-$beginSignals
-$signal=|messageChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|messageChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|messageChanged( const QString & message )
-$endSlotsClass
+$prototype=void messageChanged( const QString & message )
+$signalMethod=|void|messageChanged|QString
 
 #pragma ENDDUMP

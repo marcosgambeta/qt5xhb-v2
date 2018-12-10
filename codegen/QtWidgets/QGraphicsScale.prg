@@ -59,20 +59,27 @@ $method=|qreal|zScale|
 $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $virtualMethod=|void|applyTo|QMatrix4x4 *
 
-$beginSignals
-$signal=|originChanged()
-$signal=|scaleChanged()
-$signal=|xScaleChanged()
-$signal=|yScaleChanged()
-$signal=|zScaleChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|originChanged()
+%% $signal=|scaleChanged()
+%% $signal=|xScaleChanged()
+%% $signal=|yScaleChanged()
+%% $signal=|zScaleChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|originChanged()
-$signal=|scaleChanged()
-$signal=|xScaleChanged()
-$signal=|yScaleChanged()
-$signal=|zScaleChanged()
-$endSlotsClass
+$prototype=void originChanged()
+$signalMethod=|void|originChanged|
+
+$prototype=void scaleChanged()
+$signalMethod=|void|scaleChanged|
+
+$prototype=void xScaleChanged()
+$signalMethod=|void|xScaleChanged|
+
+$prototype=void yScaleChanged()
+$signalMethod=|void|yScaleChanged|
+
+$prototype=void zScaleChanged()
+$signalMethod=|void|zScaleChanged|
 
 #pragma ENDDUMP

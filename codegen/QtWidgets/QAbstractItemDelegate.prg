@@ -62,16 +62,19 @@ $staticMethod=|QString|elidedText|const QFontMetrics &,int,Qt::TextElideMode,con
 $prototype=virtual QVector<int> paintingRoles() const
 $virtualMethod=|QVector<int>|paintingRoles|
 
-$beginSignals
-$signal=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
-$signal=|commitData(QWidget*)
-$signal=|sizeHintChanged(QModelIndex)
-$endSignals
+%% $beginSignals
+%% $signal=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
+%% $signal=|commitData(QWidget*)
+%% $signal=|sizeHintChanged(QModelIndex)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint )
-$signal=|commitData( QWidget * editor )
-$signal=|sizeHintChanged( const QModelIndex & index )
-$endSlotsClass
+$prototype=void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint )
+$signalMethod=|void|closeEditor|QWidget*,QAbstractItemDelegate::EndEditHint
+
+$prototype=void commitData( QWidget * editor )
+$signalMethod=|void|commitData|QWidget*
+
+$prototype=void sizeHintChanged( const QModelIndex & index )
+$signalMethod=|void|sizeHintChanged|QModelIndex
 
 #pragma ENDDUMP

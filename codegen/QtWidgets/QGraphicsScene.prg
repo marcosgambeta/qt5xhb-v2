@@ -435,16 +435,19 @@ $method=|void|clear|
 $prototype=void clearSelection ()
 $method=|void|clearSelection|
 
-$beginSignals
-$signal=|changed(QList<QRectF>)
-$signal=|sceneRectChanged(QRectF)
-$signal=|selectionChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|changed(QList<QRectF>)
+%% $signal=|sceneRectChanged(QRectF)
+%% $signal=|selectionChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|changed( const QList<QRectF> & region )
-$signal=|sceneRectChanged( const QRectF & rect )
-$signal=|selectionChanged()
-$endSlotsClass
+$prototype=void changed( const QList<QRectF> & region )
+$signalMethod=|void|changed|QList<QRectF>
+
+$prototype=void sceneRectChanged( const QRectF & rect )
+$signalMethod=|void|sceneRectChanged|QRectF
+
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
 
 #pragma ENDDUMP

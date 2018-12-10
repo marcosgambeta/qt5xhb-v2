@@ -35,28 +35,43 @@ $method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 $prototype=void ungrabGesture ( Qt::GestureType gesture )
 $method=|void|ungrabGesture|Qt::GestureType
 
-$beginSignals
-$signal=|enabledChanged()
-$signal=|opacityChanged()
-$signal=|parentChanged()
-$signal=|rotationChanged()
-$signal=|scaleChanged()
-$signal=|visibleChanged()
-$signal=|xChanged()
-$signal=|yChanged()
-$signal=|zChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|enabledChanged()
+%% $signal=|opacityChanged()
+%% $signal=|parentChanged()
+%% $signal=|rotationChanged()
+%% $signal=|scaleChanged()
+%% $signal=|visibleChanged()
+%% $signal=|xChanged()
+%% $signal=|yChanged()
+%% $signal=|zChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|enabledChanged()
-$signal=|opacityChanged()
-$signal=|parentChanged()
-$signal=|rotationChanged()
-$signal=|scaleChanged()
-$signal=|visibleChanged()
-$signal=|xChanged()
-$signal=|yChanged()
-$signal=|zChanged()
-$endSlotsClass
+$prototype=void enabledChanged()
+$signalMethod=|void|enabledChanged|
+
+$prototype=void opacityChanged()
+$signalMethod=|void|opacityChanged|
+
+$prototype=void parentChanged()
+$signalMethod=|void|parentChanged|
+
+$prototype=void rotationChanged()
+$signalMethod=|void|rotationChanged|
+
+$prototype=void scaleChanged()
+$signalMethod=|void|scaleChanged|
+
+$prototype=void visibleChanged()
+$signalMethod=|void|visibleChanged|
+
+$prototype=void xChanged()
+$signalMethod=|void|xChanged|
+
+$prototype=void yChanged()
+$signalMethod=|void|yChanged|
+
+$prototype=void zChanged()
+$signalMethod=|void|zChanged|
 
 #pragma ENDDUMP

@@ -128,12 +128,11 @@ $virtualMethod=|void|scrollTo|const QModelIndex &,QListView::ScrollHint=QListVie
 $prototype=virtual QRect visualRect ( const QModelIndex & index ) const
 $virtualMethod=|QRect|visualRect|const QModelIndex &
 
-$beginSignals
-$signal=|indexesMoved(QModelIndexList)
-$endSignals
+%% $beginSignals
+%% $signal=|indexesMoved(QModelIndexList)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|indexesMoved( const QModelIndexList & indexes )
-$endSlotsClass
+$prototype=void indexesMoved( const QModelIndexList & indexes )
+$signalMethod=|void|indexesMoved|QModelIndexList
 
 #pragma ENDDUMP

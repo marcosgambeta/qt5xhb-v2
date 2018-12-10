@@ -191,14 +191,15 @@ $addMethod=scroller
 $prototype=void ungrabGesture(QObject * target)
 $method=|void|ungrabGesture|QObject *
 
-$beginSignals
-$signal=|scrollerPropertiesChanged(QScrollerProperties)
-$signal=|stateChanged(QScroller::State)
-$endSignals
+%% $beginSignals
+%% $signal=|scrollerPropertiesChanged(QScrollerProperties)
+%% $signal=|stateChanged(QScroller::State)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|scrollerPropertiesChanged( const QScrollerProperties & newProperties )
-$signal=|stateChanged( QScroller::State newState )
-$endSlotsClass
+$prototype=void scrollerPropertiesChanged( const QScrollerProperties & newProperties )
+$signalMethod=|void|scrollerPropertiesChanged|QScrollerProperties
+
+$prototype=void stateChanged( QScroller::State newState )
+$signalMethod=|void|stateChanged|QScroller::State
 
 #pragma ENDDUMP

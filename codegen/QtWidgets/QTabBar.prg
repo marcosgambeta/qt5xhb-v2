@@ -234,16 +234,19 @@ $method=5,4,0|bool|changeCurrentOnDrag|
 $prototype=void setChangeCurrentOnDrag(bool change)
 $method=5,4,0|void|setChangeCurrentOnDrag|bool
 
-$beginSignals
-$signal=|currentChanged(int)
-$signal=|tabCloseRequested(int)
-$signal=|tabMoved(int,int)
-$endSignals
+%% $beginSignals
+%% $signal=|currentChanged(int)
+%% $signal=|tabCloseRequested(int)
+%% $signal=|tabMoved(int,int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentChanged( int index )
-$signal=|tabCloseRequested( int index )
-$signal=|tabMoved( int from, int to )
-$endSlotsClass
+$prototype=void currentChanged( int index )
+$signalMethod=|void|currentChanged|int
+
+$prototype=void tabCloseRequested( int index )
+$signalMethod=|void|tabCloseRequested|int
+
+$prototype=void tabMoved( int from, int to )
+$signalMethod=|void|tabMoved|int,int
 
 #pragma ENDDUMP

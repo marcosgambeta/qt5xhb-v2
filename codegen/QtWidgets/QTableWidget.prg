@@ -249,40 +249,67 @@ $method=|void|removeRow|int
 $prototype=void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QTableWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
-$beginSignals
-$signal=|cellActivated(int,int)
-$signal=|cellChanged(int,int)
-$signal=|cellClicked(int,int)
-$signal=|cellDoubleClicked(int,int)
-$signal=|cellEntered(int,int)
-$signal=|cellPressed(int,int)
-$signal=|currentCellChanged(int,int,int,int)
-$signal=|currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)
-$signal=|itemActivated(QTableWidgetItem*)
-$signal=|itemChanged(QTableWidgetItem*)
-$signal=|itemClicked(QTableWidgetItem*)
-$signal=|itemDoubleClicked(QTableWidgetItem*)
-$signal=|itemEntered(QTableWidgetItem*)
-$signal=|itemPressed(QTableWidgetItem*)
-$signal=|itemSelectionChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|cellActivated(int,int)
+%% $signal=|cellChanged(int,int)
+%% $signal=|cellClicked(int,int)
+%% $signal=|cellDoubleClicked(int,int)
+%% $signal=|cellEntered(int,int)
+%% $signal=|cellPressed(int,int)
+%% $signal=|currentCellChanged(int,int,int,int)
+%% $signal=|currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)
+%% $signal=|itemActivated(QTableWidgetItem*)
+%% $signal=|itemChanged(QTableWidgetItem*)
+%% $signal=|itemClicked(QTableWidgetItem*)
+%% $signal=|itemDoubleClicked(QTableWidgetItem*)
+%% $signal=|itemEntered(QTableWidgetItem*)
+%% $signal=|itemPressed(QTableWidgetItem*)
+%% $signal=|itemSelectionChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|cellActivated( int row, int column )
-$signal=|cellChanged( int row, int column )
-$signal=|cellClicked( int row, int column )
-$signal=|cellDoubleClicked( int row, int column )
-$signal=|cellEntered( int row, int column )
-$signal=|cellPressed( int row, int column )
-$signal=|currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn )
-$signal=|currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous )
-$signal=|itemActivated( QTableWidgetItem * item )
-$signal=|itemChanged( QTableWidgetItem * item )
-$signal=|itemClicked( QTableWidgetItem * item )
-$signal=|itemDoubleClicked( QTableWidgetItem * item )
-$signal=|itemEntered( QTableWidgetItem * item )
-$signal=|itemPressed( QTableWidgetItem * item )
-$signal=|itemSelectionChanged()
-$endSlotsClass
+$prototype=void cellActivated( int row, int column )
+$signalMethod=|void|cellActivated|int,int
+
+$prototype=void cellChanged( int row, int column )
+$signalMethod=|void|cellChanged|int,int
+
+$prototype=void cellClicked( int row, int column )
+$signalMethod=|void|cellClicked|int,int
+
+$prototype=void cellDoubleClicked( int row, int column )
+$signalMethod=|void|cellDoubleClicked|int,int
+
+$prototype=void cellEntered( int row, int column )
+$signalMethod=|void|cellEntered|int,int
+
+$prototype=void cellPressed( int row, int column )
+$signalMethod=|void|cellPressed|int,int
+
+$prototype=void currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn )
+$signalMethod=|void|currentCellChanged|int,int,int,int
+
+$prototype=void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous )
+$signalMethod=|void|currentItemChanged|QTableWidgetItem*,QTableWidgetItem*
+
+$prototype=void itemActivated( QTableWidgetItem * item )
+$signalMethod=|void|itemActivated|QTableWidgetItem*
+
+$prototype=void itemChanged( QTableWidgetItem * item )
+$signalMethod=|void|itemChanged|QTableWidgetItem*
+
+$prototype=void itemClicked( QTableWidgetItem * item )
+$signalMethod=|void|itemClicked|QTableWidgetItem*
+
+$prototype=void itemDoubleClicked( QTableWidgetItem * item )
+$signalMethod=|void|itemDoubleClicked|QTableWidgetItem*
+
+$prototype=void itemEntered( QTableWidgetItem * item )
+$signalMethod=|void|itemEntered|QTableWidgetItem*
+
+$prototype=void itemPressed( QTableWidgetItem * item )
+$signalMethod=|void|itemPressed|QTableWidgetItem*
+
+$prototype=void itemSelectionChanged()
+$signalMethod=|void|itemSelectionChanged|
 
 #pragma ENDDUMP

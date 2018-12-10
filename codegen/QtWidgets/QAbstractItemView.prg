@@ -297,22 +297,31 @@ $addMethod=update
 $prototype=virtual void doItemsLayout()
 $virtualMethod=|void|doItemsLayout|
 
-$beginSignals
-$signal=|activated(QModelIndex)
-$signal=|clicked(QModelIndex)
-$signal=|doubleClicked(QModelIndex)
-$signal=|entered(QModelIndex)
-$signal=|pressed(QModelIndex)
-$signal=|viewportEntered()
-$endSignals
+%% $beginSignals
+%% $signal=|activated(QModelIndex)
+%% $signal=|clicked(QModelIndex)
+%% $signal=|doubleClicked(QModelIndex)
+%% $signal=|entered(QModelIndex)
+%% $signal=|pressed(QModelIndex)
+%% $signal=|viewportEntered()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|activated( const QModelIndex & index )
-$signal=|clicked( const QModelIndex & index )
-$signal=|doubleClicked( const QModelIndex & index )
-$signal=|entered( const QModelIndex & index )
-$signal=|pressed( const QModelIndex & index )
-$signal=|viewportEntered()
-$endSlotsClass
+$prototype=void activated( const QModelIndex & index )
+$signalMethod=|void|activated|QModelIndex
+
+$prototype=void clicked( const QModelIndex & index )
+$signalMethod=|void|clicked|QModelIndex
+
+$prototype=void doubleClicked( const QModelIndex & index )
+$signalMethod=|void|doubleClicked|QModelIndex
+
+$prototype=void entered( const QModelIndex & index )
+$signalMethod=|void|entered|QModelIndex
+
+$prototype=void pressed( const QModelIndex & index )
+$signalMethod=|void|pressed|QModelIndex
+
+$prototype=void viewportEntered()
+$signalMethod=|void|viewportEntered|
 
 #pragma ENDDUMP

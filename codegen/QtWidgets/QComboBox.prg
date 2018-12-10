@@ -270,21 +270,45 @@ $method=|void|setCurrentIndex|int
 $prototype=void setEditText ( const QString & text )
 $method=|void|setEditText|const QString &
 
-$beginSignals
-$beginGroup
-$signal=|activated(int)
-$signal=|activated(QString)
-$endGroup
-$beginGroup
-$signal=|currentIndexChanged(int)
-$signal=|currentIndexChanged(QString)
-$endGroup
-$signal=|editTextChanged(QString)
-$beginGroup
-$signal=|highlighted(int)
-$signal=|highlighted(QString)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|activated(int)
+%% $signal=|activated(QString)
+%% $endGroup
+%% $beginGroup
+%% $signal=|currentIndexChanged(int)
+%% $signal=|currentIndexChanged(QString)
+%% $endGroup
+%% $signal=|editTextChanged(QString)
+%% $beginGroup
+%% $signal=|highlighted(int)
+%% $signal=|highlighted(QString)
+%% $endGroup
+%% $endSignals
+
+$prototype=void activated( int index )
+$signalMethod=|void|activated,activated1,QOverload<int>|int
+
+$prototype=void activated( const QString & text )
+$signalMethod=|void|activated,activated2,QOverload<const QString &>|QString
+
+$prototype=void currentIndexChanged( int index )
+$signalMethod=|void|currentIndexChanged,currentIndexChanged1,QOverload<int>|int
+
+$prototype=void currentIndexChanged( const QString & text )
+$signalMethod=|void|currentIndexChanged,currentIndexChanged2,QOverload<const QString &>|QString
+
+$prototype=void currentTextChanged(const QString &text)
+$signalMethod=|void|currentTextChanged|QString
+
+$prototype=void editTextChanged( const QString & text )
+$signalMethod=|void|editTextChanged|QString
+
+$prototype=void highlighted( int index )
+$signalMethod=|void|highlighted,highlighted1,QOverload<int>|int
+
+$prototype=void highlighted( const QString & text )
+$signalMethod=|void|highlighted,highlighted2,QOverload<const QString &>|QString
 
 // for compatibility
 
@@ -317,15 +341,5 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTEDC )
 {
   HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED2 );
 }
-
-$beginSlotsClass
-$signal=|activated( int index )
-$signal=|activated( const QString & text )
-$signal=|currentIndexChanged( int index )
-$signal=|currentIndexChanged( const QString & text )
-$signal=|editTextChanged( const QString & text )
-$signal=|highlighted( int index )
-$signal=|highlighted( const QString & text )
-$endSlotsClass
 
 #pragma ENDDUMP

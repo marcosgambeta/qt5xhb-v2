@@ -47,14 +47,15 @@ $method=|void|setBlurHints|QGraphicsBlurEffect::BlurHints
 $prototype=void setBlurRadius ( qreal blurRadius )
 $method=|void|setBlurRadius|qreal
 
-$beginSignals
-$signal=|blurHintsChanged(QGraphicsBlurEffect::BlurHints)
-$signal=|blurRadiusChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|blurHintsChanged(QGraphicsBlurEffect::BlurHints)
+%% $signal=|blurRadiusChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
-$signal=|blurRadiusChanged( qreal radius )
-$endSlotsClass
+$prototype=void blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
+$signalMethod=|void|blurHintsChanged|QGraphicsBlurEffect::BlurHints
+
+$prototype=void blurRadiusChanged( qreal radius )
+$signalMethod=|void|blurRadiusChanged|qreal
 
 #pragma ENDDUMP
