@@ -54,6 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -266,23 +267,139 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ABORT )
 #endif
 }
 
-void QBluetoothTransferReplySlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished( QBluetoothTransferReply * r )
+*/
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReplySlots_connect_signal( "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBluetoothTransferReply * sender = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(QBluetoothTransferReply*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothTransferReply::finished, [sender](QBluetoothTransferReply* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QBluetoothTransferReply*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBLUETOOTHTRANSFERREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(QBluetoothTransferReply*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBluetoothTransferReply * sender = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(QBluetoothTransferReply*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(QBluetoothTransferReply*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
+*/
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReplySlots_connect_signal( "transferProgress(qint64,qint64)", "transferProgress(qint64,qint64)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBluetoothTransferReply * sender = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "transferProgress(qint64,qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothTransferReply::transferProgress, [sender](qint64 arg1, qint64 arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "transferProgress(qint64,qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "transferProgress(qint64,qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBluetoothTransferReply * sender = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "transferProgress(qint64,qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "transferProgress(qint64,qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
