@@ -173,18 +173,23 @@ $addMethod=record
 $prototype=virtual bool selectRow(int row)
 $virtualMethod=|bool|selectRow|int
 
-$beginSignals
-$signal=|beforeDelete(int)
-$signal=|beforeInsert(QSqlRecord)
-$signal=|beforeUpdate(int,QSqlRecord)
-$signal=|primeInsert(int,QSqlRecord)
-$endSignals
+%% $beginSignals
+%% $signal=|beforeDelete(int)
+%% $signal=|beforeInsert(QSqlRecord)
+%% $signal=|beforeUpdate(int,QSqlRecord)
+%% $signal=|primeInsert(int,QSqlRecord)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|beforeDelete( int row )
-$signal=|beforeInsert( QSqlRecord & record )
-$signal=|beforeUpdate( int row, QSqlRecord & record )
-$signal=|primeInsert( int row, QSqlRecord & record )
-$endSlotsClass
+$prototype=void beforeDelete( int row )
+$signalMethod=|void|beforeDelete|int
+
+$prototype=void beforeInsert( QSqlRecord & record )
+$signalMethod=|void|beforeInsert|QSqlRecord
+
+$prototype=void beforeUpdate( int row, QSqlRecord & record )
+$signalMethod=|void|beforeUpdate|int,QSqlRecord
+
+$prototype=void primeInsert( int row, QSqlRecord & record )
+$signalMethod=|void|primeInsert|int,QSqlRecord
 
 #pragma ENDDUMP

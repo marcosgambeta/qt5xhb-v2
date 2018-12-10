@@ -109,16 +109,17 @@ $virtualMethod=|bool|unsubscribeFromNotification|const QString &
 $prototype=virtual bool cancelQuery()
 $virtualMethod=|bool|cancelQuery|
 
-$beginSignals
-$beginGroup
-$signal=|notification(QString)
-$signal=|notification(QString,QSqlDriver::NotificationSource,QVariant)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|notification(QString)
+%% $signal=|notification(QString,QSqlDriver::NotificationSource,QVariant)
+%% $endGroup
+%% $endSignals
 
-$beginSlotsClass
-$signal=|notification( const QString & name )
-$signal=|notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
-$endSlotsClass
+$prototype=void notification( const QString & name )
+$signalMethod=|void|notification,notification1,QOverload<const QString &>|QString
+
+$prototype=void notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
+$signalMethod=|void|notification,notification2,QOverload<const QString & COMMA QSqlDriver::NotificationSource COMMA const QVariant &>|QString,QSqlDriver::NotificationSource,QVariant
 
 #pragma ENDDUMP
