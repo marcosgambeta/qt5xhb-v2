@@ -75,24 +75,33 @@ $method=|QAxScriptEngine *|scriptEngine|
 $prototype=QString scriptName () const
 $method=|QString|scriptName|
 
-$beginSignals
-$signal=|entered()
-$signal=|error(int,QString,int,QString)
-$beginGroup
-$signal=|finished()
-$signal=|finished(QVariant)
-$signal=|finished(int,QString,QString,QString)
-$endGroup
-$signal=|stateChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|entered()
+%% $signal=|error(int,QString,int,QString)
+%% $beginGroup
+%% $signal=|finished()
+%% $signal=|finished(QVariant)
+%% $signal=|finished(int,QString,QString,QString)
+%% $endGroup
+%% $signal=|stateChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|entered()
-$signal=|error( int code, const QString & description, int sourcePosition, const QString & sourceText )
-$signal=|finished()
-$signal=|finished( const QVariant & result )
-$signal=|finished( int code, const QString & source, const QString & description, const QString & help )
-$signal=|stateChanged( int state )
-$endSlotsClass
+$prototype=void entered()
+$signalMethod=|void|entered|
+
+$prototype=void error( int code, const QString & description, int sourcePosition, const QString & sourceText )
+$signalMethod=|void|error|int,QString,int,QString
+
+$prototype=void finished()
+$signalMethod=|void|finished,finished1,QOverload<>|
+
+$prototype=void finished( const QVariant & result )
+$signalMethod=|void|finished,finished2,QOverload<const QVariant &>|QVariant
+
+$prototype=void finished( int code, const QString & source, const QString & description, const QString & help )
+$signalMethod=|void|finished,finished3,QOverload<int COMMA const QString & COMMA const QString & COMMA const QString &>|int,QString,QString,QString
+
+$prototype=void stateChanged( int state )
+$signalMethod=|void|stateChanged|int
 
 #pragma ENDDUMP

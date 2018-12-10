@@ -130,10 +130,13 @@ $extraMethods
 %% $signal=|signal(QString,int,void*)
 %% $endSignals
 
-%% $beginSlotsClass
-%% $signal=|exception( int code, const QString & source, const QString & desc, const QString & help )
-%% $signal=|propertyChanged( const QString & name )
-%% $signal=|signal( const QString & name, int argc, void * argv )
-%% $endSlotsClass
+$prototype=void exception( int code, const QString & source, const QString & desc, const QString & help )
+%% TODO: fix $signalMethod=|void|exception|int,QString,QString,QString
+
+$prototype=void propertyChanged( const QString & name )
+%% TODO: fix $signalMethod=|void|propertyChanged|QString
+
+$prototype=void signal( const QString & name, int argc, void * argv )
+%% TODO: fix $signalMethod=|void|signal|QString,int,void*
 
 #pragma ENDDUMP
