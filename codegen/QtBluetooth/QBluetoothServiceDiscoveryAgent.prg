@@ -110,18 +110,23 @@ $method=5,2,0|void|stop|
 $prototype=void clear()
 $method=5,2,0|void|clear|
 
-$beginSignals
-$signal=5,2,0|serviceDiscovered(QBluetoothServiceInfo)
-$signal=5,2,0|finished()
-$signal=5,2,0|canceled()
-$signal=5,2,0|error(QBluetoothServiceDiscoveryAgent::Error)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|serviceDiscovered(QBluetoothServiceInfo)
+%% $signal=5,2,0|finished()
+%% $signal=5,2,0|canceled()
+%% $signal=5,2,0|error(QBluetoothServiceDiscoveryAgent::Error)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|serviceDiscovered( const QBluetoothServiceInfo & info )
-$signal=5,2,0|finished()
-$signal=5,2,0|canceled()
-$signal=5,2,0|error( QBluetoothServiceDiscoveryAgent::Error error )
-$endSlotsClass
+$prototype=void serviceDiscovered( const QBluetoothServiceInfo & info )
+$signalMethod=5,2,0|void|serviceDiscovered|QBluetoothServiceInfo
+
+$prototype=void finished()
+$signalMethod=5,2,0|void|finished|
+
+$prototype=void canceled()
+$signalMethod=5,2,0|void|canceled|
+
+$prototype=void error( QBluetoothServiceDiscoveryAgent::Error error )
+$signalMethod=5,2,0|void|error,error,QOverload<QBluetoothServiceDiscoveryAgent::Error>|QBluetoothServiceDiscoveryAgent::Error
 
 #pragma ENDDUMP

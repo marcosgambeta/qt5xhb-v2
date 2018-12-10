@@ -84,20 +84,27 @@ $method=5,2,0|void|pairingConfirmation|bool
 $prototype=static QList<QBluetoothHostInfo> allDevices()
 $staticMethod=5,2,0|QList<QBluetoothHostInfo>|allDevices|
 
-$beginSignals
-$signal=5,2,0|hostModeStateChanged(QBluetoothLocalDevice::HostMode)
-$signal=5,2,0|pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)
-$signal=5,2,0|pairingDisplayPinCode(QBluetoothAddress,QString)
-$signal=5,2,0|pairingDisplayConfirmation(QBluetoothAddress,QString)
-$signal=5,2,0|error(QBluetoothLocalDevice::Error)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|hostModeStateChanged(QBluetoothLocalDevice::HostMode)
+%% $signal=5,2,0|pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)
+%% $signal=5,2,0|pairingDisplayPinCode(QBluetoothAddress,QString)
+%% $signal=5,2,0|pairingDisplayConfirmation(QBluetoothAddress,QString)
+%% $signal=5,2,0|error(QBluetoothLocalDevice::Error)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|hostModeStateChanged( QBluetoothLocalDevice::HostMode state )
-$signal=5,2,0|pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
-$signal=5,2,0|pairingDisplayPinCode( const QBluetoothAddress & address, QString pin )
-$signal=5,2,0|pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
-$signal=5,2,0|error( QBluetoothLocalDevice::Error error )
-$endSlotsClass
+$prototype=void hostModeStateChanged( QBluetoothLocalDevice::HostMode state )
+$signalMethod=5,2,0|void|hostModeStateChanged|QBluetoothLocalDevice::HostMode
+
+$prototype=void pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
+$signalMethod=5,2,0|void|pairingFinished|QBluetoothAddress,QBluetoothLocalDevice::Pairing
+
+$prototype=void pairingDisplayPinCode( const QBluetoothAddress & address, QString pin )
+$signalMethod=5,2,0|void|pairingDisplayPinCode|QBluetoothAddress,QString
+
+$prototype=void pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
+$signalMethod=5,2,0|void|pairingDisplayConfirmation|QBluetoothAddress,QString
+
+$prototype=void error( QBluetoothLocalDevice::Error error )
+$signalMethod=5,2,0|void|error|QBluetoothLocalDevice::Error
 
 #pragma ENDDUMP

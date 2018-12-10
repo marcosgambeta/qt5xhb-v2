@@ -145,18 +145,23 @@ $method=5,2,0|QBluetoothSocket::SocketError|error|
 $prototype=QString errorString() const
 $method=5,2,0|QString|errorString|
 
-$beginSignals
-$signal=5,2,0|connected()
-$signal=5,2,0|disconnected()
-$signal=5,2,0|error(QBluetoothSocket::SocketError)
-$signal=5,2,0|stateChanged(QBluetoothSocket::SocketState)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|connected()
+%% $signal=5,2,0|disconnected()
+%% $signal=5,2,0|error(QBluetoothSocket::SocketError)
+%% $signal=5,2,0|stateChanged(QBluetoothSocket::SocketState)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|connected()
-$signal=5,2,0|disconnected()
-$signal=5,2,0|error( QBluetoothSocket::SocketError error )
-$signal=5,2,0|stateChanged( QBluetoothSocket::SocketState state )
-$endSlotsClass
+$prototype=void connected()
+$signalMethod=5,2,0|void|connected|
+
+$prototype=void disconnected()
+$signalMethod=5,2,0|void|disconnected|
+
+$prototype=void error( QBluetoothSocket::SocketError error )
+$signalMethod=5,2,0|void|error,error,QOverload<QBluetoothSocket::SocketError>|QBluetoothSocket::SocketError
+
+$prototype=void stateChanged( QBluetoothSocket::SocketState state )
+$signalMethod=5,2,0|void|stateChanged|QBluetoothSocket::SocketState
 
 #pragma ENDDUMP

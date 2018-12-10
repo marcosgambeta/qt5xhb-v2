@@ -78,18 +78,26 @@ $method=5,2,0|void|start|
 $prototype=void stop()
 $method=5,2,0|void|stop|
 
-$beginSignals
-$signal=5,2,0|deviceDiscovered(QBluetoothDeviceInfo)
-$signal=5,2,0|finished()
-$signal=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
-$signal=5,2,0|canceled()
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|deviceDiscovered(QBluetoothDeviceInfo)
+%% $signal=5,2,0|finished()
+%% $signal=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
+%% $signal=5,2,0|canceled()
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|deviceDiscovered( const QBluetoothDeviceInfo & info )
-$signal=5,2,0|finished()
-$signal=5,2,0|error( QBluetoothDeviceDiscoveryAgent::Error error )
-$signal=5,2,0|canceled()
-$endSlotsClass
+$prototype=void deviceDiscovered( const QBluetoothDeviceInfo & info )
+$signalMethod=5,2,0|void|deviceDiscovered|QBluetoothDeviceInfo
+
+$prototype=void finished()
+$signalMethod=5,2,0|void|finished|
+
+$prototype=void error( QBluetoothDeviceDiscoveryAgent::Error error )
+$signalMethod=5,2,0|void|error,error,QOverload<QBluetoothDeviceDiscoveryAgent::Error>|QBluetoothDeviceDiscoveryAgent::Error
+
+$prototype=void canceled()
+$signalMethod=5,2,0|void|canceled|
+
+$prototype=void deviceUpdated(const QBluetoothDeviceInfo &info, QBluetoothDeviceInfo::Fields updatedFields)
+$signalMethod=5,2,0|void|deviceUpdated|QBluetoothDeviceInfo,QBluetoothDeviceInfo::Fields|#ifdef Q_OS_ANDROID
 
 #pragma ENDDUMP

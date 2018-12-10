@@ -50,14 +50,15 @@ $method=5,2,0|QBluetoothTransferRequest|request|
 $prototype=void abort()
 $method=5,2,0|void|abort|
 
-$beginSignals
-$signal=5,2,0|finished(QBluetoothTransferReply*)
-$signal=5,2,0|transferProgress(qint64,qint64)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|finished(QBluetoothTransferReply*)
+%% $signal=5,2,0|transferProgress(qint64,qint64)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|finished( QBluetoothTransferReply * r )
-$signal=5,2,0|transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
-$endSlotsClass
+$prototype=void finished( QBluetoothTransferReply * r )
+$signalMethod=5,2,0|void|finished|QBluetoothTransferReply*
+
+$prototype=void transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
+$signalMethod=5,2,0|void|transferProgress|qint64,qint64
 
 #pragma ENDDUMP

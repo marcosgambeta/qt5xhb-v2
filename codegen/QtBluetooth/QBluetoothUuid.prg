@@ -120,38 +120,38 @@ $prototype=quint32 toUInt32(bool *ok = 0) const
 %% TODO: revisar e implementar parametro opcional
 $method=5,2,0|quint32|toUInt32|bool *=0
 
-/*
-  convert QList<QBluetoothUuid> to array
-*/
-/*
-void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
-{
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
-
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-
-  int i;
-
-  for(i=0; i<list.count(); i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QBluetoothUuid *) new QBluetoothUuid ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-
-  hb_itemReturnRelease(pArray);
-}
-*/
+%% /*
+%%   convert QList<QBluetoothUuid> to array
+%% */
+%% /*
+%% void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
+%% {
+%%   PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
+%%
+%%   PHB_ITEM pArray = hb_itemArrayNew(0);
+%%
+%%   int i;
+%%
+%%   for(i=0; i<list.count(); i++)
+%%   {
+%%     if( pDynSym )
+%%     {
+%%       hb_vmPushDynSym( pDynSym );
+%%       hb_vmPushNil();
+%%       hb_vmDo( 0 );
+%%       PHB_ITEM pObject = hb_itemNew( NULL );
+%%       hb_itemCopy( pObject, hb_stackReturnItem() );
+%%       PHB_ITEM pItem = hb_itemNew( NULL );
+%%       hb_itemPutPtr( pItem, (QBluetoothUuid *) new QBluetoothUuid ( list[i] ) );
+%%       hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+%%       hb_itemRelease( pItem );
+%%       hb_arrayAddForward( pArray, pObject );
+%%       hb_itemRelease( pObject );
+%%     }
+%%   }
+%%
+%%   hb_itemReturnRelease(pArray);
+%% }
+%% */
 
 #pragma ENDDUMP

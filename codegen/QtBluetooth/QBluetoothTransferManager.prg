@@ -37,12 +37,11 @@ $deleteMethod=5,2,0
 $prototype=QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data)
 $method=5,2,0|QBluetoothTransferReply *|put|const QBluetoothTransferRequest &,QIODevice *
 
-$beginSignals
-$signal=5,2,0|finished(QBluetoothTransferReply*)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|finished(QBluetoothTransferReply*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|finished( QBluetoothTransferReply * reply )
-$endSlotsClass
+$prototype=void finished( QBluetoothTransferReply * reply )
+$signalMethod=5,2,0|void|finished|QBluetoothTransferReply*
 
 #pragma ENDDUMP
