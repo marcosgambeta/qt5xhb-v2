@@ -81,6 +81,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSqlTableModel>
@@ -931,26 +932,268 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
   }
 }
 
-void QSqlTableModelSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void beforeDelete( int row )
+*/
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
-  QSqlTableModelSlots_connect_signal( "beforeDelete(int)", "beforeDelete(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "beforeDelete(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::beforeDelete, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeDelete(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "beforeDelete(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "beforeDelete(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "beforeDelete(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void beforeInsert( QSqlRecord & record )
+*/
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
-  QSqlTableModelSlots_connect_signal( "beforeInsert(QSqlRecord)", "beforeInsert(QSqlRecord)" );
+  if( hb_pcount() == 1 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "beforeInsert(QSqlRecord)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::beforeInsert, [sender](QSqlRecord arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeInsert(QSqlRecord)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSQLRECORD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "beforeInsert(QSqlRecord)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "beforeInsert(QSqlRecord)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "beforeInsert(QSqlRecord)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void beforeUpdate( int row, QSqlRecord & record )
+*/
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
-  QSqlTableModelSlots_connect_signal( "beforeUpdate(int,QSqlRecord)", "beforeUpdate(int,QSqlRecord)" );
+  if( hb_pcount() == 1 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "beforeUpdate(int,QSqlRecord)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::beforeUpdate, [sender](int arg1, QSqlRecord arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeUpdate(int,QSqlRecord)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QSQLRECORD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "beforeUpdate(int,QSqlRecord)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "beforeUpdate(int,QSqlRecord)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "beforeUpdate(int,QSqlRecord)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void primeInsert( int row, QSqlRecord & record )
+*/
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
-  QSqlTableModelSlots_connect_signal( "primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)" );
+  if( hb_pcount() == 1 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "primeInsert(int,QSqlRecord)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::primeInsert, [sender](int arg1, QSqlRecord arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "primeInsert(int,QSqlRecord)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QSQLRECORD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "primeInsert(int,QSqlRecord)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "primeInsert(int,QSqlRecord)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "primeInsert(int,QSqlRecord)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

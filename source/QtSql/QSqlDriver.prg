@@ -73,6 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSqlDriver>
@@ -709,16 +710,138 @@ HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
   }
 }
 
-void QSqlDriverSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void notification( const QString & name )
+*/
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 {
-  QSqlDriverSlots_connect_signal( "notification(QString)", "notification(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "notification(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QSqlDriver::notification), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "notification(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLDRIVER" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "notification(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "notification(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "notification(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
+*/
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 {
-  QSqlDriverSlots_connect_signal( "notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
+  if( hb_pcount() == 1 )
+  {
+    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &,QSqlDriver::NotificationSource,const QVariant &>::of(&QSqlDriver::notification), [sender](QString arg1, QSqlDriver::NotificationSource arg2, QVariant arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLDRIVER" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            PHB_ITEM pArg3 = Signals2_return_object( (void *) &arg3, "QVARIANT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
