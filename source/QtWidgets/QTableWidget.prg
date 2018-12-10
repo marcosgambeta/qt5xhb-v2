@@ -102,6 +102,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTableWidget>
@@ -1295,81 +1296,997 @@ HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QTableWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void cellActivated( int row, int column )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
-  QTableWidgetSlots_connect_signal( "cellActivated(int,int)", "cellActivated(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cellActivated(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellActivated, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellActivated(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cellActivated(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cellActivated(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cellActivated(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void cellChanged( int row, int column )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "cellChanged(int,int)", "cellChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cellChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cellChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cellChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cellChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void cellClicked( int row, int column )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
-  QTableWidgetSlots_connect_signal( "cellClicked(int,int)", "cellClicked(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cellClicked(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellClicked, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellClicked(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cellClicked(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cellClicked(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cellClicked(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void cellDoubleClicked( int row, int column )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
-  QTableWidgetSlots_connect_signal( "cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cellDoubleClicked(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellDoubleClicked, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellDoubleClicked(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cellDoubleClicked(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cellDoubleClicked(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cellDoubleClicked(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void cellEntered( int row, int column )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
-  QTableWidgetSlots_connect_signal( "cellEntered(int,int)", "cellEntered(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cellEntered(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellEntered, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellEntered(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cellEntered(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cellEntered(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cellEntered(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void cellPressed( int row, int column )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
-  QTableWidgetSlots_connect_signal( "cellPressed(int,int)", "cellPressed(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cellPressed(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellPressed, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellPressed(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cellPressed(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cellPressed(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cellPressed(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentCellChanged(int,int,int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::currentCellChanged, [sender](int arg1, int arg2, int arg3, int arg4) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentCellChanged(int,int,int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg4 = hb_itemPutNI( NULL, arg4 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 5, pSender, pArg1, pArg2, pArg3, pArg4 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+            hb_itemRelease( pArg4 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentCellChanged(int,int,int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentCellChanged(int,int,int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentCellChanged(int,int,int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::currentItemChanged, [sender](QTableWidgetItem* arg1, QTableWidgetItem* arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QTABLEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemActivated( QTableWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
-  QTableWidgetSlots_connect_signal( "itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemActivated(QTableWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemActivated, [sender](QTableWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemActivated(QTableWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemActivated(QTableWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemActivated(QTableWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemActivated(QTableWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemChanged( QTableWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemChanged(QTableWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemChanged, [sender](QTableWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QTableWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemChanged(QTableWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemChanged(QTableWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemChanged(QTableWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemClicked( QTableWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
-  QTableWidgetSlots_connect_signal( "itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemClicked(QTableWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemClicked, [sender](QTableWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemClicked(QTableWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemClicked(QTableWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemClicked(QTableWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemClicked(QTableWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemDoubleClicked( QTableWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
-  QTableWidgetSlots_connect_signal( "itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemDoubleClicked(QTableWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemDoubleClicked, [sender](QTableWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemDoubleClicked(QTableWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemDoubleClicked(QTableWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemDoubleClicked(QTableWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemDoubleClicked(QTableWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemEntered( QTableWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
-  QTableWidgetSlots_connect_signal( "itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemEntered(QTableWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemEntered, [sender](QTableWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemEntered(QTableWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemEntered(QTableWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemEntered(QTableWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemEntered(QTableWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemPressed( QTableWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
-  QTableWidgetSlots_connect_signal( "itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemPressed(QTableWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemPressed, [sender](QTableWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemPressed(QTableWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemPressed(QTableWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemPressed(QTableWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemPressed(QTableWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemSelectionChanged()
+*/
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemSelectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemSelectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemSelectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemSelectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemSelectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

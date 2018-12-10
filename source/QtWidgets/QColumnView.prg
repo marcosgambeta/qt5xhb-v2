@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QColumnView>
@@ -466,11 +467,69 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
   }
 }
 
-void QColumnViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void updatePreviewWidget( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {
-  QColumnViewSlots_connect_signal( "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QColumnView * sender = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "updatePreviewWidget(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QColumnView::updatePreviewWidget, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "updatePreviewWidget(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOLUMNVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "updatePreviewWidget(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QColumnView * sender = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "updatePreviewWidget(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "updatePreviewWidget(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

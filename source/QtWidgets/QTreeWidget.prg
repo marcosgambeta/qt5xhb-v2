@@ -90,6 +90,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTreeWidget>
@@ -1084,56 +1085,666 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QTreeWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
-  QTreeWidgetSlots_connect_signal( "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)", "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::currentItemChanged, [sender](QTreeWidgetItem* arg1, QTreeWidgetItem* arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QTREEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemActivated( QTreeWidgetItem * item, int column )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 {
-  QTreeWidgetSlots_connect_signal( "itemActivated(QTreeWidgetItem*,int)", "itemActivated(QTreeWidgetItem*,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemActivated(QTreeWidgetItem*,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemActivated, [sender](QTreeWidgetItem* arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemActivated(QTreeWidgetItem*,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemActivated(QTreeWidgetItem*,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemActivated(QTreeWidgetItem*,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemActivated(QTreeWidgetItem*,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemChanged( QTreeWidgetItem * item, int column )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 {
-  QTreeWidgetSlots_connect_signal( "itemChanged(QTreeWidgetItem*,int)", "itemChanged(QTreeWidgetItem*,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemChanged(QTreeWidgetItem*,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemChanged, [sender](QTreeWidgetItem* arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QTreeWidgetItem*,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemChanged(QTreeWidgetItem*,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemChanged(QTreeWidgetItem*,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemChanged(QTreeWidgetItem*,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemClicked( QTreeWidgetItem * item, int column )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 {
-  QTreeWidgetSlots_connect_signal( "itemClicked(QTreeWidgetItem*,int)", "itemClicked(QTreeWidgetItem*,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemClicked(QTreeWidgetItem*,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemClicked, [sender](QTreeWidgetItem* arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemClicked(QTreeWidgetItem*,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemClicked(QTreeWidgetItem*,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemClicked(QTreeWidgetItem*,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemClicked(QTreeWidgetItem*,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemCollapsed( QTreeWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
-  QTreeWidgetSlots_connect_signal( "itemCollapsed(QTreeWidgetItem*)", "itemCollapsed(QTreeWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemCollapsed(QTreeWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemCollapsed, [sender](QTreeWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemCollapsed(QTreeWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemCollapsed(QTreeWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemCollapsed(QTreeWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemCollapsed(QTreeWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemDoubleClicked( QTreeWidgetItem * item, int column )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
-  QTreeWidgetSlots_connect_signal( "itemDoubleClicked(QTreeWidgetItem*,int)", "itemDoubleClicked(QTreeWidgetItem*,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemDoubleClicked, [sender](QTreeWidgetItem* arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemEntered( QTreeWidgetItem * item, int column )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 {
-  QTreeWidgetSlots_connect_signal( "itemEntered(QTreeWidgetItem*,int)", "itemEntered(QTreeWidgetItem*,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemEntered(QTreeWidgetItem*,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemEntered, [sender](QTreeWidgetItem* arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemEntered(QTreeWidgetItem*,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemEntered(QTreeWidgetItem*,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemEntered(QTreeWidgetItem*,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemEntered(QTreeWidgetItem*,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemExpanded( QTreeWidgetItem * item )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 {
-  QTreeWidgetSlots_connect_signal( "itemExpanded(QTreeWidgetItem*)", "itemExpanded(QTreeWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemExpanded(QTreeWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemExpanded, [sender](QTreeWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemExpanded(QTreeWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemExpanded(QTreeWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemExpanded(QTreeWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemExpanded(QTreeWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemPressed( QTreeWidgetItem * item, int column )
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 {
-  QTreeWidgetSlots_connect_signal( "itemPressed(QTreeWidgetItem*,int)", "itemPressed(QTreeWidgetItem*,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemPressed(QTreeWidgetItem*,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemPressed, [sender](QTreeWidgetItem* arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemPressed(QTreeWidgetItem*,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemPressed(QTreeWidgetItem*,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemPressed(QTreeWidgetItem*,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemPressed(QTreeWidgetItem*,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemSelectionChanged()
+*/
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QTreeWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemSelectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeWidget::itemSelectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemSelectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemSelectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemSelectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

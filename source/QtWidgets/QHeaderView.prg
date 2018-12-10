@@ -85,7 +85,6 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD doItemsLayout
 
    METHOD onGeometriesChanged
-   METHOD onSectionAutoResize
    METHOD onSectionClicked
    METHOD onSectionCountChanged
    METHOD onSectionDoubleClicked
@@ -117,6 +116,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QHeaderView>
@@ -1763,61 +1763,668 @@ HB_FUNC_STATIC( QHEADERVIEW_DOITEMSLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QHeaderViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void geometriesChanged()
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 {
-  QHeaderViewSlots_connect_signal( "geometriesChanged()", "geometriesChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "geometriesChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::geometriesChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometriesChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "geometriesChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "geometriesChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "geometriesChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONAUTORESIZE )
-{
-  QHeaderViewSlots_connect_signal( "sectionAutoResize(int,QHeaderView::ResizeMode)", "sectionAutoResize(int,QHeaderView::ResizeMode)" );
-}
+/*
+void sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
+*/
 
+/*
+void sectionClicked( int logicalIndex )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 {
-  QHeaderViewSlots_connect_signal( "sectionClicked(int)", "sectionClicked(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionClicked(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionClicked, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionClicked(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionClicked(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionClicked(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionClicked(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sectionCountChanged( int oldCount, int newCount )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 {
-  QHeaderViewSlots_connect_signal( "sectionCountChanged(int,int)", "sectionCountChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionCountChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionCountChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionCountChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionCountChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionCountChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionCountChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sectionDoubleClicked( int logicalIndex )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 {
-  QHeaderViewSlots_connect_signal( "sectionDoubleClicked(int)", "sectionDoubleClicked(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionDoubleClicked(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionDoubleClicked, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionDoubleClicked(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionDoubleClicked(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionDoubleClicked(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionDoubleClicked(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sectionEntered( int logicalIndex )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 {
-  QHeaderViewSlots_connect_signal( "sectionEntered(int)", "sectionEntered(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionEntered(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionEntered, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionEntered(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionEntered(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionEntered(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionEntered(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sectionHandleDoubleClicked( int logicalIndex )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 {
-  QHeaderViewSlots_connect_signal( "sectionHandleDoubleClicked(int)", "sectionHandleDoubleClicked(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionHandleDoubleClicked(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionHandleDoubleClicked, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionHandleDoubleClicked(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionHandleDoubleClicked(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionHandleDoubleClicked(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionHandleDoubleClicked(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 {
-  QHeaderViewSlots_connect_signal( "sectionMoved(int,int,int)", "sectionMoved(int,int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionMoved(int,int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionMoved, [sender](int arg1, int arg2, int arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionMoved(int,int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionMoved(int,int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionMoved(int,int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionMoved(int,int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sectionPressed( int logicalIndex )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 {
-  QHeaderViewSlots_connect_signal( "sectionPressed(int)", "sectionPressed(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionPressed(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionPressed, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionPressed(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionPressed(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionPressed(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionPressed(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sectionResized( int logicalIndex, int oldSize, int newSize )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 {
-  QHeaderViewSlots_connect_signal( "sectionResized(int,int,int)", "sectionResized(int,int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sectionResized(int,int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionResized, [sender](int arg1, int arg2, int arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionResized(int,int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sectionResized(int,int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sectionResized(int,int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sectionResized(int,int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
+*/
 HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 {
-  QHeaderViewSlots_connect_signal( "sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sortIndicatorChanged, [sender](int arg1, Qt::SortOrder arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

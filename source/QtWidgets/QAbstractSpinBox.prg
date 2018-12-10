@@ -964,6 +964,9 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
 #endif
 }
 
+/*
+void editingFinished()
+*/
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
   if( hb_pcount() == 1 )
@@ -972,23 +975,29 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 
     if( sender )
     {
-      Signals2_connection( sender, "editingFinished()" );
+      if( Signals2_connection( sender, "editingFinished()" ) )
+      {
 
-      QObject::connect(sender, &QAbstractSpinBox::editingFinished, [sender]() {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSpinBox::editingFinished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "editingFinished()" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "editingFinished()" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSPINBOX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTSPINBOX" );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-          hb_itemRelease( psender );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "editingFinished()", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -1003,7 +1012,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
     {
       Signals2_disconnection( sender, "editingFinished()" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "editingFinished()" ) );
 
       hb_retl( true );
     }
@@ -1011,6 +1020,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
     {
       hb_retl( false );
     }
+  }
+  else
+  {
+    hb_retl( false );
   }
 }
 

@@ -57,6 +57,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractItemDelegate>
@@ -359,21 +360,201 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
   }
 }
 
-void QAbstractItemDelegateSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 {
-  QAbstractItemDelegateSlots_connect_signal( "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemDelegate::closeEditor, [sender](QWidget* arg1, QAbstractItemDelegate::EndEditHint arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void commitData( QWidget * editor )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 {
-  QAbstractItemDelegateSlots_connect_signal( "commitData(QWidget*)", "commitData(QWidget*)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "commitData(QWidget*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemDelegate::commitData, [sender](QWidget* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "commitData(QWidget*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "commitData(QWidget*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "commitData(QWidget*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "commitData(QWidget*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sizeHintChanged( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 {
-  QAbstractItemDelegateSlots_connect_signal( "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sizeHintChanged(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemDelegate::sizeHintChanged, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sizeHintChanged(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sizeHintChanged(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sizeHintChanged(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sizeHintChanged(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

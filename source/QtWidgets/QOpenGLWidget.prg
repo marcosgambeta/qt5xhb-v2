@@ -59,6 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -342,41 +343,263 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
 #endif
 }
 
-void QOpenGLWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void aboutToCompose()
+*/
 HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QOpenGLWidgetSlots_connect_signal( "aboutToCompose()", "aboutToCompose()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "aboutToCompose()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::aboutToCompose, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToCompose()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "aboutToCompose()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "aboutToCompose()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "aboutToCompose()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void frameSwapped()
+*/
 HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QOpenGLWidgetSlots_connect_signal( "frameSwapped()", "frameSwapped()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "frameSwapped()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::frameSwapped, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "frameSwapped()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "frameSwapped()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "frameSwapped()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "frameSwapped()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void aboutToResize()
+*/
 HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QOpenGLWidgetSlots_connect_signal( "aboutToResize()", "aboutToResize()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "aboutToResize()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::aboutToResize, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToResize()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "aboutToResize()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "aboutToResize()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "aboutToResize()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void resized()
+*/
 HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QOpenGLWidgetSlots_connect_signal( "resized()", "resized()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "resized()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::resized, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "resized()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "resized()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "resized()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "resized()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

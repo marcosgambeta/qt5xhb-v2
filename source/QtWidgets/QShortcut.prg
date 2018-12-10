@@ -58,6 +58,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QShortcut>
@@ -417,16 +418,130 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
   }
 }
 
-void QShortcutSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activated()
+*/
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 {
-  QShortcutSlots_connect_signal( "activated()", "activated()" );
+  if( hb_pcount() == 1 )
+  {
+    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QShortcut::activated, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSHORTCUT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void activatedAmbiguously()
+*/
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 {
-  QShortcutSlots_connect_signal( "activatedAmbiguously()", "activatedAmbiguously()" );
+  if( hb_pcount() == 1 )
+  {
+    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activatedAmbiguously()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QShortcut::activatedAmbiguously, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activatedAmbiguously()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSHORTCUT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activatedAmbiguously()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activatedAmbiguously()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activatedAmbiguously()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QListView>
@@ -919,11 +920,92 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
   }
 }
 
-void QListViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void indexesMoved( const QModelIndexList & indexes )
+*/
 HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 {
-  QListViewSlots_connect_signal( "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" );
+  if( hb_pcount() == 1 )
+  {
+    QListView * sender = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "indexesMoved(QModelIndexList)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListView::indexesMoved, [sender](QModelIndexList arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "indexesMoved(QModelIndexList)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTVIEW" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QModelIndex *) new QModelIndex ( arg1 [i] ) );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "indexesMoved(QModelIndexList)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListView * sender = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "indexesMoved(QModelIndexList)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "indexesMoved(QModelIndexList)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

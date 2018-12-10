@@ -68,6 +68,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QProgressDialog>
@@ -734,11 +735,67 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QProgressDialogSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void canceled()
+*/
 HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
 {
-  QProgressDialogSlots_connect_signal( "canceled()", "canceled()" );
+  if( hb_pcount() == 1 )
+  {
+    QProgressDialog * sender = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "canceled()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QProgressDialog::canceled, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "canceled()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROGRESSDIALOG" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "canceled()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProgressDialog * sender = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "canceled()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "canceled()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

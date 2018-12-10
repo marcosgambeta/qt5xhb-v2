@@ -76,6 +76,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QToolBar>
@@ -815,46 +816,524 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QToolBarSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void actionTriggered( QAction * action )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 {
-  QToolBarSlots_connect_signal( "actionTriggered(QAction*)", "actionTriggered(QAction*)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "actionTriggered(QAction*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::actionTriggered, [sender](QAction* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "actionTriggered(QAction*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "actionTriggered(QAction*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "actionTriggered(QAction*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "actionTriggered(QAction*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 {
-  QToolBarSlots_connect_signal( "allowedAreasChanged(Qt::ToolBarAreas)", "allowedAreasChanged(Qt::ToolBarAreas)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::allowedAreasChanged, [sender](Qt::ToolBarAreas arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void iconSizeChanged( const QSize & iconSize )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 {
-  QToolBarSlots_connect_signal( "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::iconSizeChanged, [sender](QSize arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "iconSizeChanged(QSize)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "iconSizeChanged(QSize)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "iconSizeChanged(QSize)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "iconSizeChanged(QSize)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void movableChanged( bool movable )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 {
-  QToolBarSlots_connect_signal( "movableChanged(bool)", "movableChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "movableChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::movableChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "movableChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "movableChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "movableChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "movableChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void orientationChanged( Qt::Orientation orientation )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 {
-  QToolBarSlots_connect_signal( "orientationChanged(Qt::Orientation)", "orientationChanged(Qt::Orientation)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "orientationChanged(Qt::Orientation)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::orientationChanged, [sender](Qt::Orientation arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::Orientation)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "orientationChanged(Qt::Orientation)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "orientationChanged(Qt::Orientation)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "orientationChanged(Qt::Orientation)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 {
-  QToolBarSlots_connect_signal( "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::toolButtonStyleChanged, [sender](Qt::ToolButtonStyle arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void topLevelChanged( bool topLevel )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 {
-  QToolBarSlots_connect_signal( "topLevelChanged(bool)", "topLevelChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::topLevelChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "topLevelChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "topLevelChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "topLevelChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void visibilityChanged( bool visible )
+*/
 HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 {
-  QToolBarSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::visibilityChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "visibilityChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "visibilityChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "visibilityChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

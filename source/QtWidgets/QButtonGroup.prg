@@ -59,6 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QButtonGroup>
@@ -397,36 +398,402 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QButtonGroupSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void buttonClicked( QAbstractButton * button )
+*/
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 {
-  QButtonGroupSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
+  if( hb_pcount() == 1 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonClicked(QAbstractButton*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), [sender](QAbstractButton* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(QAbstractButton*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonClicked(QAbstractButton*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonClicked(QAbstractButton*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonClicked(QAbstractButton*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void buttonClicked( int id )
+*/
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 {
-  QButtonGroupSlots_connect_signal( "buttonClicked(int)", "buttonClicked(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonClicked(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QButtonGroup::buttonClicked), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonClicked(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonClicked(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonClicked(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void buttonPressed( QAbstractButton * button )
+*/
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 {
-  QButtonGroupSlots_connect_signal( "buttonPressed(QAbstractButton*)", "buttonPressed(QAbstractButton*)" );
+  if( hb_pcount() == 1 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonPressed(QAbstractButton*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed), [sender](QAbstractButton* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(QAbstractButton*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonPressed(QAbstractButton*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonPressed(QAbstractButton*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonPressed(QAbstractButton*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void buttonPressed( int id )
+*/
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 {
-  QButtonGroupSlots_connect_signal( "buttonPressed(int)", "buttonPressed(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonPressed(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QButtonGroup::buttonPressed), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonPressed(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonPressed(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonPressed(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void buttonReleased( QAbstractButton * button )
+*/
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 {
-  QButtonGroupSlots_connect_signal( "buttonReleased(QAbstractButton*)", "buttonReleased(QAbstractButton*)" );
+  if( hb_pcount() == 1 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonReleased(QAbstractButton*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased), [sender](QAbstractButton* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(QAbstractButton*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonReleased(QAbstractButton*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonReleased(QAbstractButton*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonReleased(QAbstractButton*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void buttonReleased( int id )
+*/
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 {
-  QButtonGroupSlots_connect_signal( "buttonReleased(int)", "buttonReleased(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonReleased(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QButtonGroup::buttonReleased), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonReleased(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonReleased(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonReleased(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
+
+/*
+void buttonToggled( QAbstractButton * button, bool checked )
+*/
+
+/*
+void buttonToggled( int id, bool checked )
+*/
 
 #pragma ENDDUMP

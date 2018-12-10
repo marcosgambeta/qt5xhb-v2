@@ -121,6 +121,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractItemView>
@@ -1917,36 +1918,392 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DOITEMSLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QAbstractItemViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activated( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
-  QAbstractItemViewSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::activated, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void clicked( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
-  QAbstractItemViewSlots_connect_signal( "clicked(QModelIndex)", "clicked(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::clicked, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void doubleClicked( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
-  QAbstractItemViewSlots_connect_signal( "doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "doubleClicked(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::doubleClicked, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "doubleClicked(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "doubleClicked(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void entered( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
-  QAbstractItemViewSlots_connect_signal( "entered(QModelIndex)", "entered(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "entered(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::entered, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "entered(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "entered(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "entered(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "entered(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void pressed( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
-  QAbstractItemViewSlots_connect_signal( "pressed(QModelIndex)", "pressed(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pressed(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::pressed, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pressed(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pressed(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pressed(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void viewportEntered()
+*/
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
-  QAbstractItemViewSlots_connect_signal( "viewportEntered()", "viewportEntered()" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "viewportEntered()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::viewportEntered, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportEntered()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "viewportEntered()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "viewportEntered()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "viewportEntered()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

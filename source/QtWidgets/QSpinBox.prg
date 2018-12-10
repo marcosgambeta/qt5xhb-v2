@@ -60,6 +60,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSpinBox>
@@ -498,16 +499,134 @@ HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void valueChanged( int value )
+*/
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
 {
-  QSpinBoxSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSpinBox * sender = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QSpinBox::valueChanged), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSPINBOX" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSpinBox * sender = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void valueChanged( const QString & text )
+*/
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
 {
-  QSpinBoxSlots_connect_signal( "valueChanged(QString)", "valueChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QSpinBox * sender = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QSpinBox::valueChanged), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSPINBOX" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSpinBox * sender = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -96,6 +96,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTabWidget>
@@ -1340,33 +1341,267 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
   }
 }
 
-void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentChanged( int index )
+*/
 HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
 {
-  QTabWidgetSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::currentChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void tabCloseRequested( int index )
+*/
 HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
 {
-  QTabWidgetSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tabCloseRequested(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::tabCloseRequested, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tabCloseRequested(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tabCloseRequested(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tabCloseRequested(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tabCloseRequested(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void tabBarClicked( int index )
+*/
 HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTabWidgetSlots_connect_signal( "tabBarClicked(int)", "tabBarClicked(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tabBarClicked(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::tabBarClicked, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tabBarClicked(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tabBarClicked(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tabBarClicked(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tabBarClicked(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void tabBarDoubleClicked( int index )
+*/
 HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTabWidgetSlots_connect_signal( "tabBarDoubleClicked(int)", "tabBarDoubleClicked(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tabBarDoubleClicked(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::tabBarDoubleClicked, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tabBarDoubleClicked(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tabBarDoubleClicked(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tabBarDoubleClicked(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tabBarDoubleClicked(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

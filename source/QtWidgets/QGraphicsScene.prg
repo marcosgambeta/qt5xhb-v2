@@ -131,6 +131,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsScene>
@@ -1864,21 +1865,220 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARSELECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsSceneSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void changed( const QList<QRectF> & region )
+*/
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 {
-  QGraphicsSceneSlots_connect_signal( "changed(QList<QRectF>)", "changed(QList<QRectF>)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScene * sender = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "changed(QList<QRectF>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScene::changed, [sender](QList<QRectF> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "changed(QList<QRectF>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QRectF *) new QRectF ( arg1 [i] ) );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "changed(QList<QRectF>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScene * sender = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "changed(QList<QRectF>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "changed(QList<QRectF>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sceneRectChanged( const QRectF & rect )
+*/
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 {
-  QGraphicsSceneSlots_connect_signal( "sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScene * sender = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sceneRectChanged(QRectF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScene::sceneRectChanged, [sender](QRectF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneRectChanged(QRectF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECTF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sceneRectChanged(QRectF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScene * sender = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sceneRectChanged(QRectF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sceneRectChanged(QRectF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectionChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 {
-  QGraphicsSceneSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScene * sender = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScene::selectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScene * sender = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

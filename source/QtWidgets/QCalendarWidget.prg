@@ -90,6 +90,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCalendarWidget>
@@ -1165,26 +1166,264 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCalendarWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activated( const QDate & date )
+*/
 HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 {
-  QCalendarWidgetSlots_connect_signal( "activated(QDate)", "activated(QDate)" );
+  if( hb_pcount() == 1 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated(QDate)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::activated, [sender](QDate arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QDate)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated(QDate)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated(QDate)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated(QDate)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void clicked( const QDate & date )
+*/
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 {
-  QCalendarWidgetSlots_connect_signal( "clicked(QDate)", "clicked(QDate)" );
+  if( hb_pcount() == 1 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked(QDate)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::clicked, [sender](QDate arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QDate)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked(QDate)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked(QDate)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(QDate)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentPageChanged( int year, int month )
+*/
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
-  QCalendarWidgetSlots_connect_signal( "currentPageChanged(int,int)", "currentPageChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentPageChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::currentPageChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentPageChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentPageChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentPageChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentPageChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectionChanged()
+*/
 HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
-  QCalendarWidgetSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::selectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

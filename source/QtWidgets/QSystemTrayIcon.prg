@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSystemTrayIcon>
@@ -465,16 +466,132 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 #endif
 }
 
-void QSystemTrayIconSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activated( QSystemTrayIcon::ActivationReason reason )
+*/
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {
-  QSystemTrayIconSlots_connect_signal( "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" );
+  if( hb_pcount() == 1 )
+  {
+    QSystemTrayIcon * sender = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated(QSystemTrayIcon::ActivationReason)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSystemTrayIcon::activated, [sender](QSystemTrayIcon::ActivationReason arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QSystemTrayIcon::ActivationReason)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSYSTEMTRAYICON" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated(QSystemTrayIcon::ActivationReason)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSystemTrayIcon * sender = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated(QSystemTrayIcon::ActivationReason)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated(QSystemTrayIcon::ActivationReason)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void messageClicked()
+*/
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
-  QSystemTrayIconSlots_connect_signal( "messageClicked()", "messageClicked()" );
+  if( hb_pcount() == 1 )
+  {
+    QSystemTrayIcon * sender = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "messageClicked()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSystemTrayIcon::messageClicked, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "messageClicked()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSYSTEMTRAYICON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "messageClicked()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSystemTrayIcon * sender = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "messageClicked()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "messageClicked()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -94,6 +94,7 @@ CLASS QComboBox INHERIT QWidget
    METHOD onActivated2
    METHOD onCurrentIndexChanged1
    METHOD onCurrentIndexChanged2
+   METHOD onCurrentTextChanged
    METHOD onEditTextChanged
    METHOD onHighlighted1
    METHOD onHighlighted2
@@ -127,6 +128,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QComboBox>
@@ -1731,41 +1733,524 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QComboBoxSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activated( int index )
+*/
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 {
-  QComboBoxSlots_connect_signal( "activated(int)", "activated(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QComboBox::activated), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void activated( const QString & text )
+*/
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 {
-  QComboBoxSlots_connect_signal( "activated(QString)", "activated(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QComboBox::activated), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentIndexChanged( int index )
+*/
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
-  QComboBoxSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QComboBox::currentIndexChanged), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentIndexChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentIndexChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentIndexChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentIndexChanged( const QString & text )
+*/
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
-  QComboBoxSlots_connect_signal( "currentIndexChanged(QString)", "currentIndexChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentIndexChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QComboBox::currentIndexChanged), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentIndexChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentIndexChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentIndexChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentTextChanged(const QString &text)
+*/
+HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QComboBox::currentTextChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentTextChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentTextChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentTextChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentTextChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void editTextChanged( const QString & text )
+*/
 HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
-  QComboBoxSlots_connect_signal( "editTextChanged(QString)", "editTextChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "editTextChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QComboBox::editTextChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "editTextChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "editTextChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "editTextChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "editTextChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void highlighted( int index )
+*/
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 {
-  QComboBoxSlots_connect_signal( "highlighted(int)", "highlighted(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "highlighted(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QComboBox::highlighted), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "highlighted(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "highlighted(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "highlighted(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void highlighted( const QString & text )
+*/
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 {
-  QComboBoxSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "highlighted(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QComboBox::highlighted), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "highlighted(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "highlighted(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 // for compatibility

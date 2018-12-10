@@ -97,6 +97,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QInputDialog>
@@ -1320,36 +1321,394 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
 #endif
 }
 
-void QInputDialogSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void doubleValueChanged( double value )
+*/
 HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 {
-  QInputDialogSlots_connect_signal( "doubleValueChanged(double)", "doubleValueChanged(double)" );
+  if( hb_pcount() == 1 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "doubleValueChanged(double)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::doubleValueChanged, [sender](double arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleValueChanged(double)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "doubleValueChanged(double)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "doubleValueChanged(double)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "doubleValueChanged(double)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void doubleValueSelected( double value )
+*/
 HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 {
-  QInputDialogSlots_connect_signal( "doubleValueSelected(double)", "doubleValueSelected(double)" );
+  if( hb_pcount() == 1 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "doubleValueSelected(double)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::doubleValueSelected, [sender](double arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleValueSelected(double)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "doubleValueSelected(double)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "doubleValueSelected(double)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "doubleValueSelected(double)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void intValueChanged( int value )
+*/
 HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
 {
-  QInputDialogSlots_connect_signal( "intValueChanged(int)", "intValueChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "intValueChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::intValueChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "intValueChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "intValueChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "intValueChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "intValueChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void intValueSelected( int value )
+*/
 HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
 {
-  QInputDialogSlots_connect_signal( "intValueSelected(int)", "intValueSelected(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "intValueSelected(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::intValueSelected, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "intValueSelected(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "intValueSelected(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "intValueSelected(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "intValueSelected(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textValueChanged( const QString & text )
+*/
 HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 {
-  QInputDialogSlots_connect_signal( "textValueChanged(QString)", "textValueChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textValueChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::textValueChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textValueChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textValueChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textValueChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textValueChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textValueSelected( const QString & text )
+*/
 HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 {
-  QInputDialogSlots_connect_signal( "textValueSelected(QString)", "textValueSelected(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textValueSelected(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::textValueSelected, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textValueSelected(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textValueSelected(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textValueSelected(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textValueSelected(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

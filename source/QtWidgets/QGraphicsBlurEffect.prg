@@ -50,6 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsBlurEffect>
@@ -213,16 +214,134 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsBlurEffectSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
+*/
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 {
-  QGraphicsBlurEffectSlots_connect_signal( "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsBlurEffect::blurHintsChanged, [sender](QGraphicsBlurEffect::BlurHints arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void blurRadiusChanged( qreal radius )
+*/
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 {
-  QGraphicsBlurEffectSlots_connect_signal( "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "blurRadiusChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsBlurEffect::blurRadiusChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "blurRadiusChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "blurRadiusChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "blurRadiusChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "blurRadiusChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

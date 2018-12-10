@@ -65,6 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QScroller>
@@ -692,16 +693,134 @@ HB_FUNC_STATIC( QSCROLLER_UNGRABGESTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QScrollerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void scrollerPropertiesChanged( const QScrollerProperties & newProperties )
+*/
 HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 {
-  QScrollerSlots_connect_signal( "scrollerPropertiesChanged(QScrollerProperties)", "scrollerPropertiesChanged(QScrollerProperties)" );
+  if( hb_pcount() == 1 )
+  {
+    QScroller * sender = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "scrollerPropertiesChanged(QScrollerProperties)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScroller::scrollerPropertiesChanged, [sender](QScrollerProperties arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "scrollerPropertiesChanged(QScrollerProperties)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCROLLER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSCROLLERPROPERTIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "scrollerPropertiesChanged(QScrollerProperties)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScroller * sender = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "scrollerPropertiesChanged(QScrollerProperties)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "scrollerPropertiesChanged(QScrollerProperties)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QScroller::State newState )
+*/
 HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 {
-  QScrollerSlots_connect_signal( "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" );
+  if( hb_pcount() == 1 )
+  {
+    QScroller * sender = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QScroller::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScroller::stateChanged, [sender](QScroller::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QScroller::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCROLLER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QScroller::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScroller * sender = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QScroller::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QScroller::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

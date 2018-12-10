@@ -98,6 +98,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDateTimeEdit>
@@ -1404,21 +1405,199 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDateTimeEditSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void dateChanged( const QDate & date )
+*/
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
-  QDateTimeEditSlots_connect_signal( "dateChanged(QDate)", "dateChanged(QDate)" );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dateChanged(QDate)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeEdit::dateChanged, [sender](QDate arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dateChanged(QDate)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEEDIT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dateChanged(QDate)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dateChanged(QDate)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dateChanged(QDate)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void dateTimeChanged( const QDateTime & datetime )
+*/
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
-  QDateTimeEditSlots_connect_signal( "dateTimeChanged(QDateTime)", "dateTimeChanged(QDateTime)" );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dateTimeChanged(QDateTime)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeEdit::dateTimeChanged, [sender](QDateTime arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dateTimeChanged(QDateTime)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEEDIT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dateTimeChanged(QDateTime)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dateTimeChanged(QDateTime)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dateTimeChanged(QDateTime)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void timeChanged( const QTime & time )
+*/
 HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
-  QDateTimeEditSlots_connect_signal( "timeChanged(QTime)", "timeChanged(QTime)" );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "timeChanged(QTime)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeEdit::timeChanged, [sender](QTime arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "timeChanged(QTime)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEEDIT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QTIME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "timeChanged(QTime)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "timeChanged(QTime)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "timeChanged(QTime)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

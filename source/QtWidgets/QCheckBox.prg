@@ -260,6 +260,9 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
   }
 }
 
+/*
+void stateChanged( int state )
+*/
 HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
 {
   if( hb_pcount() == 1 )
@@ -268,25 +271,31 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
 
     if( sender )
     {
-      Signals2_connection( sender, "stateChanged(int)" );
+      if( Signals2_connection( sender, "stateChanged(int)" ) )
+      {
 
-      QObject::connect(sender, &QCheckBox::stateChanged, [sender](int state) {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QCheckBox::stateChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(int)" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "stateChanged(int)" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCHECKBOX" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QCHECKBOX" );
-          PHB_ITEM pstate = hb_itemPutNI( NULL, state );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
-          hb_itemRelease( psender );
-          hb_itemRelease( pstate );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "stateChanged(int)", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -301,7 +310,7 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
     {
       Signals2_disconnection( sender, "stateChanged(int)" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(int)" ) );
 
       hb_retl( true );
     }
@@ -309,6 +318,10 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
     {
       hb_retl( false );
     }
+  }
+  else
+  {
+    hb_retl( false );
   }
 }
 

@@ -73,6 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDataWidgetMapper>
@@ -772,11 +773,69 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDataWidgetMapperSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentIndexChanged( int index )
+*/
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
 {
-  QDataWidgetMapperSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QDataWidgetMapper * sender = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDataWidgetMapper::currentIndexChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATAWIDGETMAPPER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentIndexChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDataWidgetMapper * sender = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentIndexChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentIndexChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -64,6 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMdiSubWindow>
@@ -508,16 +509,134 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMdiSubWindowSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void aboutToActivate()
+*/
 HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
-  QMdiSubWindowSlots_connect_signal( "aboutToActivate()", "aboutToActivate()" );
+  if( hb_pcount() == 1 )
+  {
+    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "aboutToActivate()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMdiSubWindow::aboutToActivate, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToActivate()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "aboutToActivate()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "aboutToActivate()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "aboutToActivate()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
+*/
 HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
-  QMdiSubWindowSlots_connect_signal( "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+  if( hb_pcount() == 1 )
+  {
+    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMdiSubWindow::windowStateChanged, [sender](Qt::WindowStates arg1, Qt::WindowStates arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

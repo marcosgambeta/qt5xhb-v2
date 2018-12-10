@@ -829,6 +829,9 @@ void changeEvent(QEvent *e) Q_DECL_OVERRIDE [protected]
 void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE [protected]
 */
 
+/*
+void clicked( bool checked = false )
+*/
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 {
   if( hb_pcount() == 1 )
@@ -837,25 +840,31 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 
     if( sender )
     {
-      Signals2_connection( sender, "clicked(bool)" );
+      if( Signals2_connection( sender, "clicked(bool)" ) )
+      {
 
-      QObject::connect(sender, &QAbstractButton::clicked, [sender](bool checked) {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::clicked, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(bool)" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "clicked(bool)" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTBUTTON" );
-          PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
-          hb_itemRelease( psender );
-          hb_itemRelease( pchecked );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "clicked(bool)", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -870,7 +879,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
     {
       Signals2_disconnection( sender, "clicked(bool)" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(bool)" ) );
 
       hb_retl( true );
     }
@@ -879,8 +888,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
       hb_retl( false );
     }
   }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void pressed()
+*/
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 {
   if( hb_pcount() == 1 )
@@ -889,23 +905,29 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 
     if( sender )
     {
-      Signals2_connection( sender, "pressed()" );
+      if( Signals2_connection( sender, "pressed()" ) )
+      {
 
-      QObject::connect(sender, &QAbstractButton::pressed, [sender]() {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::pressed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed()" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "pressed()" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTBUTTON" );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-          hb_itemRelease( psender );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "pressed()", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -920,7 +942,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
     {
       Signals2_disconnection( sender, "pressed()" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "pressed()" ) );
 
       hb_retl( true );
     }
@@ -929,8 +951,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
       hb_retl( false );
     }
   }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void released()
+*/
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 {
   if( hb_pcount() == 1 )
@@ -939,23 +968,29 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 
     if( sender )
     {
-      Signals2_connection( sender, "released()" );
+      if( Signals2_connection( sender, "released()" ) )
+      {
 
-      QObject::connect(sender, &QAbstractButton::released, [sender]() {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::released, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "released()" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "released()" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTBUTTON" );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-          hb_itemRelease( psender );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "released()", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -970,7 +1005,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
     {
       Signals2_disconnection( sender, "released()" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "released()" ) );
 
       hb_retl( true );
     }
@@ -979,8 +1014,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
       hb_retl( false );
     }
   }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void toggled( bool checked )
+*/
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 {
   if( hb_pcount() == 1 )
@@ -989,25 +1031,31 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 
     if( sender )
     {
-      Signals2_connection( sender, "toggled(bool)" );
+      if( Signals2_connection( sender, "toggled(bool)" ) )
+      {
 
-      QObject::connect(sender, &QAbstractButton::toggled, [sender](bool checked) {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::toggled, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "toggled(bool)" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QABSTRACTBUTTON" );
-          PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
-          hb_itemRelease( psender );
-          hb_itemRelease( pchecked );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "toggled(bool)", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -1022,7 +1070,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
     {
       Signals2_disconnection( sender, "toggled(bool)" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "toggled(bool)" ) );
 
       hb_retl( true );
     }
@@ -1030,6 +1078,10 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
     {
       hb_retl( false );
     }
+  }
+  else
+  {
+    hb_retl( false );
   }
 }
 

@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDockWidget>
@@ -423,31 +424,329 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
   }
 }
 
-void QDockWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
+*/
 HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "allowedAreasChanged(Qt::DockWidgetAreas)", "allowedAreasChanged(Qt::DockWidgetAreas)" );
+  if( hb_pcount() == 1 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::allowedAreasChanged, [sender](Qt::DockWidgetAreas arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void dockLocationChanged( Qt::DockWidgetArea area )
+*/
 HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "dockLocationChanged(Qt::DockWidgetArea)", "dockLocationChanged(Qt::DockWidgetArea)" );
+  if( hb_pcount() == 1 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::dockLocationChanged, [sender](Qt::DockWidgetArea arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void featuresChanged( QDockWidget::DockWidgetFeatures features )
+*/
 HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "featuresChanged(QDockWidget::DockWidgetFeatures)", "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+  if( hb_pcount() == 1 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::featuresChanged, [sender](QDockWidget::DockWidgetFeatures arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void topLevelChanged( bool topLevel )
+*/
 HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "topLevelChanged(bool)", "topLevelChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::topLevelChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "topLevelChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "topLevelChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "topLevelChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void visibilityChanged( bool visible )
+*/
 HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::visibilityChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "visibilityChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "visibilityChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "visibilityChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

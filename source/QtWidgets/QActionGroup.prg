@@ -55,6 +55,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QActionGroup>
@@ -386,16 +387,134 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QActionGroupSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void hovered( QAction * action )
+*/
 HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 {
-  QActionGroupSlots_connect_signal( "hovered(QAction*)", "hovered(QAction*)" );
+  if( hb_pcount() == 1 )
+  {
+    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "hovered(QAction*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QActionGroup::hovered, [sender](QAction* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QAction*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTIONGROUP" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "hovered(QAction*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "hovered(QAction*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "hovered(QAction*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void triggered( QAction * action )
+*/
 HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
 {
-  QActionGroupSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+  if( hb_pcount() == 1 )
+  {
+    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "triggered(QAction*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QActionGroup::triggered, [sender](QAction* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(QAction*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTIONGROUP" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "triggered(QAction*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "triggered(QAction*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "triggered(QAction*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

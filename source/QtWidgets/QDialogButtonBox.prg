@@ -59,6 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDialogButtonBox>
@@ -476,26 +477,258 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
   }
 }
 
-void QDialogButtonBoxSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void accepted()
+*/
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "accepted()", "accepted()" );
+  if( hb_pcount() == 1 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "accepted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::accepted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "accepted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "accepted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "accepted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void clicked( QAbstractButton * button )
+*/
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 {
-  QDialogButtonBoxSlots_connect_signal( "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" );
+  if( hb_pcount() == 1 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked(QAbstractButton*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::clicked, [sender](QAbstractButton* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QAbstractButton*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked(QAbstractButton*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked(QAbstractButton*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(QAbstractButton*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void helpRequested()
+*/
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "helpRequested()", "helpRequested()" );
+  if( hb_pcount() == 1 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "helpRequested()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::helpRequested, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "helpRequested()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "helpRequested()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "helpRequested()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rejected()
+*/
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "rejected()", "rejected()" );
+  if( hb_pcount() == 1 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rejected()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::rejected, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rejected()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rejected()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rejected()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rejected()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

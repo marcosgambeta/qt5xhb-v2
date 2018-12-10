@@ -136,6 +136,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTextEdit>
@@ -2238,41 +2239,453 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QTextEditSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void copyAvailable( bool yes )
+*/
 HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "copyAvailable(bool)", "copyAvailable(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "copyAvailable(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::copyAvailable, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "copyAvailable(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "copyAvailable(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "copyAvailable(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "copyAvailable(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentCharFormatChanged( const QTextCharFormat & f )
+*/
 HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
-  QTextEditSlots_connect_signal( "currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentCharFormatChanged(QTextCharFormat)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::currentCharFormatChanged, [sender](QTextCharFormat arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentCharFormatChanged(QTextCharFormat)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QTEXTCHARFORMAT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentCharFormatChanged(QTextCharFormat)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentCharFormatChanged(QTextCharFormat)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentCharFormatChanged(QTextCharFormat)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void cursorPositionChanged()
+*/
 HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  QTextEditSlots_connect_signal( "cursorPositionChanged()", "cursorPositionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cursorPositionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::cursorPositionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cursorPositionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cursorPositionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cursorPositionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void redoAvailable( bool available )
+*/
 HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "redoAvailable(bool)", "redoAvailable(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "redoAvailable(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::redoAvailable, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "redoAvailable(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "redoAvailable(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "redoAvailable(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "redoAvailable(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectionChanged()
+*/
 HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
-  QTextEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::selectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textChanged()
+*/
 HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 {
-  QTextEditSlots_connect_signal( "textChanged()", "textChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::textChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void undoAvailable( bool available )
+*/
 HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "undoAvailable(bool)", "undoAvailable(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "undoAvailable(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::undoAvailable, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "undoAvailable(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "undoAvailable(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "undoAvailable(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "undoAvailable(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

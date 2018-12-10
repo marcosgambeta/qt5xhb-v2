@@ -83,6 +83,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QLabel>
@@ -1033,16 +1034,134 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QLabelSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void linkActivated( const QString & link )
+*/
 HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 {
-  QLabelSlots_connect_signal( "linkActivated(QString)", "linkActivated(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "linkActivated(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLabel::linkActivated, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkActivated(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLABEL" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "linkActivated(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "linkActivated(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "linkActivated(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void linkHovered( const QString & link )
+*/
 HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
 {
-  QLabelSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "linkHovered(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLabel::linkHovered, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkHovered(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLABEL" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "linkHovered(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "linkHovered(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "linkHovered(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

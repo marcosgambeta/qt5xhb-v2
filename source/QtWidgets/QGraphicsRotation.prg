@@ -53,6 +53,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsRotation>
@@ -292,21 +293,193 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsRotationSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void angleChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "angleChanged()", "angleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "angleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsRotation::angleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "angleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "angleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "angleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "angleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void axisChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "axisChanged()", "axisChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "axisChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsRotation::axisChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "axisChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "axisChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "axisChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void originChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "originChanged()", "originChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "originChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsRotation::originChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "originChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "originChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "originChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "originChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -81,6 +81,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QListWidget>
@@ -895,56 +896,654 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QListWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
-  QListWidgetSlots_connect_signal( "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::currentItemChanged, [sender](QListWidgetItem* arg1, QListWidgetItem* arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QLISTWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentRowChanged( int currentRow )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
-  QListWidgetSlots_connect_signal( "currentRowChanged(int)", "currentRowChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentRowChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::currentRowChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentRowChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentRowChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentRowChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentRowChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentTextChanged( const QString & currentText )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
-  QListWidgetSlots_connect_signal( "currentTextChanged(QString)", "currentTextChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::currentTextChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentTextChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentTextChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentTextChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentTextChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemActivated( QListWidgetItem * item )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 {
-  QListWidgetSlots_connect_signal( "itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemActivated(QListWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemActivated, [sender](QListWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemActivated(QListWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemActivated(QListWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemActivated(QListWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemActivated(QListWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemChanged( QListWidgetItem * item )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 {
-  QListWidgetSlots_connect_signal( "itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemChanged(QListWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemChanged, [sender](QListWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QListWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemChanged(QListWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemChanged(QListWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemChanged(QListWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemClicked( QListWidgetItem * item )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 {
-  QListWidgetSlots_connect_signal( "itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemClicked(QListWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemClicked, [sender](QListWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemClicked(QListWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemClicked(QListWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemClicked(QListWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemClicked(QListWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemDoubleClicked( QListWidgetItem * item )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
-  QListWidgetSlots_connect_signal( "itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemDoubleClicked(QListWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemDoubleClicked, [sender](QListWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemDoubleClicked(QListWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemDoubleClicked(QListWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemDoubleClicked(QListWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemDoubleClicked(QListWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemEntered( QListWidgetItem * item )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 {
-  QListWidgetSlots_connect_signal( "itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemEntered(QListWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemEntered, [sender](QListWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemEntered(QListWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemEntered(QListWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemEntered(QListWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemEntered(QListWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemPressed( QListWidgetItem * item )
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 {
-  QListWidgetSlots_connect_signal( "itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemPressed(QListWidgetItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemPressed, [sender](QListWidgetItem* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemPressed(QListWidgetItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemPressed(QListWidgetItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemPressed(QListWidgetItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemPressed(QListWidgetItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemSelectionChanged()
+*/
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QListWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemSelectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemSelectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemSelectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemSelectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemSelectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -71,6 +71,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTextBrowser>
@@ -610,41 +611,457 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QTextBrowserSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void anchorClicked( const QUrl & link )
+*/
 HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 {
-  QTextBrowserSlots_connect_signal( "anchorClicked(QUrl)", "anchorClicked(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "anchorClicked(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::anchorClicked, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorClicked(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "anchorClicked(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "anchorClicked(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "anchorClicked(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void backwardAvailable( bool available )
+*/
 HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
-  QTextBrowserSlots_connect_signal( "backwardAvailable(bool)", "backwardAvailable(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "backwardAvailable(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::backwardAvailable, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "backwardAvailable(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "backwardAvailable(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "backwardAvailable(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "backwardAvailable(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void forwardAvailable( bool available )
+*/
 HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
-  QTextBrowserSlots_connect_signal( "forwardAvailable(bool)", "forwardAvailable(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "forwardAvailable(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::forwardAvailable, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "forwardAvailable(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "forwardAvailable(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "forwardAvailable(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "forwardAvailable(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void highlighted( const QUrl & link )
+*/
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
-  QTextBrowserSlots_connect_signal( "highlighted(QUrl)", "highlighted(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "highlighted(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QUrl &>::of(&QTextBrowser::highlighted), [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "highlighted(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "highlighted(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void highlighted( const QString & link )
+*/
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
-  QTextBrowserSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "highlighted(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QTextBrowser::highlighted), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "highlighted(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "highlighted(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void historyChanged()
+*/
 HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
-  QTextBrowserSlots_connect_signal( "historyChanged()", "historyChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "historyChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::historyChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "historyChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "historyChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "historyChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "historyChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sourceChanged( const QUrl & src )
+*/
 HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 {
-  QTextBrowserSlots_connect_signal( "sourceChanged(QUrl)", "sourceChanged(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sourceChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::sourceChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sourceChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sourceChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sourceChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

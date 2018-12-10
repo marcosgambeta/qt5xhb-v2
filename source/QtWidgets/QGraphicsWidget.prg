@@ -100,6 +100,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsWidget>
@@ -1464,11 +1465,67 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETTABORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void geometryChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
 {
-  QGraphicsWidgetSlots_connect_signal( "geometryChanged()", "geometryChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWidget * sender = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "geometryChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWidget::geometryChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "geometryChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWidget * sender = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "geometryChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "geometryChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

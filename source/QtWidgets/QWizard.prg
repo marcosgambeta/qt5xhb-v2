@@ -93,6 +93,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QWizard>
@@ -1149,31 +1150,327 @@ HB_FUNC_STATIC( QWIZARD_RESTART )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QWizardSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentIdChanged( int id )
+*/
 HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 {
-  QWizardSlots_connect_signal( "currentIdChanged(int)", "currentIdChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentIdChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::currentIdChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIdChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentIdChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentIdChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentIdChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void customButtonClicked( int which )
+*/
 HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
-  QWizardSlots_connect_signal( "customButtonClicked(int)", "customButtonClicked(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "customButtonClicked(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::customButtonClicked, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "customButtonClicked(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "customButtonClicked(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "customButtonClicked(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "customButtonClicked(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void helpRequested()
+*/
 HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 {
-  QWizardSlots_connect_signal( "helpRequested()", "helpRequested()" );
+  if( hb_pcount() == 1 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "helpRequested()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::helpRequested, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "helpRequested()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "helpRequested()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "helpRequested()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void pageAdded( int id )
+*/
 HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 {
-  QWizardSlots_connect_signal( "pageAdded(int)", "pageAdded(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pageAdded(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::pageAdded, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pageAdded(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pageAdded(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pageAdded(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pageAdded(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void pageRemoved( int id )
+*/
 HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 {
-  QWizardSlots_connect_signal( "pageRemoved(int)", "pageRemoved(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pageRemoved(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::pageRemoved, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pageRemoved(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pageRemoved(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pageRemoved(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pageRemoved(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

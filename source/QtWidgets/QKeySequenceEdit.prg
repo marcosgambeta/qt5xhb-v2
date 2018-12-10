@@ -50,6 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -202,23 +203,135 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 #endif
 }
 
-void QKeySequenceEditSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void editingFinished()
+*/
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEditSlots_connect_signal( "editingFinished()", "editingFinished()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "editingFinished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QKeySequenceEdit::editingFinished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "editingFinished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QKEYSEQUENCEEDIT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "editingFinished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "editingFinished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "editingFinished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void keySequenceChanged( const QKeySequence & keySequence )
+*/
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEditSlots_connect_signal( "keySequenceChanged(QKeySequence)", "keySequenceChanged(QKeySequence)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "keySequenceChanged(QKeySequence)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QKeySequenceEdit::keySequenceChanged, [sender](QKeySequence arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "keySequenceChanged(QKeySequence)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QKEYSEQUENCEEDIT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QKEYSEQUENCE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "keySequenceChanged(QKeySequence)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "keySequenceChanged(QKeySequence)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "keySequenceChanged(QKeySequence)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

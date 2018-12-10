@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QWizardPage>
@@ -524,11 +525,67 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   }
 }
 
-void QWizardPageSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void completeChanged()
+*/
 HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {
-  QWizardPageSlots_connect_signal( "completeChanged()", "completeChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QWizardPage * sender = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "completeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWizardPage::completeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "completeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARDPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "completeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWizardPage * sender = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "completeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "completeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

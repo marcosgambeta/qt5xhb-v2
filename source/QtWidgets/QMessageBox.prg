@@ -90,6 +90,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMessageBox>
@@ -1315,11 +1316,69 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMessageBoxSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void buttonClicked( QAbstractButton * button )
+*/
 HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
 {
-  QMessageBoxSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
+  if( hb_pcount() == 1 )
+  {
+    QMessageBox * sender = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonClicked(QAbstractButton*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMessageBox::buttonClicked, [sender](QAbstractButton* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(QAbstractButton*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMESSAGEBOX" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonClicked(QAbstractButton*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMessageBox * sender = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonClicked(QAbstractButton*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonClicked(QAbstractButton*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

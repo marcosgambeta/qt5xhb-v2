@@ -49,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsOpacityEffect>
@@ -188,16 +189,134 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsOpacityEffectSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void opacityChanged( qreal opacity )
+*/
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 {
-  QGraphicsOpacityEffectSlots_connect_signal( "opacityChanged(qreal)", "opacityChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsOpacityEffect * sender = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsOpacityEffect::opacityChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "opacityChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsOpacityEffect * sender = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "opacityChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "opacityChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void opacityMaskChanged( const QBrush & mask )
+*/
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 {
-  QGraphicsOpacityEffectSlots_connect_signal( "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsOpacityEffect * sender = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "opacityMaskChanged(QBrush)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsOpacityEffect::opacityMaskChanged, [sender](QBrush arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityMaskChanged(QBrush)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBRUSH" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "opacityMaskChanged(QBrush)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsOpacityEffect * sender = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "opacityMaskChanged(QBrush)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "opacityMaskChanged(QBrush)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -57,6 +57,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsScale>
@@ -322,31 +323,319 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsScaleSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void originChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "originChanged()", "originChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "originChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::originChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "originChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "originChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "originChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "originChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void scaleChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "scaleChanged()", "scaleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "scaleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::scaleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "scaleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "scaleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "scaleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "scaleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void xScaleChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "xScaleChanged()", "xScaleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "xScaleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::xScaleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "xScaleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "xScaleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "xScaleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "xScaleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void yScaleChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "yScaleChanged()", "yScaleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "yScaleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::yScaleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "yScaleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "yScaleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "yScaleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "yScaleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void zScaleChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "zScaleChanged()", "zScaleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "zScaleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::zScaleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "zScaleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "zScaleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "zScaleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "zScaleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

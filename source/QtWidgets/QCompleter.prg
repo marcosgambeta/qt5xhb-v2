@@ -83,6 +83,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCompleter>
@@ -993,26 +994,264 @@ HB_FUNC_STATIC( QCOMPLETER_FILTERMODE )
 #endif
 }
 
-void QCompleterSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activated( const QString & text )
+*/
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
-  QCompleterSlots_connect_signal( "activated(QString)", "activated(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QCompleter::activated), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void activated( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
-  QCompleterSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activated(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QModelIndex &>::of(&QCompleter::activated), [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activated(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activated(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activated(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void highlighted( const QString & text )
+*/
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
-  QCompleterSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "highlighted(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QCompleter::highlighted), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "highlighted(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "highlighted(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void highlighted( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
-  QCompleterSlots_connect_signal( "highlighted(QModelIndex)", "highlighted(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "highlighted(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QModelIndex &>::of(&QCompleter::highlighted), [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "highlighted(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "highlighted(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

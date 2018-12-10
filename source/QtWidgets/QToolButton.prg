@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QToolButton>
@@ -490,11 +491,69 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
 #endif
 }
 
-void QToolButtonSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void triggered( QAction * action )
+*/
 HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 {
-  QToolButtonSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+  if( hb_pcount() == 1 )
+  {
+    QToolButton * sender = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "triggered(QAction*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QToolButton::triggered, [sender](QAction* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(QAction*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBUTTON" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "triggered(QAction*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QToolButton * sender = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "triggered(QAction*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "triggered(QAction*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

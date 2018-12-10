@@ -56,6 +56,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGroupBox>
@@ -390,16 +391,134 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGroupBoxSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void clicked( bool checked = false )
+*/
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {
-  QGroupBoxSlots_connect_signal( "clicked(bool)", "clicked(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGroupBox::clicked, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGROUPBOX" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void toggled( bool on )
+*/
 HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 {
-  QGroupBoxSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "toggled(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGroupBox::toggled, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGROUPBOX" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "toggled(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "toggled(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "toggled(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

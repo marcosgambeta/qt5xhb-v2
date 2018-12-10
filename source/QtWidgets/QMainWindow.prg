@@ -95,6 +95,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMainWindow>
@@ -1315,16 +1316,134 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
 #endif
 }
 
-void QMainWindowSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void iconSizeChanged( const QSize & iconSize )
+*/
 HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 {
-  QMainWindowSlots_connect_signal( "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" );
+  if( hb_pcount() == 1 )
+  {
+    QMainWindow * sender = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMainWindow::iconSizeChanged, [sender](QSize arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "iconSizeChanged(QSize)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMAINWINDOW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "iconSizeChanged(QSize)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMainWindow * sender = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "iconSizeChanged(QSize)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "iconSizeChanged(QSize)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
+*/
 HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
-  QMainWindowSlots_connect_signal( "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+  if( hb_pcount() == 1 )
+  {
+    QMainWindow * sender = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMainWindow::toolButtonStyleChanged, [sender](Qt::ToolButtonStyle arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMAINWINDOW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMainWindow * sender = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

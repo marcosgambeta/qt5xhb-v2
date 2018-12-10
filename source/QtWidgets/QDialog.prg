@@ -561,6 +561,9 @@ HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void accepted()
+*/
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
   if( hb_pcount() == 1 )
@@ -569,23 +572,29 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 
     if( sender )
     {
-      Signals2_connection( sender, "accepted()" );
+      if( Signals2_connection( sender, "accepted()" ) )
+      {
 
-      QObject::connect(sender, &QDialog::accepted, [sender]() {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QDialog::accepted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted()" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "accepted()" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOG" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QDIALOG" );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-          hb_itemRelease( psender );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "accepted()", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -600,7 +609,7 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
     {
       Signals2_disconnection( sender, "accepted()" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "accepted()" ) );
 
       hb_retl( true );
     }
@@ -609,9 +618,15 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
       hb_retl( false );
     }
   }
-
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void finished( int result )
+*/
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
   if( hb_pcount() == 1 )
@@ -620,25 +635,31 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 
     if( sender )
     {
-      Signals2_connection( sender, "finished(int)" );
+      if( Signals2_connection( sender, "finished(int)" ) )
+      {
 
-      QObject::connect(sender, &QDialog::finished, [sender](int result) {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QDialog::finished, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int)" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "finished(int)" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QDIALOG" );
-          PHB_ITEM presult = hb_itemPutNI( NULL, result );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, presult );
-          hb_itemRelease( psender );
-          hb_itemRelease( presult );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "finished(int)", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -653,7 +674,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
     {
       Signals2_disconnection( sender, "finished(int)" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "finished(int)" ) );
 
       hb_retl( true );
     }
@@ -662,8 +683,15 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
       hb_retl( false );
     }
   }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rejected()
+*/
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
   if( hb_pcount() == 1 )
@@ -672,23 +700,29 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 
     if( sender )
     {
-      Signals2_connection( sender, "rejected()" );
+      if( Signals2_connection( sender, "rejected()" ) )
+      {
 
-      QObject::connect(sender, &QDialog::rejected, [sender]() {
-        QObject * object = qobject_cast<QObject *>( sender );
+        QMetaObject::Connection connection = QObject::connect(sender, &QDialog::rejected, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rejected()" );
 
-        PHB_ITEM cb = Signals2_return_codeblock( object, "rejected()" );
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOG" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
 
-        if( cb )
-        {
-          PHB_ITEM psender = Signals2_return_qobject ( (QObject *) object, "QDIALOG" );
-          hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-          hb_itemRelease( psender );
-        }
+        });
 
-      });
+        Signals2_store_connection( sender, "rejected()", connection );
 
-      hb_retl( true );
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else
     {
@@ -703,7 +737,7 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
     {
       Signals2_disconnection( sender, "rejected()" );
 
-      // TODO: disconnection
+      QObject::disconnect( Signals2_get_connection( sender, "rejected()" ) );
 
       hb_retl( true );
     }
@@ -711,6 +745,10 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
     {
       hb_retl( false );
     }
+  }
+  else
+  {
+    hb_retl( false );
   }
 }
 

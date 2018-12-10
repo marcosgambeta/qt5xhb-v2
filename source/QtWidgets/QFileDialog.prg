@@ -119,6 +119,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QFileDialog>
@@ -1817,51 +1818,619 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
 #endif
 }
 
-void QFileDialogSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentChanged( const QString & path )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
-  QFileDialogSlots_connect_signal( "currentChanged(QString)", "currentChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::currentChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void directoryEntered( const QString & directory )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
-  QFileDialogSlots_connect_signal( "directoryEntered(QString)", "directoryEntered(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "directoryEntered(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::directoryEntered, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "directoryEntered(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "directoryEntered(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "directoryEntered(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "directoryEntered(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void fileSelected( const QString & file )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
-  QFileDialogSlots_connect_signal( "fileSelected(QString)", "fileSelected(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "fileSelected(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::fileSelected, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "fileSelected(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "fileSelected(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "fileSelected(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "fileSelected(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void filesSelected( const QStringList & selected )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
-  QFileDialogSlots_connect_signal( "filesSelected(QStringList)", "filesSelected(QStringList)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "filesSelected(QStringList)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::filesSelected, [sender](QStringList arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "filesSelected(QStringList)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              PHB_ITEM pTempItem = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1 [i]) );
+              hb_arrayAddForward( pArg1, pTempItem );
+              hb_itemRelease(pTempItem);
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "filesSelected(QStringList)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "filesSelected(QStringList)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "filesSelected(QStringList)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void filterSelected( const QString & filter )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
-  QFileDialogSlots_connect_signal( "filterSelected(QString)", "filterSelected(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "filterSelected(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::filterSelected, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "filterSelected(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "filterSelected(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "filterSelected(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "filterSelected(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void urlSelected( const QUrl & url )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
-  QFileDialogSlots_connect_signal( "urlSelected(QUrl)", "urlSelected(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "urlSelected(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::urlSelected, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "urlSelected(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "urlSelected(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "urlSelected(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "urlSelected(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void urlsSelected( const QList<QUrl> & urls )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
-  QFileDialogSlots_connect_signal( "urlsSelected(QList<QUrl>)", "urlsSelected(QList<QUrl>)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "urlsSelected(QList<QUrl>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::urlsSelected, [sender](QList<QUrl> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "urlsSelected(QList<QUrl>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QUrl *) new QUrl ( arg1 [i] ) );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "urlsSelected(QList<QUrl>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "urlsSelected(QList<QUrl>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "urlsSelected(QList<QUrl>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentUrlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
-  QFileDialogSlots_connect_signal( "currentUrlChanged(QUrl)", "currentUrlChanged(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentUrlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::currentUrlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentUrlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentUrlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentUrlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentUrlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void directoryUrlEntered( const QUrl & directory )
+*/
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
-  QFileDialogSlots_connect_signal( "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "directoryUrlEntered(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::directoryUrlEntered, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "directoryUrlEntered(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "directoryUrlEntered(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "directoryUrlEntered(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "directoryUrlEntered(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

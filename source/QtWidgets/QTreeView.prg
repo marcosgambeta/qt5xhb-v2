@@ -104,6 +104,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTreeView>
@@ -1585,16 +1586,134 @@ HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QTreeViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void collapsed( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 {
-  QTreeViewSlots_connect_signal( "collapsed(QModelIndex)", "collapsed(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeView * sender = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "collapsed(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeView::collapsed, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "collapsed(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "collapsed(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeView * sender = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "collapsed(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "collapsed(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void expanded( const QModelIndex & index )
+*/
 HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 {
-  QTreeViewSlots_connect_signal( "expanded(QModelIndex)", "expanded(QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QTreeView * sender = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "expanded(QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTreeView::expanded, [sender](QModelIndex arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "expanded(QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTREEVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "expanded(QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTreeView * sender = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "expanded(QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "expanded(QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
