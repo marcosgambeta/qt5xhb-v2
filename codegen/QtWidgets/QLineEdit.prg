@@ -311,11 +311,14 @@ $method=|bool|isClearButtonEnabled|
 %% $signal=|textEdited(QString)
 %% $endSignals
 
-$prototype=void cursorPositionChanged( int iold, int inew )
+$prototype=void cursorPositionChanged( int oldPos, int newPos )
 $signalMethod=|void|cursorPositionChanged|int,int
 
 $prototype=void editingFinished()
 $signalMethod=|void|editingFinished|
+
+$prototype=void inputRejected()
+$signalMethod=5,12,0|void|inputRejected|
 
 $prototype=void returnPressed()
 $signalMethod=|void|returnPressed|

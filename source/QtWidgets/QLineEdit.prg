@@ -94,6 +94,7 @@ CLASS QLineEdit INHERIT QWidget
 
    METHOD onCursorPositionChanged
    METHOD onEditingFinished
+   METHOD onInputRejected
    METHOD onReturnPressed
    METHOD onSelectionChanged
    METHOD onTextChanged
@@ -1880,7 +1881,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISCLEARBUTTONENABLED )
 }
 
 /*
-void cursorPositionChanged( int iold, int inew )
+void cursorPositionChanged( int oldPos, int newPos )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
@@ -2007,6 +2008,71 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
   {
     hb_retl( false );
   }
+}
+
+/*
+void inputRejected()
+*/
+HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  if( hb_pcount() == 1 )
+  {
+    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "inputRejected()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::inputRejected, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "inputRejected()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "inputRejected()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "inputRejected()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "inputRejected()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
 }
 
 /*
