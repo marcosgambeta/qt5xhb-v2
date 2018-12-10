@@ -42,10 +42,6 @@ CLASS QAxWidget INHERIT QWidget,QAxBase
    METHOD setPropertyWritable
    METHOD verbs
 
-   METHOD onException
-   METHOD onPropertyChanged
-   METHOD onSignal
-
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,6 +63,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAxWidget>
@@ -641,22 +638,5 @@ HB_FUNC_STATIC( QAXWIDGET_VERBS )
 }
 
 // QAxBase methods - end
-
-void QAxWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
-HB_FUNC_STATIC( QAXWIDGET_ONEXCEPTION )
-{
-  QAxWidgetSlots_connect_signal( "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" );
-}
-
-HB_FUNC_STATIC( QAXWIDGET_ONPROPERTYCHANGED )
-{
-  QAxWidgetSlots_connect_signal( "propertyChanged(QString)", "propertyChanged(QString)" );
-}
-
-HB_FUNC_STATIC( QAXWIDGET_ONSIGNAL )
-{
-  QAxWidgetSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
-}
 
 #pragma ENDDUMP

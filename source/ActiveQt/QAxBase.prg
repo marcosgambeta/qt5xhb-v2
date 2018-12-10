@@ -65,6 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAxBase>
@@ -545,5 +546,17 @@ HB_FUNC_STATIC( QAXBASE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
+
+/*
+void exception( int code, const QString & source, const QString & desc, const QString & help )
+*/
+
+/*
+void propertyChanged( const QString & name )
+*/
+
+/*
+void signal( const QString & name, int argc, void * argv )
+*/
 
 #pragma ENDDUMP

@@ -56,6 +56,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAxScript>
@@ -264,36 +265,402 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
   }
 }
 
-void QAxScriptSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void entered()
+*/
 HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 {
-  QAxScriptSlots_connect_signal( "entered()", "entered()" );
+  if( hb_pcount() == 1 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "entered()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAxScript::entered, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "entered()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "entered()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "entered()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "entered()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void error( int code, const QString & description, int sourcePosition, const QString & sourceText )
+*/
 HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 {
-  QAxScriptSlots_connect_signal( "error(int,QString,int,QString)", "error(int,QString,int,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(int,QString,int,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAxScript::error, [sender](int arg1, QString arg2, int arg3, QString arg4) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString,int,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg4 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg4) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 5, pSender, pArg1, pArg2, pArg3, pArg4 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+            hb_itemRelease( pArg4 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(int,QString,int,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(int,QString,int,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(int,QString,int,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void finished()
+*/
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 {
-  QAxScriptSlots_connect_signal( "finished()", "finished()" );
+  if( hb_pcount() == 1 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<>::of(&QAxScript::finished), [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void finished( const QVariant & result )
+*/
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 {
-  QAxScriptSlots_connect_signal( "finished(QVariant)", "finished(QVariant)" );
+  if( hb_pcount() == 1 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(QVariant)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QVariant &>::of(&QAxScript::finished), [sender](QVariant arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QVariant)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVARIANT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(QVariant)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(QVariant)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(QVariant)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void finished( int code, const QString & source, const QString & description, const QString & help )
+*/
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 {
-  QAxScriptSlots_connect_signal( "finished(int,QString,QString,QString)", "finished(int,QString,QString,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(int,QString,QString,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int,const QString &,const QString &,const QString &>::of(&QAxScript::finished), [sender](int arg1, QString arg2, QString arg3, QString arg4) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int,QString,QString,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            PHB_ITEM pArg4 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg4) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 5, pSender, pArg1, pArg2, pArg3, pArg4 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+            hb_itemRelease( pArg4 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(int,QString,QString,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(int,QString,QString,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(int,QString,QString,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( int state )
+*/
 HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 {
-  QAxScriptSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAxScript::stateChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
