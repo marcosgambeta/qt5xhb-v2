@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+#include <QWidget>
+
 $prototype=QSignalMapper(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
