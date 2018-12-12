@@ -62,6 +62,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDeclarativeComponent>
@@ -512,16 +513,134 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   }
 }
 
-void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void progressChanged( qreal progress )
+*/
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 {
-  QDeclarativeComponentSlots_connect_signal( "progressChanged(qreal)", "progressChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "progressChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeComponent::progressChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "progressChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVECOMPONENT" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "progressChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "progressChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "progressChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void statusChanged( QDeclarativeComponent::Status status )
+*/
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 {
-  QDeclarativeComponentSlots_connect_signal( "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" );
+  if( hb_pcount() == 1 )
+  {
+    QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusChanged(QDeclarativeComponent::Status)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeComponent::statusChanged, [sender](QDeclarativeComponent::Status arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QDeclarativeComponent::Status)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVECOMPONENT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusChanged(QDeclarativeComponent::Status)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusChanged(QDeclarativeComponent::Status)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QDeclarativeComponent::Status)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -73,6 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDeclarativeEngine>
@@ -703,16 +704,155 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDeclarativeEngineSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void quit()
+*/
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 {
-  QDeclarativeEngineSlots_connect_signal( "quit()", "quit()" );
+  if( hb_pcount() == 1 )
+  {
+    QDeclarativeEngine * sender = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "quit()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeEngine::quit, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "quit()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVEENGINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "quit()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDeclarativeEngine * sender = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "quit()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "quit()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void warnings( const QList<QDeclarativeError> & warnings )
+*/
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 {
-  QDeclarativeEngineSlots_connect_signal( "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" );
+  if( hb_pcount() == 1 )
+  {
+    QDeclarativeEngine * sender = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "warnings(QList<QDeclarativeError>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeEngine::warnings, [sender](QList<QDeclarativeError> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "warnings(QList<QDeclarativeError>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVEENGINE" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QDeclarativeError *) new QDeclarativeError ( arg1 [i] ) );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "warnings(QList<QDeclarativeError>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDeclarativeEngine * sender = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "warnings(QList<QDeclarativeError>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "warnings(QList<QDeclarativeError>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
