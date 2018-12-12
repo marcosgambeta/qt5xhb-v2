@@ -43,6 +43,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDBusConnectionInterface>
@@ -84,26 +85,270 @@ QDBusReply<uint> serviceUid(const QString &serviceName) const
 QDBusReply<void> startService(const QString &name)
 */
 
-void QDBusConnectionInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void serviceRegistered( const QString & service )
+*/
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 {
-  QDBusConnectionInterfaceSlots_connect_signal( "serviceRegistered(QString)", "serviceRegistered(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "serviceRegistered(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::serviceRegistered, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "serviceRegistered(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "serviceRegistered(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "serviceRegistered(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "serviceRegistered(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void serviceUnregistered( const QString & service )
+*/
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
 {
-  QDBusConnectionInterfaceSlots_connect_signal( "serviceUnregistered(QString)", "serviceUnregistered(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "serviceUnregistered(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::serviceUnregistered, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "serviceUnregistered(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "serviceUnregistered(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "serviceUnregistered(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "serviceUnregistered(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
+*/
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
 {
-  QDBusConnectionInterfaceSlots_connect_signal( "serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "serviceOwnerChanged(QString,QString,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::serviceOwnerChanged, [sender](QString arg1, QString arg2, QString arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "serviceOwnerChanged(QString,QString,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "serviceOwnerChanged(QString,QString,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "serviceOwnerChanged(QString,QString,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "serviceOwnerChanged(QString,QString,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
+*/
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
 {
-  QDBusConnectionInterfaceSlots_connect_signal( "callWithCallbackFailed(QDBusError,QDBusMessage)", "callWithCallbackFailed(QDBusError,QDBusMessage)" );
+  if( hb_pcount() == 1 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::callWithCallbackFailed, [sender](QDBusError arg1, QDBusMessage arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDBUSERROR" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QDBUSMESSAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -45,6 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDBusPendingCallWatcher>
@@ -133,11 +134,69 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_WAITFORFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDBusPendingCallWatcherSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished( QDBusPendingCallWatcher * self )
+*/
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 {
-  QDBusPendingCallWatcherSlots_connect_signal( "finished(QDBusPendingCallWatcher*)", "finished(QDBusPendingCallWatcher*)" );
+  if( hb_pcount() == 1 )
+  {
+    QDBusPendingCallWatcher * sender = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(QDBusPendingCallWatcher*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDBusPendingCallWatcher::finished, [sender](QDBusPendingCallWatcher* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QDBusPendingCallWatcher*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDBUSPENDINGCALLWATCHER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QDBUSPENDINGCALLWATCHER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(QDBusPendingCallWatcher*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDBusPendingCallWatcher * sender = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(QDBusPendingCallWatcher*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(QDBusPendingCallWatcher*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
