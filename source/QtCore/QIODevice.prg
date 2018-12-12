@@ -74,6 +74,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QIODevice>
@@ -880,26 +881,258 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
   }
 }
 
-void QIODeviceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void aboutToClose()
+*/
 HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 {
-  QIODeviceSlots_connect_signal( "aboutToClose()", "aboutToClose()" );
+  if( hb_pcount() == 1 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "aboutToClose()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::aboutToClose, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToClose()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "aboutToClose()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "aboutToClose()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "aboutToClose()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void bytesWritten( qint64 bytes )
+*/
 HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 {
-  QIODeviceSlots_connect_signal( "bytesWritten(qint64)", "bytesWritten(qint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::bytesWritten, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "bytesWritten(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "bytesWritten(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "bytesWritten(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "bytesWritten(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void readChannelFinished()
+*/
 HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 {
-  QIODeviceSlots_connect_signal( "readChannelFinished()", "readChannelFinished()" );
+  if( hb_pcount() == 1 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "readChannelFinished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::readChannelFinished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "readChannelFinished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "readChannelFinished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "readChannelFinished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "readChannelFinished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void readyRead()
+*/
 HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 {
-  QIODeviceSlots_connect_signal( "readyRead()", "readyRead()" );
+  if( hb_pcount() == 1 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "readyRead()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::readyRead, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyRead()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "readyRead()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "readyRead()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "readyRead()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

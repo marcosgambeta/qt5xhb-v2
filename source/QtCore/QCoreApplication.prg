@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCoreApplication>
@@ -906,11 +907,67 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 #endif
 }
 
-void QCoreApplicationSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void aboutToQuit()
+*/
 HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {
-  QCoreApplicationSlots_connect_signal( "aboutToQuit()", "aboutToQuit()" );
+  if( hb_pcount() == 1 )
+  {
+    QCoreApplication * sender = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "aboutToQuit()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCoreApplication::aboutToQuit, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToQuit()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOREAPPLICATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "aboutToQuit()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCoreApplication * sender = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "aboutToQuit()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "aboutToQuit()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

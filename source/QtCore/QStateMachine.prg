@@ -64,6 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QStateMachine>
@@ -624,16 +625,130 @@ HB_FUNC_STATIC( QSTATEMACHINE_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QStateMachineSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void started()
+*/
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
 {
-  QStateMachineSlots_connect_signal( "started()", "started()" );
+  if( hb_pcount() == 1 )
+  {
+    QStateMachine * sender = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "started()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QStateMachine::started, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSTATEMACHINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "started()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QStateMachine * sender = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "started()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "started()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stopped()
+*/
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
 {
-  QStateMachineSlots_connect_signal( "stopped()", "stopped()" );
+  if( hb_pcount() == 1 )
+  {
+    QStateMachine * sender = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stopped()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QStateMachine::stopped, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stopped()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSTATEMACHINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stopped()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QStateMachine * sender = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stopped()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stopped()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

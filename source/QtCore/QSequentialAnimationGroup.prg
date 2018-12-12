@@ -49,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSequentialAnimationGroup>
@@ -188,11 +189,69 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
   }
 }
 
-void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentAnimationChanged ( QAbstractAnimation * current )
+*/
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 {
-  QSequentialAnimationGroupSlots_connect_signal( "currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)" );
+  if( hb_pcount() == 1 )
+  {
+    QSequentialAnimationGroup * sender = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentAnimationChanged(QAbstractAnimation*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSequentialAnimationGroup::currentAnimationChanged, [sender](QAbstractAnimation* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentAnimationChanged(QAbstractAnimation*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSEQUENTIALANIMATIONGROUP" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTANIMATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentAnimationChanged(QAbstractAnimation*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSequentialAnimationGroup * sender = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentAnimationChanged(QAbstractAnimation*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentAnimationChanged(QAbstractAnimation*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

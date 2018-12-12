@@ -260,6 +260,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QObject>
@@ -2237,16 +2238,135 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
   }
 }
 
-void QObjectSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void destroyed( QObject * obj = 0 )
+*/
 HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {
-  QObjectSlots_connect_signal( "destroyed(QObject*)", "destroyed(QObject*)" );
+  if( hb_pcount() == 1 )
+  {
+    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "destroyed(QObject*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QObject::destroyed, [sender](QObject* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "destroyed(QObject*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOBJECT" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            Signals2_disconnect_signal( sender, "destroyed(QObject*)" );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "destroyed(QObject*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "destroyed(QObject*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "destroyed(QObject*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void objectNameChanged( const QString & objectName )
+*/
 HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 {
-  QObjectSlots_connect_signal( "objectNameChanged(QString)", "objectNameChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "objectNameChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QObject::objectNameChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "objectNameChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOBJECT" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "objectNameChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "objectNameChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "objectNameChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 HB_FUNC_STATIC( QOBJECT_NEWFROM )

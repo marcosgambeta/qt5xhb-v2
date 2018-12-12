@@ -54,6 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QVariantAnimation>
@@ -331,11 +332,69 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
   }
 }
 
-void QVariantAnimationSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void valueChanged( const QVariant & value )
+*/
 HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
 {
-  QVariantAnimationSlots_connect_signal( "valueChanged(QVariant)", "valueChanged(QVariant)" );
+  if( hb_pcount() == 1 )
+  {
+    QVariantAnimation * sender = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueChanged(QVariant)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVariantAnimation::valueChanged, [sender](QVariant arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(QVariant)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVARIANTANIMATION" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVARIANT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueChanged(QVariant)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVariantAnimation * sender = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueChanged(QVariant)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueChanged(QVariant)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

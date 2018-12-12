@@ -47,6 +47,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractState>
@@ -122,16 +123,130 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
   }
 }
 
-void QAbstractStateSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void entered()
+*/
 HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 {
-  QAbstractStateSlots_connect_signal( "entered()", "entered()" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "entered()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractState::entered, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "entered()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSTATE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "entered()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "entered()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "entered()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void exited()
+*/
 HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 {
-  QAbstractStateSlots_connect_signal( "exited()", "exited()" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "exited()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractState::exited, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "exited()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSTATE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "exited()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "exited()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "exited()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -67,6 +67,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QItemSelectionModel>
@@ -683,26 +684,272 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QItemSelectionModelSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
+*/
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionChanged(QItemSelection,QItemSelection)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::selectionChanged, [sender](QItemSelection arg1, QItemSelection arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged(QItemSelection,QItemSelection)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QITEMSELECTION" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QITEMSELECTION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionChanged(QItemSelection,QItemSelection)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionChanged(QItemSelection,QItemSelection)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged(QItemSelection,QItemSelection)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentChanged( const QModelIndex & current, const QModelIndex & previous )
+*/
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentChanged(QModelIndex,QModelIndex)", "currentChanged(QModelIndex,QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentChanged(QModelIndex,QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::currentChanged, [sender](QModelIndex arg1, QModelIndex arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(QModelIndex,QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentChanged(QModelIndex,QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentChanged(QModelIndex,QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentChanged(QModelIndex,QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
+*/
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentRowChanged(QModelIndex,QModelIndex)", "currentRowChanged(QModelIndex,QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::currentRowChanged, [sender](QModelIndex arg1, QModelIndex arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentRowChanged(QModelIndex,QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentRowChanged(QModelIndex,QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
+*/
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::currentColumnChanged, [sender](QModelIndex arg1, QModelIndex arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentColumnChanged(QModelIndex,QModelIndex)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QMODELINDEX" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -51,10 +51,13 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSignalMapper>
 #endif
+
+#include <QWidget>
 
 /*
 QSignalMapper(QObject *parent = 0)
@@ -338,26 +341,264 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
   }
 }
 
-void QSignalMapperSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void mapped( int arg )
+*/
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(int)", "mapped(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mapped(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QSignalMapper::mapped), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mapped(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mapped(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mapped(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mapped( const QString & arg )
+*/
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(QString)", "mapped(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mapped(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QSignalMapper::mapped), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mapped(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mapped(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mapped(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mapped( QWidget * arg )
+*/
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(QWidget*)", "mapped(QWidget*)" );
+  if( hb_pcount() == 1 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mapped(QWidget*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QWidget *>::of(&QSignalMapper::mapped), [sender](QWidget* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QWidget*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mapped(QWidget*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mapped(QWidget*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mapped(QWidget*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mapped( QObject * arg )
+*/
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(QObject*)", "mapped(QObject*)" );
+  if( hb_pcount() == 1 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mapped(QObject*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QObject *>::of(&QSignalMapper::mapped), [sender](QObject* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QObject*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mapped(QObject*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mapped(QObject*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mapped(QObject*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

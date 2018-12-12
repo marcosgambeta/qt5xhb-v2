@@ -102,6 +102,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QProcess>
@@ -1510,44 +1511,456 @@ CreateProcessArgumentModifier QProcess::createProcessArgumentsModifier() const
 void QProcess::setCreateProcessArgumentsModifier(CreateProcessArgumentModifier modifier) Require 5.7.0 Win C++11
 */
 
-void QProcessSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void error( QProcess::ProcessError error )
+*/
 HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
-  QProcessSlots_connect_signal( "error(QProcess::ProcessError)", "error(QProcess::ProcessError)" );
+  if( hb_pcount() == 1 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QProcess::ProcessError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QProcess::ProcessError>::of(&QProcess::error), [sender](QProcess::ProcessError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QProcess::ProcessError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QProcess::ProcessError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QProcess::ProcessError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QProcess::ProcessError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void finished( int exitCode, QProcess::ExitStatus exitStatus )
+*/
 HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
-  QProcessSlots_connect_signal( "finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)" );
+  if( hb_pcount() == 1 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(int,QProcess::ExitStatus)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), [sender](int arg1, QProcess::ExitStatus arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int,QProcess::ExitStatus)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(int,QProcess::ExitStatus)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(int,QProcess::ExitStatus)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(int,QProcess::ExitStatus)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void readyReadStandardError()
+*/
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
-  QProcessSlots_connect_signal( "readyReadStandardError()", "readyReadStandardError()" );
+  if( hb_pcount() == 1 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "readyReadStandardError()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::readyReadStandardError, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyReadStandardError()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "readyReadStandardError()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "readyReadStandardError()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "readyReadStandardError()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void readyReadStandardOutput()
+*/
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
-  QProcessSlots_connect_signal( "readyReadStandardOutput()", "readyReadStandardOutput()" );
+  if( hb_pcount() == 1 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "readyReadStandardOutput()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::readyReadStandardOutput, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyReadStandardOutput()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "readyReadStandardOutput()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "readyReadStandardOutput()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "readyReadStandardOutput()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void started()
+*/
 HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
-  QProcessSlots_connect_signal( "started()", "started()" );
+  if( hb_pcount() == 1 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "started()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::started, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "started()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "started()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "started()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QProcess::ProcessState newState )
+*/
 HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
-  QProcessSlots_connect_signal( "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" );
+  if( hb_pcount() == 1 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QProcess::ProcessState)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::stateChanged, [sender](QProcess::ProcessState arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QProcess::ProcessState)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QProcess::ProcessState)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QProcess::ProcessState)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QProcess::ProcessState)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void errorOccurred( QProcess::ProcessError error )
+*/
 HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QProcessSlots_connect_signal( "errorOccurred(QProcess::ProcessError)", "errorOccurred(QProcess::ProcessError)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "errorOccurred(QProcess::ProcessError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::errorOccurred, [sender](QProcess::ProcessError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QProcess::ProcessError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "errorOccurred(QProcess::ProcessError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "errorOccurred(QProcess::ProcessError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "errorOccurred(QProcess::ProcessError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
