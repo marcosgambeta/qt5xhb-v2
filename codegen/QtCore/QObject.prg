@@ -1399,15 +1399,16 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
   }
 }
 
-$beginSignals
-$signal=|destroyed(QObject*)
-$signal=|objectNameChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|destroyed(QObject*)
+%% $signal=|objectNameChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|destroyed( QObject * obj = 0 )
-$signal=|objectNameChanged( const QString & objectName )
-$endSlotsClass
+$prototype=void destroyed( QObject * obj = 0 )
+$signalMethod=|void|destroyed|QObject*
+
+$prototype=void objectNameChanged( const QString & objectName )
+$signalMethod=|void|objectNameChanged|QString
 
 $extraMethods
 

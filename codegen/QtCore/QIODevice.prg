@@ -232,18 +232,23 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 }
 $addMethod=write
 
-$beginSignals
-$signal=|aboutToClose()
-$signal=|bytesWritten(qint64)
-$signal=|readChannelFinished()
-$signal=|readyRead()
-$endSignals
+%% $beginSignals
+%% $signal=|aboutToClose()
+%% $signal=|bytesWritten(qint64)
+%% $signal=|readChannelFinished()
+%% $signal=|readyRead()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|aboutToClose()
-$signal=|bytesWritten( qint64 bytes )
-$signal=|readChannelFinished()
-$signal=|readyRead()
-$endSlotsClass
+$prototype=void aboutToClose()
+$signalMethod=|void|aboutToClose|
+
+$prototype=void bytesWritten( qint64 bytes )
+$signalMethod=|void|bytesWritten|qint64
+
+$prototype=void readChannelFinished()
+$signalMethod=|void|readChannelFinished|
+
+$prototype=void readyRead()
+$signalMethod=|void|readyRead|
 
 #pragma ENDDUMP

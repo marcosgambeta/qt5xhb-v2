@@ -59,12 +59,11 @@ $method=|void|setStartValue|const QVariant &
 $prototype=QVariant startValue () const
 $method=|QVariant|startValue|
 
-$beginSignals
-$signal=|valueChanged(QVariant)
-$endSignals
+%% $beginSignals
+%% $signal=|valueChanged(QVariant)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|valueChanged( const QVariant & value )
-$endSlotsClass
+$prototype=void valueChanged( const QVariant & value )
+$signalMethod=|void|valueChanged|QVariant
 
 #pragma ENDDUMP

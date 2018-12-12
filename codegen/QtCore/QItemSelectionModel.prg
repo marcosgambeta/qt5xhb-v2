@@ -131,18 +131,23 @@ $method=|void|clearSelection|
 $prototype=virtual void clearCurrentIndex()
 $virtualMethod=|void|clearCurrentIndex|
 
-$beginSignals
-$signal=|selectionChanged(QItemSelection,QItemSelection)
-$signal=|currentChanged(QModelIndex,QModelIndex)
-$signal=|currentRowChanged(QModelIndex,QModelIndex)
-$signal=|currentColumnChanged(QModelIndex,QModelIndex)
-$endSignals
+%% $beginSignals
+%% $signal=|selectionChanged(QItemSelection,QItemSelection)
+%% $signal=|currentChanged(QModelIndex,QModelIndex)
+%% $signal=|currentRowChanged(QModelIndex,QModelIndex)
+%% $signal=|currentColumnChanged(QModelIndex,QModelIndex)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
-$signal=|currentChanged( const QModelIndex & current, const QModelIndex & previous )
-$signal=|currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
-$signal=|currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
-$endSlotsClass
+$prototype=void selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
+$signalMethod=|void|selectionChanged|QItemSelection,QItemSelection
+
+$prototype=void currentChanged( const QModelIndex & current, const QModelIndex & previous )
+$signalMethod=|void|currentChanged|QModelIndex,QModelIndex
+
+$prototype=void currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
+$signalMethod=|void|currentRowChanged|QModelIndex,QModelIndex
+
+$prototype=void currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
+$signalMethod=|void|currentColumnChanged|QModelIndex,QModelIndex
 
 #pragma ENDDUMP

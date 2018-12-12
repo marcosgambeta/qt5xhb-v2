@@ -128,46 +128,79 @@ $virtualMethod=|void|revert|
 $prototype=virtual bool submit ()
 $virtualMethod=|bool|submit|
 
-$beginSignals
-$signal=|columnsAboutToBeInserted(QModelIndex,int,int)
-$signal=|columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
-$signal=|columnsAboutToBeRemoved(QModelIndex,int,int)
-$signal=|columnsInserted(QModelIndex,int,int)
-$signal=|columnsMoved(QModelIndex,int,int,QModelIndex,int)
-$signal=|columnsRemoved(QModelIndex,int,int)
-$signal=|dataChanged(QModelIndex,QModelIndex)
-$signal=|headerDataChanged(Qt::Orientation,int,int)
-$signal=|layoutAboutToBeChanged()
-$signal=|layoutChanged()
-$signal=|modelAboutToBeReset()
-$signal=|modelReset()
-$signal=|rowsAboutToBeInserted(QModelIndex,int,int)
-$signal=|rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
-$signal=|rowsAboutToBeRemoved(QModelIndex,int,int)
-$signal=|rowsInserted(QModelIndex,int,int)
-$signal=|rowsMoved(QModelIndex,int,int,QModelIndex,int)
-$signal=|rowsRemoved(QModelIndex,int,int)
-$endSignals
+%% $beginSignals
+%% $signal=|columnsAboutToBeInserted(QModelIndex,int,int)
+%% $signal=|columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
+%% $signal=|columnsAboutToBeRemoved(QModelIndex,int,int)
+%% $signal=|columnsInserted(QModelIndex,int,int)
+%% $signal=|columnsMoved(QModelIndex,int,int,QModelIndex,int)
+%% $signal=|columnsRemoved(QModelIndex,int,int)
+%% $signal=|dataChanged(QModelIndex,QModelIndex)
+%% $signal=|headerDataChanged(Qt::Orientation,int,int)
+%% $signal=|layoutAboutToBeChanged()
+%% $signal=|layoutChanged()
+%% $signal=|modelAboutToBeReset()
+%% $signal=|modelReset()
+%% $signal=|rowsAboutToBeInserted(QModelIndex,int,int)
+%% $signal=|rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
+%% $signal=|rowsAboutToBeRemoved(QModelIndex,int,int)
+%% $signal=|rowsInserted(QModelIndex,int,int)
+%% $signal=|rowsMoved(QModelIndex,int,int,QModelIndex,int)
+%% $signal=|rowsRemoved(QModelIndex,int,int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
-$signal=|columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
-$signal=|columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
-$signal=|columnsInserted( const QModelIndex & parent, int start, int end )
-$signal=|columnsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
-$signal=|columnsRemoved( const QModelIndex & parent, int start, int end )
-$signal=|dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-$signal=|headerDataChanged( Qt::Orientation orientation, int first, int last )
-$signal=|layoutAboutToBeChanged()
-$signal=|layoutChanged()
-$signal=|modelAboutToBeReset()
-$signal=|modelReset()
-$signal=|rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
-$signal=|rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
-$signal=|rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
-$signal=|rowsInserted( const QModelIndex & parent, int start, int end )
-$signal=|rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
-$signal=|rowsRemoved( const QModelIndex & parent, int start, int end )
-$endSlotsClass
+$prototype=void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|columnsAboutToBeInserted|QModelIndex,int,int
+
+$prototype=void columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+$signalMethod=|void|columnsAboutToBeMoved|QModelIndex,int,int,QModelIndex,int
+
+$prototype=void columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|columnsAboutToBeRemoved|QModelIndex,int,int
+
+$prototype=void columnsInserted( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|columnsInserted|QModelIndex,int,int
+
+$prototype=void columnsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+$signalMethod=|void|columnsMoved|QModelIndex,int,int,QModelIndex,int
+
+$prototype=void columnsRemoved( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|columnsRemoved|QModelIndex,int,int
+
+$prototype=void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+$signalMethod=|void|dataChanged|QModelIndex,QModelIndex
+
+$prototype=void headerDataChanged( Qt::Orientation orientation, int first, int last )
+$signalMethod=|void|headerDataChanged|Qt::Orientation,int,int
+
+$prototype=void layoutAboutToBeChanged()
+$signalMethod=|void|layoutAboutToBeChanged|
+
+$prototype=void layoutChanged()
+$signalMethod=|void|layoutChanged|
+
+$prototype=void modelAboutToBeReset()
+$signalMethod=|void|modelAboutToBeReset|
+
+$prototype=void modelReset()
+$signalMethod=|void|modelReset|
+
+$prototype=void rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|rowsAboutToBeInserted|QModelIndex,int,int
+
+$prototype=void rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+$signalMethod=|void|rowsAboutToBeMoved|QModelIndex,int,int,QModelIndex,int
+
+$prototype=void rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|rowsAboutToBeRemoved|QModelIndex,int,int
+
+$prototype=void rowsInserted( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|rowsInserted|QModelIndex,int,int
+
+$prototype=void rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+$signalMethod=|void|rowsMoved|QModelIndex,int,int,QModelIndex,int
+
+$prototype=void rowsRemoved( const QModelIndex & parent, int start, int end )
+$signalMethod=|void|rowsRemoved|QModelIndex,int,int
 
 #pragma ENDDUMP

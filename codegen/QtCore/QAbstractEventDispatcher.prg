@@ -109,14 +109,15 @@ $virtualMethod=|void|startingUp|
 $prototype=virtual void closingDown()
 $virtualMethod=|void|closingDown|
 
-$beginSignals
-$signal=|aboutToBlock()
-$signal=|awake()
-$endSignals
+%% $beginSignals
+%% $signal=|aboutToBlock()
+%% $signal=|awake()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|aboutToBlock()
-$signal=|awake()
-$endSlotsClass
+$prototype=void aboutToBlock()
+$signalMethod=|void|aboutToBlock|
+
+$prototype=void awake()
+$signalMethod=|void|awake|
 
 #pragma ENDDUMP

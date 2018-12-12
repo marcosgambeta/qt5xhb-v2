@@ -38,14 +38,15 @@ $method=|QStateMachine *|machine|
 $prototype=QState * parentState () const
 $method=|QState *|parentState|
 
-$beginSignals
-$signal=|entered()
-$signal=|exited()
-$endSignals
+%% $beginSignals
+%% $signal=|entered()
+%% $signal=|exited()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|entered()
-$signal=|exited()
-$endSlotsClass
+$prototype=void entered()
+$signalMethod=|void|entered|
+
+$prototype=void exited()
+$signalMethod=|void|exited|
 
 #pragma ENDDUMP

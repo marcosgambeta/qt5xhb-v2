@@ -82,18 +82,23 @@ $method=|void|start|QAbstractAnimation::DeletionPolicy=QAbstractAnimation::KeepW
 $prototype=void stop ()
 $method=|void|stop|
 
-$beginSignals
-$signal=|currentLoopChanged(int)
-$signal=|directionChanged(QAbstractAnimation::Direction)
-$signal=|finished()
-$signal=|stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)
-$endSignals
+%% $beginSignals
+%% $signal=|currentLoopChanged(int)
+%% $signal=|directionChanged(QAbstractAnimation::Direction)
+%% $signal=|finished()
+%% $signal=|stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentLoopChanged( int currentLoop )
-$signal=|directionChanged( QAbstractAnimation::Direction newDirection )
-$signal=|finished()
-$signal=|stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
-$endSlotsClass
+$prototype=void currentLoopChanged( int currentLoop )
+$signalMethod=|void|currentLoopChanged|int
+
+$prototype=void directionChanged( QAbstractAnimation::Direction newDirection )
+$signalMethod=|void|directionChanged|QAbstractAnimation::Direction
+
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
+$signalMethod=|void|stateChanged|QAbstractAnimation::State,QAbstractAnimation::State
 
 #pragma ENDDUMP

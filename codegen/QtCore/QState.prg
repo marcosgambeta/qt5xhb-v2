@@ -117,14 +117,15 @@ $method=|void|setInitialState|QAbstractState *
 $prototype=QList<QAbstractTransition *> transitions () const
 $method=|QList<QAbstractTransition *>|transitions|
 
-$beginSignals
-$signal=|finished()
-$signal=|propertiesAssigned()
-$endSignals
+%% $beginSignals
+%% $signal=|finished()
+%% $signal=|propertiesAssigned()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|finished()
-$signal=|propertiesAssigned()
-$endSlotsClass
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void propertiesAssigned()
+$signalMethod=|void|propertiesAssigned|
 
 #pragma ENDDUMP

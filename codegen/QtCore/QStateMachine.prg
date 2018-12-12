@@ -111,14 +111,15 @@ $method=|void|start|
 $prototype=void stop()
 $method=|void|stop|
 
-$beginSignals
-$signal=|started()
-$signal=|stopped()
-$endSignals
+%% $beginSignals
+%% $signal=|started()
+%% $signal=|stopped()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|started()
-$signal=|stopped()
-$endSlotsClass
+$prototype=void started()
+$signalMethod=|void|started|
+
+$prototype=void stopped()
+$signalMethod=|void|stopped|
 
 #pragma ENDDUMP

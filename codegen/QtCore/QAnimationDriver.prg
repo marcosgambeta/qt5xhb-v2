@@ -53,14 +53,15 @@ $method=|void|setStartTime|qint64
 $prototype=qint64 startTime() const
 $method=|qint64|startTime|
 
-$beginSignals
-$signal=|started()
-$signal=|stopped()
-$endSignals
+%% $beginSignals
+%% $signal=|started()
+%% $signal=|stopped()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|started()
-$signal=|stopped()
-$endSlotsClass
+$prototype=void started()
+$signalMethod=|void|started|
+
+$prototype=void stopped()
+$signalMethod=|void|stopped|
 
 #pragma ENDDUMP

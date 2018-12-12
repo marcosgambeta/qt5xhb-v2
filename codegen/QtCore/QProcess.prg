@@ -281,24 +281,35 @@ $prototype=CreateProcessArgumentModifier QProcess::createProcessArgumentsModifie
 
 $prototype=void QProcess::setCreateProcessArgumentsModifier(CreateProcessArgumentModifier modifier) Require 5.7.0 Win C++11
 
-$beginSignals
-$signal=|error(QProcess::ProcessError)
-$signal=|finished(int,QProcess::ExitStatus)
-$signal=|readyReadStandardError()
-$signal=|readyReadStandardOutput()
-$signal=|started()
-$signal=|stateChanged(QProcess::ProcessState)
-$signal=5,6,0|errorOccurred(QProcess::ProcessError)
-$endSignals
+%% $beginSignals
+%% $signal=|error(QProcess::ProcessError)
+%% $signal=|finished(int,QProcess::ExitStatus)
+%% $signal=|readyReadStandardError()
+%% $signal=|readyReadStandardOutput()
+%% $signal=|started()
+%% $signal=|stateChanged(QProcess::ProcessState)
+%% $signal=5,6,0|errorOccurred(QProcess::ProcessError)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|error( QProcess::ProcessError error )
-$signal=|finished( int exitCode, QProcess::ExitStatus exitStatus )
-$signal=|readyReadStandardError()
-$signal=|readyReadStandardOutput()
-$signal=|started()
-$signal=|stateChanged( QProcess::ProcessState newState )
-$signal=5,6,0|errorOccurred( QProcess::ProcessError error )
-$endSlotsClass
+$prototype=void error( QProcess::ProcessError error )
+$signalMethod=|void|error,error,QOverload<QProcess::ProcessError>|QProcess::ProcessError
+
+$prototype=void finished( int exitCode, QProcess::ExitStatus exitStatus )
+$signalMethod=|void|finished,finished,QOverload<int COMMA QProcess::ExitStatus>|int,QProcess::ExitStatus
+
+$prototype=void readyReadStandardError()
+$signalMethod=|void|readyReadStandardError|
+
+$prototype=void readyReadStandardOutput()
+$signalMethod=|void|readyReadStandardOutput|
+
+$prototype=void started()
+$signalMethod=|void|started|
+
+$prototype=void stateChanged( QProcess::ProcessState newState )
+$signalMethod=|void|stateChanged|QProcess::ProcessState
+
+$prototype=void errorOccurred( QProcess::ProcessError error )
+$signalMethod=5,6,0|void|errorOccurred|QProcess::ProcessError
 
 #pragma ENDDUMP

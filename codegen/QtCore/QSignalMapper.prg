@@ -145,20 +145,25 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 }
 $addMethod=map
 
-$beginSignals
-$beginGroup
-$signal=|mapped(int)
-$signal=|mapped(QString)
-$signal=|mapped(QWidget*)
-$signal=|mapped(QObject*)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|mapped(int)
+%% $signal=|mapped(QString)
+%% $signal=|mapped(QWidget*)
+%% $signal=|mapped(QObject*)
+%% $endGroup
+%% $endSignals
 
-$beginSlotsClass
-$signal=|mapped( int arg )
-$signal=|mapped( const QString & arg )
-$signal=|mapped( QWidget * arg )
-$signal=|mapped( QObject * arg )
-$endSlotsClass
+$prototype=void mapped( int arg )
+$signalMethod=|void|mapped,mapped1,QOverload<int>|int
+
+$prototype=void mapped( const QString & arg )
+$signalMethod=|void|mapped,mapped2,QOverload<const QString &>|QString
+
+$prototype=void mapped( QWidget * arg )
+$signalMethod=|void|mapped,mapped3,QOverload<QWidget *>|QWidget*
+
+$prototype=void mapped( QObject * arg )
+$signalMethod=|void|mapped,mapped4,QOverload<QObject *>|QObject*
 
 #pragma ENDDUMP

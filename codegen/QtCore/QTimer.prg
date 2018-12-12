@@ -82,12 +82,11 @@ $method=|void|stop|
 $prototype=static void singleShot ( int msec, QObject * receiver, const char * member )
 $staticMethod=|void|singleShot|int,QObject *,const char *
 
-$beginSignals
-$signal=|timeout()
-$endSignals
+%% $beginSignals
+%% $signal=|timeout()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|timeout()
-$endSlotsClass
+$prototype=void timeout()
+$signalMethod=|void|timeout|
 
 #pragma ENDDUMP

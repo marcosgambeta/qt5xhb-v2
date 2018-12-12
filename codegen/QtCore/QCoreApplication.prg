@@ -241,12 +241,11 @@ $staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
 $prototype=static QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1)
 $staticMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
 
-$beginSignals
-$signal=|aboutToQuit()
-$endSignals
+%% $beginSignals
+%% $signal=|aboutToQuit()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|aboutToQuit()
-$endSlotsClass
+$prototype=void aboutToQuit()
+$signalMethod=|void|aboutToQuit|
 
 #pragma ENDDUMP

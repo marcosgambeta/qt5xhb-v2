@@ -46,12 +46,11 @@ $method=|QPauseAnimation *|insertPause|int,int
 $prototype=virtual int duration () const
 $virtualMethod=|int|duration|
 
-$beginSignals
-$signal=|currentAnimationChanged(QAbstractAnimation*)
-$endSignals
+%% $beginSignals
+%% $signal=|currentAnimationChanged(QAbstractAnimation*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentAnimationChanged ( QAbstractAnimation * current )
-$endSlotsClass
+$prototype=void currentAnimationChanged ( QAbstractAnimation * current )
+$signalMethod=|void|currentAnimationChanged|QAbstractAnimation*
 
 #pragma ENDDUMP

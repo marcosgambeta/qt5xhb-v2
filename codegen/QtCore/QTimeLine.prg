@@ -116,18 +116,23 @@ $method=|void|stop|
 $prototype=void toggleDirection ()
 $method=|void|toggleDirection|
 
-$beginSignals
-$signal=|finished()
-$signal=|frameChanged(int)
-$signal=|stateChanged(QTimeLine::State)
-$signal=|valueChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|finished()
+%% $signal=|frameChanged(int)
+%% $signal=|stateChanged(QTimeLine::State)
+%% $signal=|valueChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|finished()
-$signal=|frameChanged( int frame )
-$signal=|stateChanged( QTimeLine::State newState )
-$signal=|valueChanged( qreal value )
-$endSlotsClass
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void frameChanged( int frame )
+$signalMethod=|void|frameChanged|int
+
+$prototype=void stateChanged( QTimeLine::State newState )
+$signalMethod=|void|stateChanged|QTimeLine::State
+
+$prototype=void valueChanged( qreal value )
+$signalMethod=|void|valueChanged|qreal
 
 #pragma ENDDUMP
