@@ -89,14 +89,15 @@ $method=|QUrl|source|
 $prototype=Status status () const
 $method=|QDeclarativeView::Status|status|
 
-$beginSignals
-$signal=|sceneResized(QSize)
-$signal=|statusChanged(QDeclarativeView::Status)
-$endSignals
+%% $beginSignals
+%% $signal=|sceneResized(QSize)
+%% $signal=|statusChanged(QDeclarativeView::Status)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|sceneResized( QSize size )
-$signal=|statusChanged( QDeclarativeView::Status status )
-$endSlotsClass
+$prototype=void sceneResized( QSize size )
+$signalMethod=|void|sceneResized|QSize
+
+$prototype=void statusChanged( QDeclarativeView::Status status )
+$signalMethod=|void|statusChanged|QDeclarativeView::Status
 
 #pragma ENDDUMP

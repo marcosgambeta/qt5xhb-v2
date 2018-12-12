@@ -108,14 +108,15 @@ $staticMethod=|void|setContextForObject|QObject *,QDeclarativeContext *
 $prototype=static void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 $staticMethod=|void|setObjectOwnership|QObject *,QDeclarativeEngine::ObjectOwnership
 
-$beginSignals
-$signal=|quit()
-$signal=|warnings(QList<QDeclarativeError>)
-$endSignals
+%% $beginSignals
+%% $signal=|quit()
+%% $signal=|warnings(QList<QDeclarativeError>)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|quit()
-$signal=|warnings( const QList<QDeclarativeError> & warnings )
-$endSlotsClass
+$prototype=void quit()
+$signalMethod=|void|quit|
+
+$prototype=void warnings( const QList<QDeclarativeError> & warnings )
+$signalMethod=|void|warnings|QList<QDeclarativeError>
 
 #pragma ENDDUMP

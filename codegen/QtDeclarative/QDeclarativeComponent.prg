@@ -106,14 +106,15 @@ $method=|QDeclarativeComponent::Status|status|
 $prototype=QUrl url () const
 $method=|QUrl|url|
 
-$beginSignals
-$signal=|progressChanged(qreal)
-$signal=|statusChanged(QDeclarativeComponent::Status)
-$endSignals
+%% $beginSignals
+%% $signal=|progressChanged(qreal)
+%% $signal=|statusChanged(QDeclarativeComponent::Status)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|progressChanged( qreal progress )
-$signal=|statusChanged( QDeclarativeComponent::Status status )
-$endSlotsClass
+$prototype=void progressChanged( qreal progress )
+$signalMethod=|void|progressChanged|qreal
+
+$prototype=void statusChanged( QDeclarativeComponent::Status status )
+$signalMethod=|void|statusChanged|QDeclarativeComponent::Status
 
 #pragma ENDDUMP

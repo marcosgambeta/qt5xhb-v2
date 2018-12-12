@@ -99,12 +99,11 @@ $method=|void|setSourceLocation|const QString &,int
 $prototype=QString sourceFile () const
 $method=|QString|sourceFile|
 
-$beginSignals
-$signal=|valueChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|valueChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|valueChanged()
-$endSlotsClass
+$prototype=void valueChanged()
+$signalMethod=|void|valueChanged|
 
 #pragma ENDDUMP
