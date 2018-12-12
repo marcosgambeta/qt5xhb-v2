@@ -51,12 +51,14 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDesignerPropertyEditorInterface>
 #endif
 
 #include <QDesignerFormEditorInterface>
+#include <QVariant>
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
@@ -251,11 +253,71 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDesignerPropertyEditorInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void propertyChanged( const QString & name, const QVariant & value )
+*/
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 {
-  QDesignerPropertyEditorInterfaceSlots_connect_signal( "propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)" );
+  if( hb_pcount() == 1 )
+  {
+    QDesignerPropertyEditorInterface * sender = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "propertyChanged(QString,QVariant)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerPropertyEditorInterface::propertyChanged, [sender](QString arg1, QVariant arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "propertyChanged(QString,QVariant)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERPROPERTYEDITORINTERFACE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QVARIANT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "propertyChanged(QString,QVariant)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDesignerPropertyEditorInterface * sender = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "propertyChanged(QString,QVariant)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "propertyChanged(QString,QVariant)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

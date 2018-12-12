@@ -73,6 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDesignerFormWindowManagerInterface>
@@ -750,21 +751,199 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDesignerFormWindowManagerInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
+*/
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "activeFormWindowChanged(QDesignerFormWindowInterface*)", "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+  if( hb_pcount() == 1 )
+  {
+    QDesignerFormWindowManagerInterface * sender = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerFormWindowManagerInterface::activeFormWindowChanged, [sender](QDesignerFormWindowInterface* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDesignerFormWindowManagerInterface * sender = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void formWindowAdded( QDesignerFormWindowInterface * formWindow )
+*/
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "formWindowAdded(QDesignerFormWindowInterface*)", "formWindowAdded(QDesignerFormWindowInterface*)" );
+  if( hb_pcount() == 1 )
+  {
+    QDesignerFormWindowManagerInterface * sender = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "formWindowAdded(QDesignerFormWindowInterface*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerFormWindowManagerInterface::formWindowAdded, [sender](QDesignerFormWindowInterface* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "formWindowAdded(QDesignerFormWindowInterface*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "formWindowAdded(QDesignerFormWindowInterface*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDesignerFormWindowManagerInterface * sender = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "formWindowAdded(QDesignerFormWindowInterface*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "formWindowAdded(QDesignerFormWindowInterface*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void formWindowRemoved( QDesignerFormWindowInterface * formWindow )
+*/
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)" );
+  if( hb_pcount() == 1 )
+  {
+    QDesignerFormWindowManagerInterface * sender = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerFormWindowManagerInterface::formWindowRemoved, [sender](QDesignerFormWindowInterface* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDesignerFormWindowManagerInterface * sender = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
