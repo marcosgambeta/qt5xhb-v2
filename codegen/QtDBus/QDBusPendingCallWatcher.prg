@@ -38,12 +38,11 @@ $method=|bool|isFinished|
 $prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
-$beginSignals
-$signal=|finished(QDBusPendingCallWatcher*)
-$endSignals
+%% $beginSignals
+%% $signal=|finished(QDBusPendingCallWatcher*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|finished( QDBusPendingCallWatcher * self )
-$endSlotsClass
+$prototype=void finished( QDBusPendingCallWatcher * self )
+$signalMethod=|void|finished|QDBusPendingCallWatcher*
 
 #pragma ENDDUMP

@@ -80,16 +80,19 @@ $method=|QDBusConnection|connection|
 $prototype=void setConnection(const QDBusConnection &connection)
 $method=|void|setConnection|const QDBusConnection &
 
-$beginSignals
-$signal=|serviceRegistered(QString)
-$signal=|serviceUnregistered(QString)
-$signal=|serviceOwnerChanged(QString,QString,QString)
-$endSignals
+%% $beginSignals
+%% $signal=|serviceRegistered(QString)
+%% $signal=|serviceUnregistered(QString)
+%% $signal=|serviceOwnerChanged(QString,QString,QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|serviceRegistered( const QString & service )
-$signal=|serviceUnregistered( const QString & service )
-$signal=|serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
-$endSlotsClass
+$prototype=void serviceRegistered( const QString & service )
+$signalMethod=|void|serviceRegistered|QString
+
+$prototype=void serviceUnregistered( const QString & service )
+$signalMethod=|void|serviceUnregistered|QString
+
+$prototype=void serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
+$signalMethod=|void|serviceOwnerChanged|QString,QString,QString
 
 #pragma ENDDUMP

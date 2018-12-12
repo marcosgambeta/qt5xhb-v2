@@ -64,18 +64,23 @@ $prototype=QDBusReply<void> startService(const QString &name)
 %% TODO: implementar
 %% $method=|QDBusReply<void>|startService|const QString &
 
-$beginSignals
-$signal=|serviceRegistered(QString)
-$signal=|serviceUnregistered(QString)
-$signal=|serviceOwnerChanged(QString,QString,QString)
-$signal=|callWithCallbackFailed(QDBusError,QDBusMessage)
-$endSignals
+%% $beginSignals
+%% $signal=|serviceRegistered(QString)
+%% $signal=|serviceUnregistered(QString)
+%% $signal=|serviceOwnerChanged(QString,QString,QString)
+%% $signal=|callWithCallbackFailed(QDBusError,QDBusMessage)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|serviceRegistered( const QString & service )
-$signal=|serviceUnregistered( const QString & service )
-$signal=|serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
-$signal=|callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
-$endSlotsClass
+$prototype=void serviceRegistered( const QString & service )
+$signalMethod=|void|serviceRegistered|QString
+
+$prototype=void serviceUnregistered( const QString & service )
+$signalMethod=|void|serviceUnregistered|QString
+
+$prototype=void serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
+$signalMethod=|void|serviceOwnerChanged|QString,QString,QString
+
+$prototype=void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
+$signalMethod=|void|callWithCallbackFailed|QDBusError,QDBusMessage
 
 #pragma ENDDUMP
