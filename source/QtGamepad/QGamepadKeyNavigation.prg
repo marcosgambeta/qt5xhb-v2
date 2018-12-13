@@ -101,6 +101,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
@@ -1155,176 +1156,1276 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR3KEY )
 #endif
 }
 
-void QGamepadKeyNavigationSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activeChanged( bool isActive )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "activeChanged(bool)", "activeChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::activeChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void gamepadChanged( QGamepad * gamepad )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "gamepadChanged(QGamepad*)", "gamepadChanged(QGamepad*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "gamepadChanged(QGamepad*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::gamepadChanged, [sender](QGamepad* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadChanged(QGamepad*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGAMEPAD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "gamepadChanged(QGamepad*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "gamepadChanged(QGamepad*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "gamepadChanged(QGamepad*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void upKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "upKeyChanged(Qt::Key)", "upKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "upKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::upKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "upKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "upKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "upKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "upKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void downKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "downKeyChanged(Qt::Key)", "downKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "downKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::downKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "downKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "downKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "downKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "downKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void leftKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "leftKeyChanged(Qt::Key)", "leftKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "leftKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::leftKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "leftKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "leftKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "leftKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "leftKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void rightKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "rightKeyChanged(Qt::Key)", "rightKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rightKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::rightKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rightKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rightKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rightKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rightKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonAKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonAKeyChanged(Qt::Key)", "buttonAKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonAKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonAKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonAKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonAKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonAKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonAKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonBKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonBKeyChanged(Qt::Key)", "buttonBKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonBKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonBKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonBKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonBKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonBKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonBKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonXKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonXKeyChanged(Qt::Key)", "buttonXKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonXKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonXKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonXKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonXKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonXKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonXKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonYKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonYKeyChanged(Qt::Key)", "buttonYKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonYKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonYKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonYKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonYKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonYKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonYKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonSelectKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonSelectKeyChanged(Qt::Key)", "buttonSelectKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonSelectKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonSelectKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonSelectKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonSelectKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonSelectKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonSelectKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonStartKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonStartKeyChanged(Qt::Key)", "buttonStartKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonStartKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonStartKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonStartKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonStartKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonStartKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonStartKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonGuideKeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonGuideKeyChanged(Qt::Key)", "buttonGuideKeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonGuideKeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonGuideKeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonGuideKeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonGuideKeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonGuideKeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonGuideKeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonL1KeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonL1KeyChanged(Qt::Key)", "buttonL1KeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonL1KeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonL1KeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL1KeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonL1KeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonL1KeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonL1KeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonR1KeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonR1KeyChanged(Qt::Key)", "buttonR1KeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonR1KeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonR1KeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR1KeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonR1KeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonR1KeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonR1KeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonL2KeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonL2KeyChanged(Qt::Key)", "buttonL2KeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonL2KeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonL2KeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL2KeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonL2KeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonL2KeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonL2KeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonR2KeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonR2KeyChanged(Qt::Key)", "buttonR2KeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonR2KeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonR2KeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR2KeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonR2KeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonR2KeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonR2KeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonL3KeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonL3KeyChanged(Qt::Key)", "buttonL3KeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonL3KeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonL3KeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL3KeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonL3KeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonL3KeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonL3KeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void buttonR3KeyChanged( Qt::Key key )
+*/
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigationSlots_connect_signal( "buttonR3KeyChanged(Qt::Key)", "buttonR3KeyChanged(Qt::Key)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonR3KeyChanged(Qt::Key)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonR3KeyChanged, [sender](Qt::Key arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR3KeyChanged(Qt::Key)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonR3KeyChanged(Qt::Key)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonR3KeyChanged(Qt::Key)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonR3KeyChanged(Qt::Key)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

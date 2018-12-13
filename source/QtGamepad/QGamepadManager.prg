@@ -26,15 +26,15 @@ CLASS QGamepadManager INHERIT QObject
    METHOD resetConfiguration
    METHOD setSettingsFile
 
-   METHOD onAxisConfigured
-   METHOD onButtonConfigured
-   METHOD onConfigurationCanceled
    METHOD onConnectedGamepadsChanged
+   METHOD onGamepadConnected
+   METHOD onGamepadDisconnected
    METHOD onGamepadAxisEvent
    METHOD onGamepadButtonPressEvent
    METHOD onGamepadButtonReleaseEvent
-   METHOD onGamepadConnected
-   METHOD onGamepadDisconnected
+   METHOD onButtonConfigured
+   METHOD onAxisConfigured
+   METHOD onConfigurationCanceled
 
    DESTRUCTOR destroyObject
 
@@ -59,6 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
@@ -286,86 +287,618 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
 #endif
 }
 
-void QGamepadManagerSlots_connect_signal ( const QString & signal, const QString & slot );
-
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "axisConfigured(int,QGamepadManager::GamepadAxis)", "axisConfigured(int,QGamepadManager::GamepadAxis)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "buttonConfigured(int,QGamepadManager::GamepadButton)", "buttonConfigured(int,QGamepadManager::GamepadButton)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "configurationCanceled(int)", "configurationCanceled(int)" );
-#else
-  hb_retl( false );
-#endif
-}
-
+/*
+void connectedGamepadsChanged()
+*/
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "connectedGamepadsChanged()", "connectedGamepadsChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "connectedGamepadsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::connectedGamepadsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "connectedGamepadsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "connectedGamepadsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "connectedGamepadsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "connectedGamepadsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)", "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)", "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)", "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
-#else
-  hb_retl( false );
-#endif
-}
-
+/*
+void gamepadConnected( int deviceId )
+*/
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "gamepadConnected(int)", "gamepadConnected(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "gamepadConnected(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadConnected, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadConnected(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "gamepadConnected(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "gamepadConnected(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "gamepadConnected(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void gamepadDisconnected( int deviceId )
+*/
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal( "gamepadDisconnected(int)", "gamepadDisconnected(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "gamepadDisconnected(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadDisconnected, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadDisconnected(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "gamepadDisconnected(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "gamepadDisconnected(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "gamepadDisconnected(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
+*/
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadAxisEvent, [sender](int arg1, QGamepadManager::GamepadAxis arg2, double arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            PHB_ITEM pArg3 = hb_itemPutND( NULL, arg3 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
+*/
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadButtonPressEvent, [sender](int arg1, QGamepadManager::GamepadButton arg2, double arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            PHB_ITEM pArg3 = hb_itemPutND( NULL, arg3 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
+*/
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadButtonReleaseEvent, [sender](int arg1, QGamepadManager::GamepadButton arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
+*/
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::buttonConfigured, [sender](int arg1, QGamepadManager::GamepadButton arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
+*/
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::axisConfigured, [sender](int arg1, QGamepadManager::GamepadAxis arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void configurationCanceled( int deviceId )
+*/
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  if( hb_pcount() == 1 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "configurationCanceled(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::configurationCanceled, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationCanceled(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "configurationCanceled(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "configurationCanceled(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "configurationCanceled(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
