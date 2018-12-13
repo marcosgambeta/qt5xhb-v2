@@ -228,48 +228,83 @@ $slotMethod=5,9,0|void|setButtonR3Key|Qt::Key
 %%
 %%
 
-$beginSignals
-$signal=5,9,0|activeChanged(bool)
-$signal=5,9,0|gamepadChanged(QGamepad*)
-$signal=5,9,0|upKeyChanged(Qt::Key)
-$signal=5,9,0|downKeyChanged(Qt::Key)
-$signal=5,9,0|leftKeyChanged(Qt::Key)
-$signal=5,9,0|rightKeyChanged(Qt::Key)
-$signal=5,9,0|buttonAKeyChanged(Qt::Key)
-$signal=5,9,0|buttonBKeyChanged(Qt::Key)
-$signal=5,9,0|buttonXKeyChanged(Qt::Key)
-$signal=5,9,0|buttonYKeyChanged(Qt::Key)
-$signal=5,9,0|buttonSelectKeyChanged(Qt::Key)
-$signal=5,9,0|buttonStartKeyChanged(Qt::Key)
-$signal=5,9,0|buttonGuideKeyChanged(Qt::Key)
-$signal=5,9,0|buttonL1KeyChanged(Qt::Key)
-$signal=5,9,0|buttonR1KeyChanged(Qt::Key)
-$signal=5,9,0|buttonL2KeyChanged(Qt::Key)
-$signal=5,9,0|buttonR2KeyChanged(Qt::Key)
-$signal=5,9,0|buttonL3KeyChanged(Qt::Key)
-$signal=5,9,0|buttonR3KeyChanged(Qt::Key)
-$endSignals
+%% $beginSignals
+%% $signal=5,9,0|activeChanged(bool)
+%% $signal=5,9,0|gamepadChanged(QGamepad*)
+%% $signal=5,9,0|upKeyChanged(Qt::Key)
+%% $signal=5,9,0|downKeyChanged(Qt::Key)
+%% $signal=5,9,0|leftKeyChanged(Qt::Key)
+%% $signal=5,9,0|rightKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonAKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonBKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonXKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonYKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonSelectKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonStartKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonGuideKeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonL1KeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonR1KeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonL2KeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonR2KeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonL3KeyChanged(Qt::Key)
+%% $signal=5,9,0|buttonR3KeyChanged(Qt::Key)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,9,0|activeChanged( bool isActive )
-$signal=5,9,0|gamepadChanged( QGamepad * gamepad )
-$signal=5,9,0|upKeyChanged( Qt::Key key )
-$signal=5,9,0|downKeyChanged( Qt::Key key )
-$signal=5,9,0|leftKeyChanged( Qt::Key key )
-$signal=5,9,0|rightKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonAKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonBKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonXKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonYKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonSelectKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonStartKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonGuideKeyChanged( Qt::Key key )
-$signal=5,9,0|buttonL1KeyChanged( Qt::Key key )
-$signal=5,9,0|buttonR1KeyChanged( Qt::Key key )
-$signal=5,9,0|buttonL2KeyChanged( Qt::Key key )
-$signal=5,9,0|buttonR2KeyChanged( Qt::Key key )
-$signal=5,9,0|buttonL3KeyChanged( Qt::Key key )
-$signal=5,9,0|buttonR3KeyChanged( Qt::Key key )
-$endSlotsClass
+$prototype=void activeChanged( bool isActive )
+$signalMethod=5,9,0|void|activeChanged|bool
+
+$prototype=void gamepadChanged( QGamepad * gamepad )
+$signalMethod=5,9,0|void|gamepadChanged|QGamepad*
+
+$prototype=void upKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|upKeyChanged|Qt::Key
+
+$prototype=void downKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|downKeyChanged|Qt::Key
+
+$prototype=void leftKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|leftKeyChanged|Qt::Key
+
+$prototype=void rightKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|rightKeyChanged|Qt::Key
+
+$prototype=void buttonAKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonAKeyChanged|Qt::Key
+
+$prototype=void buttonBKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonBKeyChanged|Qt::Key
+
+$prototype=void buttonXKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonXKeyChanged|Qt::Key
+
+$prototype=void buttonYKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonYKeyChanged|Qt::Key
+
+$prototype=void buttonSelectKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonSelectKeyChanged|Qt::Key
+
+$prototype=void buttonStartKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonStartKeyChanged|Qt::Key
+
+$prototype=void buttonGuideKeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonGuideKeyChanged|Qt::Key
+
+$prototype=void buttonL1KeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonL1KeyChanged|Qt::Key
+
+$prototype=void buttonR1KeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonR1KeyChanged|Qt::Key
+
+$prototype=void buttonL2KeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonL2KeyChanged|Qt::Key
+
+$prototype=void buttonR2KeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonR2KeyChanged|Qt::Key
+
+$prototype=void buttonL3KeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonL3KeyChanged|Qt::Key
+
+$prototype=void buttonR3KeyChanged( Qt::Key key )
+$signalMethod=5,9,0|void|buttonR3KeyChanged|Qt::Key
 
 #pragma ENDDUMP

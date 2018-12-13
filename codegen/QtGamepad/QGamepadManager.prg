@@ -68,28 +68,43 @@ $slotMethod=5,9,0|void|resetConfiguration|int
 $prototype=void setSettingsFile(const QString &file) (slot)
 $slotMethod=5,9,0|void|setSettingsFile|const QString &
 
-$beginSignals
-$signal=5,9,0|axisConfigured(int,QGamepadManager::GamepadAxis)
-$signal=5,9,0|buttonConfigured(int,QGamepadManager::GamepadButton)
-$signal=5,9,0|configurationCanceled(int)
-$signal=5,9,0|connectedGamepadsChanged()
-$signal=5,9,0|gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)
-$signal=5,9,0|gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)
-$signal=5,9,0|gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)
-$signal=5,9,0|gamepadConnected(int)
-$signal=5,9,0|gamepadDisconnected(int)
-$endSignals
+%% $beginSignals
+%% $signal=5,9,0|axisConfigured(int,QGamepadManager::GamepadAxis)
+%% $signal=5,9,0|buttonConfigured(int,QGamepadManager::GamepadButton)
+%% $signal=5,9,0|configurationCanceled(int)
+%% $signal=5,9,0|connectedGamepadsChanged()
+%% $signal=5,9,0|gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)
+%% $signal=5,9,0|gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)
+%% $signal=5,9,0|gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)
+%% $signal=5,9,0|gamepadConnected(int)
+%% $signal=5,9,0|gamepadDisconnected(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,9,0|connectedGamepadsChanged()
-$signal=5,9,0|gamepadConnected( int deviceId )
-$signal=5,9,0|gamepadDisconnected( int deviceId )
-$signal=5,9,0|gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
-$signal=5,9,0|gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
-$signal=5,9,0|gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
-$signal=5,9,0|buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
-$signal=5,9,0|axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
-$signal=5,9,0|configurationCanceled( int deviceId )
-$endSlotsClass
+$prototype=void connectedGamepadsChanged()
+$signalMethod=5,9,0|void|connectedGamepadsChanged|
+
+$prototype=void gamepadConnected( int deviceId )
+$signalMethod=5,9,0|void|gamepadConnected|int
+
+$prototype=void gamepadDisconnected( int deviceId )
+$signalMethod=5,9,0|void|gamepadDisconnected|int
+
+$prototype=void gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
+$signalMethod=5,9,0|void|gamepadAxisEvent|int,QGamepadManager::GamepadAxis,double
+
+$prototype=void gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
+$signalMethod=5,9,0|void|gamepadButtonPressEvent|int,QGamepadManager::GamepadButton,double
+
+$prototype=void gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
+$signalMethod=5,9,0|void|gamepadButtonReleaseEvent|int,QGamepadManager::GamepadButton
+
+$prototype=void buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
+$signalMethod=5,9,0|void|buttonConfigured|int,QGamepadManager::GamepadButton
+
+$prototype=void axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
+$signalMethod=5,9,0|void|axisConfigured|int,QGamepadManager::GamepadAxis
+
+$prototype=void configurationCanceled( int deviceId )
+$signalMethod=5,9,0|void|configurationCanceled|int
 
 #pragma ENDDUMP

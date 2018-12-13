@@ -215,60 +215,107 @@ $method=5,9,0|bool|buttonGuide|
 %%
 %%
 
-$beginSignals
-$signal=5,9,0|axisLeftXChanged(double)
-$signal=5,9,0|axisLeftYChanged(double)
-$signal=5,9,0|axisRightXChanged(double)
-$signal=5,9,0|axisRightYChanged(double)
-$signal=5,9,0|buttonAChanged(bool)
-$signal=5,9,0|buttonBChanged(bool)
-$signal=5,9,0|buttonCenterChanged(bool)
-$signal=5,9,0|buttonDownChanged(bool)
-$signal=5,9,0|buttonGuideChanged(bool)
-$signal=5,9,0|buttonL1Changed(bool)
-$signal=5,9,0|buttonL2Changed(double)
-$signal=5,9,0|buttonL3Changed(bool)
-$signal=5,9,0|buttonLeftChanged(bool)
-$signal=5,9,0|buttonR1Changed(bool)
-$signal=5,9,0|buttonR2Changed(double)
-$signal=5,9,0|buttonR3Changed(bool)
-$signal=5,9,0|buttonRightChanged(bool)
-$signal=5,9,0|buttonSelectChanged(bool)
-$signal=5,9,0|buttonStartChanged(bool)
-$signal=5,9,0|buttonUpChanged(bool)
-$signal=5,9,0|buttonXChanged(bool)
-$signal=5,9,0|buttonYChanged(bool)
-$signal=5,9,0|connectedChanged(bool)
-$signal=5,9,0|deviceIdChanged(int)
-$signal=5,9,0|nameChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=5,9,0|axisLeftXChanged(double)
+%% $signal=5,9,0|axisLeftYChanged(double)
+%% $signal=5,9,0|axisRightXChanged(double)
+%% $signal=5,9,0|axisRightYChanged(double)
+%% $signal=5,9,0|buttonAChanged(bool)
+%% $signal=5,9,0|buttonBChanged(bool)
+%% $signal=5,9,0|buttonCenterChanged(bool)
+%% $signal=5,9,0|buttonDownChanged(bool)
+%% $signal=5,9,0|buttonGuideChanged(bool)
+%% $signal=5,9,0|buttonL1Changed(bool)
+%% $signal=5,9,0|buttonL2Changed(double)
+%% $signal=5,9,0|buttonL3Changed(bool)
+%% $signal=5,9,0|buttonLeftChanged(bool)
+%% $signal=5,9,0|buttonR1Changed(bool)
+%% $signal=5,9,0|buttonR2Changed(double)
+%% $signal=5,9,0|buttonR3Changed(bool)
+%% $signal=5,9,0|buttonRightChanged(bool)
+%% $signal=5,9,0|buttonSelectChanged(bool)
+%% $signal=5,9,0|buttonStartChanged(bool)
+%% $signal=5,9,0|buttonUpChanged(bool)
+%% $signal=5,9,0|buttonXChanged(bool)
+%% $signal=5,9,0|buttonYChanged(bool)
+%% $signal=5,9,0|connectedChanged(bool)
+%% $signal=5,9,0|deviceIdChanged(int)
+%% $signal=5,9,0|nameChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,9,0|axisLeftXChanged( double value )
-$signal=5,9,0|axisLeftYChanged( double value )
-$signal=5,9,0|axisRightXChanged( double value )
-$signal=5,9,0|axisRightYChanged( double value )
-$signal=5,9,0|buttonAChanged( bool value )
-$signal=5,9,0|buttonBChanged( bool value )
-$signal=5,9,0|buttonCenterChanged( bool value )
-$signal=5,9,0|buttonDownChanged( bool value )
-$signal=5,9,0|buttonGuideChanged( bool value )
-$signal=5,9,0|buttonL1Changed( bool value )
-$signal=5,9,0|buttonL2Changed( double value )
-$signal=5,9,0|buttonL3Changed( bool value )
-$signal=5,9,0|buttonLeftChanged( bool value )
-$signal=5,9,0|buttonR1Changed( bool value )
-$signal=5,9,0|buttonR2Changed( double value )
-$signal=5,9,0|buttonR3Changed( bool value )
-$signal=5,9,0|buttonRightChanged( bool value )
-$signal=5,9,0|buttonSelectChanged( bool value )
-$signal=5,9,0|buttonStartChanged( bool value )
-$signal=5,9,0|buttonUpChanged( bool value )
-$signal=5,9,0|buttonXChanged( bool value )
-$signal=5,9,0|buttonYChanged( bool value )
-$signal=5,9,0|connectedChanged( bool value )
-$signal=5,9,0|deviceIdChanged( int value )
-$signal=5,9,0|nameChanged( QString value )
-$endSlotsClass
+$prototype=void axisLeftXChanged( double value )
+$signalMethod=5,9,0|void|axisLeftXChanged|double
+
+$prototype=void axisLeftYChanged( double value )
+$signalMethod=5,9,0|void|axisLeftYChanged|double
+
+$prototype=void axisRightXChanged( double value )
+$signalMethod=5,9,0|void|axisRightXChanged|double
+
+$prototype=void axisRightYChanged( double value )
+$signalMethod=5,9,0|void|axisRightYChanged|double
+
+$prototype=void buttonAChanged( bool value )
+$signalMethod=5,9,0|void|buttonAChanged|bool
+
+$prototype=void buttonBChanged( bool value )
+$signalMethod=5,9,0|void|buttonBChanged|bool
+
+$prototype=void buttonCenterChanged( bool value )
+$signalMethod=5,9,0|void|buttonCenterChanged|bool
+
+$prototype=void buttonDownChanged( bool value )
+$signalMethod=5,9,0|void|buttonDownChanged|bool
+
+$prototype=void buttonGuideChanged( bool value )
+$signalMethod=5,9,0|void|buttonGuideChanged|bool
+
+$prototype=void buttonL1Changed( bool value )
+$signalMethod=5,9,0|void|buttonL1Changed|bool
+
+$prototype=void buttonL2Changed( double value )
+$signalMethod=5,9,0|void|buttonL2Changed|double
+
+$prototype=void buttonL3Changed( bool value )
+$signalMethod=5,9,0|void|buttonL3Changed|bool
+
+$prototype=void buttonLeftChanged( bool value )
+$signalMethod=5,9,0|void|buttonLeftChanged|bool
+
+$prototype=void buttonR1Changed( bool value )
+$signalMethod=5,9,0|void|buttonR1Changed|bool
+
+$prototype=void buttonR2Changed( double value )
+$signalMethod=5,9,0|void|buttonR2Changed|double
+
+$prototype=void buttonR3Changed( bool value )
+$signalMethod=5,9,0|void|buttonR3Changed|bool
+
+$prototype=void buttonRightChanged( bool value )
+$signalMethod=5,9,0|void|buttonRightChanged|bool
+
+$prototype=void buttonSelectChanged( bool value )
+$signalMethod=5,9,0|void|buttonSelectChanged|bool
+
+$prototype=void buttonStartChanged( bool value )
+$signalMethod=5,9,0|void|buttonStartChanged|bool
+
+$prototype=void buttonUpChanged( bool value )
+$signalMethod=5,9,0|void|buttonUpChanged|bool
+
+$prototype=void buttonXChanged( bool value )
+$signalMethod=5,9,0|void|buttonXChanged|bool
+
+$prototype=void buttonYChanged( bool value )
+$signalMethod=5,9,0|void|buttonYChanged|bool
+
+$prototype=void connectedChanged( bool value )
+$signalMethod=5,9,0|void|connectedChanged|bool
+
+$prototype=void deviceIdChanged( int value )
+$signalMethod=5,9,0|void|deviceIdChanged|int
+
+$prototype=void nameChanged( QString value )
+$signalMethod=5,9,0|void|nameChanged|QString
 
 #pragma ENDDUMP
