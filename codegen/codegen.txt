@@ -1667,4 +1667,6 @@ QCanBusFrame::FrameType                              |enum
 QCanBusFrame::FrameErrors                            |enum
 QVirtualKeyboardSelectionListModel::Type             |enum
 QBluetoothDeviceInfo::Fields                         |enum
- 
+QGradient::Preset                                    |enum
+QWindow::Visibility                                  |enum
+QVulkanInstance                                      |object
