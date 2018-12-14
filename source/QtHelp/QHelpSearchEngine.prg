@@ -57,6 +57,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QHelpSearchEngine>
@@ -337,26 +338,258 @@ for (i1=0;i1<nLen1;i1++)
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QHelpSearchEngineSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void indexingFinished()
+*/
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
-  QHelpSearchEngineSlots_connect_signal( "indexingFinished()", "indexingFinished()" );
+  if( hb_pcount() == 1 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "indexingFinished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::indexingFinished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "indexingFinished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "indexingFinished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "indexingFinished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "indexingFinished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void indexingStarted()
+*/
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
-  QHelpSearchEngineSlots_connect_signal( "indexingStarted()", "indexingStarted()" );
+  if( hb_pcount() == 1 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "indexingStarted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::indexingStarted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "indexingStarted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "indexingStarted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "indexingStarted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "indexingStarted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void searchingFinished( int hits )
+*/
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
-  QHelpSearchEngineSlots_connect_signal( "searchingFinished(int)", "searchingFinished(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "searchingFinished(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::searchingFinished, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingFinished(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "searchingFinished(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "searchingFinished(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "searchingFinished(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void searchingStarted()
+*/
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
-  QHelpSearchEngineSlots_connect_signal( "searchingStarted()", "searchingStarted()" );
+  if( hb_pcount() == 1 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "searchingStarted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::searchingStarted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingStarted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "searchingStarted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "searchingStarted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "searchingStarted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

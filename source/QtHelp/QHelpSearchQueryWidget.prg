@@ -45,6 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QHelpSearchQueryWidget>
@@ -136,11 +137,67 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
   }
 }
 
-void QHelpSearchQueryWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void search()
+*/
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 {
-  QHelpSearchQueryWidgetSlots_connect_signal( "search()", "search()" );
+  if( hb_pcount() == 1 )
+  {
+    QHelpSearchQueryWidget * sender = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "search()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchQueryWidget::search, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "search()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHQUERYWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "search()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHelpSearchQueryWidget * sender = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "search()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "search()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -54,6 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QHelpContentModel>
@@ -274,16 +275,130 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
   }
 }
 
-void QHelpContentModelSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void contentsCreated()
+*/
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
-  QHelpContentModelSlots_connect_signal( "contentsCreated()", "contentsCreated()" );
+  if( hb_pcount() == 1 )
+  {
+    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "contentsCreated()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHelpContentModel::contentsCreated, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsCreated()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPCONTENTMODEL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "contentsCreated()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "contentsCreated()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "contentsCreated()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void contentsCreationStarted()
+*/
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 {
-  QHelpContentModelSlots_connect_signal( "contentsCreationStarted()", "contentsCreationStarted()" );
+  if( hb_pcount() == 1 )
+  {
+    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "contentsCreationStarted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHelpContentModel::contentsCreationStarted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsCreationStarted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPCONTENTMODEL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "contentsCreationStarted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "contentsCreationStarted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "contentsCreationStarted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
