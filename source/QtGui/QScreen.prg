@@ -84,6 +84,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QScreen>
@@ -871,46 +872,524 @@ HB_FUNC_STATIC( QSCREEN_REFRESHRATE )
   }
 }
 
-void QScreenSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void geometryChanged( const QRect & geometry )
+*/
 HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 {
-  QScreenSlots_connect_signal( "geometryChanged(QRect)", "geometryChanged(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "geometryChanged(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::geometryChanged, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChanged(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "geometryChanged(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "geometryChanged(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "geometryChanged(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void physicalSizeChanged( const QSizeF & size )
+*/
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 {
-  QScreenSlots_connect_signal( "physicalSizeChanged(QSizeF)", "physicalSizeChanged(QSizeF)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "physicalSizeChanged(QSizeF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::physicalSizeChanged, [sender](QSizeF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalSizeChanged(QSizeF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZEF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "physicalSizeChanged(QSizeF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "physicalSizeChanged(QSizeF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "physicalSizeChanged(QSizeF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void physicalDotsPerInchChanged( qreal dpi )
+*/
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 {
-  QScreenSlots_connect_signal( "physicalDotsPerInchChanged(qreal)", "physicalDotsPerInchChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "physicalDotsPerInchChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::physicalDotsPerInchChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalDotsPerInchChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "physicalDotsPerInchChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "physicalDotsPerInchChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "physicalDotsPerInchChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void logicalDotsPerInchChanged( qreal dpi )
+*/
 HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 {
-  QScreenSlots_connect_signal( "logicalDotsPerInchChanged(qreal)", "logicalDotsPerInchChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "logicalDotsPerInchChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::logicalDotsPerInchChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "logicalDotsPerInchChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "logicalDotsPerInchChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "logicalDotsPerInchChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "logicalDotsPerInchChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void virtualGeometryChanged( const QRect & rect )
+*/
 HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 {
-  QScreenSlots_connect_signal( "virtualGeometryChanged(QRect)", "virtualGeometryChanged(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "virtualGeometryChanged(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::virtualGeometryChanged, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "virtualGeometryChanged(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "virtualGeometryChanged(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "virtualGeometryChanged(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "virtualGeometryChanged(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void primaryOrientationChanged( Qt::ScreenOrientation orientation )
+*/
 HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 {
-  QScreenSlots_connect_signal( "primaryOrientationChanged(Qt::ScreenOrientation)", "primaryOrientationChanged(Qt::ScreenOrientation)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::primaryOrientationChanged, [sender](Qt::ScreenOrientation arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void orientationChanged( Qt::ScreenOrientation orientation )
+*/
 HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 {
-  QScreenSlots_connect_signal( "orientationChanged(Qt::ScreenOrientation)", "orientationChanged(Qt::ScreenOrientation)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::orientationChanged, [sender](Qt::ScreenOrientation arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::ScreenOrientation)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "orientationChanged(Qt::ScreenOrientation)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "orientationChanged(Qt::ScreenOrientation)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void refreshRateChanged( qreal refreshRate )
+*/
 HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 {
-  QScreenSlots_connect_signal( "refreshRateChanged(qreal)", "refreshRateChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "refreshRateChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::refreshRateChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "refreshRateChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "refreshRateChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "refreshRateChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "refreshRateChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

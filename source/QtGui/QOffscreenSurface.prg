@@ -56,6 +56,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QOffscreenSurface>
@@ -352,11 +353,69 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
 QPlatformOffscreenSurface *handle() const
 */
 
-void QOffscreenSurfaceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void screenChanged( QScreen * screen )
+*/
 HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 {
-  QOffscreenSurfaceSlots_connect_signal( "screenChanged(QScreen*)", "screenChanged(QScreen*)" );
+  if( hb_pcount() == 1 )
+  {
+    QOffscreenSurface * sender = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "screenChanged(QScreen*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOffscreenSurface::screenChanged, [sender](QScreen* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "screenChanged(QScreen*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOFFSCREENSURFACE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSCREEN" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "screenChanged(QScreen*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOffscreenSurface * sender = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "screenChanged(QScreen*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "screenChanged(QScreen*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -137,6 +137,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGuiApplication>
@@ -958,31 +959,325 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
 #endif
 }
 
-void QGuiApplicationSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void focusObjectChanged( QObject * focusObject )
+*/
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 {
-  QGuiApplicationSlots_connect_signal( "focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)" );
+  if( hb_pcount() == 1 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "focusObjectChanged(QObject*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::focusObjectChanged, [sender](QObject* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "focusObjectChanged(QObject*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "focusObjectChanged(QObject*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "focusObjectChanged(QObject*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "focusObjectChanged(QObject*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void focusWindowChanged( QWindow * focusWindow )
+*/
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 {
-  QGuiApplicationSlots_connect_signal( "focusWindowChanged(QWindow*)", "focusWindowChanged(QWindow*)" );
+  if( hb_pcount() == 1 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "focusWindowChanged(QWindow*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::focusWindowChanged, [sender](QWindow* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "focusWindowChanged(QWindow*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "focusWindowChanged(QWindow*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "focusWindowChanged(QWindow*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "focusWindowChanged(QWindow*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void fontDatabaseChanged()
+*/
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 {
-  QGuiApplicationSlots_connect_signal( "fontDatabaseChanged()", "fontDatabaseChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "fontDatabaseChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::fontDatabaseChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "fontDatabaseChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGUIAPPLICATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "fontDatabaseChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "fontDatabaseChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "fontDatabaseChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void lastWindowClosed()
+*/
 HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 {
-  QGuiApplicationSlots_connect_signal( "lastWindowClosed()", "lastWindowClosed()" );
+  if( hb_pcount() == 1 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "lastWindowClosed()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::lastWindowClosed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "lastWindowClosed()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGUIAPPLICATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "lastWindowClosed()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "lastWindowClosed()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "lastWindowClosed()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void screenAdded( QScreen * screen )
+*/
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
 {
-  QGuiApplicationSlots_connect_signal( "screenAdded(QScreen*)", "screenAdded(QScreen*)" );
+  if( hb_pcount() == 1 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "screenAdded(QScreen*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::screenAdded, [sender](QScreen* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "screenAdded(QScreen*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSCREEN" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "screenAdded(QScreen*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "screenAdded(QScreen*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "screenAdded(QScreen*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

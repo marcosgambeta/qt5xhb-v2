@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDrag>
@@ -450,16 +451,134 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   }
 }
 
-void QDragSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void actionChanged( Qt::DropAction action )
+*/
 HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 {
-  QDragSlots_connect_signal( "actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)" );
+  if( hb_pcount() == 1 )
+  {
+    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "actionChanged(Qt::DropAction)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDrag::actionChanged, [sender](Qt::DropAction arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "actionChanged(Qt::DropAction)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDRAG" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "actionChanged(Qt::DropAction)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "actionChanged(Qt::DropAction)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "actionChanged(Qt::DropAction)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void targetChanged( QObject * newTarget )
+*/
 HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
 {
-  QDragSlots_connect_signal( "targetChanged(QObject*)", "targetChanged(QObject*)" );
+  if( hb_pcount() == 1 )
+  {
+    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "targetChanged(QObject*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDrag::targetChanged, [sender](QObject* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "targetChanged(QObject*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDRAG" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "targetChanged(QObject*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "targetChanged(QObject*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "targetChanged(QObject*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

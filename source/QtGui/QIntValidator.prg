@@ -53,6 +53,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QIntValidator>
@@ -345,11 +346,67 @@ hb_storni( par2, 2 );
   }
 }
 
-void QIntValidatorSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void changed()
+*/
 HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
 {
-  QIntValidatorSlots_connect_signal( "changed()", "changed()" );
+  if( hb_pcount() == 1 )
+  {
+    QIntValidator * sender = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "changed()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QIntValidator::changed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINTVALIDATOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "changed()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QIntValidator * sender = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "changed()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "changed()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

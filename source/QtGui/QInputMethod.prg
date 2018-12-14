@@ -64,6 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QInputMethod>
@@ -453,36 +454,384 @@ HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QInputMethodSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void animatingChanged()
+*/
 HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 {
-  QInputMethodSlots_connect_signal( "animatingChanged()", "animatingChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "animatingChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::animatingChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "animatingChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTMETHOD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "animatingChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "animatingChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "animatingChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void cursorRectangleChanged()
+*/
 HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 {
-  QInputMethodSlots_connect_signal( "cursorRectangleChanged()", "cursorRectangleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cursorRectangleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::cursorRectangleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorRectangleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTMETHOD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cursorRectangleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cursorRectangleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cursorRectangleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void inputDirectionChanged( Qt::LayoutDirection newDirection )
+*/
 HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 {
-  QInputMethodSlots_connect_signal( "inputDirectionChanged(Qt::LayoutDirection)", "inputDirectionChanged(Qt::LayoutDirection)" );
+  if( hb_pcount() == 1 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "inputDirectionChanged(Qt::LayoutDirection)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::inputDirectionChanged, [sender](Qt::LayoutDirection arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "inputDirectionChanged(Qt::LayoutDirection)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTMETHOD" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "inputDirectionChanged(Qt::LayoutDirection)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "inputDirectionChanged(Qt::LayoutDirection)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "inputDirectionChanged(Qt::LayoutDirection)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void keyboardRectangleChanged()
+*/
 HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 {
-  QInputMethodSlots_connect_signal( "keyboardRectangleChanged()", "keyboardRectangleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "keyboardRectangleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::keyboardRectangleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "keyboardRectangleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTMETHOD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "keyboardRectangleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "keyboardRectangleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "keyboardRectangleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void localeChanged()
+*/
 HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 {
-  QInputMethodSlots_connect_signal( "localeChanged()", "localeChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "localeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::localeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTMETHOD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "localeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "localeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "localeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void visibleChanged()
+*/
 HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 {
-  QInputMethodSlots_connect_signal( "visibleChanged()", "visibleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "visibleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::visibleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTMETHOD" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "visibleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "visibleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "visibleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

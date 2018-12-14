@@ -46,6 +46,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QRegularExpressionValidator>
@@ -156,11 +157,69 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QRegularExpressionValidatorSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void regularExpressionChanged( const QRegularExpression & re )
+*/
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {
-  QRegularExpressionValidatorSlots_connect_signal( "regularExpressionChanged(QRegularExpression)", "regularExpressionChanged(QRegularExpression)" );
+  if( hb_pcount() == 1 )
+  {
+    QRegularExpressionValidator * sender = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "regularExpressionChanged(QRegularExpression)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRegularExpressionValidator::regularExpressionChanged, [sender](QRegularExpression arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "regularExpressionChanged(QRegularExpression)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QREGULAREXPRESSIONVALIDATOR" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGULAREXPRESSION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "regularExpressionChanged(QRegularExpression)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRegularExpressionValidator * sender = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "regularExpressionChanged(QRegularExpression)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "regularExpressionChanged(QRegularExpression)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

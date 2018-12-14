@@ -84,6 +84,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMovie>
@@ -859,41 +860,455 @@ HB_FUNC_STATIC( QMOVIE_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMovieSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void error( QImageReader::ImageReaderError error )
+*/
 HB_FUNC_STATIC( QMOVIE_ONERROR )
 {
-  QMovieSlots_connect_signal( "error(QImageReader::ImageReaderError)", "error(QImageReader::ImageReaderError)" );
+  if( hb_pcount() == 1 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QImageReader::ImageReaderError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::error, [sender](QImageReader::ImageReaderError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QImageReader::ImageReaderError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QImageReader::ImageReaderError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QImageReader::ImageReaderError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QImageReader::ImageReaderError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void finished()
+*/
 HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 {
-  QMovieSlots_connect_signal( "finished()", "finished()" );
+  if( hb_pcount() == 1 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::finished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void frameChanged( int frameNumber )
+*/
 HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 {
-  QMovieSlots_connect_signal( "frameChanged(int)", "frameChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "frameChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::frameChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "frameChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "frameChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "frameChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "frameChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void resized( const QSize & size )
+*/
 HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 {
-  QMovieSlots_connect_signal( "resized(QSize)", "resized(QSize)" );
+  if( hb_pcount() == 1 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "resized(QSize)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::resized, [sender](QSize arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "resized(QSize)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "resized(QSize)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "resized(QSize)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "resized(QSize)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void started()
+*/
 HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 {
-  QMovieSlots_connect_signal( "started()", "started()" );
+  if( hb_pcount() == 1 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "started()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::started, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "started()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "started()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "started()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QMovie::MovieState state )
+*/
 HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 {
-  QMovieSlots_connect_signal( "stateChanged(QMovie::MovieState)", "stateChanged(QMovie::MovieState)" );
+  if( hb_pcount() == 1 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QMovie::MovieState)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::stateChanged, [sender](QMovie::MovieState arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QMovie::MovieState)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QMovie::MovieState)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QMovie::MovieState)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QMovie::MovieState)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void updated( const QRect & rect )
+*/
 HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 {
-  QMovieSlots_connect_signal( "updated(QRect)", "updated(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "updated(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::updated, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "updated(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "updated(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "updated(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "updated(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
