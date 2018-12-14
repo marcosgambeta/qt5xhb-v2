@@ -98,14 +98,15 @@ $method=|Qt::DropActions|supportedActions|
 $prototype=QObject * target() const
 $method=|QObject *|target|
 
-$beginSignals
-$signal=|actionChanged(Qt::DropAction)
-$signal=|targetChanged(QObject*)
-$endSignals
+%% $beginSignals
+%% $signal=|actionChanged(Qt::DropAction)
+%% $signal=|targetChanged(QObject*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|actionChanged( Qt::DropAction action )
-$signal=|targetChanged( QObject * newTarget )
-$endSlotsClass
+$prototype=void actionChanged( Qt::DropAction action )
+$signalMethod=|void|actionChanged|Qt::DropAction
+
+$prototype=void targetChanged( QObject * newTarget )
+$signalMethod=|void|targetChanged|QObject*
 
 #pragma ENDDUMP

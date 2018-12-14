@@ -76,22 +76,31 @@ $method=|void|show|
 $prototype=void update(Qt::InputMethodQueries queries)
 $method=|void|update|Qt::InputMethodQueries
 
-$beginSignals
-$signal=|animatingChanged()
-$signal=|cursorRectangleChanged()
-$signal=|inputDirectionChanged(Qt::LayoutDirection)
-$signal=|keyboardRectangleChanged()
-$signal=|localeChanged()
-$signal=|visibleChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|animatingChanged()
+%% $signal=|cursorRectangleChanged()
+%% $signal=|inputDirectionChanged(Qt::LayoutDirection)
+%% $signal=|keyboardRectangleChanged()
+%% $signal=|localeChanged()
+%% $signal=|visibleChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|animatingChanged()
-$signal=|cursorRectangleChanged()
-$signal=|inputDirectionChanged( Qt::LayoutDirection newDirection )
-$signal=|keyboardRectangleChanged()
-$signal=|localeChanged()
-$signal=|visibleChanged()
-$endSlotsClass
+$prototype=void animatingChanged()
+$signalMethod=|void|animatingChanged|
+
+$prototype=void cursorRectangleChanged()
+$signalMethod=|void|cursorRectangleChanged|
+
+$prototype=void inputDirectionChanged( Qt::LayoutDirection newDirection )
+$signalMethod=|void|inputDirectionChanged|Qt::LayoutDirection
+
+$prototype=void keyboardRectangleChanged()
+$signalMethod=|void|keyboardRectangleChanged|
+
+$prototype=void localeChanged()
+$signalMethod=|void|localeChanged|
+
+$prototype=void visibleChanged()
+$signalMethod=|void|visibleChanged|
 
 #pragma ENDDUMP

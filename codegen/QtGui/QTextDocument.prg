@@ -356,28 +356,43 @@ $prototype=QTextDocumentPrivate *docHandle() const
 %% TODO: implementar ?
 %% $method=|QTextDocumentPrivate *|docHandle|
 
-$beginSignals
-$signal=|contentsChange(int,int,int)
-$signal=|contentsChanged()
-$signal=|undoAvailable(bool)
-$signal=|redoAvailable(bool)
-$signal=|undoCommandAdded()
-$signal=|modificationChanged(bool)
-$signal=|cursorPositionChanged(QTextCursor)
-$signal=|blockCountChanged(int)
-$signal=|documentLayoutChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|contentsChange(int,int,int)
+%% $signal=|contentsChanged()
+%% $signal=|undoAvailable(bool)
+%% $signal=|redoAvailable(bool)
+%% $signal=|undoCommandAdded()
+%% $signal=|modificationChanged(bool)
+%% $signal=|cursorPositionChanged(QTextCursor)
+%% $signal=|blockCountChanged(int)
+%% $signal=|documentLayoutChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|contentsChange( int from, int charsRemoves, int charsAdded )
-$signal=|contentsChanged()
-$signal=|undoAvailable( bool b )
-$signal=|redoAvailable( bool b )
-$signal=|undoCommandAdded()
-$signal=|modificationChanged( bool m )
-$signal=|cursorPositionChanged( const QTextCursor & cursor )
-$signal=|blockCountChanged( int newBlockCount )
-$signal=|documentLayoutChanged()
-$endSlotsClass
+$prototype=void contentsChange( int from, int charsRemoves, int charsAdded )
+$signalMethod=|void|contentsChange|int,int,int
+
+$prototype=void contentsChanged()
+$signalMethod=|void|contentsChanged|
+
+$prototype=void undoAvailable( bool b )
+$signalMethod=|void|undoAvailable|bool
+
+$prototype=void redoAvailable( bool b )
+$signalMethod=|void|redoAvailable|bool
+
+$prototype=void undoCommandAdded()
+$signalMethod=|void|undoCommandAdded|
+
+$prototype=void modificationChanged( bool m )
+$signalMethod=|void|modificationChanged|bool
+
+$prototype=void cursorPositionChanged( const QTextCursor & cursor )
+$signalMethod=|void|cursorPositionChanged|QTextCursor
+
+$prototype=void blockCountChanged( int newBlockCount )
+$signalMethod=|void|blockCountChanged|int
+
+$prototype=void documentLayoutChanged()
+$signalMethod=|void|documentLayoutChanged|
 
 #pragma ENDDUMP

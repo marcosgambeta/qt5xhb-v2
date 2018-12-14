@@ -108,18 +108,23 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 }
 $addMethod=text
 
-$beginSignals
-$signal=|changed(QClipboard::Mode)
-$signal=|dataChanged()
-$signal=|findBufferChanged()
-$signal=|selectionChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|changed(QClipboard::Mode)
+%% $signal=|dataChanged()
+%% $signal=|findBufferChanged()
+%% $signal=|selectionChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|changed( QClipboard::Mode mode )
-$signal=|dataChanged()
-$signal=|findBufferChanged()
-$signal=|selectionChanged()
-$endSlotsClass
+$prototype=void changed( QClipboard::Mode mode )
+$signalMethod=|void|changed|QClipboard::Mode
+
+$prototype=void dataChanged()
+$signalMethod=|void|dataChanged|
+
+$prototype=void findBufferChanged()
+$signalMethod=|void|findBufferChanged|
+
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
 
 #pragma ENDDUMP

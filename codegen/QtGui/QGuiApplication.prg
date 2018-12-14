@@ -204,20 +204,27 @@ $staticMethod=|QWindow *|topLevelAt|const QPoint &
 $prototype=static QWindowList topLevelWindows()
 $staticMethod=|QWindowList|topLevelWindows|
 
-$beginSignals
-$signal=|focusObjectChanged(QObject*)
-$signal=|focusWindowChanged(QWindow*)
-$signal=|fontDatabaseChanged()
-$signal=|lastWindowClosed()
-$signal=|screenAdded(QScreen*)
-$endSignals
+%% $beginSignals
+%% $signal=|focusObjectChanged(QObject*)
+%% $signal=|focusWindowChanged(QWindow*)
+%% $signal=|fontDatabaseChanged()
+%% $signal=|lastWindowClosed()
+%% $signal=|screenAdded(QScreen*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|focusObjectChanged( QObject * focusObject )
-$signal=|focusWindowChanged( QWindow * focusWindow )
-$signal=|fontDatabaseChanged()
-$signal=|lastWindowClosed()
-$signal=|screenAdded( QScreen * screen )
-$endSlotsClass
+$prototype=void focusObjectChanged( QObject * focusObject )
+$signalMethod=|void|focusObjectChanged|QObject*
+
+$prototype=void focusWindowChanged( QWindow * focusWindow )
+$signalMethod=|void|focusWindowChanged|QWindow*
+
+$prototype=void fontDatabaseChanged()
+$signalMethod=|void|fontDatabaseChanged|
+
+$prototype=void lastWindowClosed()
+$signalMethod=|void|lastWindowClosed|
+
+$prototype=void screenAdded( QScreen * screen )
+$signalMethod=|void|screenAdded|QScreen*
 
 #pragma ENDDUMP

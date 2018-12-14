@@ -92,12 +92,11 @@ $staticMethod=|bool|areSharing|QOpenGLContext *,QOpenGLContext *
 $prototype=static QOpenGLContext * currentContext()
 $staticMethod=|QOpenGLContext *|currentContext|
 
-$beginSignals
-$signal=|aboutToBeDestroyed()
-$endSignals
+%% $beginSignals
+%% $signal=|aboutToBeDestroyed()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|aboutToBeDestroyed()
-$endSlotsClass
+$prototype=void aboutToBeDestroyed()
+$signalMethod=|void|aboutToBeDestroyed|
 
 #pragma ENDDUMP

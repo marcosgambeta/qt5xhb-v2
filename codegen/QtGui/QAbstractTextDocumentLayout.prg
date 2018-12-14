@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+#include <QTextBlock>
+
 $deleteMethod
 
 $prototype=QString anchorAt ( const QPointF & position ) const
@@ -62,18 +64,23 @@ $method=|void|registerHandler|int,QObject *
 $prototype=void setPaintDevice ( QPaintDevice * device )
 $method=|void|setPaintDevice|QPaintDevice *
 
-$beginSignals
-$signal=|documentSizeChanged(QSizeF)
-$signal=|pageCountChanged(int)
-$signal=|update(QRectF)
-$signal=|updateBlock(QTextBlock)
-$endSignals
+%% $beginSignals
+%% $signal=|documentSizeChanged(QSizeF)
+%% $signal=|pageCountChanged(int)
+%% $signal=|update(QRectF)
+%% $signal=|updateBlock(QTextBlock)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|documentSizeChanged( const QSizeF & newSize )
-$signal=|pageCountChanged( int newPages )
-$signal=|update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
-$signal=|updateBlock( const QTextBlock & block )
-$endSlotsClass
+$prototype=void documentSizeChanged( const QSizeF & newSize )
+$signalMethod=|void|documentSizeChanged|QSizeF
+
+$prototype=void pageCountChanged( int newPages )
+$signalMethod=|void|pageCountChanged|int
+
+$prototype=void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
+$signalMethod=|void|update|QRectF
+
+$prototype=void updateBlock( const QTextBlock & block )
+$signalMethod=|void|updateBlock|QTextBlock
 
 #pragma ENDDUMP

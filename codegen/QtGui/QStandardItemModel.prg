@@ -326,12 +326,11 @@ $method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModel
 $prototype=bool QStandardItemModel::clearItemData(const QModelIndex &index)
 $method=5,12,0|bool|clearItemData|const QModelIndex &
 
-$beginSignals
-$signal=|itemChanged(QStandardItem*)
-$endSignals
+%% $beginSignals
+%% $signal=|itemChanged(QStandardItem*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|itemChanged( QStandardItem * item )
-$endSlotsClass
+$prototype=void itemChanged( QStandardItem * item )
+$signalMethod=|void|itemChanged|QStandardItem*
 
 #pragma ENDDUMP

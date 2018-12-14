@@ -125,26 +125,39 @@ $method=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
 $prototype=qreal refreshRate() const
 $method=|qreal|refreshRate|
 
-$beginSignals
-$signal=|geometryChanged(QRect)
-$signal=|physicalSizeChanged(QSizeF)
-$signal=|physicalDotsPerInchChanged(qreal)
-$signal=|logicalDotsPerInchChanged(qreal)
-$signal=|virtualGeometryChanged(QRect)
-$signal=|primaryOrientationChanged(Qt::ScreenOrientation)
-$signal=|orientationChanged(Qt::ScreenOrientation)
-$signal=|refreshRateChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|geometryChanged(QRect)
+%% $signal=|physicalSizeChanged(QSizeF)
+%% $signal=|physicalDotsPerInchChanged(qreal)
+%% $signal=|logicalDotsPerInchChanged(qreal)
+%% $signal=|virtualGeometryChanged(QRect)
+%% $signal=|primaryOrientationChanged(Qt::ScreenOrientation)
+%% $signal=|orientationChanged(Qt::ScreenOrientation)
+%% $signal=|refreshRateChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|geometryChanged( const QRect & geometry )
-$signal=|physicalSizeChanged( const QSizeF & size )
-$signal=|physicalDotsPerInchChanged( qreal dpi )
-$signal=|logicalDotsPerInchChanged( qreal dpi )
-$signal=|virtualGeometryChanged( const QRect & rect )
-$signal=|primaryOrientationChanged( Qt::ScreenOrientation orientation )
-$signal=|orientationChanged( Qt::ScreenOrientation orientation )
-$signal=|refreshRateChanged( qreal refreshRate )
-$endSlotsClass
+$prototype=void geometryChanged( const QRect & geometry )
+$signalMethod=|void|geometryChanged|QRect
+
+$prototype=void physicalSizeChanged( const QSizeF & size )
+$signalMethod=|void|physicalSizeChanged|QSizeF
+
+$prototype=void physicalDotsPerInchChanged( qreal dpi )
+$signalMethod=|void|physicalDotsPerInchChanged|qreal
+
+$prototype=void logicalDotsPerInchChanged( qreal dpi )
+$signalMethod=|void|logicalDotsPerInchChanged|qreal
+
+$prototype=void virtualGeometryChanged( const QRect & rect )
+$signalMethod=|void|virtualGeometryChanged|QRect
+
+$prototype=void primaryOrientationChanged( Qt::ScreenOrientation orientation )
+$signalMethod=|void|primaryOrientationChanged|Qt::ScreenOrientation
+
+$prototype=void orientationChanged( Qt::ScreenOrientation orientation )
+$signalMethod=|void|orientationChanged|Qt::ScreenOrientation
+
+$prototype=void refreshRateChanged( qreal refreshRate )
+$signalMethod=|void|refreshRateChanged|qreal
 
 #pragma ENDDUMP

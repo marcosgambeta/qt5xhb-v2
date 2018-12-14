@@ -151,24 +151,35 @@ $method=|void|start|
 $prototype=void stop ()
 $method=|void|stop|
 
-$beginSignals
-$signal=|error(QImageReader::ImageReaderError)
-$signal=|finished()
-$signal=|frameChanged(int)
-$signal=|resized(QSize)
-$signal=|started()
-$signal=|stateChanged(QMovie::MovieState)
-$signal=|updated(QRect)
-$endSignals
+%% $beginSignals
+%% $signal=|error(QImageReader::ImageReaderError)
+%% $signal=|finished()
+%% $signal=|frameChanged(int)
+%% $signal=|resized(QSize)
+%% $signal=|started()
+%% $signal=|stateChanged(QMovie::MovieState)
+%% $signal=|updated(QRect)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|error( QImageReader::ImageReaderError error )
-$signal=|finished()
-$signal=|frameChanged( int frameNumber )
-$signal=|resized( const QSize & size )
-$signal=|started()
-$signal=|stateChanged( QMovie::MovieState state )
-$signal=|updated( const QRect & rect )
-$endSlotsClass
+$prototype=void error( QImageReader::ImageReaderError error )
+$signalMethod=|void|error|QImageReader::ImageReaderError
+
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void frameChanged( int frameNumber )
+$signalMethod=|void|frameChanged|int
+
+$prototype=void resized( const QSize & size )
+$signalMethod=|void|resized|QSize
+
+$prototype=void started()
+$signalMethod=|void|started|
+
+$prototype=void stateChanged( QMovie::MovieState state )
+$signalMethod=|void|stateChanged|QMovie::MovieState
+
+$prototype=void updated( const QRect & rect )
+$signalMethod=|void|updated|QRect
 
 #pragma ENDDUMP
