@@ -59,18 +59,23 @@ $method=|void|reindexDocumentation|
 $prototype=void search ( const QList<QHelpSearchQuery> & queryList )
 $method=|void|search|const QList<QHelpSearchQuery> &
 
-$beginSignals
-$signal=|indexingFinished()
-$signal=|indexingStarted()
-$signal=|searchingFinished(int)
-$signal=|searchingStarted()
-$endSignals
+%% $beginSignals
+%% $signal=|indexingFinished()
+%% $signal=|indexingStarted()
+%% $signal=|searchingFinished(int)
+%% $signal=|searchingStarted()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|indexingFinished()
-$signal=|indexingStarted()
-$signal=|searchingFinished( int hits )
-$signal=|searchingStarted()
-$endSlotsClass
+$prototype=void indexingFinished()
+$signalMethod=|void|indexingFinished|
+
+$prototype=void indexingStarted()
+$signalMethod=|void|indexingStarted|
+
+$prototype=void searchingFinished( int hits )
+$signalMethod=|void|searchingFinished|int
+
+$prototype=void searchingStarted()
+$signalMethod=|void|searchingStarted|
 
 #pragma ENDDUMP

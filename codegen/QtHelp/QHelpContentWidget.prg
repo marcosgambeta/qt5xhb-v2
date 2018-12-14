@@ -27,17 +27,18 @@ $destructor
 
 $includes
 
+#include <QUrl>
+
 $deleteMethod
 
 $prototype=QModelIndex indexOf ( const QUrl & link )
 $method=|QModelIndex|indexOf|const QUrl &
 
-$beginSignals
-$signal=|linkActivated(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=|linkActivated(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|linkActivated( const QUrl & link )
-$endSlotsClass
+$prototype=void linkActivated( const QUrl & link )
+$signalMethod=|void|linkActivated|QUrl
 
 #pragma ENDDUMP

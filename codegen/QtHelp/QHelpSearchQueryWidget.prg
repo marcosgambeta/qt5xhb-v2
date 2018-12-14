@@ -35,12 +35,11 @@ $deleteMethod
 $prototype=QList<QHelpSearchQuery> query () const
 $method=|QList<QHelpSearchQuery>|query|
 
-$beginSignals
-$signal=|search()
-$endSignals
+%% $beginSignals
+%% $signal=|search()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|search()
-$endSlotsClass
+$prototype=void search()
+$signalMethod=|void|search|
 
 #pragma ENDDUMP

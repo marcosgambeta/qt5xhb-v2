@@ -129,18 +129,23 @@ $staticMethod=|QVariant|metaData|const QString &,const QString &
 $prototype=static QString namespaceName ( const QString & documentationFileName )
 $staticMethod=|QString|namespaceName|const QString &
 
-$beginSignals
-$signal=|currentFilterChanged(QString)
-$signal=|setupFinished()
-$signal=|setupStarted()
-$signal=|warning(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|currentFilterChanged(QString)
+%% $signal=|setupFinished()
+%% $signal=|setupStarted()
+%% $signal=|warning(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentFilterChanged( const QString & newFilter )
-$signal=|setupFinished()
-$signal=|setupStarted()
-$signal=|warning( const QString & msg )
-$endSlotsClass
+$prototype=void currentFilterChanged( const QString & newFilter )
+$signalMethod=|void|currentFilterChanged|QString
+
+$prototype=void setupFinished()
+$signalMethod=|void|setupFinished|
+
+$prototype=void setupStarted()
+$signalMethod=|void|setupStarted|
+
+$prototype=void warning( const QString & msg )
+$signalMethod=|void|warning|QString
 
 #pragma ENDDUMP

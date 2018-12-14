@@ -32,12 +32,11 @@ $deleteMethod
 $prototype=QUrl linkAt ( const QPoint & point )
 $method=|QUrl|linkAt|const QPoint &
 
-$beginSignals
-$signal=|requestShowLink(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=|requestShowLink(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|requestShowLink( const QUrl & link )
-$endSlotsClass
+$prototype=void requestShowLink( const QUrl & link )
+$signalMethod=|void|requestShowLink|QUrl
 
 #pragma ENDDUMP
