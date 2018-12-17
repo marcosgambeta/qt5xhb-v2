@@ -22,6 +22,8 @@ CLASS QAudioRoleControl INHERIT QMediaControl
    METHOD setAudioRole
    METHOD supportedAudioRoles
 
+   METHOD onAudioRoleChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,6 +47,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
@@ -167,5 +170,71 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
 #endif
 }
 
-#pragma ENDDUMP
+/*
+void audioRoleChanged(QAudio::Role role)
+*/
+HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  if( hb_pcount() == 1 )
+  {
+    QAudioRoleControl * sender = (QAudioRoleControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
+    if( sender )
+    {
+      if( Signals2_connection( sender, "audioRoleChanged(QAudio::Role)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioRoleControl::audioRoleChanged, [sender](QAudio::Role arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "audioRoleChanged(QAudio::Role)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIOROLECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "audioRoleChanged(QAudio::Role)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioRoleControl * sender = (QAudioRoleControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "audioRoleChanged(QAudio::Role)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "audioRoleChanged(QAudio::Role)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+#pragma ENDDUMP

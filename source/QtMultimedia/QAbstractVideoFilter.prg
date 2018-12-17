@@ -23,6 +23,8 @@ CLASS QAbstractVideoFilter INHERIT QObject
    METHOD setActive
    METHOD createFilterRunnable
 
+   METHOD onActiveChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,6 +48,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
@@ -158,6 +161,69 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
 #endif
   }
 #endif
+}
+
+/*
+void activeChanged()
+*/
+HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstractVideoFilter * sender = (QAbstractVideoFilter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoFilter::activeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOFILTER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractVideoFilter * sender = (QAbstractVideoFilter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

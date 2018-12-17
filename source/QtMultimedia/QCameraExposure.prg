@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraExposure>
@@ -845,41 +846,455 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCameraExposureSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void apertureChanged( qreal value )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 {
-  QCameraExposureSlots_connect_signal( "apertureChanged(qreal)", "apertureChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "apertureChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::apertureChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "apertureChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURE" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "apertureChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "apertureChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "apertureChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void apertureRangeChanged()
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 {
-  QCameraExposureSlots_connect_signal( "apertureRangeChanged()", "apertureRangeChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "apertureRangeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::apertureRangeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "apertureRangeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "apertureRangeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "apertureRangeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "apertureRangeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void exposureCompensationChanged( qreal value )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 {
-  QCameraExposureSlots_connect_signal( "exposureCompensationChanged(qreal)", "exposureCompensationChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "exposureCompensationChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::exposureCompensationChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "exposureCompensationChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURE" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "exposureCompensationChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "exposureCompensationChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "exposureCompensationChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void flashReady( bool ready )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
 {
-  QCameraExposureSlots_connect_signal( "flashReady(bool)", "flashReady(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "flashReady(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::flashReady, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "flashReady(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "flashReady(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "flashReady(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "flashReady(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void isoSensitivityChanged( int value )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 {
-  QCameraExposureSlots_connect_signal( "isoSensitivityChanged(int)", "isoSensitivityChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "isoSensitivityChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::isoSensitivityChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "isoSensitivityChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "isoSensitivityChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "isoSensitivityChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "isoSensitivityChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void shutterSpeedChanged( qreal speed )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 {
-  QCameraExposureSlots_connect_signal( "shutterSpeedChanged(qreal)", "shutterSpeedChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "shutterSpeedChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::shutterSpeedChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "shutterSpeedChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURE" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "shutterSpeedChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "shutterSpeedChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "shutterSpeedChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void shutterSpeedRangeChanged()
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 {
-  QCameraExposureSlots_connect_signal( "shutterSpeedRangeChanged()", "shutterSpeedRangeChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "shutterSpeedRangeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::shutterSpeedRangeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "shutterSpeedRangeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "shutterSpeedRangeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "shutterSpeedRangeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "shutterSpeedRangeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

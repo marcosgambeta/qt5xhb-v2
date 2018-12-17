@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaPlaylist>
@@ -859,56 +860,660 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 bool setMediaObject(QMediaObject *object) override [protected]
 */
 
-void QMediaPlaylistSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void currentIndexChanged( int position )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::currentIndexChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentIndexChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentIndexChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentIndexChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentMediaChanged( const QMediaContent & content )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "currentMediaChanged(QMediaContent)", "currentMediaChanged(QMediaContent)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentMediaChanged(QMediaContent)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::currentMediaChanged, [sender](QMediaContent arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentMediaChanged(QMediaContent)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMEDIACONTENT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentMediaChanged(QMediaContent)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentMediaChanged(QMediaContent)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentMediaChanged(QMediaContent)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loadFailed()
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
 {
-  QMediaPlaylistSlots_connect_signal( "loadFailed()", "loadFailed()" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadFailed()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::loadFailed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFailed()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadFailed()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadFailed()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadFailed()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loaded()
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
 {
-  QMediaPlaylistSlots_connect_signal( "loaded()", "loaded()" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loaded()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::loaded, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loaded()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loaded()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loaded()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loaded()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mediaAboutToBeInserted( int start, int end )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaAboutToBeInserted(int,int)", "mediaAboutToBeInserted(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mediaAboutToBeInserted(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaAboutToBeInserted, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaAboutToBeInserted(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mediaAboutToBeInserted(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mediaAboutToBeInserted(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mediaAboutToBeInserted(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mediaAboutToBeRemoved( int start, int end )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaAboutToBeRemoved(int,int)", "mediaAboutToBeRemoved(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mediaAboutToBeRemoved(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaAboutToBeRemoved, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaAboutToBeRemoved(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mediaAboutToBeRemoved(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mediaAboutToBeRemoved(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mediaAboutToBeRemoved(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mediaChanged( int start, int end )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaChanged(int,int)", "mediaChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mediaChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mediaChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mediaChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mediaChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mediaInserted( int start, int end )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaInserted(int,int)", "mediaInserted(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mediaInserted(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaInserted, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaInserted(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mediaInserted(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mediaInserted(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mediaInserted(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mediaRemoved( int start, int end )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaRemoved(int,int)", "mediaRemoved(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mediaRemoved(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaRemoved, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaRemoved(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mediaRemoved(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mediaRemoved(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mediaRemoved(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "playbackModeChanged(QMediaPlaylist::PlaybackMode)", "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::playbackModeChanged, [sender](QMediaPlaylist::PlaybackMode arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -49,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaStreamsControl>
@@ -201,16 +202,130 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
   }
 }
 
-void QMediaStreamsControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activeStreamsChanged()
+*/
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
 {
-  QMediaStreamsControlSlots_connect_signal( "activeStreamsChanged()", "activeStreamsChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaStreamsControl * sender = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeStreamsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaStreamsControl::activeStreamsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeStreamsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIASTREAMSCONTROL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeStreamsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaStreamsControl * sender = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeStreamsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeStreamsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void streamsChanged()
+*/
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
 {
-  QMediaStreamsControlSlots_connect_signal( "streamsChanged()", "streamsChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaStreamsControl * sender = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "streamsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaStreamsControl::streamsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "streamsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIASTREAMSCONTROL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "streamsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaStreamsControl * sender = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "streamsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "streamsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

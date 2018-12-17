@@ -48,6 +48,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAudioOutputSelectorControl>
@@ -208,16 +209,132 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QAudioOutputSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void activeOutputChanged( const QString & name )
+*/
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
 {
-  QAudioOutputSelectorControlSlots_connect_signal( "activeOutputChanged(QString)", "activeOutputChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioOutputSelectorControl * sender = (QAudioOutputSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeOutputChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioOutputSelectorControl::activeOutputChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeOutputChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIOOUTPUTSELECTORCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeOutputChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioOutputSelectorControl * sender = (QAudioOutputSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeOutputChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeOutputChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void availableOutputsChanged()
+*/
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
 {
-  QAudioOutputSelectorControlSlots_connect_signal( "availableOutputsChanged()", "availableOutputsChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioOutputSelectorControl * sender = (QAudioOutputSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "availableOutputsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioOutputSelectorControl::availableOutputsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "availableOutputsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIOOUTPUTSELECTORCONTROL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "availableOutputsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioOutputSelectorControl * sender = (QAudioOutputSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "availableOutputsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "availableOutputsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

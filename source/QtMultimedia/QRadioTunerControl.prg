@@ -77,6 +77,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QRadioTunerControl>
@@ -732,61 +733,721 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
 virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
 */
 
-void QRadioTunerControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void stateChanged( QRadioTuner::State state )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "stateChanged(QRadioTuner::State)", "stateChanged(QRadioTuner::State)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QRadioTuner::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::stateChanged, [sender](QRadioTuner::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QRadioTuner::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QRadioTuner::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QRadioTuner::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QRadioTuner::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void bandChanged( QRadioTuner::Band band )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "bandChanged(QRadioTuner::Band)", "bandChanged(QRadioTuner::Band)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "bandChanged(QRadioTuner::Band)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::bandChanged, [sender](QRadioTuner::Band arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "bandChanged(QRadioTuner::Band)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "bandChanged(QRadioTuner::Band)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "bandChanged(QRadioTuner::Band)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "bandChanged(QRadioTuner::Band)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void frequencyChanged( int frequency )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "frequencyChanged(int)", "frequencyChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "frequencyChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::frequencyChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "frequencyChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "frequencyChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "frequencyChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "frequencyChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stereoStatusChanged( bool stereo )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "stereoStatusChanged(bool)", "stereoStatusChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stereoStatusChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::stereoStatusChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stereoStatusChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stereoStatusChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stereoStatusChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stereoStatusChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void searchingChanged( bool searching )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "searchingChanged(bool)", "searchingChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "searchingChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::searchingChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "searchingChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "searchingChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "searchingChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void signalStrengthChanged( int signalStrength )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "signalStrengthChanged(int)", "signalStrengthChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "signalStrengthChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::signalStrengthChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "signalStrengthChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "signalStrengthChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "signalStrengthChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "signalStrengthChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void volumeChanged( int volume )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "volumeChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::volumeChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "volumeChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "volumeChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "volumeChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mutedChanged( bool muted )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mutedChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::mutedChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mutedChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mutedChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mutedChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void error( QRadioTuner::Error err )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
 {
-  QRadioTunerControlSlots_connect_signal( "error(QRadioTuner::Error)", "error(QRadioTuner::Error)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QRadioTuner::Error)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QRadioTuner::Error>::of(&QRadioTunerControl::error), [sender](QRadioTuner::Error arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QRadioTuner::Error)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QRadioTuner::Error)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QRadioTuner::Error)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QRadioTuner::Error)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stationFound( int frequency, QString stationId )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
 {
-  QRadioTunerControlSlots_connect_signal( "stationFound(int,QString)", "stationFound(int,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stationFound(int,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::stationFound, [sender](int arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stationFound(int,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stationFound(int,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stationFound(int,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stationFound(int,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void antennaConnectedChanged( bool connectionStatus )
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
 {
-  QRadioTunerControlSlots_connect_signal( "antennaConnectedChanged(bool)", "antennaConnectedChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "antennaConnectedChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTunerControl::antennaConnectedChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "antennaConnectedChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "antennaConnectedChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "antennaConnectedChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "antennaConnectedChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

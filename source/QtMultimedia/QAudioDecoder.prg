@@ -70,6 +70,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAudioDecoder>
@@ -511,51 +512,583 @@ bool bind(QObject *) override
 void unbind(QObject *) override
 */
 
-void QAudioDecoderSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void bufferAvailableChanged( bool available )
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "bufferAvailableChanged(bool)", "bufferAvailableChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "bufferAvailableChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::bufferAvailableChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferAvailableChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "bufferAvailableChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "bufferAvailableChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "bufferAvailableChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void bufferReady()
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
 {
-  QAudioDecoderSlots_connect_signal( "bufferReady()", "bufferReady()" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "bufferReady()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::bufferReady, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferReady()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "bufferReady()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "bufferReady()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "bufferReady()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void durationChanged( qint64 duration )
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "durationChanged(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::durationChanged, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "durationChanged(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "durationChanged(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "durationChanged(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void error( QAudioDecoder::Error error )
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 {
-  QAudioDecoderSlots_connect_signal( "error(QAudioDecoder::Error)", "error(QAudioDecoder::Error)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QAudioDecoder::Error)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAudioDecoder::Error>::of(&QAudioDecoder::error), [sender](QAudioDecoder::Error arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAudioDecoder::Error)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QAudioDecoder::Error)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QAudioDecoder::Error)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QAudioDecoder::Error)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void finished()
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
 {
-  QAudioDecoderSlots_connect_signal( "finished()", "finished()" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::finished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void formatChanged( const QAudioFormat & format )
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "formatChanged(QAudioFormat)", "formatChanged(QAudioFormat)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "formatChanged(QAudioFormat)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::formatChanged, [sender](QAudioFormat arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QAudioFormat)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QAUDIOFORMAT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "formatChanged(QAudioFormat)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "formatChanged(QAudioFormat)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "formatChanged(QAudioFormat)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void positionChanged( qint64 position )
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "positionChanged(qint64)", "positionChanged(qint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "positionChanged(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::positionChanged, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "positionChanged(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "positionChanged(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "positionChanged(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sourceChanged()
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "sourceChanged()", "sourceChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sourceChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::sourceChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sourceChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sourceChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sourceChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QAudioDecoder::State state )
+*/
 HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "stateChanged(QAudioDecoder::State)", "stateChanged(QAudioDecoder::State)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QAudioDecoder::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoder::stateChanged, [sender](QAudioDecoder::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAudioDecoder::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QAudioDecoder::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QAudioDecoder::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QAudioDecoder::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

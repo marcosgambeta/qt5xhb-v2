@@ -46,6 +46,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QVideoProbe>
@@ -156,16 +157,132 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
   }
 }
 
-void QVideoProbeSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void flush()
+*/
 HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
 {
-  QVideoProbeSlots_connect_signal( "flush()", "flush()" );
+  if( hb_pcount() == 1 )
+  {
+    QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "flush()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVideoProbe::flush, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "flush()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIDEOPROBE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "flush()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "flush()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "flush()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void videoFrameProbed( const QVideoFrame & frame )
+*/
 HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
 {
-  QVideoProbeSlots_connect_signal( "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" );
+  if( hb_pcount() == 1 )
+  {
+    QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "videoFrameProbed(QVideoFrame)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVideoProbe::videoFrameProbed, [sender](QVideoFrame arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "videoFrameProbed(QVideoFrame)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIDEOPROBE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVIDEOFRAME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "videoFrameProbed(QVideoFrame)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "videoFrameProbed(QVideoFrame)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "videoFrameProbed(QVideoFrame)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

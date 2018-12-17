@@ -51,6 +51,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMetaDataWriterControl>
@@ -203,26 +204,264 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
   }
 }
 
-void QMetaDataWriterControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void metaDataChanged()
+*/
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
 {
-  QMetaDataWriterControlSlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "metaDataChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<>::of(&QMetaDataWriterControl::metaDataChanged), [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMETADATAWRITERCONTROL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "metaDataChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "metaDataChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "metaDataChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void metaDataChanged( const QString & key, const QVariant & value )
+*/
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
 {
-  QMetaDataWriterControlSlots_connect_signal( "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" );
+  if( hb_pcount() == 1 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &,const QVariant &>::of(&QMetaDataWriterControl::metaDataChanged), [sender](QString arg1, QVariant arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged(QString,QVariant)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMETADATAWRITERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QVARIANT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "metaDataChanged(QString,QVariant)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "metaDataChanged(QString,QVariant)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "metaDataChanged(QString,QVariant)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void writableChanged( bool writable )
+*/
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
 {
-  QMetaDataWriterControlSlots_connect_signal( "writableChanged(bool)", "writableChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "writableChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMetaDataWriterControl::writableChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "writableChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMETADATAWRITERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "writableChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "writableChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "writableChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void metaDataAvailableChanged( bool available )
+*/
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
 {
-  QMetaDataWriterControlSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMetaDataWriterControl::metaDataAvailableChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataAvailableChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMETADATAWRITERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "metaDataAvailableChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "metaDataAvailableChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "metaDataAvailableChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

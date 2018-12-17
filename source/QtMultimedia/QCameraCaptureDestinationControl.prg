@@ -45,6 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraCaptureDestinationControl>
@@ -148,11 +149,69 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCameraCaptureDestinationControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
+*/
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
 {
-  QCameraCaptureDestinationControlSlots_connect_signal( "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraCaptureDestinationControl * sender = (QCameraCaptureDestinationControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraCaptureDestinationControl::captureDestinationChanged, [sender](QCameraImageCapture::CaptureDestinations arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERACAPTUREDESTINATIONCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraCaptureDestinationControl * sender = (QCameraCaptureDestinationControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -60,6 +60,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaRecorderControl>
@@ -364,41 +365,461 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMediaRecorderControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void actualLocationChanged( const QUrl & location )
+*/
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED )
 {
-  QMediaRecorderControlSlots_connect_signal( "actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "actualLocationChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorderControl::actualLocationChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "actualLocationChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIARECORDERCONTROL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "actualLocationChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "actualLocationChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "actualLocationChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void durationChanged( qint64 duration )
+*/
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONDURATIONCHANGED )
 {
-  QMediaRecorderControlSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "durationChanged(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorderControl::durationChanged, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIARECORDERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "durationChanged(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "durationChanged(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "durationChanged(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void error( int error, const QString & errorString )
+*/
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONERROR )
 {
-  QMediaRecorderControlSlots_connect_signal( "error(int,QString)", "error(int,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(int,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorderControl::error, [sender](int arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIARECORDERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(int,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(int,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(int,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mutedChanged( bool muted )
+*/
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONMUTEDCHANGED )
 {
-  QMediaRecorderControlSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mutedChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorderControl::mutedChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIARECORDERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mutedChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mutedChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mutedChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QMediaRecorder::State state )
+*/
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATECHANGED )
 {
-  QMediaRecorderControlSlots_connect_signal( "stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QMediaRecorder::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorderControl::stateChanged, [sender](QMediaRecorder::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QMediaRecorder::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIARECORDERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QMediaRecorder::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QMediaRecorder::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QMediaRecorder::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void statusChanged( QMediaRecorder::Status status )
+*/
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATUSCHANGED )
 {
-  QMediaRecorderControlSlots_connect_signal( "statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusChanged(QMediaRecorder::Status)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorderControl::statusChanged, [sender](QMediaRecorder::Status arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QMediaRecorder::Status)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIARECORDERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusChanged(QMediaRecorder::Status)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusChanged(QMediaRecorder::Status)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QMediaRecorder::Status)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void volumeChanged( qreal gain )
+*/
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
 {
-  QMediaRecorderControlSlots_connect_signal( "volumeChanged(qreal)", "volumeChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "volumeChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorderControl::volumeChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIARECORDERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "volumeChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "volumeChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "volumeChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

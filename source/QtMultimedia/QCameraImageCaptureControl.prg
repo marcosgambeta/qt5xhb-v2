@@ -53,6 +53,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraImageCaptureControl>
@@ -206,41 +207,473 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCameraImageCaptureControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void error( int id, int error, const QString & errorString )
+*/
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "error(int,int,QString)", "error(int,int,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(int,int,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::error, [sender](int arg1, int arg2, QString arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,int,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(int,int,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(int,int,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(int,int,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void imageAvailable( int requestId, const QVideoFrame & buffer )
+*/
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "imageAvailable(int,QVideoFrame)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageAvailable, [sender](int arg1, QVideoFrame arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageAvailable(int,QVideoFrame)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QVIDEOFRAME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "imageAvailable(int,QVideoFrame)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "imageAvailable(int,QVideoFrame)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "imageAvailable(int,QVideoFrame)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void imageCaptured( int requestId, const QImage & preview )
+*/
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageCaptured(int,QImage)", "imageCaptured(int,QImage)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "imageCaptured(int,QImage)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageCaptured, [sender](int arg1, QImage arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageCaptured(int,QImage)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QIMAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "imageCaptured(int,QImage)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "imageCaptured(int,QImage)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "imageCaptured(int,QImage)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void imageExposed( int requestId )
+*/
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageExposed(int)", "imageExposed(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "imageExposed(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageExposed, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageExposed(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "imageExposed(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "imageExposed(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "imageExposed(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void imageMetadataAvailable( int id, const QString & key, const QVariant & value )
+*/
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "imageMetadataAvailable(int,QString,QVariant)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageMetadataAvailable, [sender](int arg1, QString arg2, QVariant arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageMetadataAvailable(int,QString,QVariant)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg3 = Signals2_return_object( (void *) &arg3, "QVARIANT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "imageMetadataAvailable(int,QString,QVariant)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "imageMetadataAvailable(int,QString,QVariant)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "imageMetadataAvailable(int,QString,QVariant)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void imageSaved( int requestId, const QString & fileName )
+*/
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageSaved(int,QString)", "imageSaved(int,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "imageSaved(int,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageSaved, [sender](int arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageSaved(int,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "imageSaved(int,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "imageSaved(int,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "imageSaved(int,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void readyForCaptureChanged( bool ready )
+*/
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "readyForCaptureChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::readyForCaptureChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyForCaptureChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "readyForCaptureChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraImageCaptureControl * sender = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "readyForCaptureChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "readyForCaptureChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

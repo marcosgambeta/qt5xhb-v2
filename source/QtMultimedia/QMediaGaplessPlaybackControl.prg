@@ -50,6 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaGaplessPlaybackControl>
@@ -204,21 +205,197 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMediaGaplessPlaybackControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void advancedToNextMedia()
+*/
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
 {
-  QMediaGaplessPlaybackControlSlots_connect_signal( "advancedToNextMedia()", "advancedToNextMedia()" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "advancedToNextMedia()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaGaplessPlaybackControl::advancedToNextMedia, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "advancedToNextMedia()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "advancedToNextMedia()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "advancedToNextMedia()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "advancedToNextMedia()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void crossfadeTimeChanged( qreal crossfadeTime )
+*/
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
 {
-  QMediaGaplessPlaybackControlSlots_connect_signal( "crossfadeTimeChanged(qreal)", "crossfadeTimeChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "crossfadeTimeChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaGaplessPlaybackControl::crossfadeTimeChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "crossfadeTimeChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "crossfadeTimeChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "crossfadeTimeChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "crossfadeTimeChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void nextMediaChanged( const QMediaContent & media )
+*/
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
 {
-  QMediaGaplessPlaybackControlSlots_connect_signal( "nextMediaChanged(QMediaContent)", "nextMediaChanged(QMediaContent)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "nextMediaChanged(QMediaContent)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaGaplessPlaybackControl::nextMediaChanged, [sender](QMediaContent arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "nextMediaChanged(QMediaContent)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMEDIACONTENT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "nextMediaChanged(QMediaContent)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "nextMediaChanged(QMediaContent)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "nextMediaChanged(QMediaContent)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

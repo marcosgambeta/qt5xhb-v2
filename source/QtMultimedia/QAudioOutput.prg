@@ -66,6 +66,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAudioOutput>
@@ -649,16 +650,132 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
   }
 }
 
-void QAudioOutputSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void notify()
+*/
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
 {
-  QAudioOutputSlots_connect_signal( "notify()", "notify()" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "notify()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioOutput::notify, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "notify()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIOOUTPUT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "notify()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "notify()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "notify()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QAudio::State state )
+*/
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
 {
-  QAudioOutputSlots_connect_signal( "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QAudio::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioOutput::stateChanged, [sender](QAudio::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAudio::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIOOUTPUT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QAudio::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QAudio::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QAudio::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -50,6 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraExposureControl>
@@ -232,21 +233,199 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
   }
 }
 
-void QCameraExposureControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void actualValueChanged( int parameter )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
 {
-  QCameraExposureControlSlots_connect_signal( "actualValueChanged(int)", "actualValueChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "actualValueChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposureControl::actualValueChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "actualValueChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "actualValueChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "actualValueChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "actualValueChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void parameterRangeChanged( int parameter )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
 {
-  QCameraExposureControlSlots_connect_signal( "parameterRangeChanged(int)", "parameterRangeChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "parameterRangeChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposureControl::parameterRangeChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "parameterRangeChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "parameterRangeChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "parameterRangeChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "parameterRangeChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void requestedValueChanged( int parameter )
+*/
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 {
-  QCameraExposureControlSlots_connect_signal( "requestedValueChanged(int)", "requestedValueChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "requestedValueChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposureControl::requestedValueChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "requestedValueChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAEXPOSURECONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "requestedValueChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "requestedValueChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "requestedValueChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

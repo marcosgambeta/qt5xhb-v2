@@ -56,6 +56,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraFocusControl>
@@ -337,26 +338,262 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSPOINTMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCameraFocusControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void customFocusPointChanged( const QPointF & point )
+*/
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
 {
-  QCameraFocusControlSlots_connect_signal( "customFocusPointChanged(QPointF)", "customFocusPointChanged(QPointF)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "customFocusPointChanged(QPointF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::customFocusPointChanged, [sender](QPointF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "customFocusPointChanged(QPointF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAFOCUSCONTROL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "customFocusPointChanged(QPointF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "customFocusPointChanged(QPointF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "customFocusPointChanged(QPointF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void focusModeChanged( QCameraFocus::FocusModes mode )
+*/
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
 {
-  QCameraFocusControlSlots_connect_signal( "focusModeChanged(QCameraFocus::FocusModes)", "focusModeChanged(QCameraFocus::FocusModes)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "focusModeChanged(QCameraFocus::FocusModes)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::focusModeChanged, [sender](QCameraFocus::FocusModes arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "focusModeChanged(QCameraFocus::FocusModes)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAFOCUSCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "focusModeChanged(QCameraFocus::FocusModes)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "focusModeChanged(QCameraFocus::FocusModes)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "focusModeChanged(QCameraFocus::FocusModes)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void focusPointModeChanged( QCameraFocus::FocusPointMode mode )
+*/
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
 {
-  QCameraFocusControlSlots_connect_signal( "focusPointModeChanged(QCameraFocus::FocusPointMode)", "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::focusPointModeChanged, [sender](QCameraFocus::FocusPointMode arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAFOCUSCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void focusZonesChanged()
+*/
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
 {
-  QCameraFocusControlSlots_connect_signal( "focusZonesChanged()", "focusZonesChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "focusZonesChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::focusZonesChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "focusZonesChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAFOCUSCONTROL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "focusZonesChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "focusZonesChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "focusZonesChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

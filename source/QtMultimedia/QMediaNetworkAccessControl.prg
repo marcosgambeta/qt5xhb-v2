@@ -45,6 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaNetworkAccessControl>
@@ -133,11 +134,69 @@ for (i1=0;i1<nLen1;i1++)
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMediaNetworkAccessControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void configurationChanged( const QNetworkConfiguration & configuration )
+*/
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 {
-  QMediaNetworkAccessControlSlots_connect_signal( "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaNetworkAccessControl * sender = (QMediaNetworkAccessControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "configurationChanged(QNetworkConfiguration)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaNetworkAccessControl::configurationChanged, [sender](QNetworkConfiguration arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationChanged(QNetworkConfiguration)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIANETWORKACCESSCONTROL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "configurationChanged(QNetworkConfiguration)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaNetworkAccessControl * sender = (QMediaNetworkAccessControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "configurationChanged(QNetworkConfiguration)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "configurationChanged(QNetworkConfiguration)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

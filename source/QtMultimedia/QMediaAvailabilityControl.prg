@@ -43,6 +43,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaAvailabilityControl>
@@ -96,11 +97,69 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
   }
 }
 
-void QMediaAvailabilityControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void availabilityChanged( QMultimedia::AvailabilityStatus availability )
+*/
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
 {
-  QMediaAvailabilityControlSlots_connect_signal( "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaAvailabilityControl * sender = (QMediaAvailabilityControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaAvailabilityControl::availabilityChanged, [sender](QMultimedia::AvailabilityStatus arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAAVAILABILITYCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaAvailabilityControl * sender = (QMediaAvailabilityControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

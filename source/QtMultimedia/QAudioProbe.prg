@@ -46,6 +46,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAudioProbe>
@@ -156,16 +157,132 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
   }
 }
 
-void QAudioProbeSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void audioBufferProbed( const QAudioBuffer & buffer )
+*/
 HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 {
-  QAudioProbeSlots_connect_signal( "audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "audioBufferProbed(QAudioBuffer)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioProbe::audioBufferProbed, [sender](QAudioBuffer arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "audioBufferProbed(QAudioBuffer)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIOPROBE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QAUDIOBUFFER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "audioBufferProbed(QAudioBuffer)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "audioBufferProbed(QAudioBuffer)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "audioBufferProbed(QAudioBuffer)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void flush()
+*/
 HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
 {
-  QAudioProbeSlots_connect_signal( "flush()", "flush()" );
+  if( hb_pcount() == 1 )
+  {
+    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "flush()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAudioProbe::flush, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "flush()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIOPROBE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "flush()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "flush()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "flush()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -80,6 +80,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaPlayerControl>
@@ -656,76 +657,916 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_VOLUME )
   }
 }
 
-void QMediaPlayerControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void audioAvailableChanged( bool audio )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "audioAvailableChanged(bool)", "audioAvailableChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "audioAvailableChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::audioAvailableChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "audioAvailableChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "audioAvailableChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "audioAvailableChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "audioAvailableChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void availablePlaybackRangesChanged( const QMediaTimeRange & ranges )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "availablePlaybackRangesChanged(QMediaTimeRange)", "availablePlaybackRangesChanged(QMediaTimeRange)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "availablePlaybackRangesChanged(QMediaTimeRange)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::availablePlaybackRangesChanged, [sender](QMediaTimeRange arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "availablePlaybackRangesChanged(QMediaTimeRange)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMEDIATIMERANGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "availablePlaybackRangesChanged(QMediaTimeRange)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "availablePlaybackRangesChanged(QMediaTimeRange)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "availablePlaybackRangesChanged(QMediaTimeRange)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void bufferStatusChanged( int progress )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "bufferStatusChanged(int)", "bufferStatusChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "bufferStatusChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::bufferStatusChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferStatusChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "bufferStatusChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "bufferStatusChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "bufferStatusChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void durationChanged( qint64 duration )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "durationChanged(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::durationChanged, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "durationChanged(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "durationChanged(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "durationChanged(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void error( int error, const QString & errorString )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
 {
-  QMediaPlayerControlSlots_connect_signal( "error(int,QString)", "error(int,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(int,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::error, [sender](int arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(int,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(int,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(int,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mediaChanged( const QMediaContent & content )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "mediaChanged(QMediaContent)", "mediaChanged(QMediaContent)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mediaChanged(QMediaContent)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::mediaChanged, [sender](QMediaContent arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaChanged(QMediaContent)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMEDIACONTENT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mediaChanged(QMediaContent)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mediaChanged(QMediaContent)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mediaChanged(QMediaContent)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mediaStatusChanged( QMediaPlayer::MediaStatus status )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "mediaStatusChanged(QMediaPlayer::MediaStatus)", "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::mediaStatusChanged, [sender](QMediaPlayer::MediaStatus arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void mutedChanged( bool mute )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "mutedChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::mutedChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "mutedChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "mutedChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "mutedChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void playbackRateChanged( qreal rate )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "playbackRateChanged(qreal)", "playbackRateChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "playbackRateChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::playbackRateChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "playbackRateChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "playbackRateChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "playbackRateChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "playbackRateChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void positionChanged( qint64 position )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "positionChanged(qint64)", "positionChanged(qint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "positionChanged(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::positionChanged, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "positionChanged(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "positionChanged(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "positionChanged(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void seekableChanged( bool seekable )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "seekableChanged(bool)", "seekableChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "seekableChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::seekableChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "seekableChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "seekableChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "seekableChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "seekableChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QMediaPlayer::State state )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "stateChanged(QMediaPlayer::State)", "stateChanged(QMediaPlayer::State)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QMediaPlayer::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::stateChanged, [sender](QMediaPlayer::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QMediaPlayer::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QMediaPlayer::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QMediaPlayer::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QMediaPlayer::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void videoAvailableChanged( bool video )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "videoAvailableChanged(bool)", "videoAvailableChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "videoAvailableChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::videoAvailableChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "videoAvailableChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "videoAvailableChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "videoAvailableChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "videoAvailableChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void volumeChanged( int volume )
+*/
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
 {
-  QMediaPlayerControlSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "volumeChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::volumeChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "volumeChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMediaPlayerControl * sender = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "volumeChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "volumeChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

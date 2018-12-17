@@ -45,6 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraCaptureBufferFormatControl>
@@ -157,11 +158,69 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
   }
 }
 
-void QCameraCaptureBufferFormatControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void bufferFormatChanged( QVideoFrame::PixelFormat format )
+*/
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 {
-  QCameraCaptureBufferFormatControlSlots_connect_signal( "bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+  if( hb_pcount() == 1 )
+  {
+    QCameraCaptureBufferFormatControl * sender = (QCameraCaptureBufferFormatControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCameraCaptureBufferFormatControl::bufferFormatChanged, [sender](QVideoFrame::PixelFormat arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCameraCaptureBufferFormatControl * sender = (QCameraCaptureBufferFormatControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

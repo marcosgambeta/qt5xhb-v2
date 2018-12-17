@@ -30,6 +30,11 @@ CLASS QAbstractVideoSurface INHERIT QObject
    METHOD stop
    METHOD surfaceFormat
 
+   METHOD onActiveChanged
+   METHOD onSurfaceFormatChanged
+   METHOD onSupportedFormatsChanged
+   METHOD onNativeResolutionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,6 +56,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractVideoSurface>
@@ -315,5 +321,262 @@ void setError(Error error) [protected]
 void setNativeResolution(const QSize &resolution) [protected]
 */
 
-#pragma ENDDUMP
+/*
+void activeChanged(bool active)
+*/
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::activeChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void surfaceFormatChanged(const QVideoSurfaceFormat &format)
+*/
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::surfaceFormatChanged, [sender](QVideoSurfaceFormat arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVIDEOSURFACEFORMAT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "surfaceFormatChanged(QVideoSurfaceFormat)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void supportedFormatsChanged()
+*/
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "supportedFormatsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::supportedFormatsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "supportedFormatsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "supportedFormatsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "supportedFormatsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "supportedFormatsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void nativeResolutionChanged(const QSize &)
+*/
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "nativeResolutionChanged(QSize)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::nativeResolutionChanged, [sender](QSize arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "nativeResolutionChanged(QSize)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "nativeResolutionChanged(QSize)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "nativeResolutionChanged(QSize)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "nativeResolutionChanged(QSize)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+#pragma ENDDUMP

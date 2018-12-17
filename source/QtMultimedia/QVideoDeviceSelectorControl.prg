@@ -50,6 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QVideoDeviceSelectorControl>
@@ -225,21 +226,197 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QVideoDeviceSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void devicesChanged()
+*/
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
 {
-  QVideoDeviceSelectorControlSlots_connect_signal( "devicesChanged()", "devicesChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "devicesChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVideoDeviceSelectorControl::devicesChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "devicesChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIDEODEVICESELECTORCONTROL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "devicesChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "devicesChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "devicesChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectedDeviceChanged( int index )
+*/
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
 {
-  QVideoDeviceSelectorControlSlots_connect_signal( "selectedDeviceChanged(int)", "selectedDeviceChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedDeviceChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged), [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedDeviceChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIDEODEVICESELECTORCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedDeviceChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedDeviceChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedDeviceChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectedDeviceChanged( const QString & name )
+*/
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
 {
-  QVideoDeviceSelectorControlSlots_connect_signal( "selectedDeviceChanged(QString)", "selectedDeviceChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedDeviceChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged), [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedDeviceChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIDEODEVICESELECTORCONTROL" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedDeviceChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedDeviceChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedDeviceChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
