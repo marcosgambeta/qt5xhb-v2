@@ -51,6 +51,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -227,23 +228,137 @@ HB_FUNC_STATIC( QPLACEREPLY_ABORT )
 #endif
 }
 
-void QPlaceReplySlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished()
+*/
 HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReplySlots_connect_signal( "finished()", "finished()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceReply::finished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void error( QPlaceReply::Error error, const QString & errorString = QString() )
+*/
 HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReplySlots_connect_signal( "error(QPlaceReply::Error,QString)", "error(QPlaceReply::Error,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QPlaceReply::Error,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error), [sender](QPlaceReply::Error arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QPlaceReply::Error,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEREPLY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QPlaceReply::Error,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QPlaceReply::Error,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QPlaceReply::Error,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

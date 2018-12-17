@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -458,23 +459,141 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_MEASUREMENTSYSTEM )
 #endif
 }
 
-void QGeoRoutingManagerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished( QGeoRouteReply * reply )
+*/
 HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoutingManagerSlots_connect_signal( "finished(QGeoRouteReply*)", "finished(QGeoRouteReply*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(QGeoRouteReply*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGeoRoutingManager::finished, [sender](QGeoRouteReply* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QGeoRouteReply*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTINGMANAGER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOROUTEREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(QGeoRouteReply*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(QGeoRouteReply*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(QGeoRouteReply*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
+*/
 HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoutingManagerSlots_connect_signal( "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGeoRoutingManager::error, [sender](QGeoRouteReply* arg1, QGeoRouteReply::Error arg2, QString arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTINGMANAGER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOROUTEREPLY" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

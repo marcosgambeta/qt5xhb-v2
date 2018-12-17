@@ -54,6 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -286,23 +287,137 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
 #endif
 }
 
-void QGeoRouteReplySlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished()
+*/
 HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReplySlots_connect_signal( "finished()", "finished()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGeoRouteReply::finished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTEREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void error( QGeoRouteReply::Error error, const QString & errorString = QString() )
+*/
 HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReplySlots_connect_signal( "error(QGeoRouteReply::Error,QString)", "error(QGeoRouteReply::Error,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QGeoRouteReply::Error,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QGeoRouteReply::Error,const QString &>::of(&QGeoRouteReply::error), [sender](QGeoRouteReply::Error arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoRouteReply::Error,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTEREPLY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QGeoRouteReply::Error,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QGeoRouteReply::Error,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QGeoRouteReply::Error,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

@@ -83,6 +83,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -712,86 +713,614 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MATCHINGPLACES )
 #endif
 }
 
-void QPlaceManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished( QPlaceReply * reply )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "finished(QPlaceReply*)", "finished(QPlaceReply*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(QPlaceReply*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::finished, [sender](QPlaceReply* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QPlaceReply*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(QPlaceReply*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(QPlaceReply*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(QPlaceReply*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "error(QPlaceReply*,QPlaceReply::Error,QString)", "error(QPlaceReply*,QPlaceReply::Error,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::error, [sender](QPlaceReply* arg1, QPlaceReply::Error arg2, QString arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void placeAdded( const QString & placeId )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "placeAdded(QString)", "placeAdded(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "placeAdded(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::placeAdded, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "placeAdded(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "placeAdded(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "placeAdded(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "placeAdded(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void placeUpdated( const QString & placeId )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "placeUpdated(QString)", "placeUpdated(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "placeUpdated(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::placeUpdated, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "placeUpdated(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "placeUpdated(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "placeUpdated(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "placeUpdated(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void placeRemoved( const QString & placeId )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "placeRemoved(QString)", "placeRemoved(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "placeRemoved(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::placeRemoved, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "placeRemoved(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "placeRemoved(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "placeRemoved(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "placeRemoved(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void categoryAdded( const QPlaceCategory & category, const QString & parentCategoryId )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "categoryAdded(QPlaceCategory,QString)", "categoryAdded(QPlaceCategory,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "categoryAdded(QPlaceCategory,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::categoryAdded, [sender](QPlaceCategory arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryAdded(QPlaceCategory,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPLACECATEGORY" );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "categoryAdded(QPlaceCategory,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "categoryAdded(QPlaceCategory,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "categoryAdded(QPlaceCategory,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void categoryUpdated( const QPlaceCategory & category, const QString & parentCategoryId )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "categoryUpdated(QPlaceCategory,QString)", "categoryUpdated(QPlaceCategory,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "categoryUpdated(QPlaceCategory,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::categoryUpdated, [sender](QPlaceCategory arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryUpdated(QPlaceCategory,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPLACECATEGORY" );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "categoryUpdated(QPlaceCategory,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "categoryUpdated(QPlaceCategory,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "categoryUpdated(QPlaceCategory,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void categoryRemoved( const QString & categoryId, const QString & parentCategoryId )
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "categoryRemoved(QString,QString)", "categoryRemoved(QString,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "categoryRemoved(QString,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::categoryRemoved, [sender](QString arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryRemoved(QString,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "categoryRemoved(QString,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "categoryRemoved(QString,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "categoryRemoved(QString,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void dataChanged()
+*/
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONDATACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal( "dataChanged()", "dataChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::dataChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGERENGINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPlaceManagerEngine * sender = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
