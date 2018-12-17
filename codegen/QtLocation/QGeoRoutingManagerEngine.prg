@@ -71,14 +71,15 @@ $method=5,4,0|void|setMeasurementSystem|QLocale::MeasurementSystem
 $prototype=QLocale::MeasurementSystem measurementSystem() const
 $method=5,4,0|QLocale::MeasurementSystem|measurementSystem|
 
-$beginSignals
-$signal=5,4,0|finished(QGeoRouteReply*)
-$signal=5,4,0|error(QGeoRouteReply*,QGeoRouteReply::Error,QString)
-$endSignals
+%% $beginSignals
+%% $signal=5,4,0|finished(QGeoRouteReply*)
+%% $signal=5,4,0|error(QGeoRouteReply*,QGeoRouteReply::Error,QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,4,0|finished( QGeoRouteReply * reply )
-$signal=5,4,0|error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
-$endSlotsClass
+$prototype=void finished( QGeoRouteReply * reply )
+$signalMethod=5,4,0|void|finished|QGeoRouteReply*
+
+$prototype=void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
+$signalMethod=5,4,0|void|error|QGeoRouteReply*,QGeoRouteReply::Error,QString
 
 #pragma ENDDUMP

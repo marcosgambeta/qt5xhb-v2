@@ -50,14 +50,15 @@ $method=5,4,0|QList<QGeoRoute>|routes|
 $prototype=virtual void abort()
 $virtualMethod=5,4,0|void|abort|
 
-$beginSignals
-$signal=5,4,0|finished()
-$signal=5,4,0|error(QGeoRouteReply::Error,QString)
-$endSignals
+%% $beginSignals
+%% $signal=5,4,0|finished()
+%% $signal=5,4,0|error(QGeoRouteReply::Error,QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,4,0|finished()
-$signal=5,4,0|error( QGeoRouteReply::Error error, const QString & errorString = QString() )
-$endSlotsClass
+$prototype=void finished()
+$signalMethod=5,4,0|void|finished|
+
+$prototype=void error( QGeoRouteReply::Error error, const QString & errorString = QString() )
+$signalMethod=5,4,0|void|error,error,QOverload<QGeoRouteReply::Error COMMA const QString &>|QGeoRouteReply::Error,QString
 
 #pragma ENDDUMP

@@ -72,14 +72,15 @@ $method=5,4,0|void|setLocale|const QLocale &
 $prototype=QLocale locale() const
 $method=5,4,0|QLocale|locale|
 
-$beginSignals
-$signal=5,4,0|finished(QGeoCodeReply*)
-$signal=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
-$endSignals
+%% $beginSignals
+%% $signal=5,4,0|finished(QGeoCodeReply*)
+%% $signal=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,4,0|finished( QGeoCodeReply * reply )
-$signal=5,4,0|error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() )
-$endSlotsClass
+$prototype=void finished( QGeoCodeReply * reply )
+$signalMethod=5,4,0|void|finished|QGeoCodeReply*
+
+$prototype=void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() )
+$signalMethod=5,4,0|void|error|QGeoCodeReply*,QGeoCodeReply::Error,QString
 
 #pragma ENDDUMP

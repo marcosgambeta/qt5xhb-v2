@@ -91,28 +91,43 @@ $virtualMethod=5,4,0|QPlace|compatiblePlace|const QPlace &
 $prototype=virtual QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request)
 $virtualMethod=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
 
-$beginSignals
-$signal=5,4,0|finished(QPlaceReply*)
-$signal=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
-$signal=5,4,0|placeAdded(QString)
-$signal=5,4,0|placeUpdated(QString)
-$signal=5,4,0|placeRemoved(QString)
-$signal=5,4,0|categoryAdded(QPlaceCategory,QString)
-$signal=5,4,0|categoryUpdated(QPlaceCategory,QString)
-$signal=5,4,0|categoryRemoved(QString,QString)
-$signal=5,4,0|dataChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,4,0|finished(QPlaceReply*)
+%% $signal=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
+%% $signal=5,4,0|placeAdded(QString)
+%% $signal=5,4,0|placeUpdated(QString)
+%% $signal=5,4,0|placeRemoved(QString)
+%% $signal=5,4,0|categoryAdded(QPlaceCategory,QString)
+%% $signal=5,4,0|categoryUpdated(QPlaceCategory,QString)
+%% $signal=5,4,0|categoryRemoved(QString,QString)
+%% $signal=5,4,0|dataChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,4,0|finished( QPlaceReply * reply )
-$signal=5,4,0|error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() )
-$signal=5,4,0|placeAdded( const QString & placeId )
-$signal=5,4,0|placeUpdated( const QString & placeId )
-$signal=5,4,0|placeRemoved( const QString & placeId )
-$signal=5,4,0|categoryAdded( const QPlaceCategory & category, const QString & parentCategoryId )
-$signal=5,4,0|categoryUpdated( const QPlaceCategory & category, const QString & parentCategoryId )
-$signal=5,4,0|categoryRemoved( const QString & categoryId, const QString & parentCategoryId )
-$signal=5,4,0|dataChanged()
-$endSlotsClass
+$prototype=void finished( QPlaceReply * reply )
+$signalMethod=5,4,0|void|finished|QPlaceReply*
+
+$prototype=void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() )
+$signalMethod=5,4,0|void|error|QPlaceReply*,QPlaceReply::Error,QString
+
+$prototype=void placeAdded( const QString & placeId )
+$signalMethod=5,4,0|void|placeAdded|QString
+
+$prototype=void placeUpdated( const QString & placeId )
+$signalMethod=5,4,0|void|placeUpdated|QString
+
+$prototype=void placeRemoved( const QString & placeId )
+$signalMethod=5,4,0|void|placeRemoved|QString
+
+$prototype=void categoryAdded( const QPlaceCategory & category, const QString & parentCategoryId )
+$signalMethod=5,4,0|void|categoryAdded|QPlaceCategory,QString
+
+$prototype=void categoryUpdated( const QPlaceCategory & category, const QString & parentCategoryId )
+$signalMethod=5,4,0|void|categoryUpdated|QPlaceCategory,QString
+
+$prototype=void categoryRemoved( const QString & categoryId, const QString & parentCategoryId )
+$signalMethod=5,4,0|void|categoryRemoved|QString,QString
+
+$prototype=void dataChanged()
+$signalMethod=5,4,0|void|dataChanged|
 
 #pragma ENDDUMP

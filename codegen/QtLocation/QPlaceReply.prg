@@ -47,14 +47,15 @@ $method=5,4,0|QPlaceReply::Error|error|
 $prototype=virtual void abort()
 $virtualMethod=5,4,0|void|abort|
 
-$beginSignals
-$signal=5,4,0|finished()
-$signal=5,4,0|error(QPlaceReply::Error,QString)
-$endSignals
+%% $beginSignals
+%% $signal=5,4,0|finished()
+%% $signal=5,4,0|error(QPlaceReply::Error,QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,4,0|finished()
-$signal=5,4,0|error( QPlaceReply::Error error, const QString & errorString = QString() )
-$endSlotsClass
+$prototype=void finished()
+$signalMethod=5,4,0|void|finished|
+
+$prototype=void error( QPlaceReply::Error error, const QString & errorString = QString() )
+$signalMethod=5,4,0|void|error,error,QOverload<QPlaceReply::Error COMMA const QString &>|QPlaceReply::Error,QString
 
 #pragma ENDDUMP
