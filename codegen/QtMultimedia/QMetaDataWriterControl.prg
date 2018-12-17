@@ -47,20 +47,25 @@ $virtualMethod=|void|setMetaData|const QString &,const QVariant &
 $prototype=virtual QStringList availableMetaData() const = 0
 $virtualMethod=|QStringList|availableMetaData|
 
-$beginSignals
-$beginGroup
-$signal=|metaDataChanged()
-$signal=|metaDataChanged(QString,QVariant)
-$endGroup
-$signal=|writableChanged(bool)
-$signal=|metaDataAvailableChanged(bool)
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|metaDataChanged()
+%% $signal=|metaDataChanged(QString,QVariant)
+%% $endGroup
+%% $signal=|writableChanged(bool)
+%% $signal=|metaDataAvailableChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|metaDataChanged()
-$signal=|metaDataChanged( const QString & key, const QVariant & value )
-$signal=|writableChanged( bool writable )
-$signal=|metaDataAvailableChanged( bool available )
-$endSlotsClass
+$prototype=void metaDataChanged()
+$signalMethod=|void|metaDataChanged,metaDataChanged1,QOverload<>|
+
+$prototype=void metaDataChanged( const QString & key, const QVariant & value )
+$signalMethod=|void|metaDataChanged,metaDataChanged2,QOverload<const QString & COMMA const QVariant &>|QString,QVariant
+
+$prototype=void writableChanged( bool writable )
+$signalMethod=|void|writableChanged|bool
+
+$prototype=void metaDataAvailableChanged( bool available )
+$signalMethod=|void|metaDataAvailableChanged|bool
 
 #pragma ENDDUMP

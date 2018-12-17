@@ -86,22 +86,31 @@ $virtualMethod=|WId|winId|
 $prototype=virtual void setWinId(WId id) = 0
 $virtualMethod=|void|setWinId|WId
 
-$beginSignals
-$signal=|fullScreenChanged(bool)
-$signal=|brightnessChanged(int)
-$signal=|contrastChanged(int)
-$signal=|hueChanged(int)
-$signal=|saturationChanged(int)
-$signal=|nativeSizeChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|fullScreenChanged(bool)
+%% $signal=|brightnessChanged(int)
+%% $signal=|contrastChanged(int)
+%% $signal=|hueChanged(int)
+%% $signal=|saturationChanged(int)
+%% $signal=|nativeSizeChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|fullScreenChanged( bool fullScreen )
-$signal=|brightnessChanged( int brightness )
-$signal=|contrastChanged( int contrast )
-$signal=|hueChanged( int hue )
-$signal=|saturationChanged( int saturation )
-$signal=|nativeSizeChanged()
-$endSlotsClass
+$prototype=void fullScreenChanged( bool fullScreen )
+$signalMethod=|void|fullScreenChanged|bool
+
+$prototype=void brightnessChanged( int brightness )
+$signalMethod=|void|brightnessChanged|int
+
+$prototype=void contrastChanged( int contrast )
+$signalMethod=|void|contrastChanged|int
+
+$prototype=void hueChanged( int hue )
+$signalMethod=|void|hueChanged|int
+
+$prototype=void saturationChanged( int saturation )
+$signalMethod=|void|saturationChanged|int
+
+$prototype=void nativeSizeChanged()
+$signalMethod=|void|nativeSizeChanged|
 
 #pragma ENDDUMP

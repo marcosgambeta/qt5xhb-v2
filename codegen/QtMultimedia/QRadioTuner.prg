@@ -167,32 +167,51 @@ $slotMethod=|void|stop|
 $prototype=QPair<int,int> frequencyRange(Band band) const
 %% TODO: QPair<int,int>
 
-$beginSignals
-$signal=|stateChanged(QRadioTuner::State)
-$signal=|bandChanged(QRadioTuner::Band)
-$signal=|frequencyChanged(int)
-$signal=|stereoStatusChanged(bool)
-$signal=|searchingChanged(bool)
-$signal=|signalStrengthChanged(int)
-$signal=|volumeChanged(int)
-$signal=|mutedChanged(bool)
-$signal=|stationFound(int,QString)
-$signal=|antennaConnectedChanged(bool)
-$signal=|error(QRadioTuner::Error)
-$endSignals
+%% $beginSignals
+%% $signal=|stateChanged(QRadioTuner::State)
+%% $signal=|bandChanged(QRadioTuner::Band)
+%% $signal=|frequencyChanged(int)
+%% $signal=|stereoStatusChanged(bool)
+%% $signal=|searchingChanged(bool)
+%% $signal=|signalStrengthChanged(int)
+%% $signal=|volumeChanged(int)
+%% $signal=|mutedChanged(bool)
+%% $signal=|stationFound(int,QString)
+%% $signal=|antennaConnectedChanged(bool)
+%% $signal=|error(QRadioTuner::Error)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|stateChanged( QRadioTuner::State state )
-$signal=|bandChanged( QRadioTuner::Band band )
-$signal=|frequencyChanged( int frequency )
-$signal=|stereoStatusChanged( bool stereo )
-$signal=|searchingChanged( bool searching )
-$signal=|signalStrengthChanged( int signalStrength )
-$signal=|volumeChanged( int volume )
-$signal=|mutedChanged( bool muted )
-$signal=|stationFound( int frequency, QString stationId )
-$signal=|antennaConnectedChanged( bool connectionStatus )
-$signal=|error( QRadioTuner::Error error )
-$endSlotsClass
+$prototype=void stateChanged( QRadioTuner::State state )
+$signalMethod=|void|stateChanged|QRadioTuner::State
+
+$prototype=void bandChanged( QRadioTuner::Band band )
+$signalMethod=|void|bandChanged|QRadioTuner::Band
+
+$prototype=void frequencyChanged( int frequency )
+$signalMethod=|void|frequencyChanged|int
+
+$prototype=void stereoStatusChanged( bool stereo )
+$signalMethod=|void|stereoStatusChanged|bool
+
+$prototype=void searchingChanged( bool searching )
+$signalMethod=|void|searchingChanged|bool
+
+$prototype=void signalStrengthChanged( int signalStrength )
+$signalMethod=|void|signalStrengthChanged|int
+
+$prototype=void volumeChanged( int volume )
+$signalMethod=|void|volumeChanged|int
+
+$prototype=void mutedChanged( bool muted )
+$signalMethod=|void|mutedChanged|bool
+
+$prototype=void stationFound( int frequency, QString stationId )
+$signalMethod=|void|stationFound|int,QString
+
+$prototype=void antennaConnectedChanged( bool connectionStatus )
+$signalMethod=|void|antennaConnectedChanged|bool
+
+$prototype=void error( QRadioTuner::Error error )
+$signalMethod=|void|error,error,QOverload<QRadioTuner::Error>|QRadioTuner::Error
 
 #pragma ENDDUMP

@@ -17,10 +17,7 @@ $beginClassFrom=QObject
 
 $addMethods
 
-%%   METHOD onActiveChanged
-%%   METHOD onNativeResolutionChanged
-%%   METHOD onSupportedFormatsChanged
-%%   METHOD onSurfaceFormatChanged
+$addSignals
 
 $endClass
 
@@ -79,10 +76,16 @@ $prototype=void setError(Error error) [protected]
 
 $prototype=void setNativeResolution(const QSize &resolution) [protected]
 
-#pragma ENDDUMP
+$prototype=void activeChanged(bool active)
+$signalMethod=|void|activeChanged|bool
 
-%% Q_SIGNALS:
-%% void activeChanged(bool active);
-%% void surfaceFormatChanged(const QVideoSurfaceFormat &format);
-%% void supportedFormatsChanged();
-%% void nativeResolutionChanged(const QSize &);
+$prototype=void surfaceFormatChanged(const QVideoSurfaceFormat &format)
+$signalMethod=|void|surfaceFormatChanged|QVideoSurfaceFormat
+
+$prototype=void supportedFormatsChanged()
+$signalMethod=|void|supportedFormatsChanged|
+
+$prototype=void nativeResolutionChanged(const QSize &)
+$signalMethod=|void|nativeResolutionChanged|QSize
+
+#pragma ENDDUMP

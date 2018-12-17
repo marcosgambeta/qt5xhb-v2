@@ -47,16 +47,19 @@ $virtualMethod=|void|setCrossfadeTime|qreal
 $prototype=virtual void setNextMedia(const QMediaContent & media) = 0
 $virtualMethod=|void|setNextMedia|const QMediaContent &
 
-$beginSignals
-$signal=|advancedToNextMedia()
-$signal=|crossfadeTimeChanged(qreal)
-$signal=|nextMediaChanged(QMediaContent)
-$endSignals
+%% $beginSignals
+%% $signal=|advancedToNextMedia()
+%% $signal=|crossfadeTimeChanged(qreal)
+%% $signal=|nextMediaChanged(QMediaContent)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|advancedToNextMedia()
-$signal=|crossfadeTimeChanged( qreal crossfadeTime )
-$signal=|nextMediaChanged( const QMediaContent & media )
-$endSlotsClass
+$prototype=void advancedToNextMedia()
+$signalMethod=|void|advancedToNextMedia|
+
+$prototype=void crossfadeTimeChanged( qreal crossfadeTime )
+$signalMethod=|void|crossfadeTimeChanged|qreal
+
+$prototype=void nextMediaChanged( const QMediaContent & media )
+$signalMethod=|void|nextMediaChanged|QMediaContent
 
 #pragma ENDDUMP

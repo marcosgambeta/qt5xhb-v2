@@ -81,26 +81,35 @@ $prototype=void removePropertyWatch(QByteArray const &name) [protected]
 
 $prototype=void setupControls() [private]
 
-$beginSignals
-$beginGroup
-$signal=|availabilityChanged(bool)
-$signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
-$endGroup
-$signal=|metaDataAvailableChanged(bool)
-$beginGroup
-$signal=|metaDataChanged()
-$signal=|metaDataChanged(QString,QVariant)
-$endGroup
-$signal=|notifyIntervalChanged(int)
-$endSignals
+%% $beginSignals
+%% $beginGroup
+%% $signal=|availabilityChanged(bool)
+%% $signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
+%% $endGroup
+%% $signal=|metaDataAvailableChanged(bool)
+%% $beginGroup
+%% $signal=|metaDataChanged()
+%% $signal=|metaDataChanged(QString,QVariant)
+%% $endGroup
+%% $signal=|notifyIntervalChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|availabilityChanged( bool available )
-$signal=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
-$signal=|metaDataAvailableChanged( bool available )
-$signal=|metaDataChanged()
-$signal=|metaDataChanged( const QString & key, const QVariant & value )
-$signal=|notifyIntervalChanged( int milliseconds )
-$endSlotsClass
+$prototype=void availabilityChanged( bool available )
+$signalMethod=|void|availabilityChanged,availabilityChanged1,QOverload<bool>|bool
+
+$prototype=void availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$signalMethod=|void|availabilityChanged,availabilityChanged2,QOverload<QMultimedia::AvailabilityStatus>|QMultimedia::AvailabilityStatus
+
+$prototype=void metaDataAvailableChanged( bool available )
+$signalMethod=|void|metaDataAvailableChanged|bool
+
+$prototype=void metaDataChanged()
+$signalMethod=|void|metaDataChanged,metaDataChanged1,QOverload<>|
+
+$prototype=void metaDataChanged( const QString & key, const QVariant & value )
+$signalMethod=|void|metaDataChanged,metaDataChanged2,QOverload<const QString & COMMA const QVariant &>|QString,QVariant
+
+$prototype=void notifyIntervalChanged( int milliseconds )
+$signalMethod=|void|notifyIntervalChanged|int
 
 #pragma ENDDUMP

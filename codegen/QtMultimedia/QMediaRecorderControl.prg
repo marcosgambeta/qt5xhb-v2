@@ -67,24 +67,35 @@ $virtualSlotMethod=|void|setState|QMediaRecorder::State
 $prototype=virtual void setVolume(qreal gain) = 0
 $virtualSlotMethod=|void|setVolume|qreal
 
-$beginSignals
-$signal=|actualLocationChanged(QUrl)
-$signal=|durationChanged(qint64)
-$signal=|error(int,QString)
-$signal=|mutedChanged(bool)
-$signal=|stateChanged(QMediaRecorder::State)
-$signal=|statusChanged(QMediaRecorder::Status)
-$signal=|volumeChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|actualLocationChanged(QUrl)
+%% $signal=|durationChanged(qint64)
+%% $signal=|error(int,QString)
+%% $signal=|mutedChanged(bool)
+%% $signal=|stateChanged(QMediaRecorder::State)
+%% $signal=|statusChanged(QMediaRecorder::Status)
+%% $signal=|volumeChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|actualLocationChanged( const QUrl & location )
-$signal=|durationChanged( qint64 duration )
-$signal=|error( int error, const QString & errorString )
-$signal=|mutedChanged( bool muted )
-$signal=|stateChanged( QMediaRecorder::State state )
-$signal=|statusChanged( QMediaRecorder::Status status )
-$signal=|volumeChanged( qreal gain )
-$endSlotsClass
+$prototype=void actualLocationChanged( const QUrl & location )
+$signalMethod=|void|actualLocationChanged|QUrl
+
+$prototype=void durationChanged( qint64 duration )
+$signalMethod=|void|durationChanged|qint64
+
+$prototype=void error( int error, const QString & errorString )
+$signalMethod=|void|error|int,QString
+
+$prototype=void mutedChanged( bool muted )
+$signalMethod=|void|mutedChanged|bool
+
+$prototype=void stateChanged( QMediaRecorder::State state )
+$signalMethod=|void|stateChanged|QMediaRecorder::State
+
+$prototype=void statusChanged( QMediaRecorder::Status status )
+$signalMethod=|void|statusChanged|QMediaRecorder::Status
+
+$prototype=void volumeChanged( qreal gain )
+$signalMethod=|void|volumeChanged|qreal
 
 #pragma ENDDUMP

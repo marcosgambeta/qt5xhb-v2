@@ -53,22 +53,31 @@ $virtualMethod=|qreal|requestedOpticalZoom|
 $prototype=virtual void zoomTo(qreal optical, qreal digital) = 0
 $virtualMethod=|void|zoomTo|qreal,qreal
 
-$beginSignals
-$signal=|currentDigitalZoomChanged(qreal)
-$signal=|currentOpticalZoomChanged(qreal)
-$signal=|maximumDigitalZoomChanged(qreal)
-$signal=|maximumOpticalZoomChanged(qreal)
-$signal=|requestedDigitalZoomChanged(qreal)
-$signal=|requestedOpticalZoomChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|currentDigitalZoomChanged(qreal)
+%% $signal=|currentOpticalZoomChanged(qreal)
+%% $signal=|maximumDigitalZoomChanged(qreal)
+%% $signal=|maximumOpticalZoomChanged(qreal)
+%% $signal=|requestedDigitalZoomChanged(qreal)
+%% $signal=|requestedOpticalZoomChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentDigitalZoomChanged( qreal zoom )
-$signal=|currentOpticalZoomChanged( qreal zoom )
-$signal=|maximumDigitalZoomChanged( qreal zoom )
-$signal=|maximumOpticalZoomChanged( qreal zoom )
-$signal=|requestedDigitalZoomChanged( qreal zoom )
-$signal=|requestedOpticalZoomChanged( qreal zoom )
-$endSlotsClass
+$prototype=void currentDigitalZoomChanged( qreal zoom )
+$signalMethod=|void|currentDigitalZoomChanged|qreal
+
+$prototype=void currentOpticalZoomChanged( qreal zoom )
+$signalMethod=|void|currentOpticalZoomChanged|qreal
+
+$prototype=void maximumDigitalZoomChanged( qreal zoom )
+$signalMethod=|void|maximumDigitalZoomChanged|qreal
+
+$prototype=void maximumOpticalZoomChanged( qreal zoom )
+$signalMethod=|void|maximumOpticalZoomChanged|qreal
+
+$prototype=void requestedDigitalZoomChanged( qreal zoom )
+$signalMethod=|void|requestedDigitalZoomChanged|qreal
+
+$prototype=void requestedOpticalZoomChanged( qreal zoom )
+$signalMethod=|void|requestedOpticalZoomChanged|qreal
 
 #pragma ENDDUMP

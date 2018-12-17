@@ -27,19 +27,22 @@ $destructor
 
 $includes
 
+#include <QAudioBuffer>
+
 $prototype=explicit QMediaAudioProbeControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QMediaAudioProbeControl()
 $deleteMethod
 
-$beginSignals
-$signal=|audioBufferProbed(QAudioBuffer)
-$signal=|flush()
-$endSignals
+%% $beginSignals
+%% $signal=|audioBufferProbed(QAudioBuffer)
+%% $signal=|flush()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|audioBufferProbed( const QAudioBuffer & buffer )
-$signal=|flush()
-$endSlotsClass
+$prototype=void audioBufferProbed( const QAudioBuffer & buffer )
+$signalMethod=|void|audioBufferProbed|QAudioBuffer
+
+$prototype=void flush()
+$signalMethod=|void|flush|
 
 #pragma ENDDUMP

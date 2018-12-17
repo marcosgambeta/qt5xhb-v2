@@ -247,30 +247,47 @@ $method=5,7,0|bool|moveMedia|int,int
 
 $prototype=bool setMediaObject(QMediaObject *object) override [protected]
 
-$beginSignals
-$signal=|currentIndexChanged(int)
-$signal=|currentMediaChanged(QMediaContent)
-$signal=|loadFailed()
-$signal=|loaded()
-$signal=|mediaAboutToBeInserted(int,int)
-$signal=|mediaAboutToBeRemoved(int,int)
-$signal=|mediaChanged(int,int)
-$signal=|mediaInserted(int,int)
-$signal=|mediaRemoved(int,int)
-$signal=|playbackModeChanged(QMediaPlaylist::PlaybackMode)
-$endSignals
+%% $beginSignals
+%% $signal=|currentIndexChanged(int)
+%% $signal=|currentMediaChanged(QMediaContent)
+%% $signal=|loadFailed()
+%% $signal=|loaded()
+%% $signal=|mediaAboutToBeInserted(int,int)
+%% $signal=|mediaAboutToBeRemoved(int,int)
+%% $signal=|mediaChanged(int,int)
+%% $signal=|mediaInserted(int,int)
+%% $signal=|mediaRemoved(int,int)
+%% $signal=|playbackModeChanged(QMediaPlaylist::PlaybackMode)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|currentIndexChanged( int position )
-$signal=|currentMediaChanged( const QMediaContent & content )
-$signal=|loadFailed()
-$signal=|loaded()
-$signal=|mediaAboutToBeInserted( int start, int end )
-$signal=|mediaAboutToBeRemoved( int start, int end )
-$signal=|mediaChanged( int start, int end )
-$signal=|mediaInserted( int start, int end )
-$signal=|mediaRemoved( int start, int end )
-$signal=|playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
-$endSlotsClass
+$prototype=void currentIndexChanged( int position )
+$signalMethod=|void|currentIndexChanged|int
+
+$prototype=void currentMediaChanged( const QMediaContent & content )
+$signalMethod=|void|currentMediaChanged|QMediaContent
+
+$prototype=void loadFailed()
+$signalMethod=|void|loadFailed|
+
+$prototype=void loaded()
+$signalMethod=|void|loaded|
+
+$prototype=void mediaAboutToBeInserted( int start, int end )
+$signalMethod=|void|mediaAboutToBeInserted|int,int
+
+$prototype=void mediaAboutToBeRemoved( int start, int end )
+$signalMethod=|void|mediaAboutToBeRemoved|int,int
+
+$prototype=void mediaChanged( int start, int end )
+$signalMethod=|void|mediaChanged|int,int
+
+$prototype=void mediaInserted( int start, int end )
+$signalMethod=|void|mediaInserted|int,int
+
+$prototype=void mediaRemoved( int start, int end )
+$signalMethod=|void|mediaRemoved|int,int
+
+$prototype=void playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
+$signalMethod=|void|playbackModeChanged|QMediaPlaylist::PlaybackMode
 
 #pragma ENDDUMP

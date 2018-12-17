@@ -62,14 +62,15 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 }
 $addMethod=setSource
 
-$beginSignals
-$signal=|audioBufferProbed(QAudioBuffer)
-$signal=|flush()
-$endSignals
+%% $beginSignals
+%% $signal=|audioBufferProbed(QAudioBuffer)
+%% $signal=|flush()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|audioBufferProbed( const QAudioBuffer & buffer )
-$signal=|flush()
-$endSlotsClass
+$prototype=void audioBufferProbed( const QAudioBuffer & buffer )
+$signalMethod=|void|audioBufferProbed|QAudioBuffer
+
+$prototype=void flush()
+$signalMethod=|void|flush|
 
 #pragma ENDDUMP

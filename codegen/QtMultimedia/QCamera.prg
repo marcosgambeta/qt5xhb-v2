@@ -281,28 +281,41 @@ $prototype=static QString deviceDescription(const QByteArray & device)
 %% TODO: #if QT_DEPRECATED_SINCE(5, 3)
 $staticMethod=|QString|deviceDescription|const QByteArray &
 
-$beginSignals
-$signal=|captureModeChanged(QCamera::CaptureModes)
-$signal=|error(QCamera::Error)
-$signal=|lockFailed()
-$beginGroup
-$signal=|lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)
-$signal=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
-$endGroup
-$signal=|locked()
-$signal=|stateChanged(QCamera::State)
-$signal=|statusChanged(QCamera::Status)
-$endSignals
+%% $beginSignals
+%% $signal=|captureModeChanged(QCamera::CaptureModes)
+%% $signal=|error(QCamera::Error)
+%% $signal=|lockFailed()
+%% $beginGroup
+%% $signal=|lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)
+%% $signal=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
+%% $endGroup
+%% $signal=|locked()
+%% $signal=|stateChanged(QCamera::State)
+%% $signal=|statusChanged(QCamera::Status)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|captureModeChanged( QCamera::CaptureModes mode )
-$signal=|error( QCamera::Error value )
-$signal=|lockFailed()
-$signal=|lockStatusChanged( QCamera::LockStatus status, QCamera::LockChangeReason reason )
-$signal=|lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
-$signal=|locked()
-$signal=|stateChanged( QCamera::State state )
-$signal=|statusChanged( QCamera::Status status )
-$endSlotsClass
+$prototype=void captureModeChanged( QCamera::CaptureModes mode )
+$signalMethod=|void|captureModeChanged|QCamera::CaptureModes
+
+$prototype=void error( QCamera::Error value )
+$signalMethod=|void|error,error,QOverload<QCamera::Error>|QCamera::Error
+
+$prototype=void lockFailed()
+$signalMethod=|void|lockFailed|
+
+$prototype=void lockStatusChanged( QCamera::LockStatus status, QCamera::LockChangeReason reason )
+$signalMethod=|void|lockStatusChanged,lockStatusChanged1,QOverload<QCamera::LockStatus COMMA QCamera::LockChangeReason>|QCamera::LockStatus,QCamera::LockChangeReason
+
+$prototype=void lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
+$signalMethod=|void|lockStatusChanged,lockStatusChanged2,QOverload<QCamera::LockType COMMA QCamera::LockStatus COMMA QCamera::LockChangeReason>|QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason
+
+$prototype=void locked()
+$signalMethod=|void|locked|
+
+$prototype=void stateChanged( QCamera::State state )
+$signalMethod=|void|stateChanged|QCamera::State
+
+$prototype=void statusChanged( QCamera::Status status )
+$signalMethod=|void|statusChanged|QCamera::Status
 
 #pragma ENDDUMP

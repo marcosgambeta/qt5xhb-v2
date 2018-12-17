@@ -138,14 +138,15 @@ $method=|void|suspend|
 $prototype=qreal volume() const
 $method=|qreal|volume|
 
-$beginSignals
-$signal=|notify()
-$signal=|stateChanged(QAudio::State)
-$endSignals
+%% $beginSignals
+%% $signal=|notify()
+%% $signal=|stateChanged(QAudio::State)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|notify()
-$signal=|stateChanged( QAudio::State state )
-$endSlotsClass
+$prototype=void notify()
+$signalMethod=|void|notify|
+
+$prototype=void stateChanged( QAudio::State state )
+$signalMethod=|void|stateChanged|QAudio::State
 
 #pragma ENDDUMP

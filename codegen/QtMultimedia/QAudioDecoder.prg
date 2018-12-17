@@ -105,28 +105,43 @@ $prototype=bool bind(QObject *) override
 
 $prototype=void unbind(QObject *) override
 
-$beginSignals
-$signal=|bufferAvailableChanged(bool)
-$signal=|bufferReady()
-$signal=|durationChanged(qint64)
-$signal=|error(QAudioDecoder::Error)
-$signal=|finished()
-$signal=|formatChanged(QAudioFormat)
-$signal=|positionChanged(qint64)
-$signal=|sourceChanged()
-$signal=|stateChanged(QAudioDecoder::State)
-$endSignals
+%% $beginSignals
+%% $signal=|bufferAvailableChanged(bool)
+%% $signal=|bufferReady()
+%% $signal=|durationChanged(qint64)
+%% $signal=|error(QAudioDecoder::Error)
+%% $signal=|finished()
+%% $signal=|formatChanged(QAudioFormat)
+%% $signal=|positionChanged(qint64)
+%% $signal=|sourceChanged()
+%% $signal=|stateChanged(QAudioDecoder::State)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|bufferAvailableChanged( bool available )
-$signal=|bufferReady()
-$signal=|durationChanged( qint64 duration )
-$signal=|error( QAudioDecoder::Error error )
-$signal=|finished()
-$signal=|formatChanged( const QAudioFormat & format )
-$signal=|positionChanged( qint64 position )
-$signal=|sourceChanged()
-$signal=|stateChanged( QAudioDecoder::State state )
-$endSlotsClass
+$prototype=void bufferAvailableChanged( bool available )
+$signalMethod=|void|bufferAvailableChanged|bool
+
+$prototype=void bufferReady()
+$signalMethod=|void|bufferReady|
+
+$prototype=void durationChanged( qint64 duration )
+$signalMethod=|void|durationChanged|qint64
+
+$prototype=void error( QAudioDecoder::Error error )
+$signalMethod=|void|error,error,QOverload<QAudioDecoder::Error>|QAudioDecoder::Error
+
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void formatChanged( const QAudioFormat & format )
+$signalMethod=|void|formatChanged|QAudioFormat
+
+$prototype=void positionChanged( qint64 position )
+$signalMethod=|void|positionChanged|qint64
+
+$prototype=void sourceChanged()
+$signalMethod=|void|sourceChanged|
+
+$prototype=void stateChanged( QAudioDecoder::State state )
+$signalMethod=|void|stateChanged|QAudioDecoder::State
 
 #pragma ENDDUMP

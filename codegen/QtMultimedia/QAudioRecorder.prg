@@ -56,14 +56,15 @@ $method=|QStringList|audioInputs|
 $prototype=QString defaultAudioInput() const
 $method=|QString|defaultAudioInput|
 
-$beginSignals
-$signal=|audioInputChanged(QString)
-$signal=|availableAudioInputsChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|audioInputChanged(QString)
+%% $signal=|availableAudioInputsChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|audioInputChanged( const QString & name )
-$signal=|availableAudioInputsChanged()
-$endSlotsClass
+$prototype=void audioInputChanged( const QString & name )
+$signalMethod=|void|audioInputChanged|QString
+
+$prototype=void availableAudioInputsChanged()
+$signalMethod=|void|availableAudioInputsChanged|
 
 #pragma ENDDUMP

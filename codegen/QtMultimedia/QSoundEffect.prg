@@ -120,28 +120,43 @@ $slotMethod=|void|stop|
 $prototype=static QStringList supportedMimeTypes()
 $staticMethod=|QStringList|supportedMimeTypes|
 
-$beginSignals
-$signal=|sourceChanged()
-$signal=|loopCountChanged()
-$signal=|loopsRemainingChanged()
-$signal=|volumeChanged()
-$signal=|mutedChanged()
-$signal=|loadedChanged()
-$signal=|playingChanged()
-$signal=|statusChanged()
-$signal=|categoryChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|sourceChanged()
+%% $signal=|loopCountChanged()
+%% $signal=|loopsRemainingChanged()
+%% $signal=|volumeChanged()
+%% $signal=|mutedChanged()
+%% $signal=|loadedChanged()
+%% $signal=|playingChanged()
+%% $signal=|statusChanged()
+%% $signal=|categoryChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|sourceChanged()
-$signal=|loopCountChanged()
-$signal=|loopsRemainingChanged()
-$signal=|volumeChanged()
-$signal=|mutedChanged()
-$signal=|loadedChanged()
-$signal=|playingChanged()
-$signal=|statusChanged()
-$signal=|categoryChanged()
-$endSlotsClass
+$prototype=void sourceChanged()
+$signalMethod=|void|sourceChanged|
+
+$prototype=void loopCountChanged()
+$signalMethod=|void|loopCountChanged|
+
+$prototype=void loopsRemainingChanged()
+$signalMethod=|void|loopsRemainingChanged|
+
+$prototype=void volumeChanged()
+$signalMethod=|void|volumeChanged|
+
+$prototype=void mutedChanged()
+$signalMethod=|void|mutedChanged|
+
+$prototype=void loadedChanged()
+$signalMethod=|void|loadedChanged|
+
+$prototype=void playingChanged()
+$signalMethod=|void|playingChanged|
+
+$prototype=void statusChanged()
+$signalMethod=|void|statusChanged|
+
+$prototype=void categoryChanged()
+$signalMethod=|void|categoryChanged|
 
 #pragma ENDDUMP

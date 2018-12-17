@@ -53,18 +53,23 @@ $virtualMethod=|QCamera::State|state|
 $prototype=virtual QCamera::Status status() const = 0
 $virtualMethod=|QCamera::Status|status|
 
-$beginSignals
-$signal=|captureModeChanged(QCamera::CaptureModes)
-$signal=|error(int,QString)
-$signal=|stateChanged(QCamera::State)
-$signal=|statusChanged(QCamera::Status)
-$endSignals
+%% $beginSignals
+%% $signal=|captureModeChanged(QCamera::CaptureModes)
+%% $signal=|error(int,QString)
+%% $signal=|stateChanged(QCamera::State)
+%% $signal=|statusChanged(QCamera::Status)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|captureModeChanged( QCamera::CaptureModes mode )
-$signal=|error( int error, const QString & errorString )
-$signal=|stateChanged( QCamera::State state )
-$signal=|statusChanged( QCamera::Status status )
-$endSlotsClass
+$prototype=void captureModeChanged( QCamera::CaptureModes mode )
+$signalMethod=|void|captureModeChanged|QCamera::CaptureModes
+
+$prototype=void error( int error, const QString & errorString )
+$signalMethod=|void|error|int,QString
+
+$prototype=void stateChanged( QCamera::State state )
+$signalMethod=|void|stateChanged|QCamera::State
+
+$prototype=void statusChanged( QCamera::Status status )
+$signalMethod=|void|statusChanged|QCamera::Status
 
 #pragma ENDDUMP

@@ -246,42 +246,71 @@ $prototype=bool bind(QObject *) override
 $prototype=void unbind(QObject *) override
 %% TODO: not present in the documentation
 
-$beginSignals
-$signal=|audioAvailableChanged(bool)
-$signal=5,6,0|audioRoleChanged(QAudio::Role)
-$signal=|bufferStatusChanged(int)
-$signal=|currentMediaChanged(QMediaContent)
-$signal=|durationChanged(qint64)
-$signal=|error(QMediaPlayer::Error)
-$signal=|mediaChanged(QMediaContent)
-$signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
-$signal=|mutedChanged(bool)
-$signal=|networkConfigurationChanged(QNetworkConfiguration)
-$signal=|playbackRateChanged(qreal)
-$signal=|positionChanged(qint64)
-$signal=|seekableChanged(bool)
-$signal=|stateChanged(QMediaPlayer::State)
-$signal=|videoAvailableChanged(bool)
-$signal=|volumeChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|audioAvailableChanged(bool)
+%% $signal=5,6,0|audioRoleChanged(QAudio::Role)
+%% $signal=|bufferStatusChanged(int)
+%% $signal=|currentMediaChanged(QMediaContent)
+%% $signal=|durationChanged(qint64)
+%% $signal=|error(QMediaPlayer::Error)
+%% $signal=|mediaChanged(QMediaContent)
+%% $signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+%% $signal=|mutedChanged(bool)
+%% $signal=|networkConfigurationChanged(QNetworkConfiguration)
+%% $signal=|playbackRateChanged(qreal)
+%% $signal=|positionChanged(qint64)
+%% $signal=|seekableChanged(bool)
+%% $signal=|stateChanged(QMediaPlayer::State)
+%% $signal=|videoAvailableChanged(bool)
+%% $signal=|volumeChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|audioAvailableChanged( bool available )
-$signal=5,6,0|audioRoleChanged( QAudio::Role role )
-$signal=|bufferStatusChanged( int percentFilled )
-$signal=|currentMediaChanged( const QMediaContent & media )
-$signal=|durationChanged( qint64 duration )
-$signal=|error( QMediaPlayer::Error error )
-$signal=|mediaChanged( const QMediaContent & media )
-$signal=|mediaStatusChanged( QMediaPlayer::MediaStatus status )
-$signal=|mutedChanged( bool muted )
-$signal=|networkConfigurationChanged( const QNetworkConfiguration & configuration )
-$signal=|playbackRateChanged( qreal rate )
-$signal=|positionChanged( qint64 position )
-$signal=|seekableChanged( bool seekable )
-$signal=|stateChanged( QMediaPlayer::State state )
-$signal=|videoAvailableChanged( bool videoAvailable )
-$signal=|volumeChanged( int volume )
-$endSlotsClass
+$prototype=void audioAvailableChanged( bool available )
+$signalMethod=|void|audioAvailableChanged|bool
+
+$prototype=void audioRoleChanged( QAudio::Role role )
+$signalMethod=5,6,0|void|audioRoleChanged|QAudio::Role
+
+$prototype=void bufferStatusChanged( int percentFilled )
+$signalMethod=|void|bufferStatusChanged|int
+
+$prototype=void currentMediaChanged( const QMediaContent & media )
+$signalMethod=|void|currentMediaChanged|QMediaContent
+
+$prototype=void durationChanged( qint64 duration )
+$signalMethod=|void|durationChanged|qint64
+
+$prototype=void error( QMediaPlayer::Error error )
+$signalMethod=|void|error,error,QOverload<QMediaPlayer::Error>|QMediaPlayer::Error
+
+$prototype=void mediaChanged( const QMediaContent & media )
+$signalMethod=|void|mediaChanged|QMediaContent
+
+$prototype=void mediaStatusChanged( QMediaPlayer::MediaStatus status )
+$signalMethod=|void|mediaStatusChanged|QMediaPlayer::MediaStatus
+
+$prototype=void mutedChanged( bool muted )
+$signalMethod=|void|mutedChanged|bool
+
+$prototype=void networkConfigurationChanged( const QNetworkConfiguration & configuration )
+$signalMethod=|void|networkConfigurationChanged|QNetworkConfiguration
+
+$prototype=void playbackRateChanged( qreal rate )
+$signalMethod=|void|playbackRateChanged|qreal
+
+$prototype=void positionChanged( qint64 position )
+$signalMethod=|void|positionChanged|qint64
+
+$prototype=void seekableChanged( bool seekable )
+$signalMethod=|void|seekableChanged|bool
+
+$prototype=void stateChanged( QMediaPlayer::State state )
+$signalMethod=|void|stateChanged|QMediaPlayer::State
+
+$prototype=void videoAvailableChanged( bool videoAvailable )
+$signalMethod=|void|videoAvailableChanged|bool
+
+$prototype=void volumeChanged( int volume )
+$signalMethod=|void|volumeChanged|int
 
 #pragma ENDDUMP

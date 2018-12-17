@@ -17,7 +17,7 @@ $beginClassFrom=QObject
 
 $addMethods
 
-%%   METHOD onActiveChanged
+$addSignals
 
 $endClass
 
@@ -50,8 +50,8 @@ $method=5,5,0|void|setActive|bool
 $prototype=virtual QVideoFilterRunnable *createFilterRunnable() = 0
 $virtualMethod=5,5,0|QVideoFilterRunnable *|createFilterRunnable|
 
+$prototype=void activeChanged()
+$signalMethod=|void|activeChanged|
+
 #pragma ENDDUMP
 
-%% TODO: implementar sinais
-%% Q_SIGNALS:
-%% void activeChanged();

@@ -197,40 +197,63 @@ $slotMethod=|void|stop|
 
 $prototype=bool setMediaObject(QMediaObject *object) override [protected]
 
-$beginSignals
-$signal=|actualLocationChanged(QUrl)
-$beginGroup
-$signal=|availabilityChanged(bool)
-$signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
-$endGroup
-$signal=|durationChanged(qint64)
-$signal=|error(QMediaRecorder::Error)
-$signal=|metaDataAvailableChanged(bool)
-$beginGroup
-$signal=|metaDataChanged()
-$signal=|metaDataChanged(QString,QVariant)
-$endGroup
-$signal=|metaDataWritableChanged(bool)
-$signal=|mutedChanged(bool)
-$signal=|stateChanged(QMediaRecorder::State)
-$signal=|statusChanged(QMediaRecorder::Status)
-$signal=|volumeChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|actualLocationChanged(QUrl)
+%% $beginGroup
+%% $signal=|availabilityChanged(bool)
+%% $signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
+%% $endGroup
+%% $signal=|durationChanged(qint64)
+%% $signal=|error(QMediaRecorder::Error)
+%% $signal=|metaDataAvailableChanged(bool)
+%% $beginGroup
+%% $signal=|metaDataChanged()
+%% $signal=|metaDataChanged(QString,QVariant)
+%% $endGroup
+%% $signal=|metaDataWritableChanged(bool)
+%% $signal=|mutedChanged(bool)
+%% $signal=|stateChanged(QMediaRecorder::State)
+%% $signal=|statusChanged(QMediaRecorder::Status)
+%% $signal=|volumeChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|actualLocationChanged( const QUrl & location )
-$signal=|availabilityChanged( bool available )
-$signal=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
-$signal=|durationChanged( qint64 duration )
-$signal=|error( QMediaRecorder::Error error )
-$signal=|metaDataAvailableChanged( bool available )
-$signal=|metaDataChanged()
-$signal=|metaDataChanged( const QString & key, const QVariant & value )
-$signal=|metaDataWritableChanged( bool writable )
-$signal=|mutedChanged( bool muted )
-$signal=|stateChanged( QMediaRecorder::State state )
-$signal=|statusChanged( QMediaRecorder::Status status )
-$signal=|volumeChanged( qreal volume )
-$endSlotsClass
+$prototype=void actualLocationChanged( const QUrl & location )
+$signalMethod=|void|actualLocationChanged|QUrl
+
+$prototype=void availabilityChanged( bool available )
+$signalMethod=|void|availabilityChanged,availabilityChanged1,QOverload<bool>|bool
+
+$prototype=void availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$signalMethod=|void|availabilityChanged,availabilityChanged2,QOverload<QMultimedia::AvailabilityStatus>|QMultimedia::AvailabilityStatus
+
+$prototype=void durationChanged( qint64 duration )
+$signalMethod=|void|durationChanged|qint64
+
+$prototype=void error( QMediaRecorder::Error error )
+$signalMethod=|void|error,error,QOverload<QMediaRecorder::Error>|QMediaRecorder::Error
+
+$prototype=void metaDataAvailableChanged( bool available )
+$signalMethod=|void|metaDataAvailableChanged|bool
+
+$prototype=void metaDataChanged()
+$signalMethod=|void|metaDataChanged,metaDataChanged1,QOverload<>|
+
+$prototype=void metaDataChanged( const QString & key, const QVariant & value )
+$signalMethod=|void|metaDataChanged,metaDataChanged2,QOverload<const QString & COMMA const QVariant &>|QString,QVariant
+
+$prototype=void metaDataWritableChanged( bool writable )
+$signalMethod=|void|metaDataWritableChanged|bool
+
+$prototype=void mutedChanged( bool muted )
+$signalMethod=|void|mutedChanged|bool
+
+$prototype=void stateChanged( QMediaRecorder::State state )
+$signalMethod=|void|stateChanged|QMediaRecorder::State
+
+$prototype=void statusChanged( QMediaRecorder::Status status )
+$signalMethod=|void|statusChanged|QMediaRecorder::Status
+
+$prototype=void volumeChanged( qreal volume )
+$signalMethod=|void|volumeChanged|qreal
 
 #pragma ENDDUMP

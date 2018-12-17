@@ -71,28 +71,43 @@ $virtualMethod=|QAudioDecoder::State|state|
 $prototype=virtual void stop() = 0
 $virtualMethod=|void|stop|
 
-$beginSignals
-$signal=|bufferAvailableChanged(bool)
-$signal=|bufferReady()
-$signal=|durationChanged(qint64)
-$signal=|error(int,QString)
-$signal=|finished()
-$signal=|formatChanged(QAudioFormat)
-$signal=|positionChanged(qint64)
-$signal=|sourceChanged()
-$signal=|stateChanged(QAudioDecoder::State)
-$endSignals
+%% $beginSignals
+%% $signal=|bufferAvailableChanged(bool)
+%% $signal=|bufferReady()
+%% $signal=|durationChanged(qint64)
+%% $signal=|error(int,QString)
+%% $signal=|finished()
+%% $signal=|formatChanged(QAudioFormat)
+%% $signal=|positionChanged(qint64)
+%% $signal=|sourceChanged()
+%% $signal=|stateChanged(QAudioDecoder::State)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|bufferAvailableChanged( bool available )
-$signal=|bufferReady()
-$signal=|durationChanged( qint64 duration )
-$signal=|error( int error, const QString & errorString )
-$signal=|finished()
-$signal=|formatChanged( const QAudioFormat & format )
-$signal=|positionChanged( qint64 position )
-$signal=|sourceChanged()
-$signal=|stateChanged( QAudioDecoder::State state )
-$endSlotsClass
+$prototype=void bufferAvailableChanged( bool available )
+$signalMethod=|void|bufferAvailableChanged|bool
+
+$prototype=void bufferReady()
+$signalMethod=|void|bufferReady|
+
+$prototype=void durationChanged( qint64 duration )
+$signalMethod=|void|durationChanged|qint64
+
+$prototype=void error( int error, const QString & errorString )
+$signalMethod=|void|error|int,QString
+
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void formatChanged( const QAudioFormat & format )
+$signalMethod=|void|formatChanged|QAudioFormat
+
+$prototype=void positionChanged( qint64 position )
+$signalMethod=|void|positionChanged|qint64
+
+$prototype=void sourceChanged()
+$signalMethod=|void|sourceChanged|
+
+$prototype=void stateChanged( QAudioDecoder::State state )
+$signalMethod=|void|stateChanged|QAudioDecoder::State
 
 #pragma ENDDUMP

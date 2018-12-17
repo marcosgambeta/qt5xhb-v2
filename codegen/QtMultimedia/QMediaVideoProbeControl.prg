@@ -27,19 +27,22 @@ $destructor
 
 $includes
 
+#include <QVideoFrame>
+
 $prototype=explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QMediaVideoProbeControl()
 $deleteMethod
 
-$beginSignals
-$signal=|flush()
-$signal=|videoFrameProbed(QVideoFrame)
-$endSignals
+%% $beginSignals
+%% $signal=|flush()
+%% $signal=|videoFrameProbed(QVideoFrame)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|flush()
-$signal=|videoFrameProbed( const QVideoFrame & frame )
-$endSlotsClass
+$prototype=void flush()
+$signalMethod=|void|flush|
+
+$prototype=void videoFrameProbed( const QVideoFrame & frame )
+$signalMethod=|void|videoFrameProbed|QVideoFrame
 
 #pragma ENDDUMP

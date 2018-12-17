@@ -47,24 +47,35 @@ $virtualMethod=|bool|isReadyForCapture|
 $prototype=virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 $virtualMethod=|void|setDriveMode|QCameraImageCapture::DriveMode
 
-$beginSignals
-$signal=|error(int,int,QString)
-$signal=|imageAvailable(int,QVideoFrame)
-$signal=|imageCaptured(int,QImage)
-$signal=|imageExposed(int)
-$signal=|imageMetadataAvailable(int,QString,QVariant)
-$signal=|imageSaved(int,QString)
-$signal=|readyForCaptureChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|error(int,int,QString)
+%% $signal=|imageAvailable(int,QVideoFrame)
+%% $signal=|imageCaptured(int,QImage)
+%% $signal=|imageExposed(int)
+%% $signal=|imageMetadataAvailable(int,QString,QVariant)
+%% $signal=|imageSaved(int,QString)
+%% $signal=|readyForCaptureChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|error( int id, int error, const QString & errorString )
-$signal=|imageAvailable( int requestId, const QVideoFrame & buffer )
-$signal=|imageCaptured( int requestId, const QImage & preview )
-$signal=|imageExposed( int requestId )
-$signal=|imageMetadataAvailable( int id, const QString & key, const QVariant & value )
-$signal=|imageSaved( int requestId, const QString & fileName )
-$signal=|readyForCaptureChanged( bool ready )
-$endSlotsClass
+$prototype=void error( int id, int error, const QString & errorString )
+$signalMethod=|void|error|int,int,QString
+
+$prototype=void imageAvailable( int requestId, const QVideoFrame & buffer )
+$signalMethod=|void|imageAvailable|int,QVideoFrame
+
+$prototype=void imageCaptured( int requestId, const QImage & preview )
+$signalMethod=|void|imageCaptured|int,QImage
+
+$prototype=void imageExposed( int requestId )
+$signalMethod=|void|imageExposed|int
+
+$prototype=void imageMetadataAvailable( int id, const QString & key, const QVariant & value )
+$signalMethod=|void|imageMetadataAvailable|int,QString,QVariant
+
+$prototype=void imageSaved( int requestId, const QString & fileName )
+$signalMethod=|void|imageSaved|int,QString
+
+$prototype=void readyForCaptureChanged( bool ready )
+$signalMethod=|void|readyForCaptureChanged|bool
 
 #pragma ENDDUMP

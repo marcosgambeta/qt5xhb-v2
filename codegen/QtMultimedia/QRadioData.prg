@@ -96,24 +96,35 @@ $method=|QString|errorString|
 
 $prototype=bool setMediaObject(QMediaObject *) override [protected]
 
-$beginSignals
-$signal=|stationIdChanged(QString)
-$signal=|programTypeChanged(QRadioData::ProgramType)
-$signal=|programTypeNameChanged(QString)
-$signal=|stationNameChanged(QString)
-$signal=|radioTextChanged(QString)
-$signal=|alternativeFrequenciesEnabledChanged(bool)
-$signal=|error(QRadioData::Error)
-$endSignals
+%% $beginSignals
+%% $signal=|stationIdChanged(QString)
+%% $signal=|programTypeChanged(QRadioData::ProgramType)
+%% $signal=|programTypeNameChanged(QString)
+%% $signal=|stationNameChanged(QString)
+%% $signal=|radioTextChanged(QString)
+%% $signal=|alternativeFrequenciesEnabledChanged(bool)
+%% $signal=|error(QRadioData::Error)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|stationIdChanged( QString stationId )
-$signal=|programTypeChanged( QRadioData::ProgramType programType )
-$signal=|programTypeNameChanged( QString programTypeName )
-$signal=|stationNameChanged( QString stationName )
-$signal=|radioTextChanged( QString radioText )
-$signal=|alternativeFrequenciesEnabledChanged( bool enabled )
-$signal=|error( QRadioData::Error error )
-$endSlotsClass
+$prototype=void stationIdChanged( QString stationId )
+$signalMethod=|void|stationIdChanged|QString
+
+$prototype=void programTypeChanged( QRadioData::ProgramType programType )
+$signalMethod=|void|programTypeChanged|QRadioData::ProgramType
+
+$prototype=void programTypeNameChanged( QString programTypeName )
+$signalMethod=|void|programTypeNameChanged|QString
+
+$prototype=void stationNameChanged( QString stationName )
+$signalMethod=|void|stationNameChanged|QString
+
+$prototype=void radioTextChanged( QString radioText )
+$signalMethod=|void|radioTextChanged|QString
+
+$prototype=void alternativeFrequenciesEnabledChanged( bool enabled )
+$signalMethod=|void|alternativeFrequenciesEnabledChanged|bool
+
+$prototype=void error( QRadioData::Error error )
+$signalMethod=|void|error,error,QOverload<QRadioData::Error>|QRadioData::Error
 
 #pragma ENDDUMP

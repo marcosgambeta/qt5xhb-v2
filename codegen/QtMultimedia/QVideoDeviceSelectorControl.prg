@@ -50,18 +50,21 @@ $virtualMethod=|int|selectedDevice|
 $prototype=virtual void setSelectedDevice(int index) = 0
 $virtualSlotMethod=|void|setSelectedDevice|int
 
-$beginSignals
-$signal=|devicesChanged()
-$beginGroup
-$signal=|selectedDeviceChanged(int)
-$signal=|selectedDeviceChanged(QString)
-$endGroup
-$endSignals
+%% $beginSignals
+%% $signal=|devicesChanged()
+%% $beginGroup
+%% $signal=|selectedDeviceChanged(int)
+%% $signal=|selectedDeviceChanged(QString)
+%% $endGroup
+%% $endSignals
 
-$beginSlotsClass
-$signal=|devicesChanged()
-$signal=|selectedDeviceChanged( int index )
-$signal=|selectedDeviceChanged( const QString & name )
-$endSlotsClass
+$prototype=void devicesChanged()
+$signalMethod=|void|devicesChanged|
+
+$prototype=void selectedDeviceChanged( int index )
+$signalMethod=|void|selectedDeviceChanged,selectedDeviceChanged1,QOverload<int>|int
+
+$prototype=void selectedDeviceChanged( const QString & name )
+$signalMethod=|void|selectedDeviceChanged,selectedDeviceChanged2,QOverload<const QString &>|QString
 
 #pragma ENDDUMP

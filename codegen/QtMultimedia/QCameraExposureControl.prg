@@ -47,16 +47,19 @@ $virtualMethod=|bool|setValue|QCameraExposureControl::ExposureParameter,const QV
 $prototype=virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool * continuous) const = 0
 $virtualMethod=|QVariantList|supportedParameterRange|QCameraExposureControl::ExposureParameter,bool *
 
-$beginSignals
-$signal=|actualValueChanged(int)
-$signal=|parameterRangeChanged(int)
-$signal=|requestedValueChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|actualValueChanged(int)
+%% $signal=|parameterRangeChanged(int)
+%% $signal=|requestedValueChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|actualValueChanged( int parameter )
-$signal=|parameterRangeChanged( int parameter )
-$signal=|requestedValueChanged( int parameter )
-$endSlotsClass
+$prototype=void actualValueChanged( int parameter )
+$signalMethod=|void|actualValueChanged|int
+
+$prototype=void parameterRangeChanged( int parameter )
+$signalMethod=|void|parameterRangeChanged|int
+
+$prototype=void requestedValueChanged( int parameter )
+$signalMethod=|void|requestedValueChanged|int
 
 #pragma ENDDUMP

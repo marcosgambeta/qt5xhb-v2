@@ -102,28 +102,43 @@ $slotMethod=|int|capture|const QString &=QString()
 
 $prototype=bool setMediaObject(QMediaObject *) override [protected]
 
-$beginSignals
-$signal=|bufferFormatChanged(QVideoFrame::PixelFormat)
-$signal=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
-$signal=|error(int,QCameraImageCapture::Error,QString)
-$signal=|imageAvailable(int,QVideoFrame)
-$signal=|imageCaptured(int,QImage)
-$signal=|imageExposed(int)
-$signal=|imageMetadataAvailable(int,QString,QVariant)
-$signal=|imageSaved(int,QString)
-$signal=|readyForCaptureChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|bufferFormatChanged(QVideoFrame::PixelFormat)
+%% $signal=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
+%% $signal=|error(int,QCameraImageCapture::Error,QString)
+%% $signal=|imageAvailable(int,QVideoFrame)
+%% $signal=|imageCaptured(int,QImage)
+%% $signal=|imageExposed(int)
+%% $signal=|imageMetadataAvailable(int,QString,QVariant)
+%% $signal=|imageSaved(int,QString)
+%% $signal=|readyForCaptureChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|bufferFormatChanged( QVideoFrame::PixelFormat format )
-$signal=|captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
-$signal=|error( int id, QCameraImageCapture::Error error, const QString & errorString )
-$signal=|imageAvailable( int id, const QVideoFrame & buffer )
-$signal=|imageCaptured( int id, const QImage & preview )
-$signal=|imageExposed( int id )
-$signal=|imageMetadataAvailable( int id, const QString & key, const QVariant & value )
-$signal=|imageSaved( int id, const QString & fileName )
-$signal=|readyForCaptureChanged( bool ready )
-$endSlotsClass
+$prototype=void bufferFormatChanged( QVideoFrame::PixelFormat format )
+$signalMethod=|void|bufferFormatChanged|QVideoFrame::PixelFormat
+
+$prototype=void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
+$signalMethod=|void|captureDestinationChanged|QCameraImageCapture::CaptureDestinations
+
+$prototype=void error( int id, QCameraImageCapture::Error error, const QString & errorString )
+$signalMethod=|void|error,error,QOverload<int COMMA QCameraImageCapture::Error COMMA const QString &>|int,QCameraImageCapture::Error,QString
+
+$prototype=void imageAvailable( int id, const QVideoFrame & buffer )
+$signalMethod=|void|imageAvailable|int,QVideoFrame
+
+$prototype=void imageCaptured( int id, const QImage & preview )
+$signalMethod=|void|imageCaptured|int,QImage
+
+$prototype=void imageExposed( int id )
+$signalMethod=|void|imageExposed|int
+
+$prototype=void imageMetadataAvailable( int id, const QString & key, const QVariant & value )
+$signalMethod=|void|imageMetadataAvailable|int,QString,QVariant
+
+$prototype=void imageSaved( int id, const QString & fileName )
+$signalMethod=|void|imageSaved|int,QString
+
+$prototype=void readyForCaptureChanged( bool ready )
+$signalMethod=|void|readyForCaptureChanged|bool
 
 #pragma ENDDUMP

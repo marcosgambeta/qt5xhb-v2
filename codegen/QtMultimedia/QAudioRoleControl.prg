@@ -17,7 +17,7 @@ $beginClassFrom=QMediaControl
 
 $addMethods
 
-%%   METHOD onAudioRoleChanged
+$addSignals
 
 $endClass
 
@@ -41,7 +41,7 @@ $virtualMethod=5,6,0|void|setAudioRole|QAudio::Role
 $prototype=virtual QList<QAudio::Role> supportedAudioRoles() const = 0
 $virtualMethod=5,6,0|QList<QAudio::Role>|supportedAudioRoles|
 
-#pragma ENDDUMP
+$prototype=void audioRoleChanged(QAudio::Role role)
+$signalMethod=5,6,0|void|audioRoleChanged|QAudio::Role
 
-%% Q_SIGNALS:
-%% void audioRoleChanged(QAudio::Role role);
+#pragma ENDDUMP

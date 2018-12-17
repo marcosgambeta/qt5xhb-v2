@@ -98,38 +98,63 @@ $virtualMethod=|void|stop|
 $prototype=virtual int volume() const = 0
 $virtualMethod=|int|volume|
 
-$beginSignals
-$signal=|audioAvailableChanged(bool)
-$signal=|availablePlaybackRangesChanged(QMediaTimeRange)
-$signal=|bufferStatusChanged(int)
-$signal=|durationChanged(qint64)
-$signal=|error(int,QString)
-$signal=|mediaChanged(QMediaContent)
-$signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
-$signal=|mutedChanged(bool)
-$signal=|playbackRateChanged(qreal)
-$signal=|positionChanged(qint64)
-$signal=|seekableChanged(bool)
-$signal=|stateChanged(QMediaPlayer::State)
-$signal=|videoAvailableChanged(bool)
-$signal=|volumeChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|audioAvailableChanged(bool)
+%% $signal=|availablePlaybackRangesChanged(QMediaTimeRange)
+%% $signal=|bufferStatusChanged(int)
+%% $signal=|durationChanged(qint64)
+%% $signal=|error(int,QString)
+%% $signal=|mediaChanged(QMediaContent)
+%% $signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+%% $signal=|mutedChanged(bool)
+%% $signal=|playbackRateChanged(qreal)
+%% $signal=|positionChanged(qint64)
+%% $signal=|seekableChanged(bool)
+%% $signal=|stateChanged(QMediaPlayer::State)
+%% $signal=|videoAvailableChanged(bool)
+%% $signal=|volumeChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|audioAvailableChanged( bool audio )
-$signal=|availablePlaybackRangesChanged( const QMediaTimeRange & ranges )
-$signal=|bufferStatusChanged( int progress )
-$signal=|durationChanged( qint64 duration )
-$signal=|error( int error, const QString & errorString )
-$signal=|mediaChanged( const QMediaContent & content )
-$signal=|mediaStatusChanged( QMediaPlayer::MediaStatus status )
-$signal=|mutedChanged( bool mute )
-$signal=|playbackRateChanged( qreal rate )
-$signal=|positionChanged( qint64 position )
-$signal=|seekableChanged( bool seekable )
-$signal=|stateChanged( QMediaPlayer::State state )
-$signal=|videoAvailableChanged( bool video )
-$signal=|volumeChanged( int volume )
-$endSlotsClass
+$prototype=void audioAvailableChanged( bool audio )
+$signalMethod=|void|audioAvailableChanged|bool
+
+$prototype=void availablePlaybackRangesChanged( const QMediaTimeRange & ranges )
+$signalMethod=|void|availablePlaybackRangesChanged|QMediaTimeRange
+
+$prototype=void bufferStatusChanged( int progress )
+$signalMethod=|void|bufferStatusChanged|int
+
+$prototype=void durationChanged( qint64 duration )
+$signalMethod=|void|durationChanged|qint64
+
+$prototype=void error( int error, const QString & errorString )
+$signalMethod=|void|error|int,QString
+
+$prototype=void mediaChanged( const QMediaContent & content )
+$signalMethod=|void|mediaChanged|QMediaContent
+
+$prototype=void mediaStatusChanged( QMediaPlayer::MediaStatus status )
+$signalMethod=|void|mediaStatusChanged|QMediaPlayer::MediaStatus
+
+$prototype=void mutedChanged( bool mute )
+$signalMethod=|void|mutedChanged|bool
+
+$prototype=void playbackRateChanged( qreal rate )
+$signalMethod=|void|playbackRateChanged|qreal
+
+$prototype=void positionChanged( qint64 position )
+$signalMethod=|void|positionChanged|qint64
+
+$prototype=void seekableChanged( bool seekable )
+$signalMethod=|void|seekableChanged|bool
+
+$prototype=void stateChanged( QMediaPlayer::State state )
+$signalMethod=|void|stateChanged|QMediaPlayer::State
+
+$prototype=void videoAvailableChanged( bool video )
+$signalMethod=|void|videoAvailableChanged|bool
+
+$prototype=void volumeChanged( int volume )
+$signalMethod=|void|volumeChanged|int
 
 #pragma ENDDUMP

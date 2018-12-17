@@ -159,24 +159,35 @@ $slotMethod=|void|setManualIsoSensitivity|int
 $prototype=void setManualShutterSpeed(qreal seconds)
 $slotMethod=|void|setManualShutterSpeed|qreal
 
-$beginSignals
-$signal=|apertureChanged(qreal)
-$signal=|apertureRangeChanged()
-$signal=|exposureCompensationChanged(qreal)
-$signal=|flashReady(bool)
-$signal=|isoSensitivityChanged(int)
-$signal=|shutterSpeedChanged(qreal)
-$signal=|shutterSpeedRangeChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|apertureChanged(qreal)
+%% $signal=|apertureRangeChanged()
+%% $signal=|exposureCompensationChanged(qreal)
+%% $signal=|flashReady(bool)
+%% $signal=|isoSensitivityChanged(int)
+%% $signal=|shutterSpeedChanged(qreal)
+%% $signal=|shutterSpeedRangeChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|apertureChanged( qreal value )
-$signal=|apertureRangeChanged()
-$signal=|exposureCompensationChanged( qreal value )
-$signal=|flashReady( bool ready )
-$signal=|isoSensitivityChanged( int value )
-$signal=|shutterSpeedChanged( qreal speed )
-$signal=|shutterSpeedRangeChanged()
-$endSlotsClass
+$prototype=void apertureChanged( qreal value )
+$signalMethod=|void|apertureChanged|qreal
+
+$prototype=void apertureRangeChanged()
+$signalMethod=|void|apertureRangeChanged|
+
+$prototype=void exposureCompensationChanged( qreal value )
+$signalMethod=|void|exposureCompensationChanged|qreal
+
+$prototype=void flashReady( bool ready )
+$signalMethod=|void|flashReady|bool
+
+$prototype=void isoSensitivityChanged( int value )
+$signalMethod=|void|isoSensitivityChanged|int
+
+$prototype=void shutterSpeedChanged( qreal speed )
+$signalMethod=|void|shutterSpeedChanged|qreal
+
+$prototype=void shutterSpeedRangeChanged()
+$signalMethod=|void|shutterSpeedRangeChanged|
 
 #pragma ENDDUMP

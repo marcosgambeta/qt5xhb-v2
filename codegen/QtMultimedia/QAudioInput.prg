@@ -17,8 +17,7 @@ $beginClassFrom=QObject
 
 $addMethods
 
-%%   METHOD onStateChanged
-%%   METHOD onNotify
+$addSignals
 
 $endClass
 
@@ -133,8 +132,10 @@ $method=|void|setVolume|qreal
 $prototype=qreal volume() const
 $method=|qreal|volume|
 
-#pragma ENDDUMP
+$prototype=void stateChanged(QAudio::State)
+$signalMethod=|void|stateChanged|QAudio::State
 
-%% Q_SIGNALS:
-%% void stateChanged(QAudio::State);
-%% void notify();
+$prototype=void notify()
+$signalMethod=|void|notify|
+
+#pragma ENDDUMP
