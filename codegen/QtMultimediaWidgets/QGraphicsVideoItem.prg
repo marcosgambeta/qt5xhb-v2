@@ -62,12 +62,11 @@ $method=|QRectF|boundingRect|
 $prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-$beginSignals
-$signal=|nativeSizeChanged(QSizeF)
-$endSignals
+%% $beginSignals
+%% $signal=|nativeSizeChanged(QSizeF)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|nativeSizeChanged( const QSizeF & size )
-$endSlotsClass
+$prototype=void nativeSizeChanged( const QSizeF & size )
+$signalMethod=|void|nativeSizeChanged|QSizeF
 
 #pragma ENDDUMP
