@@ -50,10 +50,13 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QInAppStore>
 #endif
+
+#include <QInAppTransaction>
 
 /*
 explicit QInAppStore(QObject *parent = Q_NULLPTR)
@@ -206,21 +209,201 @@ void registerProduct(QInAppProduct *) [private] (slot)
 void setupBackend() [private]
 */
 
-void QInAppStoreSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void productRegistered( QInAppProduct * product )
+*/
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {
-  QInAppStoreSlots_connect_signal( "productRegistered(QInAppProduct*)", "productRegistered(QInAppProduct*)" );
+  if( hb_pcount() == 1 )
+  {
+    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "productRegistered(QInAppProduct*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInAppStore::productRegistered, [sender](QInAppProduct* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "productRegistered(QInAppProduct*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QINAPPPRODUCT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "productRegistered(QInAppProduct*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "productRegistered(QInAppProduct*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "productRegistered(QInAppProduct*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
+*/
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 {
-  QInAppStoreSlots_connect_signal( "productUnknown(QInAppProduct::ProductType,QString)", "productUnknown(QInAppProduct::ProductType,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInAppStore::productUnknown, [sender](QInAppProduct::ProductType arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "productUnknown(QInAppProduct::ProductType,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "productUnknown(QInAppProduct::ProductType,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void transactionReady( QInAppTransaction * transaction )
+*/
 HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 {
-  QInAppStoreSlots_connect_signal( "transactionReady(QInAppTransaction*)", "transactionReady(QInAppTransaction*)" );
+  if( hb_pcount() == 1 )
+  {
+    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "transactionReady(QInAppTransaction*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QInAppStore::transactionReady, [sender](QInAppTransaction* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "transactionReady(QInAppTransaction*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QINAPPTRANSACTION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "transactionReady(QInAppTransaction*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "transactionReady(QInAppTransaction*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "transactionReady(QInAppTransaction*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
