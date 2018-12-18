@@ -123,14 +123,15 @@ $method=|void|zoomIn|qreal=1.1
 $prototype=void zoomOut ( qreal factor = 1.1 )
 $method=|void|zoomOut|qreal=1.1
 
-$beginSignals
-$signal=|paintRequested(QPrinter*)
-$signal=|previewChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|paintRequested(QPrinter*)
+%% $signal=|previewChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|paintRequested( QPrinter * printer )
-$signal=|previewChanged()
-$endSlotsClass
+$prototype=void paintRequested( QPrinter * printer )
+$signalMethod=|void|paintRequested|QPrinter*
+
+$prototype=void previewChanged()
+$signalMethod=|void|previewChanged|
 
 #pragma ENDDUMP

@@ -66,12 +66,11 @@ $virtualMethod=|void|done|int
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$beginSignals
-$signal=|paintRequested(QPrinter*)
-$endSignals
+%% $beginSignals
+%% $signal=|paintRequested(QPrinter*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|paintRequested( QPrinter * printer )
-$endSlotsClass
+$prototype=void paintRequested( QPrinter * printer )
+$signalMethod=|void|paintRequested|QPrinter*
 
 #pragma ENDDUMP

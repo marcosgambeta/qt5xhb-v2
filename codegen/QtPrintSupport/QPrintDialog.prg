@@ -81,12 +81,11 @@ $method=|int|exec|
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-$beginSignals
-$signal=|accepted(QPrinter*)
-$endSignals
+%% $beginSignals
+%% $signal=|accepted(QPrinter*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|accepted( QPrinter * printer )
-$endSlotsClass
+$prototype=void accepted( QPrinter * printer )
+$signalMethod=|void|accepted|QPrinter*
 
 #pragma ENDDUMP
