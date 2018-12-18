@@ -3,6 +3,3 @@
 #
 # Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
-
-$(QT5XHB_OBJ_DIR)/QInAppStoreSlotsMoc.cpp        : $(QT5XHB_SRC_DIR)/QtPurchasing/QInAppStoreSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
