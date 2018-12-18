@@ -47,6 +47,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -138,24 +139,146 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 #endif
 }
 
-void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void callbackDataReceived( const QByteArray & data )
+*/
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandlerSlots_connect_signal( "callbackDataReceived(QByteArray)", "callbackDataReceived(QByteArray)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "callbackDataReceived(QByteArray)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuthReplyHandler::callbackDataReceived, [sender](QByteArray arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "callbackDataReceived(QByteArray)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTHREPLYHANDLER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "callbackDataReceived(QByteArray)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "callbackDataReceived(QByteArray)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "callbackDataReceived(QByteArray)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void callbackReceived( const QVariantMap & values )
+*/
+
+/*
+void replyDataReceived( const QByteArray & data )
+*/
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandlerSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "replyDataReceived(QByteArray)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuthReplyHandler::replyDataReceived, [sender](QByteArray arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "replyDataReceived(QByteArray)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTHREPLYHANDLER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "replyDataReceived(QByteArray)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "replyDataReceived(QByteArray)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "replyDataReceived(QByteArray)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
+
+/*
+void tokensReceived( const QVariantMap & tokens )
+*/
 
 #pragma ENDDUMP

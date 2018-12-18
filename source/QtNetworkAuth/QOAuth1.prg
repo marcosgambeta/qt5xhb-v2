@@ -63,6 +63,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -558,50 +559,338 @@ static QByteArray nonce() [protected]
 static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) [protected]
 */
 
-void QOAuth1Slots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void clientSharedSecretChanged( const QString & credential )
+*/
 HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "clientSharedSecretChanged(QString)", "clientSharedSecretChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clientSharedSecretChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::clientSharedSecretChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clientSharedSecretChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clientSharedSecretChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clientSharedSecretChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clientSharedSecretChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void signatureMethodChanged( QOAuth1::SignatureMethod method )
+*/
 HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "signatureMethodChanged(QOAuth1::SignatureMethod)", "signatureMethodChanged(QOAuth1::SignatureMethod)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::signatureMethodChanged, [sender](QOAuth1::SignatureMethod arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void temporaryCredentialsUrlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "temporaryCredentialsUrlChanged(QUrl)", "temporaryCredentialsUrlChanged(QUrl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "temporaryCredentialsUrlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::temporaryCredentialsUrlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "temporaryCredentialsUrlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "temporaryCredentialsUrlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "temporaryCredentialsUrlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "temporaryCredentialsUrlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void tokenCredentialsUrlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "tokenCredentialsUrlChanged(QUrl)", "tokenCredentialsUrlChanged(QUrl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tokenCredentialsUrlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::tokenCredentialsUrlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenCredentialsUrlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tokenCredentialsUrlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tokenCredentialsUrlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tokenCredentialsUrlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void tokenSecretChanged( const QString & token )
+*/
 HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "tokenSecretChanged(QString)", "tokenSecretChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tokenSecretChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::tokenSecretChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenSecretChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tokenSecretChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tokenSecretChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tokenSecretChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

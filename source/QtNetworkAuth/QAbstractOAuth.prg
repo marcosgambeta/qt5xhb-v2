@@ -34,15 +34,16 @@ CLASS QAbstractOAuth INHERIT QObject
    METHOD setReplyHandler
    METHOD grant
 
-   METHOD onAuthorizationUrlChanged
-   METHOD onAuthorizeWithBrowser
    METHOD onClientIdentifierChanged
-   METHOD onContentTypeChanged
-   METHOD onFinished
-   METHOD onGranted
-   METHOD onReplyDataReceived
-   METHOD onStatusChanged
    METHOD onTokenChanged
+   METHOD onStatusChanged
+   METHOD onAuthorizationUrlChanged
+   METHOD onContentTypeChanged
+   METHOD onRequestFailed
+   METHOD onAuthorizeWithBrowser
+   METHOD onGranted
+   METHOD onFinished
+   METHOD onReplyDataReceived
 
    DESTRUCTOR destroyObject
 
@@ -67,6 +68,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -488,86 +490,675 @@ virtual void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &para
 static QByteArray generateRandomString(quint8 length) [protected]
 */
 
-void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString & slot );
-
-HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "authorizationUrlChanged(QUrl)", "authorizationUrlChanged(QUrl)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "authorizeWithBrowser(QUrl)", "authorizeWithBrowser(QUrl)" );
-#else
-  hb_retl( false );
-#endif
-}
-
+/*
+void clientIdentifierChanged( const QString & clientIdentifier )
+*/
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "clientIdentifierChanged(QString)", "clientIdentifierChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clientIdentifierChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::clientIdentifierChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clientIdentifierChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clientIdentifierChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clientIdentifierChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clientIdentifierChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
-HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "contentTypeChanged(QAbstractOAuth::ContentType)", "contentTypeChanged(QAbstractOAuth::ContentType)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "finished(QNetworkReply*)", "finished(QNetworkReply*)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "granted()", "granted()" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "statusChanged(QAbstractOAuth::Status)", "statusChanged(QAbstractOAuth::Status)" );
-#else
-  hb_retl( false );
-#endif
-}
-
+/*
+void tokenChanged( const QString & token )
+*/
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "tokenChanged(QString)", "tokenChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tokenChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::tokenChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tokenChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tokenChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tokenChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void statusChanged( QAbstractOAuth::Status status )
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusChanged(QAbstractOAuth::Status)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::statusChanged, [sender](QAbstractOAuth::Status arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QAbstractOAuth::Status)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusChanged(QAbstractOAuth::Status)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusChanged(QAbstractOAuth::Status)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QAbstractOAuth::Status)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void authorizationUrlChanged( const QUrl & url )
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "authorizationUrlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::authorizationUrlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "authorizationUrlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "authorizationUrlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "authorizationUrlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "authorizationUrlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void extraTokensChanged( const QVariantMap & tokens )
+*/
+
+/*
+void contentTypeChanged( QAbstractOAuth::ContentType contentType )
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::contentTypeChanged, [sender](QAbstractOAuth::ContentType arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "contentTypeChanged(QAbstractOAuth::ContentType)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void requestFailed( const QAbstractOAuth::Error error )
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "requestFailed(QAbstractOAuth::Error)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::requestFailed, [sender](QAbstractOAuth::Error arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "requestFailed(QAbstractOAuth::Error)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "requestFailed(QAbstractOAuth::Error)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "requestFailed(QAbstractOAuth::Error)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "requestFailed(QAbstractOAuth::Error)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void authorizeWithBrowser( const QUrl & url )
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "authorizeWithBrowser(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::authorizeWithBrowser, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "authorizeWithBrowser(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "authorizeWithBrowser(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "authorizeWithBrowser(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "authorizeWithBrowser(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void granted()
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "granted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::granted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "granted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "granted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "granted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "granted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void finished( QNetworkReply * reply )
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished(QNetworkReply*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::finished, [sender](QNetworkReply* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QNetworkReply*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished(QNetworkReply*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished(QNetworkReply*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished(QNetworkReply*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void replyDataReceived( const QByteArray & data )
+*/
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  if( hb_pcount() == 1 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "replyDataReceived(QByteArray)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::replyDataReceived, [sender](QByteArray arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "replyDataReceived(QByteArray)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "replyDataReceived(QByteArray)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "replyDataReceived(QByteArray)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "replyDataReceived(QByteArray)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

@@ -50,6 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -291,14 +292,70 @@ void requestAccessToken(const QString &code) [protected]
 void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override [protected]
 */
 
-void QOAuth2AuthorizationCodeFlowSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void accessTokenUrlChanged( const QUrl & accessTokenUrl )
+*/
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth2AuthorizationCodeFlowSlots_connect_signal( "accessTokenUrlChanged(QUrl)", "accessTokenUrlChanged(QUrl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QOAuth2AuthorizationCodeFlow * sender = (QOAuth2AuthorizationCodeFlow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "accessTokenUrlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth2AuthorizationCodeFlow::accessTokenUrlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "accessTokenUrlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH2AUTHORIZATIONCODEFLOW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "accessTokenUrlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QOAuth2AuthorizationCodeFlow * sender = (QOAuth2AuthorizationCodeFlow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "accessTokenUrlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "accessTokenUrlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
