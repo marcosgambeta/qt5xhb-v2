@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+#include <QInAppTransaction>
+
 $prototype=explicit QInAppStore(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 
@@ -51,16 +53,19 @@ $prototype=void registerProduct(QInAppProduct *) [private] (slot)
 
 $prototype=void setupBackend() [private]
 
-$beginSignals
-$signal=|productRegistered(QInAppProduct*)
-$signal=|productUnknown(QInAppProduct::ProductType,QString)
-$signal=|transactionReady(QInAppTransaction*)
-$endSignals
+%% $beginSignals
+%% $signal=|productRegistered(QInAppProduct*)
+%% $signal=|productUnknown(QInAppProduct::ProductType,QString)
+%% $signal=|transactionReady(QInAppTransaction*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|productRegistered( QInAppProduct * product )
-$signal=|productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
-$signal=|transactionReady( QInAppTransaction * transaction )
-$endSlotsClass
+$prototype=void productRegistered( QInAppProduct * product )
+$signalMethod=|void|productRegistered|QInAppProduct*
+
+$prototype=void productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
+$signalMethod=|void|productUnknown|QInAppProduct::ProductType,QString
+
+$prototype=void transactionReady( QInAppTransaction * transaction )
+$signalMethod=|void|transactionReady|QInAppTransaction*
 
 #pragma ENDDUMP
