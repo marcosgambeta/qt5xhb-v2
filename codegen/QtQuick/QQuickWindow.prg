@@ -131,24 +131,35 @@ $method=|void|releaseResources|
 $prototype=void update()
 $method=|void|update|
 
-$beginSignals
-$signal=|afterRendering()
-$signal=|beforeRendering()
-$signal=|beforeSynchronizing()
-$signal=|colorChanged(QColor)
-$signal=|frameSwapped()
-$signal=|sceneGraphInitialized()
-$signal=|sceneGraphInvalidated()
-$endSignals
+%% $beginSignals
+%% $signal=|afterRendering()
+%% $signal=|beforeRendering()
+%% $signal=|beforeSynchronizing()
+%% $signal=|colorChanged(QColor)
+%% $signal=|frameSwapped()
+%% $signal=|sceneGraphInitialized()
+%% $signal=|sceneGraphInvalidated()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|afterRendering()
-$signal=|beforeRendering()
-$signal=|beforeSynchronizing()
-$signal=|colorChanged( const QColor & color )
-$signal=|frameSwapped()
-$signal=|sceneGraphInitialized()
-$signal=|sceneGraphInvalidated()
-$endSlotsClass
+$prototype=void afterRendering()
+$signalMethod=|void|afterRendering|
+
+$prototype=void beforeRendering()
+$signalMethod=|void|beforeRendering|
+
+$prototype=void beforeSynchronizing()
+$signalMethod=|void|beforeSynchronizing|
+
+$prototype=void colorChanged( const QColor & color )
+$signalMethod=|void|colorChanged|QColor
+
+$prototype=void frameSwapped()
+$signalMethod=|void|frameSwapped|
+
+$prototype=void sceneGraphInitialized()
+$signalMethod=|void|sceneGraphInitialized|
+
+$prototype=void sceneGraphInvalidated()
+$signalMethod=|void|sceneGraphInvalidated|
 
 #pragma ENDDUMP

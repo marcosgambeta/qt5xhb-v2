@@ -92,18 +92,23 @@ $method=|void|setRenderTarget|QQuickPaintedItem::RenderTarget
 $prototype=void update(const QRect & rect = QRect())
 $method=|void|update|const QRect &=QRect()
 
-$beginSignals
-$signal=|contentsScaleChanged()
-$signal=|contentsSizeChanged()
-$signal=|fillColorChanged()
-$signal=|renderTargetChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|contentsScaleChanged()
+%% $signal=|contentsSizeChanged()
+%% $signal=|fillColorChanged()
+%% $signal=|renderTargetChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|contentsScaleChanged()
-$signal=|contentsSizeChanged()
-$signal=|fillColorChanged()
-$signal=|renderTargetChanged()
-$endSlotsClass
+$prototype=void contentsScaleChanged()
+$signalMethod=|void|contentsScaleChanged|
+
+$prototype=void contentsSizeChanged()
+$signalMethod=|void|contentsSizeChanged|
+
+$prototype=void fillColorChanged()
+$signalMethod=|void|fillColorChanged|
+
+$prototype=void renderTargetChanged()
+$signalMethod=|void|renderTargetChanged|
 
 #pragma ENDDUMP

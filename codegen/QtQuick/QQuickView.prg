@@ -94,12 +94,11 @@ $method=|QQuickView::Status|status|
 $prototype=void setSource(const QUrl & url)
 $method=|void|setSource|const QUrl &
 
-$beginSignals
-$signal=|statusChanged(QQuickView::Status)
-$endSignals
+%% $beginSignals
+%% $signal=|statusChanged(QQuickView::Status)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|statusChanged( QQuickView::Status status )
-$endSlotsClass
+$prototype=void statusChanged( QQuickView::Status status )
+$signalMethod=|void|statusChanged|QQuickView::Status
 
 #pragma ENDDUMP
