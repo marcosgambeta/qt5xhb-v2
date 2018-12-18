@@ -140,26 +140,39 @@ $method=5,10,0|QString|refreshToken|
 $prototype=void setRefreshToken(const QString &refreshToken)
 $method=5,10,0|void|setRefreshToken|const QString &
 
-$beginSignals
-%% $signal=|authorizationCallbackReceived(QVariantMap)
-$signal=5,10,0|clientIdentifierSharedKeyChanged(QString)
-$signal=5,10,0|error(QString,QString,QUrl)
-$signal=5,10,0|expirationAtChanged(QDateTime)
-$signal=5,10,0|responseTypeChanged(QString)
-$signal=5,10,0|scopeChanged(QString)
-$signal=5,10,0|stateChanged(QString)
-$signal=5,10,0|userAgentChanged(QString)
-$endSignals
+%% $beginSignals
+%% %% $signal=|authorizationCallbackReceived(QVariantMap)
+%% $signal=5,10,0|clientIdentifierSharedKeyChanged(QString)
+%% $signal=5,10,0|error(QString,QString,QUrl)
+%% $signal=5,10,0|expirationAtChanged(QDateTime)
+%% $signal=5,10,0|responseTypeChanged(QString)
+%% $signal=5,10,0|scopeChanged(QString)
+%% $signal=5,10,0|stateChanged(QString)
+%% $signal=5,10,0|userAgentChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-%% $signal=|authorizationCallbackReceived( const QVariantMap & data )
-$signal=5,10,0|clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
-$signal=5,10,0|error( const QString & error, const QString & errorDescription, const QUrl & uri )
-$signal=5,10,0|expirationAtChanged( const QDateTime & expiration )
-$signal=5,10,0|responseTypeChanged( const QString & responseType )
-$signal=5,10,0|scopeChanged( const QString & scope )
-$signal=5,10,0|stateChanged( const QString & state )
-$signal=5,10,0|userAgentChanged( const QString & userAgent )
-$endSlotsClass
+$prototype=void authorizationCallbackReceived( const QVariantMap & data )
+%% TODO: $signalMethod=|void|authorizationCallbackReceived|QVariantMap
+
+$prototype=void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
+$signalMethod=5,10,0|void|clientIdentifierSharedKeyChanged|QString
+
+$prototype=void error( const QString & error, const QString & errorDescription, const QUrl & uri )
+$signalMethod=5,10,0|void|error|QString,QString,QUrl
+
+$prototype=void expirationAtChanged( const QDateTime & expiration )
+$signalMethod=5,10,0|void|expirationAtChanged|QDateTime
+
+$prototype=void responseTypeChanged( const QString & responseType )
+$signalMethod=5,10,0|void|responseTypeChanged|QString
+
+$prototype=void scopeChanged( const QString & scope )
+$signalMethod=5,10,0|void|scopeChanged|QString
+
+$prototype=void stateChanged( const QString & state )
+$signalMethod=5,10,0|void|stateChanged|QString
+
+$prototype=void userAgentChanged( const QString & userAgent )
+$signalMethod=5,10,0|void|userAgentChanged|QString
 
 #pragma ENDDUMP

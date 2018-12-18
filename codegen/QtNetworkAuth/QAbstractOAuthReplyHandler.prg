@@ -44,18 +44,23 @@ $virtualMethod=5,10,0|QString|callback|
 $prototype=virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
 $virtualMethod=5,10,0|void|networkReplyFinished|QNetworkReply *
 
-$beginSignals
-$signal=5,10,0|callbackDataReceived(QByteArray)
-%% $signal=|callbackReceived(QVariantMap)
-$signal=5,10,0|replyDataReceived(QByteArray)
-%% $signal=|tokensReceived(QVariantMap)
-$endSignals
+%% $beginSignals
+%% $signal=5,10,0|callbackDataReceived(QByteArray)
+%% %% $signal=|callbackReceived(QVariantMap)
+%% $signal=5,10,0|replyDataReceived(QByteArray)
+%% %% $signal=|tokensReceived(QVariantMap)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,10,0|callbackDataReceived( const QByteArray & data )
-%% $signal=|callbackReceived( const QVariantMap & values )
-$signal=5,10,0|replyDataReceived( const QByteArray & data )
-%% $signal=|tokensReceived( const QVariantMap & tokens )
-$endSlotsClass
+$prototype=void callbackDataReceived( const QByteArray & data )
+$signalMethod=5,10,0|void|callbackDataReceived|QByteArray
+
+$prototype=void callbackReceived( const QVariantMap & values )
+%% TODO: $signalMethod=|void|callbackReceived( const QVariantMap & values )
+
+$prototype=void replyDataReceived( const QByteArray & data )
+$signalMethod=5,10,0|void|replyDataReceived|QByteArray
+
+$prototype=void tokensReceived( const QVariantMap & tokens )
+%% TODO: $signalMethod=|void|tokensReceived|QVariantMap
 
 #pragma ENDDUMP
