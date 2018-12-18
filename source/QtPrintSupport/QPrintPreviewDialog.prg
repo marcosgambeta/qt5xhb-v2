@@ -54,6 +54,8 @@ RETURN
 #include <QPrintPreviewDialog>
 #endif
 
+#include <QPrinter>
+
 /*
 explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
