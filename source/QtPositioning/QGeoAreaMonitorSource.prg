@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -470,41 +471,275 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_AVAILABLESOURCES )
 #endif
 }
 
-void QGeoAreaMonitorSourceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+*/
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorSourceSlots_connect_signal( "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)", "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGeoAreaMonitorSource::areaEntered, [sender](QGeoAreaMonitorInfo arg1, QGeoPositionInfo arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+*/
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorSourceSlots_connect_signal( "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)", "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGeoAreaMonitorSource::areaExited, [sender](QGeoAreaMonitorInfo arg1, QGeoPositionInfo arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void monitorExpired( const QGeoAreaMonitorInfo & monitor )
+*/
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorSourceSlots_connect_signal( "monitorExpired(QGeoAreaMonitorInfo)", "monitorExpired(QGeoAreaMonitorInfo)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGeoAreaMonitorSource::monitorExpired, [sender](QGeoAreaMonitorInfo arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "monitorExpired(QGeoAreaMonitorInfo)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "monitorExpired(QGeoAreaMonitorInfo)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void error( QGeoAreaMonitorSource::Error error )
+*/
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorSourceSlots_connect_signal( "error(QGeoAreaMonitorSource::Error)", "error(QGeoAreaMonitorSource::Error)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QGeoAreaMonitorSource::Error)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error), [sender](QGeoAreaMonitorSource::Error arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoAreaMonitorSource::Error)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QGeoAreaMonitorSource::Error)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QGeoAreaMonitorSource::Error)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QGeoAreaMonitorSource::Error)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
