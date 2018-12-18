@@ -54,6 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QNetworkConfigurationManager>
@@ -272,31 +273,327 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QNetworkConfigurationManagerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void configurationAdded( const QNetworkConfiguration & config )
+*/
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationAdded(QNetworkConfiguration)", "configurationAdded(QNetworkConfiguration)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "configurationAdded(QNetworkConfiguration)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::configurationAdded, [sender](QNetworkConfiguration arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationAdded(QNetworkConfiguration)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "configurationAdded(QNetworkConfiguration)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "configurationAdded(QNetworkConfiguration)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "configurationAdded(QNetworkConfiguration)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void configurationChanged( const QNetworkConfiguration & config )
+*/
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "configurationChanged(QNetworkConfiguration)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::configurationChanged, [sender](QNetworkConfiguration arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationChanged(QNetworkConfiguration)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "configurationChanged(QNetworkConfiguration)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "configurationChanged(QNetworkConfiguration)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "configurationChanged(QNetworkConfiguration)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void configurationRemoved( const QNetworkConfiguration & config )
+*/
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationRemoved(QNetworkConfiguration)", "configurationRemoved(QNetworkConfiguration)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "configurationRemoved(QNetworkConfiguration)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::configurationRemoved, [sender](QNetworkConfiguration arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationRemoved(QNetworkConfiguration)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "configurationRemoved(QNetworkConfiguration)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "configurationRemoved(QNetworkConfiguration)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "configurationRemoved(QNetworkConfiguration)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void onlineStateChanged( bool isOnline )
+*/
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "onlineStateChanged(bool)", "onlineStateChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "onlineStateChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::onlineStateChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "onlineStateChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "onlineStateChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "onlineStateChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "onlineStateChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void updateCompleted()
+*/
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "updateCompleted()", "updateCompleted()" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "updateCompleted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::updateCompleted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "updateCompleted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "updateCompleted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkConfigurationManager * sender = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "updateCompleted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "updateCompleted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

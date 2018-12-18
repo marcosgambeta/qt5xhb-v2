@@ -72,6 +72,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QNetworkSession>
@@ -620,41 +621,455 @@ virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected
 virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected]
 */
 
-void QNetworkSessionSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void closed()
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 {
-  QNetworkSessionSlots_connect_signal( "closed()", "closed()" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "closed()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::closed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "closed()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "closed()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "closed()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "closed()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void error( QNetworkSession::SessionError error )
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 {
-  QNetworkSessionSlots_connect_signal( "error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QNetworkSession::SessionError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QNetworkSession::SessionError>::of(&QNetworkSession::error), [sender](QNetworkSession::SessionError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QNetworkSession::SessionError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QNetworkSession::SessionError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QNetworkSession::SessionError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QNetworkSession::SessionError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void newConfigurationActivated()
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 {
-  QNetworkSessionSlots_connect_signal( "newConfigurationActivated()", "newConfigurationActivated()" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "newConfigurationActivated()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::newConfigurationActivated, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "newConfigurationActivated()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "newConfigurationActivated()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "newConfigurationActivated()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "newConfigurationActivated()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void opened()
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 {
-  QNetworkSessionSlots_connect_signal( "opened()", "opened()" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "opened()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::opened, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "opened()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "opened()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "opened()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "opened()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::preferredConfigurationChanged, [sender](QNetworkConfiguration arg1, bool arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QNetworkSession::State state )
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QNetworkSession::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::stateChanged, [sender](QNetworkSession::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QNetworkSession::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QNetworkSession::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QNetworkSession::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QNetworkSession::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "usagePoliciesChanged(QNetworkSession::UsagePolicies)", "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
+  if( hb_pcount() == 1 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::usagePoliciesChanged, [sender](QNetworkSession::UsagePolicies arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

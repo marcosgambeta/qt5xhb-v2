@@ -65,6 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTcpServer>
@@ -568,16 +569,132 @@ virtual void incomingConnection(qintptr handle) [protected]
 void addPendingConnection(QTcpSocket* socket) [protected]
 */
 
-void QTcpServerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void acceptError( QAbstractSocket::SocketError socketError )
+*/
 HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 {
-  QTcpServerSlots_connect_signal( "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" );
+  if( hb_pcount() == 1 )
+  {
+    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTcpServer::acceptError, [sender](QAbstractSocket::SocketError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "acceptError(QAbstractSocket::SocketError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTCPSERVER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "acceptError(QAbstractSocket::SocketError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "acceptError(QAbstractSocket::SocketError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void newConnection()
+*/
 HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 {
-  QTcpServerSlots_connect_signal( "newConnection()", "newConnection()" );
+  if( hb_pcount() == 1 )
+  {
+    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "newConnection()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTcpServer::newConnection, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTCPSERVER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "newConnection()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "newConnection()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "newConnection()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

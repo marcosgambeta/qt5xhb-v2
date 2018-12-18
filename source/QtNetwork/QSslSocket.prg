@@ -121,6 +121,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSslSocket>
@@ -129,6 +130,7 @@ RETURN
 #include <QSslKey>
 #include <QSslCipher>
 #include <QSslConfiguration>
+#include <QSslPreSharedKeyAuthenticator>
 
 /*
 explicit QSslSocket(QObject *parent = Q_NULLPTR)
@@ -2266,40 +2268,417 @@ qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
 qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
 */
 
-void QSslSocketSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void encrypted()
+*/
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 {
-  QSslSocketSlots_connect_signal( "encrypted()", "encrypted()" );
+  if( hb_pcount() == 1 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "encrypted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::encrypted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "encrypted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "encrypted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "encrypted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void encryptedBytesWritten( qint64 written )
+*/
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
-  QSslSocketSlots_connect_signal( "encryptedBytesWritten(qint64)", "encryptedBytesWritten(qint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "encryptedBytesWritten(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::encryptedBytesWritten, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "encryptedBytesWritten(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "encryptedBytesWritten(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "encryptedBytesWritten(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "encryptedBytesWritten(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void modeChanged( QSslSocket::SslMode mode )
+*/
 HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 {
-  QSslSocketSlots_connect_signal( "modeChanged(QSslSocket::SslMode)", "modeChanged(QSslSocket::SslMode)" );
+  if( hb_pcount() == 1 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "modeChanged(QSslSocket::SslMode)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::modeChanged, [sender](QSslSocket::SslMode arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "modeChanged(QSslSocket::SslMode)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "modeChanged(QSslSocket::SslMode)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "modeChanged(QSslSocket::SslMode)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "modeChanged(QSslSocket::SslMode)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void peerVerifyError( const QSslError & error )
+*/
 HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
-  QSslSocketSlots_connect_signal( "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" );
+  if( hb_pcount() == 1 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::peerVerifyError, [sender](QSslError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "peerVerifyError(QSslError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSSLERROR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "peerVerifyError(QSslError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "peerVerifyError(QSslError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "peerVerifyError(QSslError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
+*/
 HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QSslSocketSlots_connect_signal( "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::preSharedKeyAuthenticationRequired, [sender](QSslPreSharedKeyAuthenticator* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void sslErrors( const QList<QSslError> & errors )
+*/
 HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 {
-  QSslSocketSlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
+  if( hb_pcount() == 1 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors), [sender](QList<QSslError> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QSslError *) new QSslError ( arg1 [i] ) );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sslErrors(QList<QSslError>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sslErrors(QList<QSslError>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

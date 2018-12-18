@@ -70,6 +70,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QDnsLookup>
@@ -800,26 +801,262 @@ HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDnsLookupSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished()
+*/
 HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 {
-  QDnsLookupSlots_connect_signal( "finished()", "finished()" );
+  if( hb_pcount() == 1 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::finished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void nameChanged( const QString & name )
+*/
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 {
-  QDnsLookupSlots_connect_signal( "nameChanged(QString)", "nameChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "nameChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::nameChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "nameChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "nameChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "nameChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void nameserverChanged( const QHostAddress & nameserver )
+*/
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 {
-  QDnsLookupSlots_connect_signal( "nameserverChanged(QHostAddress)", "nameserverChanged(QHostAddress)" );
+  if( hb_pcount() == 1 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "nameserverChanged(QHostAddress)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::nameserverChanged, [sender](QHostAddress arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "nameserverChanged(QHostAddress)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QHOSTADDRESS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "nameserverChanged(QHostAddress)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "nameserverChanged(QHostAddress)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "nameserverChanged(QHostAddress)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void typeChanged( QDnsLookup::Type type )
+*/
 HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 {
-  QDnsLookupSlots_connect_signal( "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" );
+  if( hb_pcount() == 1 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "typeChanged(QDnsLookup::Type)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::typeChanged, [sender](QDnsLookup::Type arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "typeChanged(QDnsLookup::Type)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "typeChanged(QDnsLookup::Type)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "typeChanged(QDnsLookup::Type)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "typeChanged(QDnsLookup::Type)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

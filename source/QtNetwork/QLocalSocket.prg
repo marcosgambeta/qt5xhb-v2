@@ -70,6 +70,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QLocalSocket>
@@ -730,26 +731,260 @@ virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE [protected]
 virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE [protected]
 */
 
-void QLocalSocketSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void connected()
+*/
 HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 {
-  QLocalSocketSlots_connect_signal( "connected()", "connected()" );
+  if( hb_pcount() == 1 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "connected()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLocalSocket::connected, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "connected()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "connected()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "connected()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void disconnected()
+*/
 HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 {
-  QLocalSocketSlots_connect_signal( "disconnected()", "disconnected()" );
+  if( hb_pcount() == 1 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "disconnected()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLocalSocket::disconnected, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "disconnected()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "disconnected()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "disconnected()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void error( QLocalSocket::LocalSocketError socketError )
+*/
 HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 {
-  QLocalSocketSlots_connect_signal( "error(QLocalSocket::LocalSocketError)", "error(QLocalSocket::LocalSocketError)" );
+  if( hb_pcount() == 1 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QLocalSocket::LocalSocketError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error), [sender](QLocalSocket::LocalSocketError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QLocalSocket::LocalSocketError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QLocalSocket::LocalSocketError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QLocalSocket::LocalSocketError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QLocalSocket::LocalSocketError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void stateChanged( QLocalSocket::LocalSocketState socketState )
+*/
 HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 {
-  QLocalSocketSlots_connect_signal( "stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)" );
+  if( hb_pcount() == 1 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QLocalSocket::LocalSocketState)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLocalSocket::stateChanged, [sender](QLocalSocket::LocalSocketState arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QLocalSocket::LocalSocketState)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QLocalSocket::LocalSocketState)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QLocalSocket::LocalSocketState)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QLocalSocket::LocalSocketState)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
