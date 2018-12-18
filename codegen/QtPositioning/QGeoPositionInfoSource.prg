@@ -76,16 +76,19 @@ $staticMethod=5,2,0|QGeoPositionInfoSource *|createSource|const QString &,QObjec
 $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
-$beginSignals
-$signal=5,2,0|positionUpdated(QGeoPositionInfo)
-$signal=5,2,0|updateTimeout()
-$signal=5,2,0|error(QGeoPositionInfoSource::Error)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|positionUpdated(QGeoPositionInfo)
+%% $signal=5,2,0|updateTimeout()
+%% $signal=5,2,0|error(QGeoPositionInfoSource::Error)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|positionUpdated( const QGeoPositionInfo & update )
-$signal=5,2,0|updateTimeout()
-$signal=5,2,0|error( QGeoPositionInfoSource::Error error )
-$endSlotsClass
+$prototype=void positionUpdated( const QGeoPositionInfo & update )
+$signalMethod=5,2,0|void|positionUpdated|QGeoPositionInfo
+
+$prototype=void updateTimeout()
+$signalMethod=5,2,0|void|updateTimeout|
+
+$prototype=void error( QGeoPositionInfoSource::Error error )
+$signalMethod=5,2,0|void|error,error,QOverload<QGeoPositionInfoSource::Error>|QGeoPositionInfoSource::Error
 
 #pragma ENDDUMP

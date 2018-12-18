@@ -88,18 +88,23 @@ $staticMethod=5,2,0|QGeoAreaMonitorSource *|createSource|const QString &,QObject
 $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
-$beginSignals
-$signal=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
-$signal=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
-$signal=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
-$signal=5,2,0|error(QGeoAreaMonitorSource::Error)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
+%% $signal=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
+%% $signal=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
+%% $signal=5,2,0|error(QGeoAreaMonitorSource::Error)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
-$signal=5,2,0|areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
-$signal=5,2,0|monitorExpired( const QGeoAreaMonitorInfo & monitor )
-$signal=5,2,0|error( QGeoAreaMonitorSource::Error error )
-$endSlotsClass
+$prototype=void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+$signalMethod=5,2,0|void|areaEntered|QGeoAreaMonitorInfo,QGeoPositionInfo
+
+$prototype=void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+$signalMethod=5,2,0|void|areaExited|QGeoAreaMonitorInfo,QGeoPositionInfo
+
+$prototype=void monitorExpired( const QGeoAreaMonitorInfo & monitor )
+$signalMethod=5,2,0|void|monitorExpired|QGeoAreaMonitorInfo
+
+$prototype=void error( QGeoAreaMonitorSource::Error error )
+$signalMethod=5,2,0|void|error,error,QOverload<QGeoAreaMonitorSource::Error>|QGeoAreaMonitorSource::Error
 
 #pragma ENDDUMP
