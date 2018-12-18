@@ -55,20 +55,27 @@ $method=|bool|isOnline|
 $prototype=void updateConfigurations () (slot)
 $method=|void|updateConfigurations|
 
-$beginSignals
-$signal=|configurationAdded(QNetworkConfiguration)
-$signal=|configurationChanged(QNetworkConfiguration)
-$signal=|configurationRemoved(QNetworkConfiguration)
-$signal=|onlineStateChanged(bool)
-$signal=|updateCompleted()
-$endSignals
+%% $beginSignals
+%% $signal=|configurationAdded(QNetworkConfiguration)
+%% $signal=|configurationChanged(QNetworkConfiguration)
+%% $signal=|configurationRemoved(QNetworkConfiguration)
+%% $signal=|onlineStateChanged(bool)
+%% $signal=|updateCompleted()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|configurationAdded( const QNetworkConfiguration & config )
-$signal=|configurationChanged( const QNetworkConfiguration & config )
-$signal=|configurationRemoved( const QNetworkConfiguration & config )
-$signal=|onlineStateChanged( bool isOnline )
-$signal=|updateCompleted()
-$endSlotsClass
+$prototype=void configurationAdded( const QNetworkConfiguration & config )
+$signalMethod=|void|configurationAdded|QNetworkConfiguration
+
+$prototype=void configurationChanged( const QNetworkConfiguration & config )
+$signalMethod=|void|configurationChanged|QNetworkConfiguration
+
+$prototype=void configurationRemoved( const QNetworkConfiguration & config )
+$signalMethod=|void|configurationRemoved|QNetworkConfiguration
+
+$prototype=void onlineStateChanged( bool isOnline )
+$signalMethod=|void|onlineStateChanged|bool
+
+$prototype=void updateCompleted()
+$signalMethod=|void|updateCompleted|
 
 #pragma ENDDUMP

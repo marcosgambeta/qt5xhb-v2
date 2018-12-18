@@ -39,6 +39,7 @@ $includes
 
 #include <QHostAddress>
 #include <QNetworkProxy>
+#include <QAuthenticator>
 
 $prototype=QAbstractSocket ( SocketType socketType, QObject * parent )
 $constructor=|new|QAbstractSocket::SocketType,QObject *
@@ -223,26 +224,35 @@ $prototype=void setPeerAddress(const QHostAddress &address) [protected]
 
 $prototype=void setPeerName(const QString &name) [protected]
 
-$beginSignals
-$signal=|connected()
-$signal=|disconnected()
-$signal=|error(QAbstractSocket::SocketError)
-$signal=|hostFound()
-%% #ifndef QT_NO_NETWORKPROXY
-$signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-%% #endif
-$signal=|stateChanged(QAbstractSocket::SocketState)
-$endSignals
+%% $beginSignals
+%% $signal=|connected()
+%% $signal=|disconnected()
+%% $signal=|error(QAbstractSocket::SocketError)
+%% $signal=|hostFound()
+%% %% #ifndef QT_NO_NETWORKPROXY
+%% $signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+%% %% #endif
+%% $signal=|stateChanged(QAbstractSocket::SocketState)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|connected()
-$signal=|disconnected()
-$signal=|error( QAbstractSocket::SocketError socketError )
-$signal=|hostFound()
+$prototype=void connected()
+$signalMethod=|void|connected|
+
+$prototype=void disconnected()
+$signalMethod=|void|disconnected|
+
+$prototype=void error( QAbstractSocket::SocketError socketError )
+$signalMethod=|void|error,error,QOverload<QAbstractSocket::SocketError>|QAbstractSocket::SocketError
+
+$prototype=void hostFound()
+$signalMethod=|void|hostFound|
+
 %% #ifndef QT_NO_NETWORKPROXY
-$signal=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+$prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+$signalMethod=|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator*
 %% #endif
-$signal=|stateChanged( QAbstractSocket::SocketState socketState )
-$endSlotsClass
+
+$prototype=void stateChanged( QAbstractSocket::SocketState socketState )
+$signalMethod=|void|stateChanged|QAbstractSocket::SocketState
 
 #pragma ENDDUMP

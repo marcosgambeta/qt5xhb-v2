@@ -50,6 +50,7 @@ $includes
 #include <QSslKey>
 #include <QSslCipher>
 #include <QSslConfiguration>
+#include <QSslPreSharedKeyAuthenticator>
 
 $prototype=explicit QSslSocket(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
@@ -429,22 +430,31 @@ $prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected
 
 $prototype=qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
 
-$beginSignals
-$signal=|encrypted()
-$signal=|encryptedBytesWritten(qint64)
-$signal=|modeChanged(QSslSocket::SslMode)
-$signal=|peerVerifyError(QSslError)
-$signal=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
-$signal=|sslErrors(QList<QSslError>)
-$endSignals
+%% $beginSignals
+%% $signal=|encrypted()
+%% $signal=|encryptedBytesWritten(qint64)
+%% $signal=|modeChanged(QSslSocket::SslMode)
+%% $signal=|peerVerifyError(QSslError)
+%% $signal=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
+%% $signal=|sslErrors(QList<QSslError>)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|encrypted()
-$signal=|encryptedBytesWritten( qint64 written )
-$signal=|modeChanged( QSslSocket::SslMode mode )
-$signal=|peerVerifyError( const QSslError & error )
-$signal=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
-$signal=|sslErrors( const QList<QSslError> & errors )
-$endSlotsClass
+$prototype=void encrypted()
+$signalMethod=|void|encrypted|
+
+$prototype=void encryptedBytesWritten( qint64 written )
+$signalMethod=|void|encryptedBytesWritten|qint64
+
+$prototype=void modeChanged( QSslSocket::SslMode mode )
+$signalMethod=|void|modeChanged|QSslSocket::SslMode
+
+$prototype=void peerVerifyError( const QSslError & error )
+$signalMethod=|void|peerVerifyError|QSslError
+
+$prototype=void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
+$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QSslPreSharedKeyAuthenticator*
+
+$prototype=void sslErrors( const QList<QSslError> & errors )
+$signalMethod=|void|sslErrors,sslErrors,QOverload<const QList<QSslError> &>|QList<QSslError>
 
 #pragma ENDDUMP

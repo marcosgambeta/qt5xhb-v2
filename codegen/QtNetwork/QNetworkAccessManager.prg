@@ -63,9 +63,12 @@ $includes
 #include <QAbstractNetworkCache>
 #include <QNetworkCookieJar>
 #include <QNetworkReply>
+#include <QAuthenticator>
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 #include <QHstsPolicy>
 #endif
+
 $prototype=explicit QNetworkAccessManager(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
@@ -289,38 +292,55 @@ $prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequ
 
 $prototype=QStringList supportedSchemesImplementation() const [protected] (slot) (5,2,0)
 
-$beginSignals
-%% #ifndef QT_NO_NETWORKPROXY
-$signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-%% #endif
-$signal=|authenticationRequired(QNetworkReply*,QAuthenticator*)
-$signal=|finished(QNetworkReply*)
-%% #ifndef QT_NO_SSL
-$signal=5,1,0|encrypted(QNetworkReply*)
-$signal=|sslErrors(QNetworkReply*,QList<QSslError>)
-$signal=5,5,0|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)
-%% #endif
-%% #ifndef QT_NO_BEARERMANAGEMENT
-$signal=|networkSessionConnected()
-$signal=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
-%% #endif
-$endSignals
+%% $beginSignals
+%% %% #ifndef QT_NO_NETWORKPROXY
+%% $signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+%% %% #endif
+%% $signal=|authenticationRequired(QNetworkReply*,QAuthenticator*)
+%% $signal=|finished(QNetworkReply*)
+%% %% #ifndef QT_NO_SSL
+%% $signal=5,1,0|encrypted(QNetworkReply*)
+%% $signal=|sslErrors(QNetworkReply*,QList<QSslError>)
+%% $signal=5,5,0|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)
+%% %% #endif
+%% %% #ifndef QT_NO_BEARERMANAGEMENT
+%% $signal=|networkSessionConnected()
+%% $signal=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
+%% %% #endif
+%% $endSignals
 
-$beginSlotsClass
 %% #ifndef QT_NO_NETWORKPROXY
-$signal=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+$prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+$signalMethod=|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator*
 %% #endif
-$signal=|authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
-$signal=|finished( QNetworkReply * reply )
+
+$prototype=void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
+$signalMethod=|void|authenticationRequired|QNetworkReply*,QAuthenticator*
+
+$prototype=void finished( QNetworkReply * reply )
+$signalMethod=|void|finished|QNetworkReply*
+
 %% #ifndef QT_NO_SSL
-$signal=5,1,0|encrypted( QNetworkReply * reply )
-$signal=|sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
-$signal=5,5,0|preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
+
+$prototype=void encrypted( QNetworkReply * reply )
+$signalMethod=5,1,0|void|encrypted|QNetworkReply*
+
+$prototype=void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
+$signalMethod=|void|sslErrors|QNetworkReply*,QList<QSslError>
+
+$prototype=void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
+$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QNetworkReply*,QSslPreSharedKeyAuthenticator*
+
 %% #endif
+
 %% #ifndef QT_NO_BEARERMANAGEMENT
-$signal=|networkSessionConnected()
-$signal=|networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
+
+$prototype=void networkSessionConnected()
+$signalMethod=|void|networkSessionConnected|
+
+$prototype=void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
+$signalMethod=|void|networkAccessibleChanged|QNetworkAccessManager::NetworkAccessibility
+
 %% #endif
-$endSlotsClass
 
 #pragma ENDDUMP

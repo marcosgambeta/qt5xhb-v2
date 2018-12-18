@@ -171,34 +171,53 @@ $prototype=virtual void setSslConfigurationImplementation(const QSslConfiguratio
 
 $prototype=virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) [protected]
 
-$beginSignals
-$signal=|downloadProgress(qint64,qint64)
-$signal=|error(QNetworkReply::NetworkError)
-$signal=|finished()
-$signal=|metaDataChanged()
-$signal=|uploadProgress(qint64,qint64)
-%% #ifndef QT_NO_SSL
-$signal=5,1,0|encrypted()
-$signal=|sslErrors(QList<QSslError>)
-$signal=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
-%% #endif
-$signal=5,6,0|redirected(QUrl)
-$signal=5,9,0|redirectAllowed()
-$endSignals
+%% $beginSignals
+%% $signal=|downloadProgress(qint64,qint64)
+%% $signal=|error(QNetworkReply::NetworkError)
+%% $signal=|finished()
+%% $signal=|metaDataChanged()
+%% $signal=|uploadProgress(qint64,qint64)
+%% %% #ifndef QT_NO_SSL
+%% $signal=5,1,0|encrypted()
+%% $signal=|sslErrors(QList<QSslError>)
+%% $signal=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
+%% %% #endif
+%% $signal=5,6,0|redirected(QUrl)
+%% $signal=5,9,0|redirectAllowed()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
-$signal=|error( QNetworkReply::NetworkError code )
-$signal=|finished()
-$signal=|metaDataChanged()
-$signal=|uploadProgress( qint64 bytesSent, qint64 bytesTotal )
+$prototype=void downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
+$signalMethod=|void|downloadProgress|qint64,qint64
+
+$prototype=void error( QNetworkReply::NetworkError code )
+$signalMethod=|void|error,error,QOverload<QNetworkReply::NetworkError>|QNetworkReply::NetworkError
+
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void metaDataChanged()
+$signalMethod=|void|metaDataChanged|
+
+$prototype=void uploadProgress( qint64 bytesSent, qint64 bytesTotal )
+$signalMethod=|void|uploadProgress|qint64,qint64
+
 %% #ifndef QT_NO_SSL
-$signal=5,1,0|encrypted()
-$signal=|sslErrors( const QList<QSslError> & errors )
-$signal=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+
+$prototype=void encrypted()
+$signalMethod=5,1,0|void|encrypted|
+
+$prototype=void sslErrors( const QList<QSslError> & errors )
+$signalMethod=|void|sslErrors|QList<QSslError>
+
+$prototype=void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QSslPreSharedKeyAuthenticator*
+
 %% #endif
-$signal=5,6,0|redirected( const QUrl & url )
-$signal=5,9,0|redirectAllowed()
-$endSlotsClass
+
+$prototype=void redirected( const QUrl & url )
+$signalMethod=5,6,0|void|redirected|QUrl
+
+$prototype=void redirectAllowed()
+$signalMethod=5,9,0|void|redirectAllowed|
 
 #pragma ENDDUMP

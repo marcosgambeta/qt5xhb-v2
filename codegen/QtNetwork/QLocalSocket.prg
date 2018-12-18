@@ -132,18 +132,23 @@ $prototype=virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE [protected]
 
 $prototype=virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE [protected]
 
-$beginSignals
-$signal=|connected()
-$signal=|disconnected()
-$signal=|error(QLocalSocket::LocalSocketError)
-$signal=|stateChanged(QLocalSocket::LocalSocketState)
-$endSignals
+%% $beginSignals
+%% $signal=|connected()
+%% $signal=|disconnected()
+%% $signal=|error(QLocalSocket::LocalSocketError)
+%% $signal=|stateChanged(QLocalSocket::LocalSocketState)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|connected()
-$signal=|disconnected()
-$signal=|error( QLocalSocket::LocalSocketError socketError )
-$signal=|stateChanged( QLocalSocket::LocalSocketState socketState )
-$endSlotsClass
+$prototype=void connected()
+$signalMethod=|void|connected|
+
+$prototype=void disconnected()
+$signalMethod=|void|disconnected|
+
+$prototype=void error( QLocalSocket::LocalSocketError socketError )
+$signalMethod=|void|error,error,QOverload<QLocalSocket::LocalSocketError>|QLocalSocket::LocalSocketError
+
+$prototype=void stateChanged( QLocalSocket::LocalSocketState socketState )
+$signalMethod=|void|stateChanged|QLocalSocket::LocalSocketState
 
 #pragma ENDDUMP

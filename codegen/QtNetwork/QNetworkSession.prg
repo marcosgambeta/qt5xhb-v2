@@ -106,24 +106,35 @@ $prototype=virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE
 
 $prototype=virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected]
 
-$beginSignals
-$signal=|closed()
-$signal=|error(QNetworkSession::SessionError)
-$signal=|newConfigurationActivated()
-$signal=|opened()
-$signal=|preferredConfigurationChanged(QNetworkConfiguration,bool)
-$signal=|stateChanged(QNetworkSession::State)
-$signal=|usagePoliciesChanged(QNetworkSession::UsagePolicies)
-$endSignals
+%% $beginSignals
+%% $signal=|closed()
+%% $signal=|error(QNetworkSession::SessionError)
+%% $signal=|newConfigurationActivated()
+%% $signal=|opened()
+%% $signal=|preferredConfigurationChanged(QNetworkConfiguration,bool)
+%% $signal=|stateChanged(QNetworkSession::State)
+%% $signal=|usagePoliciesChanged(QNetworkSession::UsagePolicies)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|closed()
-$signal=|error( QNetworkSession::SessionError error )
-$signal=|newConfigurationActivated()
-$signal=|opened()
-$signal=|preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
-$signal=|stateChanged( QNetworkSession::State state )
-$signal=|usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
-$endSlotsClass
+$prototype=void closed()
+$signalMethod=|void|closed|
+
+$prototype=void error( QNetworkSession::SessionError error )
+$signalMethod=|void|error,error,QOverload<QNetworkSession::SessionError>|QNetworkSession::SessionError
+
+$prototype=void newConfigurationActivated()
+$signalMethod=|void|newConfigurationActivated|
+
+$prototype=void opened()
+$signalMethod=|void|opened|
+
+$prototype=void preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
+$signalMethod=|void|preferredConfigurationChanged|QNetworkConfiguration,bool
+
+$prototype=void stateChanged( QNetworkSession::State state )
+$signalMethod=|void|stateChanged|QNetworkSession::State
+
+$prototype=void usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
+$signalMethod=|void|usagePoliciesChanged|QNetworkSession::UsagePolicies
 
 #pragma ENDDUMP

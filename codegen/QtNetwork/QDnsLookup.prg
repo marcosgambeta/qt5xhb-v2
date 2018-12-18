@@ -145,18 +145,23 @@ $slotMethod=|void|abort|
 $prototype=void lookup() (slot)
 $slotMethod=|void|lookup|
 
-$beginSignals
-$signal=|finished()
-$signal=|nameChanged(QString)
-$signal=|nameserverChanged(QHostAddress)
-$signal=|typeChanged(QDnsLookup::Type)
-$endSignals
+%% $beginSignals
+%% $signal=|finished()
+%% $signal=|nameChanged(QString)
+%% $signal=|nameserverChanged(QHostAddress)
+%% $signal=|typeChanged(QDnsLookup::Type)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|finished()
-$signal=|nameChanged( const QString & name )
-$signal=|nameserverChanged( const QHostAddress & nameserver )
-$signal=|typeChanged( QDnsLookup::Type type )
-$endSlotsClass
+$prototype=void finished()
+$signalMethod=|void|finished|
+
+$prototype=void nameChanged( const QString & name )
+$signalMethod=|void|nameChanged|QString
+
+$prototype=void nameserverChanged( const QHostAddress & nameserver )
+$signalMethod=|void|nameserverChanged|QHostAddress
+
+$prototype=void typeChanged( QDnsLookup::Type type )
+$signalMethod=|void|typeChanged|QDnsLookup::Type
 
 #pragma ENDDUMP
