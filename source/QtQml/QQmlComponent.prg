@@ -60,6 +60,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QQmlComponent>
@@ -531,16 +532,134 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QQmlComponentSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void progressChanged( qreal progress )
+*/
 HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
 {
-  QQmlComponentSlots_connect_signal( "progressChanged(qreal)", "progressChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "progressChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQmlComponent::progressChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "progressChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQMLCOMPONENT" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "progressChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "progressChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "progressChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void statusChanged( QQmlComponent::Status status )
+*/
 HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
 {
-  QQmlComponentSlots_connect_signal( "statusChanged(QQmlComponent::Status)", "statusChanged(QQmlComponent::Status)" );
+  if( hb_pcount() == 1 )
+  {
+    QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusChanged(QQmlComponent::Status)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQmlComponent::statusChanged, [sender](QQmlComponent::Status arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQmlComponent::Status)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQMLCOMPONENT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusChanged(QQmlComponent::Status)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusChanged(QQmlComponent::Status)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QQmlComponent::Status)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

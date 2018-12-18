@@ -63,6 +63,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QQmlExpression>
@@ -514,11 +515,67 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
   }
 }
 
-void QQmlExpressionSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void valueChanged()
+*/
 HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
 {
-  QQmlExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQmlExpression * sender = (QQmlExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQmlExpression::valueChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQMLEXPRESSION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQmlExpression * sender = (QQmlExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

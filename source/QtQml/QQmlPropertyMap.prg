@@ -52,6 +52,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QQmlPropertyMap>
@@ -287,11 +288,71 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
   }
 }
 
-void QQmlPropertyMapSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void valueChanged( const QString & key, const QVariant & value )
+*/
 HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
 {
-  QQmlPropertyMapSlots_connect_signal( "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" );
+  if( hb_pcount() == 1 )
+  {
+    QQmlPropertyMap * sender = (QQmlPropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueChanged(QString,QVariant)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQmlPropertyMap::valueChanged, [sender](QString arg1, QVariant arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(QString,QVariant)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQMLPROPERTYMAP" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QVARIANT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueChanged(QString,QVariant)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQmlPropertyMap * sender = (QQmlPropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueChanged(QString,QVariant)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueChanged(QString,QVariant)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -77,6 +77,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QQmlEngine>
@@ -812,11 +813,67 @@ HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QQmlEngineSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void quit()
+*/
 HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
 {
-  QQmlEngineSlots_connect_signal( "quit()", "quit()" );
+  if( hb_pcount() == 1 )
+  {
+    QQmlEngine * sender = (QQmlEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "quit()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQmlEngine::quit, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "quit()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQMLENGINE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "quit()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQmlEngine * sender = (QQmlEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "quit()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "quit()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
