@@ -67,6 +67,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QPrintPreviewWidget>
@@ -712,16 +713,132 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QPrintPreviewWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void paintRequested( QPrinter * printer )
+*/
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {
-  QPrintPreviewWidgetSlots_connect_signal( "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" );
+  if( hb_pcount() == 1 )
+  {
+    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "paintRequested(QPrinter*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPrintPreviewWidget::paintRequested, [sender](QPrinter* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "paintRequested(QPrinter*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPRINTPREVIEWWIDGET" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QPRINTER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "paintRequested(QPrinter*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "paintRequested(QPrinter*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "paintRequested(QPrinter*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void previewChanged()
+*/
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 {
-  QPrintPreviewWidgetSlots_connect_signal( "previewChanged()", "previewChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "previewChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPrintPreviewWidget::previewChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "previewChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPRINTPREVIEWWIDGET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "previewChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "previewChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "previewChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

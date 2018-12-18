@@ -53,6 +53,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QPrintDialog>
@@ -339,11 +340,69 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QPrintDialogSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void accepted( QPrinter * printer )
+*/
 HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 {
-  QPrintDialogSlots_connect_signal( "accepted(QPrinter*)", "accepted(QPrinter*)" );
+  if( hb_pcount() == 1 )
+  {
+    QPrintDialog * sender = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "accepted(QPrinter*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPrintDialog::accepted, [sender](QPrinter* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted(QPrinter*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPRINTDIALOG" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QPRINTER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "accepted(QPrinter*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPrintDialog * sender = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "accepted(QPrinter*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "accepted(QPrinter*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

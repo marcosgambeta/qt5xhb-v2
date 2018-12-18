@@ -48,6 +48,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QPrintPreviewDialog>
@@ -210,11 +211,69 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QPrintPreviewDialogSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void paintRequested( QPrinter * printer )
+*/
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 {
-  QPrintPreviewDialogSlots_connect_signal( "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" );
+  if( hb_pcount() == 1 )
+  {
+    QPrintPreviewDialog * sender = (QPrintPreviewDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "paintRequested(QPrinter*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPrintPreviewDialog::paintRequested, [sender](QPrinter* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "paintRequested(QPrinter*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPRINTPREVIEWDIALOG" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QPRINTER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "paintRequested(QPrinter*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPrintPreviewDialog * sender = (QPrintPreviewDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "paintRequested(QPrinter*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "paintRequested(QPrinter*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
