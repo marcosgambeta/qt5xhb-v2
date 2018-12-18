@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+#include <QPrinter>
+
 $prototype=QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=0
 
@@ -86,6 +88,6 @@ $method=|void|setVisible|bool
 %% $endSignals
 
 $prototype=void accepted( QPrinter * printer )
-$signalMethod=|void|accepted|QPrinter*
+$signalMethod=|void|accepted,accepted,QOverload<QPrinter*>|QPrinter*
 
 #pragma ENDDUMP
