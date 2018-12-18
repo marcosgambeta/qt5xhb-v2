@@ -1670,3 +1670,4 @@ QBluetoothDeviceInfo::Fields                         |enum
 QGradient::Preset                                    |enum
 QWindow::Visibility                                  |enum
 QVulkanInstance                                      |object
+QAuthenticator                                       |object
