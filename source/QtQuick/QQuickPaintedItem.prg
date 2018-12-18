@@ -69,6 +69,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QQuickPaintedItem>
@@ -622,26 +623,256 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QQuickPaintedItemSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void contentsScaleChanged()
+*/
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "contentsScaleChanged()", "contentsScaleChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "contentsScaleChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::contentsScaleChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsScaleChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKPAINTEDITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "contentsScaleChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "contentsScaleChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "contentsScaleChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void contentsSizeChanged()
+*/
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "contentsSizeChanged()", "contentsSizeChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "contentsSizeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::contentsSizeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsSizeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKPAINTEDITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "contentsSizeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "contentsSizeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "contentsSizeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void fillColorChanged()
+*/
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "fillColorChanged()", "fillColorChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "fillColorChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::fillColorChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "fillColorChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKPAINTEDITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "fillColorChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "fillColorChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "fillColorChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void renderTargetChanged()
+*/
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "renderTargetChanged()", "renderTargetChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "renderTargetChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::renderTargetChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "renderTargetChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKPAINTEDITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "renderTargetChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "renderTargetChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "renderTargetChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -57,6 +57,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QQuickView>
@@ -360,11 +361,69 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QQuickViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void statusChanged( QQuickView::Status status )
+*/
 HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
 {
-  QQuickViewSlots_connect_signal( "statusChanged(QQuickView::Status)", "statusChanged(QQuickView::Status)" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickView * sender = (QQuickView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusChanged(QQuickView::Status)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickView::statusChanged, [sender](QQuickView::Status arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQuickView::Status)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusChanged(QQuickView::Status)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickView * sender = (QQuickView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusChanged(QQuickView::Status)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QQuickView::Status)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

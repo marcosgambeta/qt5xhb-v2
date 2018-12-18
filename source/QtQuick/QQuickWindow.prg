@@ -82,6 +82,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QQuickWindow>
@@ -749,41 +750,447 @@ HB_FUNC_STATIC( QQUICKWINDOW_UPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QQuickWindowSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void afterRendering()
+*/
 HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 {
-  QQuickWindowSlots_connect_signal( "afterRendering()", "afterRendering()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "afterRendering()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::afterRendering, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "afterRendering()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "afterRendering()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "afterRendering()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "afterRendering()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void beforeRendering()
+*/
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 {
-  QQuickWindowSlots_connect_signal( "beforeRendering()", "beforeRendering()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "beforeRendering()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::beforeRendering, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeRendering()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "beforeRendering()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "beforeRendering()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "beforeRendering()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void beforeSynchronizing()
+*/
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 {
-  QQuickWindowSlots_connect_signal( "beforeSynchronizing()", "beforeSynchronizing()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "beforeSynchronizing()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::beforeSynchronizing, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeSynchronizing()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "beforeSynchronizing()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "beforeSynchronizing()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "beforeSynchronizing()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void colorChanged( const QColor & color )
+*/
 HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 {
-  QQuickWindowSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "colorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::colorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "colorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "colorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "colorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void frameSwapped()
+*/
 HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 {
-  QQuickWindowSlots_connect_signal( "frameSwapped()", "frameSwapped()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "frameSwapped()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::frameSwapped, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "frameSwapped()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "frameSwapped()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "frameSwapped()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "frameSwapped()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sceneGraphInitialized()
+*/
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 {
-  QQuickWindowSlots_connect_signal( "sceneGraphInitialized()", "sceneGraphInitialized()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sceneGraphInitialized()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::sceneGraphInitialized, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneGraphInitialized()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sceneGraphInitialized()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sceneGraphInitialized()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sceneGraphInitialized()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sceneGraphInvalidated()
+*/
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 {
-  QQuickWindowSlots_connect_signal( "sceneGraphInvalidated()", "sceneGraphInvalidated()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sceneGraphInvalidated()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::sceneGraphInvalidated, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneGraphInvalidated()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sceneGraphInvalidated()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sceneGraphInvalidated()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sceneGraphInvalidated()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
