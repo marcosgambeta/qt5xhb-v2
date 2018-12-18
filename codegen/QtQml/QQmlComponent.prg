@@ -165,14 +165,15 @@ $addMethod=loadUrl
 $prototype=void setData(const QByteArray & data, const QUrl & url)
 $method=|void|setData|const QByteArray &,const QUrl &
 
-$beginSignals
-$signal=|progressChanged(qreal)
-$signal=|statusChanged(QQmlComponent::Status)
-$endSignals
+%% $beginSignals
+%% $signal=|progressChanged(qreal)
+%% $signal=|statusChanged(QQmlComponent::Status)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|progressChanged( qreal progress )
-$signal=|statusChanged( QQmlComponent::Status status )
-$endSlotsClass
+$prototype=void progressChanged( qreal progress )
+$signalMethod=|void|progressChanged|qreal
+
+$prototype=void statusChanged( QQmlComponent::Status status )
+$signalMethod=|void|statusChanged|QQmlComponent::Status
 
 #pragma ENDDUMP

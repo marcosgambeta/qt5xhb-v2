@@ -94,12 +94,11 @@ $addMethod=load
 $prototype=void loadData(const QByteArray &data, const QUrl &url = QUrl())
 $method=5,1,0|void|loadData|const QByteArray &,const QUrl &=QUrl()
 
-$beginSignals
-$signal=5,1,0|objectCreated(QObject*,QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=5,1,0|objectCreated(QObject*,QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,1,0|objectCreated( QObject * obj, const QUrl & url )
-$endSlotsClass
+$prototype=void objectCreated( QObject * obj, const QUrl & url )
+$signalMethod=5,1,0|void|objectCreated|QObject*,QUrl
 
 #pragma ENDDUMP
