@@ -67,6 +67,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
@@ -565,23 +566,139 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 #endif
 }
 
-void QQuickWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void statusChanged( QQuickWidget::Status status )
+*/
 HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidgetSlots_connect_signal( "statusChanged(QQuickWidget::Status)", "statusChanged(QQuickWidget::Status)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusChanged(QQuickWidget::Status)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWidget::statusChanged, [sender](QQuickWidget::Status arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQuickWidget::Status)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusChanged(QQuickWidget::Status)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusChanged(QQuickWidget::Status)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QQuickWidget::Status)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
+*/
 HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidgetSlots_connect_signal( "sceneGraphError(QQuickWindow::SceneGraphError,QString)", "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWidget::sceneGraphError, [sender](QQuickWindow::SceneGraphError arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWIDGET" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
