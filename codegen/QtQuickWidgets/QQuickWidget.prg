@@ -111,14 +111,15 @@ $method=5,3,0|QSurfaceFormat|format|
 $prototype=void setFormat(const QSurfaceFormat &format)
 $method=5,3,0|void|setFormat|const QSurfaceFormat &
 
-$beginSignals
-$signal=5,3,0|statusChanged(QQuickWidget::Status)
-$signal=5,3,0|sceneGraphError(QQuickWindow::SceneGraphError,QString)
-$endSignals
+%% $beginSignals
+%% $signal=5,3,0|statusChanged(QQuickWidget::Status)
+%% $signal=5,3,0|sceneGraphError(QQuickWindow::SceneGraphError,QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,3,0|statusChanged( QQuickWidget::Status status )
-$signal=5,3,0|sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
-$endSlotsClass
+$prototype=void statusChanged( QQuickWidget::Status status )
+$signalMethod=5,3,0|void|statusChanged|QQuickWidget::Status
+
+$prototype=void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
+$signalMethod=5,3,0|void|sceneGraphError|QQuickWindow::SceneGraphError,QString
 
 #pragma ENDDUMP
