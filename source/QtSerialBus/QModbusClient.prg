@@ -36,7 +36,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QModbusClient>
 #endif
 #endif
@@ -44,9 +44,10 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QModbusClient>
 #endif
 #endif
@@ -90,36 +91,99 @@ void setTimeout(int newTimeout)
 /*
 QModbusReply *sendReadRequest(const QModbusDataUnit &read, int serverAddress)
 */
+
 /*
 QModbusReply *sendWriteRequest(const QModbusDataUnit &write, int serverAddress)
 */
+
 /*
 QModbusReply *sendReadWriteRequest(const QModbusDataUnit &read, const QModbusDataUnit &write, int serverAddress)
 */
+
 /*
 QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
 */
+
 /*
 int numberOfRetries() const
 */
+
 /*
 void setNumberOfRetries(int number)
 */
+
 /*
 virtual bool processResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
 */
+
 /*
 virtual bool processPrivateResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
 */
 
-void QModbusClientSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void timeoutChanged( int newTimeout )
+*/
 HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClientSlots_connect_signal( "timeoutChanged(int)", "timeoutChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QModbusClient * sender = (QModbusClient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "timeoutChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QModbusClient::timeoutChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "timeoutChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSCLIENT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "timeoutChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QModbusClient * sender = (QModbusClient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "timeoutChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "timeoutChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

@@ -44,6 +44,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -136,14 +137,74 @@ virtual QModbusResponse processRequest(const QModbusPdu &request) [protected]
 virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) [protected]
 */
 
-void QModbusServerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
+*/
 HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusServerSlots_connect_signal( "dataWritten(QModbusDataUnit::RegisterType,int,int)", "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QModbusServer * sender = (QModbusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QModbusServer::dataWritten, [sender](QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSSERVER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QModbusServer * sender = (QModbusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

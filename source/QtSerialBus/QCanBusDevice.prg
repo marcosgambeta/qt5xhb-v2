@@ -66,6 +66,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -579,41 +580,269 @@ HB_FUNC_STATIC( QCANBUSDEVICE_READALLFRAMES )
 #endif
 }
 
-void QCanBusDeviceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void errorOccurred( QCanBusDevice::CanBusError )
+*/
 HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusDeviceSlots_connect_signal( "errorOccurred(QCanBusDevice::CanBusError)", "errorOccurred(QCanBusDevice::CanBusError)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::errorOccurred, [sender](QCanBusDevice::CanBusError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QCanBusDevice::CanBusError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "errorOccurred(QCanBusDevice::CanBusError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void framesReceived()
+*/
 HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusDeviceSlots_connect_signal( "framesReceived()", "framesReceived()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "framesReceived()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::framesReceived, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "framesReceived()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "framesReceived()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "framesReceived()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "framesReceived()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void framesWritten( qint64 framesCount )
+*/
 HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusDeviceSlots_connect_signal( "framesWritten(qint64)", "framesWritten(qint64)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "framesWritten(qint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::framesWritten, [sender](qint64 arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "framesWritten(qint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "framesWritten(qint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "framesWritten(qint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "framesWritten(qint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void stateChanged( QCanBusDevice::CanBusDeviceState state )
+*/
 HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusDeviceSlots_connect_signal( "stateChanged(QCanBusDevice::CanBusDeviceState)", "stateChanged(QCanBusDevice::CanBusDeviceState)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::stateChanged, [sender](QCanBusDevice::CanBusDeviceState arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

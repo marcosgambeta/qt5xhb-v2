@@ -45,6 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -125,23 +126,137 @@ virtual bool open() = 0 [protected]
 virtual void close() = 0 [protected]
 */
 
-void QModbusDeviceSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void errorOccurred( QModbusDevice::Error error )
+*/
 HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusDeviceSlots_connect_signal( "errorOccurred(QModbusDevice::Error)", "errorOccurred(QModbusDevice::Error)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "errorOccurred(QModbusDevice::Error)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QModbusDevice::errorOccurred, [sender](QModbusDevice::Error arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QModbusDevice::Error)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "errorOccurred(QModbusDevice::Error)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "errorOccurred(QModbusDevice::Error)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "errorOccurred(QModbusDevice::Error)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void stateChanged( QModbusDevice::State state )
+*/
 HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusDeviceSlots_connect_signal( "stateChanged(QModbusDevice::State)", "stateChanged(QModbusDevice::State)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QModbusDevice::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QModbusDevice::stateChanged, [sender](QModbusDevice::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QModbusDevice::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QModbusDevice::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QModbusDevice::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QModbusDevice::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

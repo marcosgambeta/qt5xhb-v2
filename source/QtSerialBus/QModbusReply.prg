@@ -43,6 +43,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -98,23 +99,135 @@ void setFinished(bool isFinished)
 void setError(QModbusDevice::Error error, const QString &errorText)
 */
 
-void QModbusReplySlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void finished()
+*/
 HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReplySlots_connect_signal( "finished()", "finished()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "finished()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QModbusReply::finished, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "finished()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "finished()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void errorOccurred( QModbusDevice::Error error )
+*/
 HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReplySlots_connect_signal( "errorOccurred(QModbusDevice::Error)", "errorOccurred(QModbusDevice::Error)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "errorOccurred(QModbusDevice::Error)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QModbusReply::errorOccurred, [sender](QModbusDevice::Error arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QModbusDevice::Error)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSREPLY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "errorOccurred(QModbusDevice::Error)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "errorOccurred(QModbusDevice::Error)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "errorOccurred(QModbusDevice::Error)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
