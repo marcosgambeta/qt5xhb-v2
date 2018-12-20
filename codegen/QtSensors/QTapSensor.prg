@@ -41,12 +41,11 @@ $method=5,1,0|bool|returnDoubleTapEvents|
 $prototype=void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 $method=5,1,0|void|setReturnDoubleTapEvents|bool
 
-$beginSignals
-$signal=5,1,0|returnDoubleTapEventsChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=5,1,0|returnDoubleTapEventsChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,1,0|returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
-$endSlotsClass
+$prototype=void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
+$signalMethod=5,1,0|void|returnDoubleTapEventsChanged|bool
 
 #pragma ENDDUMP

@@ -43,12 +43,11 @@ $method=5,1,0|bool|returnGeoValues|
 $prototype=void setReturnGeoValues(bool returnGeoValues)
 $method=5,1,0|void|setReturnGeoValues|bool
 
-$beginSignals
-$signal=5,1,0|returnGeoValuesChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=5,1,0|returnGeoValuesChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,1,0|returnGeoValuesChanged( bool returnGeoValues )
-$endSlotsClass
+$prototype=void returnGeoValuesChanged( bool returnGeoValues )
+$signalMethod=5,1,0|void|returnGeoValuesChanged|bool
 
 #pragma ENDDUMP

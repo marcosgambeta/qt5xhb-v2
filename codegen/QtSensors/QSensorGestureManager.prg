@@ -44,12 +44,11 @@ $method=5,1,0|QStringList|recognizerSignals|const QString &
 $prototype=static QSensorGestureRecognizer *sensorGestureRecognizer(const QString &id)
 $staticMethod=5,1,0|QSensorGestureRecognizer *|sensorGestureRecognizer|const QString &
 
-$beginSignals
-$signal=5,1,0|newSensorGestureAvailable()
-$endSignals
+%% $beginSignals
+%% $signal=5,1,0|newSensorGestureAvailable()
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,1,0|newSensorGestureAvailable()
-$endSlotsClass
+$prototype=void newSensorGestureAvailable()
+$signalMethod=5,1,0|void|newSensorGestureAvailable|
 
 #pragma ENDDUMP

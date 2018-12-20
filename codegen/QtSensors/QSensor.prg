@@ -161,38 +161,63 @@ $staticMethod=|QList<QByteArray>|sensorsForType|const QByteArray &
 $prototype=static QByteArray defaultSensorForType(const QByteArray &type)
 $staticMethod=5,1,0|QByteArray|defaultSensorForType|const QByteArray &
 
-$beginSignals
-$signal=5,1,0|busyChanged()
-$signal=5,1,0|activeChanged()
-$signal=5,1,0|readingChanged()
-$signal=5,1,0|sensorError(int)
-$signal=5,1,0|availableSensorsChanged()
-$signal=5,1,0|alwaysOnChanged()
-$signal=5,1,0|dataRateChanged()
-$signal=5,1,0|skipDuplicatesChanged(bool)
-$signal=5,1,0|axesOrientationModeChanged(QSensor::AxesOrientationMode)
-$signal=5,1,0|currentOrientationChanged(int)
-$signal=5,1,0|userOrientationChanged(int)
-$signal=5,1,0|maxBufferSizeChanged(int)
-$signal=5,1,0|efficientBufferSizeChanged(int)
-$signal=5,1,0|bufferSizeChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=5,1,0|busyChanged()
+%% $signal=5,1,0|activeChanged()
+%% $signal=5,1,0|readingChanged()
+%% $signal=5,1,0|sensorError(int)
+%% $signal=5,1,0|availableSensorsChanged()
+%% $signal=5,1,0|alwaysOnChanged()
+%% $signal=5,1,0|dataRateChanged()
+%% $signal=5,1,0|skipDuplicatesChanged(bool)
+%% $signal=5,1,0|axesOrientationModeChanged(QSensor::AxesOrientationMode)
+%% $signal=5,1,0|currentOrientationChanged(int)
+%% $signal=5,1,0|userOrientationChanged(int)
+%% $signal=5,1,0|maxBufferSizeChanged(int)
+%% $signal=5,1,0|efficientBufferSizeChanged(int)
+%% $signal=5,1,0|bufferSizeChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,1,0|busyChanged()
-$signal=5,1,0|activeChanged()
-$signal=5,1,0|readingChanged()
-$signal=5,1,0|sensorError( int error )
-$signal=5,1,0|availableSensorsChanged()
-$signal=5,1,0|alwaysOnChanged()
-$signal=5,1,0|dataRateChanged()
-$signal=5,1,0|skipDuplicatesChanged( bool skipDuplicates )
-$signal=5,1,0|axesOrientationModeChanged( QSensor::AxesOrientationMode axesOrientationMode )
-$signal=5,1,0|currentOrientationChanged( int currentOrientation )
-$signal=5,1,0|userOrientationChanged( int userOrientation )
-$signal=5,1,0|maxBufferSizeChanged( int maxBufferSize )
-$signal=5,1,0|efficientBufferSizeChanged( int efficientBufferSize )
-$signal=5,1,0|bufferSizeChanged( int bufferSize )
-$endSlotsClass
+$prototype=void busyChanged()
+$signalMethod=5,1,0|void|busyChanged|
+
+$prototype=void activeChanged()
+$signalMethod=5,1,0|void|activeChanged|
+
+$prototype=void readingChanged()
+$signalMethod=5,1,0|void|readingChanged|
+
+$prototype=void sensorError( int error )
+$signalMethod=5,1,0|void|sensorError|int
+
+$prototype=void availableSensorsChanged()
+$signalMethod=5,1,0|void|availableSensorsChanged|
+
+$prototype=void alwaysOnChanged()
+$signalMethod=5,1,0|void|alwaysOnChanged|
+
+$prototype=void dataRateChanged()
+$signalMethod=5,1,0|void|dataRateChanged|
+
+$prototype=void skipDuplicatesChanged( bool skipDuplicates )
+$signalMethod=5,1,0|void|skipDuplicatesChanged|bool
+
+$prototype=void axesOrientationModeChanged( QSensor::AxesOrientationMode axesOrientationMode )
+$signalMethod=5,1,0|void|axesOrientationModeChanged|QSensor::AxesOrientationMode
+
+$prototype=void currentOrientationChanged( int currentOrientation )
+$signalMethod=5,1,0|void|currentOrientationChanged|int
+
+$prototype=void userOrientationChanged( int userOrientation )
+$signalMethod=5,1,0|void|userOrientationChanged|int
+
+$prototype=void maxBufferSizeChanged( int maxBufferSize )
+$signalMethod=5,1,0|void|maxBufferSizeChanged|int
+
+$prototype=void efficientBufferSizeChanged( int efficientBufferSize )
+$signalMethod=5,1,0|void|efficientBufferSizeChanged|int
+
+$prototype=void bufferSizeChanged( int bufferSize )
+$signalMethod=5,1,0|void|bufferSizeChanged|int
 
 #pragma ENDDUMP
