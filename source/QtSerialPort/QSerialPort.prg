@@ -93,6 +93,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -1204,95 +1205,675 @@ HB_FUNC_STATIC( QSERIALPORT_SETBREAKENABLED )
 #endif
 }
 
-void QSerialPortSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "baudRateChanged(qint32,QSerialPort::Directions)", "baudRateChanged(qint32,QSerialPort::Directions)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "baudRateChanged(qint32,QSerialPort::Directions)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::baudRateChanged, [sender](qint32 arg1, QSerialPort::Directions arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "baudRateChanged(qint32,QSerialPort::Directions)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "baudRateChanged(qint32,QSerialPort::Directions)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "baudRateChanged(qint32,QSerialPort::Directions)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "baudRateChanged(qint32,QSerialPort::Directions)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void dataBitsChanged( QSerialPort::DataBits dataBits )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "dataBitsChanged(QSerialPort::DataBits)", "dataBitsChanged(QSerialPort::DataBits)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataBitsChanged(QSerialPort::DataBits)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::dataBitsChanged, [sender](QSerialPort::DataBits arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataBitsChanged(QSerialPort::DataBits)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataBitsChanged(QSerialPort::DataBits)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataBitsChanged(QSerialPort::DataBits)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataBitsChanged(QSerialPort::DataBits)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void parityChanged( QSerialPort::Parity parity )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "parityChanged(QSerialPort::Parity)", "parityChanged(QSerialPort::Parity)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "parityChanged(QSerialPort::Parity)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::parityChanged, [sender](QSerialPort::Parity arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "parityChanged(QSerialPort::Parity)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "parityChanged(QSerialPort::Parity)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "parityChanged(QSerialPort::Parity)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "parityChanged(QSerialPort::Parity)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void stopBitsChanged( QSerialPort::StopBits stopBits )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "stopBitsChanged(QSerialPort::StopBits)", "stopBitsChanged(QSerialPort::StopBits)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stopBitsChanged(QSerialPort::StopBits)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::stopBitsChanged, [sender](QSerialPort::StopBits arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stopBitsChanged(QSerialPort::StopBits)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stopBitsChanged(QSerialPort::StopBits)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stopBitsChanged(QSerialPort::StopBits)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stopBitsChanged(QSerialPort::StopBits)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void flowControlChanged( QSerialPort::FlowControl flow )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "flowControlChanged(QSerialPort::FlowControl)", "flowControlChanged(QSerialPort::FlowControl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "flowControlChanged(QSerialPort::FlowControl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::flowControlChanged, [sender](QSerialPort::FlowControl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "flowControlChanged(QSerialPort::FlowControl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "flowControlChanged(QSerialPort::FlowControl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "flowControlChanged(QSerialPort::FlowControl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "flowControlChanged(QSerialPort::FlowControl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)", "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::dataErrorPolicyChanged, [sender](QSerialPort::DataErrorPolicy arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void dataTerminalReadyChanged( bool set )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "dataTerminalReadyChanged(bool)", "dataTerminalReadyChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataTerminalReadyChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::dataTerminalReadyChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataTerminalReadyChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataTerminalReadyChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataTerminalReadyChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataTerminalReadyChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void requestToSendChanged( bool set )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "requestToSendChanged(bool)", "requestToSendChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "requestToSendChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::requestToSendChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "requestToSendChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "requestToSendChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "requestToSendChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "requestToSendChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void error( QSerialPort::SerialPortError serialPortError )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "error(QSerialPort::SerialPortError)", "error(QSerialPort::SerialPortError)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "error(QSerialPort::SerialPortError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error), [sender](QSerialPort::SerialPortError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QSerialPort::SerialPortError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "error(QSerialPort::SerialPortError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "error(QSerialPort::SerialPortError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "error(QSerialPort::SerialPortError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void settingsRestoredOnCloseChanged( bool restore )
+*/
 HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortSlots_connect_signal( "settingsRestoredOnCloseChanged(bool)", "settingsRestoredOnCloseChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "settingsRestoredOnCloseChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::settingsRestoredOnCloseChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "settingsRestoredOnCloseChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "settingsRestoredOnCloseChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSerialPort * sender = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "settingsRestoredOnCloseChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "settingsRestoredOnCloseChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
