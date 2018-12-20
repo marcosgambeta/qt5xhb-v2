@@ -67,14 +67,15 @@ $method=|QScriptEngineDebugger::DebuggerState|state|
 $prototype=QWidget * widget(DebuggerWidget widget) const
 $method=|QWidget *|widget|QScriptEngineDebugger::DebuggerWidget
 
-$beginSignals
-$signal=|evaluationResumed()
-$signal=|evaluationSuspended()
-$endSignals
+%% $beginSignals
+%% $signal=|evaluationResumed()
+%% $signal=|evaluationSuspended()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|evaluationResumed()
-$signal=|evaluationSuspended()
-$endSlotsClass
+$prototype=void evaluationResumed()
+$signalMethod=|void|evaluationResumed|
+
+$prototype=void evaluationSuspended()
+$signalMethod=|void|evaluationSuspended|
 
 #pragma ENDDUMP
