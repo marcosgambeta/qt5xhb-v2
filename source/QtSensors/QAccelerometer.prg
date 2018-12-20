@@ -49,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -174,14 +175,70 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
 #endif
 }
 
-void QAccelerometerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
+*/
 HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerSlots_connect_signal( "accelerationModeChanged(QAccelerometer::AccelerationMode)", "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAccelerometer::accelerationModeChanged, [sender](QAccelerometer::AccelerationMode arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACCELEROMETER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

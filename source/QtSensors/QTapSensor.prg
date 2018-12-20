@@ -49,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -174,14 +175,70 @@ HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 #endif
 }
 
-void QTapSensorSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
+*/
 HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensorSlots_connect_signal( "returnDoubleTapEventsChanged(bool)", "returnDoubleTapEventsChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTapSensor * sender = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "returnDoubleTapEventsChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTapSensor::returnDoubleTapEventsChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "returnDoubleTapEventsChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTAPSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "returnDoubleTapEventsChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTapSensor * sender = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "returnDoubleTapEventsChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "returnDoubleTapEventsChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

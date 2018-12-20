@@ -49,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -174,14 +175,70 @@ HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 #endif
 }
 
-void QMagnetometerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void returnGeoValuesChanged( bool returnGeoValues )
+*/
 HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerSlots_connect_signal( "returnGeoValuesChanged(bool)", "returnGeoValuesChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QMagnetometer * sender = (QMagnetometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "returnGeoValuesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QMagnetometer::returnGeoValuesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "returnGeoValuesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMAGNETOMETER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "returnGeoValuesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QMagnetometer * sender = (QMagnetometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "returnGeoValuesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "returnGeoValuesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

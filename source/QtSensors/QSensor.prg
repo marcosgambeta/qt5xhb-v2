@@ -99,6 +99,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -1242,131 +1243,929 @@ HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
 #endif
 }
 
-void QSensorSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void busyChanged()
+*/
 HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "busyChanged()", "busyChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "busyChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::busyChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "busyChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "busyChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "busyChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "busyChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void activeChanged()
+*/
 HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "activeChanged()", "activeChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::activeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void readingChanged()
+*/
 HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "readingChanged()", "readingChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "readingChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::readingChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "readingChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "readingChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "readingChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "readingChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void sensorError( int error )
+*/
 HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "sensorError(int)", "sensorError(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sensorError(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::sensorError, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sensorError(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sensorError(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sensorError(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sensorError(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void availableSensorsChanged()
+*/
 HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "availableSensorsChanged()", "availableSensorsChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "availableSensorsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::availableSensorsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "availableSensorsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "availableSensorsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "availableSensorsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "availableSensorsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void alwaysOnChanged()
+*/
 HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "alwaysOnChanged()", "alwaysOnChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "alwaysOnChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::alwaysOnChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "alwaysOnChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "alwaysOnChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "alwaysOnChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "alwaysOnChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void dataRateChanged()
+*/
 HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "dataRateChanged()", "dataRateChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataRateChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::dataRateChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataRateChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataRateChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataRateChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataRateChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void skipDuplicatesChanged( bool skipDuplicates )
+*/
 HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "skipDuplicatesChanged(bool)", "skipDuplicatesChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "skipDuplicatesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::skipDuplicatesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "skipDuplicatesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "skipDuplicatesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "skipDuplicatesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "skipDuplicatesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void axesOrientationModeChanged( QSensor::AxesOrientationMode axesOrientationMode )
+*/
 HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "axesOrientationModeChanged(QSensor::AxesOrientationMode)", "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::axesOrientationModeChanged, [sender](QSensor::AxesOrientationMode arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void currentOrientationChanged( int currentOrientation )
+*/
 HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "currentOrientationChanged(int)", "currentOrientationChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentOrientationChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::currentOrientationChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentOrientationChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentOrientationChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentOrientationChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentOrientationChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void userOrientationChanged( int userOrientation )
+*/
 HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "userOrientationChanged(int)", "userOrientationChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "userOrientationChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::userOrientationChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "userOrientationChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "userOrientationChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "userOrientationChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "userOrientationChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void maxBufferSizeChanged( int maxBufferSize )
+*/
 HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "maxBufferSizeChanged(int)", "maxBufferSizeChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "maxBufferSizeChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::maxBufferSizeChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxBufferSizeChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "maxBufferSizeChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "maxBufferSizeChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "maxBufferSizeChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void efficientBufferSizeChanged( int efficientBufferSize )
+*/
 HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "efficientBufferSizeChanged(int)", "efficientBufferSizeChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "efficientBufferSizeChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::efficientBufferSizeChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "efficientBufferSizeChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "efficientBufferSizeChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "efficientBufferSizeChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "efficientBufferSizeChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void bufferSizeChanged( int bufferSize )
+*/
 HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorSlots_connect_signal( "bufferSizeChanged(int)", "bufferSizeChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "bufferSizeChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::bufferSizeChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferSizeChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "bufferSizeChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "bufferSizeChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "bufferSizeChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

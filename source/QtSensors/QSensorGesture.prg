@@ -26,8 +26,6 @@ CLASS QSensorGesture INHERIT QObject
    METHOD startDetection
    METHOD stopDetection
 
-   METHOD onDetected
-
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -255,15 +254,8 @@ HB_FUNC_STATIC( QSENSORGESTURE_STOPDETECTION )
 #endif
 }
 
-void QSensorGestureSlots_connect_signal ( const QString & signal, const QString & slot );
-
-HB_FUNC_STATIC( QSENSORGESTURE_ONDETECTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureSlots_connect_signal( "detected(QString)", "detected(QString)" );
-#else
-  hb_retl( false );
-#endif
-}
+/*
+void detected( QString s )
+*/
 
 #pragma ENDDUMP
