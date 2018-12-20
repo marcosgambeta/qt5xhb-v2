@@ -25,7 +25,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes5,8,0
+$includes=5,8,0
 
 $prototype=explicit QModbusClient(QObject *parent = nullptr)
 $prototype=QModbusClient(QModbusClientPrivate &dd, QObject *parent = nullptr) [protected]
@@ -45,20 +45,26 @@ $prototype=void setTimeout(int newTimeout)
 %%
 
 $prototype=QModbusReply *sendReadRequest(const QModbusDataUnit &read, int serverAddress)
+
 $prototype=QModbusReply *sendWriteRequest(const QModbusDataUnit &write, int serverAddress)
+
 $prototype=QModbusReply *sendReadWriteRequest(const QModbusDataUnit &read, const QModbusDataUnit &write, int serverAddress)
+
 $prototype=QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
+
 $prototype=int numberOfRetries() const
+
 $prototype=void setNumberOfRetries(int number)
+
 $prototype=virtual bool processResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
+
 $prototype=virtual bool processPrivateResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
 
-$beginSignals
-$signal=5,8,0|timeoutChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|timeoutChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,8,0|timeoutChanged( int newTimeout )
-$endSlotsClass
+$prototype=void timeoutChanged( int newTimeout )
+$signalMethod=5,8,0|void|timeoutChanged|int
 
 #pragma ENDDUMP

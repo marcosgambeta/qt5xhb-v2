@@ -55,14 +55,15 @@ $prototype=virtual bool open() = 0 [protected]
 
 $prototype=virtual void close() = 0 [protected]
 
-$beginSignals
-$signal=5,8,0|errorOccurred(QModbusDevice::Error)
-$signal=5,8,0|stateChanged(QModbusDevice::State)
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|errorOccurred(QModbusDevice::Error)
+%% $signal=5,8,0|stateChanged(QModbusDevice::State)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,8,0|errorOccurred( QModbusDevice::Error error )
-$signal=5,8,0|stateChanged( QModbusDevice::State state )
-$endSlotsClass
+$prototype=void errorOccurred( QModbusDevice::Error error )
+$signalMethod=5,8,0|void|errorOccurred|QModbusDevice::Error
+
+$prototype=void stateChanged( QModbusDevice::State state )
+$signalMethod=5,8,0|void|stateChanged|QModbusDevice::State
 
 #pragma ENDDUMP

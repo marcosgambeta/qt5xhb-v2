@@ -83,18 +83,23 @@ $method=5,12,0|void|clear|QCanBusDevice::Directions
 $prototype=QVector<QCanBusFrame> QCanBusDevice::readAllFrames()
 $method=5,12,0|QVector<QCanBusFrame>|readAllFrames|
 
-$beginSignals
-$signal=5,8,0|errorOccurred(QCanBusDevice::CanBusError)
-$signal=5,8,0|framesReceived()
-$signal=5,8,0|framesWritten(qint64)
-$signal=5,8,0|stateChanged(QCanBusDevice::CanBusDeviceState)
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|errorOccurred(QCanBusDevice::CanBusError)
+%% $signal=5,8,0|framesReceived()
+%% $signal=5,8,0|framesWritten(qint64)
+%% $signal=5,8,0|stateChanged(QCanBusDevice::CanBusDeviceState)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,8,0|errorOccurred( QCanBusDevice::CanBusError )
-$signal=5,8,0|framesReceived()
-$signal=5,8,0|framesWritten( qint64 framesCount )
-$signal=5,8,0|stateChanged( QCanBusDevice::CanBusDeviceState state )
-$endSlotsClass
+$prototype=void errorOccurred( QCanBusDevice::CanBusError )
+$signalMethod=5,8,0|void|errorOccurred|QCanBusDevice::CanBusError
+
+$prototype=void framesReceived()
+$signalMethod=5,8,0|void|framesReceived|
+
+$prototype=void framesWritten( qint64 framesCount )
+$signalMethod=5,8,0|void|framesWritten|qint64
+
+$prototype=void stateChanged( QCanBusDevice::CanBusDeviceState state )
+$signalMethod=5,8,0|void|stateChanged|QCanBusDevice::CanBusDeviceState
 
 #pragma ENDDUMP

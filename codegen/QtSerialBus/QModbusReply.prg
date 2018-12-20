@@ -53,14 +53,15 @@ $prototype=void setFinished(bool isFinished)
 
 $prototype=void setError(QModbusDevice::Error error, const QString &errorText)
 
-$beginSignals
-$signal=5,8,0|finished()
-$signal=5,8,0|errorOccurred(QModbusDevice::Error)
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|finished()
+%% $signal=5,8,0|errorOccurred(QModbusDevice::Error)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,8,0|finished()
-$signal=5,8,0|errorOccurred( QModbusDevice::Error error )
-$endSlotsClass
+$prototype=void finished()
+$signalMethod=5,8,0|void|finished|
+
+$prototype=void errorOccurred( QModbusDevice::Error error )
+$signalMethod=5,8,0|void|errorOccurred|QModbusDevice::Error
 
 #pragma ENDDUMP

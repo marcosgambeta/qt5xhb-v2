@@ -61,12 +61,11 @@ $prototype=virtual QModbusResponse processRequest(const QModbusPdu &request) [pr
 
 $prototype=virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) [protected]
 
-$beginSignals
-$signal=5,8,0|dataWritten(QModbusDataUnit::RegisterType,int,int)
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|dataWritten(QModbusDataUnit::RegisterType,int,int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,8,0|dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
-$endSlotsClass
+$prototype=void dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
+$signalMethod=5,8,0|void|dataWritten|QModbusDataUnit::RegisterType,int,int
 
 #pragma ENDDUMP
