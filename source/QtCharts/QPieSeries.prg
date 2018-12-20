@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -846,86 +847,652 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
 #endif
 }
 
-void QPieSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void added( QList<QPieSlice*> slices )
+*/
 HB_FUNC_STATIC( QPIESERIES_ONADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "added(QList<QPieSlice*>)", "added(QList<QPieSlice*>)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "added(QList<QPieSlice*>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::added, [sender](QList<QPieSlice*> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "added(QList<QPieSlice*>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QPieSlice *) arg1 [i] );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "added(QList<QPieSlice*>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "added(QList<QPieSlice*>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "added(QList<QPieSlice*>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void clicked( QPieSlice * slice )
+*/
 HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "clicked(QPieSlice*)", "clicked(QPieSlice*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked(QPieSlice*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::clicked, [sender](QPieSlice* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPieSlice*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked(QPieSlice*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked(QPieSlice*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(QPieSlice*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void countChanged()
+*/
 HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "countChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::countChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "countChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "countChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "countChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void doubleClicked( QPieSlice * slice )
+*/
 HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "doubleClicked(QPieSlice*)", "doubleClicked(QPieSlice*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "doubleClicked(QPieSlice*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::doubleClicked, [sender](QPieSlice* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPieSlice*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "doubleClicked(QPieSlice*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "doubleClicked(QPieSlice*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QPieSlice*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void hovered( QPieSlice * slice, bool state )
+*/
 HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "hovered(QPieSlice*,bool)", "hovered(QPieSlice*,bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "hovered(QPieSlice*,bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::hovered, [sender](QPieSlice* arg1, bool arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPieSlice*,bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "hovered(QPieSlice*,bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "hovered(QPieSlice*,bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "hovered(QPieSlice*,bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pressed( QPieSlice * slice )
+*/
 HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "pressed(QPieSlice*)", "pressed(QPieSlice*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pressed(QPieSlice*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::pressed, [sender](QPieSlice* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPieSlice*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pressed(QPieSlice*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pressed(QPieSlice*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pressed(QPieSlice*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void released( QPieSlice * slice )
+*/
 HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "released(QPieSlice*)", "released(QPieSlice*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "released(QPieSlice*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::released, [sender](QPieSlice* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPieSlice*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "released(QPieSlice*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "released(QPieSlice*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "released(QPieSlice*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void removed( QList<QPieSlice*> slices )
+*/
 HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "removed(QList<QPieSlice*>)", "removed(QList<QPieSlice*>)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "removed(QList<QPieSlice*>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::removed, [sender](QList<QPieSlice*> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "removed(QList<QPieSlice*>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QPieSlice *) arg1 [i] );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "removed(QList<QPieSlice*>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "removed(QList<QPieSlice*>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "removed(QList<QPieSlice*>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void sumChanged()
+*/
 HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "sumChanged()", "sumChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sumChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::sumChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sumChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sumChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sumChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sumChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

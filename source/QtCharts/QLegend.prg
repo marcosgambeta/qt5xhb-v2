@@ -85,6 +85,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -944,77 +945,541 @@ void hideEvent(QHideEvent *event) [protected]
 void showEvent(QShowEvent *event) [protected]
 */
 
-void QLegendSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void backgroundVisibleChanged( bool visible )
+*/
 HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "backgroundVisibleChanged(bool)", "backgroundVisibleChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "backgroundVisibleChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::backgroundVisibleChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundVisibleChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "backgroundVisibleChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "backgroundVisibleChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "backgroundVisibleChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void borderColorChanged( QColor color )
+*/
 HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "borderColorChanged(QColor)", "borderColorChanged(QColor)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::borderColorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "borderColorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "borderColorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "borderColorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void colorChanged( QColor color )
+*/
 HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "colorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::colorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "colorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "colorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "colorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void fontChanged( QFont font )
+*/
 HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "fontChanged(QFont)", "fontChanged(QFont)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "fontChanged(QFont)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::fontChanged, [sender](QFont arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "fontChanged(QFont)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "fontChanged(QFont)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "fontChanged(QFont)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void labelColorChanged( QColor color )
+*/
 HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "labelColorChanged(QColor)", "labelColorChanged(QColor)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "labelColorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::labelColorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelColorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "labelColorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "labelColorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "labelColorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void markerShapeChanged( QLegend::MarkerShape shape )
+*/
 HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegendSlots_connect_signal( "markerShapeChanged(QLegend::MarkerShape)", "markerShapeChanged(QLegend::MarkerShape)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "markerShapeChanged(QLegend::MarkerShape)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::markerShapeChanged, [sender](QLegend::MarkerShape arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "markerShapeChanged(QLegend::MarkerShape)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "markerShapeChanged(QLegend::MarkerShape)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "markerShapeChanged(QLegend::MarkerShape)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "markerShapeChanged(QLegend::MarkerShape)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void reverseMarkersChanged( bool reverseMarkers )
+*/
 HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "reverseMarkersChanged(bool)", "reverseMarkersChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "reverseMarkersChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::reverseMarkersChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "reverseMarkersChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "reverseMarkersChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "reverseMarkersChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "reverseMarkersChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void showToolTipsChanged( bool showToolTips )
+*/
 HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "showToolTipsChanged(bool)", "showToolTipsChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "showToolTipsChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::showToolTipsChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "showToolTipsChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "showToolTipsChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "showToolTipsChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "showToolTipsChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

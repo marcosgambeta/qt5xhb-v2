@@ -64,6 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -467,68 +468,476 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 #endif
 }
 
-void QLogValueAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void baseChanged( qreal base )
+*/
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "baseChanged(qreal)", "baseChanged(qreal)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "baseChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::baseChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "baseChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "baseChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "baseChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "baseChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void labelFormatChanged( const QString & format )
+*/
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "labelFormatChanged(QString)", "labelFormatChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "labelFormatChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::labelFormatChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelFormatChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "labelFormatChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "labelFormatChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "labelFormatChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void maxChanged( qreal max )
+*/
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "maxChanged(qreal)", "maxChanged(qreal)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "maxChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::maxChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "maxChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "maxChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "maxChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void minChanged( qreal min )
+*/
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "minChanged(qreal)", "minChanged(qreal)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "minChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::minChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "minChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "minChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "minChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void minorTickCountChanged( int minorTickCount )
+*/
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLogValueAxisSlots_connect_signal( "minorTickCountChanged(int)", "minorTickCountChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "minorTickCountChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::minorTickCountChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "minorTickCountChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "minorTickCountChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "minorTickCountChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "minorTickCountChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void rangeChanged( qreal min, qreal max )
+*/
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "rangeChanged(qreal,qreal)", "rangeChanged(qreal,qreal)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rangeChanged(qreal,qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::rangeChanged, [sender](qreal arg1, qreal arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(qreal,qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutND( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rangeChanged(qreal,qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rangeChanged(qreal,qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rangeChanged(qreal,qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void tickCountChanged( int tickCount )
+*/
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLogValueAxisSlots_connect_signal( "tickCountChanged(int)", "tickCountChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tickCountChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::tickCountChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tickCountChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tickCountChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tickCountChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

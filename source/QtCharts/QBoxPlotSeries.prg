@@ -75,6 +75,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -608,113 +609,847 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 #endif
 }
 
-void QBoxPlotSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void boxOutlineVisibilityChanged()
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxOutlineVisibilityChanged()", "boxOutlineVisibilityChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "boxOutlineVisibilityChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxOutlineVisibilityChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxOutlineVisibilityChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "boxOutlineVisibilityChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "boxOutlineVisibilityChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "boxOutlineVisibilityChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void boxsetsAdded( QList<QBoxSet*> sets )
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxsetsAdded(QList<QBoxSet*>)", "boxsetsAdded(QList<QBoxSet*>)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "boxsetsAdded(QList<QBoxSet*>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxsetsAdded, [sender](QList<QBoxSet*> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxsetsAdded(QList<QBoxSet*>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QBoxSet *) arg1 [i] );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "boxsetsAdded(QList<QBoxSet*>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "boxsetsAdded(QList<QBoxSet*>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "boxsetsAdded(QList<QBoxSet*>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void boxsetsRemoved( QList<QBoxSet*> sets )
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxsetsRemoved(QList<QBoxSet*>)", "boxsetsRemoved(QList<QBoxSet*>)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "boxsetsRemoved(QList<QBoxSet*>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxsetsRemoved, [sender](QList<QBoxSet*> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxsetsRemoved(QList<QBoxSet*>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QBoxSet *) arg1 [i] );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "boxsetsRemoved(QList<QBoxSet*>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "boxsetsRemoved(QList<QBoxSet*>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "boxsetsRemoved(QList<QBoxSet*>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void boxWidthChanged()
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxWidthChanged()", "boxWidthChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "boxWidthChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxWidthChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxWidthChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "boxWidthChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "boxWidthChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "boxWidthChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void brushChanged()
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "brushChanged()", "brushChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "brushChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::brushChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "brushChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "brushChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "brushChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void clicked( QBoxSet * boxset )
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "clicked(QBoxSet*)", "clicked(QBoxSet*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked(QBoxSet*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::clicked, [sender](QBoxSet* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QBoxSet*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked(QBoxSet*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked(QBoxSet*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(QBoxSet*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void countChanged()
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "countChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::countChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "countChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "countChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "countChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void doubleClicked( QBoxSet * boxset )
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "doubleClicked(QBoxSet*)", "doubleClicked(QBoxSet*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "doubleClicked(QBoxSet*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::doubleClicked, [sender](QBoxSet* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QBoxSet*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "doubleClicked(QBoxSet*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "doubleClicked(QBoxSet*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QBoxSet*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void hovered( bool status, QBoxSet * boxset )
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "hovered(bool,QBoxSet*)", "hovered(bool,QBoxSet*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "hovered(bool,QBoxSet*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::hovered, [sender](bool arg1, QBoxSet* arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,QBoxSet*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QBOXSET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "hovered(bool,QBoxSet*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "hovered(bool,QBoxSet*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "hovered(bool,QBoxSet*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void penChanged()
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "penChanged()", "penChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "penChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::penChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "penChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "penChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "penChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pressed( QBoxSet * boxset )
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "pressed(QBoxSet*)", "pressed(QBoxSet*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pressed(QBoxSet*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::pressed, [sender](QBoxSet* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QBoxSet*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pressed(QBoxSet*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pressed(QBoxSet*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pressed(QBoxSet*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void released( QBoxSet * boxset )
+*/
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "released(QBoxSet*)", "released(QBoxSet*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "released(QBoxSet*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::released, [sender](QBoxSet* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QBoxSet*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "released(QBoxSet*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBoxPlotSeries * sender = (QBoxPlotSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "released(QBoxSet*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "released(QBoxSet*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

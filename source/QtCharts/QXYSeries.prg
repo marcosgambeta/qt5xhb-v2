@@ -93,6 +93,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -1181,158 +1182,1146 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
 #endif
 }
 
-void QXYSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void clicked( const QPointF & point )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "clicked(QPointF)", "clicked(QPointF)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked(QPointF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::clicked, [sender](QPointF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPointF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked(QPointF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked(QPointF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked(QPointF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void colorChanged( QColor color )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "colorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::colorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "colorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "colorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "colorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void doubleClicked( const QPointF & point )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "doubleClicked(QPointF)", "doubleClicked(QPointF)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "doubleClicked(QPointF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::doubleClicked, [sender](QPointF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPointF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "doubleClicked(QPointF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "doubleClicked(QPointF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QPointF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void hovered( const QPointF & point, bool state )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "hovered(QPointF,bool)", "hovered(QPointF,bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "hovered(QPointF,bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::hovered, [sender](QPointF arg1, bool arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPointF,bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "hovered(QPointF,bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "hovered(QPointF,bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "hovered(QPointF,bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void penChanged( const QPen & pen )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "penChanged(QPen)", "penChanged(QPen)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "penChanged(QPen)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::penChanged, [sender](QPen arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged(QPen)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPEN" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "penChanged(QPen)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "penChanged(QPen)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "penChanged(QPen)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointAdded( int index )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointAdded(int)", "pointAdded(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointAdded(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointAdded, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointAdded(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointAdded(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointAdded(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointAdded(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointLabelsClippingChanged( bool clipping )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointLabelsClippingChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsClippingChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsClippingChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointLabelsClippingChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointLabelsClippingChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsClippingChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointLabelsColorChanged( const QColor & color )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointLabelsColorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsColorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsColorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointLabelsColorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointLabelsColorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsColorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointLabelsFontChanged( const QFont & font )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointLabelsFontChanged(QFont)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsFontChanged, [sender](QFont arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFontChanged(QFont)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointLabelsFontChanged(QFont)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointLabelsFontChanged(QFont)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsFontChanged(QFont)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointLabelsFormatChanged( const QString & format )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointLabelsFormatChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsFormatChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFormatChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointLabelsFormatChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointLabelsFormatChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsFormatChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointLabelsVisibilityChanged( bool visible )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointLabelsVisibilityChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsVisibilityChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsVisibilityChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointLabelsVisibilityChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointLabelsVisibilityChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsVisibilityChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointRemoved( int index )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointRemoved(int)", "pointRemoved(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointRemoved(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointRemoved, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointRemoved(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointRemoved(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointRemoved(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointRemoved(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointReplaced( int index )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointReplaced(int)", "pointReplaced(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointReplaced(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointReplaced, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointReplaced(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointReplaced(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointReplaced(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointReplaced(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointsRemoved( int index, int count )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointsRemoved(int,int)", "pointsRemoved(int,int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointsRemoved(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointsRemoved, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsRemoved(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointsRemoved(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointsRemoved(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointsRemoved(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pointsReplaced()
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointsReplaced()", "pointsReplaced()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pointsReplaced()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointsReplaced, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsReplaced()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pointsReplaced()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pointsReplaced()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pointsReplaced()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pressed( const QPointF & point )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pressed(QPointF)", "pressed(QPointF)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pressed(QPointF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pressed, [sender](QPointF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPointF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pressed(QPointF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pressed(QPointF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pressed(QPointF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void released( const QPointF & point )
+*/
 HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "released(QPointF)", "released(QPointF)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "released(QPointF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::released, [sender](QPointF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPointF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "released(QPointF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "released(QPointF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "released(QPointF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

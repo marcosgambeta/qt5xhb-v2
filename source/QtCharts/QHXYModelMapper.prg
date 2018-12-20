@@ -63,6 +63,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -419,59 +420,395 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETCOLUMNCOUNT )
 #endif
 }
 
-void QHXYModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void columnCountChanged()
+*/
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapperSlots_connect_signal( "columnCountChanged()", "columnCountChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnCountChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::columnCountChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHXYMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnCountChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnCountChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnCountChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void firstColumnChanged()
+*/
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapperSlots_connect_signal( "firstColumnChanged()", "firstColumnChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "firstColumnChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::firstColumnChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "firstColumnChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHXYMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "firstColumnChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "firstColumnChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "firstColumnChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void modelReplaced()
+*/
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "modelReplaced()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::modelReplaced, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReplaced()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHXYMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "modelReplaced()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "modelReplaced()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "modelReplaced()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void seriesReplaced()
+*/
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "seriesReplaced()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::seriesReplaced, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesReplaced()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHXYMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "seriesReplaced()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "seriesReplaced()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "seriesReplaced()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void xRowChanged()
+*/
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONXROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapperSlots_connect_signal( "xRowChanged()", "xRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "xRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::xRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "xRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHXYMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "xRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "xRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "xRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void yRowChanged()
+*/
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONYROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapperSlots_connect_signal( "yRowChanged()", "yRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "yRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::yRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "yRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHXYMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "yRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "yRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "yRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

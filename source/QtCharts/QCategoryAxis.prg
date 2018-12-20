@@ -57,6 +57,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -406,23 +407,137 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 #endif
 }
 
-void QCategoryAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void categoriesChanged()
+*/
 HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxisSlots_connect_signal( "categoriesChanged()", "categoriesChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QCategoryAxis * sender = (QCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "categoriesChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCategoryAxis::categoriesChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "categoriesChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCATEGORYAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "categoriesChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCategoryAxis * sender = (QCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "categoriesChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "categoriesChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
+*/
 HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxisSlots_connect_signal( "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)", "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QCategoryAxis * sender = (QCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCategoryAxis::labelsPositionChanged, [sender](QCategoryAxis::AxisLabelsPosition arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCATEGORYAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCategoryAxis * sender = (QCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

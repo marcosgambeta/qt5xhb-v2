@@ -65,6 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -498,68 +499,462 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ORIENTATION )
 #endif
 }
 
-void QVCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+using namespace QtCharts;
+#endif
 
+/*
+void closeRowChanged()
+*/
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapperSlots_connect_signal( "closeRowChanged()", "closeRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "closeRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::closeRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "closeRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "closeRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "closeRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "closeRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void firstSetColumnChanged()
+*/
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapperSlots_connect_signal( "firstSetColumnChanged()", "firstSetColumnChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "firstSetColumnChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::firstSetColumnChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "firstSetColumnChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "firstSetColumnChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "firstSetColumnChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "firstSetColumnChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void highRowChanged()
+*/
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapperSlots_connect_signal( "highRowChanged()", "highRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "highRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::highRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "highRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "highRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "highRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "highRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void lastSetColumnChanged()
+*/
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapperSlots_connect_signal( "lastSetColumnChanged()", "lastSetColumnChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "lastSetColumnChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::lastSetColumnChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "lastSetColumnChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "lastSetColumnChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "lastSetColumnChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "lastSetColumnChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void lowRowChanged()
+*/
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapperSlots_connect_signal( "lowRowChanged()", "lowRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "lowRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::lowRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "lowRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "lowRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "lowRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "lowRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void openRowChanged()
+*/
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapperSlots_connect_signal( "openRowChanged()", "openRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "openRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::openRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "openRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "openRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "openRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "openRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void timestampRowChanged()
+*/
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapperSlots_connect_signal( "timestampRowChanged()", "timestampRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "timestampRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::timestampRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "timestampRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "timestampRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "timestampRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "timestampRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

@@ -63,6 +63,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -419,59 +420,395 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-void QVBarModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void firstBarSetColumnChanged()
+*/
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "firstBarSetColumnChanged()", "firstBarSetColumnChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "firstBarSetColumnChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVBarModelMapper::firstBarSetColumnChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "firstBarSetColumnChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "firstBarSetColumnChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "firstBarSetColumnChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "firstBarSetColumnChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void firstRowChanged()
+*/
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "firstRowChanged()", "firstRowChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "firstRowChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVBarModelMapper::firstRowChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "firstRowChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "firstRowChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "firstRowChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "firstRowChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void lastBarSetColumnChanged()
+*/
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "lastBarSetColumnChanged()", "lastBarSetColumnChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "lastBarSetColumnChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVBarModelMapper::lastBarSetColumnChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "lastBarSetColumnChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "lastBarSetColumnChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "lastBarSetColumnChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "lastBarSetColumnChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void modelReplaced()
+*/
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "modelReplaced()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVBarModelMapper::modelReplaced, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReplaced()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "modelReplaced()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "modelReplaced()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "modelReplaced()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void rowCountChanged()
+*/
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "rowCountChanged()", "rowCountChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowCountChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVBarModelMapper::rowCountChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowCountChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowCountChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowCountChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void seriesReplaced()
+*/
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "seriesReplaced()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QVBarModelMapper::seriesReplaced, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesReplaced()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "seriesReplaced()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "seriesReplaced()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "seriesReplaced()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

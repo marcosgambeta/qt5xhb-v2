@@ -60,6 +60,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -387,50 +388,342 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
 #endif
 }
 
-void QDateTimeAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void formatChanged( QString format )
+*/
 HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "formatChanged(QString)", "formatChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "formatChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::formatChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "formatChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "formatChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "formatChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void maxChanged( QDateTime max )
+*/
 HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "maxChanged(QDateTime)", "maxChanged(QDateTime)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "maxChanged(QDateTime)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::maxChanged, [sender](QDateTime arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(QDateTime)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "maxChanged(QDateTime)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "maxChanged(QDateTime)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "maxChanged(QDateTime)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void minChanged( QDateTime min )
+*/
 HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "minChanged(QDateTime)", "minChanged(QDateTime)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "minChanged(QDateTime)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::minChanged, [sender](QDateTime arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(QDateTime)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "minChanged(QDateTime)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "minChanged(QDateTime)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "minChanged(QDateTime)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void rangeChanged( QDateTime min, QDateTime max )
+*/
 HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "rangeChanged(QDateTime,QDateTime)", "rangeChanged(QDateTime,QDateTime)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rangeChanged(QDateTime,QDateTime)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::rangeChanged, [sender](QDateTime arg1, QDateTime arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(QDateTime,QDateTime)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QDATETIME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rangeChanged(QDateTime,QDateTime)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rangeChanged(QDateTime,QDateTime)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rangeChanged(QDateTime,QDateTime)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void tickCountChanged( int tick )
+*/
 HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "tickCountChanged(int)", "tickCountChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "tickCountChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::tickCountChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "tickCountChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "tickCountChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "tickCountChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

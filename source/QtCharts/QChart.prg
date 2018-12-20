@@ -115,6 +115,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -1857,14 +1858,72 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
 #endif
 }
 
-void QChartSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtCharts;
 
+/*
+void plotAreaChanged( const QRectF & plotArea )
+*/
 HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartSlots_connect_signal( "plotAreaChanged(QRectF)", "plotAreaChanged(QRectF)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QChart * sender = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "plotAreaChanged(QRectF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QChart::plotAreaChanged, [sender](QRectF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "plotAreaChanged(QRectF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCHART" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECTF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "plotAreaChanged(QRectF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QChart * sender = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "plotAreaChanged(QRectF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "plotAreaChanged(QRectF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
