@@ -174,30 +174,45 @@ $method=5,7,0|void|setLabelsVisible|bool=true
 $prototype=void setLabelsPosition(QPieSlice::LabelPosition position)
 $method=5,7,0|void|setLabelsPosition|QPieSlice::LabelPosition
 
-$beginSignals
-$signal=5,7,0|added(QList<QPieSlice*>)
-$signal=5,7,0|clicked(QPieSlice*)
-$signal=5,7,0|countChanged()
-$signal=5,7,0|doubleClicked(QPieSlice*)
-$signal=5,7,0|hovered(QPieSlice*,bool)
-$signal=5,7,0|pressed(QPieSlice*)
-$signal=5,7,0|released(QPieSlice*)
-$signal=5,7,0|removed(QList<QPieSlice*>)
-$signal=5,7,0|sumChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|added(QList<QPieSlice*>)
+%% $signal=5,7,0|clicked(QPieSlice*)
+%% $signal=5,7,0|countChanged()
+%% $signal=5,7,0|doubleClicked(QPieSlice*)
+%% $signal=5,7,0|hovered(QPieSlice*,bool)
+%% $signal=5,7,0|pressed(QPieSlice*)
+%% $signal=5,7,0|released(QPieSlice*)
+%% $signal=5,7,0|removed(QList<QPieSlice*>)
+%% $signal=5,7,0|sumChanged()
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|added( QList<QPieSlice*> slices )
-$signal=5,7,0|clicked( QPieSlice * slice )
-$signal=5,7,0|countChanged()
-$signal=5,7,0|doubleClicked( QPieSlice * slice )
-$signal=5,7,0|hovered( QPieSlice * slice, bool state )
-$signal=5,7,0|pressed( QPieSlice * slice )
-$signal=5,7,0|released( QPieSlice * slice )
-$signal=5,7,0|removed( QList<QPieSlice*> slices )
-$signal=5,7,0|sumChanged()
-$endSlotsClass
+$prototype=void added( QList<QPieSlice*> slices )
+$signalMethod=5,7,0|void|added|QList<QPieSlice*>
+
+$prototype=void clicked( QPieSlice * slice )
+$signalMethod=5,7,0|void|clicked|QPieSlice*
+
+$prototype=void countChanged()
+$signalMethod=5,7,0|void|countChanged|
+
+$prototype=void doubleClicked( QPieSlice * slice )
+$signalMethod=5,7,0|void|doubleClicked|QPieSlice*
+
+$prototype=void hovered( QPieSlice * slice, bool state )
+$signalMethod=5,7,0|void|hovered|QPieSlice*,bool
+
+$prototype=void pressed( QPieSlice * slice )
+$signalMethod=5,7,0|void|pressed|QPieSlice*
+
+$prototype=void released( QPieSlice * slice )
+$signalMethod=5,7,0|void|released|QPieSlice*
+
+$prototype=void removed( QList<QPieSlice*> slices )
+$signalMethod=5,7,0|void|removed|QList<QPieSlice*>
+
+$prototype=void sumChanged()
+$signalMethod=5,7,0|void|sumChanged|
 
 #pragma ENDDUMP

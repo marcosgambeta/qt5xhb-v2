@@ -320,62 +320,109 @@ $method=5,7,0|void|setMax|const QVariant &
 $prototype=void setRange(const QVariant &min, const QVariant &max)
 $method=5,7,0|void|setRange|const QVariant &,const QVariant &
 
-$beginSignals
-$signal=5,7,0|colorChanged(QColor)
-$signal=5,7,0|gridLineColorChanged(QColor)
-$signal=5,7,0|gridLinePenChanged(QPen)
-$signal=5,7,0|gridVisibleChanged(bool)
-$signal=5,7,0|labelsAngleChanged(int)
-$signal=5,7,0|labelsBrushChanged(QBrush)
-$signal=5,7,0|labelsColorChanged(QColor)
-$signal=5,7,0|labelsFontChanged(QFont)
-$signal=5,7,0|labelsVisibleChanged(bool)
-$signal=5,7,0|linePenChanged(QPen)
-$signal=5,7,0|lineVisibleChanged(bool)
-$signal=5,7,0|minorGridLineColorChanged(QColor)
-$signal=5,7,0|minorGridLinePenChanged(QPen)
-$signal=5,7,0|minorGridVisibleChanged(bool)
-$signal=5,7,0|reverseChanged(bool)
-$signal=5,7,0|shadesBorderColorChanged(QColor)
-$signal=5,7,0|shadesBrushChanged(QBrush)
-$signal=5,7,0|shadesColorChanged(QColor)
-$signal=5,7,0|shadesPenChanged(QPen)
-$signal=5,7,0|shadesVisibleChanged(bool)
-$signal=5,7,0|titleBrushChanged(QBrush)
-$signal=5,7,0|titleFontChanged(QFont)
-$signal=5,7,0|titleTextChanged(QString)
-$signal=5,7,0|titleVisibleChanged(bool)
-$signal=5,7,0|visibleChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|colorChanged(QColor)
+%% $signal=5,7,0|gridLineColorChanged(QColor)
+%% $signal=5,7,0|gridLinePenChanged(QPen)
+%% $signal=5,7,0|gridVisibleChanged(bool)
+%% $signal=5,7,0|labelsAngleChanged(int)
+%% $signal=5,7,0|labelsBrushChanged(QBrush)
+%% $signal=5,7,0|labelsColorChanged(QColor)
+%% $signal=5,7,0|labelsFontChanged(QFont)
+%% $signal=5,7,0|labelsVisibleChanged(bool)
+%% $signal=5,7,0|linePenChanged(QPen)
+%% $signal=5,7,0|lineVisibleChanged(bool)
+%% $signal=5,7,0|minorGridLineColorChanged(QColor)
+%% $signal=5,7,0|minorGridLinePenChanged(QPen)
+%% $signal=5,7,0|minorGridVisibleChanged(bool)
+%% $signal=5,7,0|reverseChanged(bool)
+%% $signal=5,7,0|shadesBorderColorChanged(QColor)
+%% $signal=5,7,0|shadesBrushChanged(QBrush)
+%% $signal=5,7,0|shadesColorChanged(QColor)
+%% $signal=5,7,0|shadesPenChanged(QPen)
+%% $signal=5,7,0|shadesVisibleChanged(bool)
+%% $signal=5,7,0|titleBrushChanged(QBrush)
+%% $signal=5,7,0|titleFontChanged(QFont)
+%% $signal=5,7,0|titleTextChanged(QString)
+%% $signal=5,7,0|titleVisibleChanged(bool)
+%% $signal=5,7,0|visibleChanged(bool)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|colorChanged( QColor color )
-$signal=5,7,0|gridLineColorChanged( const QColor & color )
-$signal=5,7,0|gridLinePenChanged( const QPen & pen )
-$signal=5,7,0|gridVisibleChanged( bool visible )
-$signal=5,7,0|labelsAngleChanged( int angle )
-$signal=5,7,0|labelsBrushChanged( const QBrush & brush )
-$signal=5,7,0|labelsColorChanged( QColor color )
-$signal=5,7,0|labelsFontChanged( const QFont & pen )
-$signal=5,7,0|labelsVisibleChanged( bool visible )
-$signal=5,7,0|linePenChanged( const QPen & pen )
-$signal=5,7,0|lineVisibleChanged( bool visible )
-$signal=5,7,0|minorGridLineColorChanged( const QColor & color )
-$signal=5,7,0|minorGridLinePenChanged( const QPen & pen )
-$signal=5,7,0|minorGridVisibleChanged( bool visible )
-$signal=5,7,0|reverseChanged( bool reverse )
-$signal=5,7,0|shadesBorderColorChanged( QColor color )
-$signal=5,7,0|shadesBrushChanged( const QBrush & brush )
-$signal=5,7,0|shadesColorChanged( QColor color )
-$signal=5,7,0|shadesPenChanged( const QPen & pen )
-$signal=5,7,0|shadesVisibleChanged( bool visible )
-$signal=5,7,0|titleBrushChanged( const QBrush & brush )
-$signal=5,7,0|titleFontChanged( const QFont & font )
-$signal=5,7,0|titleTextChanged( const QString & title )
-$signal=5,7,0|titleVisibleChanged( bool visible )
-$signal=5,7,0|visibleChanged( bool visible )
-$endSlotsClass
+$prototype=void colorChanged( QColor color )
+$signalMethod=5,7,0|void|colorChanged|QColor
+
+$prototype=void gridLineColorChanged( const QColor & color )
+$signalMethod=5,7,0|void|gridLineColorChanged|QColor
+
+$prototype=void gridLinePenChanged( const QPen & pen )
+$signalMethod=5,7,0|void|gridLinePenChanged|QPen
+
+$prototype=void gridVisibleChanged( bool visible )
+$signalMethod=5,7,0|void|gridVisibleChanged|bool
+
+$prototype=void labelsAngleChanged( int angle )
+$signalMethod=5,7,0|void|labelsAngleChanged|int
+
+$prototype=void labelsBrushChanged( const QBrush & brush )
+$signalMethod=5,7,0|void|labelsBrushChanged|QBrush
+
+$prototype=void labelsColorChanged( QColor color )
+$signalMethod=5,7,0|void|labelsColorChanged|QColor
+
+$prototype=void labelsFontChanged( const QFont & pen )
+$signalMethod=5,7,0|void|labelsFontChanged|QFont
+
+$prototype=void labelsVisibleChanged( bool visible )
+$signalMethod=5,7,0|void|labelsVisibleChanged|bool
+
+$prototype=void linePenChanged( const QPen & pen )
+$signalMethod=5,7,0|void|linePenChanged|QPen
+
+$prototype=void lineVisibleChanged( bool visible )
+$signalMethod=5,7,0|void|lineVisibleChanged|bool
+
+$prototype=void minorGridLineColorChanged( const QColor & color )
+$signalMethod=5,7,0|void|minorGridLineColorChanged|QColor
+
+$prototype=void minorGridLinePenChanged( const QPen & pen )
+$signalMethod=5,7,0|void|minorGridLinePenChanged|QPen
+
+$prototype=void minorGridVisibleChanged( bool visible )
+$signalMethod=5,7,0|void|minorGridVisibleChanged|bool
+
+$prototype=void reverseChanged( bool reverse )
+$signalMethod=5,7,0|void|reverseChanged|bool
+
+$prototype=void shadesBorderColorChanged( QColor color )
+$signalMethod=5,7,0|void|shadesBorderColorChanged|QColor
+
+$prototype=void shadesBrushChanged( const QBrush & brush )
+$signalMethod=5,7,0|void|shadesBrushChanged|QBrush
+
+$prototype=void shadesColorChanged( QColor color )
+$signalMethod=5,7,0|void|shadesColorChanged|QColor
+
+$prototype=void shadesPenChanged( const QPen & pen )
+$signalMethod=5,7,0|void|shadesPenChanged|QPen
+
+$prototype=void shadesVisibleChanged( bool visible )
+$signalMethod=5,7,0|void|shadesVisibleChanged|bool
+
+$prototype=void titleBrushChanged( const QBrush & brush )
+$signalMethod=5,7,0|void|titleBrushChanged|QBrush
+
+$prototype=void titleFontChanged( const QFont & font )
+$signalMethod=5,7,0|void|titleFontChanged|QFont
+
+$prototype=void titleTextChanged( const QString & title )
+$signalMethod=5,7,0|void|titleTextChanged|QString
+
+$prototype=void titleVisibleChanged( bool visible )
+$signalMethod=5,7,0|void|titleVisibleChanged|bool
+
+$prototype=void visibleChanged( bool visible )
+$signalMethod=5,7,0|void|visibleChanged|bool
 
 #pragma ENDDUMP

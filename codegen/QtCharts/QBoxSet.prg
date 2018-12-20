@@ -125,32 +125,49 @@ $method=5,7,0|qreal|at|const int
 $prototype=int count() const
 $method=5,7,0|int|count|
 
-$beginSignals
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|cleared()
-$signal=5,7,0|clicked()
-$signal=5,7,0|doubleClicked()
-$signal=5,7,0|hovered(bool)
-$signal=5,7,0|penChanged()
-$signal=5,7,0|pressed()
-$signal=5,7,0|released()
-$signal=5,7,0|valueChanged(int)
-$signal=5,7,0|valuesChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|brushChanged()
+%% $signal=5,7,0|cleared()
+%% $signal=5,7,0|clicked()
+%% $signal=5,7,0|doubleClicked()
+%% $signal=5,7,0|hovered(bool)
+%% $signal=5,7,0|penChanged()
+%% $signal=5,7,0|pressed()
+%% $signal=5,7,0|released()
+%% $signal=5,7,0|valueChanged(int)
+%% $signal=5,7,0|valuesChanged()
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|cleared()
-$signal=5,7,0|clicked()
-$signal=5,7,0|doubleClicked()
-$signal=5,7,0|hovered( bool status )
-$signal=5,7,0|penChanged()
-$signal=5,7,0|pressed()
-$signal=5,7,0|released()
-$signal=5,7,0|valueChanged( int index )
-$signal=5,7,0|valuesChanged()
-$endSlotsClass
+$prototype=void brushChanged()
+$signalMethod=5,7,0|void|brushChanged|
+
+$prototype=void cleared()
+$signalMethod=5,7,0|void|cleared|
+
+$prototype=void clicked()
+$signalMethod=5,7,0|void|clicked|
+
+$prototype=void doubleClicked()
+$signalMethod=5,7,0|void|doubleClicked|
+
+$prototype=void hovered( bool status )
+$signalMethod=5,7,0|void|hovered|bool
+
+$prototype=void penChanged()
+$signalMethod=5,7,0|void|penChanged|
+
+$prototype=void pressed()
+$signalMethod=5,7,0|void|pressed|
+
+$prototype=void released()
+$signalMethod=5,7,0|void|released|
+
+$prototype=void valueChanged( int index )
+$signalMethod=5,7,0|void|valueChanged|int
+
+$prototype=void valuesChanged()
+$signalMethod=5,7,0|void|valuesChanged|
 
 #pragma ENDDUMP

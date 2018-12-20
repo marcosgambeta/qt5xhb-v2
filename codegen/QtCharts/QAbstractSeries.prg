@@ -105,20 +105,25 @@ $method=5,7,0|void|show|
 $prototype=void hide()
 $method=5,7,0|void|hide|
 
-$beginSignals
-$signal=5,7,0|nameChanged()
-$signal=5,7,0|opacityChanged()
-$signal=5,7,0|useOpenGLChanged()
-$signal=5,7,0|visibleChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|nameChanged()
+%% $signal=5,7,0|opacityChanged()
+%% $signal=5,7,0|useOpenGLChanged()
+%% $signal=5,7,0|visibleChanged()
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|nameChanged()
-$signal=5,7,0|opacityChanged()
-$signal=5,7,0|useOpenGLChanged()
-$signal=5,7,0|visibleChanged()
-$endSlotsClass
+$prototype=void nameChanged()
+$signalMethod=5,7,0|void|nameChanged|
+
+$prototype=void opacityChanged()
+$signalMethod=5,7,0|void|opacityChanged|
+
+$prototype=void useOpenGLChanged()
+$signalMethod=5,7,0|void|useOpenGLChanged|
+
+$prototype=void visibleChanged()
+$signalMethod=5,7,0|void|visibleChanged|
 
 #pragma ENDDUMP

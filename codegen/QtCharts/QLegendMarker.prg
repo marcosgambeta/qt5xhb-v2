@@ -117,30 +117,45 @@ $virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
 $prototype=virtual QAbstractSeries* series() = 0
 $virtualMethod=5,7,0|QAbstractSeries *|series|
 
-$beginSignals
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked()
-$signal=5,7,0|fontChanged()
-$signal=5,7,0|hovered(bool)
-$signal=5,7,0|labelBrushChanged()
-$signal=5,7,0|labelChanged()
-$signal=5,7,0|penChanged()
-$signal=5,9,0|shapeChanged()
-$signal=5,7,0|visibleChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|brushChanged()
+%% $signal=5,7,0|clicked()
+%% $signal=5,7,0|fontChanged()
+%% $signal=5,7,0|hovered(bool)
+%% $signal=5,7,0|labelBrushChanged()
+%% $signal=5,7,0|labelChanged()
+%% $signal=5,7,0|penChanged()
+%% $signal=5,9,0|shapeChanged()
+%% $signal=5,7,0|visibleChanged()
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked()
-$signal=5,7,0|fontChanged()
-$signal=5,7,0|hovered( bool status )
-$signal=5,7,0|labelBrushChanged()
-$signal=5,7,0|labelChanged()
-$signal=5,7,0|penChanged()
-$signal=5,9,0|shapeChanged()
-$signal=5,7,0|visibleChanged()
-$endSlotsClass
+$prototype=void brushChanged()
+$signalMethod=5,7,0|void|brushChanged|
+
+$prototype=void clicked()
+$signalMethod=5,7,0|void|clicked|
+
+$prototype=void fontChanged()
+$signalMethod=5,7,0|void|fontChanged|
+
+$prototype=void hovered( bool status )
+$signalMethod=5,7,0|void|hovered|bool
+
+$prototype=void labelBrushChanged()
+$signalMethod=5,7,0|void|labelBrushChanged|
+
+$prototype=void labelChanged()
+$signalMethod=5,7,0|void|labelChanged|
+
+$prototype=void penChanged()
+$signalMethod=5,7,0|void|penChanged|
+
+$prototype=void shapeChanged()
+$signalMethod=5,9,0|void|shapeChanged|
+
+$prototype=void visibleChanged()
+$signalMethod=5,7,0|void|visibleChanged|
 
 #pragma ENDDUMP

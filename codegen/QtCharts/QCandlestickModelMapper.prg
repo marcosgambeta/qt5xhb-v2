@@ -96,18 +96,19 @@ $prototype=void setLastSetSection(int lastSetSection) [protected]
 
 $prototype=int lastSetSection() const [protected]
 
-$beginSignals
-$signal=5,8,0|modelReplaced()
-$signal=5,8,0|seriesReplaced()
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|modelReplaced()
+%% $signal=5,8,0|seriesReplaced()
+%% $endSignals
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
-$beginSlotsClass
-$signal=5,8,0|modelReplaced()
-$signal=5,8,0|seriesReplaced()
-$endSlotsClass
+$prototype=void modelReplaced()
+$signalMethod=5,8,0|void|modelReplaced|
+
+$prototype=void seriesReplaced()
+$signalMethod=5,8,0|void|seriesReplaced|
 
 #pragma ENDDUMP

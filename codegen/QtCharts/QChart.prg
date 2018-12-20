@@ -300,14 +300,13 @@ $method=5,7,0|QPointF|mapToValue|const QPointF &,QAbstractSeries *=Q_NULLPTR
 $prototype=QPointF mapToPosition(const QPointF &value, QAbstractSeries *series = Q_NULLPTR)
 $method=5,7,0|QPointF|mapToPosition|const QPointF &,QAbstractSeries *=Q_NULLPTR
 
-$beginSignals
-$signal=5,7,0|plotAreaChanged(QRectF)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|plotAreaChanged(QRectF)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|plotAreaChanged( const QRectF & plotArea )
-$endSlotsClass
+$prototype=void plotAreaChanged( const QRectF & plotArea )
+$signalMethod=5,7,0|void|plotAreaChanged|QRectF
 
 #pragma ENDDUMP

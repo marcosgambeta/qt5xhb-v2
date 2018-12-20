@@ -125,22 +125,29 @@ $method=5,7,0|QString|at|int
 $prototype=void setRange(const QString &minCategory, const QString &maxCategory)
 $method=5,7,0|void|setRange|const QString &,const QString &
 
-$beginSignals
-$signal=5,7,0|categoriesChanged()
-$signal=5,7,0|countChanged()
-$signal=5,7,0|maxChanged(QString)
-$signal=5,7,0|minChanged(QString)
-$signal=5,7,0|rangeChanged(QString,QString)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|categoriesChanged()
+%% $signal=5,7,0|countChanged()
+%% $signal=5,7,0|maxChanged(QString)
+%% $signal=5,7,0|minChanged(QString)
+%% $signal=5,7,0|rangeChanged(QString,QString)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|categoriesChanged()
-$signal=5,7,0|countChanged()
-$signal=5,7,0|maxChanged( const QString & max )
-$signal=5,7,0|minChanged( const QString & min )
-$signal=5,7,0|rangeChanged( const QString & min, const QString & max )
-$endSlotsClass
+$prototype=void categoriesChanged()
+$signalMethod=5,7,0|void|categoriesChanged|
+
+$prototype=void countChanged()
+$signalMethod=5,7,0|void|countChanged|
+
+$prototype=void maxChanged( const QString & max )
+$signalMethod=5,7,0|void|maxChanged|QString
+
+$prototype=void minChanged( const QString & min )
+$signalMethod=5,7,0|void|minChanged|QString
+
+$prototype=void rangeChanged( const QString & min, const QString & max )
+$signalMethod=5,7,0|void|rangeChanged|QString,QString
 
 #pragma ENDDUMP

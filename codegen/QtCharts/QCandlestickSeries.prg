@@ -215,50 +215,83 @@ $method=5,8,0|QList<QCandlestickSet *>|sets|
 $prototype=QAbstractSeries::SeriesType type() const
 $method=5,8,0|QAbstractSeries::SeriesType|type|
 
-$beginSignals
-$signal=5,8,0|bodyOutlineVisibilityChanged()
-$signal=5,8,0|bodyWidthChanged()
-$signal=5,8,0|brushChanged()
-$signal=5,8,0|candlestickSetsAdded(QList<QCandlestickSet*>)
-$signal=5,8,0|candlestickSetsRemoved(QList<QCandlestickSet*>)
-$signal=5,8,0|capsVisibilityChanged()
-$signal=5,8,0|capsWidthChanged()
-$signal=5,8,0|clicked(QCandlestickSet*)
-$signal=5,8,0|countChanged()
-$signal=5,8,0|decreasingColorChanged()
-$signal=5,8,0|doubleClicked(QCandlestickSet*)
-$signal=5,8,0|hovered(bool,QCandlestickSet*)
-$signal=5,8,0|increasingColorChanged()
-$signal=5,8,0|maximumColumnWidthChanged()
-$signal=5,8,0|minimumColumnWidthChanged()
-$signal=5,8,0|penChanged()
-$signal=5,8,0|pressed(QCandlestickSet*)
-$signal=5,8,0|released(QCandlestickSet*)
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|bodyOutlineVisibilityChanged()
+%% $signal=5,8,0|bodyWidthChanged()
+%% $signal=5,8,0|brushChanged()
+%% $signal=5,8,0|candlestickSetsAdded(QList<QCandlestickSet*>)
+%% $signal=5,8,0|candlestickSetsRemoved(QList<QCandlestickSet*>)
+%% $signal=5,8,0|capsVisibilityChanged()
+%% $signal=5,8,0|capsWidthChanged()
+%% $signal=5,8,0|clicked(QCandlestickSet*)
+%% $signal=5,8,0|countChanged()
+%% $signal=5,8,0|decreasingColorChanged()
+%% $signal=5,8,0|doubleClicked(QCandlestickSet*)
+%% $signal=5,8,0|hovered(bool,QCandlestickSet*)
+%% $signal=5,8,0|increasingColorChanged()
+%% $signal=5,8,0|maximumColumnWidthChanged()
+%% $signal=5,8,0|minimumColumnWidthChanged()
+%% $signal=5,8,0|penChanged()
+%% $signal=5,8,0|pressed(QCandlestickSet*)
+%% $signal=5,8,0|released(QCandlestickSet*)
+%% $endSignals
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
-$beginSlotsClass
-$signal=5,8,0|bodyOutlineVisibilityChanged()
-$signal=5,8,0|bodyWidthChanged()
-$signal=5,8,0|brushChanged()
-$signal=5,8,0|candlestickSetsAdded( const QList<QCandlestickSet*> & sets )
-$signal=5,8,0|candlestickSetsRemoved( const QList<QCandlestickSet*> & sets )
-$signal=5,8,0|capsVisibilityChanged()
-$signal=5,8,0|capsWidthChanged()
-$signal=5,8,0|clicked( QCandlestickSet * set )
-$signal=5,8,0|countChanged()
-$signal=5,8,0|decreasingColorChanged()
-$signal=5,8,0|doubleClicked( QCandlestickSet * set )
-$signal=5,8,0|hovered( bool status, QCandlestickSet * set )
-$signal=5,8,0|increasingColorChanged()
-$signal=5,8,0|maximumColumnWidthChanged()
-$signal=5,8,0|minimumColumnWidthChanged()
-$signal=5,8,0|penChanged()
-$signal=5,8,0|pressed( QCandlestickSet * set )
-$signal=5,8,0|released( QCandlestickSet * set )
-$endSlotsClass
+$prototype=void bodyOutlineVisibilityChanged()
+$signalMethod=5,8,0|void|bodyOutlineVisibilityChanged|
+
+$prototype=void bodyWidthChanged()
+$signalMethod=5,8,0|void|bodyWidthChanged|
+
+$prototype=void brushChanged()
+$signalMethod=5,8,0|void|brushChanged|
+
+$prototype=void candlestickSetsAdded( const QList<QCandlestickSet*> & sets )
+$signalMethod=5,8,0|void|candlestickSetsAdded|QList<QCandlestickSet*>
+
+$prototype=void candlestickSetsRemoved( const QList<QCandlestickSet*> & sets )
+$signalMethod=5,8,0|void|candlestickSetsRemoved|QList<QCandlestickSet*>
+
+$prototype=void capsVisibilityChanged()
+$signalMethod=5,8,0|void|capsVisibilityChanged|
+
+$prototype=void capsWidthChanged()
+$signalMethod=5,8,0|void|capsWidthChanged|
+
+$prototype=void clicked( QCandlestickSet * set )
+$signalMethod=5,8,0|void|clicked|QCandlestickSet*
+
+$prototype=void countChanged()
+$signalMethod=5,8,0|void|countChanged|
+
+$prototype=void decreasingColorChanged()
+$signalMethod=5,8,0|void|decreasingColorChanged|
+
+$prototype=void doubleClicked( QCandlestickSet * set )
+$signalMethod=5,8,0|void|doubleClicked|QCandlestickSet*
+
+$prototype=void hovered( bool status, QCandlestickSet * set )
+$signalMethod=5,8,0|void|hovered|bool,QCandlestickSet*
+
+$prototype=void increasingColorChanged()
+$signalMethod=5,8,0|void|increasingColorChanged|
+
+$prototype=void maximumColumnWidthChanged()
+$signalMethod=5,8,0|void|maximumColumnWidthChanged|
+
+$prototype=void minimumColumnWidthChanged()
+$signalMethod=5,8,0|void|minimumColumnWidthChanged|
+
+$prototype=void penChanged()
+$signalMethod=5,8,0|void|penChanged|
+
+$prototype=void pressed( QCandlestickSet * set )
+$signalMethod=5,8,0|void|pressed|QCandlestickSet*
+
+$prototype=void released( QCandlestickSet * set )
+$signalMethod=5,8,0|void|released|QCandlestickSet*
 
 #pragma ENDDUMP

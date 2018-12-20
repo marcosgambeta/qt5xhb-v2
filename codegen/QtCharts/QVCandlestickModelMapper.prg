@@ -113,28 +113,39 @@ $method=5,8,0|void|setLastSetColumn|int
 $prototype=Qt::Orientation orientation() const
 $method=5,8,0|Qt::Orientation|orientation|
 
-$beginSignals
-$signal=5,8,0|closeRowChanged()
-$signal=5,8,0|firstSetColumnChanged()
-$signal=5,8,0|highRowChanged()
-$signal=5,8,0|lastSetColumnChanged()
-$signal=5,8,0|lowRowChanged()
-$signal=5,8,0|openRowChanged()
-$signal=5,8,0|timestampRowChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|closeRowChanged()
+%% $signal=5,8,0|firstSetColumnChanged()
+%% $signal=5,8,0|highRowChanged()
+%% $signal=5,8,0|lastSetColumnChanged()
+%% $signal=5,8,0|lowRowChanged()
+%% $signal=5,8,0|openRowChanged()
+%% $signal=5,8,0|timestampRowChanged()
+%% $endSignals
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
-$beginSlotsClass
-$signal=5,8,0|closeRowChanged()
-$signal=5,8,0|firstSetColumnChanged()
-$signal=5,8,0|highRowChanged()
-$signal=5,8,0|lastSetColumnChanged()
-$signal=5,8,0|lowRowChanged()
-$signal=5,8,0|openRowChanged()
-$signal=5,8,0|timestampRowChanged()
-$endSlotsClass
+$prototype=void closeRowChanged()
+$signalMethod=5,8,0|void|closeRowChanged|
+
+$prototype=void firstSetColumnChanged()
+$signalMethod=5,8,0|void|firstSetColumnChanged|
+
+$prototype=void highRowChanged()
+$signalMethod=5,8,0|void|highRowChanged|
+
+$prototype=void lastSetColumnChanged()
+$signalMethod=5,8,0|void|lastSetColumnChanged|
+
+$prototype=void lowRowChanged()
+$signalMethod=5,8,0|void|lowRowChanged|
+
+$prototype=void openRowChanged()
+$signalMethod=5,8,0|void|openRowChanged|
+
+$prototype=void timestampRowChanged()
+$signalMethod=5,8,0|void|timestampRowChanged|
 
 #pragma ENDDUMP

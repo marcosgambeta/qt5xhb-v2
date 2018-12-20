@@ -89,22 +89,29 @@ $method=5,7,0|QAbstractAxis::AxisType|type|
 $prototype=void setRange(QDateTime min, QDateTime max)
 $method=5,7,0|void|setRange|QDateTime,QDateTime
 
-$beginSignals
-$signal=5,7,0|formatChanged(QString)
-$signal=5,7,0|maxChanged(QDateTime)
-$signal=5,7,0|minChanged(QDateTime)
-$signal=5,7,0|rangeChanged(QDateTime,QDateTime)
-$signal=5,7,0|tickCountChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|formatChanged(QString)
+%% $signal=5,7,0|maxChanged(QDateTime)
+%% $signal=5,7,0|minChanged(QDateTime)
+%% $signal=5,7,0|rangeChanged(QDateTime,QDateTime)
+%% $signal=5,7,0|tickCountChanged(int)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|formatChanged( QString format )
-$signal=5,7,0|maxChanged( QDateTime max )
-$signal=5,7,0|minChanged( QDateTime min )
-$signal=5,7,0|rangeChanged( QDateTime min, QDateTime max )
-$signal=5,7,0|tickCountChanged( int tick )
-$endSlotsClass
+$prototype=void formatChanged( QString format )
+$signalMethod=5,7,0|void|formatChanged|QString
+
+$prototype=void maxChanged( QDateTime max )
+$signalMethod=5,7,0|void|maxChanged|QDateTime
+
+$prototype=void minChanged( QDateTime min )
+$signalMethod=5,7,0|void|minChanged|QDateTime
+
+$prototype=void rangeChanged( QDateTime min, QDateTime max )
+$signalMethod=5,7,0|void|rangeChanged|QDateTime,QDateTime
+
+$prototype=void tickCountChanged( int tick )
+$signalMethod=5,7,0|void|tickCountChanged|int
 
 #pragma ENDDUMP

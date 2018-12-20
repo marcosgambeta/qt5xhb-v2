@@ -165,28 +165,41 @@ $prototype=void hideEvent(QHideEvent *event) [protected]
 
 $prototype=void showEvent(QShowEvent *event) [protected]
 
-$beginSignals
-$signal=5,7,0|backgroundVisibleChanged(bool)
-$signal=5,7,0|borderColorChanged(QColor)
-$signal=5,7,0|colorChanged(QColor)
-$signal=5,7,0|fontChanged(QFont)
-$signal=5,7,0|labelColorChanged(QColor)
-$signal=5,9,0|markerShapeChanged(QLegend::MarkerShape)
-$signal=5,7,0|reverseMarkersChanged(bool)
-$signal=5,7,0|showToolTipsChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|backgroundVisibleChanged(bool)
+%% $signal=5,7,0|borderColorChanged(QColor)
+%% $signal=5,7,0|colorChanged(QColor)
+%% $signal=5,7,0|fontChanged(QFont)
+%% $signal=5,7,0|labelColorChanged(QColor)
+%% $signal=5,9,0|markerShapeChanged(QLegend::MarkerShape)
+%% $signal=5,7,0|reverseMarkersChanged(bool)
+%% $signal=5,7,0|showToolTipsChanged(bool)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|backgroundVisibleChanged( bool visible )
-$signal=5,7,0|borderColorChanged( QColor color )
-$signal=5,7,0|colorChanged( QColor color )
-$signal=5,7,0|fontChanged( QFont font )
-$signal=5,7,0|labelColorChanged( QColor color )
-$signal=5,9,0|markerShapeChanged( QLegend::MarkerShape shape )
-$signal=5,7,0|reverseMarkersChanged( bool reverseMarkers )
-$signal=5,7,0|showToolTipsChanged( bool showToolTips )
-$endSlotsClass
+$prototype=void backgroundVisibleChanged( bool visible )
+$signalMethod=5,7,0|void|backgroundVisibleChanged|bool
+
+$prototype=void borderColorChanged( QColor color )
+$signalMethod=5,7,0|void|borderColorChanged|QColor
+
+$prototype=void colorChanged( QColor color )
+$signalMethod=5,7,0|void|colorChanged|QColor
+
+$prototype=void fontChanged( QFont font )
+$signalMethod=5,7,0|void|fontChanged|QFont
+
+$prototype=void labelColorChanged( QColor color )
+$signalMethod=5,7,0|void|labelColorChanged|QColor
+
+$prototype=void markerShapeChanged( QLegend::MarkerShape shape )
+$signalMethod=5,9,0|void|markerShapeChanged|QLegend::MarkerShape
+
+$prototype=void reverseMarkersChanged( bool reverseMarkers )
+$signalMethod=5,7,0|void|reverseMarkersChanged|bool
+
+$prototype=void showToolTipsChanged( bool showToolTips )
+$signalMethod=5,7,0|void|showToolTipsChanged|bool
 
 #pragma ENDDUMP

@@ -163,44 +163,73 @@ $method=5,7,0|int|count|
 $prototype=qreal sum() const
 $method=5,7,0|qreal|sum|
 
-$beginSignals
-$signal=5,7,0|borderColorChanged(QColor)
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked(int)
-$signal=5,7,0|colorChanged(QColor)
-$signal=5,7,0|doubleClicked(int)
-$signal=5,7,0|hovered(bool,int)
-$signal=5,7,0|labelBrushChanged()
-$signal=5,7,0|labelChanged()
-$signal=5,7,0|labelColorChanged(QColor)
-$signal=5,7,0|labelFontChanged()
-$signal=5,7,0|penChanged()
-$signal=5,7,0|pressed(int)
-$signal=5,7,0|released(int)
-$signal=5,7,0|valueChanged(int)
-$signal=5,7,0|valuesAdded(int,int)
-$signal=5,7,0|valuesRemoved(int,int)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|borderColorChanged(QColor)
+%% $signal=5,7,0|brushChanged()
+%% $signal=5,7,0|clicked(int)
+%% $signal=5,7,0|colorChanged(QColor)
+%% $signal=5,7,0|doubleClicked(int)
+%% $signal=5,7,0|hovered(bool,int)
+%% $signal=5,7,0|labelBrushChanged()
+%% $signal=5,7,0|labelChanged()
+%% $signal=5,7,0|labelColorChanged(QColor)
+%% $signal=5,7,0|labelFontChanged()
+%% $signal=5,7,0|penChanged()
+%% $signal=5,7,0|pressed(int)
+%% $signal=5,7,0|released(int)
+%% $signal=5,7,0|valueChanged(int)
+%% $signal=5,7,0|valuesAdded(int,int)
+%% $signal=5,7,0|valuesRemoved(int,int)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|borderColorChanged( QColor color )
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked( int index )
-$signal=5,7,0|colorChanged( QColor color )
-$signal=5,7,0|doubleClicked( int index )
-$signal=5,7,0|hovered( bool status, int index )
-$signal=5,7,0|labelBrushChanged()
-$signal=5,7,0|labelChanged()
-$signal=5,7,0|labelColorChanged( QColor color )
-$signal=5,7,0|labelFontChanged()
-$signal=5,7,0|penChanged()
-$signal=5,7,0|pressed( int index )
-$signal=5,7,0|released( int index )
-$signal=5,7,0|valueChanged( int index )
-$signal=5,7,0|valuesAdded( int index, int count )
-$signal=5,7,0|valuesRemoved( int index, int count )
-$endSlotsClass
+$prototype=void borderColorChanged( QColor color )
+$signalMethod=5,7,0|void|borderColorChanged|QColor
+
+$prototype=void brushChanged()
+$signalMethod=5,7,0|void|brushChanged|
+
+$prototype=void clicked( int index )
+$signalMethod=5,7,0|void|clicked|int
+
+$prototype=void colorChanged( QColor color )
+$signalMethod=5,7,0|void|colorChanged|QColor
+
+$prototype=void doubleClicked( int index )
+$signalMethod=5,7,0|void|doubleClicked|int
+
+$prototype=void hovered( bool status, int index )
+$signalMethod=5,7,0|void|hovered|bool,int
+
+$prototype=void labelBrushChanged()
+$signalMethod=5,7,0|void|labelBrushChanged|
+
+$prototype=void labelChanged()
+$signalMethod=5,7,0|void|labelChanged|
+
+$prototype=void labelColorChanged( QColor color )
+$signalMethod=5,7,0|void|labelColorChanged|QColor
+
+$prototype=void labelFontChanged()
+$signalMethod=5,7,0|void|labelFontChanged|
+
+$prototype=void penChanged()
+$signalMethod=5,7,0|void|penChanged|
+
+$prototype=void pressed( int index )
+$signalMethod=5,7,0|void|pressed|int
+
+$prototype=void released( int index )
+$signalMethod=5,7,0|void|released|int
+
+$prototype=void valueChanged( int index )
+$signalMethod=5,7,0|void|valueChanged|int
+
+$prototype=void valuesAdded( int index, int count )
+$signalMethod=5,7,0|void|valuesAdded|int,int
+
+$prototype=void valuesRemoved( int index, int count )
+$signalMethod=5,7,0|void|valuesRemoved|int,int
 
 #pragma ENDDUMP

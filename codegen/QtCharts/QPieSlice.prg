@@ -237,50 +237,85 @@ $method=5,7,0|qreal|angleSpan|
 $prototype=QPieSeries *series() const
 $method=5,7,0|QPieSeries *|series|
 
-$beginSignals
-$signal=5,7,0|angleSpanChanged()
-$signal=5,7,0|borderColorChanged()
-$signal=5,7,0|borderWidthChanged()
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked()
-$signal=5,7,0|colorChanged()
-$signal=5,7,0|doubleClicked()
-$signal=5,7,0|hovered(bool)
-$signal=5,7,0|labelBrushChanged()
-$signal=5,7,0|labelChanged()
-$signal=5,7,0|labelColorChanged()
-$signal=5,7,0|labelFontChanged()
-$signal=5,7,0|labelVisibleChanged()
-$signal=5,7,0|penChanged()
-$signal=5,7,0|percentageChanged()
-$signal=5,7,0|pressed()
-$signal=5,7,0|released()
-$signal=5,7,0|startAngleChanged()
-$signal=5,7,0|valueChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|angleSpanChanged()
+%% $signal=5,7,0|borderColorChanged()
+%% $signal=5,7,0|borderWidthChanged()
+%% $signal=5,7,0|brushChanged()
+%% $signal=5,7,0|clicked()
+%% $signal=5,7,0|colorChanged()
+%% $signal=5,7,0|doubleClicked()
+%% $signal=5,7,0|hovered(bool)
+%% $signal=5,7,0|labelBrushChanged()
+%% $signal=5,7,0|labelChanged()
+%% $signal=5,7,0|labelColorChanged()
+%% $signal=5,7,0|labelFontChanged()
+%% $signal=5,7,0|labelVisibleChanged()
+%% $signal=5,7,0|penChanged()
+%% $signal=5,7,0|percentageChanged()
+%% $signal=5,7,0|pressed()
+%% $signal=5,7,0|released()
+%% $signal=5,7,0|startAngleChanged()
+%% $signal=5,7,0|valueChanged()
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|angleSpanChanged()
-$signal=5,7,0|borderColorChanged()
-$signal=5,7,0|borderWidthChanged()
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked()
-$signal=5,7,0|colorChanged()
-$signal=5,7,0|doubleClicked()
-$signal=5,7,0|hovered( bool state )
-$signal=5,7,0|labelBrushChanged()
-$signal=5,7,0|labelChanged()
-$signal=5,7,0|labelColorChanged()
-$signal=5,7,0|labelFontChanged()
-$signal=5,7,0|labelVisibleChanged()
-$signal=5,7,0|penChanged()
-$signal=5,7,0|percentageChanged()
-$signal=5,7,0|pressed()
-$signal=5,7,0|released()
-$signal=5,7,0|startAngleChanged()
-$signal=5,7,0|valueChanged()
-$endSlotsClass
+$prototype=void angleSpanChanged()
+$signalMethod=5,7,0|void|angleSpanChanged|
+
+$prototype=void borderColorChanged()
+$signalMethod=5,7,0|void|borderColorChanged|
+
+$prototype=void borderWidthChanged()
+$signalMethod=5,7,0|void|borderWidthChanged|
+
+$prototype=void brushChanged()
+$signalMethod=5,7,0|void|brushChanged|
+
+$prototype=void clicked()
+$signalMethod=5,7,0|void|clicked|
+
+$prototype=void colorChanged()
+$signalMethod=5,7,0|void|colorChanged|
+
+$prototype=void doubleClicked()
+$signalMethod=5,7,0|void|doubleClicked|
+
+$prototype=void hovered( bool state )
+$signalMethod=5,7,0|void|hovered|bool
+
+$prototype=void labelBrushChanged()
+$signalMethod=5,7,0|void|labelBrushChanged|
+
+$prototype=void labelChanged()
+$signalMethod=5,7,0|void|labelChanged|
+
+$prototype=void labelColorChanged()
+$signalMethod=5,7,0|void|labelColorChanged|
+
+$prototype=void labelFontChanged()
+$signalMethod=5,7,0|void|labelFontChanged|
+
+$prototype=void labelVisibleChanged()
+$signalMethod=5,7,0|void|labelVisibleChanged|
+
+$prototype=void penChanged()
+$signalMethod=5,7,0|void|penChanged|
+
+$prototype=void percentageChanged()
+$signalMethod=5,7,0|void|percentageChanged|
+
+$prototype=void pressed()
+$signalMethod=5,7,0|void|pressed|
+
+$prototype=void released()
+$signalMethod=5,7,0|void|released|
+
+$prototype=void startAngleChanged()
+$signalMethod=5,7,0|void|startAngleChanged|
+
+$prototype=void valueChanged()
+$signalMethod=5,7,0|void|valueChanged|
 
 #pragma ENDDUMP

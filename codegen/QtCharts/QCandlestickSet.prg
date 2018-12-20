@@ -129,38 +129,59 @@ $method=5,8,0|QPen|pen|
 $prototype=void setPen(const QPen &pen)
 $method=5,8,0|void|setPen|const QPen &
 
-$beginSignals
-$signal=5,8,0|brushChanged()
-$signal=5,8,0|clicked()
-$signal=5,8,0|closeChanged()
-$signal=5,8,0|doubleClicked()
-$signal=5,8,0|highChanged()
-$signal=5,8,0|hovered(bool)
-$signal=5,8,0|lowChanged()
-$signal=5,8,0|openChanged()
-$signal=5,8,0|penChanged()
-$signal=5,8,0|pressed()
-$signal=5,8,0|released()
-$signal=5,8,0|timestampChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,8,0|brushChanged()
+%% $signal=5,8,0|clicked()
+%% $signal=5,8,0|closeChanged()
+%% $signal=5,8,0|doubleClicked()
+%% $signal=5,8,0|highChanged()
+%% $signal=5,8,0|hovered(bool)
+%% $signal=5,8,0|lowChanged()
+%% $signal=5,8,0|openChanged()
+%% $signal=5,8,0|penChanged()
+%% $signal=5,8,0|pressed()
+%% $signal=5,8,0|released()
+%% $signal=5,8,0|timestampChanged()
+%% $endSignals
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
-$beginSlotsClass
-$signal=5,8,0|brushChanged()
-$signal=5,8,0|clicked()
-$signal=5,8,0|closeChanged()
-$signal=5,8,0|doubleClicked()
-$signal=5,8,0|highChanged()
-$signal=5,8,0|hovered( bool status )
-$signal=5,8,0|lowChanged()
-$signal=5,8,0|openChanged()
-$signal=5,8,0|penChanged()
-$signal=5,8,0|pressed()
-$signal=5,8,0|released()
-$signal=5,8,0|timestampChanged()
-$endSlotsClass
+$prototype=void brushChanged()
+$signalMethod=5,8,0|void|brushChanged|
+
+$prototype=void clicked()
+$signalMethod=5,8,0|void|clicked|
+
+$prototype=void closeChanged()
+$signalMethod=5,8,0|void|closeChanged|
+
+$prototype=void doubleClicked()
+$signalMethod=5,8,0|void|doubleClicked|
+
+$prototype=void highChanged()
+$signalMethod=5,8,0|void|highChanged|
+
+$prototype=void hovered( bool status )
+$signalMethod=5,8,0|void|hovered|bool
+
+$prototype=void lowChanged()
+$signalMethod=5,8,0|void|lowChanged|
+
+$prototype=void openChanged()
+$signalMethod=5,8,0|void|openChanged|
+
+$prototype=void penChanged()
+$signalMethod=5,8,0|void|penChanged|
+
+$prototype=void pressed()
+$signalMethod=5,8,0|void|pressed|
+
+$prototype=void released()
+$signalMethod=5,8,0|void|released|
+
+$prototype=void timestampChanged()
+$signalMethod=5,8,0|void|timestampChanged|
 
 #pragma ENDDUMP

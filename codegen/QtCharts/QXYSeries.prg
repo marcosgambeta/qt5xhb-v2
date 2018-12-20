@@ -269,46 +269,77 @@ $virtualMethod=5,7,0|void|setBrush|const QBrush &
 $prototype=QBrush brush() const
 $method=5,7,0|QBrush|brush|
 
-$beginSignals
-$signal=5,7,0|clicked(QPointF)
-$signal=5,7,0|colorChanged(QColor)
-$signal=5,7,0|doubleClicked(QPointF)
-$signal=5,7,0|hovered(QPointF,bool)
-$signal=5,7,0|penChanged(QPen)
-$signal=5,7,0|pointAdded(int)
-$signal=5,7,0|pointLabelsClippingChanged(bool)
-$signal=5,7,0|pointLabelsColorChanged(QColor)
-$signal=5,7,0|pointLabelsFontChanged(QFont)
-$signal=5,7,0|pointLabelsFormatChanged(QString)
-$signal=5,7,0|pointLabelsVisibilityChanged(bool)
-$signal=5,7,0|pointRemoved(int)
-$signal=5,7,0|pointReplaced(int)
-$signal=5,7,0|pointsRemoved(int,int)
-$signal=5,7,0|pointsReplaced()
-$signal=5,7,0|pressed(QPointF)
-$signal=5,7,0|released(QPointF)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|clicked(QPointF)
+%% $signal=5,7,0|colorChanged(QColor)
+%% $signal=5,7,0|doubleClicked(QPointF)
+%% $signal=5,7,0|hovered(QPointF,bool)
+%% $signal=5,7,0|penChanged(QPen)
+%% $signal=5,7,0|pointAdded(int)
+%% $signal=5,7,0|pointLabelsClippingChanged(bool)
+%% $signal=5,7,0|pointLabelsColorChanged(QColor)
+%% $signal=5,7,0|pointLabelsFontChanged(QFont)
+%% $signal=5,7,0|pointLabelsFormatChanged(QString)
+%% $signal=5,7,0|pointLabelsVisibilityChanged(bool)
+%% $signal=5,7,0|pointRemoved(int)
+%% $signal=5,7,0|pointReplaced(int)
+%% $signal=5,7,0|pointsRemoved(int,int)
+%% $signal=5,7,0|pointsReplaced()
+%% $signal=5,7,0|pressed(QPointF)
+%% $signal=5,7,0|released(QPointF)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|clicked( const QPointF & point )
-$signal=5,7,0|colorChanged( QColor color )
-$signal=5,7,0|doubleClicked( const QPointF & point )
-$signal=5,7,0|hovered( const QPointF & point, bool state )
-$signal=5,7,0|penChanged( const QPen & pen )
-$signal=5,7,0|pointAdded( int index )
-$signal=5,7,0|pointLabelsClippingChanged( bool clipping )
-$signal=5,7,0|pointLabelsColorChanged( const QColor & color )
-$signal=5,7,0|pointLabelsFontChanged( const QFont & font )
-$signal=5,7,0|pointLabelsFormatChanged( const QString & format )
-$signal=5,7,0|pointLabelsVisibilityChanged( bool visible )
-$signal=5,7,0|pointRemoved( int index )
-$signal=5,7,0|pointReplaced( int index )
-$signal=5,7,0|pointsRemoved( int index, int count )
-$signal=5,7,0|pointsReplaced()
-$signal=5,7,0|pressed( const QPointF & point )
-$signal=5,7,0|released( const QPointF & point )
-$endSlotsClass
+$prototype=void clicked( const QPointF & point )
+$signalMethod=5,7,0|void|clicked|QPointF
+
+$prototype=void colorChanged( QColor color )
+$signalMethod=5,7,0|void|colorChanged|QColor
+
+$prototype=void doubleClicked( const QPointF & point )
+$signalMethod=5,7,0|void|doubleClicked|QPointF
+
+$prototype=void hovered( const QPointF & point, bool state )
+$signalMethod=5,7,0|void|hovered|QPointF,bool
+
+$prototype=void penChanged( const QPen & pen )
+$signalMethod=5,7,0|void|penChanged|QPen
+
+$prototype=void pointAdded( int index )
+$signalMethod=5,7,0|void|pointAdded|int
+
+$prototype=void pointLabelsClippingChanged( bool clipping )
+$signalMethod=5,7,0|void|pointLabelsClippingChanged|bool
+
+$prototype=void pointLabelsColorChanged( const QColor & color )
+$signalMethod=5,7,0|void|pointLabelsColorChanged|QColor
+
+$prototype=void pointLabelsFontChanged( const QFont & font )
+$signalMethod=5,7,0|void|pointLabelsFontChanged|QFont
+
+$prototype=void pointLabelsFormatChanged( const QString & format )
+$signalMethod=5,7,0|void|pointLabelsFormatChanged|QString
+
+$prototype=void pointLabelsVisibilityChanged( bool visible )
+$signalMethod=5,7,0|void|pointLabelsVisibilityChanged|bool
+
+$prototype=void pointRemoved( int index )
+$signalMethod=5,7,0|void|pointRemoved|int
+
+$prototype=void pointReplaced( int index )
+$signalMethod=5,7,0|void|pointReplaced|int
+
+$prototype=void pointsRemoved( int index, int count )
+$signalMethod=5,7,0|void|pointsRemoved|int,int
+
+$prototype=void pointsReplaced()
+$signalMethod=5,7,0|void|pointsReplaced|
+
+$prototype=void pressed( const QPointF & point )
+$signalMethod=5,7,0|void|pressed|QPointF
+
+$prototype=void released( const QPointF & point )
+$signalMethod=5,7,0|void|released|QPointF
 
 #pragma ENDDUMP

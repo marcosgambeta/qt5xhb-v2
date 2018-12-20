@@ -174,38 +174,61 @@ $method=5,7,0|void|setPointsVisible|bool=true
 $prototype=bool pointsVisible() const
 $method=5,7,0|bool|pointsVisible|
 
-$beginSignals
-$signal=5,7,0|borderColorChanged(QColor)
-$signal=5,7,0|clicked(QPointF)
-$signal=5,7,0|colorChanged(QColor)
-$signal=5,7,0|doubleClicked(QPointF)
-$signal=5,7,0|hovered(QPointF,bool)
-$signal=5,7,0|pointLabelsClippingChanged(bool)
-$signal=5,7,0|pointLabelsColorChanged(QColor)
-$signal=5,7,0|pointLabelsFontChanged(QFont)
-$signal=5,7,0|pointLabelsFormatChanged(QString)
-$signal=5,7,0|pointLabelsVisibilityChanged(bool)
-$signal=5,7,0|pressed(QPointF)
-$signal=5,7,0|released(QPointF)
-$signal=5,7,0|selected()
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|borderColorChanged(QColor)
+%% $signal=5,7,0|clicked(QPointF)
+%% $signal=5,7,0|colorChanged(QColor)
+%% $signal=5,7,0|doubleClicked(QPointF)
+%% $signal=5,7,0|hovered(QPointF,bool)
+%% $signal=5,7,0|pointLabelsClippingChanged(bool)
+%% $signal=5,7,0|pointLabelsColorChanged(QColor)
+%% $signal=5,7,0|pointLabelsFontChanged(QFont)
+%% $signal=5,7,0|pointLabelsFormatChanged(QString)
+%% $signal=5,7,0|pointLabelsVisibilityChanged(bool)
+%% $signal=5,7,0|pressed(QPointF)
+%% $signal=5,7,0|released(QPointF)
+%% $signal=5,7,0|selected()
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|borderColorChanged( QColor color )
-$signal=5,7,0|clicked( const QPointF & point )
-$signal=5,7,0|colorChanged( QColor color )
-$signal=5,7,0|doubleClicked( const QPointF & point )
-$signal=5,7,0|hovered( const QPointF & point, bool state )
-$signal=5,7,0|pointLabelsClippingChanged( bool clipping )
-$signal=5,7,0|pointLabelsColorChanged( const QColor & color )
-$signal=5,7,0|pointLabelsFontChanged( const QFont & font )
-$signal=5,7,0|pointLabelsFormatChanged( const QString & format )
-$signal=5,7,0|pointLabelsVisibilityChanged( bool visible )
-$signal=5,7,0|pressed( const QPointF & point )
-$signal=5,7,0|released( const QPointF & point )
-$signal=5,7,0|selected()
-$endSlotsClass
+$prototype=void borderColorChanged( QColor color )
+$signalMethod=5,7,0|void|borderColorChanged|QColor
+
+$prototype=void clicked( const QPointF & point )
+$signalMethod=5,7,0|void|clicked|QPointF
+
+$prototype=void colorChanged( QColor color )
+$signalMethod=5,7,0|void|colorChanged|QColor
+
+$prototype=void doubleClicked( const QPointF & point )
+$signalMethod=5,7,0|void|doubleClicked|QPointF
+
+$prototype=void hovered( const QPointF & point, bool state )
+$signalMethod=5,7,0|void|hovered|QPointF,bool
+
+$prototype=void pointLabelsClippingChanged( bool clipping )
+$signalMethod=5,7,0|void|pointLabelsClippingChanged|bool
+
+$prototype=void pointLabelsColorChanged( const QColor & color )
+$signalMethod=5,7,0|void|pointLabelsColorChanged|QColor
+
+$prototype=void pointLabelsFontChanged( const QFont & font )
+$signalMethod=5,7,0|void|pointLabelsFontChanged|QFont
+
+$prototype=void pointLabelsFormatChanged( const QString & format )
+$signalMethod=5,7,0|void|pointLabelsFormatChanged|QString
+
+$prototype=void pointLabelsVisibilityChanged( bool visible )
+$signalMethod=5,7,0|void|pointLabelsVisibilityChanged|bool
+
+$prototype=void pressed( const QPointF & point )
+$signalMethod=5,7,0|void|pressed|QPointF
+
+$prototype=void released( const QPointF & point )
+$signalMethod=5,7,0|void|released|QPointF
+
+$prototype=void selected()
+$signalMethod=5,7,0|void|selected|
 
 #pragma ENDDUMP

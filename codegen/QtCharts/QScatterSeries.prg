@@ -95,20 +95,25 @@ $method=5,7,0|QAbstractSeries::SeriesType|type|
 $prototype=void setPen(const QPen &pen)
 $method=5,7,0|void|setPen|const QPen &
 
-$beginSignals
-$signal=5,7,0|borderColorChanged(QColor)
-$signal=5,7,0|colorChanged(QColor)
-$signal=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
-$signal=5,7,0|markerSizeChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|borderColorChanged(QColor)
+%% $signal=5,7,0|colorChanged(QColor)
+%% $signal=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
+%% $signal=5,7,0|markerSizeChanged(qreal)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|borderColorChanged( QColor color )
-$signal=5,7,0|colorChanged( QColor color )
-$signal=5,7,0|markerShapeChanged( QScatterSeries::MarkerShape shape )
-$signal=5,7,0|markerSizeChanged( qreal size )
-$endSlotsClass
+$prototype=void borderColorChanged( QColor color )
+$signalMethod=5,7,0|void|borderColorChanged|QColor
+
+$prototype=void colorChanged( QColor color )
+$signalMethod=5,7,0|void|colorChanged|QColor
+
+$prototype=void markerShapeChanged( QScatterSeries::MarkerShape shape )
+$signalMethod=5,7,0|void|markerShapeChanged|QScatterSeries::MarkerShape
+
+$prototype=void markerSizeChanged( qreal size )
+$signalMethod=5,7,0|void|markerSizeChanged|qreal
 
 #pragma ENDDUMP

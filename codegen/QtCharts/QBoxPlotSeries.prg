@@ -130,36 +130,57 @@ $method=5,7,0|void|clear|
 $prototype=QAbstractSeries::SeriesType type() const
 $method=5,7,0|QAbstractSeries::SeriesType|type|
 
-$beginSignals
-$signal=5,7,0|boxOutlineVisibilityChanged()
-$signal=5,7,0|boxsetsAdded(QList<QBoxSet*>)
-$signal=5,7,0|boxsetsRemoved(QList<QBoxSet*>)
-$signal=5,7,0|boxWidthChanged()
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked(QBoxSet*)
-$signal=5,7,0|countChanged()
-$signal=5,7,0|doubleClicked(QBoxSet*)
-$signal=5,7,0|hovered(bool,QBoxSet*)
-$signal=5,7,0|penChanged()
-$signal=5,7,0|pressed(QBoxSet*)
-$signal=5,7,0|released(QBoxSet*)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|boxOutlineVisibilityChanged()
+%% $signal=5,7,0|boxsetsAdded(QList<QBoxSet*>)
+%% $signal=5,7,0|boxsetsRemoved(QList<QBoxSet*>)
+%% $signal=5,7,0|boxWidthChanged()
+%% $signal=5,7,0|brushChanged()
+%% $signal=5,7,0|clicked(QBoxSet*)
+%% $signal=5,7,0|countChanged()
+%% $signal=5,7,0|doubleClicked(QBoxSet*)
+%% $signal=5,7,0|hovered(bool,QBoxSet*)
+%% $signal=5,7,0|penChanged()
+%% $signal=5,7,0|pressed(QBoxSet*)
+%% $signal=5,7,0|released(QBoxSet*)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|boxOutlineVisibilityChanged()
-$signal=5,7,0|boxsetsAdded( QList<QBoxSet*> sets )
-$signal=5,7,0|boxsetsRemoved( QList<QBoxSet*> sets )
-$signal=5,7,0|boxWidthChanged()
-$signal=5,7,0|brushChanged()
-$signal=5,7,0|clicked( QBoxSet * boxset )
-$signal=5,7,0|countChanged()
-$signal=5,7,0|doubleClicked( QBoxSet * boxset )
-$signal=5,7,0|hovered( bool status, QBoxSet * boxset )
-$signal=5,7,0|penChanged()
-$signal=5,7,0|pressed( QBoxSet * boxset )
-$signal=5,7,0|released( QBoxSet * boxset )
-$endSlotsClass
+$prototype=void boxOutlineVisibilityChanged()
+$signalMethod=5,7,0|void|boxOutlineVisibilityChanged|
+
+$prototype=void boxsetsAdded( QList<QBoxSet*> sets )
+$signalMethod=5,7,0|void|boxsetsAdded|QList<QBoxSet*>
+
+$prototype=void boxsetsRemoved( QList<QBoxSet*> sets )
+$signalMethod=5,7,0|void|boxsetsRemoved|QList<QBoxSet*>
+
+$prototype=void boxWidthChanged()
+$signalMethod=5,7,0|void|boxWidthChanged|
+
+$prototype=void brushChanged()
+$signalMethod=5,7,0|void|brushChanged|
+
+$prototype=void clicked( QBoxSet * boxset )
+$signalMethod=5,7,0|void|clicked|QBoxSet*
+
+$prototype=void countChanged()
+$signalMethod=5,7,0|void|countChanged|
+
+$prototype=void doubleClicked( QBoxSet * boxset )
+$signalMethod=5,7,0|void|doubleClicked|QBoxSet*
+
+$prototype=void hovered( bool status, QBoxSet * boxset )
+$signalMethod=5,7,0|void|hovered|bool,QBoxSet*
+
+$prototype=void penChanged()
+$signalMethod=5,7,0|void|penChanged|
+
+$prototype=void pressed( QBoxSet * boxset )
+$signalMethod=5,7,0|void|pressed|QBoxSet*
+
+$prototype=void released( QBoxSet * boxset )
+$signalMethod=5,7,0|void|released|QBoxSet*
 
 #pragma ENDDUMP

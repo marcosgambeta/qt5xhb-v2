@@ -104,26 +104,37 @@ $method=5,7,0|QAbstractAxis::AxisType|type|
 $prototype=void setRange(qreal min, qreal max)
 $method=5,7,0|void|setRange|qreal,qreal
 
-$beginSignals
-$signal=5,7,0|baseChanged(qreal)
-$signal=5,7,0|labelFormatChanged(QString)
-$signal=5,7,0|maxChanged(qreal)
-$signal=5,7,0|minChanged(qreal)
-$signal=5,9,0|minorTickCountChanged(int)
-$signal=5,7,0|rangeChanged(qreal,qreal)
-$signal=5,9,0|tickCountChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|baseChanged(qreal)
+%% $signal=5,7,0|labelFormatChanged(QString)
+%% $signal=5,7,0|maxChanged(qreal)
+%% $signal=5,7,0|minChanged(qreal)
+%% $signal=5,9,0|minorTickCountChanged(int)
+%% $signal=5,7,0|rangeChanged(qreal,qreal)
+%% $signal=5,9,0|tickCountChanged(int)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|baseChanged( qreal base )
-$signal=5,7,0|labelFormatChanged( const QString & format )
-$signal=5,7,0|maxChanged( qreal max )
-$signal=5,7,0|minChanged( qreal min )
-$signal=5,9,0|minorTickCountChanged( int minorTickCount )
-$signal=5,7,0|rangeChanged( qreal min, qreal max )
-$signal=5,9,0|tickCountChanged( int tickCount )
-$endSlotsClass
+$prototype=void baseChanged( qreal base )
+$signalMethod=5,7,0|void|baseChanged|qreal
+
+$prototype=void labelFormatChanged( const QString & format )
+$signalMethod=5,7,0|void|labelFormatChanged|QString
+
+$prototype=void maxChanged( qreal max )
+$signalMethod=5,7,0|void|maxChanged|qreal
+
+$prototype=void minChanged( qreal min )
+$signalMethod=5,7,0|void|minChanged|qreal
+
+$prototype=void minorTickCountChanged( int minorTickCount )
+$signalMethod=5,9,0|void|minorTickCountChanged|int
+
+$prototype=void rangeChanged( qreal min, qreal max )
+$signalMethod=5,7,0|void|rangeChanged|qreal,qreal
+
+$prototype=void tickCountChanged( int tickCount )
+$signalMethod=5,9,0|void|tickCountChanged|int
 
 #pragma ENDDUMP

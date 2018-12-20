@@ -101,24 +101,33 @@ $method=5,7,0|void|setRowCount|int
 %%
 %%
 
-$beginSignals
-$signal=5,7,0|firstRowChanged()
-$signal=5,7,0|labelsColumnChanged()
-$signal=5,7,0|modelReplaced()
-$signal=5,7,0|rowCountChanged()
-$signal=5,7,0|seriesReplaced()
-$signal=5,7,0|valuesColumnChanged()
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|firstRowChanged()
+%% $signal=5,7,0|labelsColumnChanged()
+%% $signal=5,7,0|modelReplaced()
+%% $signal=5,7,0|rowCountChanged()
+%% $signal=5,7,0|seriesReplaced()
+%% $signal=5,7,0|valuesColumnChanged()
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|firstRowChanged()
-$signal=5,7,0|labelsColumnChanged()
-$signal=5,7,0|modelReplaced()
-$signal=5,7,0|rowCountChanged()
-$signal=5,7,0|seriesReplaced()
-$signal=5,7,0|valuesColumnChanged()
-$endSlotsClass
+$prototype=void firstRowChanged()
+$signalMethod=5,7,0|void|firstRowChanged|
+
+$prototype=void labelsColumnChanged()
+$signalMethod=5,7,0|void|labelsColumnChanged|
+
+$prototype=void modelReplaced()
+$signalMethod=5,7,0|void|modelReplaced|
+
+$prototype=void rowCountChanged()
+$signalMethod=5,7,0|void|rowCountChanged|
+
+$prototype=void seriesReplaced()
+$signalMethod=5,7,0|void|seriesReplaced|
+
+$prototype=void valuesColumnChanged()
+$signalMethod=5,7,0|void|valuesColumnChanged|
 
 #pragma ENDDUMP

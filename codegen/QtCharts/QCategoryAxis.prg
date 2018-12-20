@@ -90,16 +90,17 @@ $method=5,7,0|void|replaceLabel|const QString &,const QString &
 $prototype=qreal endValue(const QString &categoryLabel) const
 $method=5,7,0|qreal|endValue|const QString &
 
-$beginSignals
-$signal=5,7,0|categoriesChanged()
-$signal=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
-$endSignals
+%% $beginSignals
+%% $signal=5,7,0|categoriesChanged()
+%% $signal=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
+%% $endSignals
 
 using namespace QtCharts;
 
-$beginSlotsClass
-$signal=5,7,0|categoriesChanged()
-$signal=5,7,0|labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
-$endSlotsClass
+$prototype=void categoriesChanged()
+$signalMethod=5,7,0|void|categoriesChanged|
+
+$prototype=void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
+$signalMethod=5,7,0|void|labelsPositionChanged|QCategoryAxis::AxisLabelsPosition
 
 #pragma ENDDUMP
