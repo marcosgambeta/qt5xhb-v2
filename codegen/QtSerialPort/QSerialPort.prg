@@ -181,30 +181,47 @@ $method=5,1,0|bool|sendBreak|int=0
 $prototype=bool setBreakEnabled(bool set = true)
 $method=5,1,0|bool|setBreakEnabled|bool=true
 
-$beginSignals
-$signal=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
-$signal=5,1,0|dataBitsChanged(QSerialPort::DataBits)
-$signal=5,1,0|parityChanged(QSerialPort::Parity)
-$signal=5,1,0|stopBitsChanged(QSerialPort::StopBits)
-$signal=5,1,0|flowControlChanged(QSerialPort::FlowControl)
-$signal=5,1,0|dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)
-$signal=5,1,0|dataTerminalReadyChanged(bool)
-$signal=5,1,0|requestToSendChanged(bool)
-$signal=5,1,0|error(QSerialPort::SerialPortError)
-$signal=5,1,0|settingsRestoredOnCloseChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
+%% $signal=5,1,0|dataBitsChanged(QSerialPort::DataBits)
+%% $signal=5,1,0|parityChanged(QSerialPort::Parity)
+%% $signal=5,1,0|stopBitsChanged(QSerialPort::StopBits)
+%% $signal=5,1,0|flowControlChanged(QSerialPort::FlowControl)
+%% $signal=5,1,0|dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)
+%% $signal=5,1,0|dataTerminalReadyChanged(bool)
+%% $signal=5,1,0|requestToSendChanged(bool)
+%% $signal=5,1,0|error(QSerialPort::SerialPortError)
+%% $signal=5,1,0|settingsRestoredOnCloseChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,1,0|baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
-$signal=5,1,0|dataBitsChanged( QSerialPort::DataBits dataBits )
-$signal=5,1,0|parityChanged( QSerialPort::Parity parity )
-$signal=5,1,0|stopBitsChanged( QSerialPort::StopBits stopBits )
-$signal=5,1,0|flowControlChanged( QSerialPort::FlowControl flow )
-$signal=5,1,0|dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy )
-$signal=5,1,0|dataTerminalReadyChanged( bool set )
-$signal=5,1,0|requestToSendChanged( bool set )
-$signal=5,1,0|error( QSerialPort::SerialPortError serialPortError )
-$signal=5,1,0|settingsRestoredOnCloseChanged( bool restore )
-$endSlotsClass
+$prototype=void baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
+$signalMethod=5,1,0|void|baudRateChanged|qint32,QSerialPort::Directions
+
+$prototype=void dataBitsChanged( QSerialPort::DataBits dataBits )
+$signalMethod=5,1,0|void|dataBitsChanged|QSerialPort::DataBits
+
+$prototype=void parityChanged( QSerialPort::Parity parity )
+$signalMethod=5,1,0|void|parityChanged|QSerialPort::Parity
+
+$prototype=void stopBitsChanged( QSerialPort::StopBits stopBits )
+$signalMethod=5,1,0|void|stopBitsChanged|QSerialPort::StopBits
+
+$prototype=void flowControlChanged( QSerialPort::FlowControl flow )
+$signalMethod=5,1,0|void|flowControlChanged|QSerialPort::FlowControl
+
+$prototype=void dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy )
+$signalMethod=5,1,0|void|dataErrorPolicyChanged|QSerialPort::DataErrorPolicy
+
+$prototype=void dataTerminalReadyChanged( bool set )
+$signalMethod=5,1,0|void|dataTerminalReadyChanged|bool
+
+$prototype=void requestToSendChanged( bool set )
+$signalMethod=5,1,0|void|requestToSendChanged|bool
+
+$prototype=void error( QSerialPort::SerialPortError serialPortError )
+$signalMethod=5,1,0|void|error,error,QOverload<QSerialPort::SerialPortError>|QSerialPort::SerialPortError
+
+$prototype=void settingsRestoredOnCloseChanged( bool restore )
+$signalMethod=5,1,0|void|settingsRestoredOnCloseChanged|bool
 
 #pragma ENDDUMP
