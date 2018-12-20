@@ -59,6 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QScriptEngineDebugger>
@@ -353,16 +354,130 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
   }
 }
 
-void QScriptEngineDebuggerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void evaluationResumed()
+*/
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 {
-  QScriptEngineDebuggerSlots_connect_signal( "evaluationResumed()", "evaluationResumed()" );
+  if( hb_pcount() == 1 )
+  {
+    QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "evaluationResumed()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScriptEngineDebugger::evaluationResumed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationResumed()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "evaluationResumed()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "evaluationResumed()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "evaluationResumed()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void evaluationSuspended()
+*/
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 {
-  QScriptEngineDebuggerSlots_connect_signal( "evaluationSuspended()", "evaluationSuspended()" );
+  if( hb_pcount() == 1 )
+  {
+    QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "evaluationSuspended()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScriptEngineDebugger::evaluationSuspended, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationSuspended()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "evaluationSuspended()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "evaluationSuspended()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "evaluationSuspended()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
