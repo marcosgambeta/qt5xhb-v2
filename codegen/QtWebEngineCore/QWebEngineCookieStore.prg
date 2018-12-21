@@ -17,8 +17,7 @@ $beginClassFrom=QObject
 
 $addMethods
 
-%%   METHOD onCookieAdded
-%%   METHOD onCookieRemoved
+$addSignals
 
 $endClass
 
@@ -48,8 +47,10 @@ $method=|void|deleteAllCookies|
 $prototype=void loadAllCookies()
 $method=|void|loadAllCookies|
 
-#pragma ENDDUMP
+$prototype=void cookieAdded(const QNetworkCookie &cookie)
+$signalMethod=|void|cookieAdded|QNetworkCookie
 
-%% Q_SIGNALS:
-%% void cookieAdded(const QNetworkCookie &cookie);
-%% void cookieRemoved(const QNetworkCookie &cookie);
+$prototype=void cookieRemoved(const QNetworkCookie &cookie)
+$signalMethod=|void|cookieRemoved|QNetworkCookie
+
+#pragma ENDDUMP
