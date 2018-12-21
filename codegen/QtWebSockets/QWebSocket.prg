@@ -28,6 +28,7 @@ $destructor
 $includes=5,3,0
 
 #include <QMaskGenerator>
+#include <QAuthenticator>
 
 $prototype=explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,QObject *parent = Q_NULLPTR)
 $constructor=5,3,0|new|const QString &=QString(),QWebSocketProtocol::Version=QWebSocketProtocol::VersionLatest,QObject *=Q_NULLPTR
@@ -159,38 +160,63 @@ $method=5,3,0|void|open|const QUrl &
 $prototype=void ping(const QByteArray &payload = QByteArray())
 $method=5,3,0|void|ping|const QByteArray &=QByteArray()
 
-$beginSignals
-$signal=5,3,0|aboutToClose()
-$signal=5,3,0|connected()
-$signal=5,3,0|disconnected()
-$signal=5,3,0|stateChanged(QAbstractSocket::SocketState)
-$signal=5,3,0|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-$signal=5,3,0|readChannelFinished()
-$signal=5,3,0|textFrameReceived(QString,bool)
-$signal=5,3,0|binaryFrameReceived(QByteArray,bool)
-$signal=5,3,0|textMessageReceived(QString)
-$signal=5,3,0|binaryMessageReceived(QByteArray)
-$signal=5,3,0|error(QAbstractSocket::SocketError)
-$signal=5,3,0|pong(quint64,QByteArray)
-$signal=5,3,0|bytesWritten(qint64)
-$signal=5,3,0|sslErrors(QList<QSslError>)
-$endSignals
+%% $beginSignals
+%% $signal=5,3,0|aboutToClose()
+%% $signal=5,3,0|connected()
+%% $signal=5,3,0|disconnected()
+%% $signal=5,3,0|stateChanged(QAbstractSocket::SocketState)
+%% $signal=5,3,0|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+%% $signal=5,3,0|readChannelFinished()
+%% $signal=5,3,0|textFrameReceived(QString,bool)
+%% $signal=5,3,0|binaryFrameReceived(QByteArray,bool)
+%% $signal=5,3,0|textMessageReceived(QString)
+%% $signal=5,3,0|binaryMessageReceived(QByteArray)
+%% $signal=5,3,0|error(QAbstractSocket::SocketError)
+%% $signal=5,3,0|pong(quint64,QByteArray)
+%% $signal=5,3,0|bytesWritten(qint64)
+%% $signal=5,3,0|sslErrors(QList<QSslError>)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,3,0|aboutToClose()
-$signal=5,3,0|connected()
-$signal=5,3,0|disconnected()
-$signal=5,3,0|stateChanged( QAbstractSocket::SocketState state )
-$signal=5,3,0|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator )
-$signal=5,3,0|readChannelFinished()
-$signal=5,3,0|textFrameReceived( const QString & frame, bool isLastFrame )
-$signal=5,3,0|binaryFrameReceived( const QByteArray & frame, bool isLastFrame )
-$signal=5,3,0|textMessageReceived( const QString & message )
-$signal=5,3,0|binaryMessageReceived( const QByteArray & message )
-$signal=5,3,0|error( QAbstractSocket::SocketError error )
-$signal=5,3,0|pong( quint64 elapsedTime, const QByteArray & payload )
-$signal=5,3,0|bytesWritten( qint64 bytes )
-$signal=5,3,0|sslErrors( const QList<QSslError> & errors )
-$endSlotsClass
+$prototype=void aboutToClose()
+$signalMethod=5,3,0|void|aboutToClose|
+
+$prototype=void connected()
+$signalMethod=5,3,0|void|connected|
+
+$prototype=void disconnected()
+$signalMethod=5,3,0|void|disconnected|
+
+$prototype=void stateChanged( QAbstractSocket::SocketState state )
+$signalMethod=5,3,0|void|stateChanged|QAbstractSocket::SocketState
+
+$prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator )
+$signalMethod=5,3,0|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator*
+
+$prototype=void readChannelFinished()
+$signalMethod=5,3,0|void|readChannelFinished|
+
+$prototype=void textFrameReceived( const QString & frame, bool isLastFrame )
+$signalMethod=5,3,0|void|textFrameReceived|QString,bool
+
+$prototype=void binaryFrameReceived( const QByteArray & frame, bool isLastFrame )
+$signalMethod=5,3,0|void|binaryFrameReceived|QByteArray,bool
+
+$prototype=void textMessageReceived( const QString & message )
+$signalMethod=5,3,0|void|textMessageReceived|QString
+
+$prototype=void binaryMessageReceived( const QByteArray & message )
+$signalMethod=5,3,0|void|binaryMessageReceived|QByteArray
+
+$prototype=void error( QAbstractSocket::SocketError error )
+$signalMethod=5,3,0|void|error,error,QOverload<QAbstractSocket::SocketError>|QAbstractSocket::SocketError
+
+$prototype=void pong( quint64 elapsedTime, const QByteArray & payload )
+$signalMethod=5,3,0|void|pong|quint64,QByteArray
+
+$prototype=void bytesWritten( qint64 bytes )
+$signalMethod=5,3,0|void|bytesWritten|qint64
+
+$prototype=void sslErrors( const QList<QSslError> & errors )
+$signalMethod=5,3,0|void|sslErrors|QList<QSslError>
 
 #pragma ENDDUMP

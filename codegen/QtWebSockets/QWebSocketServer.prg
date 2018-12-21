@@ -29,6 +29,7 @@ $includes=5,3,0
 
 #include <QNetworkProxy>
 #include <QWebSocket>
+#include <QWebSocketCorsAuthenticator>
 
 $prototype=explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = Q_NULLPTR)
 $constructor=5,3,0|new|const QString &,QWebSocketServer::SslMode,QObject *=Q_NULLPTR
@@ -104,24 +105,35 @@ $method=5,3,0|QSslConfiguration|sslConfiguration|
 $prototype=QList<QWebSocketProtocol::Version> supportedVersions() const
 $method=5,3,0|QList<QWebSocketProtocol::Version>|supportedVersions|
 
-$beginSignals
-$signal=5,3,0|acceptError(QAbstractSocket::SocketError)
-$signal=5,3,0|serverError(QWebSocketProtocol::CloseCode)
-$signal=5,3,0|originAuthenticationRequired(QWebSocketCorsAuthenticator*)
-$signal=5,3,0|newConnection()
-$signal=5,3,0|peerVerifyError(QSslError)
-$signal=5,3,0|sslErrors(QList<QSslError>)
-$signal=5,3,0|closed()
-$endSignals
+%% $beginSignals
+%% $signal=5,3,0|acceptError(QAbstractSocket::SocketError)
+%% $signal=5,3,0|serverError(QWebSocketProtocol::CloseCode)
+%% $signal=5,3,0|originAuthenticationRequired(QWebSocketCorsAuthenticator*)
+%% $signal=5,3,0|newConnection()
+%% $signal=5,3,0|peerVerifyError(QSslError)
+%% $signal=5,3,0|sslErrors(QList<QSslError>)
+%% $signal=5,3,0|closed()
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,3,0|acceptError( QAbstractSocket::SocketError socketError )
-$signal=5,3,0|serverError( QWebSocketProtocol::CloseCode closeCode )
-$signal=5,3,0|originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
-$signal=5,3,0|newConnection()
-$signal=5,3,0|peerVerifyError( const QSslError & error )
-$signal=5,3,0|sslErrors( const QList<QSslError> & errors )
-$signal=5,3,0|closed()
-$endSlotsClass
+$prototype=void acceptError( QAbstractSocket::SocketError socketError )
+$signalMethod=5,3,0|void|acceptError|QAbstractSocket::SocketError
+
+$prototype=void serverError( QWebSocketProtocol::CloseCode closeCode )
+$signalMethod=5,3,0|void|serverError|QWebSocketProtocol::CloseCode
+
+$prototype=void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
+$signalMethod=5,3,0|void|originAuthenticationRequired|QWebSocketCorsAuthenticator*
+
+$prototype=void newConnection()
+$signalMethod=5,3,0|void|newConnection|
+
+$prototype=void peerVerifyError( const QSslError & error )
+$signalMethod=5,3,0|void|peerVerifyError|QSslError
+
+$prototype=void sslErrors( const QList<QSslError> & errors )
+$signalMethod=5,3,0|void|sslErrors|QList<QSslError>
+
+$prototype=void closed()
+$signalMethod=5,3,0|void|closed|
 
 #pragma ENDDUMP
