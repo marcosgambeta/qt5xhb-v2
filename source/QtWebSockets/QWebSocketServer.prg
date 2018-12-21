@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
@@ -87,6 +88,7 @@ RETURN
 
 #include <QNetworkProxy>
 #include <QWebSocket>
+#include <QWebSocketCorsAuthenticator>
 
 /*
 explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = Q_NULLPTR)
@@ -750,68 +752,491 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
 #endif
 }
 
-void QWebSocketServerSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void acceptError( QAbstractSocket::SocketError socketError )
+*/
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::acceptError, [sender](QAbstractSocket::SocketError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "acceptError(QAbstractSocket::SocketError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "acceptError(QAbstractSocket::SocketError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "acceptError(QAbstractSocket::SocketError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void serverError( QWebSocketProtocol::CloseCode closeCode )
+*/
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "serverError(QWebSocketProtocol::CloseCode)", "serverError(QWebSocketProtocol::CloseCode)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "serverError(QWebSocketProtocol::CloseCode)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::serverError, [sender](QWebSocketProtocol::CloseCode arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "serverError(QWebSocketProtocol::CloseCode)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "serverError(QWebSocketProtocol::CloseCode)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "serverError(QWebSocketProtocol::CloseCode)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "serverError(QWebSocketProtocol::CloseCode)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
+*/
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "originAuthenticationRequired(QWebSocketCorsAuthenticator*)", "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::originAuthenticationRequired, [sender](QWebSocketCorsAuthenticator* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QWEBSOCKETCORSAUTHENTICATOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void newConnection()
+*/
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "newConnection()", "newConnection()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "newConnection()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::newConnection, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "newConnection()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "newConnection()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "newConnection()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void peerVerifyError( const QSslError & error )
+*/
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::peerVerifyError, [sender](QSslError arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "peerVerifyError(QSslError)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSSLERROR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "peerVerifyError(QSslError)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "peerVerifyError(QSslError)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "peerVerifyError(QSslError)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void sslErrors( const QList<QSslError> & errors )
+*/
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::sslErrors, [sender](QList<QSslError> arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
+            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            int i;
+            for(i=0;i<arg1.count();i++)
+            {
+              if( pDynSym )
+              {
+                hb_vmPushDynSym( pDynSym );
+                hb_vmPushNil();
+                hb_vmDo( 0 );
+                PHB_ITEM pTempObject = hb_itemNew( NULL );
+                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                PHB_ITEM pTempItem = hb_itemNew( NULL );
+                hb_itemPutPtr( pTempItem, (QSslError *) new QSslError ( arg1 [i] ) );
+                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+                hb_arrayAddForward( pArg1, pTempObject );
+                hb_itemRelease( pTempObject );
+                hb_itemRelease( pTempItem );
+              }
+              else
+              {
+                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
+              }
+            }
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sslErrors(QList<QSslError>)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sslErrors(QList<QSslError>)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void closed()
+*/
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "closed()", "closed()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "closed()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::closed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "closed()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "closed()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "closed()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "closed()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
