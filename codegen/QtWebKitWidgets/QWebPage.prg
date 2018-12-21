@@ -244,64 +244,115 @@ $method=|bool|supportsContentType|const QString &
 $prototype=QWebPageAdapter* handle() const
 %% TODO: implement ? (not present in the documentation)
 
-$beginSignals
-$signal=|applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)
-$signal=|contentsChanged()
-$signal=|databaseQuotaExceeded(QWebFrame*,QString)
-$signal=|downloadRequested(QNetworkRequest)
-$signal=|featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)
-$signal=|featurePermissionRequested(QWebFrame*,QWebPage::Feature)
-$signal=|frameCreated(QWebFrame*)
-$signal=|geometryChangeRequested(QRect)
-$signal=|linkClicked(QUrl)
-$signal=|linkHovered(QString,QString,QString)
-$signal=|loadFinished(bool)
-$signal=|loadProgress(int)
-$signal=|loadStarted()
-$signal=|menuBarVisibilityChangeRequested(bool)
-$signal=|microFocusChanged()
-$signal=|printRequested(QWebFrame*)
-$signal=|repaintRequested(QRect)
-$signal=|restoreFrameStateRequested(QWebFrame*)
-$signal=|saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)
-$signal=|scrollRequested(int,int,QRect)
-$signal=|selectionChanged()
-$signal=|statusBarMessage(QString)
-$signal=|statusBarVisibilityChangeRequested(bool)
-$signal=|toolBarVisibilityChangeRequested(bool)
-$signal=|unsupportedContent(QNetworkReply*)
-$signal=|viewportChangeRequested()
-$signal=|windowCloseRequested()
-$endSignals
+%% $beginSignals
+%% $signal=|applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)
+%% $signal=|contentsChanged()
+%% $signal=|databaseQuotaExceeded(QWebFrame*,QString)
+%% $signal=|downloadRequested(QNetworkRequest)
+%% $signal=|featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)
+%% $signal=|featurePermissionRequested(QWebFrame*,QWebPage::Feature)
+%% $signal=|frameCreated(QWebFrame*)
+%% $signal=|geometryChangeRequested(QRect)
+%% $signal=|linkClicked(QUrl)
+%% $signal=|linkHovered(QString,QString,QString)
+%% $signal=|loadFinished(bool)
+%% $signal=|loadProgress(int)
+%% $signal=|loadStarted()
+%% $signal=|menuBarVisibilityChangeRequested(bool)
+%% $signal=|microFocusChanged()
+%% $signal=|printRequested(QWebFrame*)
+%% $signal=|repaintRequested(QRect)
+%% $signal=|restoreFrameStateRequested(QWebFrame*)
+%% $signal=|saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)
+%% $signal=|scrollRequested(int,int,QRect)
+%% $signal=|selectionChanged()
+%% $signal=|statusBarMessage(QString)
+%% $signal=|statusBarVisibilityChangeRequested(bool)
+%% $signal=|toolBarVisibilityChangeRequested(bool)
+%% $signal=|unsupportedContent(QNetworkReply*)
+%% $signal=|viewportChangeRequested()
+%% $signal=|windowCloseRequested()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded )
-$signal=|contentsChanged()
-$signal=|databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
-$signal=|downloadRequested( const QNetworkRequest & request )
-$signal=|featurePermissionRequestCanceled( QWebFrame * frame, QWebPage::Feature feature )
-$signal=|featurePermissionRequested( QWebFrame * frame, QWebPage::Feature feature )
-$signal=|frameCreated( QWebFrame * frame )
-$signal=|geometryChangeRequested( const QRect & geom )
-$signal=|linkClicked( const QUrl & url )
-$signal=|linkHovered( const QString & link, const QString & title, const QString & textContent )
-$signal=|loadFinished( bool ok )
-$signal=|loadProgress( int progress )
-$signal=|loadStarted()
-$signal=|menuBarVisibilityChangeRequested( bool visible )
-$signal=|microFocusChanged()
-$signal=|printRequested( QWebFrame * frame )
-$signal=|repaintRequested( const QRect & dirtyRect )
-$signal=|restoreFrameStateRequested( QWebFrame * frame )
-$signal=|saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item )
-$signal=|scrollRequested( int dx, int dy, const QRect & rectToScroll )
-$signal=|selectionChanged()
-$signal=|statusBarMessage( const QString & text )
-$signal=|statusBarVisibilityChangeRequested( bool visible )
-$signal=|toolBarVisibilityChangeRequested( bool visible )
-$signal=|unsupportedContent( QNetworkReply * reply )
-$signal=|viewportChangeRequested()
-$signal=|windowCloseRequested()
-$endSlotsClass
+$prototype=void applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded )
+$signalMethod=|void|applicationCacheQuotaExceeded|QWebSecurityOrigin*,quint64,quint64
+
+$prototype=void contentsChanged()
+$signalMethod=|void|contentsChanged|
+
+$prototype=void databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
+$signalMethod=|void|databaseQuotaExceeded|QWebFrame*,QString
+
+$prototype=void downloadRequested( const QNetworkRequest & request )
+$signalMethod=|void|downloadRequested|QNetworkRequest
+
+$prototype=void featurePermissionRequestCanceled( QWebFrame * frame, QWebPage::Feature feature )
+$signalMethod=|void|featurePermissionRequestCanceled|QWebFrame*,QWebPage::Feature
+
+$prototype=void featurePermissionRequested( QWebFrame * frame, QWebPage::Feature feature )
+$signalMethod=|void|featurePermissionRequested|QWebFrame*,QWebPage::Feature
+
+$prototype=void frameCreated( QWebFrame * frame )
+$signalMethod=|void|frameCreated|QWebFrame*
+
+$prototype=void geometryChangeRequested( const QRect & geom )
+$signalMethod=|void|geometryChangeRequested|QRect
+
+$prototype=void linkClicked( const QUrl & url )
+$signalMethod=|void|linkClicked|QUrl
+
+$prototype=void linkHovered( const QString & link, const QString & title, const QString & textContent )
+$signalMethod=|void|linkHovered|QString,QString,QString
+
+$prototype=void loadFinished( bool ok )
+$signalMethod=|void|loadFinished|bool
+
+$prototype=void loadProgress( int progress )
+$signalMethod=|void|loadProgress|int
+
+$prototype=void loadStarted()
+$signalMethod=|void|loadStarted|
+
+$prototype=void menuBarVisibilityChangeRequested( bool visible )
+$signalMethod=|void|menuBarVisibilityChangeRequested|bool
+
+$prototype=void microFocusChanged()
+$signalMethod=|void|microFocusChanged|
+
+$prototype=void printRequested( QWebFrame * frame )
+$signalMethod=|void|printRequested|QWebFrame*
+
+$prototype=void repaintRequested( const QRect & dirtyRect )
+$signalMethod=|void|repaintRequested|QRect
+
+$prototype=void restoreFrameStateRequested( QWebFrame * frame )
+$signalMethod=|void|restoreFrameStateRequested|QWebFrame*
+
+$prototype=void saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item )
+$signalMethod=|void|saveFrameStateRequested|QWebFrame*,QWebHistoryItem*
+
+$prototype=void scrollRequested( int dx, int dy, const QRect & rectToScroll )
+$signalMethod=|void|scrollRequested|int,int,QRect
+
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
+
+$prototype=void statusBarMessage( const QString & text )
+$signalMethod=|void|statusBarMessage|QString
+
+$prototype=void statusBarVisibilityChangeRequested( bool visible )
+$signalMethod=|void|statusBarVisibilityChangeRequested|bool
+
+$prototype=void toolBarVisibilityChangeRequested( bool visible )
+$signalMethod=|void|toolBarVisibilityChangeRequested|bool
+
+$prototype=void unsupportedContent( QNetworkReply * reply )
+$signalMethod=|void|unsupportedContent|QNetworkReply*
+
+$prototype=void viewportChangeRequested()
+$signalMethod=|void|viewportChangeRequested|
+
+$prototype=void windowCloseRequested()
+$signalMethod=|void|windowCloseRequested|
 
 #pragma ENDDUMP

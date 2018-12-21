@@ -284,31 +284,47 @@ $virtualMethod=|bool|event|QEvent *
 
 $prototype=QWebFrameAdapter* handle() const
 
-$beginSignals
-$signal=|contentsSizeChanged(QSize)
-$signal=|iconChanged()
-$signal=|initialLayoutCompleted()
-$signal=|javaScriptWindowObjectCleared()
-$signal=|loadFinished(bool)
-$signal=|loadStarted()
-$signal=|pageChanged()
-%% $signal=|provisionalLoad()
-$signal=|titleChanged(QString)
-$signal=|urlChanged(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=|contentsSizeChanged(QSize)
+%% $signal=|iconChanged()
+%% $signal=|initialLayoutCompleted()
+%% $signal=|javaScriptWindowObjectCleared()
+%% $signal=|loadFinished(bool)
+%% $signal=|loadStarted()
+%% $signal=|pageChanged()
+%% %% $signal=|provisionalLoad()
+%% $signal=|titleChanged(QString)
+%% $signal=|urlChanged(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|contentsSizeChanged( const QSize & size )
-$signal=|iconChanged()
-$signal=|initialLayoutCompleted()
-$signal=|javaScriptWindowObjectCleared()
-$signal=|loadFinished( bool ok )
-$signal=|loadStarted()
-$signal=|pageChanged()
+$prototype=void contentsSizeChanged( const QSize & size )
+$signalMethod=|void|contentsSizeChanged|QSize
+
+$prototype=void iconChanged()
+$signalMethod=|void|iconChanged|
+
+$prototype=void initialLayoutCompleted()
+$signalMethod=|void|initialLayoutCompleted|
+
+$prototype=void javaScriptWindowObjectCleared()
+$signalMethod=|void|javaScriptWindowObjectCleared|
+
+$prototype=void loadFinished( bool ok )
+$signalMethod=|void|loadFinished|bool
+
+$prototype=void loadStarted()
+$signalMethod=|void|loadStarted|
+
+$prototype=void pageChanged()
+$signalMethod=|void|pageChanged|
+
 %% TODO: check signal 'provisionalLoad' (not present in the documentation)
 %% $signal=|provisionalLoad()
-$signal=|titleChanged( const QString & title )
-$signal=|urlChanged( const QUrl & url )
-$endSlotsClass
+
+$prototype=void titleChanged( const QString & title )
+$signalMethod=|void|titleChanged|QString
+
+$prototype=void urlChanged( const QUrl & url )
+$signalMethod=|void|urlChanged|QUrl
 
 #pragma ENDDUMP

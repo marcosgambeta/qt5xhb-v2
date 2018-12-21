@@ -201,26 +201,39 @@ $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 $prototype=void setRenderHint(QPainter::RenderHint, bool enabled = true)
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-$beginSignals
-$signal=|iconChanged()
-$signal=|linkClicked(QUrl)
-$signal=|loadFinished(bool)
-$signal=|loadProgress(int)
-$signal=|loadStarted()
-$signal=|statusBarMessage(QString)
-$signal=|titleChanged(QString)
-$signal=|urlChanged(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=|iconChanged()
+%% $signal=|linkClicked(QUrl)
+%% $signal=|loadFinished(bool)
+%% $signal=|loadProgress(int)
+%% $signal=|loadStarted()
+%% $signal=|statusBarMessage(QString)
+%% $signal=|titleChanged(QString)
+%% $signal=|urlChanged(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|iconChanged()
-$signal=|linkClicked( const QUrl & url )
-$signal=|loadFinished( bool ok )
-$signal=|loadProgress( int progress )
-$signal=|loadStarted()
-$signal=|statusBarMessage( const QString & text )
-$signal=|titleChanged( const QString & title )
-$signal=|urlChanged( const QUrl & url )
-$endSlotsClass
+$prototype=void iconChanged()
+$signalMethod=|void|iconChanged|
+
+$prototype=void linkClicked( const QUrl & url )
+$signalMethod=|void|linkClicked|QUrl
+
+$prototype=void loadFinished( bool ok )
+$signalMethod=|void|loadFinished|bool
+
+$prototype=void loadProgress( int progress )
+$signalMethod=|void|loadProgress|int
+
+$prototype=void loadStarted()
+$signalMethod=|void|loadStarted|
+
+$prototype=void statusBarMessage( const QString & text )
+$signalMethod=|void|statusBarMessage|QString
+
+$prototype=void titleChanged( const QString & title )
+$signalMethod=|void|titleChanged|QString
+
+$prototype=void urlChanged( const QUrl & url )
+$signalMethod=|void|urlChanged|QUrl
 
 #pragma ENDDUMP
