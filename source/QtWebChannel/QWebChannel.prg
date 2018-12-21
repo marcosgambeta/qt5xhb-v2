@@ -51,6 +51,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -261,14 +262,70 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 #endif
 }
 
-void QWebChannelSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void blockUpdatesChanged( bool block )
+*/
 HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelSlots_connect_signal( "blockUpdatesChanged(bool)", "blockUpdatesChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebChannel * sender = (QWebChannel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "blockUpdatesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebChannel::blockUpdatesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "blockUpdatesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBCHANNEL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "blockUpdatesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebChannel * sender = (QWebChannel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "blockUpdatesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "blockUpdatesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
