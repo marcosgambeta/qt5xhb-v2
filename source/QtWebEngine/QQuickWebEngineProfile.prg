@@ -88,6 +88,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
@@ -996,61 +997,697 @@ void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot) [private]
 QQuickWebEngineSettings *settings() const [private]
 */
 
-void QQuickWebEngineProfileSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void cachePathChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "cachePathChanged()", "cachePathChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cachePathChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::cachePathChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cachePathChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cachePathChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cachePathChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cachePathChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void httpAcceptLanguageChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpAcceptLanguageChanged()", "httpAcceptLanguageChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "httpAcceptLanguageChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpAcceptLanguageChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "httpAcceptLanguageChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "httpAcceptLanguageChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "httpAcceptLanguageChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "httpAcceptLanguageChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void httpCacheMaximumSizeChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpCacheMaximumSizeChanged()", "httpCacheMaximumSizeChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "httpCacheMaximumSizeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpCacheMaximumSizeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "httpCacheMaximumSizeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "httpCacheMaximumSizeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "httpCacheMaximumSizeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "httpCacheMaximumSizeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void httpCacheTypeChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpCacheTypeChanged()", "httpCacheTypeChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "httpCacheTypeChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpCacheTypeChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "httpCacheTypeChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "httpCacheTypeChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "httpCacheTypeChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "httpCacheTypeChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void httpUserAgentChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpUserAgentChanged()", "httpUserAgentChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "httpUserAgentChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpUserAgentChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "httpUserAgentChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "httpUserAgentChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "httpUserAgentChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "httpUserAgentChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void offTheRecordChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "offTheRecordChanged()", "offTheRecordChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "offTheRecordChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::offTheRecordChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "offTheRecordChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "offTheRecordChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "offTheRecordChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "offTheRecordChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void persistentCookiesPolicyChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "persistentCookiesPolicyChanged()", "persistentCookiesPolicyChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "persistentCookiesPolicyChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::persistentCookiesPolicyChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "persistentCookiesPolicyChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "persistentCookiesPolicyChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "persistentCookiesPolicyChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "persistentCookiesPolicyChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void persistentStoragePathChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "persistentStoragePathChanged()", "persistentStoragePathChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "persistentStoragePathChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::persistentStoragePathChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "persistentStoragePathChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "persistentStoragePathChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "persistentStoragePathChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "persistentStoragePathChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void spellCheckEnabledChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "spellCheckEnabledChanged()", "spellCheckEnabledChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "spellCheckEnabledChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::spellCheckEnabledChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "spellCheckEnabledChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "spellCheckEnabledChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "spellCheckEnabledChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "spellCheckEnabledChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void spellCheckLanguagesChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "spellCheckLanguagesChanged()", "spellCheckLanguagesChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "spellCheckLanguagesChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::spellCheckLanguagesChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "spellCheckLanguagesChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "spellCheckLanguagesChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "spellCheckLanguagesChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "spellCheckLanguagesChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void storageNameChanged()
+*/
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "storageNameChanged()", "storageNameChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "storageNameChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::storageNameChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "storageNameChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWEBENGINEPROFILE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "storageNameChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "storageNameChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "storageNameChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
