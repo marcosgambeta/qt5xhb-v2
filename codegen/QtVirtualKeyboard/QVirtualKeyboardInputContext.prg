@@ -28,6 +28,7 @@ $destructor
 $includes
 
 $prototype=explicit QVirtualKeyboardInputContext(QObject *parent = nullptr)
+$constructor=|new|QObject *=0
 
 $prototype=~QVirtualKeyboardInputContext()
 $deleteMethod
@@ -159,42 +160,71 @@ $prototype=Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int
 $prototype=Q_INVOKABLE void clear()
 $prototype=Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
 
-$beginSignals
-$signal=|preeditTextChanged()
-$signal=|inputMethodHintsChanged()
-$signal=|surroundingTextChanged()
-$signal=|selectedTextChanged()
-$signal=|anchorPositionChanged()
-$signal=|cursorPositionChanged()
-$signal=|anchorRectangleChanged()
-$signal=|cursorRectangleChanged()
-$signal=|shiftActiveChanged()
-$signal=|capsLockActiveChanged()
-$signal=|uppercaseChanged()
-$signal=|animatingChanged()
-$signal=|localeChanged()
-$signal=|selectionControlVisibleChanged()
-$signal=|anchorRectIntersectsClipRectChanged()
-$signal=|cursorRectIntersectsClipRectChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|preeditTextChanged()
+%% $signal=|inputMethodHintsChanged()
+%% $signal=|surroundingTextChanged()
+%% $signal=|selectedTextChanged()
+%% $signal=|anchorPositionChanged()
+%% $signal=|cursorPositionChanged()
+%% $signal=|anchorRectangleChanged()
+%% $signal=|cursorRectangleChanged()
+%% $signal=|shiftActiveChanged()
+%% $signal=|capsLockActiveChanged()
+%% $signal=|uppercaseChanged()
+%% $signal=|animatingChanged()
+%% $signal=|localeChanged()
+%% $signal=|selectionControlVisibleChanged()
+%% $signal=|anchorRectIntersectsClipRectChanged()
+%% $signal=|cursorRectIntersectsClipRectChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|preeditTextChanged()
-$signal=|inputMethodHintsChanged()
-$signal=|surroundingTextChanged()
-$signal=|selectedTextChanged()
-$signal=|anchorPositionChanged()
-$signal=|cursorPositionChanged()
-$signal=|anchorRectangleChanged()
-$signal=|cursorRectangleChanged()
-$signal=|shiftActiveChanged()
-$signal=|capsLockActiveChanged()
-$signal=|uppercaseChanged()
-$signal=|animatingChanged()
-$signal=|localeChanged()
-$signal=|selectionControlVisibleChanged()
-$signal=|anchorRectIntersectsClipRectChanged()
-$signal=|cursorRectIntersectsClipRectChanged()
-$endSlotsClass
+$prototype=void preeditTextChanged()
+$signalMethod=|void|preeditTextChanged|
+
+$prototype=void inputMethodHintsChanged()
+$signalMethod=|void|inputMethodHintsChanged|
+
+$prototype=void surroundingTextChanged()
+$signalMethod=|void|surroundingTextChanged|
+
+$prototype=void selectedTextChanged()
+$signalMethod=|void|selectedTextChanged|
+
+$prototype=void anchorPositionChanged()
+$signalMethod=|void|anchorPositionChanged|
+
+$prototype=void cursorPositionChanged()
+$signalMethod=|void|cursorPositionChanged|
+
+$prototype=void anchorRectangleChanged()
+$signalMethod=|void|anchorRectangleChanged|
+
+$prototype=void cursorRectangleChanged()
+$signalMethod=|void|cursorRectangleChanged|
+
+$prototype=void shiftActiveChanged()
+$signalMethod=|void|shiftActiveChanged|
+
+$prototype=void capsLockActiveChanged()
+$signalMethod=|void|capsLockActiveChanged|
+
+$prototype=void uppercaseChanged()
+$signalMethod=|void|uppercaseChanged|
+
+$prototype=void animatingChanged()
+$signalMethod=|void|animatingChanged|
+
+$prototype=void localeChanged()
+$signalMethod=|void|localeChanged|
+
+$prototype=void selectionControlVisibleChanged()
+$signalMethod=|void|selectionControlVisibleChanged|
+
+$prototype=void anchorRectIntersectsClipRectChanged()
+$signalMethod=|void|anchorRectIntersectsClipRectChanged|
+
+$prototype=void cursorRectIntersectsClipRectChanged()
+$signalMethod=|void|cursorRectIntersectsClipRectChanged|
 
 #pragma ENDDUMP

@@ -28,6 +28,7 @@ $destructor
 $includes
 
 $prototype=explicit QVirtualKeyboardAbstractInputMethod(QObject *parent = nullptr)
+$constructor=|new|QObject *=0
 
 $prototype=~QVirtualKeyboardAbstractInputMethod()
 $deleteMethod
@@ -52,16 +53,19 @@ $prototype=virtual void reset() [slot]
 $prototype=virtual void update() [slot]
 $prototype=void setInputEngine(QVirtualKeyboardInputEngine *inputEngine) [private]
 
-$beginSignals
-$signal=|selectionListChanged(QVirtualKeyboardSelectionListModel::Type)
-$signal=|selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)
-$signal=|selectionListsChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|selectionListChanged(QVirtualKeyboardSelectionListModel::Type)
+%% $signal=|selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)
+%% $signal=|selectionListsChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
-$signal=|selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type type, int index )
-$signal=|selectionListsChanged()
-$endSlotsClass
+$prototype=void selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
+$signalMethod=|void|selectionListChanged|QVirtualKeyboardSelectionListModel::Type
+
+$prototype=void selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type type, int index )
+$signalMethod=|void|selectionListActiveItemChanged|QVirtualKeyboardSelectionListModel::Type,int
+
+$prototype=void selectionListsChanged()
+$signalMethod=|void|selectionListsChanged|
 
 #pragma ENDDUMP

@@ -82,22 +82,31 @@ $prototype=Q_INVOKABLE int addPoint(const QPointF &point)
 $prototype=Q_INVOKABLE void setChannelData(const QString &channel, int index, const QVariant &data)
 $prototype=Q_INVOKABLE QVariantList channelData(const QString &channel, int pos = 0, int count = -1) const
 
-$beginSignals
-$signal=|traceIdChanged(int)
-$signal=|channelsChanged()
-$signal=|lengthChanged(int)
-$signal=|finalChanged(bool)
-$signal=|canceledChanged(bool)
-$signal=|opacityChanged(qreal)
-$endSignals
+%% $beginSignals
+%% $signal=|traceIdChanged(int)
+%% $signal=|channelsChanged()
+%% $signal=|lengthChanged(int)
+%% $signal=|finalChanged(bool)
+%% $signal=|canceledChanged(bool)
+%% $signal=|opacityChanged(qreal)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|traceIdChanged( int traceId )
-$signal=|channelsChanged()
-$signal=|lengthChanged( int length )
-$signal=|finalChanged( bool isFinal )
-$signal=|canceledChanged( bool isCanceled )
-$signal=|opacityChanged( qreal opacity )
-$endSlotsClass
+$prototype=void traceIdChanged( int traceId )
+$signalMethod=|void|traceIdChanged|int
+
+$prototype=void channelsChanged()
+$signalMethod=|void|channelsChanged|
+
+$prototype=void lengthChanged( int length )
+$signalMethod=|void|lengthChanged|int
+
+$prototype=void finalChanged( bool isFinal )
+$signalMethod=|void|finalChanged|bool
+
+$prototype=void canceledChanged( bool isCanceled )
+$signalMethod=|void|canceledChanged|bool
+
+$prototype=void opacityChanged( qreal opacity )
+$signalMethod=|void|opacityChanged|qreal
 
 #pragma ENDDUMP

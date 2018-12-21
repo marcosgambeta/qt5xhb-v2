@@ -103,32 +103,51 @@ $prototype=void updateSelectionListModels() [private] [slot]
 $prototype=void updateInputModes() [private] [slot]
 $prototype=void timerEvent(QTimerEvent *timerEvent) [protected]
 
-$beginSignals
-$signal=|virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)
-$signal=|activeKeyChanged(Qt::Key)
-$signal=|previousKeyChanged(Qt::Key)
-$signal=|inputMethodChanged()
-$signal=|inputMethodReset()
-$signal=|inputMethodUpdate()
-$signal=|inputModesChanged()
-$signal=|inputModeChanged()
-$signal=|patternRecognitionModesChanged()
-$signal=|wordCandidateListModelChanged()
-$signal=|wordCandidateListVisibleHintChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)
+%% $signal=|activeKeyChanged(Qt::Key)
+%% $signal=|previousKeyChanged(Qt::Key)
+%% $signal=|inputMethodChanged()
+%% $signal=|inputMethodReset()
+%% $signal=|inputMethodUpdate()
+%% $signal=|inputModesChanged()
+%% $signal=|inputModeChanged()
+%% $signal=|patternRecognitionModesChanged()
+%% $signal=|wordCandidateListModelChanged()
+%% $signal=|wordCandidateListVisibleHintChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat )
-$signal=|activeKeyChanged( Qt::Key key )
-$signal=|previousKeyChanged( Qt::Key key )
-$signal=|inputMethodChanged()
-$signal=|inputMethodReset()
-$signal=|inputMethodUpdate()
-$signal=|inputModesChanged()
-$signal=|inputModeChanged()
-$signal=|patternRecognitionModesChanged()
-$signal=|wordCandidateListModelChanged()
-$signal=|wordCandidateListVisibleHintChanged()
-$endSlotsClass
+$prototype=void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat )
+$signalMethod=|void|virtualKeyClicked|Qt::Key,QString,Qt::KeyboardModifiers,bool
+
+$prototype=void activeKeyChanged( Qt::Key key )
+$signalMethod=|void|activeKeyChanged|Qt::Key
+
+$prototype=void previousKeyChanged( Qt::Key key )
+$signalMethod=|void|previousKeyChanged|Qt::Key
+
+$prototype=void inputMethodChanged()
+$signalMethod=|void|inputMethodChanged|
+
+$prototype=void inputMethodReset()
+$signalMethod=|void|inputMethodReset|
+
+$prototype=void inputMethodUpdate()
+$signalMethod=|void|inputMethodUpdate|
+
+$prototype=void inputModesChanged()
+$signalMethod=|void|inputModesChanged|
+
+$prototype=void inputModeChanged()
+$signalMethod=|void|inputModeChanged|
+
+$prototype=void patternRecognitionModesChanged()
+$signalMethod=|void|patternRecognitionModesChanged|
+
+$prototype=void wordCandidateListModelChanged()
+$signalMethod=|void|wordCandidateListModelChanged|
+
+$prototype=void wordCandidateListVisibleHintChanged()
+$signalMethod=|void|wordCandidateListVisibleHintChanged|
 
 #pragma ENDDUMP
