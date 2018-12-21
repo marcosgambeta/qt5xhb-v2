@@ -62,6 +62,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -513,23 +514,133 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_CLICK )
 #endif
 }
 
-void QWinThumbnailToolButtonSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void clicked()
+*/
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButtonSlots_connect_signal( "clicked()", "clicked()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "clicked()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWinThumbnailToolButton::clicked, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWINTHUMBNAILTOOLBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "clicked()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "clicked()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "clicked()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void changed()
+*/
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButtonSlots_connect_signal( "changed()", "changed()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "changed()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWinThumbnailToolButton::changed, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWINTHUMBNAILTOOLBUTTON" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "changed()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "changed()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "changed()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
