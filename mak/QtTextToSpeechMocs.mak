@@ -3,8 +3,3 @@
 #
 # Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
-
-$(QT5XHB_OBJ_DIR)/QTextToSpeechEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtTextToSpeech/QTextToSpeechEngineSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QTextToSpeechSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtTextToSpeech/QTextToSpeechSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
