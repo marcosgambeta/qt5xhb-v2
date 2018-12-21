@@ -127,6 +127,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QWebPage>
@@ -1345,141 +1346,1767 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSCONTENTTYPE )
 QWebPageAdapter* handle() const
 */
 
-void QWebPageSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
 {
-  QWebPageSlots_connect_signal( "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::applicationCacheQuotaExceeded, [sender](QWebSecurityOrigin* arg1, quint64 arg2, quint64 arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QWEBSECURITYORIGIN" );
+            PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNLL( NULL, arg3 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void contentsChanged()
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
 {
-  QWebPageSlots_connect_signal( "contentsChanged()", "contentsChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "contentsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::contentsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "contentsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "contentsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "contentsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 {
-  QWebPageSlots_connect_signal( "databaseQuotaExceeded(QWebFrame*,QString)", "databaseQuotaExceeded(QWebFrame*,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "databaseQuotaExceeded(QWebFrame*,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::databaseQuotaExceeded, [sender](QWebFrame* arg1, QString arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "databaseQuotaExceeded(QWebFrame*,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "databaseQuotaExceeded(QWebFrame*,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "databaseQuotaExceeded(QWebFrame*,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "databaseQuotaExceeded(QWebFrame*,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void downloadRequested( const QNetworkRequest & request )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
 {
-  QWebPageSlots_connect_signal( "downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "downloadRequested(QNetworkRequest)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::downloadRequested, [sender](QNetworkRequest arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "downloadRequested(QNetworkRequest)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKREQUEST" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "downloadRequested(QNetworkRequest)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "downloadRequested(QNetworkRequest)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "downloadRequested(QNetworkRequest)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void featurePermissionRequestCanceled( QWebFrame * frame, QWebPage::Feature feature )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 {
-  QWebPageSlots_connect_signal( "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::featurePermissionRequestCanceled, [sender](QWebFrame* arg1, QWebPage::Feature arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void featurePermissionRequested( QWebFrame * frame, QWebPage::Feature feature )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
 {
-  QWebPageSlots_connect_signal( "featurePermissionRequested(QWebFrame*,QWebPage::Feature)", "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::featurePermissionRequested, [sender](QWebFrame* arg1, QWebPage::Feature arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void frameCreated( QWebFrame * frame )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
 {
-  QWebPageSlots_connect_signal( "frameCreated(QWebFrame*)", "frameCreated(QWebFrame*)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "frameCreated(QWebFrame*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::frameCreated, [sender](QWebFrame* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "frameCreated(QWebFrame*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "frameCreated(QWebFrame*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "frameCreated(QWebFrame*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "frameCreated(QWebFrame*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void geometryChangeRequested( const QRect & geom )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "geometryChangeRequested(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::geometryChangeRequested, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChangeRequested(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "geometryChangeRequested(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "geometryChangeRequested(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "geometryChangeRequested(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void linkClicked( const QUrl & url )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
 {
-  QWebPageSlots_connect_signal( "linkClicked(QUrl)", "linkClicked(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::linkClicked, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkClicked(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "linkClicked(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "linkClicked(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "linkClicked(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void linkHovered( const QString & link, const QString & title, const QString & textContent )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
 {
-  QWebPageSlots_connect_signal( "linkHovered(QString,QString,QString)", "linkHovered(QString,QString,QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "linkHovered(QString,QString,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::linkHovered, [sender](QString arg1, QString arg2, QString arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkHovered(QString,QString,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "linkHovered(QString,QString,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "linkHovered(QString,QString,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "linkHovered(QString,QString,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loadFinished( bool ok )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
 {
-  QWebPageSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadFinished(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::loadFinished, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadFinished(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadFinished(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadFinished(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loadProgress( int progress )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
 {
-  QWebPageSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadProgress(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::loadProgress, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadProgress(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadProgress(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadProgress(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loadStarted()
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
 {
-  QWebPageSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadStarted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::loadStarted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadStarted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadStarted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadStarted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void menuBarVisibilityChangeRequested( bool visible )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "menuBarVisibilityChangeRequested(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::menuBarVisibilityChangeRequested, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "menuBarVisibilityChangeRequested(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "menuBarVisibilityChangeRequested(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "menuBarVisibilityChangeRequested(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "menuBarVisibilityChangeRequested(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void microFocusChanged()
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
 {
-  QWebPageSlots_connect_signal( "microFocusChanged()", "microFocusChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "microFocusChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::microFocusChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "microFocusChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "microFocusChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "microFocusChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "microFocusChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void printRequested( QWebFrame * frame )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
 {
-  QWebPageSlots_connect_signal( "printRequested(QWebFrame*)", "printRequested(QWebFrame*)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "printRequested(QWebFrame*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::printRequested, [sender](QWebFrame* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "printRequested(QWebFrame*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "printRequested(QWebFrame*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "printRequested(QWebFrame*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "printRequested(QWebFrame*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void repaintRequested( const QRect & dirtyRect )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
 {
-  QWebPageSlots_connect_signal( "repaintRequested(QRect)", "repaintRequested(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "repaintRequested(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::repaintRequested, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "repaintRequested(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "repaintRequested(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "repaintRequested(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "repaintRequested(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void restoreFrameStateRequested( QWebFrame * frame )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "restoreFrameStateRequested(QWebFrame*)", "restoreFrameStateRequested(QWebFrame*)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "restoreFrameStateRequested(QWebFrame*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::restoreFrameStateRequested, [sender](QWebFrame* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "restoreFrameStateRequested(QWebFrame*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "restoreFrameStateRequested(QWebFrame*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "restoreFrameStateRequested(QWebFrame*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "restoreFrameStateRequested(QWebFrame*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::saveFrameStateRequested, [sender](QWebFrame* arg1, QWebHistoryItem* arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QWEBHISTORYITEM" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void scrollRequested( int dx, int dy, const QRect & rectToScroll )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
 {
-  QWebPageSlots_connect_signal( "scrollRequested(int,int,QRect)", "scrollRequested(int,int,QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "scrollRequested(int,int,QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::scrollRequested, [sender](int arg1, int arg2, QRect arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "scrollRequested(int,int,QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            PHB_ITEM pArg3 = Signals2_return_object( (void *) &arg3, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "scrollRequested(int,int,QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "scrollRequested(int,int,QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "scrollRequested(int,int,QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectionChanged()
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
 {
-  QWebPageSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::selectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void statusBarMessage( const QString & text )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
 {
-  QWebPageSlots_connect_signal( "statusBarMessage(QString)", "statusBarMessage(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::statusBarMessage, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarMessage(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusBarMessage(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusBarMessage(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusBarMessage(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void statusBarVisibilityChangeRequested( bool visible )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "statusBarVisibilityChangeRequested(bool)", "statusBarVisibilityChangeRequested(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusBarVisibilityChangeRequested(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::statusBarVisibilityChangeRequested, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarVisibilityChangeRequested(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusBarVisibilityChangeRequested(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusBarVisibilityChangeRequested(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusBarVisibilityChangeRequested(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void toolBarVisibilityChangeRequested( bool visible )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "toolBarVisibilityChangeRequested(bool)", "toolBarVisibilityChangeRequested(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "toolBarVisibilityChangeRequested(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::toolBarVisibilityChangeRequested, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "toolBarVisibilityChangeRequested(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "toolBarVisibilityChangeRequested(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "toolBarVisibilityChangeRequested(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "toolBarVisibilityChangeRequested(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void unsupportedContent( QNetworkReply * reply )
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 {
-  QWebPageSlots_connect_signal( "unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "unsupportedContent(QNetworkReply*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::unsupportedContent, [sender](QNetworkReply* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "unsupportedContent(QNetworkReply*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "unsupportedContent(QNetworkReply*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "unsupportedContent(QNetworkReply*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "unsupportedContent(QNetworkReply*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void viewportChangeRequested()
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "viewportChangeRequested()", "viewportChangeRequested()" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "viewportChangeRequested()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::viewportChangeRequested, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportChangeRequested()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "viewportChangeRequested()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "viewportChangeRequested()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "viewportChangeRequested()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void windowCloseRequested()
+*/
 HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "windowCloseRequested()", "windowCloseRequested()" );
+  if( hb_pcount() == 1 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "windowCloseRequested()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::windowCloseRequested, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowCloseRequested()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "windowCloseRequested()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebPage * sender = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "windowCloseRequested()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "windowCloseRequested()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -93,6 +93,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsWebView>
@@ -1044,46 +1045,520 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsWebViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void iconChanged()
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
 {
-  QGraphicsWebViewSlots_connect_signal( "iconChanged()", "iconChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "iconChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::iconChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "iconChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "iconChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "iconChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "iconChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void linkClicked( const QUrl & url )
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
 {
-  QGraphicsWebViewSlots_connect_signal( "linkClicked(QUrl)", "linkClicked(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::linkClicked, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkClicked(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "linkClicked(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "linkClicked(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "linkClicked(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loadFinished( bool ok )
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
 {
-  QGraphicsWebViewSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadFinished(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::loadFinished, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadFinished(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadFinished(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadFinished(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loadProgress( int progress )
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
 {
-  QGraphicsWebViewSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadProgress(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::loadProgress, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadProgress(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadProgress(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadProgress(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void loadStarted()
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
 {
-  QGraphicsWebViewSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadStarted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::loadStarted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadStarted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadStarted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadStarted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void statusBarMessage( const QString & text )
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
 {
-  QGraphicsWebViewSlots_connect_signal( "statusBarMessage(QString)", "statusBarMessage(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::statusBarMessage, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarMessage(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "statusBarMessage(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "statusBarMessage(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "statusBarMessage(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void titleChanged( const QString & title )
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
 {
-  QGraphicsWebViewSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "titleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::titleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "titleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "titleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "titleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void urlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
 {
-  QGraphicsWebViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+  if( hb_pcount() == 1 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsWebView::urlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSWEBVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "urlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QGraphicsWebView * sender = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "urlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "urlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
