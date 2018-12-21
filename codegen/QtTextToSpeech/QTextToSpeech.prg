@@ -140,22 +140,31 @@ $slotMethod=5,10,0|void|pause|
 $prototype=void resume()
 $slotMethod=5,10,0|void|resume|
 
-$beginSignals
-$signal=5,10,0|localeChanged(QLocale)
-$signal=5,10,0|pitchChanged(double)
-$signal=5,10,0|rateChanged(double)
-$signal=5,10,0|stateChanged(QTextToSpeech::State)
-$signal=5,10,0|voiceChanged(QVoice)
-$signal=5,10,0|volumeChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=5,10,0|localeChanged(QLocale)
+%% $signal=5,10,0|pitchChanged(double)
+%% $signal=5,10,0|rateChanged(double)
+%% $signal=5,10,0|stateChanged(QTextToSpeech::State)
+%% $signal=5,10,0|voiceChanged(QVoice)
+%% $signal=5,10,0|volumeChanged(int)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,10,0|localeChanged( const QLocale & locale )
-$signal=5,10,0|pitchChanged( double pitch )
-$signal=5,10,0|rateChanged( double rate )
-$signal=5,10,0|stateChanged( QTextToSpeech::State state )
-$signal=5,10,0|voiceChanged( const QVoice & voice )
-$signal=5,10,0|volumeChanged( int volume )
-$endSlotsClass
+$prototype=void localeChanged( const QLocale & locale )
+$signalMethod=5,10,0|void|localeChanged|QLocale
+
+$prototype=void pitchChanged( double pitch )
+$signalMethod=5,10,0|void|pitchChanged|double
+
+$prototype=void rateChanged( double rate )
+$signalMethod=5,10,0|void|rateChanged|double
+
+$prototype=void stateChanged( QTextToSpeech::State state )
+$signalMethod=5,10,0|void|stateChanged|QTextToSpeech::State
+
+$prototype=void voiceChanged( const QVoice & voice )
+$signalMethod=5,10,0|void|voiceChanged|QVoice
+
+$prototype=void volumeChanged( int volume )
+$signalMethod=5,10,0|void|volumeChanged|int
 
 #pragma ENDDUMP
