@@ -198,37 +198,57 @@ $prototype=void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot
 
 $prototype=QQuickWebEngineSettings *settings() const [private]
 
-$beginSignals
-$signal=|cachePathChanged()
-%% $signal=|downloadFinished(QQuickWebEngineDownloadItem*)
-%% $signal=|downloadRequested(QQuickWebEngineDownloadItem*)
-$signal=|httpAcceptLanguageChanged()
-$signal=|httpCacheMaximumSizeChanged()
-$signal=|httpCacheTypeChanged()
-$signal=|httpUserAgentChanged()
-$signal=|offTheRecordChanged()
-$signal=|persistentCookiesPolicyChanged()
-$signal=|persistentStoragePathChanged()
-$signal=|spellCheckEnabledChanged()
-$signal=|spellCheckLanguagesChanged()
-$signal=|storageNameChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|cachePathChanged()
+%% %% $signal=|downloadFinished(QQuickWebEngineDownloadItem*)
+%% %% $signal=|downloadRequested(QQuickWebEngineDownloadItem*)
+%% $signal=|httpAcceptLanguageChanged()
+%% $signal=|httpCacheMaximumSizeChanged()
+%% $signal=|httpCacheTypeChanged()
+%% $signal=|httpUserAgentChanged()
+%% $signal=|offTheRecordChanged()
+%% $signal=|persistentCookiesPolicyChanged()
+%% $signal=|persistentStoragePathChanged()
+%% $signal=|spellCheckEnabledChanged()
+%% $signal=|spellCheckLanguagesChanged()
+%% $signal=|storageNameChanged()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|cachePathChanged()
-%% TODO: implementar ?
-%% $signal=|downloadFinished( QQuickWebEngineDownloadItem * download )
-%% $signal=|downloadRequested( QQuickWebEngineDownloadItem * download )
-$signal=|httpAcceptLanguageChanged()
-$signal=|httpCacheMaximumSizeChanged()
-$signal=|httpCacheTypeChanged()
-$signal=|httpUserAgentChanged()
-$signal=|offTheRecordChanged()
-$signal=|persistentCookiesPolicyChanged()
-$signal=|persistentStoragePathChanged()
-$signal=|spellCheckEnabledChanged()
-$signal=|spellCheckLanguagesChanged()
-$signal=|storageNameChanged()
-$endSlotsClass
+$prototype=void cachePathChanged()
+$signalMethod=|void|cachePathChanged|
+
+%% TODO: $signal=|downloadFinished( QQuickWebEngineDownloadItem * download )
+
+%% TODO: $signal=|downloadRequested( QQuickWebEngineDownloadItem * download )
+
+$prototype=void httpAcceptLanguageChanged()
+$signalMethod=|void|httpAcceptLanguageChanged|
+
+$prototype=void httpCacheMaximumSizeChanged()
+$signalMethod=|void|httpCacheMaximumSizeChanged|
+
+$prototype=void httpCacheTypeChanged()
+$signalMethod=|void|httpCacheTypeChanged|
+
+$prototype=void httpUserAgentChanged()
+$signalMethod=|void|httpUserAgentChanged|
+
+$prototype=void offTheRecordChanged()
+$signalMethod=|void|offTheRecordChanged|
+
+$prototype=void persistentCookiesPolicyChanged()
+$signalMethod=|void|persistentCookiesPolicyChanged|
+
+$prototype=void persistentStoragePathChanged()
+$signalMethod=|void|persistentStoragePathChanged|
+
+$prototype=void spellCheckEnabledChanged()
+$signalMethod=|void|spellCheckEnabledChanged|
+
+$prototype=void spellCheckLanguagesChanged()
+$signalMethod=|void|spellCheckLanguagesChanged|
+
+$prototype=void storageNameChanged()
+$signalMethod=|void|storageNameChanged|
 
 #pragma ENDDUMP

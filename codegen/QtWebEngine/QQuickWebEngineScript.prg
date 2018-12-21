@@ -100,22 +100,31 @@ $method=5,9,0|void|setRunOnSubframes|bool
 $prototype=Q_INVOKABLE QString toString() const
 $method=5,9,0|QString|toString|
 
-$beginSignals
-$signal=|injectionPointChanged(QQuickWebEngineScript::InjectionPoint)
-$signal=|nameChanged(QString)
-$signal=|runOnSubframesChanged(bool)
-$signal=|sourceCodeChanged(QString)
-$signal=|sourceUrlChanged(QUrl)
-$signal=|worldIdChanged(QQuickWebEngineScript::ScriptWorldId)
-$endSignals
+%% $beginSignals
+%% $signal=|injectionPointChanged(QQuickWebEngineScript::InjectionPoint)
+%% $signal=|nameChanged(QString)
+%% $signal=|runOnSubframesChanged(bool)
+%% $signal=|sourceCodeChanged(QString)
+%% $signal=|sourceUrlChanged(QUrl)
+%% $signal=|worldIdChanged(QQuickWebEngineScript::ScriptWorldId)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint )
-$signal=|nameChanged( const QString & name )
-$signal=|runOnSubframesChanged( bool on )
-$signal=|sourceCodeChanged( const QString & code )
-$signal=|sourceUrlChanged( const QUrl & url )
-$signal=|worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
-$endSlotsClass
+$prototype=void injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint )
+$signalMethod=|void|injectionPointChanged|QQuickWebEngineScript::InjectionPoint
+
+$prototype=void nameChanged( const QString & name )
+$signalMethod=|void|nameChanged|QString
+
+$prototype=void runOnSubframesChanged( bool on )
+$signalMethod=|void|runOnSubframesChanged|bool
+
+$prototype=void sourceCodeChanged( const QString & code )
+$signalMethod=|void|sourceCodeChanged|QString
+
+$prototype=void sourceUrlChanged( const QUrl & url )
+$signalMethod=|void|sourceUrlChanged|QUrl
+
+$prototype=void worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
+$signalMethod=|void|worldIdChanged|QQuickWebEngineScript::ScriptWorldId
 
 #pragma ENDDUMP
