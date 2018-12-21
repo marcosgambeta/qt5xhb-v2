@@ -86,22 +86,31 @@ $method=5,2,0|void|resume|
 $prototype=void stop()
 $method=5,2,0|void|stop|
 
-$beginSignals
-$signal=5,2,0|valueChanged(int)
-$signal=5,2,0|minimumChanged(int)
-$signal=5,2,0|maximumChanged(int)
-$signal=5,2,0|visibilityChanged(bool)
-$signal=5,2,0|pausedChanged(bool)
-$signal=5,2,0|stoppedChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|valueChanged(int)
+%% $signal=5,2,0|minimumChanged(int)
+%% $signal=5,2,0|maximumChanged(int)
+%% $signal=5,2,0|visibilityChanged(bool)
+%% $signal=5,2,0|pausedChanged(bool)
+%% $signal=5,2,0|stoppedChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|valueChanged( int value )
-$signal=5,2,0|minimumChanged( int minimum )
-$signal=5,2,0|maximumChanged( int maximum )
-$signal=5,2,0|visibilityChanged( bool visible )
-$signal=5,2,0|pausedChanged( bool paused )
-$signal=5,2,0|stoppedChanged( bool stopped )
-$endSlotsClass
+$prototype=void valueChanged( int value )
+$signalMethod=5,2,0|void|valueChanged|int
+
+$prototype=void minimumChanged( int minimum )
+$signalMethod=5,2,0|void|minimumChanged|int
+
+$prototype=void maximumChanged( int maximum )
+$signalMethod=5,2,0|void|maximumChanged|int
+
+$prototype=void visibilityChanged( bool visible )
+$signalMethod=5,2,0|void|visibilityChanged|bool
+
+$prototype=void pausedChanged( bool paused )
+$signalMethod=5,2,0|void|pausedChanged|bool
+
+$prototype=void stoppedChanged( bool stopped )
+$signalMethod=5,2,0|void|stoppedChanged|bool
 
 #pragma ENDDUMP

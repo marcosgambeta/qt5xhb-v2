@@ -77,14 +77,15 @@ $method=5,2,0|void|setFlat|bool
 $prototype=void click()
 $method=5,2,0|void|click|
 
-$beginSignals
-$signal=5,2,0|clicked()
-$signal=5,2,0|changed()
-$endSignals
+%% $beginSignals
+%% $signal=5,2,0|clicked()
+%% $signal=5,2,0|changed()
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,2,0|clicked()
-$signal=5,2,0|changed()
-$endSlotsClass
+$prototype=void clicked()
+$signalMethod=5,2,0|void|clicked|
+
+$prototype=void changed()
+$signalMethod=5,2,0|void|changed|
 
 #pragma ENDDUMP
