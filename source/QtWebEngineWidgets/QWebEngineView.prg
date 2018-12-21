@@ -77,6 +77,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -703,68 +704,468 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
 #endif
 }
 
-void QWebEngineViewSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void loadStarted()
+*/
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "loadStarted()", "loadStarted()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadStarted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::loadStarted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEVIEW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadStarted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadStarted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadStarted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void loadProgress( int progress )
+*/
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadProgress(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::loadProgress, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadProgress(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadProgress(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadProgress(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void loadFinished( bool b )
+*/
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadFinished(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::loadFinished, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadFinished(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadFinished(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadFinished(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void titleChanged( const QString & title )
+*/
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "titleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::titleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEVIEW" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "titleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "titleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "titleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void selectionChanged()
+*/
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::selectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEVIEW" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void urlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::urlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "urlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "urlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "urlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void iconUrlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "iconUrlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::iconUrlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "iconUrlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEVIEW" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "iconUrlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEngineView * sender = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "iconUrlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "iconUrlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

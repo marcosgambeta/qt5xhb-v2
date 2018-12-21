@@ -86,6 +86,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -751,131 +752,945 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
 #endif
 }
 
-void QWebEnginePageSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void loadStarted()
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "loadStarted()", "loadStarted()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadStarted()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::loadStarted, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadStarted()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadStarted()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadStarted()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void loadProgress( int progress )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadProgress(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::loadProgress, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadProgress(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadProgress(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadProgress(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void loadFinished( bool ok )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "loadFinished(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::loadFinished, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "loadFinished(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "loadFinished(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "loadFinished(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void linkHovered( const QString & url )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "linkHovered(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::linkHovered, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkHovered(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "linkHovered(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "linkHovered(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "linkHovered(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void selectionChanged()
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::selectionChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void geometryChangeRequested( const QRect & geom )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "geometryChangeRequested(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::geometryChangeRequested, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChangeRequested(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "geometryChangeRequested(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "geometryChangeRequested(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "geometryChangeRequested(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void windowCloseRequested()
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "windowCloseRequested()", "windowCloseRequested()" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "windowCloseRequested()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::windowCloseRequested, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowCloseRequested()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "windowCloseRequested()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "windowCloseRequested()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "windowCloseRequested()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "featurePermissionRequested(QUrl,QWebEnginePage::Feature)", "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::featurePermissionRequested, [sender](QUrl arg1, QWebEnginePage::Feature arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)", "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::featurePermissionRequestCanceled, [sender](QUrl arg1, QWebEnginePage::Feature arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void authenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "authenticationRequired(QUrl,QAuthenticator*)", "authenticationRequired(QUrl,QAuthenticator*)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "authenticationRequired(QUrl,QAuthenticator*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::authenticationRequired, [sender](QUrl arg1, QAuthenticator* arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "authenticationRequired(QUrl,QAuthenticator*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QAUTHENTICATOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "authenticationRequired(QUrl,QAuthenticator*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "authenticationRequired(QUrl,QAuthenticator*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "authenticationRequired(QUrl,QAuthenticator*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator, const QString & proxyHost )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)", "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::proxyAuthenticationRequired, [sender](QUrl arg1, QAuthenticator* arg2, QString arg3) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QAUTHENTICATOR" );
+            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+            hb_itemRelease( pArg3 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void titleChanged( const QString & title )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "titleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::titleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "titleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "titleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "titleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void urlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::urlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "urlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "urlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "urlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void iconUrlChanged( const QUrl & url )
+*/
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "iconUrlChanged(QUrl)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::iconUrlChanged, [sender](QUrl arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "iconUrlChanged(QUrl)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "iconUrlChanged(QUrl)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "iconUrlChanged(QUrl)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "iconUrlChanged(QUrl)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
