@@ -67,6 +67,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTextToSpeech>
@@ -658,59 +659,405 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RESUME )
 #endif
 }
 
-void QTextToSpeechSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void localeChanged( const QLocale & locale )
+*/
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechSlots_connect_signal( "localeChanged(QLocale)", "localeChanged(QLocale)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::localeChanged, [sender](QLocale arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged(QLocale)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QLOCALE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "localeChanged(QLocale)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "localeChanged(QLocale)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "localeChanged(QLocale)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void pitchChanged( double pitch )
+*/
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechSlots_connect_signal( "pitchChanged(double)", "pitchChanged(double)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "pitchChanged(double)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::pitchChanged, [sender](double arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "pitchChanged(double)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "pitchChanged(double)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "pitchChanged(double)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "pitchChanged(double)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void rateChanged( double rate )
+*/
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechSlots_connect_signal( "rateChanged(double)", "rateChanged(double)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rateChanged(double)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::rateChanged, [sender](double arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rateChanged(double)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rateChanged(double)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rateChanged(double)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rateChanged(double)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void stateChanged( QTextToSpeech::State state )
+*/
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechSlots_connect_signal( "stateChanged(QTextToSpeech::State)", "stateChanged(QTextToSpeech::State)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QTextToSpeech::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::stateChanged, [sender](QTextToSpeech::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTextToSpeech::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QTextToSpeech::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QTextToSpeech::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QTextToSpeech::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void voiceChanged( const QVoice & voice )
+*/
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechSlots_connect_signal( "voiceChanged(QVoice)", "voiceChanged(QVoice)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "voiceChanged(QVoice)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::voiceChanged, [sender](QVoice arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "voiceChanged(QVoice)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVOICE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "voiceChanged(QVoice)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "voiceChanged(QVoice)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "voiceChanged(QVoice)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
+/*
+void volumeChanged( int volume )
+*/
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "volumeChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::volumeChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "volumeChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "volumeChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "volumeChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

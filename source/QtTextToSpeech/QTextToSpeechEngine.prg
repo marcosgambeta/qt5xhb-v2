@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QTextToSpeechEngine>
@@ -614,14 +615,70 @@ static QVoice createVoice(const QString &name, QVoice::Gender gender, QVoice::Ag
 static QVariant voiceData(const QVoice &voice) [protected]
 */
 
-void QTextToSpeechEngineSlots_connect_signal ( const QString & signal, const QString & slot );
-
+/*
+void stateChanged( QTextToSpeech::State state )
+*/
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechEngineSlots_connect_signal( "stateChanged(QTextToSpeech::State)", "stateChanged(QTextToSpeech::State)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    QTextToSpeechEngine * sender = (QTextToSpeechEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "stateChanged(QTextToSpeech::State)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeechEngine::stateChanged, [sender](QTextToSpeech::State arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTextToSpeech::State)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECHENGINE" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "stateChanged(QTextToSpeech::State)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QTextToSpeechEngine * sender = (QTextToSpeechEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "stateChanged(QTextToSpeech::State)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QTextToSpeech::State)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 
