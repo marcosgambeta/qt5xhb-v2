@@ -137,38 +137,63 @@ $addMethod=runJavaScript
 $prototype=QWebEngineSettings *settings() const
 $method=5,4,0|QWebEngineSettings *|settings|
 
-$beginSignals
-$signal=5,4,0|loadStarted()
-$signal=5,4,0|loadProgress(int)
-$signal=5,4,0|loadFinished(bool)
-$signal=5,4,0|linkHovered(QString)
-$signal=5,4,0|selectionChanged()
-$signal=5,4,0|geometryChangeRequested(QRect)
-$signal=5,4,0|windowCloseRequested()
-$signal=5,4,0|featurePermissionRequested(QUrl,QWebEnginePage::Feature)
-$signal=5,4,0|featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)
-$signal=5,4,0|authenticationRequired(QUrl,QAuthenticator*)
-$signal=5,4,0|proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)
-$signal=5,4,0|titleChanged(QString)
-$signal=5,4,0|urlChanged(QUrl)
-$signal=5,4,0|iconUrlChanged(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=5,4,0|loadStarted()
+%% $signal=5,4,0|loadProgress(int)
+%% $signal=5,4,0|loadFinished(bool)
+%% $signal=5,4,0|linkHovered(QString)
+%% $signal=5,4,0|selectionChanged()
+%% $signal=5,4,0|geometryChangeRequested(QRect)
+%% $signal=5,4,0|windowCloseRequested()
+%% $signal=5,4,0|featurePermissionRequested(QUrl,QWebEnginePage::Feature)
+%% $signal=5,4,0|featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)
+%% $signal=5,4,0|authenticationRequired(QUrl,QAuthenticator*)
+%% $signal=5,4,0|proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)
+%% $signal=5,4,0|titleChanged(QString)
+%% $signal=5,4,0|urlChanged(QUrl)
+%% $signal=5,4,0|iconUrlChanged(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,4,0|loadStarted()
-$signal=5,4,0|loadProgress( int progress )
-$signal=5,4,0|loadFinished( bool ok )
-$signal=5,4,0|linkHovered( const QString & url )
-$signal=5,4,0|selectionChanged()
-$signal=5,4,0|geometryChangeRequested( const QRect & geom )
-$signal=5,4,0|windowCloseRequested()
-$signal=5,4,0|featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
-$signal=5,4,0|featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
-$signal=5,4,0|authenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator )
-$signal=5,4,0|proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator, const QString & proxyHost )
-$signal=5,4,0|titleChanged( const QString & title )
-$signal=5,4,0|urlChanged( const QUrl & url )
-$signal=5,4,0|iconUrlChanged( const QUrl & url )
-$endSlotsClass
+$prototype=void loadStarted()
+$signalMethod=5,4,0|void|loadStarted|
+
+$prototype=void loadProgress( int progress )
+$signalMethod=5,4,0|void|loadProgress|int
+
+$prototype=void loadFinished( bool ok )
+$signalMethod=5,4,0|void|loadFinished|bool
+
+$prototype=void linkHovered( const QString & url )
+$signalMethod=5,4,0|void|linkHovered|QString
+
+$prototype=void selectionChanged()
+$signalMethod=5,4,0|void|selectionChanged|
+
+$prototype=void geometryChangeRequested( const QRect & geom )
+$signalMethod=5,4,0|void|geometryChangeRequested|QRect
+
+$prototype=void windowCloseRequested()
+$signalMethod=5,4,0|void|windowCloseRequested|
+
+$prototype=void featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
+$signalMethod=5,4,0|void|featurePermissionRequested|QUrl,QWebEnginePage::Feature
+
+$prototype=void featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
+$signalMethod=5,4,0|void|featurePermissionRequestCanceled|QUrl,QWebEnginePage::Feature
+
+$prototype=void authenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator )
+$signalMethod=5,4,0|void|authenticationRequired|QUrl,QAuthenticator*
+
+$prototype=void proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator, const QString & proxyHost )
+$signalMethod=5,4,0|void|proxyAuthenticationRequired|QUrl,QAuthenticator*,QString
+
+$prototype=void titleChanged( const QString & title )
+$signalMethod=5,4,0|void|titleChanged|QString
+
+$prototype=void urlChanged( const QUrl & url )
+$signalMethod=5,4,0|void|urlChanged|QUrl
+
+$prototype=void iconUrlChanged( const QUrl & url )
+$signalMethod=5,4,0|void|iconUrlChanged|QUrl
 
 #pragma ENDDUMP

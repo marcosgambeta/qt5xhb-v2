@@ -101,24 +101,35 @@ $method=5,4,0|void|forward|
 $prototype=void reload()
 $method=5,4,0|void|reload|
 
-$beginSignals
-$signal=5,4,0|loadStarted()
-$signal=5,4,0|loadProgress(int)
-$signal=5,4,0|loadFinished(bool)
-$signal=5,4,0|titleChanged(QString)
-$signal=5,4,0|selectionChanged()
-$signal=5,4,0|urlChanged(QUrl)
-$signal=5,4,0|iconUrlChanged(QUrl)
-$endSignals
+%% $beginSignals
+%% $signal=5,4,0|loadStarted()
+%% $signal=5,4,0|loadProgress(int)
+%% $signal=5,4,0|loadFinished(bool)
+%% $signal=5,4,0|titleChanged(QString)
+%% $signal=5,4,0|selectionChanged()
+%% $signal=5,4,0|urlChanged(QUrl)
+%% $signal=5,4,0|iconUrlChanged(QUrl)
+%% $endSignals
 
-$beginSlotsClass
-$signal=5,4,0|loadStarted()
-$signal=5,4,0|loadProgress( int progress )
-$signal=5,4,0|loadFinished( bool b )
-$signal=5,4,0|titleChanged( const QString & title )
-$signal=5,4,0|selectionChanged()
-$signal=5,4,0|urlChanged( const QUrl & url )
-$signal=5,4,0|iconUrlChanged( const QUrl & url )
-$endSlotsClass
+$prototype=void loadStarted()
+$signalMethod=5,4,0|void|loadStarted|
+
+$prototype=void loadProgress( int progress )
+$signalMethod=5,4,0|void|loadProgress|int
+
+$prototype=void loadFinished( bool b )
+$signalMethod=5,4,0|void|loadFinished|bool
+
+$prototype=void titleChanged( const QString & title )
+$signalMethod=5,4,0|void|titleChanged|QString
+
+$prototype=void selectionChanged()
+$signalMethod=5,4,0|void|selectionChanged|
+
+$prototype=void urlChanged( const QUrl & url )
+$signalMethod=5,4,0|void|urlChanged|QUrl
+
+$prototype=void iconUrlChanged( const QUrl & url )
+$signalMethod=5,4,0|void|iconUrlChanged|QUrl
 
 #pragma ENDDUMP
