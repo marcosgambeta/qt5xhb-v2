@@ -65,14 +65,13 @@ $prototype=void setDirty(bool dirty) [protected]
 
 $prototype=bool isDirty() const [protected]
 
-$beginSignals
-$signal=|positionChanged(QVector3D)
-$endSignals
+%% $beginSignals
+%% $signal=|positionChanged(QVector3D)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|positionChanged( const QVector3D & position )
-$endSlotsClass
+$prototype=void positionChanged( const QVector3D & position )
+$signalMethod=|void|positionChanged|QVector3D
 
 #pragma ENDDUMP

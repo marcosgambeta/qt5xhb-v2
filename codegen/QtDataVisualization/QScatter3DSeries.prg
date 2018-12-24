@@ -96,18 +96,21 @@ $method=|void|setItemSize|float
 $prototype=static int invalidSelectionIndex()
 $staticMethod=|int|invalidSelectionIndex|
 
-$beginSignals
-$signal=|dataProxyChanged(QScatterDataProxy*)
-$signal=|itemSizeChanged(float)
-$signal=|selectedItemChanged(int)
-$endSignals
+%% $beginSignals
+%% $signal=|dataProxyChanged(QScatterDataProxy*)
+%% $signal=|itemSizeChanged(float)
+%% $signal=|selectedItemChanged(int)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|dataProxyChanged( QScatterDataProxy * proxy )
-$signal=|itemSizeChanged( float size )
-$signal=|selectedItemChanged( int index )
-$endSlotsClass
+$prototype=void dataProxyChanged( QScatterDataProxy * proxy )
+$signalMethod=|void|dataProxyChanged|QScatterDataProxy*
+
+$prototype=void itemSizeChanged( float size )
+$signalMethod=|void|itemSizeChanged|float
+
+$prototype=void selectedItemChanged( int index )
+$signalMethod=|void|selectedItemChanged|int
 
 #pragma ENDDUMP

@@ -300,48 +300,81 @@ $prototype=void mouseMoveEvent(QMouseEvent *event) [protected]
 $prototype=void wheelEvent(QWheelEvent *event) [protected]
 %% #endif
 
-$beginSignals
-$signal=|activeInputHandlerChanged(QAbstract3DInputHandler*)
-$signal=|activeThemeChanged(Q3DTheme*)
-$signal=|aspectRatioChanged(qreal)
-$signal=|currentFpsChanged(qreal)
-$signal=|horizontalAspectRatioChanged(qreal)
-$signal=|localeChanged(QLocale)
-$signal=|marginChanged(qreal)
-$signal=|measureFpsChanged(bool)
-$signal=|optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)
-$signal=|orthoProjectionChanged(bool)
-$signal=|polarChanged(bool)
-$signal=|queriedGraphPositionChanged(QVector3D)
-$signal=|radialLabelOffsetChanged(float)
-$signal=|reflectionChanged(bool)
-$signal=|reflectivityChanged(qreal)
-$signal=|selectedElementChanged(QAbstract3DGraph::ElementType)
-$signal=|selectionModeChanged(QAbstract3DGraph::SelectionFlags)
-$signal=|shadowQualityChanged(QAbstract3DGraph::ShadowQuality)
-$endSignals
+%% $beginSignals
+%% $signal=|activeInputHandlerChanged(QAbstract3DInputHandler*)
+%% $signal=|activeThemeChanged(Q3DTheme*)
+%% $signal=|aspectRatioChanged(qreal)
+%% $signal=|currentFpsChanged(qreal)
+%% $signal=|horizontalAspectRatioChanged(qreal)
+%% $signal=|localeChanged(QLocale)
+%% $signal=|marginChanged(qreal)
+%% $signal=|measureFpsChanged(bool)
+%% $signal=|optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)
+%% $signal=|orthoProjectionChanged(bool)
+%% $signal=|polarChanged(bool)
+%% $signal=|queriedGraphPositionChanged(QVector3D)
+%% $signal=|radialLabelOffsetChanged(float)
+%% $signal=|reflectionChanged(bool)
+%% $signal=|reflectivityChanged(qreal)
+%% $signal=|selectedElementChanged(QAbstract3DGraph::ElementType)
+%% $signal=|selectionModeChanged(QAbstract3DGraph::SelectionFlags)
+%% $signal=|shadowQualityChanged(QAbstract3DGraph::ShadowQuality)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
-$signal=|activeThemeChanged( Q3DTheme * theme )
-$signal=|aspectRatioChanged( qreal ratio )
-$signal=|currentFpsChanged( qreal fps )
-$signal=|horizontalAspectRatioChanged( qreal ratio )
-$signal=|localeChanged( const QLocale & locale )
-$signal=|marginChanged( qreal margin )
-$signal=|measureFpsChanged( bool enabled )
-$signal=|optimizationHintsChanged( QAbstract3DGraph::OptimizationHints hints )
-$signal=|orthoProjectionChanged( bool enabled )
-$signal=|polarChanged( bool enabled )
-$signal=|queriedGraphPositionChanged( const QVector3D & data )
-$signal=|radialLabelOffsetChanged( float offset )
-$signal=|reflectionChanged( bool enabled )
-$signal=|reflectivityChanged( qreal reflectivity )
-$signal=|selectedElementChanged( QAbstract3DGraph::ElementType type )
-$signal=|selectionModeChanged( QAbstract3DGraph::SelectionFlags mode )
-$signal=|shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality )
-$endSlotsClass
+$prototype=void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
+$signalMethod=|void|activeInputHandlerChanged|QAbstract3DInputHandler*
+
+$prototype=void activeThemeChanged( Q3DTheme * theme )
+$signalMethod=|void|activeThemeChanged|Q3DTheme*
+
+$prototype=void aspectRatioChanged( qreal ratio )
+$signalMethod=|void|aspectRatioChanged|qreal
+
+$prototype=void currentFpsChanged( qreal fps )
+$signalMethod=|void|currentFpsChanged|qreal
+
+$prototype=void horizontalAspectRatioChanged( qreal ratio )
+$signalMethod=|void|horizontalAspectRatioChanged|qreal
+
+$prototype=void localeChanged( const QLocale & locale )
+$signalMethod=|void|localeChanged|QLocale
+
+$prototype=void marginChanged( qreal margin )
+$signalMethod=|void|marginChanged|qreal
+
+$prototype=void measureFpsChanged( bool enabled )
+$signalMethod=|void|measureFpsChanged|bool
+
+$prototype=void optimizationHintsChanged( QAbstract3DGraph::OptimizationHints hints )
+$signalMethod=|void|optimizationHintsChanged|QAbstract3DGraph::OptimizationHints
+
+$prototype=void orthoProjectionChanged( bool enabled )
+$signalMethod=|void|orthoProjectionChanged|bool
+
+$prototype=void polarChanged( bool enabled )
+$signalMethod=|void|polarChanged|bool
+
+$prototype=void queriedGraphPositionChanged( const QVector3D & data )
+$signalMethod=|void|queriedGraphPositionChanged|QVector3D
+
+$prototype=void radialLabelOffsetChanged( float offset )
+$signalMethod=|void|radialLabelOffsetChanged|float
+
+$prototype=void reflectionChanged( bool enabled )
+$signalMethod=|void|reflectionChanged|bool
+
+$prototype=void reflectivityChanged( qreal reflectivity )
+$signalMethod=|void|reflectivityChanged|qreal
+
+$prototype=void selectedElementChanged( QAbstract3DGraph::ElementType type )
+$signalMethod=|void|selectedElementChanged|QAbstract3DGraph::ElementType
+
+$prototype=void selectionModeChanged( QAbstract3DGraph::SelectionFlags mode )
+$signalMethod=|void|selectionModeChanged|QAbstract3DGraph::SelectionFlags
+
+$prototype=void shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality )
+$signalMethod=|void|shadowQualityChanged|QAbstract3DGraph::ShadowQuality
 
 #pragma ENDDUMP

@@ -280,50 +280,82 @@ $method=|QImage::Format|textureFormat|
 $prototype=QImage renderSlice(Qt::Axis axis, int index)
 $method=|QImage|renderSlice|Qt::Axis,int
 
-$beginSignals
-$signal=|alphaMultiplierChanged(float)
-$signal=|colorTableChanged()
-$signal=|drawSliceFramesChanged(bool)
-$signal=|drawSlicesChanged(bool)
-$signal=|preserveOpacityChanged(bool)
-$signal=|sliceFrameColorChanged(QColor)
-$signal=|sliceFrameGapsChanged(QVector3D)
-$signal=|sliceFrameThicknessesChanged(QVector3D)
-$signal=|sliceFrameWidthsChanged(QVector3D)
-$signal=|sliceIndexXChanged(int)
-$signal=|sliceIndexYChanged(int)
-$signal=|sliceIndexZChanged(int)
-%% TODO: implementar
-%% $signal=|textureDataChanged(QVector<uchar>*)
-$signal=|textureDepthChanged(int)
-$signal=|textureFormatChanged(QImage::Format)
-$signal=|textureHeightChanged(int)
-$signal=|textureWidthChanged(int)
-$signal=|useHighDefShaderChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|alphaMultiplierChanged(float)
+%% $signal=|colorTableChanged()
+%% $signal=|drawSliceFramesChanged(bool)
+%% $signal=|drawSlicesChanged(bool)
+%% $signal=|preserveOpacityChanged(bool)
+%% $signal=|sliceFrameColorChanged(QColor)
+%% $signal=|sliceFrameGapsChanged(QVector3D)
+%% $signal=|sliceFrameThicknessesChanged(QVector3D)
+%% $signal=|sliceFrameWidthsChanged(QVector3D)
+%% $signal=|sliceIndexXChanged(int)
+%% $signal=|sliceIndexYChanged(int)
+%% $signal=|sliceIndexZChanged(int)
+%% %% TODO: implementar
+%% %% $signal=|textureDataChanged(QVector<uchar>*)
+%% $signal=|textureDepthChanged(int)
+%% $signal=|textureFormatChanged(QImage::Format)
+%% $signal=|textureHeightChanged(int)
+%% $signal=|textureWidthChanged(int)
+%% $signal=|useHighDefShaderChanged(bool)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|alphaMultiplierChanged( float mult )
-$signal=|colorTableChanged()
-$signal=|drawSliceFramesChanged( bool enabled )
-$signal=|drawSlicesChanged( bool enabled )
-$signal=|preserveOpacityChanged( bool enabled )
-$signal=|sliceFrameColorChanged( const QColor & color )
-$signal=|sliceFrameGapsChanged( const QVector3D & values )
-$signal=|sliceFrameThicknessesChanged( const QVector3D & values )
-$signal=|sliceFrameWidthsChanged( const QVector3D & values )
-$signal=|sliceIndexXChanged( int value )
-$signal=|sliceIndexYChanged( int value )
-$signal=|sliceIndexZChanged( int value )
+$prototype=void alphaMultiplierChanged( float mult )
+$signalMethod=|void|alphaMultiplierChanged|float
+
+$prototype=void colorTableChanged()
+$signalMethod=|void|colorTableChanged|
+
+$prototype=void drawSliceFramesChanged( bool enabled )
+$signalMethod=|void|drawSliceFramesChanged|bool
+
+$prototype=void drawSlicesChanged( bool enabled )
+$signalMethod=|void|drawSlicesChanged|bool
+
+$prototype=void preserveOpacityChanged( bool enabled )
+$signalMethod=|void|preserveOpacityChanged|bool
+
+$prototype=void sliceFrameColorChanged( const QColor & color )
+$signalMethod=|void|sliceFrameColorChanged|QColor
+
+$prototype=void sliceFrameGapsChanged( const QVector3D & values )
+$signalMethod=|void|sliceFrameGapsChanged|QVector3D
+
+$prototype=void sliceFrameThicknessesChanged( const QVector3D & values )
+$signalMethod=|void|sliceFrameThicknessesChanged|QVector3D
+
+$prototype=void sliceFrameWidthsChanged( const QVector3D & values )
+$signalMethod=|void|sliceFrameWidthsChanged|QVector3D
+
+$prototype=void sliceIndexXChanged( int value )
+$signalMethod=|void|sliceIndexXChanged|int
+
+$prototype=void sliceIndexYChanged( int value )
+$signalMethod=|void|sliceIndexYChanged|int
+
+$prototype=void sliceIndexZChanged( int value )
+$signalMethod=|void|sliceIndexZChanged|int
+
 %% TODO: implementar
-%% $signal=|textureDataChanged( QVector<uchar> * data )
-$signal=|textureDepthChanged( int value )
-$signal=|textureFormatChanged( QImage::Format format )
-$signal=|textureHeightChanged( int value )
-$signal=|textureWidthChanged( int value )
-$signal=|useHighDefShaderChanged( bool enabled )
-$endSlotsClass
+%% $prototype=void textureDataChanged( QVector<uchar> * data )
+
+$prototype=void textureDepthChanged( int value )
+$signalMethod=|void|textureDepthChanged|int
+
+$prototype=void textureFormatChanged( QImage::Format format )
+$signalMethod=|void|textureFormatChanged|QImage::Format
+
+$prototype=void textureHeightChanged( int value )
+$signalMethod=|void|textureHeightChanged|int
+
+$prototype=void textureWidthChanged( int value )
+$signalMethod=|void|textureWidthChanged|int
+
+$prototype=void useHighDefShaderChanged( bool enabled )
+$signalMethod=|void|useHighDefShaderChanged|bool
 
 #pragma ENDDUMP

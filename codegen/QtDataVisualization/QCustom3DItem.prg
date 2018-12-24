@@ -159,30 +159,45 @@ $method=|void|setRotationAxisAndAngle|const QVector3D &,float
 $prototype=void setTextureImage(const QImage &textureImage)
 $method=|void|setTextureImage|const QImage &
 
-$beginSignals
-$signal=|meshFileChanged(QString)
-$signal=|positionAbsoluteChanged(bool)
-$signal=|positionChanged(QVector3D)
-$signal=|rotationChanged(QQuaternion)
-$signal=|scalingAbsoluteChanged(bool)
-$signal=|scalingChanged(QVector3D)
-$signal=|shadowCastingChanged(bool)
-$signal=|textureFileChanged(QString)
-$signal=|visibleChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|meshFileChanged(QString)
+%% $signal=|positionAbsoluteChanged(bool)
+%% $signal=|positionChanged(QVector3D)
+%% $signal=|rotationChanged(QQuaternion)
+%% $signal=|scalingAbsoluteChanged(bool)
+%% $signal=|scalingChanged(QVector3D)
+%% $signal=|shadowCastingChanged(bool)
+%% $signal=|textureFileChanged(QString)
+%% $signal=|visibleChanged(bool)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|meshFileChanged( const QString & meshFile )
-$signal=|positionAbsoluteChanged( bool positionAbsolute )
-$signal=|positionChanged( const QVector3D & position )
-$signal=|rotationChanged( const QQuaternion & rotation )
-$signal=|scalingAbsoluteChanged( bool scalingAbsolute )
-$signal=|scalingChanged( const QVector3D & scaling )
-$signal=|shadowCastingChanged( bool shadowCasting )
-$signal=|textureFileChanged( const QString & textureFile )
-$signal=|visibleChanged( bool visible )
-$endSlotsClass
+$prototype=void meshFileChanged( const QString & meshFile )
+$signalMethod=|void|meshFileChanged|QString
+
+$prototype=void positionAbsoluteChanged( bool positionAbsolute )
+$signalMethod=|void|positionAbsoluteChanged|bool
+
+$prototype=void positionChanged( const QVector3D & position )
+$signalMethod=|void|positionChanged|QVector3D
+
+$prototype=void rotationChanged( const QQuaternion & rotation )
+$signalMethod=|void|rotationChanged|QQuaternion
+
+$prototype=void scalingAbsoluteChanged( bool scalingAbsolute )
+$signalMethod=|void|scalingAbsoluteChanged|bool
+
+$prototype=void scalingChanged( const QVector3D & scaling )
+$signalMethod=|void|scalingChanged|QVector3D
+
+$prototype=void shadowCastingChanged( bool shadowCasting )
+$signalMethod=|void|shadowCastingChanged|bool
+
+$prototype=void textureFileChanged( const QString & textureFile )
+$signalMethod=|void|textureFileChanged|QString
+
+$prototype=void visibleChanged( bool visible )
+$signalMethod=|void|visibleChanged|bool
 
 #pragma ENDDUMP

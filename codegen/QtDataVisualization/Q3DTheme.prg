@@ -284,56 +284,97 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 %%
 %%
 
-$beginSignals
-$signal=|ambientLightStrengthChanged(float)
-$signal=|backgroundColorChanged(QColor)
-$signal=|backgroundEnabledChanged(bool)
-$signal=|baseColorsChanged(QList<QColor>)
-$signal=|baseGradientsChanged(QList<QLinearGradient>)
-$signal=|colorStyleChanged(Q3DTheme::ColorStyle)
-$signal=|fontChanged(QFont)
-$signal=|gridEnabledChanged(bool)
-$signal=|gridLineColorChanged(QColor)
-$signal=|highlightLightStrengthChanged(float)
-$signal=|labelBackgroundColorChanged(QColor)
-$signal=|labelBackgroundEnabledChanged(bool)
-$signal=|labelBorderEnabledChanged(bool)
-$signal=|labelTextColorChanged(QColor)
-$signal=|lightColorChanged(QColor)
-$signal=|lightStrengthChanged(float)
-$signal=|multiHighlightColorChanged(QColor)
-$signal=|multiHighlightGradientChanged(QLinearGradient)
-$signal=|singleHighlightColorChanged(QColor)
-$signal=|singleHighlightGradientChanged(QLinearGradient)
-$signal=|typeChanged(Q3DTheme::Theme)
-$signal=|windowColorChanged(QColor)
-$endSignals
+%% $beginSignals
+%% $signal=|ambientLightStrengthChanged(float)
+%% $signal=|backgroundColorChanged(QColor)
+%% $signal=|backgroundEnabledChanged(bool)
+%% $signal=|baseColorsChanged(QList<QColor>)
+%% $signal=|baseGradientsChanged(QList<QLinearGradient>)
+%% $signal=|colorStyleChanged(Q3DTheme::ColorStyle)
+%% $signal=|fontChanged(QFont)
+%% $signal=|gridEnabledChanged(bool)
+%% $signal=|gridLineColorChanged(QColor)
+%% $signal=|highlightLightStrengthChanged(float)
+%% $signal=|labelBackgroundColorChanged(QColor)
+%% $signal=|labelBackgroundEnabledChanged(bool)
+%% $signal=|labelBorderEnabledChanged(bool)
+%% $signal=|labelTextColorChanged(QColor)
+%% $signal=|lightColorChanged(QColor)
+%% $signal=|lightStrengthChanged(float)
+%% $signal=|multiHighlightColorChanged(QColor)
+%% $signal=|multiHighlightGradientChanged(QLinearGradient)
+%% $signal=|singleHighlightColorChanged(QColor)
+%% $signal=|singleHighlightGradientChanged(QLinearGradient)
+%% $signal=|typeChanged(Q3DTheme::Theme)
+%% $signal=|windowColorChanged(QColor)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|ambientLightStrengthChanged( float strength )
-$signal=|backgroundColorChanged( const QColor & color )
-$signal=|backgroundEnabledChanged( bool enabled )
-$signal=|baseColorsChanged( const QList<QColor> & colors )
-$signal=|baseGradientsChanged( const QList<QLinearGradient> & gradients )
-$signal=|colorStyleChanged( Q3DTheme::ColorStyle style )
-$signal=|fontChanged( const QFont & font )
-$signal=|gridEnabledChanged( bool enabled )
-$signal=|gridLineColorChanged( const QColor & color )
-$signal=|highlightLightStrengthChanged( float strength )
-$signal=|labelBackgroundColorChanged( const QColor & color )
-$signal=|labelBackgroundEnabledChanged( bool enabled )
-$signal=|labelBorderEnabledChanged( bool enabled )
-$signal=|labelTextColorChanged( const QColor & color )
-$signal=|lightColorChanged( const QColor & color )
-$signal=|lightStrengthChanged( float strength )
-$signal=|multiHighlightColorChanged( const QColor & color )
-$signal=|multiHighlightGradientChanged( const QLinearGradient & gradient )
-$signal=|singleHighlightColorChanged( const QColor & color )
-$signal=|singleHighlightGradientChanged( const QLinearGradient & gradient )
-$signal=|typeChanged( Q3DTheme::Theme themeType )
-$signal=|windowColorChanged( const QColor & color )
-$endSlotsClass
+$prototype=void ambientLightStrengthChanged( float strength )
+$signalMethod=|void|ambientLightStrengthChanged|float
+
+$prototype=void backgroundColorChanged( const QColor & color )
+$signalMethod=|void|backgroundColorChanged|QColor
+
+$prototype=void backgroundEnabledChanged( bool enabled )
+$signalMethod=|void|backgroundEnabledChanged|bool
+
+$prototype=void baseColorsChanged( const QList<QColor> & colors )
+$signalMethod=|void|baseColorsChanged|QList<QColor>
+
+$prototype=void baseGradientsChanged( const QList<QLinearGradient> & gradients )
+$signalMethod=|void|baseGradientsChanged|QList<QLinearGradient>
+
+$prototype=void colorStyleChanged( Q3DTheme::ColorStyle style )
+$signalMethod=|void|colorStyleChanged|Q3DTheme::ColorStyle
+
+$prototype=void fontChanged( const QFont & font )
+$signalMethod=|void|fontChanged|QFont
+
+$prototype=void gridEnabledChanged( bool enabled )
+$signalMethod=|void|gridEnabledChanged|bool
+
+$prototype=void gridLineColorChanged( const QColor & color )
+$signalMethod=|void|gridLineColorChanged|QColor
+
+$prototype=void highlightLightStrengthChanged( float strength )
+$signalMethod=|void|highlightLightStrengthChanged|float
+
+$prototype=void labelBackgroundColorChanged( const QColor & color )
+$signalMethod=|void|labelBackgroundColorChanged|QColor
+
+$prototype=void labelBackgroundEnabledChanged( bool enabled )
+$signalMethod=|void|labelBackgroundEnabledChanged|bool
+
+$prototype=void labelBorderEnabledChanged( bool enabled )
+$signalMethod=|void|labelBorderEnabledChanged|bool
+
+$prototype=void labelTextColorChanged( const QColor & color )
+$signalMethod=|void|labelTextColorChanged|QColor
+
+$prototype=void lightColorChanged( const QColor & color )
+$signalMethod=|void|lightColorChanged|QColor
+
+$prototype=void lightStrengthChanged( float strength )
+$signalMethod=|void|lightStrengthChanged|float
+
+$prototype=void multiHighlightColorChanged( const QColor & color )
+$signalMethod=|void|multiHighlightColorChanged|QColor
+
+$prototype=void multiHighlightGradientChanged( const QLinearGradient & gradient )
+$signalMethod=|void|multiHighlightGradientChanged|QLinearGradient
+
+$prototype=void singleHighlightColorChanged( const QColor & color )
+$signalMethod=|void|singleHighlightColorChanged|QColor
+
+$prototype=void singleHighlightGradientChanged( const QLinearGradient & gradient )
+$signalMethod=|void|singleHighlightGradientChanged|QLinearGradient
+
+$prototype=void typeChanged( Q3DTheme::Theme themeType )
+$signalMethod=|void|typeChanged|Q3DTheme::Theme
+
+$prototype=void windowColorChanged( const QColor & color )
+$signalMethod=|void|windowColorChanged|QColor
 
 #pragma ENDDUMP

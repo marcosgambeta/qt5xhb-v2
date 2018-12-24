@@ -205,44 +205,73 @@ $method=|void|setItemLabelVisible|bool
 $prototype=Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
 $method=|void|setMeshAxisAndAngle|const QVector3D &,float
 
-$beginSignals
-$signal=|baseColorChanged(QColor)
-$signal=|baseGradientChanged(QLinearGradient)
-$signal=|colorStyleChanged(Q3DTheme::ColorStyle)
-$signal=|itemLabelChanged(QString)
-$signal=|itemLabelFormatChanged(QString)
-$signal=|itemLabelVisibilityChanged(bool)
-$signal=|meshChanged(QAbstract3DSeries::Mesh)
-$signal=|meshRotationChanged(QQuaternion)
-$signal=|meshSmoothChanged(bool)
-$signal=|multiHighlightColorChanged(QColor)
-$signal=|multiHighlightGradientChanged(QLinearGradient)
-$signal=|nameChanged(QString)
-$signal=|singleHighlightColorChanged(QColor)
-$signal=|singleHighlightGradientChanged(QLinearGradient)
-$signal=|userDefinedMeshChanged(QString)
-$signal=|visibilityChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|baseColorChanged(QColor)
+%% $signal=|baseGradientChanged(QLinearGradient)
+%% $signal=|colorStyleChanged(Q3DTheme::ColorStyle)
+%% $signal=|itemLabelChanged(QString)
+%% $signal=|itemLabelFormatChanged(QString)
+%% $signal=|itemLabelVisibilityChanged(bool)
+%% $signal=|meshChanged(QAbstract3DSeries::Mesh)
+%% $signal=|meshRotationChanged(QQuaternion)
+%% $signal=|meshSmoothChanged(bool)
+%% $signal=|multiHighlightColorChanged(QColor)
+%% $signal=|multiHighlightGradientChanged(QLinearGradient)
+%% $signal=|nameChanged(QString)
+%% $signal=|singleHighlightColorChanged(QColor)
+%% $signal=|singleHighlightGradientChanged(QLinearGradient)
+%% $signal=|userDefinedMeshChanged(QString)
+%% $signal=|visibilityChanged(bool)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|baseColorChanged( const QColor & color )
-$signal=|baseGradientChanged( const QLinearGradient & gradient )
-$signal=|colorStyleChanged( Q3DTheme::ColorStyle style )
-$signal=|itemLabelChanged( const QString & label )
-$signal=|itemLabelFormatChanged( const QString & format )
-$signal=|itemLabelVisibilityChanged( bool visible )
-$signal=|meshChanged( QAbstract3DSeries::Mesh mesh )
-$signal=|meshRotationChanged( const QQuaternion & rotation )
-$signal=|meshSmoothChanged( bool enabled )
-$signal=|multiHighlightColorChanged( const QColor & color )
-$signal=|multiHighlightGradientChanged( const QLinearGradient & gradient )
-$signal=|nameChanged( const QString & name )
-$signal=|singleHighlightColorChanged( const QColor & color )
-$signal=|singleHighlightGradientChanged( const QLinearGradient & gradient )
-$signal=|userDefinedMeshChanged( const QString & fileName )
-$signal=|visibilityChanged( bool visible )
-$endSlotsClass
+$prototype=void baseColorChanged( const QColor & color )
+$signalMethod=|void|baseColorChanged|QColor
+
+$prototype=void baseGradientChanged( const QLinearGradient & gradient )
+$signalMethod=|void|baseGradientChanged|QLinearGradient
+
+$prototype=void colorStyleChanged( Q3DTheme::ColorStyle style )
+$signalMethod=|void|colorStyleChanged|Q3DTheme::ColorStyle
+
+$prototype=void itemLabelChanged( const QString & label )
+$signalMethod=|void|itemLabelChanged|QString
+
+$prototype=void itemLabelFormatChanged( const QString & format )
+$signalMethod=|void|itemLabelFormatChanged|QString
+
+$prototype=void itemLabelVisibilityChanged( bool visible )
+$signalMethod=|void|itemLabelVisibilityChanged|bool
+
+$prototype=void meshChanged( QAbstract3DSeries::Mesh mesh )
+$signalMethod=|void|meshChanged|QAbstract3DSeries::Mesh
+
+$prototype=void meshRotationChanged( const QQuaternion & rotation )
+$signalMethod=|void|meshRotationChanged|QQuaternion
+
+$prototype=void meshSmoothChanged( bool enabled )
+$signalMethod=|void|meshSmoothChanged|bool
+
+$prototype=void multiHighlightColorChanged( const QColor & color )
+$signalMethod=|void|multiHighlightColorChanged|QColor
+
+$prototype=void multiHighlightGradientChanged( const QLinearGradient & gradient )
+$signalMethod=|void|multiHighlightGradientChanged|QLinearGradient
+
+$prototype=void nameChanged( const QString & name )
+$signalMethod=|void|nameChanged|QString
+
+$prototype=void singleHighlightColorChanged( const QColor & color )
+$signalMethod=|void|singleHighlightColorChanged|QColor
+
+$prototype=void singleHighlightGradientChanged( const QLinearGradient & gradient )
+$signalMethod=|void|singleHighlightGradientChanged|QLinearGradient
+
+$prototype=void userDefinedMeshChanged( const QString & fileName )
+$signalMethod=|void|userDefinedMeshChanged|QString
+
+$prototype=void visibilityChanged( bool visible )
+$signalMethod=|void|visibilityChanged|bool
 
 #pragma ENDDUMP

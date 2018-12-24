@@ -95,20 +95,25 @@ $prototype=virtual void wheelEvent(QWheelEvent *event)
 %% $virtualMethod=|void|wheelEvent|QWheelEvent *
 %% #endif
 
-$beginSignals
-$signal=|rotationEnabledChanged(bool)
-$signal=|selectionEnabledChanged(bool)
-$signal=|zoomAtTargetEnabledChanged(bool)
-$signal=|zoomEnabledChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|rotationEnabledChanged(bool)
+%% $signal=|selectionEnabledChanged(bool)
+%% $signal=|zoomAtTargetEnabledChanged(bool)
+%% $signal=|zoomEnabledChanged(bool)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|rotationEnabledChanged( bool enable )
-$signal=|selectionEnabledChanged( bool enable )
-$signal=|zoomAtTargetEnabledChanged( bool enable )
-$signal=|zoomEnabledChanged( bool enable )
-$endSlotsClass
+$prototype=void rotationEnabledChanged( bool enable )
+$signalMethod=|void|rotationEnabledChanged|bool
+
+$prototype=void selectionEnabledChanged( bool enable )
+$signalMethod=|void|selectionEnabledChanged|bool
+
+$prototype=void zoomAtTargetEnabledChanged( bool enable )
+$signalMethod=|void|zoomAtTargetEnabledChanged|bool
+
+$prototype=void zoomEnabledChanged( bool enable )
+$signalMethod=|void|zoomEnabledChanged|bool
 
 #pragma ENDDUMP

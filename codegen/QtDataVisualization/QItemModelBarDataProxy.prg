@@ -300,50 +300,85 @@ $method=|int|rowCategoryIndex|const QString &
 $prototype=Q_INVOKABLE int columnCategoryIndex(const QString& category)
 $method=|int|columnCategoryIndex|const QString &
 
-$beginSignals
-$signal=|autoColumnCategoriesChanged(bool)
-$signal=|autoRowCategoriesChanged(bool)
-$signal=|columnCategoriesChanged()
-$signal=|columnRoleChanged(QString)
-$signal=|columnRolePatternChanged(QRegExp)
-$signal=|columnRoleReplaceChanged(QString)
-$signal=|itemModelChanged(QAbstractItemModel*)
-$signal=|multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)
-$signal=|rotationRoleChanged(QString)
-$signal=|rotationRolePatternChanged(QRegExp)
-$signal=|rotationRoleReplaceChanged(QString)
-$signal=|rowCategoriesChanged()
-$signal=|rowRoleChanged(QString)
-$signal=|rowRolePatternChanged(QRegExp)
-$signal=|rowRoleReplaceChanged(QString)
-$signal=|useModelCategoriesChanged(bool)
-$signal=|valueRoleChanged(QString)
-$signal=|valueRolePatternChanged(QRegExp)
-$signal=|valueRoleReplaceChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|autoColumnCategoriesChanged(bool)
+%% $signal=|autoRowCategoriesChanged(bool)
+%% $signal=|columnCategoriesChanged()
+%% $signal=|columnRoleChanged(QString)
+%% $signal=|columnRolePatternChanged(QRegExp)
+%% $signal=|columnRoleReplaceChanged(QString)
+%% $signal=|itemModelChanged(QAbstractItemModel*)
+%% $signal=|multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)
+%% $signal=|rotationRoleChanged(QString)
+%% $signal=|rotationRolePatternChanged(QRegExp)
+%% $signal=|rotationRoleReplaceChanged(QString)
+%% $signal=|rowCategoriesChanged()
+%% $signal=|rowRoleChanged(QString)
+%% $signal=|rowRolePatternChanged(QRegExp)
+%% $signal=|rowRoleReplaceChanged(QString)
+%% $signal=|useModelCategoriesChanged(bool)
+%% $signal=|valueRoleChanged(QString)
+%% $signal=|valueRolePatternChanged(QRegExp)
+%% $signal=|valueRoleReplaceChanged(QString)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|autoColumnCategoriesChanged( bool enable )
-$signal=|autoRowCategoriesChanged( bool enable )
-$signal=|columnCategoriesChanged()
-$signal=|columnRoleChanged( const QString & role )
-$signal=|columnRolePatternChanged( const QRegExp & pattern )
-$signal=|columnRoleReplaceChanged( const QString & replace )
-$signal=|itemModelChanged( const QAbstractItemModel * itemModel )
-$signal=|multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behavior )
-$signal=|rotationRoleChanged( const QString & role )
-$signal=|rotationRolePatternChanged( const QRegExp & pattern )
-$signal=|rotationRoleReplaceChanged( const QString & replace )
-$signal=|rowCategoriesChanged()
-$signal=|rowRoleChanged( const QString & role )
-$signal=|rowRolePatternChanged( const QRegExp & pattern )
-$signal=|rowRoleReplaceChanged( const QString & replace )
-$signal=|useModelCategoriesChanged( bool enable )
-$signal=|valueRoleChanged( const QString & role )
-$signal=|valueRolePatternChanged( const QRegExp & pattern )
-$signal=|valueRoleReplaceChanged( const QString & replace )
-$endSlotsClass
+$prototype=void autoColumnCategoriesChanged( bool enable )
+$signalMethod=|void|autoColumnCategoriesChanged|bool
+
+$prototype=void autoRowCategoriesChanged( bool enable )
+$signalMethod=|void|autoRowCategoriesChanged|bool
+
+$prototype=void columnCategoriesChanged()
+$signalMethod=|void|columnCategoriesChanged|
+
+$prototype=void columnRoleChanged( const QString & role )
+$signalMethod=|void|columnRoleChanged|QString
+
+$prototype=void columnRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|columnRolePatternChanged|QRegExp
+
+$prototype=void columnRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|columnRoleReplaceChanged|QString
+
+$prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
+%% TODO: $signalMethod=|void|itemModelChanged|QAbstractItemModel*
+
+$prototype=void multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behavior )
+$signalMethod=|void|multiMatchBehaviorChanged|QItemModelBarDataProxy::MultiMatchBehavior
+
+$prototype=void rotationRoleChanged( const QString & role )
+$signalMethod=|void|rotationRoleChanged|QString
+
+$prototype=void rotationRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|rotationRolePatternChanged|QRegExp
+
+$prototype=void rotationRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|rotationRoleReplaceChanged|QString
+
+$prototype=void rowCategoriesChanged()
+$signalMethod=|void|rowCategoriesChanged|
+
+$prototype=void rowRoleChanged( const QString & role )
+$signalMethod=|void|rowRoleChanged|QString
+
+$prototype=void rowRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|rowRolePatternChanged|QRegExp
+
+$prototype=void rowRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|rowRoleReplaceChanged|QString
+
+$prototype=void useModelCategoriesChanged( bool enable )
+$signalMethod=|void|useModelCategoriesChanged|bool
+
+$prototype=void valueRoleChanged( const QString & role )
+$signalMethod=|void|valueRoleChanged|QString
+
+$prototype=void valueRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|valueRolePatternChanged|QRegExp
+
+$prototype=void valueRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|valueRoleReplaceChanged|QString
 
 #pragma ENDDUMP

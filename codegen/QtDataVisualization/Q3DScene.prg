@@ -145,32 +145,49 @@ $method=|bool|isPointInSecondarySubView|const QPoint &
 $prototype=static QPoint invalidSelectionPoint()
 $staticMethod=|QPoint|invalidSelectionPoint|
 
-$beginSignals
-$signal=|activeCameraChanged(Q3DCamera*)
-$signal=|activeLightChanged(Q3DLight*)
-$signal=|devicePixelRatioChanged(float)
-$signal=|graphPositionQueryChanged(QPoint)
-$signal=|primarySubViewportChanged(QRect)
-$signal=|secondarySubviewOnTopChanged(bool)
-$signal=|secondarySubViewportChanged(QRect)
-$signal=|selectionQueryPositionChanged(QPoint)
-$signal=|slicingActiveChanged(bool)
-$signal=|viewportChanged(QRect)
-$endSignals
+%% $beginSignals
+%% $signal=|activeCameraChanged(Q3DCamera*)
+%% $signal=|activeLightChanged(Q3DLight*)
+%% $signal=|devicePixelRatioChanged(float)
+%% $signal=|graphPositionQueryChanged(QPoint)
+%% $signal=|primarySubViewportChanged(QRect)
+%% $signal=|secondarySubviewOnTopChanged(bool)
+%% $signal=|secondarySubViewportChanged(QRect)
+%% $signal=|selectionQueryPositionChanged(QPoint)
+%% $signal=|slicingActiveChanged(bool)
+%% $signal=|viewportChanged(QRect)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|activeCameraChanged( Q3DCamera * camera )
-$signal=|activeLightChanged( Q3DLight * light )
-$signal=|devicePixelRatioChanged( float pixelRatio )
-$signal=|graphPositionQueryChanged( const QPoint & position )
-$signal=|primarySubViewportChanged( const QRect & subViewport )
-$signal=|secondarySubviewOnTopChanged( bool isSecondaryOnTop )
-$signal=|secondarySubViewportChanged( const QRect & subViewport )
-$signal=|selectionQueryPositionChanged( const QPoint & position )
-$signal=|slicingActiveChanged( bool isSlicingActive )
-$signal=|viewportChanged( const QRect & viewport )
-$endSlotsClass
+$prototype=void activeCameraChanged( Q3DCamera * camera )
+$signalMethod=|void|activeCameraChanged|Q3DCamera*
+
+$prototype=void activeLightChanged( Q3DLight * light )
+$signalMethod=|void|activeLightChanged|Q3DLight*
+
+$prototype=void devicePixelRatioChanged( float pixelRatio )
+$signalMethod=|void|devicePixelRatioChanged|float
+
+$prototype=void graphPositionQueryChanged( const QPoint & position )
+$signalMethod=|void|graphPositionQueryChanged|QPoint
+
+$prototype=void primarySubViewportChanged( const QRect & subViewport )
+$signalMethod=|void|primarySubViewportChanged|QRect
+
+$prototype=void secondarySubviewOnTopChanged( bool isSecondaryOnTop )
+$signalMethod=|void|secondarySubviewOnTopChanged|bool
+
+$prototype=void secondarySubViewportChanged( const QRect & subViewport )
+$signalMethod=|void|secondarySubViewportChanged|QRect
+
+$prototype=void selectionQueryPositionChanged( const QPoint & position )
+$signalMethod=|void|selectionQueryPositionChanged|QPoint
+
+$prototype=void slicingActiveChanged( bool isSlicingActive )
+$signalMethod=|void|slicingActiveChanged|bool
+
+$prototype=void viewportChanged( const QRect & viewport )
+$signalMethod=|void|viewportChanged|QRect
 
 #pragma ENDDUMP

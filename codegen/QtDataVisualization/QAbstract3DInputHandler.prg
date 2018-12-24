@@ -90,18 +90,21 @@ $prototype=void setPreviousInputPos(const QPoint &position) [protected]
 
 $prototype=QPoint previousInputPos() const [protected]
 
-$beginSignals
-$signal=|inputViewChanged(QAbstract3DInputHandler::InputView)
-$signal=|positionChanged(QPoint)
-$signal=|sceneChanged(Q3DScene*)
-$endSignals
+%% $beginSignals
+%% $signal=|inputViewChanged(QAbstract3DInputHandler::InputView)
+%% $signal=|positionChanged(QPoint)
+%% $signal=|sceneChanged(Q3DScene*)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|inputViewChanged( QAbstract3DInputHandler::InputView view )
-$signal=|positionChanged( const QPoint & position )
-$signal=|sceneChanged( Q3DScene * scene )
-$endSlotsClass
+$prototype=void inputViewChanged( QAbstract3DInputHandler::InputView view )
+$signalMethod=|void|inputViewChanged|QAbstract3DInputHandler::InputView
+
+$prototype=void positionChanged( const QPoint & position )
+$signalMethod=|void|positionChanged|QPoint
+
+$prototype=void sceneChanged( Q3DScene * scene )
+$signalMethod=|void|sceneChanged|Q3DScene*
 
 #pragma ENDDUMP

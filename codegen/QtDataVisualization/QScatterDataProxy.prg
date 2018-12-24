@@ -93,26 +93,37 @@ $prototype=void insertItems(int index, const QScatterDataArray &items)
 $prototype=void removeItems(int index, int removeCount)
 $method=|void|removeItems|int,int
 
-$beginSignals
-$signal=|arrayReset();
-$signal=|itemCountChanged(int)
-$signal=|itemsAdded(int,int)
-$signal=|itemsChanged(int,int)
-$signal=|itemsInserted(int,int)
-$signal=|itemsRemoved(int,int)
-$signal=|seriesChanged(QScatter3DSeries*)
-$endSignals
+%% $beginSignals
+%% $signal=|arrayReset();
+%% $signal=|itemCountChanged(int)
+%% $signal=|itemsAdded(int,int)
+%% $signal=|itemsChanged(int,int)
+%% $signal=|itemsInserted(int,int)
+%% $signal=|itemsRemoved(int,int)
+%% $signal=|seriesChanged(QScatter3DSeries*)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|arrayReset()
-$signal=|itemCountChanged( int count )
-$signal=|itemsAdded( int startIndex, int count )
-$signal=|itemsChanged( int startIndex, int count )
-$signal=|itemsInserted( int startIndex, int count )
-$signal=|itemsRemoved( int startIndex, int count )
-$signal=|seriesChanged( QScatter3DSeries * series )
-$endSlotsClass
+$prototype=void arrayReset()
+$signalMethod=|void|arrayReset|
+
+$prototype=void itemCountChanged( int count )
+$signalMethod=|void|itemCountChanged|int
+
+$prototype=void itemsAdded( int startIndex, int count )
+$signalMethod=|void|itemsAdded|int,int
+
+$prototype=void itemsChanged( int startIndex, int count )
+$signalMethod=|void|itemsChanged|int,int
+
+$prototype=void itemsInserted( int startIndex, int count )
+$signalMethod=|void|itemsInserted|int,int
+
+$prototype=void itemsRemoved( int startIndex, int count )
+$signalMethod=|void|itemsRemoved|int,int
+
+$prototype=void seriesChanged( QScatter3DSeries * series )
+$signalMethod=|void|seriesChanged|QScatter3DSeries*
 
 #pragma ENDDUMP

@@ -134,24 +134,33 @@ $method=|void|setMaxZValue|float
 $prototype=void setValueRanges(float minX, float maxX, float minZ, float maxZ)
 $method=|void|setValueRanges|float,float,float,float
 
-$beginSignals
-$signal=|heightMapChanged(QImage)
-$signal=|heightMapFileChanged(QString)
-$signal=|maxXValueChanged(float)
-$signal=|maxZValueChanged(float)
-$signal=|minXValueChanged(float)
-$signal=|minZValueChanged(float)
-$endSignals
+%% $beginSignals
+%% $signal=|heightMapChanged(QImage)
+%% $signal=|heightMapFileChanged(QString)
+%% $signal=|maxXValueChanged(float)
+%% $signal=|maxZValueChanged(float)
+%% $signal=|minXValueChanged(float)
+%% $signal=|minZValueChanged(float)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|heightMapChanged( const QImage & image )
-$signal=|heightMapFileChanged( const QString & filename )
-$signal=|minXValueChanged( float value )
-$signal=|maxXValueChanged( float value )
-$signal=|minZValueChanged( float value )
-$signal=|maxZValueChanged( float value )
-$endSlotsClass
+$prototype=void heightMapChanged( const QImage & image )
+$signalMethod=|void|heightMapChanged|QImage
+
+$prototype=void heightMapFileChanged( const QString & filename )
+$signalMethod=|void|heightMapFileChanged|QString
+
+$prototype=void minXValueChanged( float value )
+$signalMethod=|void|minXValueChanged|float
+
+$prototype=void maxXValueChanged( float value )
+$signalMethod=|void|maxXValueChanged|float
+
+$prototype=void minZValueChanged( float value )
+$signalMethod=|void|minZValueChanged|float
+
+$prototype=void maxZValueChanged( float value )
+$signalMethod=|void|maxZValueChanged|float
 
 #pragma ENDDUMP

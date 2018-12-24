@@ -131,26 +131,37 @@ $method=|void|setFacingCamera|bool
 %%
 %%
 
-$beginSignals
-$signal=|backgroundColorChanged(QColor)
-$signal=|backgroundEnabledChanged(bool)
-$signal=|borderEnabledChanged(bool)
-$signal=|facingCameraChanged(bool)
-$signal=|fontChanged(QFont)
-$signal=|textChanged(QString)
-$signal=|textColorChanged(QColor)
-$endSignals
+%% $beginSignals
+%% $signal=|backgroundColorChanged(QColor)
+%% $signal=|backgroundEnabledChanged(bool)
+%% $signal=|borderEnabledChanged(bool)
+%% $signal=|facingCameraChanged(bool)
+%% $signal=|fontChanged(QFont)
+%% $signal=|textChanged(QString)
+%% $signal=|textColorChanged(QColor)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|backgroundColorChanged( const QColor & color )
-$signal=|backgroundEnabledChanged( bool enabled )
-$signal=|borderEnabledChanged( bool enabled )
-$signal=|facingCameraChanged( bool enabled )
-$signal=|fontChanged( const QFont & font )
-$signal=|textChanged( const QString & text )
-$signal=|textColorChanged( const QColor & color )
-$endSlotsClass
+$prototype=void backgroundColorChanged( const QColor & color )
+$signalMethod=|void|backgroundColorChanged|QColor
+
+$prototype=void backgroundEnabledChanged( bool enabled )
+$signalMethod=|void|backgroundEnabledChanged|bool
+
+$prototype=void borderEnabledChanged( bool enabled )
+$signalMethod=|void|borderEnabledChanged|bool
+
+$prototype=void facingCameraChanged( bool enabled )
+$signalMethod=|void|facingCameraChanged|bool
+
+$prototype=void fontChanged( const QFont & font )
+$signalMethod=|void|fontChanged|QFont
+
+$prototype=void textChanged( const QString & text )
+$signalMethod=|void|textChanged|QString
+
+$prototype=void textColorChanged( const QColor & color )
+$signalMethod=|void|textColorChanged|QColor
 
 #pragma ENDDUMP

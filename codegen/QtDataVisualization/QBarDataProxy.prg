@@ -334,32 +334,49 @@ $addMethod=insertRows
 $prototype=void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
 $method=|void|removeRows|int,int,bool=true
 
-$beginSignals
-$signal=|arrayReset()
-$signal=|columnLabelsChanged()
-$signal=|itemChanged(int,int)
-$signal=|rowCountChanged(int)
-$signal=|rowLabelsChanged()
-$signal=|rowsAdded(int,int)
-$signal=|rowsChanged(int,int)
-$signal=|rowsInserted(int,int)
-$signal=|rowsRemoved(int,int)
-$signal=|seriesChanged(QBar3DSeries*)
-$endSignals
+%% $beginSignals
+%% $signal=|arrayReset()
+%% $signal=|columnLabelsChanged()
+%% $signal=|itemChanged(int,int)
+%% $signal=|rowCountChanged(int)
+%% $signal=|rowLabelsChanged()
+%% $signal=|rowsAdded(int,int)
+%% $signal=|rowsChanged(int,int)
+%% $signal=|rowsInserted(int,int)
+%% $signal=|rowsRemoved(int,int)
+%% $signal=|seriesChanged(QBar3DSeries*)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|arrayReset()
-$signal=|columnLabelsChanged()
-$signal=|itemChanged( int rowIndex, int columnIndex )
-$signal=|rowCountChanged( int count )
-$signal=|rowLabelsChanged()
-$signal=|rowsAdded( int startIndex, int count )
-$signal=|rowsChanged( int startIndex, int count )
-$signal=|rowsInserted( int startIndex, int count )
-$signal=|rowsRemoved( int startIndex, int count )
-$signal=|seriesChanged( QBar3DSeries * series )
-$endSlotsClass
+$prototype=void arrayReset()
+$signalMethod=|void|arrayReset|
+
+$prototype=void columnLabelsChanged()
+$signalMethod=|void|columnLabelsChanged|
+
+$prototype=void itemChanged( int rowIndex, int columnIndex )
+$signalMethod=|void|itemChanged|int,int
+
+$prototype=void rowCountChanged( int count )
+$signalMethod=|void|rowCountChanged|int
+
+$prototype=void rowLabelsChanged()
+$signalMethod=|void|rowLabelsChanged|
+
+$prototype=void rowsAdded( int startIndex, int count )
+$signalMethod=|void|rowsAdded|int,int
+
+$prototype=void rowsChanged( int startIndex, int count )
+$signalMethod=|void|rowsChanged|int,int
+
+$prototype=void rowsInserted( int startIndex, int count )
+$signalMethod=|void|rowsInserted|int,int
+
+$prototype=void rowsRemoved( int startIndex, int count )
+$signalMethod=|void|rowsRemoved|int,int
+
+$prototype=void seriesChanged( QBar3DSeries * series )
+$signalMethod=|void|seriesChanged|QBar3DSeries*
 
 #pragma ENDDUMP

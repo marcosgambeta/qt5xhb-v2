@@ -49,14 +49,13 @@ $method=5,9,0|bool|isAutoPosition|
 %%
 %%
 
-$beginSignals
-$signal=5,9,0|autoPositionChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=5,9,0|autoPositionChanged(bool)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=5,9,0|autoPositionChanged( bool autoPosition )
-$endSlotsClass
+$prototype=void autoPositionChanged( bool autoPosition )
+$signalMethod=5,9,0|void|autoPositionChanged|bool
 
 #pragma ENDDUMP

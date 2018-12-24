@@ -93,23 +93,29 @@ $method=|void|setReversed|bool
 %%
 %%
 
-$beginSignals
-%% $signal=|formatterChanged(QValue3DAxisFormatter*)
-%% $signal=|labelFormatChanged(QString)
-%% $signal=|reversedChanged(bool)
-%% $signal=|segmentCountChanged(int)
-%% $signal=|subSegmentCountChanged(int)
-$endSignals
+%% $beginSignals
+%% %% $signal=|formatterChanged(QValue3DAxisFormatter*)
+%% %% $signal=|labelFormatChanged(QString)
+%% %% $signal=|reversedChanged(bool)
+%% %% $signal=|segmentCountChanged(int)
+%% %% $signal=|subSegmentCountChanged(int)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-%% TODO: implementar sinais
-%% $signal=|formatterChanged( QValue3DAxisFormatter * formatter )
-%% $signal=|labelFormatChanged( const QString & format )
-%% $signal=|reversedChanged( bool enable )
-%% $signal=|segmentCountChanged( int count )
-%% $signal=|subSegmentCountChanged( int count )
-$endSlotsClass
+$prototype=void formatterChanged( QValue3DAxisFormatter * formatter )
+%% TODO: $signalMethod=|void|formatterChanged|QValue3DAxisFormatter*
+
+$prototype=void labelFormatChanged( const QString & format )
+%% TODO: $signalMethod=|void|labelFormatChanged|QString
+
+$prototype=void reversedChanged( bool enable )
+%% TODO: $signalMethod=|void|reversedChanged|bool
+
+$prototype=void segmentCountChanged( int count )
+%% TODO: $signalMethod=|void|segmentCountChanged|int
+
+$prototype=void subSegmentCountChanged( int count )
+%% TODO: $signalMethod=|void|subSegmentCountChanged|int
 
 #pragma ENDDUMP

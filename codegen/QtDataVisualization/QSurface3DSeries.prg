@@ -133,26 +133,37 @@ $method=|void|setTextureFile|const QString &
 $prototype=static QPoint invalidSelectionPosition()
 $staticMethod=|QPoint|invalidSelectionPosition|
 
-$beginSignals
-$signal=|dataProxyChanged(QSurfaceDataProxy*)
-$signal=|drawModeChanged(QSurface3DSeries::DrawFlags)
-$signal=|flatShadingEnabledChanged(bool)
-$signal=|flatShadingSupportedChanged(bool)
-$signal=|selectedPointChanged(QPoint)
-$signal=|textureChanged(QImage)
-$signal=|textureFileChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|dataProxyChanged(QSurfaceDataProxy*)
+%% $signal=|drawModeChanged(QSurface3DSeries::DrawFlags)
+%% $signal=|flatShadingEnabledChanged(bool)
+%% $signal=|flatShadingSupportedChanged(bool)
+%% $signal=|selectedPointChanged(QPoint)
+%% $signal=|textureChanged(QImage)
+%% $signal=|textureFileChanged(QString)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|dataProxyChanged( QSurfaceDataProxy * proxy )
-$signal=|drawModeChanged( QSurface3DSeries::DrawFlags mode )
-$signal=|flatShadingEnabledChanged( bool enable )
-$signal=|flatShadingSupportedChanged( bool enable )
-$signal=|selectedPointChanged( const QPoint & position )
-$signal=|textureChanged( const QImage & image )
-$signal=|textureFileChanged( const QString & filename )
-$endSlotsClass
+$prototype=void dataProxyChanged( QSurfaceDataProxy * proxy )
+$signalMethod=|void|dataProxyChanged|QSurfaceDataProxy*
+
+$prototype=void drawModeChanged( QSurface3DSeries::DrawFlags mode )
+$signalMethod=|void|drawModeChanged|QSurface3DSeries::DrawFlags
+
+$prototype=void flatShadingEnabledChanged( bool enable )
+$signalMethod=|void|flatShadingEnabledChanged|bool
+
+$prototype=void flatShadingSupportedChanged( bool enable )
+$signalMethod=|void|flatShadingSupportedChanged|bool
+
+$prototype=void selectedPointChanged( const QPoint & position )
+$signalMethod=|void|selectedPointChanged|QPoint
+
+$prototype=void textureChanged( const QImage & image )
+$signalMethod=|void|textureChanged|QImage
+
+$prototype=void textureFileChanged( const QString & filename )
+$signalMethod=|void|textureFileChanged|QString
 
 #pragma ENDDUMP

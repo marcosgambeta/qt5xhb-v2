@@ -330,56 +330,97 @@ $method=|int|rowCategoryIndex|const QString &
 $prototype=Q_INVOKABLE int columnCategoryIndex(const QString& category)
 $method=|int|columnCategoryIndex|const QString &
 
-$beginSignals
-$signal=|autoColumnCategoriesChanged(bool)
-$signal=|autoRowCategoriesChanged(bool)
-$signal=|columnCategoriesChanged()
-$signal=|columnRoleChanged(QString)
-$signal=|columnRolePatternChanged(QRegExp)
-$signal=|columnRoleReplaceChanged(QString)
-$signal=|itemModelChanged(QAbstractItemModel*)
-$signal=|multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)
-$signal=|rowCategoriesChanged()
-$signal=|rowRoleChanged(QString)
-$signal=|rowRolePatternChanged(QRegExp)
-$signal=|rowRoleReplaceChanged(QString)
-$signal=|useModelCategoriesChanged(bool)
-$signal=|xPosRoleChanged(QString)
-$signal=|xPosRolePatternChanged(QRegExp)
-$signal=|xPosRoleReplaceChanged(QString)
-$signal=|yPosRoleChanged(QString)
-$signal=|yPosRolePatternChanged(QRegExp)
-$signal=|yPosRoleReplaceChanged(QString)
-$signal=|zPosRoleChanged(QString)
-$signal=|zPosRolePatternChanged(QRegExp)
-$signal=|zPosRoleReplaceChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|autoColumnCategoriesChanged(bool)
+%% $signal=|autoRowCategoriesChanged(bool)
+%% $signal=|columnCategoriesChanged()
+%% $signal=|columnRoleChanged(QString)
+%% $signal=|columnRolePatternChanged(QRegExp)
+%% $signal=|columnRoleReplaceChanged(QString)
+%% $signal=|itemModelChanged(QAbstractItemModel*)
+%% $signal=|multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)
+%% $signal=|rowCategoriesChanged()
+%% $signal=|rowRoleChanged(QString)
+%% $signal=|rowRolePatternChanged(QRegExp)
+%% $signal=|rowRoleReplaceChanged(QString)
+%% $signal=|useModelCategoriesChanged(bool)
+%% $signal=|xPosRoleChanged(QString)
+%% $signal=|xPosRolePatternChanged(QRegExp)
+%% $signal=|xPosRoleReplaceChanged(QString)
+%% $signal=|yPosRoleChanged(QString)
+%% $signal=|yPosRolePatternChanged(QRegExp)
+%% $signal=|yPosRoleReplaceChanged(QString)
+%% $signal=|zPosRoleChanged(QString)
+%% $signal=|zPosRolePatternChanged(QRegExp)
+%% $signal=|zPosRoleReplaceChanged(QString)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|autoColumnCategoriesChanged( bool enable )
-$signal=|autoRowCategoriesChanged( bool enable )
-$signal=|columnCategoriesChanged()
-$signal=|columnRoleChanged( const QString & role )
-$signal=|columnRolePatternChanged( const QRegExp & pattern )
-$signal=|columnRoleReplaceChanged( const QString & replace )
-$signal=|itemModelChanged( const QAbstractItemModel * itemModel )
-$signal=|multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
-$signal=|rowCategoriesChanged()
-$signal=|rowRoleChanged( const QString & role )
-$signal=|rowRolePatternChanged( const QRegExp & pattern )
-$signal=|rowRoleReplaceChanged( const QString & replace )
-$signal=|useModelCategoriesChanged( bool enable )
-$signal=|xPosRoleChanged( const QString & role )
-$signal=|xPosRolePatternChanged( const QRegExp & pattern )
-$signal=|xPosRoleReplaceChanged( const QString & replace )
-$signal=|yPosRoleChanged( const QString & role )
-$signal=|yPosRolePatternChanged( const QRegExp & pattern )
-$signal=|yPosRoleReplaceChanged( const QString & replace )
-$signal=|zPosRoleChanged( const QString & role )
-$signal=|zPosRolePatternChanged( const QRegExp & pattern )
-$signal=|zPosRoleReplaceChanged( const QString & replace )
-$endSlotsClass
+$prototype=void autoColumnCategoriesChanged( bool enable )
+$signalMethod=|void|autoColumnCategoriesChanged|bool
+
+$prototype=void autoRowCategoriesChanged( bool enable )
+$signalMethod=|void|autoRowCategoriesChanged|bool
+
+$prototype=void columnCategoriesChanged()
+$signalMethod=|void|columnCategoriesChanged|
+
+$prototype=void columnRoleChanged( const QString & role )
+$signalMethod=|void|columnRoleChanged|QString
+
+$prototype=void columnRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|columnRolePatternChanged|QRegExp
+
+$prototype=void columnRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|columnRoleReplaceChanged|QString
+
+$prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
+%% TODO: $signalMethod=|void|itemModelChanged|QAbstractItemModel*
+
+$prototype=void multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
+$signalMethod=|void|multiMatchBehaviorChanged|QItemModelSurfaceDataProxy::MultiMatchBehavior
+
+$prototype=void rowCategoriesChanged()
+$signalMethod=|void|rowCategoriesChanged|
+
+$prototype=void rowRoleChanged( const QString & role )
+$signalMethod=|void|rowRoleChanged|QString
+
+$prototype=void rowRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|rowRolePatternChanged|QRegExp
+
+$prototype=void rowRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|rowRoleReplaceChanged|QString
+
+$prototype=void useModelCategoriesChanged( bool enable )
+$signalMethod=|void|useModelCategoriesChanged|bool
+
+$prototype=void xPosRoleChanged( const QString & role )
+$signalMethod=|void|xPosRoleChanged|QString
+
+$prototype=void xPosRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|xPosRolePatternChanged|QRegExp
+
+$prototype=void xPosRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|xPosRoleReplaceChanged|QString
+
+$prototype=void yPosRoleChanged( const QString & role )
+$signalMethod=|void|yPosRoleChanged|QString
+
+$prototype=void yPosRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|yPosRolePatternChanged|QRegExp
+
+$prototype=void yPosRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|yPosRoleReplaceChanged|QString
+
+$prototype=void zPosRoleChanged( const QString & role )
+$signalMethod=|void|zPosRoleChanged|QString
+
+$prototype=void zPosRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|zPosRolePatternChanged|QRegExp
+
+$prototype=void zPosRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|zPosRoleReplaceChanged|QString
 
 #pragma ENDDUMP

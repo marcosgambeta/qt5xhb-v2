@@ -135,32 +135,49 @@ $method=|void|setTitleFixed|bool
 $prototype=void setRange(float min, float max)
 $method=|void|setRange|float,float
 
-$beginSignals
-$signal=|autoAdjustRangeChanged(bool)
-$signal=|labelAutoRotationChanged(float)
-$signal=|labelsChanged()
-$signal=|maxChanged(float)
-$signal=|minChanged(float)
-$signal=|orientationChanged(QAbstract3DAxis::AxisOrientation)
-$signal=|rangeChanged(float,float)
-$signal=|titleChanged(QString)
-$signal=|titleFixedChanged(bool)
-$signal=|titleVisibilityChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|autoAdjustRangeChanged(bool)
+%% $signal=|labelAutoRotationChanged(float)
+%% $signal=|labelsChanged()
+%% $signal=|maxChanged(float)
+%% $signal=|minChanged(float)
+%% $signal=|orientationChanged(QAbstract3DAxis::AxisOrientation)
+%% $signal=|rangeChanged(float,float)
+%% $signal=|titleChanged(QString)
+%% $signal=|titleFixedChanged(bool)
+%% $signal=|titleVisibilityChanged(bool)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|titleChanged( const QString & newTitle )
-$signal=|labelsChanged()
-$signal=|orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
-$signal=|minChanged( float value )
-$signal=|maxChanged( float value )
-$signal=|rangeChanged( float min, float max )
-$signal=|autoAdjustRangeChanged( bool autoAdjust )
-$signal=|labelAutoRotationChanged( float angle )
-$signal=|titleVisibilityChanged( bool visible )
-$signal=|titleFixedChanged( bool fixed )
-$endSlotsClass
+$prototype=void titleChanged( const QString & newTitle )
+$signalMethod=|void|titleChanged|QString
+
+$prototype=void labelsChanged()
+$signalMethod=|void|labelsChanged|
+
+$prototype=void orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
+$signalMethod=|void|orientationChanged|QAbstract3DAxis::AxisOrientation
+
+$prototype=void minChanged( float value )
+$signalMethod=|void|minChanged|float
+
+$prototype=void maxChanged( float value )
+$signalMethod=|void|maxChanged|float
+
+$prototype=void rangeChanged( float min, float max )
+$signalMethod=|void|rangeChanged|float,float
+
+$prototype=void autoAdjustRangeChanged( bool autoAdjust )
+$signalMethod=|void|autoAdjustRangeChanged|bool
+
+$prototype=void labelAutoRotationChanged( float angle )
+$signalMethod=|void|labelAutoRotationChanged|float
+
+$prototype=void titleVisibilityChanged( bool visible )
+$signalMethod=|void|titleVisibilityChanged|bool
+
+$prototype=void titleFixedChanged( bool fixed )
+$signalMethod=|void|titleFixedChanged|bool
 
 #pragma ENDDUMP

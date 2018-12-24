@@ -94,20 +94,25 @@ $method=|void|releaseAxis|QValue3DAxis *
 $prototype=QList<QValue3DAxis *> axes() const
 $method=|QList<QValue3DAxis *>|axes|
 
-$beginSignals
-$signal=|axisXChanged(QValue3DAxis*)
-$signal=|axisYChanged(QValue3DAxis*)
-$signal=|axisZChanged(QValue3DAxis*)
-$signal=|selectedSeriesChanged(QScatter3DSeries*)
-$endSignals
+%% $beginSignals
+%% $signal=|axisXChanged(QValue3DAxis*)
+%% $signal=|axisYChanged(QValue3DAxis*)
+%% $signal=|axisZChanged(QValue3DAxis*)
+%% $signal=|selectedSeriesChanged(QScatter3DSeries*)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|axisXChanged( QValue3DAxis * axis )
-$signal=|axisYChanged( QValue3DAxis * axis )
-$signal=|axisZChanged( QValue3DAxis * axis )
-$signal=|selectedSeriesChanged( QScatter3DSeries * series )
-$endSlotsClass
+$prototype=void axisXChanged( QValue3DAxis * axis )
+$signalMethod=|void|axisXChanged|QValue3DAxis*
+
+$prototype=void axisYChanged( QValue3DAxis * axis )
+$signalMethod=|void|axisYChanged|QValue3DAxis*
+
+$prototype=void axisZChanged( QValue3DAxis * axis )
+$signalMethod=|void|axisZChanged|QValue3DAxis*
+
+$prototype=void selectedSeriesChanged( QScatter3DSeries * series )
+$signalMethod=|void|selectedSeriesChanged|QScatter3DSeries*
 
 #pragma ENDDUMP

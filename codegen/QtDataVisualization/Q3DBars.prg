@@ -157,32 +157,49 @@ $method=|void|releaseAxis|QAbstract3DAxis *
 $prototype=QList<QAbstract3DAxis *> axes() const
 $method=|QList<QAbstract3DAxis *>|axes|
 
-$beginSignals
-$signal=|barSpacingChanged(QSizeF)
-$signal=|barSpacingRelativeChanged(bool)
-$signal=|barThicknessChanged(float)
-$signal=|columnAxisChanged(QCategory3DAxis*)
-$signal=|floorLevelChanged(float)
-$signal=|multiSeriesUniformChanged(bool)
-$signal=|primarySeriesChanged(QBar3DSeries*)
-$signal=|rowAxisChanged(QCategory3DAxis*)
-$signal=|selectedSeriesChanged(QBar3DSeries*)
-$signal=|valueAxisChanged(QValue3DAxis*)
-$endSignals
+%% $beginSignals
+%% $signal=|barSpacingChanged(QSizeF)
+%% $signal=|barSpacingRelativeChanged(bool)
+%% $signal=|barThicknessChanged(float)
+%% $signal=|columnAxisChanged(QCategory3DAxis*)
+%% $signal=|floorLevelChanged(float)
+%% $signal=|multiSeriesUniformChanged(bool)
+%% $signal=|primarySeriesChanged(QBar3DSeries*)
+%% $signal=|rowAxisChanged(QCategory3DAxis*)
+%% $signal=|selectedSeriesChanged(QBar3DSeries*)
+%% $signal=|valueAxisChanged(QValue3DAxis*)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|multiSeriesUniformChanged( bool uniform )
-$signal=|barThicknessChanged( float thicknessRatio )
-$signal=|barSpacingChanged( const QSizeF & spacing )
-$signal=|barSpacingRelativeChanged( bool relative )
-$signal=|rowAxisChanged( QCategory3DAxis * axis )
-$signal=|columnAxisChanged( QCategory3DAxis * axis )
-$signal=|valueAxisChanged( QValue3DAxis * axis )
-$signal=|primarySeriesChanged( QBar3DSeries * series )
-$signal=|selectedSeriesChanged( QBar3DSeries * series )
-$signal=|floorLevelChanged( float level )
-$endSlotsClass
+$prototype=void multiSeriesUniformChanged( bool uniform )
+$signalMethod=|void|multiSeriesUniformChanged|bool
+
+$prototype=void barThicknessChanged( float thicknessRatio )
+$signalMethod=|void|barThicknessChanged|float
+
+$prototype=void barSpacingChanged( const QSizeF & spacing )
+$signalMethod=|void|barSpacingChanged|QSizeF
+
+$prototype=void barSpacingRelativeChanged( bool relative )
+$signalMethod=|void|barSpacingRelativeChanged|bool
+
+$prototype=void rowAxisChanged( QCategory3DAxis * axis )
+$signalMethod=|void|rowAxisChanged|QCategory3DAxis*
+
+$prototype=void columnAxisChanged( QCategory3DAxis * axis )
+$signalMethod=|void|columnAxisChanged|QCategory3DAxis*
+
+$prototype=void valueAxisChanged( QValue3DAxis * axis )
+$signalMethod=|void|valueAxisChanged|QValue3DAxis*
+
+$prototype=void primarySeriesChanged( QBar3DSeries * series )
+$signalMethod=|void|primarySeriesChanged|QBar3DSeries*
+
+$prototype=void selectedSeriesChanged( QBar3DSeries * series )
+$signalMethod=|void|selectedSeriesChanged|QBar3DSeries*
+
+$prototype=void floorLevelChanged( float level )
+$signalMethod=|void|floorLevelChanged|float
 
 #pragma ENDDUMP

@@ -210,38 +210,61 @@ $method=|void|setRotationRoleReplace|const QString &
 $prototype=void remap(const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole)
 $method=|void|remap|const QString &,const QString &,const QString &,const QString &
 
-$beginSignals
-$signal=|itemModelChanged(QAbstractItemModel*)
-$signal=|rotationRoleChanged(QString)
-$signal=|rotationRolePatternChanged(QRegExp)
-$signal=|rotationRoleReplaceChanged(QString)
-$signal=|xPosRoleChanged(QString)
-$signal=|xPosRolePatternChanged(QRegExp)
-$signal=|xPosRoleReplaceChanged(QString)
-$signal=|yPosRoleChanged(QString)
-$signal=|yPosRolePatternChanged(QRegExp)
-$signal=|yPosRoleReplaceChanged(QString)
-$signal=|zPosRoleChanged(QString)
-$signal=|zPosRolePatternChanged(QRegExp)
-$signal=|zPosRoleReplaceChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|itemModelChanged(QAbstractItemModel*)
+%% $signal=|rotationRoleChanged(QString)
+%% $signal=|rotationRolePatternChanged(QRegExp)
+%% $signal=|rotationRoleReplaceChanged(QString)
+%% $signal=|xPosRoleChanged(QString)
+%% $signal=|xPosRolePatternChanged(QRegExp)
+%% $signal=|xPosRoleReplaceChanged(QString)
+%% $signal=|yPosRoleChanged(QString)
+%% $signal=|yPosRolePatternChanged(QRegExp)
+%% $signal=|yPosRoleReplaceChanged(QString)
+%% $signal=|zPosRoleChanged(QString)
+%% $signal=|zPosRolePatternChanged(QRegExp)
+%% $signal=|zPosRoleReplaceChanged(QString)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|itemModelChanged( const QAbstractItemModel * itemModel )
-$signal=|rotationRoleChanged( const QString & role )
-$signal=|rotationRolePatternChanged( const QRegExp & pattern )
-$signal=|rotationRoleReplaceChanged( const QString & replace )
-$signal=|xPosRoleChanged( const QString & role )
-$signal=|xPosRolePatternChanged( const QRegExp & pattern )
-$signal=|xPosRoleReplaceChanged( const QString & replace )
-$signal=|yPosRoleChanged( const QString & role )
-$signal=|yPosRolePatternChanged( const QRegExp & pattern )
-$signal=|yPosRoleReplaceChanged( const QString & replace )
-$signal=|zPosRoleChanged( const QString & role )
-$signal=|zPosRolePatternChanged( const QRegExp & pattern )
-$signal=|zPosRoleReplaceChanged( const QString & replace )
-$endSlotsClass
+$prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
+%% TODO: $signalMethod=|void|itemModelChanged|QAbstractItemModel*
+
+$prototype=void rotationRoleChanged( const QString & role )
+$signalMethod=|void|rotationRoleChanged|QString
+
+$prototype=void rotationRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|rotationRolePatternChanged|QRegExp
+
+$prototype=void rotationRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|rotationRoleReplaceChanged|QString
+
+$prototype=void xPosRoleChanged( const QString & role )
+$signalMethod=|void|xPosRoleChanged|QString
+
+$prototype=void xPosRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|xPosRolePatternChanged|QRegExp
+
+$prototype=void xPosRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|xPosRoleReplaceChanged|QString
+
+$prototype=void yPosRoleChanged( const QString & role )
+$signalMethod=|void|yPosRoleChanged|QString
+
+$prototype=void yPosRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|yPosRolePatternChanged|QRegExp
+
+$prototype=void yPosRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|yPosRoleReplaceChanged|QString
+
+$prototype=void zPosRoleChanged( const QString & role )
+$signalMethod=|void|zPosRoleChanged|QString
+
+$prototype=void zPosRolePatternChanged( const QRegExp & pattern )
+$signalMethod=|void|zPosRolePatternChanged|QRegExp
+
+$prototype=void zPosRoleReplaceChanged( const QString & replace )
+$signalMethod=|void|zPosRoleReplaceChanged|QString
 
 #pragma ENDDUMP

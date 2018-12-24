@@ -49,14 +49,13 @@ $method=|void|setLabels|const QStringList &
 %%
 %%
 
-$beginSignals
-$signal=|labelsChanged()
-$endSignals
+%% $beginSignals
+%% $signal=|labelsChanged()
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|labelsChanged()
-$endSlotsClass
+$prototype=void labelsChanged()
+$signalMethod=|void|labelsChanged|
 
 #pragma ENDDUMP

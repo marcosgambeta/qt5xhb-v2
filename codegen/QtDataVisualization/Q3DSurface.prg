@@ -104,22 +104,29 @@ $method=|void|releaseAxis|QValue3DAxis *
 $prototype=QList<QValue3DAxis *> axes() const
 $method=|QList<QValue3DAxis *>|axes|
 
-$beginSignals
-$signal=|axisXChanged(QValue3DAxis*)
-$signal=|axisYChanged(QValue3DAxis*)
-$signal=|axisZChanged(QValue3DAxis*)
-$signal=|flipHorizontalGridChanged(bool)
-$signal=|selectedSeriesChanged(QSurface3DSeries*)
-$endSignals
+%% $beginSignals
+%% $signal=|axisXChanged(QValue3DAxis*)
+%% $signal=|axisYChanged(QValue3DAxis*)
+%% $signal=|axisZChanged(QValue3DAxis*)
+%% $signal=|flipHorizontalGridChanged(bool)
+%% $signal=|selectedSeriesChanged(QSurface3DSeries*)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|axisXChanged( QValue3DAxis * axis )
-$signal=|axisYChanged( QValue3DAxis * axis )
-$signal=|axisZChanged( QValue3DAxis * axis )
-$signal=|flipHorizontalGridChanged( bool flip )
-$signal=|selectedSeriesChanged( QSurface3DSeries * series )
-$endSlotsClass
+$prototype=void axisXChanged( QValue3DAxis * axis )
+$signalMethod=|void|axisXChanged|QValue3DAxis*
+
+$prototype=void axisYChanged( QValue3DAxis * axis )
+$signalMethod=|void|axisYChanged|QValue3DAxis*
+
+$prototype=void axisZChanged( QValue3DAxis * axis )
+$signalMethod=|void|axisZChanged|QValue3DAxis*
+
+$prototype=void flipHorizontalGridChanged( bool flip )
+$signalMethod=|void|flipHorizontalGridChanged|bool
+
+$prototype=void selectedSeriesChanged( QSurface3DSeries * series )
+$signalMethod=|void|selectedSeriesChanged|QSurface3DSeries*
 
 #pragma ENDDUMP

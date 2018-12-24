@@ -150,30 +150,45 @@ $prototype=void insertRows(int rowIndex, const QSurfaceDataArray &rows)
 $prototype=void removeRows(int rowIndex, int removeCount)
 $method=|void|removeRows|int,int
 
-$beginSignals
-$signal=|arrayReset()
-$signal=|columnCountChanged(int)
-$signal=|itemChanged(int,int)
-$signal=|rowCountChanged(int)
-$signal=|rowsAdded(int,int)
-$signal=|rowsChanged(int,int)
-$signal=|rowsInserted(int,int)
-$signal=|rowsRemoved(int,int)
-$signal=|seriesChanged(QSurface3DSeries*)
-$endSignals
+%% $beginSignals
+%% $signal=|arrayReset()
+%% $signal=|columnCountChanged(int)
+%% $signal=|itemChanged(int,int)
+%% $signal=|rowCountChanged(int)
+%% $signal=|rowsAdded(int,int)
+%% $signal=|rowsChanged(int,int)
+%% $signal=|rowsInserted(int,int)
+%% $signal=|rowsRemoved(int,int)
+%% $signal=|seriesChanged(QSurface3DSeries*)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|arrayReset()
-$signal=|columnCountChanged( int count )
-$signal=|itemChanged( int rowIndex, int columnIndex )
-$signal=|rowCountChanged( int count )
-$signal=|rowsAdded( int startIndex, int count )
-$signal=|rowsChanged( int startIndex, int count )
-$signal=|rowsInserted( int startIndex, int count )
-$signal=|rowsRemoved( int startIndex, int count )
-$signal=|seriesChanged( QSurface3DSeries * series )
-$endSlotsClass
+$prototype=void arrayReset()
+$signalMethod=|void|arrayReset|
+
+$prototype=void columnCountChanged( int count )
+$signalMethod=|void|columnCountChanged|int
+
+$prototype=void itemChanged( int rowIndex, int columnIndex )
+$signalMethod=|void|itemChanged|int,int
+
+$prototype=void rowCountChanged( int count )
+$signalMethod=|void|rowCountChanged|int
+
+$prototype=void rowsAdded( int startIndex, int count )
+$signalMethod=|void|rowsAdded|int,int
+
+$prototype=void rowsChanged( int startIndex, int count )
+$signalMethod=|void|rowsChanged|int,int
+
+$prototype=void rowsInserted( int startIndex, int count )
+$signalMethod=|void|rowsInserted|int,int
+
+$prototype=void rowsRemoved( int startIndex, int count )
+$signalMethod=|void|rowsRemoved|int,int
+
+$prototype=void seriesChanged( QSurface3DSeries * series )
+$signalMethod=|void|seriesChanged|QSurface3DSeries*
 
 #pragma ENDDUMP

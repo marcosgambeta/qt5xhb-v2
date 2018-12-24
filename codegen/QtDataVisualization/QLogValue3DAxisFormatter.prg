@@ -81,18 +81,21 @@ $prototype=virtual float valueAt(float position) const [protected]
 
 $prototype=virtual void populateCopy(QValue3DAxisFormatter &copy) const [protected]
 
-$beginSignals
-$signal=|autoSubGridChanged(bool)
-$signal=|baseChanged(qreal)
-$signal=|showEdgeLabelsChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|autoSubGridChanged(bool)
+%% $signal=|baseChanged(qreal)
+%% $signal=|showEdgeLabelsChanged(bool)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|autoSubGridChanged( bool enabled )
-$signal=|baseChanged( qreal base )
-$signal=|showEdgeLabelsChanged( bool enabled )
-$endSlotsClass
+$prototype=void autoSubGridChanged( bool enabled )
+$signalMethod=|void|autoSubGridChanged|bool
+
+$prototype=void baseChanged( qreal base )
+$signalMethod=|void|baseChanged|qreal
+
+$prototype=void showEdgeLabelsChanged( bool enabled )
+$signalMethod=|void|showEdgeLabelsChanged|bool
 
 #pragma ENDDUMP

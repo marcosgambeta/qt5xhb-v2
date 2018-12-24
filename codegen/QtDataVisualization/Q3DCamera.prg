@@ -135,30 +135,45 @@ $virtualMethod=|void|copyValuesFrom|const Q3DObject &
 $prototype=void setCameraPosition(float horizontal, float vertical, float zoom = 100.0f)
 $method=|void|setCameraPosition|float,float,float=100.0f
 
-$beginSignals
-$signal=|cameraPresetChanged(Q3DCamera::CameraPreset)
-$signal=|maxZoomLevelChanged(float)
-$signal=|minZoomLevelChanged(float)
-$signal=|targetChanged(QVector3D)
-$signal=|wrapXRotationChanged(bool)
-$signal=|wrapYRotationChanged(bool)
-$signal=|xRotationChanged(float)
-$signal=|yRotationChanged(float)
-$signal=|zoomLevelChanged(float)
-$endSignals
+%% $beginSignals
+%% $signal=|cameraPresetChanged(Q3DCamera::CameraPreset)
+%% $signal=|maxZoomLevelChanged(float)
+%% $signal=|minZoomLevelChanged(float)
+%% $signal=|targetChanged(QVector3D)
+%% $signal=|wrapXRotationChanged(bool)
+%% $signal=|wrapYRotationChanged(bool)
+%% $signal=|xRotationChanged(float)
+%% $signal=|yRotationChanged(float)
+%% $signal=|zoomLevelChanged(float)
+%% $endSignals
 
 using namespace QtDataVisualization;
 
-$beginSlotsClass
-$signal=|cameraPresetChanged( Q3DCamera::CameraPreset preset )
-$signal=|maxZoomLevelChanged( float zoomLevel )
-$signal=|minZoomLevelChanged( float zoomLevel )
-$signal=|targetChanged( const QVector3D & target )
-$signal=|wrapXRotationChanged( bool isEnabled )
-$signal=|wrapYRotationChanged( bool isEnabled )
-$signal=|xRotationChanged( float rotation )
-$signal=|yRotationChanged( float rotation )
-$signal=|zoomLevelChanged( float zoomLevel )
-$endSlotsClass
+$prototype=void cameraPresetChanged( Q3DCamera::CameraPreset preset )
+$signalMethod=|void|cameraPresetChanged|Q3DCamera::CameraPreset
+
+$prototype=void maxZoomLevelChanged( float zoomLevel )
+$signalMethod=|void|maxZoomLevelChanged|float
+
+$prototype=void minZoomLevelChanged( float zoomLevel )
+$signalMethod=|void|minZoomLevelChanged|float
+
+$prototype=void targetChanged( const QVector3D & target )
+$signalMethod=|void|targetChanged|QVector3D
+
+$prototype=void wrapXRotationChanged( bool isEnabled )
+$signalMethod=|void|wrapXRotationChanged|bool
+
+$prototype=void wrapYRotationChanged( bool isEnabled )
+$signalMethod=|void|wrapYRotationChanged|bool
+
+$prototype=void xRotationChanged( float rotation )
+$signalMethod=|void|xRotationChanged|float
+
+$prototype=void yRotationChanged( float rotation )
+$signalMethod=|void|yRotationChanged|float
+
+$prototype=void zoomLevelChanged( float zoomLevel )
+$signalMethod=|void|zoomLevelChanged|float
 
 #pragma ENDDUMP
