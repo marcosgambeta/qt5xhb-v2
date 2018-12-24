@@ -54,6 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DInputHandler>
@@ -313,26 +314,266 @@ virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
 virtual void wheelEvent(QWheelEvent *event)
 */
 
-void Q3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void rotationEnabledChanged( bool enable )
+*/
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "rotationEnabledChanged(bool)", "rotationEnabledChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rotationEnabledChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::rotationEnabledChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationEnabledChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rotationEnabledChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rotationEnabledChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rotationEnabledChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectionEnabledChanged( bool enable )
+*/
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "selectionEnabledChanged(bool)", "selectionEnabledChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionEnabledChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::selectionEnabledChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionEnabledChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionEnabledChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionEnabledChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionEnabledChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void zoomAtTargetEnabledChanged( bool enable )
+*/
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "zoomAtTargetEnabledChanged(bool)", "zoomAtTargetEnabledChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "zoomAtTargetEnabledChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::zoomAtTargetEnabledChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomAtTargetEnabledChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "zoomAtTargetEnabledChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "zoomAtTargetEnabledChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "zoomAtTargetEnabledChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void zoomEnabledChanged( bool enable )
+*/
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "zoomEnabledChanged(bool)", "zoomEnabledChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "zoomEnabledChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::zoomEnabledChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomEnabledChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "zoomEnabledChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "zoomEnabledChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "zoomEnabledChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

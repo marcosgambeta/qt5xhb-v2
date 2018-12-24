@@ -36,10 +36,10 @@ CLASS QHeightMapSurfaceDataProxy INHERIT QSurfaceDataProxy
 
    METHOD onHeightMapChanged
    METHOD onHeightMapFileChanged
-   METHOD onMaxXValueChanged
-   METHOD onMaxZValueChanged
    METHOD onMinXValueChanged
+   METHOD onMaxXValueChanged
    METHOD onMinZValueChanged
+   METHOD onMaxZValueChanged
 
    DESTRUCTOR destroyObject
 
@@ -62,6 +62,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QHeightMapSurfaceDataProxy>
@@ -471,36 +472,396 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QHeightMapSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void heightMapChanged( const QImage & image )
+*/
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 {
-  QHeightMapSurfaceDataProxySlots_connect_signal( "heightMapChanged(QImage)", "heightMapChanged(QImage)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "heightMapChanged(QImage)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::heightMapChanged, [sender](QImage arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "heightMapChanged(QImage)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QIMAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "heightMapChanged(QImage)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "heightMapChanged(QImage)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "heightMapChanged(QImage)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void heightMapFileChanged( const QString & filename )
+*/
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 {
-  QHeightMapSurfaceDataProxySlots_connect_signal( "heightMapFileChanged(QString)", "heightMapFileChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "heightMapFileChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::heightMapFileChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "heightMapFileChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "heightMapFileChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "heightMapFileChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "heightMapFileChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
-HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
-{
-  QHeightMapSurfaceDataProxySlots_connect_signal( "maxXValueChanged(float)", "maxXValueChanged(float)" );
-}
-
-HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
-{
-  QHeightMapSurfaceDataProxySlots_connect_signal( "maxZValueChanged(float)", "maxZValueChanged(float)" );
-}
-
+/*
+void minXValueChanged( float value )
+*/
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 {
-  QHeightMapSurfaceDataProxySlots_connect_signal( "minXValueChanged(float)", "minXValueChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "minXValueChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::minXValueChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "minXValueChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "minXValueChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "minXValueChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "minXValueChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void maxXValueChanged( float value )
+*/
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "maxXValueChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::maxXValueChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxXValueChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "maxXValueChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "maxXValueChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "maxXValueChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void minZValueChanged( float value )
+*/
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 {
-  QHeightMapSurfaceDataProxySlots_connect_signal( "minZValueChanged(float)", "minZValueChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "minZValueChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::minZValueChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "minZValueChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "minZValueChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "minZValueChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "minZValueChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void maxZValueChanged( float value )
+*/
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "maxZValueChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::maxZValueChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxZValueChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "maxZValueChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "maxZValueChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "maxZValueChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

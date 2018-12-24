@@ -45,6 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DLight>
@@ -142,14 +143,72 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 #endif
 }
 
-void Q3DLightSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void autoPositionChanged( bool autoPosition )
+*/
 HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  Q3DLightSlots_connect_signal( "autoPositionChanged(bool)", "autoPositionChanged(bool)" );
-#else
-  hb_retl( false );
+  if( hb_pcount() == 1 )
+  {
+    Q3DLight * sender = (Q3DLight *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "autoPositionChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DLight::autoPositionChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "autoPositionChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DLIGHT" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "autoPositionChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DLight * sender = (Q3DLight *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "autoPositionChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "autoPositionChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 #endif
 }
 

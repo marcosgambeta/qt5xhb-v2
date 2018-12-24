@@ -65,6 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCustom3DLabel>
@@ -482,41 +483,461 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCustom3DLabelSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void backgroundColorChanged( const QColor & color )
+*/
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
 {
-  QCustom3DLabelSlots_connect_signal( "backgroundColorChanged(QColor)", "backgroundColorChanged(QColor)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "backgroundColorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::backgroundColorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundColorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "backgroundColorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "backgroundColorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "backgroundColorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void backgroundEnabledChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
 {
-  QCustom3DLabelSlots_connect_signal( "backgroundEnabledChanged(bool)", "backgroundEnabledChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "backgroundEnabledChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::backgroundEnabledChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundEnabledChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "backgroundEnabledChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "backgroundEnabledChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "backgroundEnabledChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void borderEnabledChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
 {
-  QCustom3DLabelSlots_connect_signal( "borderEnabledChanged(bool)", "borderEnabledChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "borderEnabledChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::borderEnabledChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "borderEnabledChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "borderEnabledChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "borderEnabledChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "borderEnabledChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void facingCameraChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
 {
-  QCustom3DLabelSlots_connect_signal( "facingCameraChanged(bool)", "facingCameraChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "facingCameraChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::facingCameraChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "facingCameraChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "facingCameraChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "facingCameraChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "facingCameraChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void fontChanged( const QFont & font )
+*/
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
 {
-  QCustom3DLabelSlots_connect_signal( "fontChanged(QFont)", "fontChanged(QFont)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "fontChanged(QFont)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::fontChanged, [sender](QFont arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "fontChanged(QFont)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "fontChanged(QFont)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "fontChanged(QFont)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textChanged( const QString & text )
+*/
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
 {
-  QCustom3DLabelSlots_connect_signal( "textChanged(QString)", "textChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::textChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textColorChanged( const QColor & color )
+*/
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
 {
-  QCustom3DLabelSlots_connect_signal( "textColorChanged(QColor)", "textColorChanged(QColor)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textColorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::textColorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textColorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textColorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textColorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textColorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

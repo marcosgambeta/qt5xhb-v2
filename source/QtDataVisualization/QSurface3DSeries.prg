@@ -66,6 +66,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSurface3DSeries>
@@ -481,41 +482,461 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_INVALIDSELECTIONPOSITION )
 #endif
 }
 
-void QSurface3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void dataProxyChanged( QSurfaceDataProxy * proxy )
+*/
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
 {
-  QSurface3DSeriesSlots_connect_signal( "dataProxyChanged(QSurfaceDataProxy*)", "dataProxyChanged(QSurfaceDataProxy*)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataProxyChanged(QSurfaceDataProxy*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::dataProxyChanged, [sender](QSurfaceDataProxy* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QSurfaceDataProxy*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSURFACEDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataProxyChanged(QSurfaceDataProxy*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataProxyChanged(QSurfaceDataProxy*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataProxyChanged(QSurfaceDataProxy*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void drawModeChanged( QSurface3DSeries::DrawFlags mode )
+*/
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
 {
-  QSurface3DSeriesSlots_connect_signal( "drawModeChanged(QSurface3DSeries::DrawFlags)", "drawModeChanged(QSurface3DSeries::DrawFlags)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::drawModeChanged, [sender](QSurface3DSeries::DrawFlags arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void flatShadingEnabledChanged( bool enable )
+*/
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
 {
-  QSurface3DSeriesSlots_connect_signal( "flatShadingEnabledChanged(bool)", "flatShadingEnabledChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "flatShadingEnabledChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::flatShadingEnabledChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "flatShadingEnabledChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "flatShadingEnabledChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "flatShadingEnabledChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "flatShadingEnabledChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void flatShadingSupportedChanged( bool enable )
+*/
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
 {
-  QSurface3DSeriesSlots_connect_signal( "flatShadingSupportedChanged(bool)", "flatShadingSupportedChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "flatShadingSupportedChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::flatShadingSupportedChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "flatShadingSupportedChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "flatShadingSupportedChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "flatShadingSupportedChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "flatShadingSupportedChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectedPointChanged( const QPoint & position )
+*/
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
 {
-  QSurface3DSeriesSlots_connect_signal( "selectedPointChanged(QPoint)", "selectedPointChanged(QPoint)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedPointChanged(QPoint)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::selectedPointChanged, [sender](QPoint arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedPointChanged(QPoint)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedPointChanged(QPoint)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedPointChanged(QPoint)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedPointChanged(QPoint)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textureChanged( const QImage & image )
+*/
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
 {
-  QSurface3DSeriesSlots_connect_signal( "textureChanged(QImage)", "textureChanged(QImage)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textureChanged(QImage)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::textureChanged, [sender](QImage arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textureChanged(QImage)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QIMAGE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textureChanged(QImage)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textureChanged(QImage)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textureChanged(QImage)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textureFileChanged( const QString & filename )
+*/
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
 {
-  QSurface3DSeriesSlots_connect_signal( "textureFileChanged(QString)", "textureFileChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textureFileChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::textureFileChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFileChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textureFileChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textureFileChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textureFileChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

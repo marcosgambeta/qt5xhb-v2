@@ -52,6 +52,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstract3DInputHandler>
@@ -275,21 +276,201 @@ void setPreviousInputPos(const QPoint &position) [protected]
 QPoint previousInputPos() const [protected]
 */
 
-void QAbstract3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void inputViewChanged( QAbstract3DInputHandler::InputView view )
+*/
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 {
-  QAbstract3DInputHandlerSlots_connect_signal( "inputViewChanged(QAbstract3DInputHandler::InputView)", "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DInputHandler::inputViewChanged, [sender](QAbstract3DInputHandler::InputView arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void positionChanged( const QPoint & position )
+*/
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 {
-  QAbstract3DInputHandlerSlots_connect_signal( "positionChanged(QPoint)", "positionChanged(QPoint)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "positionChanged(QPoint)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DInputHandler::positionChanged, [sender](QPoint arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QPoint)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "positionChanged(QPoint)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "positionChanged(QPoint)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "positionChanged(QPoint)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sceneChanged( Q3DScene * scene )
+*/
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 {
-  QAbstract3DInputHandlerSlots_connect_signal( "sceneChanged(Q3DScene*)", "sceneChanged(Q3DScene*)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sceneChanged(Q3DScene*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DInputHandler::sceneChanged, [sender](Q3DScene* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneChanged(Q3DScene*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DSCENE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sceneChanged(Q3DScene*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sceneChanged(Q3DScene*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sceneChanged(Q3DScene*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

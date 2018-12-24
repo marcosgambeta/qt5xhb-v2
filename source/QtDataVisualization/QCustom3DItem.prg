@@ -73,6 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCustom3DItem>
@@ -646,51 +647,591 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCustom3DItemSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void meshFileChanged( const QString & meshFile )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "meshFileChanged(QString)", "meshFileChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "meshFileChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::meshFileChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "meshFileChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "meshFileChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "meshFileChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "meshFileChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void positionAbsoluteChanged( bool positionAbsolute )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "positionAbsoluteChanged(bool)", "positionAbsoluteChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "positionAbsoluteChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::positionAbsoluteChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionAbsoluteChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "positionAbsoluteChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "positionAbsoluteChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "positionAbsoluteChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void positionChanged( const QVector3D & position )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "positionChanged(QVector3D)", "positionChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "positionChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::positionChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "positionChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "positionChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "positionChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rotationChanged( const QQuaternion & rotation )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "rotationChanged(QQuaternion)", "rotationChanged(QQuaternion)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rotationChanged(QQuaternion)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::rotationChanged, [sender](QQuaternion arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationChanged(QQuaternion)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QQUATERNION" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rotationChanged(QQuaternion)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rotationChanged(QQuaternion)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rotationChanged(QQuaternion)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void scalingAbsoluteChanged( bool scalingAbsolute )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "scalingAbsoluteChanged(bool)", "scalingAbsoluteChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "scalingAbsoluteChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::scalingAbsoluteChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "scalingAbsoluteChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "scalingAbsoluteChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "scalingAbsoluteChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "scalingAbsoluteChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void scalingChanged( const QVector3D & scaling )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "scalingChanged(QVector3D)", "scalingChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "scalingChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::scalingChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "scalingChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "scalingChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "scalingChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "scalingChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void shadowCastingChanged( bool shadowCasting )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "shadowCastingChanged(bool)", "shadowCastingChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "shadowCastingChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::shadowCastingChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "shadowCastingChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "shadowCastingChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "shadowCastingChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "shadowCastingChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textureFileChanged( const QString & textureFile )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "textureFileChanged(QString)", "textureFileChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textureFileChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::textureFileChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFileChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textureFileChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textureFileChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textureFileChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void visibleChanged( bool visible )
+*/
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
 {
-  QCustom3DItemSlots_connect_signal( "visibleChanged(bool)", "visibleChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "visibleChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::visibleChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "visibleChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "visibleChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "visibleChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -53,6 +53,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QScatter3DSeries>
@@ -291,21 +292,201 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_INVALIDSELECTIONINDEX )
 #endif
 }
 
-void QScatter3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void dataProxyChanged( QScatterDataProxy * proxy )
+*/
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 {
-  QScatter3DSeriesSlots_connect_signal( "dataProxyChanged(QScatterDataProxy*)", "dataProxyChanged(QScatterDataProxy*)" );
+  if( hb_pcount() == 1 )
+  {
+    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataProxyChanged(QScatterDataProxy*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScatter3DSeries::dataProxyChanged, [sender](QScatterDataProxy* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QScatterDataProxy*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTER3DSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSCATTERDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataProxyChanged(QScatterDataProxy*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataProxyChanged(QScatterDataProxy*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataProxyChanged(QScatterDataProxy*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemSizeChanged( float size )
+*/
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 {
-  QScatter3DSeriesSlots_connect_signal( "itemSizeChanged(float)", "itemSizeChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemSizeChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScatter3DSeries::itemSizeChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSizeChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTER3DSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemSizeChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemSizeChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemSizeChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectedItemChanged( int index )
+*/
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 {
-  QScatter3DSeriesSlots_connect_signal( "selectedItemChanged(int)", "selectedItemChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedItemChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QScatter3DSeries::selectedItemChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedItemChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTER3DSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedItemChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedItemChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedItemChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

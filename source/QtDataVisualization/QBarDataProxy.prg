@@ -70,6 +70,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QBarDataProxy>
@@ -508,56 +509,660 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QBarDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void arrayReset()
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
 {
-  QBarDataProxySlots_connect_signal( "arrayReset()", "arrayReset()" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "arrayReset()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::arrayReset, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "arrayReset()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "arrayReset()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "arrayReset()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void columnLabelsChanged()
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "columnLabelsChanged()", "columnLabelsChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnLabelsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::columnLabelsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnLabelsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnLabelsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnLabelsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnLabelsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemChanged( int rowIndex, int columnIndex )
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "itemChanged(int,int)", "itemChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::itemChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowCountChanged( int count )
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "rowCountChanged(int)", "rowCountChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowCountChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowCountChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowCountChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowCountChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowCountChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowLabelsChanged()
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "rowLabelsChanged()", "rowLabelsChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowLabelsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowLabelsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowLabelsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowLabelsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowLabelsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowLabelsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsAdded( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
 {
-  QBarDataProxySlots_connect_signal( "rowsAdded(int,int)", "rowsAdded(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsAdded, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAdded(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsAdded(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsAdded(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsAdded(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsChanged( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "rowsChanged(int,int)", "rowsChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsInserted( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
 {
-  QBarDataProxySlots_connect_signal( "rowsInserted(int,int)", "rowsInserted(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsInserted, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsInserted(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsInserted(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsInserted(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsInserted(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsRemoved( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
 {
-  QBarDataProxySlots_connect_signal( "rowsRemoved(int,int)", "rowsRemoved(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsRemoved, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsRemoved(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsRemoved(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsRemoved(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsRemoved(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void seriesChanged( QBar3DSeries * series )
+*/
 HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "seriesChanged(QBar3DSeries*)", "seriesChanged(QBar3DSeries*)" );
+  if( hb_pcount() == 1 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "seriesChanged(QBar3DSeries*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::seriesChanged, [sender](QBar3DSeries* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QBar3DSeries*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "seriesChanged(QBar3DSeries*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "seriesChanged(QBar3DSeries*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "seriesChanged(QBar3DSeries*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

@@ -51,16 +51,16 @@ CLASS Q3DBars INHERIT QAbstract3DGraph
    METHOD releaseAxis
    METHOD axes
 
+   METHOD onMultiSeriesUniformChanged
+   METHOD onBarThicknessChanged
    METHOD onBarSpacingChanged
    METHOD onBarSpacingRelativeChanged
-   METHOD onBarThicknessChanged
-   METHOD onColumnAxisChanged
-   METHOD onFloorLevelChanged
-   METHOD onMultiSeriesUniformChanged
-   METHOD onPrimarySeriesChanged
    METHOD onRowAxisChanged
-   METHOD onSelectedSeriesChanged
+   METHOD onColumnAxisChanged
    METHOD onValueAxisChanged
+   METHOD onPrimarySeriesChanged
+   METHOD onSelectedSeriesChanged
+   METHOD onFloorLevelChanged
 
    DESTRUCTOR destroyObject
 
@@ -83,6 +83,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DBars>
@@ -834,56 +835,656 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
   }
 }
 
-void Q3DBarsSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
-{
-  Q3DBarsSlots_connect_signal( "barSpacingChanged(QSizeF)", "barSpacingChanged(QSizeF)" );
-}
-
-HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
-{
-  Q3DBarsSlots_connect_signal( "barSpacingRelativeChanged(bool)", "barSpacingRelativeChanged(bool)" );
-}
-
-HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
-{
-  Q3DBarsSlots_connect_signal( "barThicknessChanged(float)", "barThicknessChanged(float)" );
-}
-
-HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
-{
-  Q3DBarsSlots_connect_signal( "columnAxisChanged(QCategory3DAxis*)", "columnAxisChanged(QCategory3DAxis*)" );
-}
-
-HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
-{
-  Q3DBarsSlots_connect_signal( "floorLevelChanged(float)", "floorLevelChanged(float)" );
-}
-
+/*
+void multiSeriesUniformChanged( bool uniform )
+*/
 HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "multiSeriesUniformChanged(bool)", "multiSeriesUniformChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "multiSeriesUniformChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::multiSeriesUniformChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "multiSeriesUniformChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "multiSeriesUniformChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "multiSeriesUniformChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "multiSeriesUniformChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
-HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
+/*
+void barThicknessChanged( float thicknessRatio )
+*/
+HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "primarySeriesChanged(QBar3DSeries*)", "primarySeriesChanged(QBar3DSeries*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "barThicknessChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::barThicknessChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "barThicknessChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "barThicknessChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "barThicknessChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "barThicknessChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void barSpacingChanged( const QSizeF & spacing )
+*/
+HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "barSpacingChanged(QSizeF)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::barSpacingChanged, [sender](QSizeF arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "barSpacingChanged(QSizeF)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZEF" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "barSpacingChanged(QSizeF)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "barSpacingChanged(QSizeF)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "barSpacingChanged(QSizeF)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void barSpacingRelativeChanged( bool relative )
+*/
+HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "barSpacingRelativeChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::barSpacingRelativeChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "barSpacingRelativeChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "barSpacingRelativeChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "barSpacingRelativeChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "barSpacingRelativeChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void rowAxisChanged( QCategory3DAxis * axis )
+*/
 HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "rowAxisChanged(QCategory3DAxis*)", "rowAxisChanged(QCategory3DAxis*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowAxisChanged(QCategory3DAxis*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::rowAxisChanged, [sender](QCategory3DAxis* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowAxisChanged(QCategory3DAxis*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCATEGORY3DAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowAxisChanged(QCategory3DAxis*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowAxisChanged(QCategory3DAxis*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowAxisChanged(QCategory3DAxis*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
-HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
+/*
+void columnAxisChanged( QCategory3DAxis * axis )
+*/
+HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "selectedSeriesChanged(QBar3DSeries*)", "selectedSeriesChanged(QBar3DSeries*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnAxisChanged(QCategory3DAxis*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::columnAxisChanged, [sender](QCategory3DAxis* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnAxisChanged(QCategory3DAxis*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCATEGORY3DAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnAxisChanged(QCategory3DAxis*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnAxisChanged(QCategory3DAxis*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnAxisChanged(QCategory3DAxis*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void valueAxisChanged( QValue3DAxis * axis )
+*/
 HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "valueAxisChanged(QValue3DAxis*)", "valueAxisChanged(QValue3DAxis*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueAxisChanged(QValue3DAxis*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::valueAxisChanged, [sender](QValue3DAxis* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueAxisChanged(QValue3DAxis*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueAxisChanged(QValue3DAxis*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueAxisChanged(QValue3DAxis*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueAxisChanged(QValue3DAxis*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void primarySeriesChanged( QBar3DSeries * series )
+*/
+HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "primarySeriesChanged(QBar3DSeries*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::primarySeriesChanged, [sender](QBar3DSeries* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "primarySeriesChanged(QBar3DSeries*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "primarySeriesChanged(QBar3DSeries*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "primarySeriesChanged(QBar3DSeries*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "primarySeriesChanged(QBar3DSeries*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void selectedSeriesChanged( QBar3DSeries * series )
+*/
+HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedSeriesChanged(QBar3DSeries*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::selectedSeriesChanged, [sender](QBar3DSeries* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QBar3DSeries*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedSeriesChanged(QBar3DSeries*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedSeriesChanged(QBar3DSeries*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedSeriesChanged(QBar3DSeries*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void floorLevelChanged( float level )
+*/
+HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "floorLevelChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::floorLevelChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "floorLevelChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "floorLevelChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "floorLevelChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "floorLevelChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

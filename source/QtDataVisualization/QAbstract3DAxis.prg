@@ -38,16 +38,16 @@ CLASS QAbstract3DAxis INHERIT QObject
    METHOD setTitleFixed
    METHOD setRange
 
+   METHOD onTitleChanged
+   METHOD onLabelsChanged
+   METHOD onOrientationChanged
+   METHOD onMinChanged
+   METHOD onMaxChanged
+   METHOD onRangeChanged
    METHOD onAutoAdjustRangeChanged
    METHOD onLabelAutoRotationChanged
-   METHOD onLabelsChanged
-   METHOD onMaxChanged
-   METHOD onMinChanged
-   METHOD onOrientationChanged
-   METHOD onRangeChanged
-   METHOD onTitleChanged
-   METHOD onTitleFixedChanged
    METHOD onTitleVisibilityChanged
+   METHOD onTitleFixedChanged
 
    DESTRUCTOR destroyObject
 
@@ -70,6 +70,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstract3DAxis>
@@ -575,56 +576,656 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QAbstract3DAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
-{
-  QAbstract3DAxisSlots_connect_signal( "autoAdjustRangeChanged(bool)", "autoAdjustRangeChanged(bool)" );
-}
-
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
-{
-  QAbstract3DAxisSlots_connect_signal( "labelAutoRotationChanged(float)", "labelAutoRotationChanged(float)" );
-}
-
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
-{
-  QAbstract3DAxisSlots_connect_signal( "labelsChanged()", "labelsChanged()" );
-}
-
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
-{
-  QAbstract3DAxisSlots_connect_signal( "maxChanged(float)", "maxChanged(float)" );
-}
-
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
-{
-  QAbstract3DAxisSlots_connect_signal( "minChanged(float)", "minChanged(float)" );
-}
-
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
-{
-  QAbstract3DAxisSlots_connect_signal( "orientationChanged(QAbstract3DAxis::AxisOrientation)", "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
-}
-
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
-{
-  QAbstract3DAxisSlots_connect_signal( "rangeChanged(float,float)", "rangeChanged(float,float)" );
-}
-
+/*
+void titleChanged( const QString & newTitle )
+*/
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
 {
-  QAbstract3DAxisSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "titleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::titleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "titleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "titleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "titleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
+/*
+void labelsChanged()
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
 {
-  QAbstract3DAxisSlots_connect_signal( "titleFixedChanged(bool)", "titleFixedChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "labelsChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::labelsChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "labelsChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "labelsChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "labelsChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::orientationChanged, [sender](QAbstract3DAxis::AxisOrientation arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void minChanged( float value )
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "minChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::minChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "minChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "minChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "minChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void maxChanged( float value )
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "maxChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::maxChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "maxChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "maxChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "maxChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void rangeChanged( float min, float max )
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rangeChanged(float,float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::rangeChanged, [sender](float arg1, float arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(float,float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutND( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rangeChanged(float,float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rangeChanged(float,float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rangeChanged(float,float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void autoAdjustRangeChanged( bool autoAdjust )
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "autoAdjustRangeChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::autoAdjustRangeChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "autoAdjustRangeChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "autoAdjustRangeChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "autoAdjustRangeChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "autoAdjustRangeChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void labelAutoRotationChanged( float angle )
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "labelAutoRotationChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::labelAutoRotationChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelAutoRotationChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "labelAutoRotationChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "labelAutoRotationChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "labelAutoRotationChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void titleVisibilityChanged( bool visible )
+*/
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 {
-  QAbstract3DAxisSlots_connect_signal( "titleVisibilityChanged(bool)", "titleVisibilityChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "titleVisibilityChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::titleVisibilityChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "titleVisibilityChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "titleVisibilityChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "titleVisibilityChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "titleVisibilityChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void titleFixedChanged( bool fixed )
+*/
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "titleFixedChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::titleFixedChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "titleFixedChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "titleFixedChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "titleFixedChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "titleFixedChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

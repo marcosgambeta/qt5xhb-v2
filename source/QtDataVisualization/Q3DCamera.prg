@@ -72,6 +72,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DCamera>
@@ -618,51 +619,591 @@ HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void Q3DCameraSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void cameraPresetChanged( Q3DCamera::CameraPreset preset )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "cameraPresetChanged(Q3DCamera::CameraPreset)", "cameraPresetChanged(Q3DCamera::CameraPreset)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::cameraPresetChanged, [sender](Q3DCamera::CameraPreset arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void maxZoomLevelChanged( float zoomLevel )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "maxZoomLevelChanged(float)", "maxZoomLevelChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "maxZoomLevelChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::maxZoomLevelChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxZoomLevelChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "maxZoomLevelChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "maxZoomLevelChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "maxZoomLevelChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void minZoomLevelChanged( float zoomLevel )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "minZoomLevelChanged(float)", "minZoomLevelChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "minZoomLevelChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::minZoomLevelChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "minZoomLevelChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "minZoomLevelChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "minZoomLevelChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "minZoomLevelChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void targetChanged( const QVector3D & target )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "targetChanged(QVector3D)", "targetChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "targetChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::targetChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "targetChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "targetChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "targetChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "targetChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void wrapXRotationChanged( bool isEnabled )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "wrapXRotationChanged(bool)", "wrapXRotationChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "wrapXRotationChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::wrapXRotationChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "wrapXRotationChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "wrapXRotationChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "wrapXRotationChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "wrapXRotationChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void wrapYRotationChanged( bool isEnabled )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "wrapYRotationChanged(bool)", "wrapYRotationChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "wrapYRotationChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::wrapYRotationChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "wrapYRotationChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "wrapYRotationChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "wrapYRotationChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "wrapYRotationChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void xRotationChanged( float rotation )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "xRotationChanged(float)", "xRotationChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "xRotationChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::xRotationChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "xRotationChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "xRotationChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "xRotationChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "xRotationChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void yRotationChanged( float rotation )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "yRotationChanged(float)", "yRotationChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "yRotationChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::yRotationChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "yRotationChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "yRotationChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "yRotationChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "yRotationChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void zoomLevelChanged( float zoomLevel )
+*/
 HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 {
-  Q3DCameraSlots_connect_signal( "zoomLevelChanged(float)", "zoomLevelChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "zoomLevelChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::zoomLevelChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomLevelChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "zoomLevelChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "zoomLevelChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "zoomLevelChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

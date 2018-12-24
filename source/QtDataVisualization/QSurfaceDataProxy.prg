@@ -59,6 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QSurfaceDataProxy>
@@ -335,51 +336,599 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void arrayReset()
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
 {
-  QSurfaceDataProxySlots_connect_signal( "arrayReset()", "arrayReset()" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "arrayReset()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::arrayReset, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "arrayReset()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "arrayReset()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "arrayReset()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void columnCountChanged( int count )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
 {
-  QSurfaceDataProxySlots_connect_signal( "columnCountChanged(int)", "columnCountChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnCountChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::columnCountChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnCountChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnCountChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnCountChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void itemChanged( int rowIndex, int columnIndex )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
 {
-  QSurfaceDataProxySlots_connect_signal( "itemChanged(int,int)", "itemChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::itemChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowCountChanged( int count )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
 {
-  QSurfaceDataProxySlots_connect_signal( "rowCountChanged(int)", "rowCountChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowCountChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowCountChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowCountChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowCountChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowCountChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsAdded( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
 {
-  QSurfaceDataProxySlots_connect_signal( "rowsAdded(int,int)", "rowsAdded(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsAdded, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAdded(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsAdded(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsAdded(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsAdded(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsChanged( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
 {
-  QSurfaceDataProxySlots_connect_signal( "rowsChanged(int,int)", "rowsChanged(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsChanged, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsChanged(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsChanged(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsChanged(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsChanged(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsInserted( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
 {
-  QSurfaceDataProxySlots_connect_signal( "rowsInserted(int,int)", "rowsInserted(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsInserted, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsInserted(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsInserted(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsInserted(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsInserted(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowsRemoved( int startIndex, int count )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
 {
-  QSurfaceDataProxySlots_connect_signal( "rowsRemoved(int,int)", "rowsRemoved(int,int)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsRemoved, [sender](int arg1, int arg2) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsRemoved(int,int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowsRemoved(int,int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowsRemoved(int,int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowsRemoved(int,int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void seriesChanged( QSurface3DSeries * series )
+*/
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
 {
-  QSurfaceDataProxySlots_connect_signal( "seriesChanged(QSurface3DSeries*)", "seriesChanged(QSurface3DSeries*)" );
+  if( hb_pcount() == 1 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "seriesChanged(QSurface3DSeries*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::seriesChanged, [sender](QSurface3DSeries* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QSurface3DSeries*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSURFACE3DSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "seriesChanged(QSurface3DSeries*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "seriesChanged(QSurface3DSeries*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "seriesChanged(QSurface3DSeries*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

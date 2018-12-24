@@ -69,7 +69,6 @@ CLASS QItemModelBarDataProxy INHERIT QBarDataProxy
    METHOD onColumnRoleChanged
    METHOD onColumnRolePatternChanged
    METHOD onColumnRoleReplaceChanged
-   METHOD onItemModelChanged
    METHOD onMultiMatchBehaviorChanged
    METHOD onRotationRoleChanged
    METHOD onRotationRolePatternChanged
@@ -104,6 +103,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QItemModelBarDataProxy>
@@ -1267,101 +1267,1176 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX )
   }
 }
 
-void QItemModelBarDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void autoColumnCategoriesChanged( bool enable )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "autoColumnCategoriesChanged(bool)", "autoColumnCategoriesChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "autoColumnCategoriesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::autoColumnCategoriesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "autoColumnCategoriesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "autoColumnCategoriesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "autoColumnCategoriesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "autoColumnCategoriesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void autoRowCategoriesChanged( bool enable )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "autoRowCategoriesChanged(bool)", "autoRowCategoriesChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "autoRowCategoriesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::autoRowCategoriesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "autoRowCategoriesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "autoRowCategoriesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "autoRowCategoriesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "autoRowCategoriesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void columnCategoriesChanged()
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "columnCategoriesChanged()", "columnCategoriesChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnCategoriesChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnCategoriesChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCategoriesChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnCategoriesChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnCategoriesChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnCategoriesChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void columnRoleChanged( const QString & role )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "columnRoleChanged(QString)", "columnRoleChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnRoleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnRoleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRoleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnRoleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnRoleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnRoleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void columnRolePatternChanged( const QRegExp & pattern )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "columnRolePatternChanged(QRegExp)", "columnRolePatternChanged(QRegExp)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnRolePatternChanged(QRegExp)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnRolePatternChanged, [sender](QRegExp arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRolePatternChanged(QRegExp)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnRolePatternChanged(QRegExp)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnRolePatternChanged(QRegExp)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnRolePatternChanged(QRegExp)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void columnRoleReplaceChanged( const QString & replace )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "columnRoleReplaceChanged(QString)", "columnRoleReplaceChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "columnRoleReplaceChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnRoleReplaceChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRoleReplaceChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "columnRoleReplaceChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "columnRoleReplaceChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "columnRoleReplaceChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
-HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
-{
-  QItemModelBarDataProxySlots_connect_signal( "itemModelChanged(QAbstractItemModel*)", "itemModelChanged(QAbstractItemModel*)" );
-}
+/*
+void itemModelChanged( const QAbstractItemModel * itemModel )
+*/
 
+/*
+void multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behavior )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)", "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::multiMatchBehaviorChanged, [sender](QItemModelBarDataProxy::MultiMatchBehavior arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rotationRoleChanged( const QString & role )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "rotationRoleChanged(QString)", "rotationRoleChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rotationRoleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rotationRoleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rotationRoleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rotationRoleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rotationRoleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rotationRolePatternChanged( const QRegExp & pattern )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "rotationRolePatternChanged(QRegExp)", "rotationRolePatternChanged(QRegExp)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rotationRolePatternChanged(QRegExp)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rotationRolePatternChanged, [sender](QRegExp arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRolePatternChanged(QRegExp)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rotationRolePatternChanged(QRegExp)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rotationRolePatternChanged(QRegExp)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rotationRolePatternChanged(QRegExp)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rotationRoleReplaceChanged( const QString & replace )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "rotationRoleReplaceChanged(QString)", "rotationRoleReplaceChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rotationRoleReplaceChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rotationRoleReplaceChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleReplaceChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rotationRoleReplaceChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rotationRoleReplaceChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rotationRoleReplaceChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowCategoriesChanged()
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "rowCategoriesChanged()", "rowCategoriesChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowCategoriesChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowCategoriesChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCategoriesChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowCategoriesChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowCategoriesChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowCategoriesChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowRoleChanged( const QString & role )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "rowRoleChanged(QString)", "rowRoleChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowRoleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowRoleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRoleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowRoleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowRoleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowRoleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowRolePatternChanged( const QRegExp & pattern )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "rowRolePatternChanged(QRegExp)", "rowRolePatternChanged(QRegExp)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowRolePatternChanged(QRegExp)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowRolePatternChanged, [sender](QRegExp arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRolePatternChanged(QRegExp)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowRolePatternChanged(QRegExp)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowRolePatternChanged(QRegExp)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowRolePatternChanged(QRegExp)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void rowRoleReplaceChanged( const QString & replace )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "rowRoleReplaceChanged(QString)", "rowRoleReplaceChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "rowRoleReplaceChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowRoleReplaceChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRoleReplaceChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "rowRoleReplaceChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "rowRoleReplaceChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "rowRoleReplaceChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void useModelCategoriesChanged( bool enable )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "useModelCategoriesChanged(bool)", "useModelCategoriesChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "useModelCategoriesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::useModelCategoriesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "useModelCategoriesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "useModelCategoriesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "useModelCategoriesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "useModelCategoriesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void valueRoleChanged( const QString & role )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "valueRoleChanged(QString)", "valueRoleChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueRoleChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::valueRoleChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRoleChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueRoleChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueRoleChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueRoleChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void valueRolePatternChanged( const QRegExp & pattern )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "valueRolePatternChanged(QRegExp)", "valueRolePatternChanged(QRegExp)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueRolePatternChanged(QRegExp)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::valueRolePatternChanged, [sender](QRegExp arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRolePatternChanged(QRegExp)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueRolePatternChanged(QRegExp)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueRolePatternChanged(QRegExp)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueRolePatternChanged(QRegExp)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void valueRoleReplaceChanged( const QString & replace )
+*/
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
 {
-  QItemModelBarDataProxySlots_connect_signal( "valueRoleReplaceChanged(QString)", "valueRoleReplaceChanged(QString)" );
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "valueRoleReplaceChanged(QString)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::valueRoleReplaceChanged, [sender](QString arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRoleReplaceChanged(QString)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "valueRoleReplaceChanged(QString)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "valueRoleReplaceChanged(QString)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "valueRoleReplaceChanged(QString)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

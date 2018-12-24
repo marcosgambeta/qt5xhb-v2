@@ -99,6 +99,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QCustom3DVolume>
@@ -1128,91 +1129,1109 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
   }
 }
 
-void QCustom3DVolumeSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void alphaMultiplierChanged( float mult )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "alphaMultiplierChanged(float)", "alphaMultiplierChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "alphaMultiplierChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::alphaMultiplierChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "alphaMultiplierChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "alphaMultiplierChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "alphaMultiplierChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "alphaMultiplierChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void colorTableChanged()
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "colorTableChanged()", "colorTableChanged()" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "colorTableChanged()" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::colorTableChanged, [sender]() {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "colorTableChanged()" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "colorTableChanged()", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "colorTableChanged()" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "colorTableChanged()" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void drawSliceFramesChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "drawSliceFramesChanged(bool)", "drawSliceFramesChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "drawSliceFramesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::drawSliceFramesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "drawSliceFramesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "drawSliceFramesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "drawSliceFramesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "drawSliceFramesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void drawSlicesChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "drawSlicesChanged(bool)", "drawSlicesChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "drawSlicesChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::drawSlicesChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "drawSlicesChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "drawSlicesChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "drawSlicesChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "drawSlicesChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void preserveOpacityChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "preserveOpacityChanged(bool)", "preserveOpacityChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "preserveOpacityChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::preserveOpacityChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "preserveOpacityChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "preserveOpacityChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "preserveOpacityChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "preserveOpacityChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sliceFrameColorChanged( const QColor & color )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameColorChanged(QColor)", "sliceFrameColorChanged(QColor)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sliceFrameColorChanged(QColor)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameColorChanged, [sender](QColor arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameColorChanged(QColor)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sliceFrameColorChanged(QColor)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliceFrameColorChanged(QColor)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sliceFrameColorChanged(QColor)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sliceFrameGapsChanged( const QVector3D & values )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameGapsChanged(QVector3D)", "sliceFrameGapsChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sliceFrameGapsChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameGapsChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameGapsChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sliceFrameGapsChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliceFrameGapsChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sliceFrameGapsChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sliceFrameThicknessesChanged( const QVector3D & values )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameThicknessesChanged(QVector3D)", "sliceFrameThicknessesChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sliceFrameThicknessesChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameThicknessesChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameThicknessesChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sliceFrameThicknessesChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliceFrameThicknessesChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sliceFrameThicknessesChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sliceFrameWidthsChanged( const QVector3D & values )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameWidthsChanged(QVector3D)", "sliceFrameWidthsChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sliceFrameWidthsChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameWidthsChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameWidthsChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sliceFrameWidthsChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliceFrameWidthsChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sliceFrameWidthsChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sliceIndexXChanged( int value )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceIndexXChanged(int)", "sliceIndexXChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sliceIndexXChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceIndexXChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexXChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sliceIndexXChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliceIndexXChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sliceIndexXChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sliceIndexYChanged( int value )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceIndexYChanged(int)", "sliceIndexYChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sliceIndexYChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceIndexYChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexYChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sliceIndexYChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliceIndexYChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sliceIndexYChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void sliceIndexZChanged( int value )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceIndexZChanged(int)", "sliceIndexZChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "sliceIndexZChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceIndexZChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexZChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "sliceIndexZChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "sliceIndexZChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "sliceIndexZChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textureDepthChanged( int value )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureDepthChanged(int)", "textureDepthChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textureDepthChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureDepthChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textureDepthChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textureDepthChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textureDepthChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textureDepthChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textureFormatChanged( QImage::Format format )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureFormatChanged(QImage::Format)", "textureFormatChanged(QImage::Format)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textureFormatChanged(QImage::Format)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureFormatChanged, [sender](QImage::Format arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFormatChanged(QImage::Format)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textureFormatChanged(QImage::Format)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textureFormatChanged(QImage::Format)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textureFormatChanged(QImage::Format)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textureHeightChanged( int value )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureHeightChanged(int)", "textureHeightChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textureHeightChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureHeightChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textureHeightChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textureHeightChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textureHeightChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textureHeightChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void textureWidthChanged( int value )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureWidthChanged(int)", "textureWidthChanged(int)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "textureWidthChanged(int)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureWidthChanged, [sender](int arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "textureWidthChanged(int)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "textureWidthChanged(int)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "textureWidthChanged(int)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "textureWidthChanged(int)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void useHighDefShaderChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "useHighDefShaderChanged(bool)", "useHighDefShaderChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "useHighDefShaderChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::useHighDefShaderChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "useHighDefShaderChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "useHighDefShaderChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "useHighDefShaderChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "useHighDefShaderChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

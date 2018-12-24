@@ -61,6 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DScatter>
@@ -484,26 +485,266 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
   }
 }
 
-void Q3DScatterSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void axisXChanged( QValue3DAxis * axis )
+*/
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::axisXChanged, [sender](QValue3DAxis* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisXChanged(QValue3DAxis*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "axisXChanged(QValue3DAxis*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "axisXChanged(QValue3DAxis*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "axisXChanged(QValue3DAxis*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void axisYChanged( QValue3DAxis * axis )
+*/
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::axisYChanged, [sender](QValue3DAxis* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisYChanged(QValue3DAxis*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "axisYChanged(QValue3DAxis*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "axisYChanged(QValue3DAxis*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "axisYChanged(QValue3DAxis*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void axisZChanged( QValue3DAxis * axis )
+*/
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::axisZChanged, [sender](QValue3DAxis* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisZChanged(QValue3DAxis*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "axisZChanged(QValue3DAxis*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "axisZChanged(QValue3DAxis*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "axisZChanged(QValue3DAxis*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectedSeriesChanged( QScatter3DSeries * series )
+*/
 HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "selectedSeriesChanged(QScatter3DSeries*)", "selectedSeriesChanged(QScatter3DSeries*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::selectedSeriesChanged, [sender](QScatter3DSeries* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QScatter3DSeries*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedSeriesChanged(QScatter3DSeries*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

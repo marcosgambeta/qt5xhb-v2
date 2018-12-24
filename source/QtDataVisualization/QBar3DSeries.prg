@@ -30,8 +30,8 @@ CLASS QBar3DSeries INHERIT QAbstract3DSeries
    METHOD invalidSelectionPosition
 
    METHOD onDataProxyChanged
-   METHOD onMeshAngleChanged
    METHOD onSelectedBarChanged
+   METHOD onMeshAngleChanged
 
    DESTRUCTOR destroyObject
 
@@ -54,6 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QBar3DSeries>
@@ -290,21 +291,201 @@ HB_FUNC_STATIC( QBAR3DSERIES_INVALIDSELECTIONPOSITION )
 #endif
 }
 
-void QBar3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void dataProxyChanged( QBarDataProxy * proxy )
+*/
 HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 {
-  QBar3DSeriesSlots_connect_signal( "dataProxyChanged(QBarDataProxy*)", "dataProxyChanged(QBarDataProxy*)" );
+  if( hb_pcount() == 1 )
+  {
+    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "dataProxyChanged(QBarDataProxy*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBar3DSeries::dataProxyChanged, [sender](QBarDataProxy* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QBarDataProxy*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBARDATAPROXY" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "dataProxyChanged(QBarDataProxy*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "dataProxyChanged(QBarDataProxy*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "dataProxyChanged(QBarDataProxy*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
-HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
-{
-  QBar3DSeriesSlots_connect_signal( "meshAngleChanged(float)", "meshAngleChanged(float)" );
-}
-
+/*
+void selectedBarChanged( const QPoint & position )
+*/
 HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 {
-  QBar3DSeriesSlots_connect_signal( "selectedBarChanged(QPoint)", "selectedBarChanged(QPoint)" );
+  if( hb_pcount() == 1 )
+  {
+    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedBarChanged(QPoint)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBar3DSeries::selectedBarChanged, [sender](QPoint arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedBarChanged(QPoint)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedBarChanged(QPoint)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedBarChanged(QPoint)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedBarChanged(QPoint)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void meshAngleChanged( float angle )
+*/
+HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "meshAngleChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QBar3DSeries::meshAngleChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "meshAngleChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "meshAngleChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "meshAngleChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "meshAngleChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

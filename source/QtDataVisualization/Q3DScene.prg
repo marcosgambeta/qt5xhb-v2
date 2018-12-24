@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DScene>
@@ -670,56 +671,656 @@ HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
 #endif
 }
 
-void Q3DSceneSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void activeCameraChanged( Q3DCamera * camera )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 {
-  Q3DSceneSlots_connect_signal( "activeCameraChanged(Q3DCamera*)", "activeCameraChanged(Q3DCamera*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeCameraChanged(Q3DCamera*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::activeCameraChanged, [sender](Q3DCamera* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeCameraChanged(Q3DCamera*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DCAMERA" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeCameraChanged(Q3DCamera*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeCameraChanged(Q3DCamera*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeCameraChanged(Q3DCamera*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void activeLightChanged( Q3DLight * light )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "activeLightChanged(Q3DLight*)", "activeLightChanged(Q3DLight*)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeLightChanged(Q3DLight*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::activeLightChanged, [sender](Q3DLight* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeLightChanged(Q3DLight*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DLIGHT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeLightChanged(Q3DLight*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeLightChanged(Q3DLight*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeLightChanged(Q3DLight*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void devicePixelRatioChanged( float pixelRatio )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "devicePixelRatioChanged(float)", "devicePixelRatioChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "devicePixelRatioChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::devicePixelRatioChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "devicePixelRatioChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "devicePixelRatioChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "devicePixelRatioChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "devicePixelRatioChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void graphPositionQueryChanged( const QPoint & position )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "graphPositionQueryChanged(QPoint)", "graphPositionQueryChanged(QPoint)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "graphPositionQueryChanged(QPoint)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::graphPositionQueryChanged, [sender](QPoint arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "graphPositionQueryChanged(QPoint)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "graphPositionQueryChanged(QPoint)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "graphPositionQueryChanged(QPoint)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "graphPositionQueryChanged(QPoint)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void primarySubViewportChanged( const QRect & subViewport )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "primarySubViewportChanged(QRect)", "primarySubViewportChanged(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "primarySubViewportChanged(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::primarySubViewportChanged, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "primarySubViewportChanged(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "primarySubViewportChanged(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "primarySubViewportChanged(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "primarySubViewportChanged(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void secondarySubviewOnTopChanged( bool isSecondaryOnTop )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "secondarySubviewOnTopChanged(bool)", "secondarySubviewOnTopChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "secondarySubviewOnTopChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::secondarySubviewOnTopChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubviewOnTopChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "secondarySubviewOnTopChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "secondarySubviewOnTopChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "secondarySubviewOnTopChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void secondarySubViewportChanged( const QRect & subViewport )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "secondarySubViewportChanged(QRect)", "secondarySubViewportChanged(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "secondarySubViewportChanged(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::secondarySubViewportChanged, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubViewportChanged(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "secondarySubViewportChanged(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "secondarySubViewportChanged(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "secondarySubViewportChanged(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectionQueryPositionChanged( const QPoint & position )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "selectionQueryPositionChanged(QPoint)", "selectionQueryPositionChanged(QPoint)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionQueryPositionChanged(QPoint)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::selectionQueryPositionChanged, [sender](QPoint arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionQueryPositionChanged(QPoint)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionQueryPositionChanged(QPoint)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionQueryPositionChanged(QPoint)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionQueryPositionChanged(QPoint)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void slicingActiveChanged( bool isSlicingActive )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 {
-  Q3DSceneSlots_connect_signal( "slicingActiveChanged(bool)", "slicingActiveChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "slicingActiveChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::slicingActiveChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "slicingActiveChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "slicingActiveChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "slicingActiveChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "slicingActiveChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void viewportChanged( const QRect & viewport )
+*/
 HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 {
-  Q3DSceneSlots_connect_signal( "viewportChanged(QRect)", "viewportChanged(QRect)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "viewportChanged(QRect)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::viewportChanged, [sender](QRect arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportChanged(QRect)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "viewportChanged(QRect)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "viewportChanged(QRect)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "viewportChanged(QRect)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

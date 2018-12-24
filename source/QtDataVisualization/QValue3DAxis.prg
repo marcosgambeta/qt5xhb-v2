@@ -52,6 +52,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QValue3DAxis>
@@ -346,6 +347,26 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QValue3DAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
+
+/*
+void formatterChanged( QValue3DAxisFormatter * formatter )
+*/
+
+/*
+void labelFormatChanged( const QString & format )
+*/
+
+/*
+void reversedChanged( bool enable )
+*/
+
+/*
+void segmentCountChanged( int count )
+*/
+
+/*
+void subSegmentCountChanged( int count )
+*/
 
 #pragma ENDDUMP

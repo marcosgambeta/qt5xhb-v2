@@ -121,6 +121,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstract3DGraph>
@@ -1618,96 +1619,1176 @@ void mouseMoveEvent(QMouseEvent *event) [protected]
 void wheelEvent(QWheelEvent *event) [protected]
 */
 
-void QAbstract3DGraphSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "activeInputHandlerChanged(QAbstract3DInputHandler*)", "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::activeInputHandlerChanged, [sender](QAbstract3DInputHandler* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACT3DINPUTHANDLER" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void activeThemeChanged( Q3DTheme * theme )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "activeThemeChanged(Q3DTheme*)", "activeThemeChanged(Q3DTheme*)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "activeThemeChanged(Q3DTheme*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::activeThemeChanged, [sender](Q3DTheme* arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeThemeChanged(Q3DTheme*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DTHEME" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "activeThemeChanged(Q3DTheme*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "activeThemeChanged(Q3DTheme*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "activeThemeChanged(Q3DTheme*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void aspectRatioChanged( qreal ratio )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "aspectRatioChanged(qreal)", "aspectRatioChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "aspectRatioChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::aspectRatioChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "aspectRatioChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "aspectRatioChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "aspectRatioChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "aspectRatioChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void currentFpsChanged( qreal fps )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "currentFpsChanged(qreal)", "currentFpsChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "currentFpsChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::currentFpsChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentFpsChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "currentFpsChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "currentFpsChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "currentFpsChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void horizontalAspectRatioChanged( qreal ratio )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "horizontalAspectRatioChanged(qreal)", "horizontalAspectRatioChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "horizontalAspectRatioChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::horizontalAspectRatioChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "horizontalAspectRatioChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "horizontalAspectRatioChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "horizontalAspectRatioChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "horizontalAspectRatioChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void localeChanged( const QLocale & locale )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "localeChanged(QLocale)", "localeChanged(QLocale)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::localeChanged, [sender](QLocale arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged(QLocale)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QLOCALE" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "localeChanged(QLocale)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "localeChanged(QLocale)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "localeChanged(QLocale)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void marginChanged( qreal margin )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "marginChanged(qreal)", "marginChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "marginChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::marginChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "marginChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "marginChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "marginChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "marginChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void measureFpsChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "measureFpsChanged(bool)", "measureFpsChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "measureFpsChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::measureFpsChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "measureFpsChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "measureFpsChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "measureFpsChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "measureFpsChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void optimizationHintsChanged( QAbstract3DGraph::OptimizationHints hints )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)", "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::optimizationHintsChanged, [sender](QAbstract3DGraph::OptimizationHints arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void orthoProjectionChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "orthoProjectionChanged(bool)", "orthoProjectionChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "orthoProjectionChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::orthoProjectionChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "orthoProjectionChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "orthoProjectionChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "orthoProjectionChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "orthoProjectionChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void polarChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "polarChanged(bool)", "polarChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "polarChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::polarChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "polarChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "polarChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "polarChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "polarChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void queriedGraphPositionChanged( const QVector3D & data )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "queriedGraphPositionChanged(QVector3D)", "queriedGraphPositionChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "queriedGraphPositionChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::queriedGraphPositionChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "queriedGraphPositionChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "queriedGraphPositionChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "queriedGraphPositionChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "queriedGraphPositionChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void radialLabelOffsetChanged( float offset )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "radialLabelOffsetChanged(float)", "radialLabelOffsetChanged(float)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "radialLabelOffsetChanged(float)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::radialLabelOffsetChanged, [sender](float arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "radialLabelOffsetChanged(float)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "radialLabelOffsetChanged(float)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "radialLabelOffsetChanged(float)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "radialLabelOffsetChanged(float)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void reflectionChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "reflectionChanged(bool)", "reflectionChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "reflectionChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::reflectionChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "reflectionChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "reflectionChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "reflectionChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "reflectionChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void reflectivityChanged( qreal reflectivity )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "reflectivityChanged(qreal)", "reflectivityChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "reflectivityChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::reflectivityChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "reflectivityChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "reflectivityChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "reflectivityChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "reflectivityChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectedElementChanged( QAbstract3DGraph::ElementType type )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "selectedElementChanged(QAbstract3DGraph::ElementType)", "selectedElementChanged(QAbstract3DGraph::ElementType)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::selectedElementChanged, [sender](QAbstract3DGraph::ElementType arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void selectionModeChanged( QAbstract3DGraph::SelectionFlags mode )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "selectionModeChanged(QAbstract3DGraph::SelectionFlags)", "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::selectionModeChanged, [sender](QAbstract3DGraph::SelectionFlags arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality )
+*/
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)", "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
+  if( hb_pcount() == 1 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::shadowQualityChanged, [sender](QAbstract3DGraph::ShadowQuality arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

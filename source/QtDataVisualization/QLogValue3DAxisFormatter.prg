@@ -51,6 +51,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QLogValue3DAxisFormatter>
@@ -268,21 +269,201 @@ virtual float valueAt(float position) const [protected]
 virtual void populateCopy(QValue3DAxisFormatter &copy) const [protected]
 */
 
-void QLogValue3DAxisFormatterSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void autoSubGridChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
 {
-  QLogValue3DAxisFormatterSlots_connect_signal( "autoSubGridChanged(bool)", "autoSubGridChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "autoSubGridChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValue3DAxisFormatter::autoSubGridChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "autoSubGridChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "autoSubGridChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "autoSubGridChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "autoSubGridChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void baseChanged( qreal base )
+*/
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
 {
-  QLogValue3DAxisFormatterSlots_connect_signal( "baseChanged(qreal)", "baseChanged(qreal)" );
+  if( hb_pcount() == 1 )
+  {
+    QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "baseChanged(qreal)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValue3DAxisFormatter::baseChanged, [sender](qreal arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "baseChanged(qreal)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "baseChanged(qreal)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "baseChanged(qreal)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "baseChanged(qreal)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
+/*
+void showEdgeLabelsChanged( bool enabled )
+*/
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
 {
-  QLogValue3DAxisFormatterSlots_connect_signal( "showEdgeLabelsChanged(bool)", "showEdgeLabelsChanged(bool)" );
+  if( hb_pcount() == 1 )
+  {
+    QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "showEdgeLabelsChanged(bool)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &QLogValue3DAxisFormatter::showEdgeLabelsChanged, [sender](bool arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "showEdgeLabelsChanged(bool)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "showEdgeLabelsChanged(bool)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "showEdgeLabelsChanged(bool)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "showEdgeLabelsChanged(bool)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP

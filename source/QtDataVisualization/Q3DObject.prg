@@ -49,6 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DObject>
@@ -204,11 +205,71 @@ void setDirty(bool dirty) [protected]
 bool isDirty() const [protected]
 */
 
-void Q3DObjectSlots_connect_signal ( const QString & signal, const QString & slot );
+using namespace QtDataVisualization;
 
+/*
+void positionChanged( const QVector3D & position )
+*/
 HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
 {
-  Q3DObjectSlots_connect_signal( "positionChanged(QVector3D)", "positionChanged(QVector3D)" );
+  if( hb_pcount() == 1 )
+  {
+    Q3DObject * sender = (Q3DObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "positionChanged(QVector3D)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, &Q3DObject::positionChanged, [sender](QVector3D arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QVector3D)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DOBJECT" );
+            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "positionChanged(QVector3D)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    Q3DObject * sender = (Q3DObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "positionChanged(QVector3D)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "positionChanged(QVector3D)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 #pragma ENDDUMP
