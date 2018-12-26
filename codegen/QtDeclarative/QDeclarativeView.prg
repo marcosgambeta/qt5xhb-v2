@@ -89,10 +89,9 @@ $method=|QUrl|source|
 $prototype=Status status () const
 $method=|QDeclarativeView::Status|status|
 
-%% $beginSignals
-%% $signal=|sceneResized(QSize)
-%% $signal=|statusChanged(QDeclarativeView::Status)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void sceneResized( QSize size )
 $signalMethod=|void|sceneResized|QSize

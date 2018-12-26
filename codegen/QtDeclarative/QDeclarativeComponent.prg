@@ -106,10 +106,9 @@ $method=|QDeclarativeComponent::Status|status|
 $prototype=QUrl url () const
 $method=|QUrl|url|
 
-%% $beginSignals
-%% $signal=|progressChanged(qreal)
-%% $signal=|statusChanged(QDeclarativeComponent::Status)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void progressChanged( qreal progress )
 $signalMethod=|void|progressChanged|qreal

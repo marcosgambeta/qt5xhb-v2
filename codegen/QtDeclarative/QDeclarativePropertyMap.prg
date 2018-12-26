@@ -56,9 +56,9 @@ $method=|int|size|
 $prototype=QVariant value ( const QString & key ) const
 $method=|QVariant|value|const QString &
 
-%% $beginSignals
-%% $signal=|valueChanged(QString,QVariant)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void valueChanged( const QString & key, const QVariant & value )
 $signalMethod=|void|valueChanged|QString,QVariant
