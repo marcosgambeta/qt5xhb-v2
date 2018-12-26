@@ -74,13 +74,9 @@ $method=|void|setHue|int
 $prototype=void setSaturation(int saturation)
 $method=|void|setSaturation|int
 
-%% $beginSignals
-%% $signal=|fullScreenChanged(bool)
-%% $signal=|brightnessChanged(int)
-%% $signal=|contrastChanged(int)
-%% $signal=|hueChanged(int)
-%% $signal=|saturationChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void fullScreenChanged( bool fullScreen )
 $signalMethod=|void|fullScreenChanged|bool
