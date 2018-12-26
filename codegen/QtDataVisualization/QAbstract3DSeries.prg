@@ -205,24 +205,9 @@ $method=|void|setItemLabelVisible|bool
 $prototype=Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
 $method=|void|setMeshAxisAndAngle|const QVector3D &,float
 
-%% $beginSignals
-%% $signal=|baseColorChanged(QColor)
-%% $signal=|baseGradientChanged(QLinearGradient)
-%% $signal=|colorStyleChanged(Q3DTheme::ColorStyle)
-%% $signal=|itemLabelChanged(QString)
-%% $signal=|itemLabelFormatChanged(QString)
-%% $signal=|itemLabelVisibilityChanged(bool)
-%% $signal=|meshChanged(QAbstract3DSeries::Mesh)
-%% $signal=|meshRotationChanged(QQuaternion)
-%% $signal=|meshSmoothChanged(bool)
-%% $signal=|multiHighlightColorChanged(QColor)
-%% $signal=|multiHighlightGradientChanged(QLinearGradient)
-%% $signal=|nameChanged(QString)
-%% $signal=|singleHighlightColorChanged(QColor)
-%% $signal=|singleHighlightGradientChanged(QLinearGradient)
-%% $signal=|userDefinedMeshChanged(QString)
-%% $signal=|visibilityChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

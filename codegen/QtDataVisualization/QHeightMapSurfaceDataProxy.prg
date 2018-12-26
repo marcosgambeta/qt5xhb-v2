@@ -134,14 +134,9 @@ $method=|void|setMaxZValue|float
 $prototype=void setValueRanges(float minX, float maxX, float minZ, float maxZ)
 $method=|void|setValueRanges|float,float,float,float
 
-%% $beginSignals
-%% $signal=|heightMapChanged(QImage)
-%% $signal=|heightMapFileChanged(QString)
-%% $signal=|maxXValueChanged(float)
-%% $signal=|maxZValueChanged(float)
-%% $signal=|minXValueChanged(float)
-%% $signal=|minZValueChanged(float)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

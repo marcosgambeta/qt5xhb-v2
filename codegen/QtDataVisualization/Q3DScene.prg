@@ -145,18 +145,9 @@ $method=|bool|isPointInSecondarySubView|const QPoint &
 $prototype=static QPoint invalidSelectionPoint()
 $staticMethod=|QPoint|invalidSelectionPoint|
 
-%% $beginSignals
-%% $signal=|activeCameraChanged(Q3DCamera*)
-%% $signal=|activeLightChanged(Q3DLight*)
-%% $signal=|devicePixelRatioChanged(float)
-%% $signal=|graphPositionQueryChanged(QPoint)
-%% $signal=|primarySubViewportChanged(QRect)
-%% $signal=|secondarySubviewOnTopChanged(bool)
-%% $signal=|secondarySubViewportChanged(QRect)
-%% $signal=|selectionQueryPositionChanged(QPoint)
-%% $signal=|slicingActiveChanged(bool)
-%% $signal=|viewportChanged(QRect)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

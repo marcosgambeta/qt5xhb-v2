@@ -280,27 +280,9 @@ $method=|QImage::Format|textureFormat|
 $prototype=QImage renderSlice(Qt::Axis axis, int index)
 $method=|QImage|renderSlice|Qt::Axis,int
 
-%% $beginSignals
-%% $signal=|alphaMultiplierChanged(float)
-%% $signal=|colorTableChanged()
-%% $signal=|drawSliceFramesChanged(bool)
-%% $signal=|drawSlicesChanged(bool)
-%% $signal=|preserveOpacityChanged(bool)
-%% $signal=|sliceFrameColorChanged(QColor)
-%% $signal=|sliceFrameGapsChanged(QVector3D)
-%% $signal=|sliceFrameThicknessesChanged(QVector3D)
-%% $signal=|sliceFrameWidthsChanged(QVector3D)
-%% $signal=|sliceIndexXChanged(int)
-%% $signal=|sliceIndexYChanged(int)
-%% $signal=|sliceIndexZChanged(int)
-%% %% TODO: implementar
-%% %% $signal=|textureDataChanged(QVector<uchar>*)
-%% $signal=|textureDepthChanged(int)
-%% $signal=|textureFormatChanged(QImage::Format)
-%% $signal=|textureHeightChanged(int)
-%% $signal=|textureWidthChanged(int)
-%% $signal=|useHighDefShaderChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

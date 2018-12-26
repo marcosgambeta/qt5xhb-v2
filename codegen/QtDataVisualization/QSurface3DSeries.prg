@@ -133,15 +133,9 @@ $method=|void|setTextureFile|const QString &
 $prototype=static QPoint invalidSelectionPosition()
 $staticMethod=|QPoint|invalidSelectionPosition|
 
-%% $beginSignals
-%% $signal=|dataProxyChanged(QSurfaceDataProxy*)
-%% $signal=|drawModeChanged(QSurface3DSeries::DrawFlags)
-%% $signal=|flatShadingEnabledChanged(bool)
-%% $signal=|flatShadingSupportedChanged(bool)
-%% $signal=|selectedPointChanged(QPoint)
-%% $signal=|textureChanged(QImage)
-%% $signal=|textureFileChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

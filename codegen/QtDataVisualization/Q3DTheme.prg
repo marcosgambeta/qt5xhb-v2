@@ -284,30 +284,9 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 %%
 %%
 
-%% $beginSignals
-%% $signal=|ambientLightStrengthChanged(float)
-%% $signal=|backgroundColorChanged(QColor)
-%% $signal=|backgroundEnabledChanged(bool)
-%% $signal=|baseColorsChanged(QList<QColor>)
-%% $signal=|baseGradientsChanged(QList<QLinearGradient>)
-%% $signal=|colorStyleChanged(Q3DTheme::ColorStyle)
-%% $signal=|fontChanged(QFont)
-%% $signal=|gridEnabledChanged(bool)
-%% $signal=|gridLineColorChanged(QColor)
-%% $signal=|highlightLightStrengthChanged(float)
-%% $signal=|labelBackgroundColorChanged(QColor)
-%% $signal=|labelBackgroundEnabledChanged(bool)
-%% $signal=|labelBorderEnabledChanged(bool)
-%% $signal=|labelTextColorChanged(QColor)
-%% $signal=|lightColorChanged(QColor)
-%% $signal=|lightStrengthChanged(float)
-%% $signal=|multiHighlightColorChanged(QColor)
-%% $signal=|multiHighlightGradientChanged(QLinearGradient)
-%% $signal=|singleHighlightColorChanged(QColor)
-%% $signal=|singleHighlightGradientChanged(QLinearGradient)
-%% $signal=|typeChanged(Q3DTheme::Theme)
-%% $signal=|windowColorChanged(QColor)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

@@ -93,15 +93,9 @@ $prototype=void insertItems(int index, const QScatterDataArray &items)
 $prototype=void removeItems(int index, int removeCount)
 $method=|void|removeItems|int,int
 
-%% $beginSignals
-%% $signal=|arrayReset();
-%% $signal=|itemCountChanged(int)
-%% $signal=|itemsAdded(int,int)
-%% $signal=|itemsChanged(int,int)
-%% $signal=|itemsInserted(int,int)
-%% $signal=|itemsRemoved(int,int)
-%% $signal=|seriesChanged(QScatter3DSeries*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

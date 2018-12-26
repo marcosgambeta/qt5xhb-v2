@@ -96,11 +96,9 @@ $method=|void|setItemSize|float
 $prototype=static int invalidSelectionIndex()
 $staticMethod=|int|invalidSelectionIndex|
 
-%% $beginSignals
-%% $signal=|dataProxyChanged(QScatterDataProxy*)
-%% $signal=|itemSizeChanged(float)
-%% $signal=|selectedItemChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

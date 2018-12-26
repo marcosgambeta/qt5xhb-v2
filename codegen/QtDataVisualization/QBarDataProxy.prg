@@ -334,18 +334,9 @@ $addMethod=insertRows
 $prototype=void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
 $method=|void|removeRows|int,int,bool=true
 
-%% $beginSignals
-%% $signal=|arrayReset()
-%% $signal=|columnLabelsChanged()
-%% $signal=|itemChanged(int,int)
-%% $signal=|rowCountChanged(int)
-%% $signal=|rowLabelsChanged()
-%% $signal=|rowsAdded(int,int)
-%% $signal=|rowsChanged(int,int)
-%% $signal=|rowsInserted(int,int)
-%% $signal=|rowsRemoved(int,int)
-%% $signal=|seriesChanged(QBar3DSeries*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

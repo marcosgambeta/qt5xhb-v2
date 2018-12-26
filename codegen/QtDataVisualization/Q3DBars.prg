@@ -157,18 +157,9 @@ $method=|void|releaseAxis|QAbstract3DAxis *
 $prototype=QList<QAbstract3DAxis *> axes() const
 $method=|QList<QAbstract3DAxis *>|axes|
 
-%% $beginSignals
-%% $signal=|barSpacingChanged(QSizeF)
-%% $signal=|barSpacingRelativeChanged(bool)
-%% $signal=|barThicknessChanged(float)
-%% $signal=|columnAxisChanged(QCategory3DAxis*)
-%% $signal=|floorLevelChanged(float)
-%% $signal=|multiSeriesUniformChanged(bool)
-%% $signal=|primarySeriesChanged(QBar3DSeries*)
-%% $signal=|rowAxisChanged(QCategory3DAxis*)
-%% $signal=|selectedSeriesChanged(QBar3DSeries*)
-%% $signal=|valueAxisChanged(QValue3DAxis*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

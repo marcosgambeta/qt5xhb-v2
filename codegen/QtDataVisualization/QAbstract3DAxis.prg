@@ -135,18 +135,9 @@ $method=|void|setTitleFixed|bool
 $prototype=void setRange(float min, float max)
 $method=|void|setRange|float,float
 
-%% $beginSignals
-%% $signal=|autoAdjustRangeChanged(bool)
-%% $signal=|labelAutoRotationChanged(float)
-%% $signal=|labelsChanged()
-%% $signal=|maxChanged(float)
-%% $signal=|minChanged(float)
-%% $signal=|orientationChanged(QAbstract3DAxis::AxisOrientation)
-%% $signal=|rangeChanged(float,float)
-%% $signal=|titleChanged(QString)
-%% $signal=|titleFixedChanged(bool)
-%% $signal=|titleVisibilityChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

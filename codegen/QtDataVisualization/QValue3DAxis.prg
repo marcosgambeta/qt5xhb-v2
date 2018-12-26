@@ -93,13 +93,9 @@ $method=|void|setReversed|bool
 %%
 %%
 
-%% $beginSignals
-%% %% $signal=|formatterChanged(QValue3DAxisFormatter*)
-%% %% $signal=|labelFormatChanged(QString)
-%% %% $signal=|reversedChanged(bool)
-%% %% $signal=|segmentCountChanged(int)
-%% %% $signal=|subSegmentCountChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

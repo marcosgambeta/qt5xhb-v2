@@ -49,9 +49,9 @@ $method=|void|setLabels|const QStringList &
 %%
 %%
 
-%% $beginSignals
-%% $signal=|labelsChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

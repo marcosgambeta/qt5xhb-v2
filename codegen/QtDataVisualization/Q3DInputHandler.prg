@@ -95,12 +95,9 @@ $prototype=virtual void wheelEvent(QWheelEvent *event)
 %% $virtualMethod=|void|wheelEvent|QWheelEvent *
 %% #endif
 
-%% $beginSignals
-%% $signal=|rotationEnabledChanged(bool)
-%% $signal=|selectionEnabledChanged(bool)
-%% $signal=|zoomAtTargetEnabledChanged(bool)
-%% $signal=|zoomEnabledChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

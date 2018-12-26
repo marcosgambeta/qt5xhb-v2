@@ -150,17 +150,9 @@ $prototype=void insertRows(int rowIndex, const QSurfaceDataArray &rows)
 $prototype=void removeRows(int rowIndex, int removeCount)
 $method=|void|removeRows|int,int
 
-%% $beginSignals
-%% $signal=|arrayReset()
-%% $signal=|columnCountChanged(int)
-%% $signal=|itemChanged(int,int)
-%% $signal=|rowCountChanged(int)
-%% $signal=|rowsAdded(int,int)
-%% $signal=|rowsChanged(int,int)
-%% $signal=|rowsInserted(int,int)
-%% $signal=|rowsRemoved(int,int)
-%% $signal=|seriesChanged(QSurface3DSeries*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

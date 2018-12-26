@@ -135,17 +135,9 @@ $virtualMethod=|void|copyValuesFrom|const Q3DObject &
 $prototype=void setCameraPosition(float horizontal, float vertical, float zoom = 100.0f)
 $method=|void|setCameraPosition|float,float,float=100.0f
 
-%% $beginSignals
-%% $signal=|cameraPresetChanged(Q3DCamera::CameraPreset)
-%% $signal=|maxZoomLevelChanged(float)
-%% $signal=|minZoomLevelChanged(float)
-%% $signal=|targetChanged(QVector3D)
-%% $signal=|wrapXRotationChanged(bool)
-%% $signal=|wrapYRotationChanged(bool)
-%% $signal=|xRotationChanged(float)
-%% $signal=|yRotationChanged(float)
-%% $signal=|zoomLevelChanged(float)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

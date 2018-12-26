@@ -300,27 +300,9 @@ $method=|int|rowCategoryIndex|const QString &
 $prototype=Q_INVOKABLE int columnCategoryIndex(const QString& category)
 $method=|int|columnCategoryIndex|const QString &
 
-%% $beginSignals
-%% $signal=|autoColumnCategoriesChanged(bool)
-%% $signal=|autoRowCategoriesChanged(bool)
-%% $signal=|columnCategoriesChanged()
-%% $signal=|columnRoleChanged(QString)
-%% $signal=|columnRolePatternChanged(QRegExp)
-%% $signal=|columnRoleReplaceChanged(QString)
-%% $signal=|itemModelChanged(QAbstractItemModel*)
-%% $signal=|multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)
-%% $signal=|rotationRoleChanged(QString)
-%% $signal=|rotationRolePatternChanged(QRegExp)
-%% $signal=|rotationRoleReplaceChanged(QString)
-%% $signal=|rowCategoriesChanged()
-%% $signal=|rowRoleChanged(QString)
-%% $signal=|rowRolePatternChanged(QRegExp)
-%% $signal=|rowRoleReplaceChanged(QString)
-%% $signal=|useModelCategoriesChanged(bool)
-%% $signal=|valueRoleChanged(QString)
-%% $signal=|valueRolePatternChanged(QRegExp)
-%% $signal=|valueRoleReplaceChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

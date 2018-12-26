@@ -210,21 +210,9 @@ $method=|void|setRotationRoleReplace|const QString &
 $prototype=void remap(const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole)
 $method=|void|remap|const QString &,const QString &,const QString &,const QString &
 
-%% $beginSignals
-%% $signal=|itemModelChanged(QAbstractItemModel*)
-%% $signal=|rotationRoleChanged(QString)
-%% $signal=|rotationRolePatternChanged(QRegExp)
-%% $signal=|rotationRoleReplaceChanged(QString)
-%% $signal=|xPosRoleChanged(QString)
-%% $signal=|xPosRolePatternChanged(QRegExp)
-%% $signal=|xPosRoleReplaceChanged(QString)
-%% $signal=|yPosRoleChanged(QString)
-%% $signal=|yPosRolePatternChanged(QRegExp)
-%% $signal=|yPosRoleReplaceChanged(QString)
-%% $signal=|zPosRoleChanged(QString)
-%% $signal=|zPosRolePatternChanged(QRegExp)
-%% $signal=|zPosRoleReplaceChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

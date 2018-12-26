@@ -90,11 +90,9 @@ $prototype=void setPreviousInputPos(const QPoint &position) [protected]
 
 $prototype=QPoint previousInputPos() const [protected]
 
-%% $beginSignals
-%% $signal=|inputViewChanged(QAbstract3DInputHandler::InputView)
-%% $signal=|positionChanged(QPoint)
-%% $signal=|sceneChanged(Q3DScene*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

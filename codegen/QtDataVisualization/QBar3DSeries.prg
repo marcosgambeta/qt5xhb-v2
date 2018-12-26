@@ -94,11 +94,9 @@ $method=|void|setMeshAngle|float
 $prototype=static QPoint invalidSelectionPosition()
 $staticMethod=|QPoint|invalidSelectionPosition|
 
-%% $beginSignals
-%% $signal=|dataProxyChanged(QBarDataProxy*)
-%% $signal=|meshAngleChanged(float)
-%% $signal=|selectedBarChanged(QPoint)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

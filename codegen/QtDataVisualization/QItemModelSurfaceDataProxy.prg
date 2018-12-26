@@ -330,30 +330,9 @@ $method=|int|rowCategoryIndex|const QString &
 $prototype=Q_INVOKABLE int columnCategoryIndex(const QString& category)
 $method=|int|columnCategoryIndex|const QString &
 
-%% $beginSignals
-%% $signal=|autoColumnCategoriesChanged(bool)
-%% $signal=|autoRowCategoriesChanged(bool)
-%% $signal=|columnCategoriesChanged()
-%% $signal=|columnRoleChanged(QString)
-%% $signal=|columnRolePatternChanged(QRegExp)
-%% $signal=|columnRoleReplaceChanged(QString)
-%% $signal=|itemModelChanged(QAbstractItemModel*)
-%% $signal=|multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)
-%% $signal=|rowCategoriesChanged()
-%% $signal=|rowRoleChanged(QString)
-%% $signal=|rowRolePatternChanged(QRegExp)
-%% $signal=|rowRoleReplaceChanged(QString)
-%% $signal=|useModelCategoriesChanged(bool)
-%% $signal=|xPosRoleChanged(QString)
-%% $signal=|xPosRolePatternChanged(QRegExp)
-%% $signal=|xPosRoleReplaceChanged(QString)
-%% $signal=|yPosRoleChanged(QString)
-%% $signal=|yPosRolePatternChanged(QRegExp)
-%% $signal=|yPosRoleReplaceChanged(QString)
-%% $signal=|zPosRoleChanged(QString)
-%% $signal=|zPosRolePatternChanged(QRegExp)
-%% $signal=|zPosRoleReplaceChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

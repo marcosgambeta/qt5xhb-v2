@@ -104,13 +104,9 @@ $method=|void|releaseAxis|QValue3DAxis *
 $prototype=QList<QValue3DAxis *> axes() const
 $method=|QList<QValue3DAxis *>|axes|
 
-%% $beginSignals
-%% $signal=|axisXChanged(QValue3DAxis*)
-%% $signal=|axisYChanged(QValue3DAxis*)
-%% $signal=|axisZChanged(QValue3DAxis*)
-%% $signal=|flipHorizontalGridChanged(bool)
-%% $signal=|selectedSeriesChanged(QSurface3DSeries*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

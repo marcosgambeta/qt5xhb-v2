@@ -300,26 +300,9 @@ $prototype=void mouseMoveEvent(QMouseEvent *event) [protected]
 $prototype=void wheelEvent(QWheelEvent *event) [protected]
 %% #endif
 
-%% $beginSignals
-%% $signal=|activeInputHandlerChanged(QAbstract3DInputHandler*)
-%% $signal=|activeThemeChanged(Q3DTheme*)
-%% $signal=|aspectRatioChanged(qreal)
-%% $signal=|currentFpsChanged(qreal)
-%% $signal=|horizontalAspectRatioChanged(qreal)
-%% $signal=|localeChanged(QLocale)
-%% $signal=|marginChanged(qreal)
-%% $signal=|measureFpsChanged(bool)
-%% $signal=|optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)
-%% $signal=|orthoProjectionChanged(bool)
-%% $signal=|polarChanged(bool)
-%% $signal=|queriedGraphPositionChanged(QVector3D)
-%% $signal=|radialLabelOffsetChanged(float)
-%% $signal=|reflectionChanged(bool)
-%% $signal=|reflectivityChanged(qreal)
-%% $signal=|selectedElementChanged(QAbstract3DGraph::ElementType)
-%% $signal=|selectionModeChanged(QAbstract3DGraph::SelectionFlags)
-%% $signal=|shadowQualityChanged(QAbstract3DGraph::ShadowQuality)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

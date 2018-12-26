@@ -131,15 +131,9 @@ $method=|void|setFacingCamera|bool
 %%
 %%
 
-%% $beginSignals
-%% $signal=|backgroundColorChanged(QColor)
-%% $signal=|backgroundEnabledChanged(bool)
-%% $signal=|borderEnabledChanged(bool)
-%% $signal=|facingCameraChanged(bool)
-%% $signal=|fontChanged(QFont)
-%% $signal=|textChanged(QString)
-%% $signal=|textColorChanged(QColor)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

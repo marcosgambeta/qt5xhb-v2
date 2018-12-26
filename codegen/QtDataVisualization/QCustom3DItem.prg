@@ -159,17 +159,9 @@ $method=|void|setRotationAxisAndAngle|const QVector3D &,float
 $prototype=void setTextureImage(const QImage &textureImage)
 $method=|void|setTextureImage|const QImage &
 
-%% $beginSignals
-%% $signal=|meshFileChanged(QString)
-%% $signal=|positionAbsoluteChanged(bool)
-%% $signal=|positionChanged(QVector3D)
-%% $signal=|rotationChanged(QQuaternion)
-%% $signal=|scalingAbsoluteChanged(bool)
-%% $signal=|scalingChanged(QVector3D)
-%% $signal=|shadowCastingChanged(bool)
-%% $signal=|textureFileChanged(QString)
-%% $signal=|visibleChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 

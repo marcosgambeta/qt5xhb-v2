@@ -49,9 +49,9 @@ $method=5,9,0|bool|isAutoPosition|
 %%
 %%
 
-%% $beginSignals
-%% $signal=5,9,0|autoPositionChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtDataVisualization;
 
