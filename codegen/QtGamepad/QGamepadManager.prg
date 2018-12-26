@@ -68,17 +68,9 @@ $slotMethod=5,9,0|void|resetConfiguration|int
 $prototype=void setSettingsFile(const QString &file) (slot)
 $slotMethod=5,9,0|void|setSettingsFile|const QString &
 
-%% $beginSignals
-%% $signal=5,9,0|axisConfigured(int,QGamepadManager::GamepadAxis)
-%% $signal=5,9,0|buttonConfigured(int,QGamepadManager::GamepadButton)
-%% $signal=5,9,0|configurationCanceled(int)
-%% $signal=5,9,0|connectedGamepadsChanged()
-%% $signal=5,9,0|gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)
-%% $signal=5,9,0|gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)
-%% $signal=5,9,0|gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)
-%% $signal=5,9,0|gamepadConnected(int)
-%% $signal=5,9,0|gamepadDisconnected(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void connectedGamepadsChanged()
 $signalMethod=5,9,0|void|connectedGamepadsChanged|

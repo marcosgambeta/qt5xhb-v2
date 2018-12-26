@@ -228,27 +228,9 @@ $slotMethod=5,9,0|void|setButtonR3Key|Qt::Key
 %%
 %%
 
-%% $beginSignals
-%% $signal=5,9,0|activeChanged(bool)
-%% $signal=5,9,0|gamepadChanged(QGamepad*)
-%% $signal=5,9,0|upKeyChanged(Qt::Key)
-%% $signal=5,9,0|downKeyChanged(Qt::Key)
-%% $signal=5,9,0|leftKeyChanged(Qt::Key)
-%% $signal=5,9,0|rightKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonAKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonBKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonXKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonYKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonSelectKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonStartKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonGuideKeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonL1KeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonR1KeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonL2KeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonR2KeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonL3KeyChanged(Qt::Key)
-%% $signal=5,9,0|buttonR3KeyChanged(Qt::Key)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activeChanged( bool isActive )
 $signalMethod=5,9,0|void|activeChanged|bool

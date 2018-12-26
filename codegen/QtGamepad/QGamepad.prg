@@ -215,33 +215,9 @@ $method=5,9,0|bool|buttonGuide|
 %%
 %%
 
-%% $beginSignals
-%% $signal=5,9,0|axisLeftXChanged(double)
-%% $signal=5,9,0|axisLeftYChanged(double)
-%% $signal=5,9,0|axisRightXChanged(double)
-%% $signal=5,9,0|axisRightYChanged(double)
-%% $signal=5,9,0|buttonAChanged(bool)
-%% $signal=5,9,0|buttonBChanged(bool)
-%% $signal=5,9,0|buttonCenterChanged(bool)
-%% $signal=5,9,0|buttonDownChanged(bool)
-%% $signal=5,9,0|buttonGuideChanged(bool)
-%% $signal=5,9,0|buttonL1Changed(bool)
-%% $signal=5,9,0|buttonL2Changed(double)
-%% $signal=5,9,0|buttonL3Changed(bool)
-%% $signal=5,9,0|buttonLeftChanged(bool)
-%% $signal=5,9,0|buttonR1Changed(bool)
-%% $signal=5,9,0|buttonR2Changed(double)
-%% $signal=5,9,0|buttonR3Changed(bool)
-%% $signal=5,9,0|buttonRightChanged(bool)
-%% $signal=5,9,0|buttonSelectChanged(bool)
-%% $signal=5,9,0|buttonStartChanged(bool)
-%% $signal=5,9,0|buttonUpChanged(bool)
-%% $signal=5,9,0|buttonXChanged(bool)
-%% $signal=5,9,0|buttonYChanged(bool)
-%% $signal=5,9,0|connectedChanged(bool)
-%% $signal=5,9,0|deviceIdChanged(int)
-%% $signal=5,9,0|nameChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void axisLeftXChanged( double value )
 $signalMethod=5,9,0|void|axisLeftXChanged|double
