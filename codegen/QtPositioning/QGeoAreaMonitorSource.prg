@@ -88,12 +88,9 @@ $staticMethod=5,2,0|QGeoAreaMonitorSource *|createSource|const QString &,QObject
 $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
-%% $beginSignals
-%% $signal=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
-%% $signal=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
-%% $signal=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
-%% $signal=5,2,0|error(QGeoAreaMonitorSource::Error)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
 $signalMethod=5,2,0|void|areaEntered|QGeoAreaMonitorInfo,QGeoPositionInfo
