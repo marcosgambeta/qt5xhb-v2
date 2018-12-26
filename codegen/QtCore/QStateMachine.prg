@@ -111,10 +111,9 @@ $method=|void|start|
 $prototype=void stop()
 $method=|void|stop|
 
-%% $beginSignals
-%% $signal=|started()
-%% $signal=|stopped()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void started()
 $signalMethod=|void|started|

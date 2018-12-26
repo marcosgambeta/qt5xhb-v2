@@ -117,10 +117,9 @@ $method=|void|setInitialState|QAbstractState *
 $prototype=QList<QAbstractTransition *> transitions () const
 $method=|QList<QAbstractTransition *>|transitions|
 
-%% $beginSignals
-%% $signal=|finished()
-%% $signal=|propertiesAssigned()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished()
 $signalMethod=|void|finished|

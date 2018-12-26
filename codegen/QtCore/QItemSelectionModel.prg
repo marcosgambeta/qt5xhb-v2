@@ -131,12 +131,9 @@ $method=|void|clearSelection|
 $prototype=virtual void clearCurrentIndex()
 $virtualMethod=|void|clearCurrentIndex|
 
-%% $beginSignals
-%% $signal=|selectionChanged(QItemSelection,QItemSelection)
-%% $signal=|currentChanged(QModelIndex,QModelIndex)
-%% $signal=|currentRowChanged(QModelIndex,QModelIndex)
-%% $signal=|currentColumnChanged(QModelIndex,QModelIndex)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
 $signalMethod=|void|selectionChanged|QItemSelection,QItemSelection

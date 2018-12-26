@@ -232,12 +232,9 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 }
 $addMethod=write
 
-%% $beginSignals
-%% $signal=|aboutToClose()
-%% $signal=|bytesWritten(qint64)
-%% $signal=|readChannelFinished()
-%% $signal=|readyRead()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void aboutToClose()
 $signalMethod=|void|aboutToClose|

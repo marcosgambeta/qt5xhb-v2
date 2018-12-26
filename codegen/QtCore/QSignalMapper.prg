@@ -147,14 +147,9 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 }
 $addMethod=map
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|mapped(int)
-%% $signal=|mapped(QString)
-%% $signal=|mapped(QWidget*)
-%% $signal=|mapped(QObject*)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void mapped( int arg )
 $signalMethod=|void|mapped,mapped1,QOverload<int>|int

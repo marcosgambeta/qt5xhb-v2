@@ -53,10 +53,9 @@ $method=|void|setStartTime|qint64
 $prototype=qint64 startTime() const
 $method=|qint64|startTime|
 
-%% $beginSignals
-%% $signal=|started()
-%% $signal=|stopped()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void started()
 $signalMethod=|void|started|

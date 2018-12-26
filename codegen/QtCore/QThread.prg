@@ -91,10 +91,9 @@ $staticMethod=|void|usleep|unsigned long
 $prototype=static void yieldCurrentThread()
 $staticMethod=|void|yieldCurrentThread|
 
-%% $beginSignals
-%% $signal=|finished()
-%% $signal=|started()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished()
 $signalMethod=|void|finished|

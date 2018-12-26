@@ -82,12 +82,9 @@ $method=|void|start|QAbstractAnimation::DeletionPolicy=QAbstractAnimation::KeepW
 $prototype=void stop ()
 $method=|void|stop|
 
-%% $beginSignals
-%% $signal=|currentLoopChanged(int)
-%% $signal=|directionChanged(QAbstractAnimation::Direction)
-%% $signal=|finished()
-%% $signal=|stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void currentLoopChanged( int currentLoop )
 $signalMethod=|void|currentLoopChanged|int

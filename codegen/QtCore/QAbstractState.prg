@@ -38,10 +38,9 @@ $method=|QStateMachine *|machine|
 $prototype=QState * parentState () const
 $method=|QState *|parentState|
 
-%% $beginSignals
-%% $signal=|entered()
-%% $signal=|exited()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void entered()
 $signalMethod=|void|entered|

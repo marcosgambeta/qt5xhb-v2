@@ -60,9 +60,9 @@ $method=|QAbstractState *|targetState|
 $prototype=QList<QAbstractState *> targetStates () const
 $method=|QList<QAbstractState *>|targetStates|
 
-%% $beginSignals
-%% $signal=|triggered()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void triggered()
 $signalMethod=|void|triggered|

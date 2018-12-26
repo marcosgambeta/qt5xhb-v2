@@ -116,12 +116,9 @@ $method=|void|stop|
 $prototype=void toggleDirection ()
 $method=|void|toggleDirection|
 
-%% $beginSignals
-%% $signal=|finished()
-%% $signal=|frameChanged(int)
-%% $signal=|stateChanged(QTimeLine::State)
-%% $signal=|valueChanged(qreal)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished()
 $signalMethod=|void|finished|

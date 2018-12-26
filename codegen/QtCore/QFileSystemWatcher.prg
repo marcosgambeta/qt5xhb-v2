@@ -74,10 +74,9 @@ $method=|bool|removePath|const QString &
 $prototype=QStringList removePaths(const QStringList & paths)
 $method=|QStringList|removePaths|const QStringList &
 
-%% $beginSignals
-%% $signal=|directoryChanged(QString)
-%% $signal=|fileChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void directoryChanged( const QString & path )
 $signalMethod=|void|directoryChanged|QString

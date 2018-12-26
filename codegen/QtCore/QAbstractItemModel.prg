@@ -128,26 +128,9 @@ $virtualMethod=|void|revert|
 $prototype=virtual bool submit ()
 $virtualMethod=|bool|submit|
 
-%% $beginSignals
-%% $signal=|columnsAboutToBeInserted(QModelIndex,int,int)
-%% $signal=|columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
-%% $signal=|columnsAboutToBeRemoved(QModelIndex,int,int)
-%% $signal=|columnsInserted(QModelIndex,int,int)
-%% $signal=|columnsMoved(QModelIndex,int,int,QModelIndex,int)
-%% $signal=|columnsRemoved(QModelIndex,int,int)
-%% $signal=|dataChanged(QModelIndex,QModelIndex)
-%% $signal=|headerDataChanged(Qt::Orientation,int,int)
-%% $signal=|layoutAboutToBeChanged()
-%% $signal=|layoutChanged()
-%% $signal=|modelAboutToBeReset()
-%% $signal=|modelReset()
-%% $signal=|rowsAboutToBeInserted(QModelIndex,int,int)
-%% $signal=|rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
-%% $signal=|rowsAboutToBeRemoved(QModelIndex,int,int)
-%% $signal=|rowsInserted(QModelIndex,int,int)
-%% $signal=|rowsMoved(QModelIndex,int,int,QModelIndex,int)
-%% $signal=|rowsRemoved(QModelIndex,int,int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 $signalMethod=|void|columnsAboutToBeInserted|QModelIndex,int,int

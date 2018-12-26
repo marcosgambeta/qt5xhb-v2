@@ -109,10 +109,9 @@ $virtualMethod=|void|startingUp|
 $prototype=virtual void closingDown()
 $virtualMethod=|void|closingDown|
 
-%% $beginSignals
-%% $signal=|aboutToBlock()
-%% $signal=|awake()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void aboutToBlock()
 $signalMethod=|void|aboutToBlock|
