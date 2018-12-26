@@ -92,13 +92,9 @@ $method=|QAction *|toggleViewAction|
 $prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-%% $beginSignals
-%% $signal=|allowedAreasChanged(Qt::DockWidgetAreas)
-%% $signal=|dockLocationChanged(Qt::DockWidgetArea)
-%% $signal=|featuresChanged(QDockWidget::DockWidgetFeatures)
-%% $signal=|topLevelChanged(bool)
-%% $signal=|visibilityChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 $signalMethod=|void|allowedAreasChanged|Qt::DockWidgetAreas

@@ -72,9 +72,9 @@ $method=|QSize|minimumSizeHint|
 $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-%% $beginSignals
-%% $signal=|stateChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void stateChanged( int state )
 $signalMethod=|void|stateChanged|int

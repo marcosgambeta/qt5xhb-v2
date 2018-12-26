@@ -96,11 +96,9 @@ $method=|void|setXOffset|qreal
 $prototype=void setYOffset ( qreal dy )
 $method=|void|setYOffset|qreal
 
-%% $beginSignals
-%% $signal=|blurRadiusChanged(qreal)
-%% $signal=|colorChanged(QColor)
-%% $signal=|offsetChanged(QPointF)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void blurRadiusChanged( qreal blurRadius )
 $signalMethod=|void|blurRadiusChanged|qreal

@@ -223,10 +223,9 @@ $method=|void|setDockNestingEnabled|bool
 $prototype=QWidget * takeCentralWidget ()
 $method=5,2,0|QWidget *|takeCentralWidget|
 
-%% $beginSignals
-%% $signal=|iconSizeChanged(QSize)
-%% $signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void iconSizeChanged( const QSize & iconSize )
 $signalMethod=|void|iconSizeChanged|QSize

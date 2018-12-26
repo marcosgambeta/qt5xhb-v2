@@ -62,10 +62,9 @@ $method=|void|setCurrentIndex|int
 $prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
-%% $beginSignals
-%% $signal=|currentChanged(int)
-%% $signal=|widgetRemoved(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void currentChanged( int index )
 $signalMethod=|void|currentChanged|int

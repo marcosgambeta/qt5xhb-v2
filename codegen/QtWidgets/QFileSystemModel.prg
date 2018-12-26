@@ -190,11 +190,9 @@ $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=Qt::DropActions supportedDropActions () const
 $method=|Qt::DropActions|supportedDropActions|
 
-%% $beginSignals
-%% $signal=|directoryLoaded(QString)
-%% $signal=|fileRenamed(QString,QString,QString)
-%% $signal=|rootPathChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void directoryLoaded( const QString & path )
 $signalMethod=|void|directoryLoaded|QString

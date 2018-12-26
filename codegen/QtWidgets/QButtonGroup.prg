@@ -87,20 +87,9 @@ $method=|void|setExclusive|bool
 $prototype=void setId ( QAbstractButton * button, int id )
 $method=|void|setId|QAbstractButton *,int
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|buttonClicked(QAbstractButton*)
-%% $signal=|buttonClicked(int)
-%% $endGroup
-%% $beginGroup
-%% $signal=|buttonPressed(QAbstractButton*)
-%% $signal=|buttonPressed(int)
-%% $endGroup
-%% $beginGroup
-%% $signal=|buttonReleased(QAbstractButton*)
-%% $signal=|buttonReleased(int)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void buttonClicked( QAbstractButton * button )
 $signalMethod=|void|buttonClicked,buttonClicked1,QOverload<QAbstractButton *>|QAbstractButton*

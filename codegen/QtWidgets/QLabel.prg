@@ -193,10 +193,9 @@ $method=|void|setPixmap|const QPixmap &
 $prototype=void setText ( const QString & )
 $method=|void|setText|const QString &
 
-%% $beginSignals
-%% $signal=|linkActivated(QString)
-%% $signal=|linkHovered(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void linkActivated( const QString & link )
 $signalMethod=|void|linkActivated|QString

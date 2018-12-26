@@ -80,12 +80,9 @@ $method=|int|displayIntegerBase|
 $prototype=void setDisplayIntegerBase(int base)
 $method=|void|setDisplayIntegerBase|int
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|valueChanged(int)
-%% $signal=|valueChanged(QString)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void valueChanged( int value )
 $signalMethod=|void|valueChanged,valueChanged1,QOverload<int>|int

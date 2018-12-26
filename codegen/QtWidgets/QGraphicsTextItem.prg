@@ -142,10 +142,9 @@ $virtualMethod=|QPainterPath|shape|
 $prototype=virtual int type () const
 $virtualMethod=|int|type|
 
-%% $beginSignals
-%% $signal=|linkActivated(QString)
-%% $signal=|linkHovered(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void linkActivated( const QString & link )
 $signalMethod=|void|linkActivated|QString

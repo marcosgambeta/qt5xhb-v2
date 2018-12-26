@@ -86,11 +86,9 @@ $method=|void|setExtension|QWidget *
 $prototype=void showExtension(bool)
 $method=|void|showExtension|bool
 
-%% $beginSignals
-%% $signal=|accepted()
-%% $signal=|finished(int)
-%% $signal=|rejected()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void accepted()
 $signalMethod=|void|accepted|

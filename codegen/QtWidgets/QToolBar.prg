@@ -196,16 +196,9 @@ $method=|void|setIconSize|const QSize &
 $prototype=void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
-%% $beginSignals
-%% $signal=|actionTriggered(QAction*)
-%% $signal=|allowedAreasChanged(Qt::ToolBarAreas)
-%% $signal=|iconSizeChanged(QSize)
-%% $signal=|movableChanged(bool)
-%% $signal=|orientationChanged(Qt::Orientation)
-%% $signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
-%% $signal=|topLevelChanged(bool)
-%% $signal=|visibilityChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void actionTriggered( QAction * action )
 $signalMethod=|void|actionTriggered|QAction*

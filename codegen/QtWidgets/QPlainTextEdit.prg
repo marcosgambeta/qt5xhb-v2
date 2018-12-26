@@ -251,17 +251,9 @@ $method=|void|setPlainText|const QString &
 $prototype=void undo ()
 $method=|void|undo|
 
-%% $beginSignals
-%% $signal=|blockCountChanged(int)
-%% $signal=|copyAvailable(bool)
-%% $signal=|cursorPositionChanged()
-%% $signal=|modificationChanged(bool)
-%% $signal=|redoAvailable(bool)
-%% $signal=|selectionChanged()
-%% $signal=|textChanged()
-%% $signal=|undoAvailable(bool)
-%% $signal=|updateRequest(QRect,int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void blockCountChanged( int newBlockCount )
 $signalMethod=|void|blockCountChanged|int

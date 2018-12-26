@@ -93,10 +93,9 @@ $method=|void|setExclusive|bool
 $prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
-%% $beginSignals
-%% $signal=|hovered(QAction*)
-%% $signal=|triggered(QAction*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void hovered( QAction * action )
 $signalMethod=|void|hovered|QAction*

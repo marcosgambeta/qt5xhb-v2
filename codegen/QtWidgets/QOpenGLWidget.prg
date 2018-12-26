@@ -58,12 +58,9 @@ $method=5,4,0|GLuint|defaultFramebufferObject||#ifndef QT_NO_OPENGL
 $prototype=QImage grabFramebuffer()
 $method=5,4,0|QImage|grabFramebuffer||#ifndef QT_NO_OPENGL
 
-%% $beginSignals
-%% $signal=5,4,0|aboutToCompose()
-%% $signal=5,4,0|frameSwapped()
-%% $signal=5,4,0|aboutToResize()
-%% $signal=5,4,0|resized()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void aboutToCompose()
 $signalMethod=5,4,0|void|aboutToCompose|

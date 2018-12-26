@@ -144,10 +144,9 @@ $staticMethod=|QColor|standardColor|int
 $prototype=static void setStandardColor(int index, QColor color)
 $staticMethod=|void|setStandardColor|int,QColor
 
-%% $beginSignals
-%% $signal=|colorSelected(QColor)
-%% $signal=|currentColorChanged(QColor)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void colorSelected( const QColor & color )
 $signalMethod=|void|colorSelected|QColor

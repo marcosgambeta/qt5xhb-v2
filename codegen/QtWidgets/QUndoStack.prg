@@ -106,14 +106,9 @@ $method=|void|setIndex|int
 $prototype=void undo()
 $method=|void|undo|
 
-%% $beginSignals
-%% $signal=|canRedoChanged(bool)
-%% $signal=|canUndoChanged(bool)
-%% $signal=|cleanChanged(bool)
-%% $signal=|indexChanged(int)
-%% $signal=|redoTextChanged(QString)
-%% $signal=|undoTextChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void canRedoChanged( bool canRedo )
 $signalMethod=|void|canRedoChanged|bool

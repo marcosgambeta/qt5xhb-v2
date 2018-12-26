@@ -1211,12 +1211,9 @@ $staticMethod=|void|setTabOrder|QWidget *,QWidget *
 $prototype=static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)
 $staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=0,Qt::WindowFlags=0
 
-%% $beginSignals
-%% $signal=5,2,0|windowTitleChanged(QString)
-%% $signal=5,2,0|windowIconChanged(QIcon)
-%% $signal=|windowIconTextChanged(QString)
-%% $signal=|customContextMenuRequested(QPoint)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void windowTitleChanged( const QString & title )
 $signalMethod=5,2,0|void|windowTitleChanged|QString

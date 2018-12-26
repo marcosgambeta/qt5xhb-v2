@@ -302,14 +302,9 @@ $method=|void|setClearButtonEnabled|bool
 $prototype=bool isClearButtonEnabled() const
 $method=|bool|isClearButtonEnabled|
 
-%% $beginSignals
-%% $signal=|cursorPositionChanged(int,int)
-%% $signal=|editingFinished()
-%% $signal=|returnPressed()
-%% $signal=|selectionChanged()
-%% $signal=|textChanged(QString)
-%% $signal=|textEdited(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void cursorPositionChanged( int oldPos, int newPos )
 $signalMethod=|void|cursorPositionChanged|int,int

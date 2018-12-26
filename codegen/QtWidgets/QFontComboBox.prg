@@ -53,9 +53,9 @@ $virtualMethod=|QSize|sizeHint|
 $prototype=void setCurrentFont ( const QFont & font )
 $method=|void|setCurrentFont|const QFont &
 
-%% $beginSignals
-%% $signal=|currentFontChanged(QFont)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void currentFontChanged( const QFont & font )
 $signalMethod=|void|currentFontChanged|QFont

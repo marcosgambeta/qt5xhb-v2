@@ -264,9 +264,9 @@ $method=|QString|buttonText|int
 $prototype=void setButtonText(int button, const QString &text)
 $method=|void|setButtonText|int,const QString &
 
-%% $beginSignals
-%% $signal=|buttonClicked(QAbstractButton*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void buttonClicked( QAbstractButton * button )
 $signalMethod=|void|buttonClicked|QAbstractButton*

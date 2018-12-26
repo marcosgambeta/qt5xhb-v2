@@ -272,19 +272,9 @@ $method=|void|setMaximumSectionSize|int
 $prototype=void doItemsLayout()
 $method=|void|doItemsLayout|
 
-%% $beginSignals
-%% $signal=|geometriesChanged()
-%% $signal=|sectionAutoResize(int,QHeaderView::ResizeMode)
-%% $signal=|sectionClicked(int)
-%% $signal=|sectionCountChanged(int,int)
-%% $signal=|sectionDoubleClicked(int)
-%% $signal=|sectionEntered(int)
-%% $signal=|sectionHandleDoubleClicked(int)
-%% $signal=|sectionMoved(int,int,int)
-%% $signal=|sectionPressed(int)
-%% $signal=|sectionResized(int,int,int)
-%% $signal=|sortIndicatorChanged(int,Qt::SortOrder)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void geometriesChanged()
 $signalMethod=|void|geometriesChanged|

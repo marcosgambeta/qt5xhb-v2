@@ -270,21 +270,9 @@ $method=|void|setCurrentIndex|int
 $prototype=void setEditText ( const QString & text )
 $method=|void|setEditText|const QString &
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|activated(int)
-%% $signal=|activated(QString)
-%% $endGroup
-%% $beginGroup
-%% $signal=|currentIndexChanged(int)
-%% $signal=|currentIndexChanged(QString)
-%% $endGroup
-%% $signal=|editTextChanged(QString)
-%% $beginGroup
-%% $signal=|highlighted(int)
-%% $signal=|highlighted(QString)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activated( int index )
 $signalMethod=|void|activated,activated1,QOverload<int>|int

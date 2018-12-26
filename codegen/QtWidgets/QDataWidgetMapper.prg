@@ -133,9 +133,9 @@ $method=|void|toNext|
 $prototype=void toPrevious ()
 $method=|void|toPrevious|
 
-%% $beginSignals
-%% $signal=|currentIndexChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void currentIndexChanged( int index )
 $signalMethod=|void|currentIndexChanged|int

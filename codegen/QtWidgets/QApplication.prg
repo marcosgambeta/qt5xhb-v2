@@ -383,15 +383,9 @@ $addMethod=widgetAt
 $prototype=static QIcon windowIcon ()
 $staticMethod=|QIcon|windowIcon|
 
-%% $beginSignals
-%% $signal=|aboutToReleaseGpuResources()
-%% $signal=|aboutToUseGpuResources()
-%% $signal=|commitDataRequest(QSessionManager)
-%% $signal=|focusChanged(QWidget*,QWidget*)
-%% $signal=|fontDatabaseChanged()
-%% $signal=|lastWindowClosed()
-%% $signal=|saveStateRequest(QSessioManager)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void aboutToReleaseGpuResources()
 %% TODO: check $signalMethod=|void|aboutToReleaseGpuResources|

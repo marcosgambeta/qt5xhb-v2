@@ -155,13 +155,9 @@ $method=|void|next|
 $prototype=void restart ()
 $method=|void|restart|
 
-%% $beginSignals
-%% $signal=|currentIdChanged(int)
-%% $signal=|customButtonClicked(int)
-%% $signal=|helpRequested()
-%% $signal=|pageAdded(int)
-%% $signal=|pageRemoved(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void currentIdChanged( int id )
 $signalMethod=|void|currentIdChanged|int

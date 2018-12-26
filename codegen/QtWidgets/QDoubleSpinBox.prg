@@ -92,12 +92,9 @@ $virtualMethod=|void|fixup|QString &
 $prototype=virtual QValidator::State validate ( QString & text, int & pos ) const
 $virtualMethod=|QValidator::State|validate|QString &,int &
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|valueChanged(double)
-%% $signal=|valueChanged(QString)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void valueChanged( double d )
 $signalMethod=|void|valueChanged,valueChanged1,QOverload<double>|double

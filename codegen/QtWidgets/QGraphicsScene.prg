@@ -435,11 +435,9 @@ $method=|void|clear|
 $prototype=void clearSelection ()
 $method=|void|clearSelection|
 
-%% $beginSignals
-%% $signal=|changed(QList<QRectF>)
-%% $signal=|sceneRectChanged(QRectF)
-%% $signal=|selectionChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void changed( const QList<QRectF> & region )
 $signalMethod=|void|changed|QList<QRectF>

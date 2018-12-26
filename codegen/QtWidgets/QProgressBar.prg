@@ -101,9 +101,9 @@ $method=|void|setRange|int,int
 $prototype=void setValue ( int value )
 $method=|void|setValue|int
 
-%% $beginSignals
-%% $signal=|valueChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void valueChanged( int value )
 $signalMethod=|void|valueChanged|int

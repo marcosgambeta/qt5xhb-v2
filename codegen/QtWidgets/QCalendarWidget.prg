@@ -177,12 +177,9 @@ $method=|void|showSelectedDate|
 $prototype=void showToday ()
 $method=|void|showToday|
 
-%% $beginSignals
-%% $signal=|activated(QDate)
-%% $signal=|clicked(QDate)
-%% $signal=|currentPageChanged(int,int)
-%% $signal=|selectionChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activated( const QDate & date )
 $signalMethod=|void|activated|QDate

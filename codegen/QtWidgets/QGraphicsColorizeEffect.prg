@@ -44,10 +44,9 @@ $method=|void|setColor|const QColor &
 $prototype=void setStrength ( qreal strength )
 $method=|void|setStrength|qreal
 
-%% $beginSignals
-%% $signal=|colorChanged(QColor)
-%% $signal=|strengthChanged(qreal)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void colorChanged( const QColor & color )
 $signalMethod=|void|colorChanged|QColor

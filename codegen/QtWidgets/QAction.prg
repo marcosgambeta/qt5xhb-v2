@@ -246,12 +246,9 @@ $method=|void|toggle|
 $prototype=void trigger ()
 $method=|void|trigger|
 
-%% $beginSignals
-%% $signal=|changed()
-%% $signal=|hovered()
-%% $signal=|toggled(bool)
-%% $signal=|triggered(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void changed()
 $signalMethod=|void|changed|

@@ -167,16 +167,9 @@ $method=5,2,0|void|setFilterMode|Qt::MatchFlags
 $prototype=Qt::MatchFlags filterMode() const
 $method=5,2,0|Qt::MatchFlags|filterMode|
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|activated(QString)
-%% $signal=|activated(QModelIndex)
-%% $endGroup
-%% $beginGroup
-%% $signal=|highlighted(QString)
-%% $signal=|highlighted(QModelIndex)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activated( const QString & text )
 $signalMethod=|void|activated,activated1,QOverload<const QString &>|QString

@@ -297,14 +297,9 @@ $addMethod=update
 $prototype=virtual void doItemsLayout()
 $virtualMethod=|void|doItemsLayout|
 
-%% $beginSignals
-%% $signal=|activated(QModelIndex)
-%% $signal=|clicked(QModelIndex)
-%% $signal=|doubleClicked(QModelIndex)
-%% $signal=|entered(QModelIndex)
-%% $signal=|pressed(QModelIndex)
-%% $signal=|viewportEntered()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activated( const QModelIndex & index )
 $signalMethod=|void|activated|QModelIndex

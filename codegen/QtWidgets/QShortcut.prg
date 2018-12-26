@@ -90,10 +90,9 @@ $method=|void|setWhatsThis|const QString &
 $prototype=QString whatsThis() const
 $method=|QString|whatsThis|
 
-%% $beginSignals
-%% $signal=|activated()
-%% $signal=|activatedAmbiguously()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activated()
 $signalMethod=|void|activated|

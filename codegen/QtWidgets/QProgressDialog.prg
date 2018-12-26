@@ -126,9 +126,9 @@ $method=|void|setCancelButtonText|const QString &
 $prototype=void setRange ( int minimum, int maximum )
 $method=|void|setRange|int,int
 
-%% $beginSignals
-%% $signal=|canceled()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void canceled()
 $signalMethod=|void|canceled|

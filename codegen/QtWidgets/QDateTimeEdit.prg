@@ -216,11 +216,9 @@ $method=|void|setDateTime|const QDateTime &
 $prototype=void setTime ( const QTime & time )
 $method=|void|setTime|const QTime &
 
-%% $beginSignals
-%% $signal=|dateChanged(QDate)
-%% $signal=|dateTimeChanged(QDateTime)
-%% $signal=|timeChanged(QTime)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void dateChanged( const QDate & date )
 $signalMethod=|void|dateChanged|QDate

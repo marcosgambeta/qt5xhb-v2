@@ -83,10 +83,9 @@ $method=|void|showShaded|
 $prototype=void showSystemMenu ()
 $method=|void|showSystemMenu|
 
-%% $beginSignals
-%% $signal=|aboutToActivate()
-%% $signal=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void aboutToActivate()
 $signalMethod=|void|aboutToActivate|

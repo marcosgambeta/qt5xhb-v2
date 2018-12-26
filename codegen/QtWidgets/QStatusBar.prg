@@ -62,9 +62,9 @@ $method=|void|clearMessage|
 $prototype=void showMessage ( const QString & message, int timeout = 0 )
 $method=|void|showMessage|const QString &,int=0
 
-%% $beginSignals
-%% $signal=|messageChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void messageChanged( const QString & message )
 $signalMethod=|void|messageChanged|QString

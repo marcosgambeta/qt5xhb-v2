@@ -123,9 +123,9 @@ $virtualMethod=|QSize|minimumSizeHint|
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-%% $beginSignals
-%% $signal=|splitterMoved(int,int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void splitterMoved( int pos, int index )
 $signalMethod=|void|splitterMoved|int,int

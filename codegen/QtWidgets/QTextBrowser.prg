@@ -92,17 +92,9 @@ $virtualMethod=|void|reload|
 $prototype=virtual void setSource ( const QUrl & name )
 $virtualMethod=|void|setSource|const QUrl &
 
-%% $beginSignals
-%% $signal=|anchorClicked(QUrl)
-%% $signal=|backwardAvailable(bool)
-%% $signal=|forwardAvailable(bool)
-%% $beginGroup
-%% $signal=|highlighted(QUrl)
-%% $signal=|highlighted(QString)
-%% $endGroup
-%% $signal=|historyChanged()
-%% $signal=|sourceChanged(QUrl)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void anchorClicked( const QUrl & link )
 $signalMethod=|void|anchorClicked|QUrl

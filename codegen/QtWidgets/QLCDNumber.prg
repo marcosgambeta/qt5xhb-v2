@@ -196,9 +196,9 @@ $method=|void|setOctMode|
 $prototype=void setSmallDecimalPoint ( bool )
 $method=|void|setSmallDecimalPoint|bool
 
-%% $beginSignals
-%% $signal=|overflow()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void overflow()
 $signalMethod=|void|overflow|

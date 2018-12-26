@@ -205,10 +205,9 @@ $method=|void|resizeColumnToContents|int
 $prototype=void showColumn ( int column )
 $method=|void|showColumn|int
 
-%% $beginSignals
-%% $signal=|collapsed(QModelIndex)
-%% $signal=|expanded(QModelIndex)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void collapsed( const QModelIndex & index )
 $signalMethod=|void|collapsed|QModelIndex

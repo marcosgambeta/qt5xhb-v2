@@ -35,17 +35,9 @@ $method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 $prototype=void ungrabGesture ( Qt::GestureType gesture )
 $method=|void|ungrabGesture|Qt::GestureType
 
-%% $beginSignals
-%% $signal=|enabledChanged()
-%% $signal=|opacityChanged()
-%% $signal=|parentChanged()
-%% $signal=|rotationChanged()
-%% $signal=|scaleChanged()
-%% $signal=|visibleChanged()
-%% $signal=|xChanged()
-%% $signal=|yChanged()
-%% $signal=|zChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void enabledChanged()
 $signalMethod=|void|enabledChanged|

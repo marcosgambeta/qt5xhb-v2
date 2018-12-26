@@ -44,10 +44,9 @@ $method=|void|setOpacity|qreal
 $prototype=void setOpacityMask ( const QBrush & mask )
 $method=|void|setOpacityMask|const QBrush &
 
-%% $beginSignals
-%% $signal=|opacityChanged(qreal)
-%% $signal=|opacityMaskChanged(QBrush)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void opacityChanged( qreal opacity )
 $signalMethod=|void|opacityChanged|qreal

@@ -44,9 +44,9 @@ $method=|void|setEnabled|bool
 $prototype=void update ()
 $method=|void|update|
 
-%% $beginSignals
-%% $signal=|enabledChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void enabledChanged( bool enabled )
 $signalMethod=|void|enabledChanged|bool

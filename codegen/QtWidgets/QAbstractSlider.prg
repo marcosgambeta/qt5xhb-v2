@@ -101,14 +101,9 @@ $method=|bool|hasTracking|
 $prototype=void setTracking ( bool enable )
 $method=|void|setTracking|bool
 
-%% $beginSignals
-%% $signal=|actionTriggered(int)
-%% $signal=|rangeChanged(int,int)
-%% $signal=|sliderMoved(int)
-%% $signal=|sliderPressed()
-%% $signal=|sliderReleased()
-%% $signal=|valueChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void actionTriggered( int action )
 $signalMethod=|void|actionTriggered|int

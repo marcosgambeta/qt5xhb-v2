@@ -131,9 +131,9 @@ $method=5,3,0|bool|isGroupSeparatorShown|
 $prototype=void setGroupSeparatorShown(bool shown)
 $method=5,3,0|void|setGroupSeparatorShown|bool
 
-%% $beginSignals
-%% $signal=|editingFinished()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void editingFinished()
 $signalMethod=|void|editingFinished|

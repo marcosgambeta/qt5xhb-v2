@@ -77,15 +77,9 @@ $method=|void|setActiveStack|QUndoStack *
 $prototype=void undo()
 $method=|void|undo|
 
-%% $beginSignals
-%% $signal=|activeStackChanged(QUndoStack*)
-%% $signal=|canRedoChanged(bool)
-%% $signal=|canUndoChanged(bool)
-%% $signal=|cleanChanged(bool)
-%% $signal=|indexChanged(int)
-%% $signal=|redoTextChanged(QString)
-%% $signal=|undoTextChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activeStackChanged( QUndoStack * stack )
 $signalMethod=|void|activeStackChanged|QUndoStack*
