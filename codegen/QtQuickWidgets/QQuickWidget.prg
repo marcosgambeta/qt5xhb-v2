@@ -111,10 +111,9 @@ $method=5,3,0|QSurfaceFormat|format|
 $prototype=void setFormat(const QSurfaceFormat &format)
 $method=5,3,0|void|setFormat|const QSurfaceFormat &
 
-%% $beginSignals
-%% $signal=5,3,0|statusChanged(QQuickWidget::Status)
-%% $signal=5,3,0|sceneGraphError(QQuickWindow::SceneGraphError,QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void statusChanged( QQuickWidget::Status status )
 $signalMethod=5,3,0|void|statusChanged|QQuickWidget::Status
