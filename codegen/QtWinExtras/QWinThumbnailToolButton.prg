@@ -77,10 +77,9 @@ $method=5,2,0|void|setFlat|bool
 $prototype=void click()
 $method=5,2,0|void|click|
 
-%% $beginSignals
-%% $signal=5,2,0|clicked()
-%% $signal=5,2,0|changed()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void clicked()
 $signalMethod=5,2,0|void|clicked|

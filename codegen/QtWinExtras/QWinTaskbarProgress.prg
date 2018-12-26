@@ -86,14 +86,9 @@ $method=5,2,0|void|resume|
 $prototype=void stop()
 $method=5,2,0|void|stop|
 
-%% $beginSignals
-%% $signal=5,2,0|valueChanged(int)
-%% $signal=5,2,0|minimumChanged(int)
-%% $signal=5,2,0|maximumChanged(int)
-%% $signal=5,2,0|visibilityChanged(bool)
-%% $signal=5,2,0|pausedChanged(bool)
-%% $signal=5,2,0|stoppedChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void valueChanged( int value )
 $signalMethod=5,2,0|void|valueChanged|int
