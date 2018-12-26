@@ -165,10 +165,9 @@ $addMethod=loadUrl
 $prototype=void setData(const QByteArray & data, const QUrl & url)
 $method=|void|setData|const QByteArray &,const QUrl &
 
-%% $beginSignals
-%% $signal=|progressChanged(qreal)
-%% $signal=|statusChanged(QQmlComponent::Status)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void progressChanged( qreal progress )
 $signalMethod=|void|progressChanged|qreal
