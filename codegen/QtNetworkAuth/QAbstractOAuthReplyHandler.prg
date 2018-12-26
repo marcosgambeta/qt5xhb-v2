@@ -44,12 +44,9 @@ $virtualMethod=5,10,0|QString|callback|
 $prototype=virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
 $virtualMethod=5,10,0|void|networkReplyFinished|QNetworkReply *
 
-%% $beginSignals
-%% $signal=5,10,0|callbackDataReceived(QByteArray)
-%% %% $signal=|callbackReceived(QVariantMap)
-%% $signal=5,10,0|replyDataReceived(QByteArray)
-%% %% $signal=|tokensReceived(QVariantMap)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void callbackDataReceived( const QByteArray & data )
 $signalMethod=5,10,0|void|callbackDataReceived|QByteArray

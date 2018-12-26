@@ -108,9 +108,9 @@ $prototype=void requestAccessToken(const QString &code) [protected]
 
 $prototype=void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override [protected]
 
-%% $beginSignals
-%% $signal=5,10,0|accessTokenUrlChanged(QUrl)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void accessTokenUrlChanged( const QUrl & accessTokenUrl )
 $signalMethod=5,10,0|void|accessTokenUrlChanged|QUrl

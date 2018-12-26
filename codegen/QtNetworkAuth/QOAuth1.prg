@@ -136,13 +136,9 @@ $prototype=static QByteArray nonce() [protected]
 
 $prototype=static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) [protected]
 
-%% $beginSignals
-%% $signal=5,10,0|clientSharedSecretChanged(QString)
-%% $signal=5,10,0|signatureMethodChanged(QOAuth1::SignatureMethod)
-%% $signal=5,10,0|temporaryCredentialsUrlChanged(QUrl)
-%% $signal=5,10,0|tokenCredentialsUrlChanged(QUrl)
-%% $signal=5,10,0|tokenSecretChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void clientSharedSecretChanged( const QString & credential )
 $signalMethod=5,10,0|void|clientSharedSecretChanged|QString

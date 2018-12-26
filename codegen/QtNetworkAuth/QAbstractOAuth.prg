@@ -142,19 +142,9 @@ $prototype=virtual void resourceOwnerAuthorization(const QUrl &url, const QVaria
 
 $prototype=static QByteArray generateRandomString(quint8 length) [protected]
 
-%% $beginSignals
-%% $signal=5,10,0|authorizationUrlChanged(QUrl)
-%% $signal=5,10,0|authorizeWithBrowser(QUrl)
-%% $signal=5,10,0|clientIdentifierChanged(QString)
-%% $signal=5,10,0|contentTypeChanged(QAbstractOAuth::ContentType)
-%% %% $signal=|extraTokensChanged(QVariantMap)
-%% $signal=5,10,0|finished(QNetworkReply*)
-%% $signal=5,10,0|granted()
-%% $signal=5,10,0|replyDataReceived(QByteArray)
-%% %% $signal=|requestFailed(QAbstractOAuth::Error)
-%% $signal=5,10,0|statusChanged(QAbstractOAuth::Status)
-%% $signal=5,10,0|tokenChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void clientIdentifierChanged( const QString & clientIdentifier )
 $signalMethod=5,10,0|void|clientIdentifierChanged|QString

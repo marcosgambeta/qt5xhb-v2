@@ -140,16 +140,9 @@ $method=5,10,0|QString|refreshToken|
 $prototype=void setRefreshToken(const QString &refreshToken)
 $method=5,10,0|void|setRefreshToken|const QString &
 
-%% $beginSignals
-%% %% $signal=|authorizationCallbackReceived(QVariantMap)
-%% $signal=5,10,0|clientIdentifierSharedKeyChanged(QString)
-%% $signal=5,10,0|error(QString,QString,QUrl)
-%% $signal=5,10,0|expirationAtChanged(QDateTime)
-%% $signal=5,10,0|responseTypeChanged(QString)
-%% $signal=5,10,0|scopeChanged(QString)
-%% $signal=5,10,0|stateChanged(QString)
-%% $signal=5,10,0|userAgentChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void authorizationCallbackReceived( const QVariantMap & data )
 %% TODO: $signalMethod=|void|authorizationCallbackReceived|QVariantMap
