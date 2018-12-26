@@ -82,14 +82,9 @@ $prototype=Q_INVOKABLE int addPoint(const QPointF &point)
 $prototype=Q_INVOKABLE void setChannelData(const QString &channel, int index, const QVariant &data)
 $prototype=Q_INVOKABLE QVariantList channelData(const QString &channel, int pos = 0, int count = -1) const
 
-%% $beginSignals
-%% $signal=|traceIdChanged(int)
-%% $signal=|channelsChanged()
-%% $signal=|lengthChanged(int)
-%% $signal=|finalChanged(bool)
-%% $signal=|canceledChanged(bool)
-%% $signal=|opacityChanged(qreal)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void traceIdChanged( int traceId )
 $signalMethod=|void|traceIdChanged|int

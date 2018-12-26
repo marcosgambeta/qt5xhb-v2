@@ -103,19 +103,9 @@ $prototype=void updateSelectionListModels() [private] [slot]
 $prototype=void updateInputModes() [private] [slot]
 $prototype=void timerEvent(QTimerEvent *timerEvent) [protected]
 
-%% $beginSignals
-%% $signal=|virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)
-%% $signal=|activeKeyChanged(Qt::Key)
-%% $signal=|previousKeyChanged(Qt::Key)
-%% $signal=|inputMethodChanged()
-%% $signal=|inputMethodReset()
-%% $signal=|inputMethodUpdate()
-%% $signal=|inputModesChanged()
-%% $signal=|inputModeChanged()
-%% $signal=|patternRecognitionModesChanged()
-%% $signal=|wordCandidateListModelChanged()
-%% $signal=|wordCandidateListVisibleHintChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat )
 $signalMethod=|void|virtualKeyClicked|Qt::Key,QString,Qt::KeyboardModifiers,bool

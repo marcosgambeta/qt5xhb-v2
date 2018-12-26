@@ -160,24 +160,9 @@ $prototype=Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int
 $prototype=Q_INVOKABLE void clear()
 $prototype=Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
 
-%% $beginSignals
-%% $signal=|preeditTextChanged()
-%% $signal=|inputMethodHintsChanged()
-%% $signal=|surroundingTextChanged()
-%% $signal=|selectedTextChanged()
-%% $signal=|anchorPositionChanged()
-%% $signal=|cursorPositionChanged()
-%% $signal=|anchorRectangleChanged()
-%% $signal=|cursorRectangleChanged()
-%% $signal=|shiftActiveChanged()
-%% $signal=|capsLockActiveChanged()
-%% $signal=|uppercaseChanged()
-%% $signal=|animatingChanged()
-%% $signal=|localeChanged()
-%% $signal=|selectionControlVisibleChanged()
-%% $signal=|anchorRectIntersectsClipRectChanged()
-%% $signal=|cursorRectIntersectsClipRectChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void preeditTextChanged()
 $signalMethod=|void|preeditTextChanged|

@@ -53,11 +53,9 @@ $prototype=virtual void reset() [slot]
 $prototype=virtual void update() [slot]
 $prototype=void setInputEngine(QVirtualKeyboardInputEngine *inputEngine) [private]
 
-%% $beginSignals
-%% $signal=|selectionListChanged(QVirtualKeyboardSelectionListModel::Type)
-%% $signal=|selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)
-%% $signal=|selectionListsChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
 $signalMethod=|void|selectionListChanged|QVirtualKeyboardSelectionListModel::Type

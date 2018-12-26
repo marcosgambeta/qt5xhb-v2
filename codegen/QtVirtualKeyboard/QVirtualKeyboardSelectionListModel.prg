@@ -53,11 +53,9 @@ $prototype=Q_INVOKABLE QVariant dataAt(int index, Role role = Role::Display) con
 $prototype=void selectionListChanged(Type type) [protected] [slot]
 $prototype=void selectionListActiveItemChanged(Type type, int index) [protected] [slot]
 
-%% $beginSignals
-%% $signal=|countChanged()
-%% $signal=|activeItemChanged(int)
-%% $signal=|itemSelected(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void countChanged()
 $signalMethod=|void|countChanged|
