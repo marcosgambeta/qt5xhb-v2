@@ -37,9 +37,9 @@ $deleteMethod=5,4,0
 $prototype=virtual void sendMessage(const QJsonObject &message) = 0
 $virtualMethod=5,4,0|void|sendMessage|const QJsonObject &
 
-%% $beginSignals
-%% $signal=5,4,0|messageReceived(QJsonObject,QWebChannelAbstractTransport*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport )
 $signalMethod=5,4,0|void|messageReceived|QJsonObject,QWebChannelAbstractTransport*
