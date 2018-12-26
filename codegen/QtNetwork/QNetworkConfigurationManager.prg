@@ -55,13 +55,9 @@ $method=|bool|isOnline|
 $prototype=void updateConfigurations () (slot)
 $method=|void|updateConfigurations|
 
-%% $beginSignals
-%% $signal=|configurationAdded(QNetworkConfiguration)
-%% $signal=|configurationChanged(QNetworkConfiguration)
-%% $signal=|configurationRemoved(QNetworkConfiguration)
-%% $signal=|onlineStateChanged(bool)
-%% $signal=|updateCompleted()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void configurationAdded( const QNetworkConfiguration & config )
 $signalMethod=|void|configurationAdded|QNetworkConfiguration

@@ -145,12 +145,9 @@ $slotMethod=|void|abort|
 $prototype=void lookup() (slot)
 $slotMethod=|void|lookup|
 
-%% $beginSignals
-%% $signal=|finished()
-%% $signal=|nameChanged(QString)
-%% $signal=|nameserverChanged(QHostAddress)
-%% $signal=|typeChanged(QDnsLookup::Type)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished()
 $signalMethod=|void|finished|

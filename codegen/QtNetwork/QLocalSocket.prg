@@ -132,12 +132,9 @@ $prototype=virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE [protected]
 
 $prototype=virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE [protected]
 
-%% $beginSignals
-%% $signal=|connected()
-%% $signal=|disconnected()
-%% $signal=|error(QLocalSocket::LocalSocketError)
-%% $signal=|stateChanged(QLocalSocket::LocalSocketState)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void connected()
 $signalMethod=|void|connected|

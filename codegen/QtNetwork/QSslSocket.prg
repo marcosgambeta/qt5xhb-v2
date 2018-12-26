@@ -430,14 +430,9 @@ $prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected
 
 $prototype=qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
 
-%% $beginSignals
-%% $signal=|encrypted()
-%% $signal=|encryptedBytesWritten(qint64)
-%% $signal=|modeChanged(QSslSocket::SslMode)
-%% $signal=|peerVerifyError(QSslError)
-%% $signal=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
-%% $signal=|sslErrors(QList<QSslError>)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void encrypted()
 $signalMethod=|void|encrypted|

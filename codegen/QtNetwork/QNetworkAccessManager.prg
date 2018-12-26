@@ -292,22 +292,9 @@ $prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequ
 
 $prototype=QStringList supportedSchemesImplementation() const [protected] (slot) (5,2,0)
 
-%% $beginSignals
-%% %% #ifndef QT_NO_NETWORKPROXY
-%% $signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-%% %% #endif
-%% $signal=|authenticationRequired(QNetworkReply*,QAuthenticator*)
-%% $signal=|finished(QNetworkReply*)
-%% %% #ifndef QT_NO_SSL
-%% $signal=5,1,0|encrypted(QNetworkReply*)
-%% $signal=|sslErrors(QNetworkReply*,QList<QSslError>)
-%% $signal=5,5,0|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)
-%% %% #endif
-%% %% #ifndef QT_NO_BEARERMANAGEMENT
-%% $signal=|networkSessionConnected()
-%% $signal=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
-%% %% #endif
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 %% #ifndef QT_NO_NETWORKPROXY
 $prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )

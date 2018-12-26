@@ -171,20 +171,9 @@ $prototype=virtual void setSslConfigurationImplementation(const QSslConfiguratio
 
 $prototype=virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) [protected]
 
-%% $beginSignals
-%% $signal=|downloadProgress(qint64,qint64)
-%% $signal=|error(QNetworkReply::NetworkError)
-%% $signal=|finished()
-%% $signal=|metaDataChanged()
-%% $signal=|uploadProgress(qint64,qint64)
-%% %% #ifndef QT_NO_SSL
-%% $signal=5,1,0|encrypted()
-%% $signal=|sslErrors(QList<QSslError>)
-%% $signal=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
-%% %% #endif
-%% $signal=5,6,0|redirected(QUrl)
-%% $signal=5,9,0|redirectAllowed()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
 $signalMethod=|void|downloadProgress|qint64,qint64
