@@ -72,10 +72,9 @@ $method=5,4,0|void|setLocale|const QLocale &
 $prototype=QLocale locale() const
 $method=5,4,0|QLocale|locale|
 
-%% $beginSignals
-%% $signal=5,4,0|finished(QGeoCodeReply*)
-%% $signal=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished( QGeoCodeReply * reply )
 $signalMethod=5,4,0|void|finished|QGeoCodeReply*

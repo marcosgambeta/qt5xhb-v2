@@ -58,10 +58,9 @@ $method=5,4,0|int|offset|
 $prototype=virtual void abort()
 $virtualMethod=5,4,0|void|abort|
 
-%% $beginSignals
-%% $signal=5,4,0|finished()
-%% $signal=5,4,0|error(QGeoCodeReply::Error,QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished()
 $signalMethod=5,4,0|void|finished|

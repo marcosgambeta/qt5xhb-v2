@@ -91,17 +91,9 @@ $virtualMethod=5,4,0|QPlace|compatiblePlace|const QPlace &
 $prototype=virtual QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request)
 $virtualMethod=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
 
-%% $beginSignals
-%% $signal=5,4,0|finished(QPlaceReply*)
-%% $signal=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
-%% $signal=5,4,0|placeAdded(QString)
-%% $signal=5,4,0|placeUpdated(QString)
-%% $signal=5,4,0|placeRemoved(QString)
-%% $signal=5,4,0|categoryAdded(QPlaceCategory,QString)
-%% $signal=5,4,0|categoryUpdated(QPlaceCategory,QString)
-%% $signal=5,4,0|categoryRemoved(QString,QString)
-%% $signal=5,4,0|dataChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished( QPlaceReply * reply )
 $signalMethod=5,4,0|void|finished|QPlaceReply*
