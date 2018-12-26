@@ -78,12 +78,9 @@ $method=5,2,0|void|start|
 $prototype=void stop()
 $method=5,2,0|void|stop|
 
-%% $beginSignals
-%% $signal=5,2,0|deviceDiscovered(QBluetoothDeviceInfo)
-%% $signal=5,2,0|finished()
-%% $signal=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
-%% $signal=5,2,0|canceled()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void deviceDiscovered( const QBluetoothDeviceInfo & info )
 $signalMethod=5,2,0|void|deviceDiscovered|QBluetoothDeviceInfo

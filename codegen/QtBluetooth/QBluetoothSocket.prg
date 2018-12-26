@@ -145,12 +145,9 @@ $method=5,2,0|QBluetoothSocket::SocketError|error|
 $prototype=QString errorString() const
 $method=5,2,0|QString|errorString|
 
-%% $beginSignals
-%% $signal=5,2,0|connected()
-%% $signal=5,2,0|disconnected()
-%% $signal=5,2,0|error(QBluetoothSocket::SocketError)
-%% $signal=5,2,0|stateChanged(QBluetoothSocket::SocketState)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void connected()
 $signalMethod=5,2,0|void|connected|

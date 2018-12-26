@@ -96,10 +96,9 @@ $method=5,2,0|QBluetoothServiceInfo::Protocol|serverType|
 $prototype=Error error() const
 $method=5,2,0|QBluetoothServer::Error|error|
 
-%% $beginSignals
-%% $signal=5,2,0|newConnection()
-%% $signal=5,2,0|error(QBluetoothServer::Error)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void newConnection()
 $signalMethod=5,2,0|void|newConnection|

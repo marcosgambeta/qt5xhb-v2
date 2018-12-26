@@ -110,12 +110,9 @@ $method=5,2,0|void|stop|
 $prototype=void clear()
 $method=5,2,0|void|clear|
 
-%% $beginSignals
-%% $signal=5,2,0|serviceDiscovered(QBluetoothServiceInfo)
-%% $signal=5,2,0|finished()
-%% $signal=5,2,0|canceled()
-%% $signal=5,2,0|error(QBluetoothServiceDiscoveryAgent::Error)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void serviceDiscovered( const QBluetoothServiceInfo & info )
 $signalMethod=5,2,0|void|serviceDiscovered|QBluetoothServiceInfo

@@ -50,10 +50,9 @@ $method=5,2,0|QBluetoothTransferRequest|request|
 $prototype=void abort()
 $method=5,2,0|void|abort|
 
-%% $beginSignals
-%% $signal=5,2,0|finished(QBluetoothTransferReply*)
-%% $signal=5,2,0|transferProgress(qint64,qint64)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished( QBluetoothTransferReply * r )
 $signalMethod=5,2,0|void|finished|QBluetoothTransferReply*
