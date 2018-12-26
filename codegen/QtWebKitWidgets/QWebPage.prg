@@ -244,35 +244,9 @@ $method=|bool|supportsContentType|const QString &
 $prototype=QWebPageAdapter* handle() const
 %% TODO: implement ? (not present in the documentation)
 
-%% $beginSignals
-%% $signal=|applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)
-%% $signal=|contentsChanged()
-%% $signal=|databaseQuotaExceeded(QWebFrame*,QString)
-%% $signal=|downloadRequested(QNetworkRequest)
-%% $signal=|featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)
-%% $signal=|featurePermissionRequested(QWebFrame*,QWebPage::Feature)
-%% $signal=|frameCreated(QWebFrame*)
-%% $signal=|geometryChangeRequested(QRect)
-%% $signal=|linkClicked(QUrl)
-%% $signal=|linkHovered(QString,QString,QString)
-%% $signal=|loadFinished(bool)
-%% $signal=|loadProgress(int)
-%% $signal=|loadStarted()
-%% $signal=|menuBarVisibilityChangeRequested(bool)
-%% $signal=|microFocusChanged()
-%% $signal=|printRequested(QWebFrame*)
-%% $signal=|repaintRequested(QRect)
-%% $signal=|restoreFrameStateRequested(QWebFrame*)
-%% $signal=|saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)
-%% $signal=|scrollRequested(int,int,QRect)
-%% $signal=|selectionChanged()
-%% $signal=|statusBarMessage(QString)
-%% $signal=|statusBarVisibilityChangeRequested(bool)
-%% $signal=|toolBarVisibilityChangeRequested(bool)
-%% $signal=|unsupportedContent(QNetworkReply*)
-%% $signal=|viewportChangeRequested()
-%% $signal=|windowCloseRequested()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded )
 $signalMethod=|void|applicationCacheQuotaExceeded|QWebSecurityOrigin*,quint64,quint64

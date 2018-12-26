@@ -215,17 +215,9 @@ $method=|QSize|sizeHint|
 $prototype=virtual bool event(QEvent*)
 $virtualMethod=|bool|event|QEvent *
 
-%% $beginSignals
-%% $signal=|iconChanged()
-%% $signal=|linkClicked(QUrl)
-%% $signal=|loadFinished(bool)
-%% $signal=|loadProgress(int)
-%% $signal=|loadStarted()
-%% $signal=|selectionChanged()
-%% $signal=|statusBarMessage(QString)
-%% $signal=|titleChanged(QString)
-%% $signal=|urlChanged(QUrl)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void iconChanged()
 $signalMethod=|void|iconChanged|

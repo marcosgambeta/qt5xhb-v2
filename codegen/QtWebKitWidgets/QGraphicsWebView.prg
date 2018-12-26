@@ -201,16 +201,9 @@ $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 $prototype=void setRenderHint(QPainter::RenderHint, bool enabled = true)
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-%% $beginSignals
-%% $signal=|iconChanged()
-%% $signal=|linkClicked(QUrl)
-%% $signal=|loadFinished(bool)
-%% $signal=|loadProgress(int)
-%% $signal=|loadStarted()
-%% $signal=|statusBarMessage(QString)
-%% $signal=|titleChanged(QString)
-%% $signal=|urlChanged(QUrl)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void iconChanged()
 $signalMethod=|void|iconChanged|
