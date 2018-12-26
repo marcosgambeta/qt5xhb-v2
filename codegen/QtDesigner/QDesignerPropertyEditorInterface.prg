@@ -53,9 +53,9 @@ $virtualMethod=|void|setPropertyValue|const QString &,const QVariant &,bool=true
 $prototype=virtual void setReadOnly ( bool readOnly ) = 0
 $virtualMethod=|void|setReadOnly|bool
 
-%% $beginSignals
-%% $signal=|propertyChanged(QString,QVariant)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void propertyChanged( const QString & name, const QVariant & value )
 $signalMethod=|void|propertyChanged|QString,QVariant
