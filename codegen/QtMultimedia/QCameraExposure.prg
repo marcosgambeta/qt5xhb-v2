@@ -159,15 +159,9 @@ $slotMethod=|void|setManualIsoSensitivity|int
 $prototype=void setManualShutterSpeed(qreal seconds)
 $slotMethod=|void|setManualShutterSpeed|qreal
 
-%% $beginSignals
-%% $signal=|apertureChanged(qreal)
-%% $signal=|apertureRangeChanged()
-%% $signal=|exposureCompensationChanged(qreal)
-%% $signal=|flashReady(bool)
-%% $signal=|isoSensitivityChanged(int)
-%% $signal=|shutterSpeedChanged(qreal)
-%% $signal=|shutterSpeedRangeChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void apertureChanged( qreal value )
 $signalMethod=|void|apertureChanged|qreal

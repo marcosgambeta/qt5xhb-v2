@@ -98,22 +98,9 @@ $virtualMethod=|void|stop|
 $prototype=virtual int volume() const = 0
 $virtualMethod=|int|volume|
 
-%% $beginSignals
-%% $signal=|audioAvailableChanged(bool)
-%% $signal=|availablePlaybackRangesChanged(QMediaTimeRange)
-%% $signal=|bufferStatusChanged(int)
-%% $signal=|durationChanged(qint64)
-%% $signal=|error(int,QString)
-%% $signal=|mediaChanged(QMediaContent)
-%% $signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
-%% $signal=|mutedChanged(bool)
-%% $signal=|playbackRateChanged(qreal)
-%% $signal=|positionChanged(qint64)
-%% $signal=|seekableChanged(bool)
-%% $signal=|stateChanged(QMediaPlayer::State)
-%% $signal=|videoAvailableChanged(bool)
-%% $signal=|volumeChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void audioAvailableChanged( bool audio )
 $signalMethod=|void|audioAvailableChanged|bool

@@ -71,17 +71,9 @@ $virtualMethod=|QAudioDecoder::State|state|
 $prototype=virtual void stop() = 0
 $virtualMethod=|void|stop|
 
-%% $beginSignals
-%% $signal=|bufferAvailableChanged(bool)
-%% $signal=|bufferReady()
-%% $signal=|durationChanged(qint64)
-%% $signal=|error(int,QString)
-%% $signal=|finished()
-%% $signal=|formatChanged(QAudioFormat)
-%% $signal=|positionChanged(qint64)
-%% $signal=|sourceChanged()
-%% $signal=|stateChanged(QAudioDecoder::State)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void bufferAvailableChanged( bool available )
 $signalMethod=|void|bufferAvailableChanged|bool

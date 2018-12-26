@@ -47,11 +47,9 @@ $virtualMethod=|bool|setValue|QCameraExposureControl::ExposureParameter,const QV
 $prototype=virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool * continuous) const = 0
 $virtualMethod=|QVariantList|supportedParameterRange|QCameraExposureControl::ExposureParameter,bool *
 
-%% $beginSignals
-%% $signal=|actualValueChanged(int)
-%% $signal=|parameterRangeChanged(int)
-%% $signal=|requestedValueChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void actualValueChanged( int parameter )
 $signalMethod=|void|actualValueChanged|int

@@ -41,9 +41,9 @@ $virtualMethod=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureD
 $prototype=virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0
 $virtualMethod=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations
 
-%% $beginSignals
-%% $signal=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
 $signalMethod=|void|captureDestinationChanged|QCameraImageCapture::CaptureDestinations

@@ -167,19 +167,9 @@ $slotMethod=|void|stop|
 $prototype=QPair<int,int> frequencyRange(Band band) const
 %% TODO: QPair<int,int>
 
-%% $beginSignals
-%% $signal=|stateChanged(QRadioTuner::State)
-%% $signal=|bandChanged(QRadioTuner::Band)
-%% $signal=|frequencyChanged(int)
-%% $signal=|stereoStatusChanged(bool)
-%% $signal=|searchingChanged(bool)
-%% $signal=|signalStrengthChanged(int)
-%% $signal=|volumeChanged(int)
-%% $signal=|mutedChanged(bool)
-%% $signal=|stationFound(int,QString)
-%% $signal=|antennaConnectedChanged(bool)
-%% $signal=|error(QRadioTuner::Error)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void stateChanged( QRadioTuner::State state )
 $signalMethod=|void|stateChanged|QRadioTuner::State

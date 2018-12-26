@@ -62,10 +62,9 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 }
 $addMethod=setSource
 
-%% $beginSignals
-%% $signal=|flush()
-%% $signal=|videoFrameProbed(QVideoFrame)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void flush()
 $signalMethod=|void|flush|

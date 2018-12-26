@@ -138,10 +138,9 @@ $method=|void|suspend|
 $prototype=qreal volume() const
 $method=|qreal|volume|
 
-%% $beginSignals
-%% $signal=|notify()
-%% $signal=|stateChanged(QAudio::State)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void notify()
 $signalMethod=|void|notify|

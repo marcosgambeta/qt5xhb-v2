@@ -34,10 +34,9 @@ $prototype=explicit QMediaAudioProbeControl(QObject *parent = Q_NULLPTR) [protec
 $prototype=virtual ~QMediaAudioProbeControl()
 $deleteMethod
 
-%% $beginSignals
-%% $signal=|audioBufferProbed(QAudioBuffer)
-%% $signal=|flush()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void audioBufferProbed( const QAudioBuffer & buffer )
 $signalMethod=|void|audioBufferProbed|QAudioBuffer

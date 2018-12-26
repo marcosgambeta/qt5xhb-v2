@@ -117,11 +117,9 @@ $virtualMethod=|QString|category|
 $prototype=virtual void setCategory(const QString &)
 $virtualMethod=|void|setCategory|const QString &
 
-%% $beginSignals
-%% $signal=|errorChanged(QAudio::Error)
-%% $signal=|stateChanged(QAudio::State)
-%% $signal=|notify()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void errorChanged( QAudio::Error error )
 $signalMethod=|void|errorChanged|QAudio::Error

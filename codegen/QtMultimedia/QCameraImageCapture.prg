@@ -102,17 +102,9 @@ $slotMethod=|int|capture|const QString &=QString()
 
 $prototype=bool setMediaObject(QMediaObject *) override [protected]
 
-%% $beginSignals
-%% $signal=|bufferFormatChanged(QVideoFrame::PixelFormat)
-%% $signal=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
-%% $signal=|error(int,QCameraImageCapture::Error,QString)
-%% $signal=|imageAvailable(int,QVideoFrame)
-%% $signal=|imageCaptured(int,QImage)
-%% $signal=|imageExposed(int)
-%% $signal=|imageMetadataAvailable(int,QString,QVariant)
-%% $signal=|imageSaved(int,QString)
-%% $signal=|readyForCaptureChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void bufferFormatChanged( QVideoFrame::PixelFormat format )
 $signalMethod=|void|bufferFormatChanged|QVideoFrame::PixelFormat

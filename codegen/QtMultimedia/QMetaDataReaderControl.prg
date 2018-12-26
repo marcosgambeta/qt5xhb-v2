@@ -41,13 +41,9 @@ $virtualMethod=|QVariant|metaData|const QString &
 $prototype=virtual QStringList availableMetaData() const = 0
 $virtualMethod=|QStringList|availableMetaData|
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|metaDataChanged()
-%% $signal=|metaDataChanged(QString,QVariant)
-%% $endGroup
-%% $signal=|metaDataAvailableChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void metaDataChanged()
 $signalMethod=|void|metaDataChanged,metaDataChanged1,QOverload<>|

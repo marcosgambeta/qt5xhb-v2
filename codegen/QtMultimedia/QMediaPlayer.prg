@@ -246,24 +246,9 @@ $prototype=bool bind(QObject *) override
 $prototype=void unbind(QObject *) override
 %% TODO: not present in the documentation
 
-%% $beginSignals
-%% $signal=|audioAvailableChanged(bool)
-%% $signal=5,6,0|audioRoleChanged(QAudio::Role)
-%% $signal=|bufferStatusChanged(int)
-%% $signal=|currentMediaChanged(QMediaContent)
-%% $signal=|durationChanged(qint64)
-%% $signal=|error(QMediaPlayer::Error)
-%% $signal=|mediaChanged(QMediaContent)
-%% $signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
-%% $signal=|mutedChanged(bool)
-%% $signal=|networkConfigurationChanged(QNetworkConfiguration)
-%% $signal=|playbackRateChanged(qreal)
-%% $signal=|positionChanged(qint64)
-%% $signal=|seekableChanged(bool)
-%% $signal=|stateChanged(QMediaPlayer::State)
-%% $signal=|videoAvailableChanged(bool)
-%% $signal=|volumeChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void audioAvailableChanged( bool available )
 $signalMethod=|void|audioAvailableChanged|bool

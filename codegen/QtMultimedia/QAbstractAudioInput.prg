@@ -111,11 +111,9 @@ $virtualMethod=|void|setVolume|qreal
 $prototype=virtual qreal volume() const = 0
 $virtualMethod=|qreal|volume|
 
-%% $beginSignals
-%% $signal=|errorChanged(QAudio::Error)
-%% $signal=|stateChanged(QAudio::State)
-%% $signal=|notify()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void errorChanged( QAudio::Error error )
 $signalMethod=|void|errorChanged|QAudio::Error

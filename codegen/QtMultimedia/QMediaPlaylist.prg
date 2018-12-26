@@ -247,18 +247,9 @@ $method=5,7,0|bool|moveMedia|int,int
 
 $prototype=bool setMediaObject(QMediaObject *object) override [protected]
 
-%% $beginSignals
-%% $signal=|currentIndexChanged(int)
-%% $signal=|currentMediaChanged(QMediaContent)
-%% $signal=|loadFailed()
-%% $signal=|loaded()
-%% $signal=|mediaAboutToBeInserted(int,int)
-%% $signal=|mediaAboutToBeRemoved(int,int)
-%% $signal=|mediaChanged(int,int)
-%% $signal=|mediaInserted(int,int)
-%% $signal=|mediaRemoved(int,int)
-%% $signal=|playbackModeChanged(QMediaPlaylist::PlaybackMode)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void currentIndexChanged( int position )
 $signalMethod=|void|currentIndexChanged|int

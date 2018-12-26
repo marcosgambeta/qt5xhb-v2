@@ -50,13 +50,9 @@ $virtualMethod=|int|selectedDevice|
 $prototype=virtual void setSelectedDevice(int index) = 0
 $virtualSlotMethod=|void|setSelectedDevice|int
 
-%% $beginSignals
-%% $signal=|devicesChanged()
-%% $beginGroup
-%% $signal=|selectedDeviceChanged(int)
-%% $signal=|selectedDeviceChanged(QString)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void devicesChanged()
 $signalMethod=|void|devicesChanged|

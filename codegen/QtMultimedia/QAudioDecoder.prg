@@ -105,17 +105,9 @@ $prototype=bool bind(QObject *) override
 
 $prototype=void unbind(QObject *) override
 
-%% $beginSignals
-%% $signal=|bufferAvailableChanged(bool)
-%% $signal=|bufferReady()
-%% $signal=|durationChanged(qint64)
-%% $signal=|error(QAudioDecoder::Error)
-%% $signal=|finished()
-%% $signal=|formatChanged(QAudioFormat)
-%% $signal=|positionChanged(qint64)
-%% $signal=|sourceChanged()
-%% $signal=|stateChanged(QAudioDecoder::State)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void bufferAvailableChanged( bool available )
 $signalMethod=|void|bufferAvailableChanged|bool

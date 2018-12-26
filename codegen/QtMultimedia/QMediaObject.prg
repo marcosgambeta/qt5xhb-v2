@@ -81,18 +81,9 @@ $prototype=void removePropertyWatch(QByteArray const &name) [protected]
 
 $prototype=void setupControls() [private]
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|availabilityChanged(bool)
-%% $signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
-%% $endGroup
-%% $signal=|metaDataAvailableChanged(bool)
-%% $beginGroup
-%% $signal=|metaDataChanged()
-%% $signal=|metaDataChanged(QString,QVariant)
-%% $endGroup
-%% $signal=|notifyIntervalChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void availabilityChanged( bool available )
 $signalMethod=|void|availabilityChanged,availabilityChanged1,QOverload<bool>|bool

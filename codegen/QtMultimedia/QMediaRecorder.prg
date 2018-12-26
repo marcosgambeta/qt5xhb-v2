@@ -197,25 +197,9 @@ $slotMethod=|void|stop|
 
 $prototype=bool setMediaObject(QMediaObject *object) override [protected]
 
-%% $beginSignals
-%% $signal=|actualLocationChanged(QUrl)
-%% $beginGroup
-%% $signal=|availabilityChanged(bool)
-%% $signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
-%% $endGroup
-%% $signal=|durationChanged(qint64)
-%% $signal=|error(QMediaRecorder::Error)
-%% $signal=|metaDataAvailableChanged(bool)
-%% $beginGroup
-%% $signal=|metaDataChanged()
-%% $signal=|metaDataChanged(QString,QVariant)
-%% $endGroup
-%% $signal=|metaDataWritableChanged(bool)
-%% $signal=|mutedChanged(bool)
-%% $signal=|stateChanged(QMediaRecorder::State)
-%% $signal=|statusChanged(QMediaRecorder::Status)
-%% $signal=|volumeChanged(qreal)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void actualLocationChanged( const QUrl & location )
 $signalMethod=|void|actualLocationChanged|QUrl

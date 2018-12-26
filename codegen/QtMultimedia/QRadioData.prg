@@ -96,15 +96,9 @@ $method=|QString|errorString|
 
 $prototype=bool setMediaObject(QMediaObject *) override [protected]
 
-%% $beginSignals
-%% $signal=|stationIdChanged(QString)
-%% $signal=|programTypeChanged(QRadioData::ProgramType)
-%% $signal=|programTypeNameChanged(QString)
-%% $signal=|stationNameChanged(QString)
-%% $signal=|radioTextChanged(QString)
-%% $signal=|alternativeFrequenciesEnabledChanged(bool)
-%% $signal=|error(QRadioData::Error)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void stationIdChanged( QString stationId )
 $signalMethod=|void|stationIdChanged|QString

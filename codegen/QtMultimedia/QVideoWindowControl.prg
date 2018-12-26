@@ -86,14 +86,9 @@ $virtualMethod=|WId|winId|
 $prototype=virtual void setWinId(WId id) = 0
 $virtualMethod=|void|setWinId|WId
 
-%% $beginSignals
-%% $signal=|fullScreenChanged(bool)
-%% $signal=|brightnessChanged(int)
-%% $signal=|contrastChanged(int)
-%% $signal=|hueChanged(int)
-%% $signal=|saturationChanged(int)
-%% $signal=|nativeSizeChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void fullScreenChanged( bool fullScreen )
 $signalMethod=|void|fullScreenChanged|bool

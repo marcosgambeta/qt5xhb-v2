@@ -120,17 +120,9 @@ $slotMethod=|void|stop|
 $prototype=static QStringList supportedMimeTypes()
 $staticMethod=|QStringList|supportedMimeTypes|
 
-%% $beginSignals
-%% $signal=|sourceChanged()
-%% $signal=|loopCountChanged()
-%% $signal=|loopsRemainingChanged()
-%% $signal=|volumeChanged()
-%% $signal=|mutedChanged()
-%% $signal=|loadedChanged()
-%% $signal=|playingChanged()
-%% $signal=|statusChanged()
-%% $signal=|categoryChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void sourceChanged()
 $signalMethod=|void|sourceChanged|

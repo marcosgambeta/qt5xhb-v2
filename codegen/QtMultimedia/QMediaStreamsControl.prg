@@ -47,10 +47,9 @@ $virtualMethod=|int|streamCount|
 $prototype=virtual StreamType streamType(int streamNumber) = 0
 $virtualMethod=|QMediaStreamsControl::StreamType|streamType|int
 
-%% $beginSignals
-%% $signal=|activeStreamsChanged()
-%% $signal=|streamsChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activeStreamsChanged()
 $signalMethod=|void|activeStreamsChanged|

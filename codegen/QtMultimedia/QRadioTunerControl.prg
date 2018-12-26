@@ -110,19 +110,9 @@ $virtualMethod=|QString|errorString|
 $prototype=virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
 %% TODO: QPair<int,int>
 
-%% $beginSignals
-%% $signal=|stateChanged(QRadioTuner::State)
-%% $signal=|bandChanged(QRadioTuner::Band)
-%% $signal=|frequencyChanged(int)
-%% $signal=|stereoStatusChanged(bool)
-%% $signal=|searchingChanged(bool)
-%% $signal=|signalStrengthChanged(int)
-%% $signal=|volumeChanged(int)
-%% $signal=|mutedChanged(bool)
-%% $signal=|error(QRadioTuner::Error)
-%% $signal=|stationFound(int,QString)
-%% $signal=|antennaConnectedChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void stateChanged( QRadioTuner::State state )
 $signalMethod=|void|stateChanged|QRadioTuner::State
