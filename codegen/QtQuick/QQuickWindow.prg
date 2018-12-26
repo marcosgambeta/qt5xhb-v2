@@ -131,15 +131,9 @@ $method=|void|releaseResources|
 $prototype=void update()
 $method=|void|update|
 
-%% $beginSignals
-%% $signal=|afterRendering()
-%% $signal=|beforeRendering()
-%% $signal=|beforeSynchronizing()
-%% $signal=|colorChanged(QColor)
-%% $signal=|frameSwapped()
-%% $signal=|sceneGraphInitialized()
-%% $signal=|sceneGraphInvalidated()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void afterRendering()
 $signalMethod=|void|afterRendering|

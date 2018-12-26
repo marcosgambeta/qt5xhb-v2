@@ -94,9 +94,9 @@ $method=|QQuickView::Status|status|
 $prototype=void setSource(const QUrl & url)
 $method=|void|setSource|const QUrl &
 
-%% $beginSignals
-%% $signal=|statusChanged(QQuickView::Status)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void statusChanged( QQuickView::Status status )
 $signalMethod=|void|statusChanged|QQuickView::Status

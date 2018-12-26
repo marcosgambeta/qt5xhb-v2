@@ -92,12 +92,9 @@ $method=|void|setRenderTarget|QQuickPaintedItem::RenderTarget
 $prototype=void update(const QRect & rect = QRect())
 $method=|void|update|const QRect &=QRect()
 
-%% $beginSignals
-%% $signal=|contentsScaleChanged()
-%% $signal=|contentsSizeChanged()
-%% $signal=|fillColorChanged()
-%% $signal=|renderTargetChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void contentsScaleChanged()
 $signalMethod=|void|contentsScaleChanged|
