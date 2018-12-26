@@ -53,11 +53,9 @@ $prototype=void registerProduct(QInAppProduct *) [private] (slot)
 
 $prototype=void setupBackend() [private]
 
-%% $beginSignals
-%% $signal=|productRegistered(QInAppProduct*)
-%% $signal=|productUnknown(QInAppProduct::ProductType,QString)
-%% $signal=|transactionReady(QInAppTransaction*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void productRegistered( QInAppProduct * product )
 $signalMethod=|void|productRegistered|QInAppProduct*
