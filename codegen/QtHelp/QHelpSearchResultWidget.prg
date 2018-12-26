@@ -32,9 +32,9 @@ $deleteMethod
 $prototype=QUrl linkAt ( const QPoint & point )
 $method=|QUrl|linkAt|const QPoint &
 
-%% $beginSignals
-%% $signal=|requestShowLink(QUrl)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void requestShowLink( const QUrl & link )
 $signalMethod=|void|requestShowLink|QUrl

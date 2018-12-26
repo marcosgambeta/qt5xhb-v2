@@ -59,12 +59,9 @@ $method=|void|reindexDocumentation|
 $prototype=void search ( const QList<QHelpSearchQuery> & queryList )
 $method=|void|search|const QList<QHelpSearchQuery> &
 
-%% $beginSignals
-%% $signal=|indexingFinished()
-%% $signal=|indexingStarted()
-%% $signal=|searchingFinished(int)
-%% $signal=|searchingStarted()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void indexingFinished()
 $signalMethod=|void|indexingFinished|

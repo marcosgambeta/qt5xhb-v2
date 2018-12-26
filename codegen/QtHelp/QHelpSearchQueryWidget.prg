@@ -35,9 +35,9 @@ $deleteMethod
 $prototype=QList<QHelpSearchQuery> query () const
 $method=|QList<QHelpSearchQuery>|query|
 
-%% $beginSignals
-%% $signal=|search()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void search()
 $signalMethod=|void|search|

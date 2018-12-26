@@ -36,10 +36,9 @@ $method=|QModelIndex|filter|const QString &,const QString &=QString()
 $prototype=bool isCreatingIndex () const
 $method=|bool|isCreatingIndex|
 
-%% $beginSignals
-%% $signal=|indexCreated()
-%% $signal=|indexCreationStarted()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void indexCreated()
 $signalMethod=|void|indexCreated|
