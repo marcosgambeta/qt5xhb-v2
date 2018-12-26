@@ -95,12 +95,9 @@ $method=5,7,0|QAbstractSeries::SeriesType|type|
 $prototype=void setPen(const QPen &pen)
 $method=5,7,0|void|setPen|const QPen &
 
-%% $beginSignals
-%% $signal=5,7,0|borderColorChanged(QColor)
-%% $signal=5,7,0|colorChanged(QColor)
-%% $signal=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
-%% $signal=5,7,0|markerSizeChanged(qreal)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

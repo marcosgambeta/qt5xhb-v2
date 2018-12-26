@@ -117,17 +117,9 @@ $virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
 $prototype=virtual QAbstractSeries* series() = 0
 $virtualMethod=5,7,0|QAbstractSeries *|series|
 
-%% $beginSignals
-%% $signal=5,7,0|brushChanged()
-%% $signal=5,7,0|clicked()
-%% $signal=5,7,0|fontChanged()
-%% $signal=5,7,0|hovered(bool)
-%% $signal=5,7,0|labelBrushChanged()
-%% $signal=5,7,0|labelChanged()
-%% $signal=5,7,0|penChanged()
-%% $signal=5,9,0|shapeChanged()
-%% $signal=5,7,0|visibleChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

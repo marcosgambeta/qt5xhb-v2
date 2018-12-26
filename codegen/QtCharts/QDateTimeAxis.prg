@@ -89,13 +89,9 @@ $method=5,7,0|QAbstractAxis::AxisType|type|
 $prototype=void setRange(QDateTime min, QDateTime max)
 $method=5,7,0|void|setRange|QDateTime,QDateTime
 
-%% $beginSignals
-%% $signal=5,7,0|formatChanged(QString)
-%% $signal=5,7,0|maxChanged(QDateTime)
-%% $signal=5,7,0|minChanged(QDateTime)
-%% $signal=5,7,0|rangeChanged(QDateTime,QDateTime)
-%% $signal=5,7,0|tickCountChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

@@ -90,10 +90,9 @@ $method=5,7,0|void|replaceLabel|const QString &,const QString &
 $prototype=qreal endValue(const QString &categoryLabel) const
 $method=5,7,0|qreal|endValue|const QString &
 
-%% $beginSignals
-%% $signal=5,7,0|categoriesChanged()
-%% $signal=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

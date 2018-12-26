@@ -125,13 +125,9 @@ $method=5,7,0|QString|at|int
 $prototype=void setRange(const QString &minCategory, const QString &maxCategory)
 $method=5,7,0|void|setRange|const QString &,const QString &
 
-%% $beginSignals
-%% $signal=5,7,0|categoriesChanged()
-%% $signal=5,7,0|countChanged()
-%% $signal=5,7,0|maxChanged(QString)
-%% $signal=5,7,0|minChanged(QString)
-%% $signal=5,7,0|rangeChanged(QString,QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

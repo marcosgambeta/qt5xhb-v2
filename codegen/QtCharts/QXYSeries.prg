@@ -269,25 +269,9 @@ $virtualMethod=5,7,0|void|setBrush|const QBrush &
 $prototype=QBrush brush() const
 $method=5,7,0|QBrush|brush|
 
-%% $beginSignals
-%% $signal=5,7,0|clicked(QPointF)
-%% $signal=5,7,0|colorChanged(QColor)
-%% $signal=5,7,0|doubleClicked(QPointF)
-%% $signal=5,7,0|hovered(QPointF,bool)
-%% $signal=5,7,0|penChanged(QPen)
-%% $signal=5,7,0|pointAdded(int)
-%% $signal=5,7,0|pointLabelsClippingChanged(bool)
-%% $signal=5,7,0|pointLabelsColorChanged(QColor)
-%% $signal=5,7,0|pointLabelsFontChanged(QFont)
-%% $signal=5,7,0|pointLabelsFormatChanged(QString)
-%% $signal=5,7,0|pointLabelsVisibilityChanged(bool)
-%% $signal=5,7,0|pointRemoved(int)
-%% $signal=5,7,0|pointReplaced(int)
-%% $signal=5,7,0|pointsRemoved(int,int)
-%% $signal=5,7,0|pointsReplaced()
-%% $signal=5,7,0|pressed(QPointF)
-%% $signal=5,7,0|released(QPointF)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

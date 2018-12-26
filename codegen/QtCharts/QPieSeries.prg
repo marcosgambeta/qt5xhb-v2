@@ -174,17 +174,9 @@ $method=5,7,0|void|setLabelsVisible|bool=true
 $prototype=void setLabelsPosition(QPieSlice::LabelPosition position)
 $method=5,7,0|void|setLabelsPosition|QPieSlice::LabelPosition
 
-%% $beginSignals
-%% $signal=5,7,0|added(QList<QPieSlice*>)
-%% $signal=5,7,0|clicked(QPieSlice*)
-%% $signal=5,7,0|countChanged()
-%% $signal=5,7,0|doubleClicked(QPieSlice*)
-%% $signal=5,7,0|hovered(QPieSlice*,bool)
-%% $signal=5,7,0|pressed(QPieSlice*)
-%% $signal=5,7,0|released(QPieSlice*)
-%% $signal=5,7,0|removed(QList<QPieSlice*>)
-%% $signal=5,7,0|sumChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

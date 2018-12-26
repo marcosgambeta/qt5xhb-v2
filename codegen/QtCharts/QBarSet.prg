@@ -163,24 +163,9 @@ $method=5,7,0|int|count|
 $prototype=qreal sum() const
 $method=5,7,0|qreal|sum|
 
-%% $beginSignals
-%% $signal=5,7,0|borderColorChanged(QColor)
-%% $signal=5,7,0|brushChanged()
-%% $signal=5,7,0|clicked(int)
-%% $signal=5,7,0|colorChanged(QColor)
-%% $signal=5,7,0|doubleClicked(int)
-%% $signal=5,7,0|hovered(bool,int)
-%% $signal=5,7,0|labelBrushChanged()
-%% $signal=5,7,0|labelChanged()
-%% $signal=5,7,0|labelColorChanged(QColor)
-%% $signal=5,7,0|labelFontChanged()
-%% $signal=5,7,0|penChanged()
-%% $signal=5,7,0|pressed(int)
-%% $signal=5,7,0|released(int)
-%% $signal=5,7,0|valueChanged(int)
-%% $signal=5,7,0|valuesAdded(int,int)
-%% $signal=5,7,0|valuesRemoved(int,int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

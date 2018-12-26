@@ -101,14 +101,9 @@ $method=5,7,0|void|setColumnCount|int
 %%
 %%
 
-%% $beginSignals
-%% $signal=5,7,0|columnCountChanged()
-%% $signal=5,7,0|firstColumnChanged()
-%% $signal=5,7,0|labelsRowChanged()
-%% $signal=5,7,0|modelReplaced()
-%% $signal=5,7,0|seriesReplaced()
-%% $signal=5,7,0|valuesRowChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

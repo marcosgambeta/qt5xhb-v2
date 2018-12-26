@@ -165,16 +165,9 @@ $prototype=void hideEvent(QHideEvent *event) [protected]
 
 $prototype=void showEvent(QShowEvent *event) [protected]
 
-%% $beginSignals
-%% $signal=5,7,0|backgroundVisibleChanged(bool)
-%% $signal=5,7,0|borderColorChanged(QColor)
-%% $signal=5,7,0|colorChanged(QColor)
-%% $signal=5,7,0|fontChanged(QFont)
-%% $signal=5,7,0|labelColorChanged(QColor)
-%% $signal=5,9,0|markerShapeChanged(QLegend::MarkerShape)
-%% $signal=5,7,0|reverseMarkersChanged(bool)
-%% $signal=5,7,0|showToolTipsChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

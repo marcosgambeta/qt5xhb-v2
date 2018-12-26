@@ -215,26 +215,9 @@ $method=5,8,0|QList<QCandlestickSet *>|sets|
 $prototype=QAbstractSeries::SeriesType type() const
 $method=5,8,0|QAbstractSeries::SeriesType|type|
 
-%% $beginSignals
-%% $signal=5,8,0|bodyOutlineVisibilityChanged()
-%% $signal=5,8,0|bodyWidthChanged()
-%% $signal=5,8,0|brushChanged()
-%% $signal=5,8,0|candlestickSetsAdded(QList<QCandlestickSet*>)
-%% $signal=5,8,0|candlestickSetsRemoved(QList<QCandlestickSet*>)
-%% $signal=5,8,0|capsVisibilityChanged()
-%% $signal=5,8,0|capsWidthChanged()
-%% $signal=5,8,0|clicked(QCandlestickSet*)
-%% $signal=5,8,0|countChanged()
-%% $signal=5,8,0|decreasingColorChanged()
-%% $signal=5,8,0|doubleClicked(QCandlestickSet*)
-%% $signal=5,8,0|hovered(bool,QCandlestickSet*)
-%% $signal=5,8,0|increasingColorChanged()
-%% $signal=5,8,0|maximumColumnWidthChanged()
-%% $signal=5,8,0|minimumColumnWidthChanged()
-%% $signal=5,8,0|penChanged()
-%% $signal=5,8,0|pressed(QCandlestickSet*)
-%% $signal=5,8,0|released(QCandlestickSet*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;

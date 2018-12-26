@@ -104,15 +104,9 @@ $method=5,7,0|QAbstractAxis::AxisType|type|
 $prototype=void setRange(qreal min, qreal max)
 $method=5,7,0|void|setRange|qreal,qreal
 
-%% $beginSignals
-%% $signal=5,7,0|baseChanged(qreal)
-%% $signal=5,7,0|labelFormatChanged(QString)
-%% $signal=5,7,0|maxChanged(qreal)
-%% $signal=5,7,0|minChanged(qreal)
-%% $signal=5,9,0|minorTickCountChanged(int)
-%% $signal=5,7,0|rangeChanged(qreal,qreal)
-%% $signal=5,9,0|tickCountChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

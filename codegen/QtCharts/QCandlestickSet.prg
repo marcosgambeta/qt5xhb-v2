@@ -129,20 +129,9 @@ $method=5,8,0|QPen|pen|
 $prototype=void setPen(const QPen &pen)
 $method=5,8,0|void|setPen|const QPen &
 
-%% $beginSignals
-%% $signal=5,8,0|brushChanged()
-%% $signal=5,8,0|clicked()
-%% $signal=5,8,0|closeChanged()
-%% $signal=5,8,0|doubleClicked()
-%% $signal=5,8,0|highChanged()
-%% $signal=5,8,0|hovered(bool)
-%% $signal=5,8,0|lowChanged()
-%% $signal=5,8,0|openChanged()
-%% $signal=5,8,0|penChanged()
-%% $signal=5,8,0|pressed()
-%% $signal=5,8,0|released()
-%% $signal=5,8,0|timestampChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;

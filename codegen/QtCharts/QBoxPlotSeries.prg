@@ -130,20 +130,9 @@ $method=5,7,0|void|clear|
 $prototype=QAbstractSeries::SeriesType type() const
 $method=5,7,0|QAbstractSeries::SeriesType|type|
 
-%% $beginSignals
-%% $signal=5,7,0|boxOutlineVisibilityChanged()
-%% $signal=5,7,0|boxsetsAdded(QList<QBoxSet*>)
-%% $signal=5,7,0|boxsetsRemoved(QList<QBoxSet*>)
-%% $signal=5,7,0|boxWidthChanged()
-%% $signal=5,7,0|brushChanged()
-%% $signal=5,7,0|clicked(QBoxSet*)
-%% $signal=5,7,0|countChanged()
-%% $signal=5,7,0|doubleClicked(QBoxSet*)
-%% $signal=5,7,0|hovered(bool,QBoxSet*)
-%% $signal=5,7,0|penChanged()
-%% $signal=5,7,0|pressed(QBoxSet*)
-%% $signal=5,7,0|released(QBoxSet*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

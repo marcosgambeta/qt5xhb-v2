@@ -320,33 +320,9 @@ $method=5,7,0|void|setMax|const QVariant &
 $prototype=void setRange(const QVariant &min, const QVariant &max)
 $method=5,7,0|void|setRange|const QVariant &,const QVariant &
 
-%% $beginSignals
-%% $signal=5,7,0|colorChanged(QColor)
-%% $signal=5,7,0|gridLineColorChanged(QColor)
-%% $signal=5,7,0|gridLinePenChanged(QPen)
-%% $signal=5,7,0|gridVisibleChanged(bool)
-%% $signal=5,7,0|labelsAngleChanged(int)
-%% $signal=5,7,0|labelsBrushChanged(QBrush)
-%% $signal=5,7,0|labelsColorChanged(QColor)
-%% $signal=5,7,0|labelsFontChanged(QFont)
-%% $signal=5,7,0|labelsVisibleChanged(bool)
-%% $signal=5,7,0|linePenChanged(QPen)
-%% $signal=5,7,0|lineVisibleChanged(bool)
-%% $signal=5,7,0|minorGridLineColorChanged(QColor)
-%% $signal=5,7,0|minorGridLinePenChanged(QPen)
-%% $signal=5,7,0|minorGridVisibleChanged(bool)
-%% $signal=5,7,0|reverseChanged(bool)
-%% $signal=5,7,0|shadesBorderColorChanged(QColor)
-%% $signal=5,7,0|shadesBrushChanged(QBrush)
-%% $signal=5,7,0|shadesColorChanged(QColor)
-%% $signal=5,7,0|shadesPenChanged(QPen)
-%% $signal=5,7,0|shadesVisibleChanged(bool)
-%% $signal=5,7,0|titleBrushChanged(QBrush)
-%% $signal=5,7,0|titleFontChanged(QFont)
-%% $signal=5,7,0|titleTextChanged(QString)
-%% $signal=5,7,0|titleVisibleChanged(bool)
-%% $signal=5,7,0|visibleChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

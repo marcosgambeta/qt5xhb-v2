@@ -113,15 +113,9 @@ $method=5,8,0|void|setLastSetRow|int
 $prototype=Qt::Orientation orientation() const
 $method=5,8,0|Qt::Orientation|orientation|
 
-%% $beginSignals
-%% $signal=5,8,0|closeColumnChanged()
-%% $signal=5,8,0|firstSetRowChanged()
-%% $signal=5,8,0|highColumnChanged()
-%% $signal=5,8,0|lastSetRowChanged()
-%% $signal=5,8,0|lowColumnChanged()
-%% $signal=5,8,0|openColumnChanged()
-%% $signal=5,8,0|timestampColumnChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;

@@ -125,18 +125,9 @@ $method=5,7,0|qreal|at|const int
 $prototype=int count() const
 $method=5,7,0|int|count|
 
-%% $beginSignals
-%% $signal=5,7,0|brushChanged()
-%% $signal=5,7,0|cleared()
-%% $signal=5,7,0|clicked()
-%% $signal=5,7,0|doubleClicked()
-%% $signal=5,7,0|hovered(bool)
-%% $signal=5,7,0|penChanged()
-%% $signal=5,7,0|pressed()
-%% $signal=5,7,0|released()
-%% $signal=5,7,0|valueChanged(int)
-%% $signal=5,7,0|valuesChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 

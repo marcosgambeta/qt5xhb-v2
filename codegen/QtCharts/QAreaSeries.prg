@@ -174,21 +174,9 @@ $method=5,7,0|void|setPointsVisible|bool=true
 $prototype=bool pointsVisible() const
 $method=5,7,0|bool|pointsVisible|
 
-%% $beginSignals
-%% $signal=5,7,0|borderColorChanged(QColor)
-%% $signal=5,7,0|clicked(QPointF)
-%% $signal=5,7,0|colorChanged(QColor)
-%% $signal=5,7,0|doubleClicked(QPointF)
-%% $signal=5,7,0|hovered(QPointF,bool)
-%% $signal=5,7,0|pointLabelsClippingChanged(bool)
-%% $signal=5,7,0|pointLabelsColorChanged(QColor)
-%% $signal=5,7,0|pointLabelsFontChanged(QFont)
-%% $signal=5,7,0|pointLabelsFormatChanged(QString)
-%% $signal=5,7,0|pointLabelsVisibilityChanged(bool)
-%% $signal=5,7,0|pressed(QPointF)
-%% $signal=5,7,0|released(QPointF)
-%% $signal=5,7,0|selected()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 using namespace QtCharts;
 
