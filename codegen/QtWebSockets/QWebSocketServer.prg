@@ -105,15 +105,9 @@ $method=5,3,0|QSslConfiguration|sslConfiguration|
 $prototype=QList<QWebSocketProtocol::Version> supportedVersions() const
 $method=5,3,0|QList<QWebSocketProtocol::Version>|supportedVersions|
 
-%% $beginSignals
-%% $signal=5,3,0|acceptError(QAbstractSocket::SocketError)
-%% $signal=5,3,0|serverError(QWebSocketProtocol::CloseCode)
-%% $signal=5,3,0|originAuthenticationRequired(QWebSocketCorsAuthenticator*)
-%% $signal=5,3,0|newConnection()
-%% $signal=5,3,0|peerVerifyError(QSslError)
-%% $signal=5,3,0|sslErrors(QList<QSslError>)
-%% $signal=5,3,0|closed()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void acceptError( QAbstractSocket::SocketError socketError )
 $signalMethod=5,3,0|void|acceptError|QAbstractSocket::SocketError

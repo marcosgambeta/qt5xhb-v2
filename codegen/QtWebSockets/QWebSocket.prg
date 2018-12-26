@@ -160,22 +160,9 @@ $method=5,3,0|void|open|const QUrl &
 $prototype=void ping(const QByteArray &payload = QByteArray())
 $method=5,3,0|void|ping|const QByteArray &=QByteArray()
 
-%% $beginSignals
-%% $signal=5,3,0|aboutToClose()
-%% $signal=5,3,0|connected()
-%% $signal=5,3,0|disconnected()
-%% $signal=5,3,0|stateChanged(QAbstractSocket::SocketState)
-%% $signal=5,3,0|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-%% $signal=5,3,0|readChannelFinished()
-%% $signal=5,3,0|textFrameReceived(QString,bool)
-%% $signal=5,3,0|binaryFrameReceived(QByteArray,bool)
-%% $signal=5,3,0|textMessageReceived(QString)
-%% $signal=5,3,0|binaryMessageReceived(QByteArray)
-%% $signal=5,3,0|error(QAbstractSocket::SocketError)
-%% $signal=5,3,0|pong(quint64,QByteArray)
-%% $signal=5,3,0|bytesWritten(qint64)
-%% $signal=5,3,0|sslErrors(QList<QSslError>)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void aboutToClose()
 $signalMethod=5,3,0|void|aboutToClose|
