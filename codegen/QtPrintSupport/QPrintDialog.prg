@@ -83,9 +83,9 @@ $method=|int|exec|
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-%% $beginSignals
-%% $signal=|accepted(QPrinter*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void accepted( QPrinter * printer )
 $signalMethod=|void|accepted,accepted,QOverload<QPrinter*>|QPrinter*
