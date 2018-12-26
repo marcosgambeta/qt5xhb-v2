@@ -60,9 +60,9 @@ $prototype=virtual bool processResponse(const QModbusResponse &response, QModbus
 
 $prototype=virtual bool processPrivateResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
 
-%% $beginSignals
-%% $signal=5,8,0|timeoutChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void timeoutChanged( int newTimeout )
 $signalMethod=5,8,0|void|timeoutChanged|int

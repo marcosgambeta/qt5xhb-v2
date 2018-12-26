@@ -83,12 +83,9 @@ $method=5,12,0|void|clear|QCanBusDevice::Directions
 $prototype=QVector<QCanBusFrame> QCanBusDevice::readAllFrames()
 $method=5,12,0|QVector<QCanBusFrame>|readAllFrames|
 
-%% $beginSignals
-%% $signal=5,8,0|errorOccurred(QCanBusDevice::CanBusError)
-%% $signal=5,8,0|framesReceived()
-%% $signal=5,8,0|framesWritten(qint64)
-%% $signal=5,8,0|stateChanged(QCanBusDevice::CanBusDeviceState)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void errorOccurred( QCanBusDevice::CanBusError )
 $signalMethod=5,8,0|void|errorOccurred|QCanBusDevice::CanBusError

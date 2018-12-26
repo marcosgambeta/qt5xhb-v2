@@ -55,10 +55,9 @@ $prototype=virtual bool open() = 0 [protected]
 
 $prototype=virtual void close() = 0 [protected]
 
-%% $beginSignals
-%% $signal=5,8,0|errorOccurred(QModbusDevice::Error)
-%% $signal=5,8,0|stateChanged(QModbusDevice::State)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void errorOccurred( QModbusDevice::Error error )
 $signalMethod=5,8,0|void|errorOccurred|QModbusDevice::Error

@@ -53,10 +53,9 @@ $prototype=void setFinished(bool isFinished)
 
 $prototype=void setError(QModbusDevice::Error error, const QString &errorText)
 
-%% $beginSignals
-%% $signal=5,8,0|finished()
-%% $signal=5,8,0|errorOccurred(QModbusDevice::Error)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished()
 $signalMethod=5,8,0|void|finished|
