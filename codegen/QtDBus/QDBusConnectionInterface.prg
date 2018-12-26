@@ -64,12 +64,9 @@ $prototype=QDBusReply<void> startService(const QString &name)
 %% TODO: implementar
 %% $method=|QDBusReply<void>|startService|const QString &
 
-%% $beginSignals
-%% $signal=|serviceRegistered(QString)
-%% $signal=|serviceUnregistered(QString)
-%% $signal=|serviceOwnerChanged(QString,QString,QString)
-%% $signal=|callWithCallbackFailed(QDBusError,QDBusMessage)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void serviceRegistered( const QString & service )
 $signalMethod=|void|serviceRegistered|QString

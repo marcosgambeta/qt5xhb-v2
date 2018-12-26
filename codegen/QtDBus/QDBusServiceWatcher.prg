@@ -80,11 +80,9 @@ $method=|QDBusConnection|connection|
 $prototype=void setConnection(const QDBusConnection &connection)
 $method=|void|setConnection|const QDBusConnection &
 
-%% $beginSignals
-%% $signal=|serviceRegistered(QString)
-%% $signal=|serviceUnregistered(QString)
-%% $signal=|serviceOwnerChanged(QString,QString,QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void serviceRegistered( const QString & service )
 $signalMethod=|void|serviceRegistered|QString

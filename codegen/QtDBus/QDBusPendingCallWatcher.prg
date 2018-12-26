@@ -38,9 +38,9 @@ $method=|bool|isFinished|
 $prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
-%% $beginSignals
-%% $signal=|finished(QDBusPendingCallWatcher*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void finished( QDBusPendingCallWatcher * self )
 $signalMethod=|void|finished|QDBusPendingCallWatcher*
