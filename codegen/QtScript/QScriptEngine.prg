@@ -284,9 +284,9 @@ $method=|QScriptValue|undefinedValue|
 $prototype=static QScriptSyntaxCheckResult checkSyntax(const QString & program)
 $staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &
 
-%% $beginSignals
-%% $signal=|signalHandlerException(QScriptValue)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void signalHandlerException( const QScriptValue & exception )
 $signalMethod=|void|signalHandlerException|QScriptValue
