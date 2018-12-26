@@ -194,9 +194,9 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
 }
 $addMethod=render
 
-%% $beginSignals
-%% $signal=|repaintNeeded()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void repaintNeeded()
 $signalMethod=|void|repaintNeeded|
