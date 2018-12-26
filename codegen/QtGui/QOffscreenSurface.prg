@@ -68,9 +68,9 @@ $prototype=QPlatformOffscreenSurface *handle() const
 %% TODO: QPlatformOffscreenSurface class
 %% $method=|QPlatformOffscreenSurface *|handle|
 
-%% $beginSignals
-%% $signal=|screenChanged(QScreen*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void screenChanged( QScreen * screen )
 $signalMethod=|void|screenChanged|QScreen*

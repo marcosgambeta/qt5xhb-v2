@@ -98,10 +98,9 @@ $method=|Qt::DropActions|supportedActions|
 $prototype=QObject * target() const
 $method=|QObject *|target|
 
-%% $beginSignals
-%% $signal=|actionChanged(Qt::DropAction)
-%% $signal=|targetChanged(QObject*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void actionChanged( Qt::DropAction action )
 $signalMethod=|void|actionChanged|Qt::DropAction

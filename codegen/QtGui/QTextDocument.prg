@@ -356,17 +356,9 @@ $prototype=QTextDocumentPrivate *docHandle() const
 %% TODO: implementar ?
 %% $method=|QTextDocumentPrivate *|docHandle|
 
-%% $beginSignals
-%% $signal=|contentsChange(int,int,int)
-%% $signal=|contentsChanged()
-%% $signal=|undoAvailable(bool)
-%% $signal=|redoAvailable(bool)
-%% $signal=|undoCommandAdded()
-%% $signal=|modificationChanged(bool)
-%% $signal=|cursorPositionChanged(QTextCursor)
-%% $signal=|blockCountChanged(int)
-%% $signal=|documentLayoutChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void contentsChange( int from, int charsRemoves, int charsAdded )
 $signalMethod=|void|contentsChange|int,int,int

@@ -579,17 +579,9 @@ $prototype=virtual bool nativeEvent(const QByteArray &eventType, void *message, 
 
 $prototype=QPlatformSurface *surfaceHandle() const override [private]
 
-%% $beginSignals
-%% $signal=|contentOrientationChanged(Qt::ScreenOrientation)
-%% $signal=|focusObjectChanged(QObject*)
-%% $signal=|heightChanged(int)
-%% $signal=|screenChanged(QScreen*)
-%% $signal=|visibleChanged(bool)
-%% $signal=|widthChanged(int)
-%% $signal=|windowModalityChanged(Qt::WindowModality)
-%% $signal=|xChanged(int)
-%% $signal=|yChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activeChanged()
 $signalMethod=5,1,0|void|activeChanged|

@@ -76,14 +76,9 @@ $method=|void|show|
 $prototype=void update(Qt::InputMethodQueries queries)
 $method=|void|update|Qt::InputMethodQueries
 
-%% $beginSignals
-%% $signal=|animatingChanged()
-%% $signal=|cursorRectangleChanged()
-%% $signal=|inputDirectionChanged(Qt::LayoutDirection)
-%% $signal=|keyboardRectangleChanged()
-%% $signal=|localeChanged()
-%% $signal=|visibleChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void animatingChanged()
 $signalMethod=|void|animatingChanged|

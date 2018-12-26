@@ -125,16 +125,9 @@ $method=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
 $prototype=qreal refreshRate() const
 $method=|qreal|refreshRate|
 
-%% $beginSignals
-%% $signal=|geometryChanged(QRect)
-%% $signal=|physicalSizeChanged(QSizeF)
-%% $signal=|physicalDotsPerInchChanged(qreal)
-%% $signal=|logicalDotsPerInchChanged(qreal)
-%% $signal=|virtualGeometryChanged(QRect)
-%% $signal=|primaryOrientationChanged(Qt::ScreenOrientation)
-%% $signal=|orientationChanged(Qt::ScreenOrientation)
-%% $signal=|refreshRateChanged(qreal)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void geometryChanged( const QRect & geometry )
 $signalMethod=|void|geometryChanged|QRect

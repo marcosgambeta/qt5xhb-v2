@@ -151,15 +151,9 @@ $method=|void|start|
 $prototype=void stop ()
 $method=|void|stop|
 
-%% $beginSignals
-%% $signal=|error(QImageReader::ImageReaderError)
-%% $signal=|finished()
-%% $signal=|frameChanged(int)
-%% $signal=|resized(QSize)
-%% $signal=|started()
-%% $signal=|stateChanged(QMovie::MovieState)
-%% $signal=|updated(QRect)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void error( QImageReader::ImageReaderError error )
 $signalMethod=|void|error|QImageReader::ImageReaderError

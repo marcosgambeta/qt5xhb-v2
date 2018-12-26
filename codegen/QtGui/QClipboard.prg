@@ -108,12 +108,9 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 }
 $addMethod=text
 
-%% $beginSignals
-%% $signal=|changed(QClipboard::Mode)
-%% $signal=|dataChanged()
-%% $signal=|findBufferChanged()
-%% $signal=|selectionChanged()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void changed( QClipboard::Mode mode )
 $signalMethod=|void|changed|QClipboard::Mode

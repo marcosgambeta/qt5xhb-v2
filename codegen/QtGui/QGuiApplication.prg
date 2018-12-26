@@ -204,13 +204,9 @@ $staticMethod=|QWindow *|topLevelAt|const QPoint &
 $prototype=static QWindowList topLevelWindows()
 $staticMethod=|QWindowList|topLevelWindows|
 
-%% $beginSignals
-%% $signal=|focusObjectChanged(QObject*)
-%% $signal=|focusWindowChanged(QWindow*)
-%% $signal=|fontDatabaseChanged()
-%% $signal=|lastWindowClosed()
-%% $signal=|screenAdded(QScreen*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void focusObjectChanged( QObject * focusObject )
 $signalMethod=|void|focusObjectChanged|QObject*

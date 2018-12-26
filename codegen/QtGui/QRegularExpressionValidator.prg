@@ -60,9 +60,9 @@ $method=|QRegularExpression|regularExpression|
 $prototype=void setRegularExpression(const QRegularExpression &re)
 $method=|void|setRegularExpression|const QRegularExpression &
 
-%% $beginSignals
-%% $signal=|regularExpressionChanged(QRegularExpression)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void regularExpressionChanged( const QRegularExpression & re )
 $signalMethod=|void|regularExpressionChanged|QRegularExpression

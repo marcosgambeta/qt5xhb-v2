@@ -64,12 +64,9 @@ $method=|void|registerHandler|int,QObject *
 $prototype=void setPaintDevice ( QPaintDevice * device )
 $method=|void|setPaintDevice|QPaintDevice *
 
-%% $beginSignals
-%% $signal=|documentSizeChanged(QSizeF)
-%% $signal=|pageCountChanged(int)
-%% $signal=|update(QRectF)
-%% $signal=|updateBlock(QTextBlock)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void documentSizeChanged( const QSizeF & newSize )
 $signalMethod=|void|documentSizeChanged|QSizeF
