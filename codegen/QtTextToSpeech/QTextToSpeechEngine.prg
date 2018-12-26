@@ -92,9 +92,9 @@ $prototype=static QVoice createVoice(const QString &name, QVoice::Gender gender,
 
 $prototype=static QVariant voiceData(const QVoice &voice) [protected]
 
-%% $beginSignals
-%% $signal=5,10,0|stateChanged(QTextToSpeech::State)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void stateChanged( QTextToSpeech::State state )
 $signalMethod=5,10,0|void|stateChanged|QTextToSpeech::State

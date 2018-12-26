@@ -140,14 +140,9 @@ $slotMethod=5,10,0|void|pause|
 $prototype=void resume()
 $slotMethod=5,10,0|void|resume|
 
-%% $beginSignals
-%% $signal=5,10,0|localeChanged(QLocale)
-%% $signal=5,10,0|pitchChanged(double)
-%% $signal=5,10,0|rateChanged(double)
-%% $signal=5,10,0|stateChanged(QTextToSpeech::State)
-%% $signal=5,10,0|voiceChanged(QVoice)
-%% $signal=5,10,0|volumeChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void localeChanged( const QLocale & locale )
 $signalMethod=5,10,0|void|localeChanged|QLocale
