@@ -161,22 +161,9 @@ $staticMethod=|QList<QByteArray>|sensorsForType|const QByteArray &
 $prototype=static QByteArray defaultSensorForType(const QByteArray &type)
 $staticMethod=5,1,0|QByteArray|defaultSensorForType|const QByteArray &
 
-%% $beginSignals
-%% $signal=5,1,0|busyChanged()
-%% $signal=5,1,0|activeChanged()
-%% $signal=5,1,0|readingChanged()
-%% $signal=5,1,0|sensorError(int)
-%% $signal=5,1,0|availableSensorsChanged()
-%% $signal=5,1,0|alwaysOnChanged()
-%% $signal=5,1,0|dataRateChanged()
-%% $signal=5,1,0|skipDuplicatesChanged(bool)
-%% $signal=5,1,0|axesOrientationModeChanged(QSensor::AxesOrientationMode)
-%% $signal=5,1,0|currentOrientationChanged(int)
-%% $signal=5,1,0|userOrientationChanged(int)
-%% $signal=5,1,0|maxBufferSizeChanged(int)
-%% $signal=5,1,0|efficientBufferSizeChanged(int)
-%% $signal=5,1,0|bufferSizeChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void busyChanged()
 $signalMethod=5,1,0|void|busyChanged|

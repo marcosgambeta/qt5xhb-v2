@@ -50,9 +50,9 @@ $method=5,1,0|void|startDetection|
 $prototype=void stopDetection()
 $method=5,1,0|void|stopDetection|
 
-%% $beginSignals
-%% $signal=5,1,0|detected(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void detected( QString s )
 %% TODO: $signalMethod=5,1,0|void|detected|QString

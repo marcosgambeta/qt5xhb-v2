@@ -41,9 +41,9 @@ $method=5,1,0|bool|hasZ|
 $prototype=void setHasZ(bool hasZ)
 $method=5,1,0|void|setHasZ|bool
 
-%% $beginSignals
-%% $signal=5,1,0|hasZChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void hasZChanged( bool hasZ )
 $signalMethod=5,1,0|void|hasZChanged|bool

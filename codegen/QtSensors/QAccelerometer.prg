@@ -41,9 +41,9 @@ $method=5,1,0|void|setAccelerationMode|QAccelerometer::AccelerationMode
 $prototype=QAccelerometerReading *reading() const
 $method=5,1,0|QAccelerometerReading *|reading|
 
-%% $beginSignals
-%% $signal=5,1,0|accelerationModeChanged(QAccelerometer::AccelerationMode)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
 $signalMethod=5,1,0|void|accelerationModeChanged|QAccelerometer::AccelerationMode

@@ -47,9 +47,9 @@ $method=5,1,0|void|createBackend|
 $prototype=QStringList gestureSignals() const
 $method=5,1,0|QStringList|gestureSignals|
 
-%% $beginSignals
-%% $signal=5,1,0|detected(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void detected( const QString & s )
 $signalMethod=5,1,0|void|detected|QString

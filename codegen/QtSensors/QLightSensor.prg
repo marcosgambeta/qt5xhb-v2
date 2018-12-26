@@ -43,9 +43,9 @@ $method=5,1,0|qreal|fieldOfView|
 $prototype=void setFieldOfView(qreal fieldOfView)
 $method=5,1,0|void|setFieldOfView|qreal
 
-%% $beginSignals
-%% $signal=5,1,0|fieldOfViewChanged(qreal)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void fieldOfViewChanged( qreal fieldOfView )
 $signalMethod=5,1,0|void|fieldOfViewChanged|qreal
