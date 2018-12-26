@@ -173,12 +173,9 @@ $addMethod=record
 $prototype=virtual bool selectRow(int row)
 $virtualMethod=|bool|selectRow|int
 
-%% $beginSignals
-%% $signal=|beforeDelete(int)
-%% $signal=|beforeInsert(QSqlRecord)
-%% $signal=|beforeUpdate(int,QSqlRecord)
-%% $signal=|primeInsert(int,QSqlRecord)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void beforeDelete( int row )
 $signalMethod=|void|beforeDelete|int

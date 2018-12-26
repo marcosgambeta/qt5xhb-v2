@@ -109,12 +109,9 @@ $virtualMethod=|bool|unsubscribeFromNotification|const QString &
 $prototype=virtual bool cancelQuery()
 $virtualMethod=|bool|cancelQuery|
 
-%% $beginSignals
-%% $beginGroup
-%% $signal=|notification(QString)
-%% $signal=|notification(QString,QSqlDriver::NotificationSource,QVariant)
-%% $endGroup
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void notification( const QString & name )
 $signalMethod=|void|notification,notification1,QOverload<const QString &>|QString
