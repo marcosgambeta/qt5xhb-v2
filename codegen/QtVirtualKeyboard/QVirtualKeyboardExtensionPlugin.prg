@@ -31,5 +31,6 @@ $prototype=virtual ~QVirtualKeyboardExtensionPlugin()
 $deleteMethod
 
 $prototype=virtual void registerTypes(const char *uri) const
+$virtualMethod=|void|registerTypes|const char *
 
 #pragma ENDDUMP

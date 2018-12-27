@@ -28,6 +28,7 @@ $destructor
 $includes
 
 $prototype=explicit QVirtualKeyboardSelectionListModel(QObject *parent = nullptr)
+$constructor=|new|QObject *=0
 
 $prototype=~QVirtualKeyboardSelectionListModel()
 $deleteMethod
@@ -37,20 +38,38 @@ $deleteMethod
 %%
 
 $prototype=int count() const
+$method=|int|count|
 
 %%
 %%
 %%
 
 $prototype=void setDataSource(QVirtualKeyboardAbstractInputMethod *dataSource, Type type)
+$method=|void|setDataSource|QVirtualKeyboardAbstractInputMethod *,QVirtualKeyboardSelectionListModel::Type
+
 $prototype=QVirtualKeyboardAbstractInputMethod *dataSource() const
+$method=|QVirtualKeyboardAbstractInputMethod *|dataSource|
+
 $prototype=int rowCount(const QModelIndex &parent = QModelIndex()) const
+$method=|int|rowCount|const QModelIndex &=QModelIndex()
+
 $prototype=QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
+$method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+
 $prototype=QHash<int,QByteArray> roleNames() const
+%% TODO: $method=|QHash<int,QByteArray>|roleNames|
+
 $prototype=Q_INVOKABLE void selectItem(int index)
+$method=|void|selectItem|int
+
 $prototype=Q_INVOKABLE void removeItem(int index)
+$method=|void|removeItem|int
+
 $prototype=Q_INVOKABLE QVariant dataAt(int index, Role role = Role::Display) const
+%% TODO: $method=|QVariant|dataAt|int,Role=Role::Display
+
 $prototype=void selectionListChanged(Type type) [protected] [slot]
+
 $prototype=void selectionListActiveItemChanged(Type type, int index) [protected] [slot]
 
 %%
