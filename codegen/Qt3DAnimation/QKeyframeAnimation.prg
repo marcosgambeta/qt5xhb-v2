@@ -83,22 +83,31 @@ $prototype=void addKeyframe(Qt3DCore::QTransform *keyframe)
 $prototype=void removeKeyframe(Qt3DCore::QTransform *keyframe)
 $prototype=void updateAnimation(float position) [private]
 
-$beginSignals
-$signal=|framePositionsChanged(QVector<float>)
-$signal=|targetChanged(Qt3DCore::QTransform*)
-$signal=|easingChanged(QEasingCurve)
-$signal=|targetNameChanged(QString)
-$signal=|startModeChanged(QKeyframeAnimation::RepeatMode)
-$signal=|endModeChanged(QKeyframeAnimation::RepeatMode)
-$endSignals
+%% $beginSignals
+%% $signal=|framePositionsChanged(QVector<float>)
+%% $signal=|targetChanged(Qt3DCore::QTransform*)
+%% $signal=|easingChanged(QEasingCurve)
+%% $signal=|targetNameChanged(QString)
+%% $signal=|startModeChanged(QKeyframeAnimation::RepeatMode)
+%% $signal=|endModeChanged(QKeyframeAnimation::RepeatMode)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|framePositionsChanged( const QVector<float> & positions )
-$signal=|targetChanged( Qt3DCore::QTransform * target )
-$signal=|easingChanged( const QEasingCurve & easing )
-$signal=|targetNameChanged( const QString & name )
-$signal=|startModeChanged( QKeyframeAnimation::RepeatMode startMode )
-$signal=|endModeChanged( QKeyframeAnimation::RepeatMode endMode )
-$endSlotsClass
+$prototype=void framePositionsChanged( const QVector<float> & positions )
+$signalMethod=|void|framePositionsChanged|const QVector<float> &
+
+$prototype=void targetChanged( Qt3DCore::QTransform * target )
+$signalMethod=|void|targetChanged|Qt3DCore::QTransform *
+
+$prototype=void easingChanged( const QEasingCurve & easing )
+$signalMethod=|void|easingChanged|const QEasingCurve &
+
+$prototype=void targetNameChanged( const QString & name )
+$signalMethod=|void|targetNameChanged|const QString &
+
+$prototype=void startModeChanged( QKeyframeAnimation::RepeatMode startMode )
+$signalMethod=|void|startModeChanged|QKeyframeAnimation::RepeatMode
+
+$prototype=void endModeChanged( QKeyframeAnimation::RepeatMode endMode )
+$signalMethod=|void|endModeChanged|QKeyframeAnimation::RepeatMode
 
 #pragma ENDDUMP

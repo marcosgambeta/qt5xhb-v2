@@ -63,16 +63,19 @@ $prototype=void setProperty(const QString &property) (slot)
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-$beginSignals
-$signal=|channelNameChanged(QString)
-$signal=|targetChanged(Qt3DCore::QNode*)
-$signal=|propertyChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|channelNameChanged(QString)
+%% $signal=|targetChanged(Qt3DCore::QNode*)
+%% $signal=|propertyChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|channelNameChanged( QString channelName )
-$signal=|targetChanged( Qt3DCore::QNode * target )
-$signal=|propertyChanged( QString property )
-$endSlotsClass
+$prototype=void channelNameChanged( QString channelName )
+$signalMethod=|void|channelNameChanged|QString
+
+$prototype=void targetChanged( Qt3DCore::QNode * target )
+$signalMethod=|void|targetChanged|Qt3DCore::QNode *
+
+$prototype=void propertyChanged( QString property )
+$signalMethod=|void|propertyChanged|QString
 
 #pragma ENDDUMP

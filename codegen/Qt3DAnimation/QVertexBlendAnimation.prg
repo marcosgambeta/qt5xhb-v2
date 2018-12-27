@@ -68,18 +68,23 @@ $prototype=void removeMorphTarget(Qt3DAnimation::QMorphTarget *target)
 $prototype=QVector<Qt3DAnimation::QMorphTarget *> morphTargetList()
 $prototype=void updateAnimation(float position) [private]
 
-$beginSignals
-$signal=|targetPositionsChanged(QVector<float>)
-$signal=|interpolatorChanged(float)
-$signal=|targetChanged(Qt3DRender::QGeometryRenderer*)
-$signal=|targetNameChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|targetPositionsChanged(QVector<float>)
+%% $signal=|interpolatorChanged(float)
+%% $signal=|targetChanged(Qt3DRender::QGeometryRenderer*)
+%% $signal=|targetNameChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|targetPositionsChanged( const QVector<float> & targetPositions )
-$signal=|interpolatorChanged( float interpolator )
-$signal=|targetChanged( Qt3DRender::QGeometryRenderer * target )
-$signal=|targetNameChanged( const QString & name )
-$endSlotsClass
+$prototype=void targetPositionsChanged( const QVector<float> & targetPositions )
+$signalMethod=|void|targetPositionsChanged|const QVector<float> &
+
+$prototype=void interpolatorChanged( float interpolator )
+$signalMethod=|void|interpolatorChanged|float
+
+$prototype=void targetChanged( Qt3DRender::QGeometryRenderer * target )
+$signalMethod=|void|targetChanged|Qt3DRender::QGeometryRenderer *
+
+$prototype=void targetNameChanged( const QString & name )
+$signalMethod=|void|targetNameChanged|const QString &
 
 #pragma ENDDUMP

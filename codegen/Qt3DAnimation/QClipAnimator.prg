@@ -47,12 +47,11 @@ $prototype=void setClip(Qt3DAnimation::QAbstractAnimationClip *clip) (slot)
 $prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override [protected]
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-$beginSignals
-$signal=|clipChanged(Qt3DAnimation::QAbstractAnimationClip*)
-$endSignals
+%% $beginSignals
+%% $signal=|clipChanged(Qt3DAnimation::QAbstractAnimationClip*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|clipChanged( Qt3DAnimation::QAbstractAnimationClip * clip )
-$endSlotsClass
+$prototype=void clipChanged( Qt3DAnimation::QAbstractAnimationClip * clip )
+$signalMethod=|void|clipChanged|Qt3DAnimation::QAbstractAnimationClip *
 
 #pragma ENDDUMP

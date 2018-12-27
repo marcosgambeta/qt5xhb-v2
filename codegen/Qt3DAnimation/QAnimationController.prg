@@ -95,22 +95,31 @@ $prototype=Q_INVOKABLE int getAnimationIndex(const QString &name) const
 
 $prototype=Q_INVOKABLE Qt3DAnimation::QAnimationGroup *getGroup(int index) const
 
-$beginSignals
-$signal=|activeAnimationGroupChanged(int)
-$signal=|positionChanged(float)
-$signal=|positionScaleChanged(float)
-$signal=|positionOffsetChanged(float)
-$signal=|entityChanged(Qt3DCore::QEntity*)
-$signal=|recursiveChanged(bool)
-$endSignals
+%% $beginSignals
+%% $signal=|activeAnimationGroupChanged(int)
+%% $signal=|positionChanged(float)
+%% $signal=|positionScaleChanged(float)
+%% $signal=|positionOffsetChanged(float)
+%% $signal=|entityChanged(Qt3DCore::QEntity*)
+%% $signal=|recursiveChanged(bool)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|activeAnimationGroupChanged( int index )
-$signal=|positionChanged( float position )
-$signal=|positionScaleChanged( float scale )
-$signal=|positionOffsetChanged( float offset )
-$signal=|entityChanged( Qt3DCore::QEntity * entity )
-$signal=|recursiveChanged( bool recursive )
-$endSlotsClass
+$prototype=void activeAnimationGroupChanged( int index )
+$signalMethod=|void|activeAnimationGroupChanged|int
+
+$prototype=void positionChanged( float position )
+$signalMethod=|void|positionChanged|float
+
+$prototype=void positionScaleChanged( float scale )
+$signalMethod=|void|positionScaleChanged|float
+
+$prototype=void positionOffsetChanged( float offset )
+$signalMethod=|void|positionOffsetChanged|float
+
+$prototype=void entityChanged( Qt3DCore::QEntity * entity )
+$signalMethod=|void|entityChanged|Qt3DCore::QEntity *
+
+$prototype=void recursiveChanged( bool recursive )
+$signalMethod=|void|recursiveChanged|bool
 
 #pragma ENDDUMP

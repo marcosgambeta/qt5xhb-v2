@@ -47,12 +47,11 @@ $prototype=void setBlendTree(QAbstractClipBlendNode * blendTree) (slot)
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-$beginSignals
-$signal=|blendTreeChanged(QAbstractClipBlendNode*)
-$endSignals
+%% $beginSignals
+%% $signal=|blendTreeChanged(QAbstractClipBlendNode*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|blendTreeChanged( QAbstractClipBlendNode * blendTree )
-$endSlotsClass
+$prototype=void blendTreeChanged( QAbstractClipBlendNode * blendTree )
+$signalMethod=|void|blendTreeChanged|QAbstractClipBlendNode *
 
 #pragma ENDDUMP

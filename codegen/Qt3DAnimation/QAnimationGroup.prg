@@ -65,16 +65,19 @@ $prototype=void addAnimation(Qt3DAnimation::QAbstractAnimation *animation)
 
 $prototype=void removeAnimation(Qt3DAnimation::QAbstractAnimation *animation)
 
-$beginSignals
-$signal=|nameChanged(QString)
-$signal=|positionChanged(float)
-$signal=|durationChanged(float)
-$endSignals
+%% $beginSignals
+%% $signal=|nameChanged(QString)
+%% $signal=|positionChanged(float)
+%% $signal=|durationChanged(float)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|nameChanged( const QString & name )
-$signal=|positionChanged( float position )
-$signal=|durationChanged( float duration )
-$endSlotsClass
+$prototype=void nameChanged( const QString & name )
+$signalMethod=|void|nameChanged|const QString &
+
+$prototype=void positionChanged( float position )
+$signalMethod=|void|positionChanged|float
+
+$prototype=void durationChanged( float duration )
+$signalMethod=|void|durationChanged|float
 
 #pragma ENDDUMP

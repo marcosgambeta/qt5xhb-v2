@@ -45,12 +45,11 @@ $method=|float|duration|
 
 $prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE [protected]
 
-$beginSignals
-$signal=|durationChanged(float)
-$endSignals
+%% $beginSignals
+%% $signal=|durationChanged(float)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|durationChanged( float duration )
-$endSlotsClass
+$prototype=void durationChanged( float duration )
+$signalMethod=|void|durationChanged|float
 
 #pragma ENDDUMP

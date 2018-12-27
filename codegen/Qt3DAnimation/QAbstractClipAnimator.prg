@@ -74,18 +74,23 @@ $prototype=void start() (slot)
 
 $prototype=void stop() (slot)
 
-$beginSignals
-$signal=|runningChanged(bool)
-$signal=|channelMapperChanged(Qt3DAnimation::QChannelMapper*)
-$signal=|loopCountChanged(int)
-$signal=|clockChanged(Qt3DAnimation::QClock*)
-$endSignals
+%% $beginSignals
+%% $signal=|runningChanged(bool)
+%% $signal=|channelMapperChanged(Qt3DAnimation::QChannelMapper*)
+%% $signal=|loopCountChanged(int)
+%% $signal=|clockChanged(Qt3DAnimation::QClock*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|runningChanged( bool running )
-$signal=|channelMapperChanged( Qt3DAnimation::QChannelMapper * channelMapper )
-$signal=|loopCountChanged( int loops )
-$signal=|clockChanged( Qt3DAnimation::QClock * clock )
-$endSlotsClass
+$prototype=void runningChanged( bool running )
+$signalMethod=|void|runningChanged|bool
+
+$prototype=void channelMapperChanged( Qt3DAnimation::QChannelMapper * channelMapper )
+$signalMethod=|void|channelMapperChanged|Qt3DAnimation::QChannelMapper *
+
+$prototype=void loopCountChanged( int loops )
+$signalMethod=|void|loopCountChanged|int
+
+$prototype=void clockChanged( Qt3DAnimation::QClock * clock )
+$signalMethod=|void|clockChanged|Qt3DAnimation::QClock *
 
 #pragma ENDDUMP

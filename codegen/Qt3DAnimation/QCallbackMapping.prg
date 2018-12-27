@@ -51,12 +51,11 @@ $prototype=void setCallback(int type, QAnimationCallback *callback, QAnimationCa
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-$beginSignals
-$signal=|channelNameChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|channelNameChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|channelNameChanged( QString channelName )
-$endSlotsClass
+$prototype=void channelNameChanged( QString channelName )
+$signalMethod=|void|channelNameChanged|QString
 
 #pragma ENDDUMP

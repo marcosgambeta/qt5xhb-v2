@@ -46,12 +46,11 @@ $prototype=void setPlaybackRate(double playbackRate)
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-$beginSignals
-$signal=|playbackRateChanged(double)
-$endSignals
+%% $beginSignals
+%% $signal=|playbackRateChanged(double)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|playbackRateChanged( double playbackRate )
-$endSlotsClass
+$prototype=void playbackRateChanged( double playbackRate )
+$signalMethod=|void|playbackRateChanged|double
 
 #pragma ENDDUMP

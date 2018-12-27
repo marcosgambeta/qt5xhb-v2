@@ -71,16 +71,19 @@ $method=|float|duration|
 
 $prototype=void setDuration(float duration) [protected]
 
-$beginSignals
-$signal=|animationNameChanged(QString)
-$signal=|durationChanged(float)
-$signal=|positionChanged(float)
-$endSignals
+%% $beginSignals
+%% $signal=|animationNameChanged(QString)
+%% $signal=|durationChanged(float)
+%% $signal=|positionChanged(float)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|animationNameChanged( const QString & name )
-$signal=|durationChanged( float duration )
-$signal=|positionChanged( float position )
-$endSlotsClass
+$prototype=void animationNameChanged( const QString & name )
+$signalMethod=|void|animationNameChanged|const QString &
+
+$prototype=void durationChanged( float duration )
+$signalMethod=|void|durationChanged|float
+
+$prototype=void positionChanged( float position )
+$signalMethod=|void|positionChanged|float
 
 #pragma ENDDUMP

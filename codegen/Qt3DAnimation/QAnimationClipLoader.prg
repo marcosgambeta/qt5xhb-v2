@@ -58,14 +58,15 @@ $prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-$beginSignals
-$signal=|sourceChanged(QUrl)
-$signal=|statusChanged(QAnimationClipLoader::Status)
-$endSignals
+%% $beginSignals
+%% $signal=|sourceChanged(QUrl)
+%% $signal=|statusChanged(QAnimationClipLoader::Status)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|sourceChanged( const QUrl & source )
-$signal=|statusChanged( QAnimationClipLoader::Status status )
-$endSlotsClass
+$prototype=void sourceChanged( const QUrl & source )
+$signalMethod=|void|sourceChanged|const QUrl &
+
+$prototype=void statusChanged( QAnimationClipLoader::Status status )
+$signalMethod=|void|statusChanged|QAnimationClipLoader::Status
 
 #pragma ENDDUMP

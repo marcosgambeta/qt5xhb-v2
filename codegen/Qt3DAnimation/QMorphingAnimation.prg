@@ -84,22 +84,31 @@ $prototype=QVector<float> getWeights(int positionIndex)
 $prototype=QVector<Qt3DAnimation::QMorphTarget *> morphTargetList()
 $prototype=void updateAnimation(float position) [private]
 
-$beginSignals
-$signal=|targetPositionsChanged(QVector<float>)
-$signal=|interpolatorChanged(float)
-$signal=|targetChanged(Qt3DRender::QGeometryRenderer*)
-$signal=|targetNameChanged(QString)
-$signal=|methodChanged(QMorphingAnimation::Method)
-$signal=|easingChanged(QEasingCurve)
-$endSignals
+%% $beginSignals
+%% $signal=|targetPositionsChanged(QVector<float>)
+%% $signal=|interpolatorChanged(float)
+%% $signal=|targetChanged(Qt3DRender::QGeometryRenderer*)
+%% $signal=|targetNameChanged(QString)
+%% $signal=|methodChanged(QMorphingAnimation::Method)
+%% $signal=|easingChanged(QEasingCurve)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|targetPositionsChanged( const QVector<float> & targetPositions )
-$signal=|interpolatorChanged( float interpolator )
-$signal=|targetChanged( Qt3DRender::QGeometryRenderer * target )
-$signal=|targetNameChanged( const QString & name )
-$signal=|methodChanged( QMorphingAnimation::Method method )
-$signal=|easingChanged( const QEasingCurve & easing )
-$endSlotsClass
+$prototype=void targetPositionsChanged( const QVector<float> & targetPositions )
+$signalMethod=|void|targetPositionsChanged|const QVector<float> &
+
+$prototype=void interpolatorChanged( float interpolator )
+$signalMethod=|void|interpolatorChanged|float
+
+$prototype=void targetChanged( Qt3DRender::QGeometryRenderer * target )
+$signalMethod=|void|targetChanged|Qt3DRender::QGeometryRenderer *
+
+$prototype=void targetNameChanged( const QString & name )
+$signalMethod=|void|targetNameChanged|const QString &
+
+$prototype=void methodChanged( QMorphingAnimation::Method method )
+$signalMethod=|void|methodChanged|QMorphingAnimation::Method
+
+$prototype=void easingChanged( const QEasingCurve & easing )
+$signalMethod=|void|easingChanged|const QEasingCurve &
 
 #pragma ENDDUMP
