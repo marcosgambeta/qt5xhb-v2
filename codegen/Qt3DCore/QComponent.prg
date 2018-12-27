@@ -52,16 +52,19 @@ $slotMethod=|void|setShareable|bool
 $prototype=QVector<QEntity *> entities() const
 $method=|QVector<QEntity *>|entities|
 
-$beginSignals
-$signal=|shareableChanged(bool)
-$signal=|addedToEntity(QEntity*)
-$signal=|removedFromEntity(QEntity*)
-$endSignals
+%% $beginSignals
+%% $signal=|shareableChanged(bool)
+%% $signal=|addedToEntity(QEntity*)
+%% $signal=|removedFromEntity(QEntity*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|shareableChanged( bool isShareable )
-$signal=|addedToEntity( QEntity * entity )
-$signal=|removedFromEntity( QEntity * entity )
-$endSlotsClass
+$prototype=void shareableChanged( bool isShareable )
+$signalMethod=|void|shareableChanged|bool
+
+$prototype=void addedToEntity( QEntity * entity )
+$signalMethod=|void|addedToEntity|QEntity *
+
+$prototype=void removedFromEntity( QEntity * entity )
+$signalMethod=|void|removedFromEntity|QEntity *
 
 #pragma ENDDUMP

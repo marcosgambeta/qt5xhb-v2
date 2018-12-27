@@ -166,26 +166,39 @@ $staticMethod=|QMatrix4x4|rotateAround|const QVector3D &,float,const QVector3D &
 
 $prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-$beginSignals
-$signal=|scaleChanged(float)
-$signal=|scale3DChanged(QVector3D)
-$signal=|rotationChanged(QQuaternion)
-$signal=|translationChanged(QVector3D)
-$signal=|matrixChanged()
-$signal=|rotationXChanged(float)
-$signal=|rotationYChanged(float)
-$signal=|rotationZChanged(float)
-$endSignals
+%% $beginSignals
+%% $signal=|scaleChanged(float)
+%% $signal=|scale3DChanged(QVector3D)
+%% $signal=|rotationChanged(QQuaternion)
+%% $signal=|translationChanged(QVector3D)
+%% $signal=|matrixChanged()
+%% $signal=|rotationXChanged(float)
+%% $signal=|rotationYChanged(float)
+%% $signal=|rotationZChanged(float)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|scaleChanged( float scale )
-$signal=|scale3DChanged( const QVector3D & scale )
-$signal=|rotationChanged( const QQuaternion & rotation )
-$signal=|translationChanged( const QVector3D & translation )
-$signal=|matrixChanged()
-$signal=|rotationXChanged( float rotationX )
-$signal=|rotationYChanged( float rotationY )
-$signal=|rotationZChanged( float rotationZ )
-$endSlotsClass
+$prototype=void scaleChanged( float scale )
+$signalMethod=|void|scaleChanged|float
+
+$prototype=void scale3DChanged( const QVector3D & scale )
+$signalMethod=|void|scale3DChanged|const QVector3D &
+
+$prototype=void rotationChanged( const QQuaternion & rotation )
+$signalMethod=|void|rotationChanged|const QQuaternion &
+
+$prototype=void translationChanged( const QVector3D & translation )
+$signalMethod=|void|translationChanged|const QVector3D &
+
+$prototype=void matrixChanged()
+$signalMethod=|void|matrixChanged|
+
+$prototype=void rotationXChanged( float rotationX )
+$signalMethod=|void|rotationXChanged|float
+
+$prototype=void rotationYChanged( float rotationY )
+$signalMethod=|void|rotationYChanged|float
+
+$prototype=void rotationZChanged( float rotationZ )
+$signalMethod=|void|rotationZChanged|float
 
 #pragma ENDDUMP

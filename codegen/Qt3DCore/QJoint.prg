@@ -131,26 +131,39 @@ $slotMethod=|void|setToIdentity|
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override [private]
 
-$beginSignals
-$signal=|scaleChanged(QVector3D)
-$signal=|rotationChanged(QQuaternion)
-$signal=|translationChanged(QVector3D)
-$signal=|inverseBindMatrixChanged(QMatrix4x4)
-$signal=|rotationXChanged(float)
-$signal=|rotationYChanged(float)
-$signal=|rotationZChanged(float)
-$signal=|nameChanged(QString)
-$endSignals
+%% $beginSignals
+%% $signal=|scaleChanged(QVector3D)
+%% $signal=|rotationChanged(QQuaternion)
+%% $signal=|translationChanged(QVector3D)
+%% $signal=|inverseBindMatrixChanged(QMatrix4x4)
+%% $signal=|rotationXChanged(float)
+%% $signal=|rotationYChanged(float)
+%% $signal=|rotationZChanged(float)
+%% $signal=|nameChanged(QString)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|scaleChanged( const QVector3D & scale )
-$signal=|rotationChanged( const QQuaternion & rotation )
-$signal=|translationChanged( const QVector3D & translation )
-$signal=|inverseBindMatrixChanged( const QMatrix4x4 & inverseBindMatrix )
-$signal=|rotationXChanged( float rotationX )
-$signal=|rotationYChanged( float rotationY )
-$signal=|rotationZChanged( float rotationZ )
-$signal=|nameChanged( const QString & name )
-$endSlotsClass
+$prototype=void scaleChanged( const QVector3D & scale )
+$signalMethod=|void|scaleChanged|const QVector3D &
+
+$prototype=void rotationChanged( const QQuaternion & rotation )
+$signalMethod=|void|rotationChanged|const QQuaternion &
+
+$prototype=void translationChanged( const QVector3D & translation )
+$signalMethod=|void|translationChanged|const QVector3D &
+
+$prototype=void inverseBindMatrixChanged( const QMatrix4x4 & inverseBindMatrix )
+$signalMethod=|void|inverseBindMatrixChanged|const QMatrix4x4 &
+
+$prototype=void rotationXChanged( float rotationX )
+$signalMethod=|void|rotationXChanged|float
+
+$prototype=void rotationYChanged( float rotationY )
+$signalMethod=|void|rotationYChanged|float
+
+$prototype=void rotationZChanged( float rotationZ )
+$signalMethod=|void|rotationZChanged|float
+
+$prototype=void nameChanged( const QString & name )
+$signalMethod=|void|nameChanged|const QString &
 
 #pragma ENDDUMP

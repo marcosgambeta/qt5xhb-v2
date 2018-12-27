@@ -51,12 +51,11 @@ $slotMethod=|void|setSkeleton|Qt3DCore::QAbstractSkeleton *
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override [private]
 
-$beginSignals
-$signal=|skeletonChanged(Qt3DCore::QAbstractSkeleton*)
-$endSignals
+%% $beginSignals
+%% $signal=|skeletonChanged(Qt3DCore::QAbstractSkeleton*)
+%% $endSignals
 
-$beginSlotsClass
-$signal=|skeletonChanged( Qt3DCore::QAbstractSkeleton * skeleton )
-$endSlotsClass
+$prototype=void skeletonChanged( Qt3DCore::QAbstractSkeleton * skeleton )
+$signalMethod=|void|skeletonChanged|Qt3DCore::QAbstractSkeleton *
 
 #pragma ENDDUMP

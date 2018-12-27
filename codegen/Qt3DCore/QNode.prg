@@ -109,18 +109,23 @@ $prototype=void setParent(QObject *) Q_DECL_EQ_DELETE [private]
 
 $prototype=QNodeId qIdForNode(QNode *node) [private]
 
-$beginSignals
-$signal=|parentChanged(QObject*)
-$signal=|enabledChanged(bool)
-$signal=|defaultPropertyTrackingModeChanged(QNode::PropertyTrackingMode)
-$signal=|nodeDestroyed()
-$endSignals
+%% $beginSignals
+%% $signal=|parentChanged(QObject*)
+%% $signal=|enabledChanged(bool)
+%% $signal=|defaultPropertyTrackingModeChanged(QNode::PropertyTrackingMode)
+%% $signal=|nodeDestroyed()
+%% $endSignals
 
-$beginSlotsClass
-$signal=|parentChanged( QObject * parent )
-$signal=|enabledChanged( bool enabled )
-$signal=|defaultPropertyTrackingModeChanged( QNode::PropertyTrackingMode mode )
-$signal=|nodeDestroyed()
-$endSlotsClass
+$prototype=void parentChanged( QObject * parent )
+$signalMethod=|void|parentChanged|QObject *
+
+$prototype=void enabledChanged( bool enabled )
+$signalMethod=|void|enabledChanged|bool
+
+$prototype=void defaultPropertyTrackingModeChanged( QNode::PropertyTrackingMode mode )
+$signalMethod=|void|defaultPropertyTrackingModeChanged|QNode::PropertyTrackingMode
+
+$prototype=void nodeDestroyed()
+$signalMethod=|void|nodeDestroyed|
 
 #pragma ENDDUMP
