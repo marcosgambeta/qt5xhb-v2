@@ -1671,3 +1671,12 @@ QGradient::Preset                                    |enum
 QWindow::Visibility                                  |enum
 QVulkanInstance                                      |object
 QAuthenticator                                       |object
+QVirtualKeyboardInputContext                         |QObject
+QVirtualKeyboardInputEngine                          |QObject
+QVirtualKeyboardInputEngine::InputMode               |enum
+QVirtualKeyboardInputEngine::TextCase                |enum
+QVirtualKeyboardInputEngine::PatternRecognitionMode  |enum
+QVirtualKeyboardSelectionListModel::Role             |enum
+QVirtualKeyboardTrace                                |QObject
+QVirtualKeyboardAbstractInputMethod                  |QObject
+QVirtualKeyboardSelectionListModel                   |QObject
