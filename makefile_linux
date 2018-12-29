@@ -47,6 +47,8 @@ PRGFLAGS = -n -w3 -gc3
 ifeq ($(HBCOMP),xharbour)
    PRGFLAGS = -n -w2
 endif
+# ative a linha abaixo para compilar sem REQUEST <ClassName>
+# PRGFLAGS += -DQT5XHB_NO_REQUESTS
 
 # PRGINCLUDES
 PRGINCLUDES = -I$(QT5XHB_INC_DIR) -I$(HB_INC_DIR) 
