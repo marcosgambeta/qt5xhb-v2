@@ -46,9 +46,9 @@ $prototype=void setClipData(const Qt3DAnimation::QAnimationClipData &clipData) (
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-%% $beginSignals
-%% $signal=|clipDataChanged|Qt3DAnimation::QAnimationClipData
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void clipDataChanged( Qt3DAnimation::QAnimationClipData clipData )
 $signalMethod=|void|clipDataChanged|Qt3DAnimation::QAnimationClipData

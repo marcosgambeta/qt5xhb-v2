@@ -95,14 +95,9 @@ $prototype=Q_INVOKABLE int getAnimationIndex(const QString &name) const
 
 $prototype=Q_INVOKABLE Qt3DAnimation::QAnimationGroup *getGroup(int index) const
 
-%% $beginSignals
-%% $signal=|activeAnimationGroupChanged(int)
-%% $signal=|positionChanged(float)
-%% $signal=|positionScaleChanged(float)
-%% $signal=|positionOffsetChanged(float)
-%% $signal=|entityChanged(Qt3DCore::QEntity*)
-%% $signal=|recursiveChanged(bool)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void activeAnimationGroupChanged( int index )
 $signalMethod=|void|activeAnimationGroupChanged|int

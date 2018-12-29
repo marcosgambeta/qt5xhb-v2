@@ -74,12 +74,9 @@ $prototype=void start() (slot)
 
 $prototype=void stop() (slot)
 
-%% $beginSignals
-%% $signal=|runningChanged(bool)
-%% $signal=|channelMapperChanged(Qt3DAnimation::QChannelMapper*)
-%% $signal=|loopCountChanged(int)
-%% $signal=|clockChanged(Qt3DAnimation::QClock*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void runningChanged( bool running )
 $signalMethod=|void|runningChanged|bool

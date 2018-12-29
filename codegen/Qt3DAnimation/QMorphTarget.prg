@@ -47,9 +47,9 @@ $prototype=void addAttribute(Qt3DRender::QAttribute *attribute)
 $prototype=void removeAttribute(Qt3DRender::QAttribute *attribute)
 $prototype=Q_INVOKABLE static QMorphTarget *fromGeometry(Qt3DRender::QGeometry *geometry, const QStringList &attributes)
 
-%% $beginSignals
-%% $signal=|attributeNamesChanged(QStringList)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void attributeNamesChanged( const QStringList & attributeNames )
 $signalMethod=|void|attributeNamesChanged|const QStringList &

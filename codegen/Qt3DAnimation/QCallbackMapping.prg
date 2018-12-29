@@ -51,9 +51,9 @@ $prototype=void setCallback(int type, QAnimationCallback *callback, QAnimationCa
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-%% $beginSignals
-%% $signal=|channelNameChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void channelNameChanged( QString channelName )
 $signalMethod=|void|channelNameChanged|QString

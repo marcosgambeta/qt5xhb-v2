@@ -65,11 +65,9 @@ $prototype=void addAnimation(Qt3DAnimation::QAbstractAnimation *animation)
 
 $prototype=void removeAnimation(Qt3DAnimation::QAbstractAnimation *animation)
 
-%% $beginSignals
-%% $signal=|nameChanged(QString)
-%% $signal=|positionChanged(float)
-%% $signal=|durationChanged(float)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void nameChanged( const QString & name )
 $signalMethod=|void|nameChanged|const QString &

@@ -83,14 +83,9 @@ $prototype=void addKeyframe(Qt3DCore::QTransform *keyframe)
 $prototype=void removeKeyframe(Qt3DCore::QTransform *keyframe)
 $prototype=void updateAnimation(float position) [private]
 
-%% $beginSignals
-%% $signal=|framePositionsChanged(QVector<float>)
-%% $signal=|targetChanged(Qt3DCore::QTransform*)
-%% $signal=|easingChanged(QEasingCurve)
-%% $signal=|targetNameChanged(QString)
-%% $signal=|startModeChanged(QKeyframeAnimation::RepeatMode)
-%% $signal=|endModeChanged(QKeyframeAnimation::RepeatMode)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void framePositionsChanged( const QVector<float> & positions )
 $signalMethod=|void|framePositionsChanged|const QVector<float> &

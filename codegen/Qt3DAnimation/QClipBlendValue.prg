@@ -47,9 +47,9 @@ $prototype=void setClip(Qt3DAnimation::QAbstractAnimationClip *clip) (slot)
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-%% $beginSignals
-%% $signal=|clipChanged(Qt3DAnimation::QAbstractAnimationClip*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void clipChanged( Qt3DAnimation::QAbstractAnimationClip * clip )
 $signalMethod=|void|clipChanged|Qt3DAnimation::QAbstractAnimationClip *

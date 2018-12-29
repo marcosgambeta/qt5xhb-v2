@@ -84,14 +84,9 @@ $prototype=QVector<float> getWeights(int positionIndex)
 $prototype=QVector<Qt3DAnimation::QMorphTarget *> morphTargetList()
 $prototype=void updateAnimation(float position) [private]
 
-%% $beginSignals
-%% $signal=|targetPositionsChanged(QVector<float>)
-%% $signal=|interpolatorChanged(float)
-%% $signal=|targetChanged(Qt3DRender::QGeometryRenderer*)
-%% $signal=|targetNameChanged(QString)
-%% $signal=|methodChanged(QMorphingAnimation::Method)
-%% $signal=|easingChanged(QEasingCurve)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void targetPositionsChanged( const QVector<float> & targetPositions )
 $signalMethod=|void|targetPositionsChanged|const QVector<float> &

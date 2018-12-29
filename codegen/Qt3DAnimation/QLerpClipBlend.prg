@@ -60,11 +60,9 @@ $prototype=void setBlendFactor(float blendFactor) (slot)
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-%% $beginSignals
-%% $signal=|blendFactorChanged(float)
-%% $signal=|startClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
-%% $signal=|endClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void blendFactorChanged( float blendFactor )
 $signalMethod=|void|blendFactorChanged|float
