@@ -729,7 +729,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
       if( Signals2_connection( sender, "connected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothSocket::connected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothSocket::connected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
 
           if( cb )
@@ -794,7 +797,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
       if( Signals2_connection( sender, "disconnected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothSocket::disconnected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothSocket::disconnected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
 
           if( cb )
@@ -859,7 +865,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
       if( Signals2_connection( sender, "error(QBluetoothSocket::SocketError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error), [sender](QBluetoothSocket::SocketError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error), 
+                                                              [sender]
+                                                              (QBluetoothSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QBluetoothSocket::SocketError)" );
 
           if( cb )
@@ -926,7 +935,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QBluetoothSocket::SocketState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothSocket::stateChanged, [sender](QBluetoothSocket::SocketState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothSocket::stateChanged, 
+                                                              [sender]
+                                                              (QBluetoothSocket::SocketState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QBluetoothSocket::SocketState)" );
 
           if( cb )

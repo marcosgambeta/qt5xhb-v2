@@ -282,7 +282,10 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
       if( Signals2_connection( sender, "finished(QBluetoothTransferReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothTransferReply::finished, [sender](QBluetoothTransferReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothTransferReply::finished, 
+                                                              [sender]
+                                                              (QBluetoothTransferReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QBluetoothTransferReply*)" );
 
           if( cb )
@@ -349,7 +352,10 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
       if( Signals2_connection( sender, "transferProgress(qint64,qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothTransferReply::transferProgress, [sender](qint64 arg1, qint64 arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothTransferReply::transferProgress, 
+                                                              [sender]
+                                                              (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "transferProgress(qint64,qint64)" );
 
           if( cb )

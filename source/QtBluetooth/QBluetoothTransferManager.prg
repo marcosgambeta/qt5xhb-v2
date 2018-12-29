@@ -136,7 +136,10 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
       if( Signals2_connection( sender, "finished(QBluetoothTransferReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothTransferManager::finished, [sender](QBluetoothTransferReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothTransferManager::finished, 
+                                                              [sender]
+                                                              (QBluetoothTransferReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QBluetoothTransferReply*)" );
 
           if( cb )

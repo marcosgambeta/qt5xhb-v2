@@ -531,7 +531,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
       if( Signals2_connection( sender, "serviceDiscovered(QBluetoothServiceInfo)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothServiceDiscoveryAgent::serviceDiscovered, [sender](QBluetoothServiceInfo arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothServiceDiscoveryAgent::serviceDiscovered, 
+                                                              [sender]
+                                                              (const QBluetoothServiceInfo & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "serviceDiscovered(QBluetoothServiceInfo)" );
 
           if( cb )
@@ -598,7 +601,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothServiceDiscoveryAgent::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothServiceDiscoveryAgent::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -663,7 +669,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
       if( Signals2_connection( sender, "canceled()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothServiceDiscoveryAgent::canceled, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothServiceDiscoveryAgent::canceled, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canceled()" );
 
           if( cb )
@@ -728,7 +737,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
       if( Signals2_connection( sender, "error(QBluetoothServiceDiscoveryAgent::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QBluetoothServiceDiscoveryAgent::Error>::of(&QBluetoothServiceDiscoveryAgent::error), [sender](QBluetoothServiceDiscoveryAgent::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QBluetoothServiceDiscoveryAgent::Error>::of(&QBluetoothServiceDiscoveryAgent::error), 
+                                                              [sender]
+                                                              (QBluetoothServiceDiscoveryAgent::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QBluetoothServiceDiscoveryAgent::Error)" );
 
           if( cb )

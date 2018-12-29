@@ -384,7 +384,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED )
       if( Signals2_connection( sender, "deviceDiscovered(QBluetoothDeviceInfo)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, [sender](QBluetoothDeviceInfo arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, 
+                                                              [sender]
+                                                              (const QBluetoothDeviceInfo & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "deviceDiscovered(QBluetoothDeviceInfo)" );
 
           if( cb )
@@ -451,7 +454,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothDeviceDiscoveryAgent::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothDeviceDiscoveryAgent::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -516,7 +522,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR )
       if( Signals2_connection( sender, "error(QBluetoothDeviceDiscoveryAgent::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QBluetoothDeviceDiscoveryAgent::Error>::of(&QBluetoothDeviceDiscoveryAgent::error), [sender](QBluetoothDeviceDiscoveryAgent::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QBluetoothDeviceDiscoveryAgent::Error>::of(&QBluetoothDeviceDiscoveryAgent::error), 
+                                                              [sender]
+                                                              (QBluetoothDeviceDiscoveryAgent::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QBluetoothDeviceDiscoveryAgent::Error)" );
 
           if( cb )
@@ -583,7 +592,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED )
       if( Signals2_connection( sender, "canceled()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothDeviceDiscoveryAgent::canceled, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothDeviceDiscoveryAgent::canceled, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canceled()" );
 
           if( cb )
@@ -649,7 +661,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED )
       if( Signals2_connection( sender, "deviceUpdated(QBluetoothDeviceInfo,QBluetoothDeviceInfo::Fields)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothDeviceDiscoveryAgent::deviceUpdated, [sender](QBluetoothDeviceInfo arg1, QBluetoothDeviceInfo::Fields arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothDeviceDiscoveryAgent::deviceUpdated, 
+                                                              [sender]
+                                                              (const QBluetoothDeviceInfo & arg1, QBluetoothDeviceInfo::Fields arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "deviceUpdated(QBluetoothDeviceInfo,QBluetoothDeviceInfo::Fields)" );
 
           if( cb )

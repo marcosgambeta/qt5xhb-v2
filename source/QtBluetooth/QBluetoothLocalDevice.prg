@@ -437,7 +437,10 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED )
       if( Signals2_connection( sender, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothLocalDevice::hostModeStateChanged, [sender](QBluetoothLocalDevice::HostMode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothLocalDevice::hostModeStateChanged, 
+                                                              [sender]
+                                                              (QBluetoothLocalDevice::HostMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" );
 
           if( cb )
@@ -504,7 +507,10 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED )
       if( Signals2_connection( sender, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothLocalDevice::pairingFinished, [sender](QBluetoothAddress arg1, QBluetoothLocalDevice::Pairing arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothLocalDevice::pairingFinished, 
+                                                              [sender]
+                                                              (const QBluetoothAddress & arg1, QBluetoothLocalDevice::Pairing arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" );
 
           if( cb )
@@ -573,7 +579,10 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE )
       if( Signals2_connection( sender, "pairingDisplayPinCode(QBluetoothAddress,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothLocalDevice::pairingDisplayPinCode, [sender](QBluetoothAddress arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothLocalDevice::pairingDisplayPinCode, 
+                                                              [sender]
+                                                              (const QBluetoothAddress & arg1, QString arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pairingDisplayPinCode(QBluetoothAddress,QString)" );
 
           if( cb )
@@ -642,7 +651,10 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION )
       if( Signals2_connection( sender, "pairingDisplayConfirmation(QBluetoothAddress,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothLocalDevice::pairingDisplayConfirmation, [sender](QBluetoothAddress arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothLocalDevice::pairingDisplayConfirmation, 
+                                                              [sender]
+                                                              (const QBluetoothAddress & arg1, QString arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pairingDisplayConfirmation(QBluetoothAddress,QString)" );
 
           if( cb )
@@ -711,7 +723,10 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONERROR )
       if( Signals2_connection( sender, "error(QBluetoothLocalDevice::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBluetoothLocalDevice::error, [sender](QBluetoothLocalDevice::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBluetoothLocalDevice::error, 
+                                                              [sender]
+                                                              (QBluetoothLocalDevice::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QBluetoothLocalDevice::Error)" );
 
           if( cb )
