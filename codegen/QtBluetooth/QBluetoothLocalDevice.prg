@@ -92,13 +92,13 @@ $prototype=void hostModeStateChanged( QBluetoothLocalDevice::HostMode state )
 $signalMethod=5,2,0|void|hostModeStateChanged|QBluetoothLocalDevice::HostMode
 
 $prototype=void pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
-$signalMethod=5,2,0|void|pairingFinished|QBluetoothAddress,QBluetoothLocalDevice::Pairing
+$signalMethod=5,2,0|void|pairingFinished|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
 
 $prototype=void pairingDisplayPinCode( const QBluetoothAddress & address, QString pin )
-$signalMethod=5,2,0|void|pairingDisplayPinCode|QBluetoothAddress,QString
+$signalMethod=5,2,0|void|pairingDisplayPinCode|const QBluetoothAddress &,QString
 
 $prototype=void pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
-$signalMethod=5,2,0|void|pairingDisplayConfirmation|QBluetoothAddress,QString
+$signalMethod=5,2,0|void|pairingDisplayConfirmation|const QBluetoothAddress &,QString
 
 $prototype=void error( QBluetoothLocalDevice::Error error )
 $signalMethod=5,2,0|void|error|QBluetoothLocalDevice::Error

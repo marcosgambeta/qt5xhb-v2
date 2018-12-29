@@ -42,6 +42,6 @@ $method=5,2,0|QBluetoothTransferReply *|put|const QBluetoothTransferRequest &,QI
 %%
 
 $prototype=void finished( QBluetoothTransferReply * reply )
-$signalMethod=5,2,0|void|finished|QBluetoothTransferReply*
+$signalMethod=5,2,0|void|finished|QBluetoothTransferReply *
 
 #pragma ENDDUMP

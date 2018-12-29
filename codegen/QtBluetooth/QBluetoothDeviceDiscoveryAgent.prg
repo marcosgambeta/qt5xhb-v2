@@ -83,7 +83,7 @@ $method=5,2,0|void|stop|
 %%
 
 $prototype=void deviceDiscovered( const QBluetoothDeviceInfo & info )
-$signalMethod=5,2,0|void|deviceDiscovered|QBluetoothDeviceInfo
+$signalMethod=5,2,0|void|deviceDiscovered|const QBluetoothDeviceInfo &
 
 $prototype=void finished()
 $signalMethod=5,2,0|void|finished|
@@ -95,6 +95,6 @@ $prototype=void canceled()
 $signalMethod=5,2,0|void|canceled|
 
 $prototype=void deviceUpdated(const QBluetoothDeviceInfo &info, QBluetoothDeviceInfo::Fields updatedFields)
-$signalMethod=5,2,0|void|deviceUpdated|QBluetoothDeviceInfo,QBluetoothDeviceInfo::Fields|#ifdef Q_OS_ANDROID
+$signalMethod=5,2,0|void|deviceUpdated|const QBluetoothDeviceInfo &,QBluetoothDeviceInfo::Fields|#ifdef Q_OS_ANDROID
 
 #pragma ENDDUMP

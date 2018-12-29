@@ -115,7 +115,7 @@ $method=5,2,0|void|clear|
 %%
 
 $prototype=void serviceDiscovered( const QBluetoothServiceInfo & info )
-$signalMethod=5,2,0|void|serviceDiscovered|QBluetoothServiceInfo
+$signalMethod=5,2,0|void|serviceDiscovered|const QBluetoothServiceInfo &
 
 $prototype=void finished()
 $signalMethod=5,2,0|void|finished|
