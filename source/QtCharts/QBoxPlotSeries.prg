@@ -626,7 +626,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
       if( Signals2_connection( sender, "boxOutlineVisibilityChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxOutlineVisibilityChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::boxOutlineVisibilityChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "boxOutlineVisibilityChanged()" );
 
           if( cb )
@@ -691,7 +694,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
       if( Signals2_connection( sender, "boxsetsAdded(QList<QBoxSet*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxsetsAdded, [sender](QList<QBoxSet*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::boxsetsAdded, 
+                                                              [sender]
+                                                              (QList<QBoxSet*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "boxsetsAdded(QList<QBoxSet*>)" );
 
           if( cb )
@@ -781,7 +787,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
       if( Signals2_connection( sender, "boxsetsRemoved(QList<QBoxSet*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxsetsRemoved, [sender](QList<QBoxSet*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::boxsetsRemoved, 
+                                                              [sender]
+                                                              (QList<QBoxSet*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "boxsetsRemoved(QList<QBoxSet*>)" );
 
           if( cb )
@@ -871,7 +880,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
       if( Signals2_connection( sender, "boxWidthChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::boxWidthChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::boxWidthChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "boxWidthChanged()" );
 
           if( cb )
@@ -936,7 +948,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::brushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::brushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
           if( cb )
@@ -1001,7 +1016,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
       if( Signals2_connection( sender, "clicked(QBoxSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::clicked, [sender](QBoxSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::clicked, 
+                                                              [sender]
+                                                              (QBoxSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QBoxSet*)" );
 
           if( cb )
@@ -1068,7 +1086,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
       if( Signals2_connection( sender, "countChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::countChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::countChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
 
           if( cb )
@@ -1133,7 +1154,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked(QBoxSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::doubleClicked, [sender](QBoxSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::doubleClicked, 
+                                                              [sender]
+                                                              (QBoxSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QBoxSet*)" );
 
           if( cb )
@@ -1200,7 +1224,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool,QBoxSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::hovered, [sender](bool arg1, QBoxSet* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::hovered, 
+                                                              [sender]
+                                                              (bool arg1, QBoxSet * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,QBoxSet*)" );
 
           if( cb )
@@ -1269,7 +1296,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::penChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::penChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
           if( cb )
@@ -1334,7 +1364,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
       if( Signals2_connection( sender, "pressed(QBoxSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::pressed, [sender](QBoxSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::pressed, 
+                                                              [sender]
+                                                              (QBoxSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QBoxSet*)" );
 
           if( cb )
@@ -1401,7 +1434,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
       if( Signals2_connection( sender, "released(QBoxSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxPlotSeries::released, [sender](QBoxSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxPlotSeries::released, 
+                                                              [sender]
+                                                              (QBoxSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QBoxSet*)" );
 
           if( cb )

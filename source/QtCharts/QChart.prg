@@ -1875,7 +1875,10 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
       if( Signals2_connection( sender, "plotAreaChanged(QRectF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QChart::plotAreaChanged, [sender](QRectF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QChart::plotAreaChanged, 
+                                                              [sender]
+                                                              (const QRectF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "plotAreaChanged(QRectF)" );
 
           if( cb )

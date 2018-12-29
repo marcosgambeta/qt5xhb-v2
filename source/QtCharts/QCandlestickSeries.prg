@@ -1014,7 +1014,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED )
       if( Signals2_connection( sender, "bodyOutlineVisibilityChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::bodyOutlineVisibilityChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::bodyOutlineVisibilityChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bodyOutlineVisibilityChanged()" );
 
           if( cb )
@@ -1079,7 +1082,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYWIDTHCHANGED )
       if( Signals2_connection( sender, "bodyWidthChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::bodyWidthChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::bodyWidthChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bodyWidthChanged()" );
 
           if( cb )
@@ -1144,7 +1150,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBRUSHCHANGED )
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::brushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::brushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
           if( cb )
@@ -1209,7 +1218,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
       if( Signals2_connection( sender, "candlestickSetsAdded(QList<QCandlestickSet*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::candlestickSetsAdded, [sender](QList<QCandlestickSet*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::candlestickSetsAdded, 
+                                                              [sender]
+                                                              (const QList<QCandlestickSet*> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "candlestickSetsAdded(QList<QCandlestickSet*>)" );
 
           if( cb )
@@ -1299,7 +1311,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
       if( Signals2_connection( sender, "candlestickSetsRemoved(QList<QCandlestickSet*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::candlestickSetsRemoved, [sender](QList<QCandlestickSet*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::candlestickSetsRemoved, 
+                                                              [sender]
+                                                              (const QList<QCandlestickSet*> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "candlestickSetsRemoved(QList<QCandlestickSet*>)" );
 
           if( cb )
@@ -1389,7 +1404,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED )
       if( Signals2_connection( sender, "capsVisibilityChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::capsVisibilityChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::capsVisibilityChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "capsVisibilityChanged()" );
 
           if( cb )
@@ -1454,7 +1472,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
       if( Signals2_connection( sender, "capsWidthChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::capsWidthChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::capsWidthChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "capsWidthChanged()" );
 
           if( cb )
@@ -1519,7 +1540,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
       if( Signals2_connection( sender, "clicked(QCandlestickSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::clicked, [sender](QCandlestickSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::clicked, 
+                                                              [sender]
+                                                              (QCandlestickSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QCandlestickSet*)" );
 
           if( cb )
@@ -1586,7 +1610,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCOUNTCHANGED )
       if( Signals2_connection( sender, "countChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::countChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::countChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
 
           if( cb )
@@ -1651,7 +1678,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED )
       if( Signals2_connection( sender, "decreasingColorChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::decreasingColorChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::decreasingColorChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "decreasingColorChanged()" );
 
           if( cb )
@@ -1716,7 +1746,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked(QCandlestickSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::doubleClicked, [sender](QCandlestickSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::doubleClicked, 
+                                                              [sender]
+                                                              (QCandlestickSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QCandlestickSet*)" );
 
           if( cb )
@@ -1783,7 +1816,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool,QCandlestickSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::hovered, [sender](bool arg1, QCandlestickSet* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::hovered, 
+                                                              [sender]
+                                                              (bool arg1, QCandlestickSet * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,QCandlestickSet*)" );
 
           if( cb )
@@ -1852,7 +1888,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED )
       if( Signals2_connection( sender, "increasingColorChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::increasingColorChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::increasingColorChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "increasingColorChanged()" );
 
           if( cb )
@@ -1917,7 +1956,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED )
       if( Signals2_connection( sender, "maximumColumnWidthChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::maximumColumnWidthChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::maximumColumnWidthChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maximumColumnWidthChanged()" );
 
           if( cb )
@@ -1982,7 +2024,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED )
       if( Signals2_connection( sender, "minimumColumnWidthChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::minimumColumnWidthChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::minimumColumnWidthChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minimumColumnWidthChanged()" );
 
           if( cb )
@@ -2047,7 +2092,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::penChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::penChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
           if( cb )
@@ -2112,7 +2160,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
       if( Signals2_connection( sender, "pressed(QCandlestickSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::pressed, [sender](QCandlestickSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::pressed, 
+                                                              [sender]
+                                                              (QCandlestickSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QCandlestickSet*)" );
 
           if( cb )
@@ -2179,7 +2230,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
       if( Signals2_connection( sender, "released(QCandlestickSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSeries::released, [sender](QCandlestickSet* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSeries::released, 
+                                                              [sender]
+                                                              (QCandlestickSet * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QCandlestickSet*)" );
 
           if( cb )

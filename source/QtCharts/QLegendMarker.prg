@@ -562,7 +562,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::brushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::brushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
           if( cb )
@@ -627,7 +630,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
       if( Signals2_connection( sender, "clicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::clicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::clicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked()" );
 
           if( cb )
@@ -692,7 +698,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
       if( Signals2_connection( sender, "fontChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::fontChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::fontChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged()" );
 
           if( cb )
@@ -757,7 +766,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::hovered, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::hovered, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool)" );
 
           if( cb )
@@ -824,7 +836,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
       if( Signals2_connection( sender, "labelBrushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::labelBrushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::labelBrushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBrushChanged()" );
 
           if( cb )
@@ -889,7 +904,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
       if( Signals2_connection( sender, "labelChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::labelChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::labelChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelChanged()" );
 
           if( cb )
@@ -954,7 +972,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::penChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::penChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
           if( cb )
@@ -1019,7 +1040,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
       if( Signals2_connection( sender, "shapeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::shapeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::shapeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shapeChanged()" );
 
           if( cb )
@@ -1084,7 +1108,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegendMarker::visibleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegendMarker::visibleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
 
           if( cb )

@@ -638,7 +638,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
       if( Signals2_connection( sender, "barsetsAdded(QList<QBarSet*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::barsetsAdded, [sender](QList<QBarSet*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::barsetsAdded, 
+                                                              [sender]
+                                                              (QList<QBarSet*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barsetsAdded(QList<QBarSet*>)" );
 
           if( cb )
@@ -728,7 +731,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
       if( Signals2_connection( sender, "barsetsRemoved(QList<QBarSet*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::barsetsRemoved, [sender](QList<QBarSet*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::barsetsRemoved, 
+                                                              [sender]
+                                                              (QList<QBarSet*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barsetsRemoved(QList<QBarSet*>)" );
 
           if( cb )
@@ -818,7 +824,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
       if( Signals2_connection( sender, "clicked(int,QBarSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::clicked, [sender](int arg1, QBarSet* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::clicked, 
+                                                              [sender]
+                                                              (int arg1, QBarSet * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(int,QBarSet*)" );
 
           if( cb )
@@ -887,7 +896,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
       if( Signals2_connection( sender, "countChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::countChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::countChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
 
           if( cb )
@@ -952,7 +964,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked(int,QBarSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::doubleClicked, [sender](int arg1, QBarSet* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::doubleClicked, 
+                                                              [sender]
+                                                              (int arg1, QBarSet * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(int,QBarSet*)" );
 
           if( cb )
@@ -1021,7 +1036,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool,int,QBarSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::hovered, [sender](bool arg1, int arg2, QBarSet* arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::hovered, 
+                                                              [sender]
+                                                              (bool arg1, int arg2, QBarSet * arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,int,QBarSet*)" );
 
           if( cb )
@@ -1092,7 +1110,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
       if( Signals2_connection( sender, "labelsAngleChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::labelsAngleChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::labelsAngleChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsAngleChanged(qreal)" );
 
           if( cb )
@@ -1159,7 +1180,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
       if( Signals2_connection( sender, "labelsFormatChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::labelsFormatChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::labelsFormatChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsFormatChanged(QString)" );
 
           if( cb )
@@ -1226,7 +1250,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
       if( Signals2_connection( sender, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::labelsPositionChanged, [sender](QAbstractBarSeries::LabelsPosition arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::labelsPositionChanged, 
+                                                              [sender]
+                                                              (QAbstractBarSeries::LabelsPosition arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
 
           if( cb )
@@ -1293,7 +1320,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
       if( Signals2_connection( sender, "labelsVisibleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::labelsVisibleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::labelsVisibleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsVisibleChanged()" );
 
           if( cb )
@@ -1358,7 +1388,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
       if( Signals2_connection( sender, "pressed(int,QBarSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::pressed, [sender](int arg1, QBarSet* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::pressed, 
+                                                              [sender]
+                                                              (int arg1, QBarSet * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(int,QBarSet*)" );
 
           if( cb )
@@ -1427,7 +1460,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
       if( Signals2_connection( sender, "released(int,QBarSet*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractBarSeries::released, [sender](int arg1, QBarSet* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractBarSeries::released, 
+                                                              [sender]
+                                                              (int arg1, QBarSet * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(int,QBarSet*)" );
 
           if( cb )

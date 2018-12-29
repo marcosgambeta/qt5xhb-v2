@@ -424,7 +424,10 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
       if( Signals2_connection( sender, "categoriesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCategoryAxis::categoriesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCategoryAxis::categoriesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoriesChanged()" );
 
           if( cb )
@@ -489,7 +492,10 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
       if( Signals2_connection( sender, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCategoryAxis::labelsPositionChanged, [sender](QCategoryAxis::AxisLabelsPosition arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCategoryAxis::labelsPositionChanged, 
+                                                              [sender]
+                                                              (QCategoryAxis::AxisLabelsPosition arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
 
           if( cb )

@@ -1766,7 +1766,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::colorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -1833,7 +1836,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINECOLORCHANGED )
       if( Signals2_connection( sender, "gridLineColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::gridLineColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::gridLineColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gridLineColorChanged(QColor)" );
 
           if( cb )
@@ -1900,7 +1906,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINEPENCHANGED )
       if( Signals2_connection( sender, "gridLinePenChanged(QPen)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::gridLinePenChanged, [sender](QPen arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::gridLinePenChanged, 
+                                                              [sender]
+                                                              (const QPen & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gridLinePenChanged(QPen)" );
 
           if( cb )
@@ -1967,7 +1976,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDVISIBLECHANGED )
       if( Signals2_connection( sender, "gridVisibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::gridVisibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::gridVisibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gridVisibleChanged(bool)" );
 
           if( cb )
@@ -2034,7 +2046,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSANGLECHANGED )
       if( Signals2_connection( sender, "labelsAngleChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::labelsAngleChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::labelsAngleChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsAngleChanged(int)" );
 
           if( cb )
@@ -2101,7 +2116,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSBRUSHCHANGED )
       if( Signals2_connection( sender, "labelsBrushChanged(QBrush)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::labelsBrushChanged, [sender](QBrush arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::labelsBrushChanged, 
+                                                              [sender]
+                                                              (const QBrush & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsBrushChanged(QBrush)" );
 
           if( cb )
@@ -2168,7 +2186,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSCOLORCHANGED )
       if( Signals2_connection( sender, "labelsColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::labelsColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::labelsColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsColorChanged(QColor)" );
 
           if( cb )
@@ -2235,7 +2256,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSFONTCHANGED )
       if( Signals2_connection( sender, "labelsFontChanged(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::labelsFontChanged, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::labelsFontChanged, 
+                                                              [sender]
+                                                              (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsFontChanged(QFont)" );
 
           if( cb )
@@ -2302,7 +2326,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSVISIBLECHANGED )
       if( Signals2_connection( sender, "labelsVisibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::labelsVisibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::labelsVisibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsVisibleChanged(bool)" );
 
           if( cb )
@@ -2369,7 +2396,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEPENCHANGED )
       if( Signals2_connection( sender, "linePenChanged(QPen)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::linePenChanged, [sender](QPen arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::linePenChanged, 
+                                                              [sender]
+                                                              (const QPen & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linePenChanged(QPen)" );
 
           if( cb )
@@ -2436,7 +2466,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEVISIBLECHANGED )
       if( Signals2_connection( sender, "lineVisibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::lineVisibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::lineVisibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lineVisibleChanged(bool)" );
 
           if( cb )
@@ -2503,7 +2536,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED )
       if( Signals2_connection( sender, "minorGridLineColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::minorGridLineColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::minorGridLineColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minorGridLineColorChanged(QColor)" );
 
           if( cb )
@@ -2570,7 +2606,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED )
       if( Signals2_connection( sender, "minorGridLinePenChanged(QPen)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::minorGridLinePenChanged, [sender](QPen arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::minorGridLinePenChanged, 
+                                                              [sender]
+                                                              (const QPen & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minorGridLinePenChanged(QPen)" );
 
           if( cb )
@@ -2637,7 +2676,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED )
       if( Signals2_connection( sender, "minorGridVisibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::minorGridVisibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::minorGridVisibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minorGridVisibleChanged(bool)" );
 
           if( cb )
@@ -2704,7 +2746,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONREVERSECHANGED )
       if( Signals2_connection( sender, "reverseChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::reverseChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::reverseChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "reverseChanged(bool)" );
 
           if( cb )
@@ -2771,7 +2816,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED )
       if( Signals2_connection( sender, "shadesBorderColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::shadesBorderColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::shadesBorderColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadesBorderColorChanged(QColor)" );
 
           if( cb )
@@ -2838,7 +2886,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBRUSHCHANGED )
       if( Signals2_connection( sender, "shadesBrushChanged(QBrush)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::shadesBrushChanged, [sender](QBrush arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::shadesBrushChanged, 
+                                                              [sender]
+                                                              (const QBrush & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadesBrushChanged(QBrush)" );
 
           if( cb )
@@ -2905,7 +2956,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESCOLORCHANGED )
       if( Signals2_connection( sender, "shadesColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::shadesColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::shadesColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadesColorChanged(QColor)" );
 
           if( cb )
@@ -2972,7 +3026,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESPENCHANGED )
       if( Signals2_connection( sender, "shadesPenChanged(QPen)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::shadesPenChanged, [sender](QPen arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::shadesPenChanged, 
+                                                              [sender]
+                                                              (const QPen & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadesPenChanged(QPen)" );
 
           if( cb )
@@ -3039,7 +3096,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESVISIBLECHANGED )
       if( Signals2_connection( sender, "shadesVisibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::shadesVisibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::shadesVisibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadesVisibleChanged(bool)" );
 
           if( cb )
@@ -3106,7 +3166,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEBRUSHCHANGED )
       if( Signals2_connection( sender, "titleBrushChanged(QBrush)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::titleBrushChanged, [sender](QBrush arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::titleBrushChanged, 
+                                                              [sender]
+                                                              (const QBrush & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleBrushChanged(QBrush)" );
 
           if( cb )
@@ -3173,7 +3236,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEFONTCHANGED )
       if( Signals2_connection( sender, "titleFontChanged(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::titleFontChanged, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::titleFontChanged, 
+                                                              [sender]
+                                                              (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleFontChanged(QFont)" );
 
           if( cb )
@@ -3240,7 +3306,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLETEXTCHANGED )
       if( Signals2_connection( sender, "titleTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::titleTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::titleTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleTextChanged(QString)" );
 
           if( cb )
@@ -3307,7 +3376,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEVISIBLECHANGED )
       if( Signals2_connection( sender, "titleVisibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::titleVisibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::titleVisibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleVisibleChanged(bool)" );
 
           if( cb )
@@ -3374,7 +3446,10 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONVISIBLECHANGED )
       if( Signals2_connection( sender, "visibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAxis::visibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAxis::visibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged(bool)" );
 
           if( cb )

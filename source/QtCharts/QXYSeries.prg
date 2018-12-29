@@ -1199,7 +1199,10 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
       if( Signals2_connection( sender, "clicked(QPointF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::clicked, [sender](QPointF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::clicked, 
+                                                              [sender]
+                                                              (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPointF)" );
 
           if( cb )
@@ -1266,7 +1269,10 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::colorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -1333,7 +1339,10 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked(QPointF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::doubleClicked, [sender](QPointF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::doubleClicked, 
+                                                              [sender]
+                                                              (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPointF)" );
 
           if( cb )
@@ -1400,7 +1409,10 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
       if( Signals2_connection( sender, "hovered(QPointF,bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::hovered, [sender](QPointF arg1, bool arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::hovered, 
+                                                              [sender]
+                                                              (const QPointF & arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPointF,bool)" );
 
           if( cb )
@@ -1469,7 +1481,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged(QPen)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::penChanged, [sender](QPen arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::penChanged, 
+                                                              [sender]
+                                                              (const QPen & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged(QPen)" );
 
           if( cb )
@@ -1536,7 +1551,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
       if( Signals2_connection( sender, "pointAdded(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointAdded, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointAdded, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointAdded(int)" );
 
           if( cb )
@@ -1603,7 +1621,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
       if( Signals2_connection( sender, "pointLabelsClippingChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsClippingChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointLabelsClippingChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsClippingChanged(bool)" );
 
           if( cb )
@@ -1670,7 +1691,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
       if( Signals2_connection( sender, "pointLabelsColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointLabelsColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsColorChanged(QColor)" );
 
           if( cb )
@@ -1737,7 +1761,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
       if( Signals2_connection( sender, "pointLabelsFontChanged(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsFontChanged, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointLabelsFontChanged, 
+                                                              [sender]
+                                                              (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFontChanged(QFont)" );
 
           if( cb )
@@ -1804,7 +1831,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
       if( Signals2_connection( sender, "pointLabelsFormatChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsFormatChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointLabelsFormatChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFormatChanged(QString)" );
 
           if( cb )
@@ -1871,7 +1901,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
       if( Signals2_connection( sender, "pointLabelsVisibilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointLabelsVisibilityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointLabelsVisibilityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsVisibilityChanged(bool)" );
 
           if( cb )
@@ -1938,7 +1971,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
       if( Signals2_connection( sender, "pointRemoved(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointRemoved, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointRemoved, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointRemoved(int)" );
 
           if( cb )
@@ -2005,7 +2041,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
       if( Signals2_connection( sender, "pointReplaced(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointReplaced, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointReplaced, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointReplaced(int)" );
 
           if( cb )
@@ -2072,7 +2111,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
       if( Signals2_connection( sender, "pointsRemoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointsRemoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointsRemoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsRemoved(int,int)" );
 
           if( cb )
@@ -2141,7 +2183,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
       if( Signals2_connection( sender, "pointsReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pointsReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pointsReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsReplaced()" );
 
           if( cb )
@@ -2206,7 +2251,10 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
       if( Signals2_connection( sender, "pressed(QPointF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::pressed, [sender](QPointF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::pressed, 
+                                                              [sender]
+                                                              (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPointF)" );
 
           if( cb )
@@ -2273,7 +2321,10 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
       if( Signals2_connection( sender, "released(QPointF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QXYSeries::released, [sender](QPointF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QXYSeries::released, 
+                                                              [sender]
+                                                              (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPointF)" );
 
           if( cb )

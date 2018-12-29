@@ -437,7 +437,10 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED )
       if( Signals2_connection( sender, "columnCountChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHPieModelMapper::columnCountChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHPieModelMapper::columnCountChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged()" );
 
           if( cb )
@@ -502,7 +505,10 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED )
       if( Signals2_connection( sender, "firstColumnChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHPieModelMapper::firstColumnChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHPieModelMapper::firstColumnChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstColumnChanged()" );
 
           if( cb )
@@ -567,7 +573,10 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONLABELSROWCHANGED )
       if( Signals2_connection( sender, "labelsRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHPieModelMapper::labelsRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHPieModelMapper::labelsRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsRowChanged()" );
 
           if( cb )
@@ -632,7 +641,10 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONMODELREPLACED )
       if( Signals2_connection( sender, "modelReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHPieModelMapper::modelReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHPieModelMapper::modelReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReplaced()" );
 
           if( cb )
@@ -697,7 +709,10 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONSERIESREPLACED )
       if( Signals2_connection( sender, "seriesReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHPieModelMapper::seriesReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHPieModelMapper::seriesReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesReplaced()" );
 
           if( cb )
@@ -762,7 +777,10 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONVALUESROWCHANGED )
       if( Signals2_connection( sender, "valuesRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHPieModelMapper::valuesRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHPieModelMapper::valuesRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valuesRowChanged()" );
 
           if( cb )

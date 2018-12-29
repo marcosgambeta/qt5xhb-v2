@@ -547,7 +547,10 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
       if( Signals2_connection( sender, "nameChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSeries::nameChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSeries::nameChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged()" );
 
           if( cb )
@@ -612,7 +615,10 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
       if( Signals2_connection( sender, "opacityChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSeries::opacityChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSeries::opacityChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged()" );
 
           if( cb )
@@ -677,7 +683,10 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
       if( Signals2_connection( sender, "useOpenGLChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSeries::useOpenGLChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSeries::useOpenGLChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "useOpenGLChanged()" );
 
           if( cb )
@@ -742,7 +751,10 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSeries::visibleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSeries::visibleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
 
           if( cb )

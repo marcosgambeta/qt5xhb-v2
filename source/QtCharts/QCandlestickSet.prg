@@ -546,7 +546,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::brushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::brushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
           if( cb )
@@ -611,7 +614,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
       if( Signals2_connection( sender, "clicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::clicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::clicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked()" );
 
           if( cb )
@@ -676,7 +682,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
       if( Signals2_connection( sender, "closeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::closeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::closeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "closeChanged()" );
 
           if( cb )
@@ -741,7 +750,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::doubleClicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::doubleClicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked()" );
 
           if( cb )
@@ -806,7 +818,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
       if( Signals2_connection( sender, "highChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::highChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::highChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highChanged()" );
 
           if( cb )
@@ -871,7 +886,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::hovered, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::hovered, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool)" );
 
           if( cb )
@@ -938,7 +956,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
       if( Signals2_connection( sender, "lowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::lowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::lowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lowChanged()" );
 
           if( cb )
@@ -1003,7 +1024,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
       if( Signals2_connection( sender, "openChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::openChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::openChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "openChanged()" );
 
           if( cb )
@@ -1068,7 +1092,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::penChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::penChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
           if( cb )
@@ -1133,7 +1160,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
       if( Signals2_connection( sender, "pressed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::pressed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::pressed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed()" );
 
           if( cb )
@@ -1198,7 +1228,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
       if( Signals2_connection( sender, "released()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::released, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::released, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released()" );
 
           if( cb )
@@ -1263,7 +1296,10 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
       if( Signals2_connection( sender, "timestampChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCandlestickSet::timestampChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCandlestickSet::timestampChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "timestampChanged()" );
 
           if( cb )

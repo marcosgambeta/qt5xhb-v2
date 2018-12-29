@@ -456,7 +456,10 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
       if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterSeries::borderColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterSeries::borderColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
 
           if( cb )
@@ -523,7 +526,10 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterSeries::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterSeries::colorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -590,7 +596,10 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
       if( Signals2_connection( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterSeries::markerShapeChanged, [sender](QScatterSeries::MarkerShape arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterSeries::markerShapeChanged, 
+                                                              [sender]
+                                                              (QScatterSeries::MarkerShape arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" );
 
           if( cb )
@@ -657,7 +666,10 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
       if( Signals2_connection( sender, "markerSizeChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterSeries::markerSizeChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterSeries::markerSizeChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "markerSizeChanged(qreal)" );
 
           if( cb )

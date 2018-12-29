@@ -437,7 +437,10 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED )
       if( Signals2_connection( sender, "columnCountChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::columnCountChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHXYModelMapper::columnCountChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged()" );
 
           if( cb )
@@ -502,7 +505,10 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED )
       if( Signals2_connection( sender, "firstColumnChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::firstColumnChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHXYModelMapper::firstColumnChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstColumnChanged()" );
 
           if( cb )
@@ -567,7 +573,10 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONMODELREPLACED )
       if( Signals2_connection( sender, "modelReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::modelReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHXYModelMapper::modelReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReplaced()" );
 
           if( cb )
@@ -632,7 +641,10 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONSERIESREPLACED )
       if( Signals2_connection( sender, "seriesReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::seriesReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHXYModelMapper::seriesReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesReplaced()" );
 
           if( cb )
@@ -697,7 +709,10 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONXROWCHANGED )
       if( Signals2_connection( sender, "xRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::xRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHXYModelMapper::xRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xRowChanged()" );
 
           if( cb )
@@ -762,7 +777,10 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONYROWCHANGED )
       if( Signals2_connection( sender, "yRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHXYModelMapper::yRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHXYModelMapper::yRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yRowChanged()" );
 
           if( cb )

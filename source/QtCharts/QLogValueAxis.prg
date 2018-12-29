@@ -485,7 +485,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
       if( Signals2_connection( sender, "baseChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::baseChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValueAxis::baseChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseChanged(qreal)" );
 
           if( cb )
@@ -552,7 +555,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
       if( Signals2_connection( sender, "labelFormatChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::labelFormatChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValueAxis::labelFormatChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelFormatChanged(QString)" );
 
           if( cb )
@@ -619,7 +625,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
       if( Signals2_connection( sender, "maxChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::maxChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValueAxis::maxChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(qreal)" );
 
           if( cb )
@@ -686,7 +695,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
       if( Signals2_connection( sender, "minChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::minChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValueAxis::minChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(qreal)" );
 
           if( cb )
@@ -753,7 +765,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
       if( Signals2_connection( sender, "minorTickCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::minorTickCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValueAxis::minorTickCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minorTickCountChanged(int)" );
 
           if( cb )
@@ -820,7 +835,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
       if( Signals2_connection( sender, "rangeChanged(qreal,qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::rangeChanged, [sender](qreal arg1, qreal arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValueAxis::rangeChanged, 
+                                                              [sender]
+                                                              (qreal arg1, qreal arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(qreal,qreal)" );
 
           if( cb )
@@ -889,7 +907,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
       if( Signals2_connection( sender, "tickCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValueAxis::tickCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValueAxis::tickCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
 
           if( cb )

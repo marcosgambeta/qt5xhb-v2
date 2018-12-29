@@ -1116,7 +1116,10 @@ HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
       if( Signals2_connection( sender, "angleSpanChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::angleSpanChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::angleSpanChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "angleSpanChanged()" );
 
           if( cb )
@@ -1181,7 +1184,10 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
       if( Signals2_connection( sender, "borderColorChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::borderColorChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::borderColorChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged()" );
 
           if( cb )
@@ -1246,7 +1252,10 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
       if( Signals2_connection( sender, "borderWidthChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::borderWidthChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::borderWidthChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderWidthChanged()" );
 
           if( cb )
@@ -1311,7 +1320,10 @@ HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::brushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::brushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
           if( cb )
@@ -1376,7 +1388,10 @@ HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
       if( Signals2_connection( sender, "clicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::clicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::clicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked()" );
 
           if( cb )
@@ -1441,7 +1456,10 @@ HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::colorChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::colorChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged()" );
 
           if( cb )
@@ -1506,7 +1524,10 @@ HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::doubleClicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::doubleClicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked()" );
 
           if( cb )
@@ -1571,7 +1592,10 @@ HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::hovered, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::hovered, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool)" );
 
           if( cb )
@@ -1638,7 +1662,10 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
       if( Signals2_connection( sender, "labelBrushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::labelBrushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::labelBrushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBrushChanged()" );
 
           if( cb )
@@ -1703,7 +1730,10 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
       if( Signals2_connection( sender, "labelChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::labelChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::labelChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelChanged()" );
 
           if( cb )
@@ -1768,7 +1798,10 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
       if( Signals2_connection( sender, "labelColorChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::labelColorChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::labelColorChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelColorChanged()" );
 
           if( cb )
@@ -1833,7 +1866,10 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
       if( Signals2_connection( sender, "labelFontChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::labelFontChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::labelFontChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelFontChanged()" );
 
           if( cb )
@@ -1898,7 +1934,10 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
       if( Signals2_connection( sender, "labelVisibleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::labelVisibleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::labelVisibleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelVisibleChanged()" );
 
           if( cb )
@@ -1963,7 +2002,10 @@ HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::penChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::penChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
           if( cb )
@@ -2028,7 +2070,10 @@ HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
       if( Signals2_connection( sender, "percentageChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::percentageChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::percentageChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "percentageChanged()" );
 
           if( cb )
@@ -2093,7 +2138,10 @@ HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
       if( Signals2_connection( sender, "pressed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::pressed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::pressed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed()" );
 
           if( cb )
@@ -2158,7 +2206,10 @@ HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
       if( Signals2_connection( sender, "released()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::released, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::released, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released()" );
 
           if( cb )
@@ -2223,7 +2274,10 @@ HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
       if( Signals2_connection( sender, "startAngleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::startAngleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::startAngleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "startAngleChanged()" );
 
           if( cb )
@@ -2288,7 +2342,10 @@ HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSlice::valueChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSlice::valueChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged()" );
 
           if( cb )

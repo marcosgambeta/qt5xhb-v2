@@ -568,7 +568,10 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
       if( Signals2_connection( sender, "categoriesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarCategoryAxis::categoriesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarCategoryAxis::categoriesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoriesChanged()" );
 
           if( cb )
@@ -633,7 +636,10 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
       if( Signals2_connection( sender, "countChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarCategoryAxis::countChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarCategoryAxis::countChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
 
           if( cb )
@@ -698,7 +704,10 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
       if( Signals2_connection( sender, "maxChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarCategoryAxis::maxChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarCategoryAxis::maxChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(QString)" );
 
           if( cb )
@@ -765,7 +774,10 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
       if( Signals2_connection( sender, "minChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarCategoryAxis::minChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarCategoryAxis::minChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(QString)" );
 
           if( cb )
@@ -832,7 +844,10 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
       if( Signals2_connection( sender, "rangeChanged(QString,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarCategoryAxis::rangeChanged, [sender](QString arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarCategoryAxis::rangeChanged, 
+                                                              [sender]
+                                                              (const QString & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(QString,QString)" );
 
           if( cb )

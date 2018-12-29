@@ -962,7 +962,10 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
       if( Signals2_connection( sender, "backgroundVisibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::backgroundVisibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::backgroundVisibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundVisibleChanged(bool)" );
 
           if( cb )
@@ -1029,7 +1032,10 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
       if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::borderColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::borderColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
 
           if( cb )
@@ -1096,7 +1102,10 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::colorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -1163,7 +1172,10 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
       if( Signals2_connection( sender, "fontChanged(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::fontChanged, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::fontChanged, 
+                                                              [sender]
+                                                              (QFont arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
 
           if( cb )
@@ -1230,7 +1242,10 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
       if( Signals2_connection( sender, "labelColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::labelColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::labelColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelColorChanged(QColor)" );
 
           if( cb )
@@ -1297,7 +1312,10 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
       if( Signals2_connection( sender, "markerShapeChanged(QLegend::MarkerShape)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::markerShapeChanged, [sender](QLegend::MarkerShape arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::markerShapeChanged, 
+                                                              [sender]
+                                                              (QLegend::MarkerShape arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "markerShapeChanged(QLegend::MarkerShape)" );
 
           if( cb )
@@ -1364,7 +1382,10 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
       if( Signals2_connection( sender, "reverseMarkersChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::reverseMarkersChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::reverseMarkersChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "reverseMarkersChanged(bool)" );
 
           if( cb )
@@ -1431,7 +1452,10 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
       if( Signals2_connection( sender, "showToolTipsChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLegend::showToolTipsChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLegend::showToolTipsChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "showToolTipsChanged(bool)" );
 
           if( cb )

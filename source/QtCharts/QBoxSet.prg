@@ -492,7 +492,10 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::brushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::brushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
           if( cb )
@@ -557,7 +560,10 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
       if( Signals2_connection( sender, "cleared()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::cleared, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::cleared, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cleared()" );
 
           if( cb )
@@ -622,7 +628,10 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
       if( Signals2_connection( sender, "clicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::clicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::clicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked()" );
 
           if( cb )
@@ -687,7 +696,10 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::doubleClicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::doubleClicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked()" );
 
           if( cb )
@@ -752,7 +764,10 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::hovered, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::hovered, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool)" );
 
           if( cb )
@@ -819,7 +834,10 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::penChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::penChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
           if( cb )
@@ -884,7 +902,10 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
       if( Signals2_connection( sender, "pressed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::pressed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::pressed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed()" );
 
           if( cb )
@@ -949,7 +970,10 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
       if( Signals2_connection( sender, "released()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::released, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::released, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released()" );
 
           if( cb )
@@ -1014,7 +1038,10 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::valueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::valueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
 
           if( cb )
@@ -1081,7 +1108,10 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
       if( Signals2_connection( sender, "valuesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBoxSet::valuesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBoxSet::valuesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valuesChanged()" );
 
           if( cb )

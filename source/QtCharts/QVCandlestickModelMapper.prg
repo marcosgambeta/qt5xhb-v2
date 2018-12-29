@@ -518,7 +518,10 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
       if( Signals2_connection( sender, "closeRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::closeRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVCandlestickModelMapper::closeRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "closeRowChanged()" );
 
           if( cb )
@@ -583,7 +586,10 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
       if( Signals2_connection( sender, "firstSetColumnChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::firstSetColumnChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVCandlestickModelMapper::firstSetColumnChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstSetColumnChanged()" );
 
           if( cb )
@@ -648,7 +654,10 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
       if( Signals2_connection( sender, "highRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::highRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVCandlestickModelMapper::highRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highRowChanged()" );
 
           if( cb )
@@ -713,7 +722,10 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
       if( Signals2_connection( sender, "lastSetColumnChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::lastSetColumnChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVCandlestickModelMapper::lastSetColumnChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lastSetColumnChanged()" );
 
           if( cb )
@@ -778,7 +790,10 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
       if( Signals2_connection( sender, "lowRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::lowRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVCandlestickModelMapper::lowRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lowRowChanged()" );
 
           if( cb )
@@ -843,7 +858,10 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
       if( Signals2_connection( sender, "openRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::openRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVCandlestickModelMapper::openRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "openRowChanged()" );
 
           if( cb )
@@ -908,7 +926,10 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
       if( Signals2_connection( sender, "timestampRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVCandlestickModelMapper::timestampRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVCandlestickModelMapper::timestampRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "timestampRowChanged()" );
 
           if( cb )

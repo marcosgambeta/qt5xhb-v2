@@ -441,7 +441,10 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
       if( Signals2_connection( sender, "columnCountChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBoxPlotModelMapper::columnCountChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBoxPlotModelMapper::columnCountChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged()" );
 
           if( cb )
@@ -506,7 +509,10 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED )
       if( Signals2_connection( sender, "firstBoxSetRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBoxPlotModelMapper::firstBoxSetRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBoxPlotModelMapper::firstBoxSetRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstBoxSetRowChanged()" );
 
           if( cb )
@@ -571,7 +577,10 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED )
       if( Signals2_connection( sender, "firstColumnChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBoxPlotModelMapper::firstColumnChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBoxPlotModelMapper::firstColumnChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstColumnChanged()" );
 
           if( cb )
@@ -636,7 +645,10 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED )
       if( Signals2_connection( sender, "lastBoxSetRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBoxPlotModelMapper::lastBoxSetRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBoxPlotModelMapper::lastBoxSetRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lastBoxSetRowChanged()" );
 
           if( cb )
@@ -701,7 +713,10 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONMODELREPLACED )
       if( Signals2_connection( sender, "modelReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBoxPlotModelMapper::modelReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBoxPlotModelMapper::modelReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReplaced()" );
 
           if( cb )
@@ -766,7 +781,10 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONSERIESREPLACED )
       if( Signals2_connection( sender, "seriesReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBoxPlotModelMapper::seriesReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBoxPlotModelMapper::seriesReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesReplaced()" );
 
           if( cb )

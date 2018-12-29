@@ -484,7 +484,10 @@ HB_FUNC_STATIC( QVALUEAXIS_ONLABELFORMATCHANGED )
       if( Signals2_connection( sender, "labelFormatChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QValueAxis::labelFormatChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValueAxis::labelFormatChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelFormatChanged(QString)" );
 
           if( cb )
@@ -551,7 +554,10 @@ HB_FUNC_STATIC( QVALUEAXIS_ONMAXCHANGED )
       if( Signals2_connection( sender, "maxChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QValueAxis::maxChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValueAxis::maxChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(qreal)" );
 
           if( cb )
@@ -618,7 +624,10 @@ HB_FUNC_STATIC( QVALUEAXIS_ONMINCHANGED )
       if( Signals2_connection( sender, "minChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QValueAxis::minChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValueAxis::minChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(qreal)" );
 
           if( cb )
@@ -685,7 +694,10 @@ HB_FUNC_STATIC( QVALUEAXIS_ONMINORTICKCOUNTCHANGED )
       if( Signals2_connection( sender, "minorTickCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QValueAxis::minorTickCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValueAxis::minorTickCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minorTickCountChanged(int)" );
 
           if( cb )
@@ -752,7 +764,10 @@ HB_FUNC_STATIC( QVALUEAXIS_ONRANGECHANGED )
       if( Signals2_connection( sender, "rangeChanged(qreal,qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QValueAxis::rangeChanged, [sender](qreal arg1, qreal arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValueAxis::rangeChanged, 
+                                                              [sender]
+                                                              (qreal arg1, qreal arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(qreal,qreal)" );
 
           if( cb )
@@ -821,7 +836,10 @@ HB_FUNC_STATIC( QVALUEAXIS_ONTICKCOUNTCHANGED )
       if( Signals2_connection( sender, "tickCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QValueAxis::tickCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValueAxis::tickCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
 
           if( cb )

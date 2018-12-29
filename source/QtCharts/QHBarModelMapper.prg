@@ -437,7 +437,10 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
       if( Signals2_connection( sender, "columnCountChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBarModelMapper::columnCountChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBarModelMapper::columnCountChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged()" );
 
           if( cb )
@@ -502,7 +505,10 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
       if( Signals2_connection( sender, "firstBarSetRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBarModelMapper::firstBarSetRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBarModelMapper::firstBarSetRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstBarSetRowChanged()" );
 
           if( cb )
@@ -567,7 +573,10 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
       if( Signals2_connection( sender, "firstColumnChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBarModelMapper::firstColumnChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBarModelMapper::firstColumnChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstColumnChanged()" );
 
           if( cb )
@@ -632,7 +641,10 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
       if( Signals2_connection( sender, "lastBarSetRowChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBarModelMapper::lastBarSetRowChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBarModelMapper::lastBarSetRowChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lastBarSetRowChanged()" );
 
           if( cb )
@@ -697,7 +709,10 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONMODELREPLACED )
       if( Signals2_connection( sender, "modelReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBarModelMapper::modelReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBarModelMapper::modelReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReplaced()" );
 
           if( cb )
@@ -762,7 +777,10 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONSERIESREPLACED )
       if( Signals2_connection( sender, "seriesReplaced()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHBarModelMapper::seriesReplaced, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHBarModelMapper::seriesReplaced, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesReplaced()" );
 
           if( cb )

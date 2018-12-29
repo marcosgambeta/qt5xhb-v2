@@ -864,7 +864,10 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
       if( Signals2_connection( sender, "added(QList<QPieSlice*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::added, [sender](QList<QPieSlice*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::added, 
+                                                              [sender]
+                                                              (QList<QPieSlice*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "added(QList<QPieSlice*>)" );
 
           if( cb )
@@ -954,7 +957,10 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
       if( Signals2_connection( sender, "clicked(QPieSlice*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::clicked, [sender](QPieSlice* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::clicked, 
+                                                              [sender]
+                                                              (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPieSlice*)" );
 
           if( cb )
@@ -1021,7 +1027,10 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
       if( Signals2_connection( sender, "countChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::countChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::countChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
 
           if( cb )
@@ -1086,7 +1095,10 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked(QPieSlice*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::doubleClicked, [sender](QPieSlice* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::doubleClicked, 
+                                                              [sender]
+                                                              (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPieSlice*)" );
 
           if( cb )
@@ -1153,7 +1165,10 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
       if( Signals2_connection( sender, "hovered(QPieSlice*,bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::hovered, [sender](QPieSlice* arg1, bool arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::hovered, 
+                                                              [sender]
+                                                              (QPieSlice * arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPieSlice*,bool)" );
 
           if( cb )
@@ -1222,7 +1237,10 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
       if( Signals2_connection( sender, "pressed(QPieSlice*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::pressed, [sender](QPieSlice* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::pressed, 
+                                                              [sender]
+                                                              (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPieSlice*)" );
 
           if( cb )
@@ -1289,7 +1307,10 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
       if( Signals2_connection( sender, "released(QPieSlice*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::released, [sender](QPieSlice* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::released, 
+                                                              [sender]
+                                                              (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPieSlice*)" );
 
           if( cb )
@@ -1356,7 +1377,10 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
       if( Signals2_connection( sender, "removed(QList<QPieSlice*>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::removed, [sender](QList<QPieSlice*> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::removed, 
+                                                              [sender]
+                                                              (QList<QPieSlice*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "removed(QList<QPieSlice*>)" );
 
           if( cb )
@@ -1446,7 +1470,10 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
       if( Signals2_connection( sender, "sumChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPieSeries::sumChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPieSeries::sumChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sumChanged()" );
 
           if( cb )

@@ -405,7 +405,10 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
       if( Signals2_connection( sender, "formatChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::formatChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeAxis::formatChanged, 
+                                                              [sender]
+                                                              (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QString)" );
 
           if( cb )
@@ -472,7 +475,10 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
       if( Signals2_connection( sender, "maxChanged(QDateTime)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::maxChanged, [sender](QDateTime arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeAxis::maxChanged, 
+                                                              [sender]
+                                                              (QDateTime arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(QDateTime)" );
 
           if( cb )
@@ -539,7 +545,10 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
       if( Signals2_connection( sender, "minChanged(QDateTime)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::minChanged, [sender](QDateTime arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeAxis::minChanged, 
+                                                              [sender]
+                                                              (QDateTime arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(QDateTime)" );
 
           if( cb )
@@ -606,7 +615,10 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
       if( Signals2_connection( sender, "rangeChanged(QDateTime,QDateTime)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::rangeChanged, [sender](QDateTime arg1, QDateTime arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeAxis::rangeChanged, 
+                                                              [sender]
+                                                              (QDateTime arg1, QDateTime arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(QDateTime,QDateTime)" );
 
           if( cb )
@@ -675,7 +687,10 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
       if( Signals2_connection( sender, "tickCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeAxis::tickCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeAxis::tickCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
 
           if( cb )

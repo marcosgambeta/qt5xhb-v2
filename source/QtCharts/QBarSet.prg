@@ -818,7 +818,10 @@ HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
       if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::borderColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::borderColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
 
           if( cb )
@@ -885,7 +888,10 @@ HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::brushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::brushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
           if( cb )
@@ -950,7 +956,10 @@ HB_FUNC_STATIC( QBARSET_ONCLICKED )
       if( Signals2_connection( sender, "clicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::clicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::clicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(int)" );
 
           if( cb )
@@ -1017,7 +1026,10 @@ HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::colorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -1084,7 +1096,10 @@ HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::doubleClicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::doubleClicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(int)" );
 
           if( cb )
@@ -1151,7 +1166,10 @@ HB_FUNC_STATIC( QBARSET_ONHOVERED )
       if( Signals2_connection( sender, "hovered(bool,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::hovered, [sender](bool arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::hovered, 
+                                                              [sender]
+                                                              (bool arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,int)" );
 
           if( cb )
@@ -1220,7 +1238,10 @@ HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
       if( Signals2_connection( sender, "labelBrushChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::labelBrushChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::labelBrushChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBrushChanged()" );
 
           if( cb )
@@ -1285,7 +1306,10 @@ HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
       if( Signals2_connection( sender, "labelChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::labelChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::labelChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelChanged()" );
 
           if( cb )
@@ -1350,7 +1374,10 @@ HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
       if( Signals2_connection( sender, "labelColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::labelColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::labelColorChanged, 
+                                                              [sender]
+                                                              (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelColorChanged(QColor)" );
 
           if( cb )
@@ -1417,7 +1444,10 @@ HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
       if( Signals2_connection( sender, "labelFontChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::labelFontChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::labelFontChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelFontChanged()" );
 
           if( cb )
@@ -1482,7 +1512,10 @@ HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
       if( Signals2_connection( sender, "penChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::penChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::penChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
           if( cb )
@@ -1547,7 +1580,10 @@ HB_FUNC_STATIC( QBARSET_ONPRESSED )
       if( Signals2_connection( sender, "pressed(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::pressed, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::pressed, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(int)" );
 
           if( cb )
@@ -1614,7 +1650,10 @@ HB_FUNC_STATIC( QBARSET_ONRELEASED )
       if( Signals2_connection( sender, "released(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::released, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::released, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(int)" );
 
           if( cb )
@@ -1681,7 +1720,10 @@ HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::valueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::valueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
 
           if( cb )
@@ -1748,7 +1790,10 @@ HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
       if( Signals2_connection( sender, "valuesAdded(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::valuesAdded, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::valuesAdded, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valuesAdded(int,int)" );
 
           if( cb )
@@ -1817,7 +1862,10 @@ HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
       if( Signals2_connection( sender, "valuesRemoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarSet::valuesRemoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarSet::valuesRemoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valuesRemoved(int,int)" );
 
           if( cb )
