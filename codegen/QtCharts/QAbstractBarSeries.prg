@@ -151,22 +151,22 @@ $prototype=void barsetsRemoved( QList<QBarSet*> sets )
 $signalMethod=5,7,0|void|barsetsRemoved|QList<QBarSet*>
 
 $prototype=void clicked( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|clicked|int,QBarSet*
+$signalMethod=5,7,0|void|clicked|int,QBarSet *
 
 $prototype=void countChanged()
 $signalMethod=5,7,0|void|countChanged|
 
 $prototype=void doubleClicked( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|doubleClicked|int,QBarSet*
+$signalMethod=5,7,0|void|doubleClicked|int,QBarSet *
 
 $prototype=void hovered( bool status, int index, QBarSet * barset )
-$signalMethod=5,7,0|void|hovered|bool,int,QBarSet*
+$signalMethod=5,7,0|void|hovered|bool,int,QBarSet *
 
 $prototype=void labelsAngleChanged( qreal angle )
 $signalMethod=5,7,0|void|labelsAngleChanged|qreal
 
 $prototype=void labelsFormatChanged( const QString & format )
-$signalMethod=5,7,0|void|labelsFormatChanged|QString
+$signalMethod=5,7,0|void|labelsFormatChanged|const QString &
 
 $prototype=void labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
 $signalMethod=5,7,0|void|labelsPositionChanged|QAbstractBarSeries::LabelsPosition
@@ -175,9 +175,9 @@ $prototype=void labelsVisibleChanged()
 $signalMethod=5,7,0|void|labelsVisibleChanged|
 
 $prototype=void pressed( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|pressed|int,QBarSet*
+$signalMethod=5,7,0|void|pressed|int,QBarSet *
 
 $prototype=void released( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|released|int,QBarSet*
+$signalMethod=5,7,0|void|released|int,QBarSet *
 
 #pragma ENDDUMP

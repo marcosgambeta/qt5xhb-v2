@@ -184,37 +184,37 @@ $prototype=void borderColorChanged( QColor color )
 $signalMethod=5,7,0|void|borderColorChanged|QColor
 
 $prototype=void clicked( const QPointF & point )
-$signalMethod=5,7,0|void|clicked|QPointF
+$signalMethod=5,7,0|void|clicked|const QPointF &
 
 $prototype=void colorChanged( QColor color )
 $signalMethod=5,7,0|void|colorChanged|QColor
 
 $prototype=void doubleClicked( const QPointF & point )
-$signalMethod=5,7,0|void|doubleClicked|QPointF
+$signalMethod=5,7,0|void|doubleClicked|const QPointF &
 
 $prototype=void hovered( const QPointF & point, bool state )
-$signalMethod=5,7,0|void|hovered|QPointF,bool
+$signalMethod=5,7,0|void|hovered|const QPointF &,bool
 
 $prototype=void pointLabelsClippingChanged( bool clipping )
 $signalMethod=5,7,0|void|pointLabelsClippingChanged|bool
 
 $prototype=void pointLabelsColorChanged( const QColor & color )
-$signalMethod=5,7,0|void|pointLabelsColorChanged|QColor
+$signalMethod=5,7,0|void|pointLabelsColorChanged|const QColor &
 
 $prototype=void pointLabelsFontChanged( const QFont & font )
-$signalMethod=5,7,0|void|pointLabelsFontChanged|QFont
+$signalMethod=5,7,0|void|pointLabelsFontChanged|const QFont &
 
 $prototype=void pointLabelsFormatChanged( const QString & format )
-$signalMethod=5,7,0|void|pointLabelsFormatChanged|QString
+$signalMethod=5,7,0|void|pointLabelsFormatChanged|const QString &
 
 $prototype=void pointLabelsVisibilityChanged( bool visible )
 $signalMethod=5,7,0|void|pointLabelsVisibilityChanged|bool
 
 $prototype=void pressed( const QPointF & point )
-$signalMethod=5,7,0|void|pressed|QPointF
+$signalMethod=5,7,0|void|pressed|const QPointF &
 
 $prototype=void released( const QPointF & point )
-$signalMethod=5,7,0|void|released|QPointF
+$signalMethod=5,7,0|void|released|const QPointF &
 
 $prototype=void selected()
 $signalMethod=5,7,0|void|selected|

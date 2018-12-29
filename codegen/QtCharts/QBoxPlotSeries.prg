@@ -152,24 +152,24 @@ $prototype=void brushChanged()
 $signalMethod=5,7,0|void|brushChanged|
 
 $prototype=void clicked( QBoxSet * boxset )
-$signalMethod=5,7,0|void|clicked|QBoxSet*
+$signalMethod=5,7,0|void|clicked|QBoxSet *
 
 $prototype=void countChanged()
 $signalMethod=5,7,0|void|countChanged|
 
 $prototype=void doubleClicked( QBoxSet * boxset )
-$signalMethod=5,7,0|void|doubleClicked|QBoxSet*
+$signalMethod=5,7,0|void|doubleClicked|QBoxSet *
 
 $prototype=void hovered( bool status, QBoxSet * boxset )
-$signalMethod=5,7,0|void|hovered|bool,QBoxSet*
+$signalMethod=5,7,0|void|hovered|bool,QBoxSet *
 
 $prototype=void penChanged()
 $signalMethod=5,7,0|void|penChanged|
 
 $prototype=void pressed( QBoxSet * boxset )
-$signalMethod=5,7,0|void|pressed|QBoxSet*
+$signalMethod=5,7,0|void|pressed|QBoxSet *
 
 $prototype=void released( QBoxSet * boxset )
-$signalMethod=5,7,0|void|released|QBoxSet*
+$signalMethod=5,7,0|void|released|QBoxSet *
 
 #pragma ENDDUMP

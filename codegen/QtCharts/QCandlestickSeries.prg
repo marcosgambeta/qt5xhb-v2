@@ -233,10 +233,10 @@ $prototype=void brushChanged()
 $signalMethod=5,8,0|void|brushChanged|
 
 $prototype=void candlestickSetsAdded( const QList<QCandlestickSet*> & sets )
-$signalMethod=5,8,0|void|candlestickSetsAdded|QList<QCandlestickSet*>
+$signalMethod=5,8,0|void|candlestickSetsAdded|const QList<QCandlestickSet*> &
 
 $prototype=void candlestickSetsRemoved( const QList<QCandlestickSet*> & sets )
-$signalMethod=5,8,0|void|candlestickSetsRemoved|QList<QCandlestickSet*>
+$signalMethod=5,8,0|void|candlestickSetsRemoved|const QList<QCandlestickSet*> &
 
 $prototype=void capsVisibilityChanged()
 $signalMethod=5,8,0|void|capsVisibilityChanged|
@@ -245,7 +245,7 @@ $prototype=void capsWidthChanged()
 $signalMethod=5,8,0|void|capsWidthChanged|
 
 $prototype=void clicked( QCandlestickSet * set )
-$signalMethod=5,8,0|void|clicked|QCandlestickSet*
+$signalMethod=5,8,0|void|clicked|QCandlestickSet *
 
 $prototype=void countChanged()
 $signalMethod=5,8,0|void|countChanged|
@@ -254,10 +254,10 @@ $prototype=void decreasingColorChanged()
 $signalMethod=5,8,0|void|decreasingColorChanged|
 
 $prototype=void doubleClicked( QCandlestickSet * set )
-$signalMethod=5,8,0|void|doubleClicked|QCandlestickSet*
+$signalMethod=5,8,0|void|doubleClicked|QCandlestickSet *
 
 $prototype=void hovered( bool status, QCandlestickSet * set )
-$signalMethod=5,8,0|void|hovered|bool,QCandlestickSet*
+$signalMethod=5,8,0|void|hovered|bool,QCandlestickSet *
 
 $prototype=void increasingColorChanged()
 $signalMethod=5,8,0|void|increasingColorChanged|
@@ -272,9 +272,9 @@ $prototype=void penChanged()
 $signalMethod=5,8,0|void|penChanged|
 
 $prototype=void pressed( QCandlestickSet * set )
-$signalMethod=5,8,0|void|pressed|QCandlestickSet*
+$signalMethod=5,8,0|void|pressed|QCandlestickSet *
 
 $prototype=void released( QCandlestickSet * set )
-$signalMethod=5,8,0|void|released|QCandlestickSet*
+$signalMethod=5,8,0|void|released|QCandlestickSet *
 
 #pragma ENDDUMP

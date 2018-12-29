@@ -138,12 +138,12 @@ $prototype=void countChanged()
 $signalMethod=5,7,0|void|countChanged|
 
 $prototype=void maxChanged( const QString & max )
-$signalMethod=5,7,0|void|maxChanged|QString
+$signalMethod=5,7,0|void|maxChanged|const QString &
 
 $prototype=void minChanged( const QString & min )
-$signalMethod=5,7,0|void|minChanged|QString
+$signalMethod=5,7,0|void|minChanged|const QString &
 
 $prototype=void rangeChanged( const QString & min, const QString & max )
-$signalMethod=5,7,0|void|rangeChanged|QString,QString
+$signalMethod=5,7,0|void|rangeChanged|const QString &,const QString &
 
 #pragma ENDDUMP

@@ -107,7 +107,7 @@ $slotMethod=|void|applyNiceNumbers|
 using namespace QtCharts;
 
 $prototype=void labelFormatChanged( const QString & format )
-$signalMethod=5,7,0|void|labelFormatChanged|QString
+$signalMethod=5,7,0|void|labelFormatChanged|const QString &
 
 $prototype=void maxChanged( qreal max )
 $signalMethod=5,7,0|void|maxChanged|qreal

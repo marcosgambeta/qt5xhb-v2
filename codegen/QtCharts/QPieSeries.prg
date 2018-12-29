@@ -184,22 +184,22 @@ $prototype=void added( QList<QPieSlice*> slices )
 $signalMethod=5,7,0|void|added|QList<QPieSlice*>
 
 $prototype=void clicked( QPieSlice * slice )
-$signalMethod=5,7,0|void|clicked|QPieSlice*
+$signalMethod=5,7,0|void|clicked|QPieSlice *
 
 $prototype=void countChanged()
 $signalMethod=5,7,0|void|countChanged|
 
 $prototype=void doubleClicked( QPieSlice * slice )
-$signalMethod=5,7,0|void|doubleClicked|QPieSlice*
+$signalMethod=5,7,0|void|doubleClicked|QPieSlice *
 
 $prototype=void hovered( QPieSlice * slice, bool state )
-$signalMethod=5,7,0|void|hovered|QPieSlice*,bool
+$signalMethod=5,7,0|void|hovered|QPieSlice *,bool
 
 $prototype=void pressed( QPieSlice * slice )
-$signalMethod=5,7,0|void|pressed|QPieSlice*
+$signalMethod=5,7,0|void|pressed|QPieSlice *
 
 $prototype=void released( QPieSlice * slice )
-$signalMethod=5,7,0|void|released|QPieSlice*
+$signalMethod=5,7,0|void|released|QPieSlice *
 
 $prototype=void removed( QList<QPieSlice*> slices )
 $signalMethod=5,7,0|void|removed|QList<QPieSlice*>

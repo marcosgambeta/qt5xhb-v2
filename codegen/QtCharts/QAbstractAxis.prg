@@ -330,10 +330,10 @@ $prototype=void colorChanged( QColor color )
 $signalMethod=5,7,0|void|colorChanged|QColor
 
 $prototype=void gridLineColorChanged( const QColor & color )
-$signalMethod=5,7,0|void|gridLineColorChanged|QColor
+$signalMethod=5,7,0|void|gridLineColorChanged|const QColor &
 
 $prototype=void gridLinePenChanged( const QPen & pen )
-$signalMethod=5,7,0|void|gridLinePenChanged|QPen
+$signalMethod=5,7,0|void|gridLinePenChanged|const QPen &
 
 $prototype=void gridVisibleChanged( bool visible )
 $signalMethod=5,7,0|void|gridVisibleChanged|bool
@@ -342,28 +342,28 @@ $prototype=void labelsAngleChanged( int angle )
 $signalMethod=5,7,0|void|labelsAngleChanged|int
 
 $prototype=void labelsBrushChanged( const QBrush & brush )
-$signalMethod=5,7,0|void|labelsBrushChanged|QBrush
+$signalMethod=5,7,0|void|labelsBrushChanged|const QBrush &
 
 $prototype=void labelsColorChanged( QColor color )
 $signalMethod=5,7,0|void|labelsColorChanged|QColor
 
 $prototype=void labelsFontChanged( const QFont & pen )
-$signalMethod=5,7,0|void|labelsFontChanged|QFont
+$signalMethod=5,7,0|void|labelsFontChanged|const QFont &
 
 $prototype=void labelsVisibleChanged( bool visible )
 $signalMethod=5,7,0|void|labelsVisibleChanged|bool
 
 $prototype=void linePenChanged( const QPen & pen )
-$signalMethod=5,7,0|void|linePenChanged|QPen
+$signalMethod=5,7,0|void|linePenChanged|const QPen &
 
 $prototype=void lineVisibleChanged( bool visible )
 $signalMethod=5,7,0|void|lineVisibleChanged|bool
 
 $prototype=void minorGridLineColorChanged( const QColor & color )
-$signalMethod=5,7,0|void|minorGridLineColorChanged|QColor
+$signalMethod=5,7,0|void|minorGridLineColorChanged|const QColor &
 
 $prototype=void minorGridLinePenChanged( const QPen & pen )
-$signalMethod=5,7,0|void|minorGridLinePenChanged|QPen
+$signalMethod=5,7,0|void|minorGridLinePenChanged|const QPen &
 
 $prototype=void minorGridVisibleChanged( bool visible )
 $signalMethod=5,7,0|void|minorGridVisibleChanged|bool
@@ -375,25 +375,25 @@ $prototype=void shadesBorderColorChanged( QColor color )
 $signalMethod=5,7,0|void|shadesBorderColorChanged|QColor
 
 $prototype=void shadesBrushChanged( const QBrush & brush )
-$signalMethod=5,7,0|void|shadesBrushChanged|QBrush
+$signalMethod=5,7,0|void|shadesBrushChanged|const QBrush &
 
 $prototype=void shadesColorChanged( QColor color )
 $signalMethod=5,7,0|void|shadesColorChanged|QColor
 
 $prototype=void shadesPenChanged( const QPen & pen )
-$signalMethod=5,7,0|void|shadesPenChanged|QPen
+$signalMethod=5,7,0|void|shadesPenChanged|const QPen &
 
 $prototype=void shadesVisibleChanged( bool visible )
 $signalMethod=5,7,0|void|shadesVisibleChanged|bool
 
 $prototype=void titleBrushChanged( const QBrush & brush )
-$signalMethod=5,7,0|void|titleBrushChanged|QBrush
+$signalMethod=5,7,0|void|titleBrushChanged|const QBrush &
 
 $prototype=void titleFontChanged( const QFont & font )
-$signalMethod=5,7,0|void|titleFontChanged|QFont
+$signalMethod=5,7,0|void|titleFontChanged|const QFont &
 
 $prototype=void titleTextChanged( const QString & title )
-$signalMethod=5,7,0|void|titleTextChanged|QString
+$signalMethod=5,7,0|void|titleTextChanged|const QString &
 
 $prototype=void titleVisibleChanged( bool visible )
 $signalMethod=5,7,0|void|titleVisibleChanged|bool
