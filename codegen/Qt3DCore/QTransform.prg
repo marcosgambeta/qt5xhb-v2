@@ -166,16 +166,9 @@ $staticMethod=|QMatrix4x4|rotateAround|const QVector3D &,float,const QVector3D &
 
 $prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
-%% $beginSignals
-%% $signal=|scaleChanged(float)
-%% $signal=|scale3DChanged(QVector3D)
-%% $signal=|rotationChanged(QQuaternion)
-%% $signal=|translationChanged(QVector3D)
-%% $signal=|matrixChanged()
-%% $signal=|rotationXChanged(float)
-%% $signal=|rotationYChanged(float)
-%% $signal=|rotationZChanged(float)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void scaleChanged( float scale )
 $signalMethod=|void|scaleChanged|float

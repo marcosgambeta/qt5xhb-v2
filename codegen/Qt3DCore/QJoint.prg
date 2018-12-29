@@ -131,16 +131,9 @@ $slotMethod=|void|setToIdentity|
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override [private]
 
-%% $beginSignals
-%% $signal=|scaleChanged(QVector3D)
-%% $signal=|rotationChanged(QQuaternion)
-%% $signal=|translationChanged(QVector3D)
-%% $signal=|inverseBindMatrixChanged(QMatrix4x4)
-%% $signal=|rotationXChanged(float)
-%% $signal=|rotationYChanged(float)
-%% $signal=|rotationZChanged(float)
-%% $signal=|nameChanged(QString)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void scaleChanged( const QVector3D & scale )
 $signalMethod=|void|scaleChanged|const QVector3D &

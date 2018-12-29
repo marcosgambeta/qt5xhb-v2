@@ -45,9 +45,9 @@ $prototype=QAbstractSkeleton(QAbstractSkeletonPrivate &dd, Qt3DCore::QNode *pare
 
 $prototype=void sceneChangeEvent(const QSceneChangePtr &change) override [protected]
 
-%% $beginSignals
-%% $signal=|jointCountChanged(int)
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void jointCountChanged( int jointCount )
 $signalMethod=|void|jointCountChanged|int

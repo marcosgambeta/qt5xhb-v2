@@ -109,12 +109,9 @@ $prototype=void setParent(QObject *) Q_DECL_EQ_DELETE [private]
 
 $prototype=QNodeId qIdForNode(QNode *node) [private]
 
-%% $beginSignals
-%% $signal=|parentChanged(QObject*)
-%% $signal=|enabledChanged(bool)
-%% $signal=|defaultPropertyTrackingModeChanged(QNode::PropertyTrackingMode)
-%% $signal=|nodeDestroyed()
-%% $endSignals
+%%
+%% SIGNALS
+%%
 
 $prototype=void parentChanged( QObject * parent )
 $signalMethod=|void|parentChanged|QObject *
