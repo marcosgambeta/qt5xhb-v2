@@ -330,7 +330,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
       if( Signals2_connection( sender, "rotationEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::rotationEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DInputHandler::rotationEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationEnabledChanged(bool)" );
 
           if( cb )
@@ -395,7 +398,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
       if( Signals2_connection( sender, "selectionEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::selectionEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DInputHandler::selectionEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionEnabledChanged(bool)" );
 
           if( cb )
@@ -460,7 +466,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
       if( Signals2_connection( sender, "zoomAtTargetEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::zoomAtTargetEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DInputHandler::zoomAtTargetEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomAtTargetEnabledChanged(bool)" );
 
           if( cb )
@@ -525,7 +534,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
       if( Signals2_connection( sender, "zoomEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DInputHandler::zoomEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DInputHandler::zoomEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomEnabledChanged(bool)" );
 
           if( cb )

@@ -1382,7 +1382,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
       if( Signals2_connection( sender, "ambientLightStrengthChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::ambientLightStrengthChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::ambientLightStrengthChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "ambientLightStrengthChanged(float)" );
 
           if( cb )
@@ -1447,7 +1450,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
       if( Signals2_connection( sender, "backgroundColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::backgroundColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::backgroundColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundColorChanged(QColor)" );
 
           if( cb )
@@ -1512,7 +1518,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
       if( Signals2_connection( sender, "backgroundEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::backgroundEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::backgroundEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundEnabledChanged(bool)" );
 
           if( cb )
@@ -1577,7 +1586,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
       if( Signals2_connection( sender, "baseColorsChanged(QList<QColor>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::baseColorsChanged, [sender](QList<QColor> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::baseColorsChanged, 
+                                                              [sender]
+                                                              (const QList<QColor> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseColorsChanged(QList<QColor>)" );
 
           if( cb )
@@ -1665,7 +1677,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
       if( Signals2_connection( sender, "baseGradientsChanged(QList<QLinearGradient>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::baseGradientsChanged, [sender](QList<QLinearGradient> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::baseGradientsChanged, 
+                                                              [sender]
+                                                              (const QList<QLinearGradient> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseGradientsChanged(QList<QLinearGradient>)" );
 
           if( cb )
@@ -1753,7 +1768,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
       if( Signals2_connection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::colorStyleChanged, [sender](Q3DTheme::ColorStyle arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::colorStyleChanged, 
+                                                              [sender]
+                                                              (Q3DTheme::ColorStyle arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" );
 
           if( cb )
@@ -1818,7 +1836,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
       if( Signals2_connection( sender, "fontChanged(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::fontChanged, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::fontChanged, 
+                                                              [sender]
+                                                              (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
 
           if( cb )
@@ -1883,7 +1904,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
       if( Signals2_connection( sender, "gridEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::gridEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::gridEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gridEnabledChanged(bool)" );
 
           if( cb )
@@ -1948,7 +1972,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
       if( Signals2_connection( sender, "gridLineColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::gridLineColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::gridLineColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gridLineColorChanged(QColor)" );
 
           if( cb )
@@ -2013,7 +2040,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
       if( Signals2_connection( sender, "highlightLightStrengthChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::highlightLightStrengthChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::highlightLightStrengthChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlightLightStrengthChanged(float)" );
 
           if( cb )
@@ -2078,7 +2108,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
       if( Signals2_connection( sender, "labelBackgroundColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::labelBackgroundColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::labelBackgroundColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBackgroundColorChanged(QColor)" );
 
           if( cb )
@@ -2143,7 +2176,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
       if( Signals2_connection( sender, "labelBackgroundEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::labelBackgroundEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::labelBackgroundEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBackgroundEnabledChanged(bool)" );
 
           if( cb )
@@ -2208,7 +2244,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
       if( Signals2_connection( sender, "labelBorderEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::labelBorderEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::labelBorderEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBorderEnabledChanged(bool)" );
 
           if( cb )
@@ -2273,7 +2312,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
       if( Signals2_connection( sender, "labelTextColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::labelTextColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::labelTextColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelTextColorChanged(QColor)" );
 
           if( cb )
@@ -2338,7 +2380,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
       if( Signals2_connection( sender, "lightColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::lightColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::lightColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lightColorChanged(QColor)" );
 
           if( cb )
@@ -2403,7 +2448,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
       if( Signals2_connection( sender, "lightStrengthChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::lightStrengthChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::lightStrengthChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lightStrengthChanged(float)" );
 
           if( cb )
@@ -2468,7 +2516,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
       if( Signals2_connection( sender, "multiHighlightColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::multiHighlightColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::multiHighlightColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiHighlightColorChanged(QColor)" );
 
           if( cb )
@@ -2533,7 +2584,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
       if( Signals2_connection( sender, "multiHighlightGradientChanged(QLinearGradient)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::multiHighlightGradientChanged, [sender](QLinearGradient arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::multiHighlightGradientChanged, 
+                                                              [sender]
+                                                              (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiHighlightGradientChanged(QLinearGradient)" );
 
           if( cb )
@@ -2598,7 +2652,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
       if( Signals2_connection( sender, "singleHighlightColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::singleHighlightColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::singleHighlightColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "singleHighlightColorChanged(QColor)" );
 
           if( cb )
@@ -2663,7 +2720,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
       if( Signals2_connection( sender, "singleHighlightGradientChanged(QLinearGradient)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::singleHighlightGradientChanged, [sender](QLinearGradient arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::singleHighlightGradientChanged, 
+                                                              [sender]
+                                                              (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "singleHighlightGradientChanged(QLinearGradient)" );
 
           if( cb )
@@ -2728,7 +2788,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
       if( Signals2_connection( sender, "typeChanged(Q3DTheme::Theme)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::typeChanged, [sender](Q3DTheme::Theme arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::typeChanged, 
+                                                              [sender]
+                                                              (Q3DTheme::Theme arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "typeChanged(Q3DTheme::Theme)" );
 
           if( cb )
@@ -2793,7 +2856,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
       if( Signals2_connection( sender, "windowColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DTheme::windowColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DTheme::windowColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowColorChanged(QColor)" );
 
           if( cb )

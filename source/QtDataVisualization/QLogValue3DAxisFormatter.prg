@@ -285,7 +285,10 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
       if( Signals2_connection( sender, "autoSubGridChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValue3DAxisFormatter::autoSubGridChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValue3DAxisFormatter::autoSubGridChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoSubGridChanged(bool)" );
 
           if( cb )
@@ -350,7 +353,10 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
       if( Signals2_connection( sender, "baseChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValue3DAxisFormatter::baseChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValue3DAxisFormatter::baseChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseChanged(qreal)" );
 
           if( cb )
@@ -415,7 +421,10 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
       if( Signals2_connection( sender, "showEdgeLabelsChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLogValue3DAxisFormatter::showEdgeLabelsChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLogValue3DAxisFormatter::showEdgeLabelsChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "showEdgeLabelsChanged(bool)" );
 
           if( cb )

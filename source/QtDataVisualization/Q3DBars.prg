@@ -851,7 +851,10 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
       if( Signals2_connection( sender, "multiSeriesUniformChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::multiSeriesUniformChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::multiSeriesUniformChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiSeriesUniformChanged(bool)" );
 
           if( cb )
@@ -916,7 +919,10 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
       if( Signals2_connection( sender, "barThicknessChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::barThicknessChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::barThicknessChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barThicknessChanged(float)" );
 
           if( cb )
@@ -981,7 +987,10 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
       if( Signals2_connection( sender, "barSpacingChanged(QSizeF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::barSpacingChanged, [sender](QSizeF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::barSpacingChanged, 
+                                                              [sender]
+                                                              (const QSizeF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barSpacingChanged(QSizeF)" );
 
           if( cb )
@@ -1046,7 +1055,10 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
       if( Signals2_connection( sender, "barSpacingRelativeChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::barSpacingRelativeChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::barSpacingRelativeChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barSpacingRelativeChanged(bool)" );
 
           if( cb )
@@ -1111,7 +1123,10 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
       if( Signals2_connection( sender, "rowAxisChanged(QCategory3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::rowAxisChanged, [sender](QCategory3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::rowAxisChanged, 
+                                                              [sender]
+                                                              (QCategory3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowAxisChanged(QCategory3DAxis*)" );
 
           if( cb )
@@ -1176,7 +1191,10 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
       if( Signals2_connection( sender, "columnAxisChanged(QCategory3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::columnAxisChanged, [sender](QCategory3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::columnAxisChanged, 
+                                                              [sender]
+                                                              (QCategory3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnAxisChanged(QCategory3DAxis*)" );
 
           if( cb )
@@ -1241,7 +1259,10 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
       if( Signals2_connection( sender, "valueAxisChanged(QValue3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::valueAxisChanged, [sender](QValue3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::valueAxisChanged, 
+                                                              [sender]
+                                                              (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueAxisChanged(QValue3DAxis*)" );
 
           if( cb )
@@ -1306,7 +1327,10 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
       if( Signals2_connection( sender, "primarySeriesChanged(QBar3DSeries*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::primarySeriesChanged, [sender](QBar3DSeries* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::primarySeriesChanged, 
+                                                              [sender]
+                                                              (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primarySeriesChanged(QBar3DSeries*)" );
 
           if( cb )
@@ -1371,7 +1395,10 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
       if( Signals2_connection( sender, "selectedSeriesChanged(QBar3DSeries*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::selectedSeriesChanged, [sender](QBar3DSeries* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::selectedSeriesChanged, 
+                                                              [sender]
+                                                              (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QBar3DSeries*)" );
 
           if( cb )
@@ -1436,7 +1463,10 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
       if( Signals2_connection( sender, "floorLevelChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DBars::floorLevelChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DBars::floorLevelChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "floorLevelChanged(float)" );
 
           if( cb )

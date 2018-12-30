@@ -488,7 +488,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
       if( Signals2_connection( sender, "heightMapChanged(QImage)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::heightMapChanged, [sender](QImage arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeightMapSurfaceDataProxy::heightMapChanged, 
+                                                              [sender]
+                                                              (const QImage & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "heightMapChanged(QImage)" );
 
           if( cb )
@@ -553,7 +556,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
       if( Signals2_connection( sender, "heightMapFileChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::heightMapFileChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeightMapSurfaceDataProxy::heightMapFileChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "heightMapFileChanged(QString)" );
 
           if( cb )
@@ -618,7 +624,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
       if( Signals2_connection( sender, "minXValueChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::minXValueChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeightMapSurfaceDataProxy::minXValueChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minXValueChanged(float)" );
 
           if( cb )
@@ -683,7 +692,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
       if( Signals2_connection( sender, "maxXValueChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::maxXValueChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeightMapSurfaceDataProxy::maxXValueChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxXValueChanged(float)" );
 
           if( cb )
@@ -748,7 +760,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
       if( Signals2_connection( sender, "minZValueChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::minZValueChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeightMapSurfaceDataProxy::minZValueChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minZValueChanged(float)" );
 
           if( cb )
@@ -813,7 +828,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
       if( Signals2_connection( sender, "maxZValueChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeightMapSurfaceDataProxy::maxZValueChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeightMapSurfaceDataProxy::maxZValueChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxZValueChanged(float)" );
 
           if( cb )

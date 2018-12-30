@@ -160,7 +160,10 @@ HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
       if( Signals2_connection( sender, "autoPositionChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DLight::autoPositionChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DLight::autoPositionChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoPositionChanged(bool)" );
 
           if( cb )

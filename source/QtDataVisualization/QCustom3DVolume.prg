@@ -1145,7 +1145,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
       if( Signals2_connection( sender, "alphaMultiplierChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::alphaMultiplierChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::alphaMultiplierChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "alphaMultiplierChanged(float)" );
 
           if( cb )
@@ -1210,7 +1213,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
       if( Signals2_connection( sender, "colorTableChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::colorTableChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::colorTableChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorTableChanged()" );
 
           if( cb )
@@ -1273,7 +1279,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
       if( Signals2_connection( sender, "drawSliceFramesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::drawSliceFramesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::drawSliceFramesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "drawSliceFramesChanged(bool)" );
 
           if( cb )
@@ -1338,7 +1347,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
       if( Signals2_connection( sender, "drawSlicesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::drawSlicesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::drawSlicesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "drawSlicesChanged(bool)" );
 
           if( cb )
@@ -1403,7 +1415,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
       if( Signals2_connection( sender, "preserveOpacityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::preserveOpacityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::preserveOpacityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preserveOpacityChanged(bool)" );
 
           if( cb )
@@ -1468,7 +1483,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
       if( Signals2_connection( sender, "sliceFrameColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::sliceFrameColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameColorChanged(QColor)" );
 
           if( cb )
@@ -1533,7 +1551,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
       if( Signals2_connection( sender, "sliceFrameGapsChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameGapsChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::sliceFrameGapsChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameGapsChanged(QVector3D)" );
 
           if( cb )
@@ -1598,7 +1619,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
       if( Signals2_connection( sender, "sliceFrameThicknessesChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameThicknessesChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::sliceFrameThicknessesChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameThicknessesChanged(QVector3D)" );
 
           if( cb )
@@ -1663,7 +1687,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
       if( Signals2_connection( sender, "sliceFrameWidthsChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameWidthsChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::sliceFrameWidthsChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameWidthsChanged(QVector3D)" );
 
           if( cb )
@@ -1728,7 +1755,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
       if( Signals2_connection( sender, "sliceIndexXChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceIndexXChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::sliceIndexXChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexXChanged(int)" );
 
           if( cb )
@@ -1793,7 +1823,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
       if( Signals2_connection( sender, "sliceIndexYChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceIndexYChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::sliceIndexYChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexYChanged(int)" );
 
           if( cb )
@@ -1858,7 +1891,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
       if( Signals2_connection( sender, "sliceIndexZChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::sliceIndexZChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::sliceIndexZChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexZChanged(int)" );
 
           if( cb )
@@ -1923,7 +1959,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
       if( Signals2_connection( sender, "textureDepthChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureDepthChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::textureDepthChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureDepthChanged(int)" );
 
           if( cb )
@@ -1988,7 +2027,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
       if( Signals2_connection( sender, "textureFormatChanged(QImage::Format)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureFormatChanged, [sender](QImage::Format arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::textureFormatChanged, 
+                                                              [sender]
+                                                              (QImage::Format arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFormatChanged(QImage::Format)" );
 
           if( cb )
@@ -2053,7 +2095,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
       if( Signals2_connection( sender, "textureHeightChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureHeightChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::textureHeightChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureHeightChanged(int)" );
 
           if( cb )
@@ -2118,7 +2163,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
       if( Signals2_connection( sender, "textureWidthChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::textureWidthChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::textureWidthChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureWidthChanged(int)" );
 
           if( cb )
@@ -2183,7 +2231,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
       if( Signals2_connection( sender, "useHighDefShaderChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DVolume::useHighDefShaderChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DVolume::useHighDefShaderChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "useHighDefShaderChanged(bool)" );
 
           if( cb )

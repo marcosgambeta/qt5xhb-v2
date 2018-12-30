@@ -292,7 +292,10 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
       if( Signals2_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DInputHandler::inputViewChanged, [sender](QAbstract3DInputHandler::InputView arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DInputHandler::inputViewChanged, 
+                                                              [sender]
+                                                              (QAbstract3DInputHandler::InputView arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
 
           if( cb )
@@ -357,7 +360,10 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
       if( Signals2_connection( sender, "positionChanged(QPoint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DInputHandler::positionChanged, [sender](QPoint arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DInputHandler::positionChanged, 
+                                                              [sender]
+                                                              (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QPoint)" );
 
           if( cb )
@@ -422,7 +428,10 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
       if( Signals2_connection( sender, "sceneChanged(Q3DScene*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DInputHandler::sceneChanged, [sender](Q3DScene* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DInputHandler::sceneChanged, 
+                                                              [sender]
+                                                              (Q3DScene * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneChanged(Q3DScene*)" );
 
           if( cb )

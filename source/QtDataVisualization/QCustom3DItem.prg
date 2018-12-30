@@ -663,7 +663,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
       if( Signals2_connection( sender, "meshFileChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::meshFileChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::meshFileChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "meshFileChanged(QString)" );
 
           if( cb )
@@ -728,7 +731,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
       if( Signals2_connection( sender, "positionAbsoluteChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::positionAbsoluteChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::positionAbsoluteChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionAbsoluteChanged(bool)" );
 
           if( cb )
@@ -793,7 +799,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
       if( Signals2_connection( sender, "positionChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::positionChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::positionChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QVector3D)" );
 
           if( cb )
@@ -858,7 +867,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
       if( Signals2_connection( sender, "rotationChanged(QQuaternion)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::rotationChanged, [sender](QQuaternion arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::rotationChanged, 
+                                                              [sender]
+                                                              (const QQuaternion & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationChanged(QQuaternion)" );
 
           if( cb )
@@ -923,7 +935,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
       if( Signals2_connection( sender, "scalingAbsoluteChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::scalingAbsoluteChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::scalingAbsoluteChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scalingAbsoluteChanged(bool)" );
 
           if( cb )
@@ -988,7 +1003,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
       if( Signals2_connection( sender, "scalingChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::scalingChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::scalingChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scalingChanged(QVector3D)" );
 
           if( cb )
@@ -1053,7 +1071,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
       if( Signals2_connection( sender, "shadowCastingChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::shadowCastingChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::shadowCastingChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadowCastingChanged(bool)" );
 
           if( cb )
@@ -1118,7 +1139,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
       if( Signals2_connection( sender, "textureFileChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::textureFileChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::textureFileChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFileChanged(QString)" );
 
           if( cb )
@@ -1183,7 +1207,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
       if( Signals2_connection( sender, "visibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DItem::visibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DItem::visibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged(bool)" );
 
           if( cb )

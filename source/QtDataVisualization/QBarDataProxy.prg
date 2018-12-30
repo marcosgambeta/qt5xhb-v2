@@ -525,7 +525,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
       if( Signals2_connection( sender, "arrayReset()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::arrayReset, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::arrayReset, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
 
           if( cb )
@@ -588,7 +591,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
       if( Signals2_connection( sender, "columnLabelsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::columnLabelsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::columnLabelsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnLabelsChanged()" );
 
           if( cb )
@@ -651,7 +657,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
       if( Signals2_connection( sender, "itemChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::itemChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::itemChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(int,int)" );
 
           if( cb )
@@ -718,7 +727,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
       if( Signals2_connection( sender, "rowCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::rowCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged(int)" );
 
           if( cb )
@@ -783,7 +795,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
       if( Signals2_connection( sender, "rowLabelsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowLabelsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::rowLabelsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowLabelsChanged()" );
 
           if( cb )
@@ -846,7 +861,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
       if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsAdded, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::rowsAdded, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAdded(int,int)" );
 
           if( cb )
@@ -913,7 +931,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
       if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::rowsChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsChanged(int,int)" );
 
           if( cb )
@@ -980,7 +1001,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
       if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsInserted, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::rowsInserted, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsInserted(int,int)" );
 
           if( cb )
@@ -1047,7 +1071,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
       if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::rowsRemoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::rowsRemoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsRemoved(int,int)" );
 
           if( cb )
@@ -1114,7 +1141,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
       if( Signals2_connection( sender, "seriesChanged(QBar3DSeries*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBarDataProxy::seriesChanged, [sender](QBar3DSeries* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBarDataProxy::seriesChanged, 
+                                                              [sender]
+                                                              (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QBar3DSeries*)" );
 
           if( cb )

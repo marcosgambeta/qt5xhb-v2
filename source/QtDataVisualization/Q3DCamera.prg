@@ -635,7 +635,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
       if( Signals2_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::cameraPresetChanged, [sender](Q3DCamera::CameraPreset arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::cameraPresetChanged, 
+                                                              [sender]
+                                                              (Q3DCamera::CameraPreset arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
 
           if( cb )
@@ -700,7 +703,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
       if( Signals2_connection( sender, "maxZoomLevelChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::maxZoomLevelChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::maxZoomLevelChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxZoomLevelChanged(float)" );
 
           if( cb )
@@ -765,7 +771,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
       if( Signals2_connection( sender, "minZoomLevelChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::minZoomLevelChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::minZoomLevelChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minZoomLevelChanged(float)" );
 
           if( cb )
@@ -830,7 +839,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
       if( Signals2_connection( sender, "targetChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::targetChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::targetChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "targetChanged(QVector3D)" );
 
           if( cb )
@@ -895,7 +907,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
       if( Signals2_connection( sender, "wrapXRotationChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::wrapXRotationChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::wrapXRotationChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "wrapXRotationChanged(bool)" );
 
           if( cb )
@@ -960,7 +975,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
       if( Signals2_connection( sender, "wrapYRotationChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::wrapYRotationChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::wrapYRotationChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "wrapYRotationChanged(bool)" );
 
           if( cb )
@@ -1025,7 +1043,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
       if( Signals2_connection( sender, "xRotationChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::xRotationChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::xRotationChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xRotationChanged(float)" );
 
           if( cb )
@@ -1090,7 +1111,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
       if( Signals2_connection( sender, "yRotationChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::yRotationChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::yRotationChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yRotationChanged(float)" );
 
           if( cb )
@@ -1155,7 +1179,10 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
       if( Signals2_connection( sender, "zoomLevelChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DCamera::zoomLevelChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DCamera::zoomLevelChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomLevelChanged(float)" );
 
           if( cb )

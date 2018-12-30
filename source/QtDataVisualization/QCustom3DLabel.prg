@@ -499,7 +499,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
       if( Signals2_connection( sender, "backgroundColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::backgroundColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DLabel::backgroundColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundColorChanged(QColor)" );
 
           if( cb )
@@ -564,7 +567,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
       if( Signals2_connection( sender, "backgroundEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::backgroundEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DLabel::backgroundEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundEnabledChanged(bool)" );
 
           if( cb )
@@ -629,7 +635,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
       if( Signals2_connection( sender, "borderEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::borderEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DLabel::borderEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderEnabledChanged(bool)" );
 
           if( cb )
@@ -694,7 +703,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
       if( Signals2_connection( sender, "facingCameraChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::facingCameraChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DLabel::facingCameraChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "facingCameraChanged(bool)" );
 
           if( cb )
@@ -759,7 +771,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
       if( Signals2_connection( sender, "fontChanged(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::fontChanged, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DLabel::fontChanged, 
+                                                              [sender]
+                                                              (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
 
           if( cb )
@@ -824,7 +839,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
       if( Signals2_connection( sender, "textChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::textChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DLabel::textChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged(QString)" );
 
           if( cb )
@@ -889,7 +907,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
       if( Signals2_connection( sender, "textColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCustom3DLabel::textColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCustom3DLabel::textColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textColorChanged(QColor)" );
 
           if( cb )

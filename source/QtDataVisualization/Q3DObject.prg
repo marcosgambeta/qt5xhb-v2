@@ -221,7 +221,10 @@ HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
       if( Signals2_connection( sender, "positionChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DObject::positionChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DObject::positionChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QVector3D)" );
 
           if( cb )

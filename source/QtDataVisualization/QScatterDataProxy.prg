@@ -320,7 +320,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
       if( Signals2_connection( sender, "arrayReset()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterDataProxy::arrayReset, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterDataProxy::arrayReset, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
 
           if( cb )
@@ -383,7 +386,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
       if( Signals2_connection( sender, "itemCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterDataProxy::itemCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterDataProxy::itemCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemCountChanged(int)" );
 
           if( cb )
@@ -448,7 +454,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
       if( Signals2_connection( sender, "itemsAdded(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterDataProxy::itemsAdded, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterDataProxy::itemsAdded, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsAdded(int,int)" );
 
           if( cb )
@@ -515,7 +524,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
       if( Signals2_connection( sender, "itemsChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterDataProxy::itemsChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterDataProxy::itemsChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsChanged(int,int)" );
 
           if( cb )
@@ -582,7 +594,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
       if( Signals2_connection( sender, "itemsInserted(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterDataProxy::itemsInserted, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterDataProxy::itemsInserted, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsInserted(int,int)" );
 
           if( cb )
@@ -649,7 +664,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
       if( Signals2_connection( sender, "itemsRemoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterDataProxy::itemsRemoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterDataProxy::itemsRemoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsRemoved(int,int)" );
 
           if( cb )
@@ -716,7 +734,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
       if( Signals2_connection( sender, "seriesChanged(QScatter3DSeries*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatterDataProxy::seriesChanged, [sender](QScatter3DSeries* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatterDataProxy::seriesChanged, 
+                                                              [sender]
+                                                              (QScatter3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QScatter3DSeries*)" );
 
           if( cb )

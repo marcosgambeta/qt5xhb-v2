@@ -972,7 +972,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
       if( Signals2_connection( sender, "baseColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::baseColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::baseColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseColorChanged(QColor)" );
 
           if( cb )
@@ -1037,7 +1040,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
       if( Signals2_connection( sender, "baseGradientChanged(QLinearGradient)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::baseGradientChanged, [sender](QLinearGradient arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::baseGradientChanged, 
+                                                              [sender]
+                                                              (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseGradientChanged(QLinearGradient)" );
 
           if( cb )
@@ -1102,7 +1108,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
       if( Signals2_connection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::colorStyleChanged, [sender](Q3DTheme::ColorStyle arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::colorStyleChanged, 
+                                                              [sender]
+                                                              (Q3DTheme::ColorStyle arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" );
 
           if( cb )
@@ -1167,7 +1176,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
       if( Signals2_connection( sender, "itemLabelChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::itemLabelChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::itemLabelChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemLabelChanged(QString)" );
 
           if( cb )
@@ -1232,7 +1244,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
       if( Signals2_connection( sender, "itemLabelFormatChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::itemLabelFormatChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::itemLabelFormatChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemLabelFormatChanged(QString)" );
 
           if( cb )
@@ -1297,7 +1312,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
       if( Signals2_connection( sender, "itemLabelVisibilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::itemLabelVisibilityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::itemLabelVisibilityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemLabelVisibilityChanged(bool)" );
 
           if( cb )
@@ -1362,7 +1380,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
       if( Signals2_connection( sender, "meshChanged(QAbstract3DSeries::Mesh)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::meshChanged, [sender](QAbstract3DSeries::Mesh arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::meshChanged, 
+                                                              [sender]
+                                                              (QAbstract3DSeries::Mesh arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "meshChanged(QAbstract3DSeries::Mesh)" );
 
           if( cb )
@@ -1427,7 +1448,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
       if( Signals2_connection( sender, "meshRotationChanged(QQuaternion)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::meshRotationChanged, [sender](QQuaternion arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::meshRotationChanged, 
+                                                              [sender]
+                                                              (const QQuaternion & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "meshRotationChanged(QQuaternion)" );
 
           if( cb )
@@ -1492,7 +1516,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
       if( Signals2_connection( sender, "meshSmoothChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::meshSmoothChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::meshSmoothChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "meshSmoothChanged(bool)" );
 
           if( cb )
@@ -1557,7 +1584,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
       if( Signals2_connection( sender, "multiHighlightColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::multiHighlightColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::multiHighlightColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiHighlightColorChanged(QColor)" );
 
           if( cb )
@@ -1622,7 +1652,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
       if( Signals2_connection( sender, "multiHighlightGradientChanged(QLinearGradient)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::multiHighlightGradientChanged, [sender](QLinearGradient arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::multiHighlightGradientChanged, 
+                                                              [sender]
+                                                              (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiHighlightGradientChanged(QLinearGradient)" );
 
           if( cb )
@@ -1687,7 +1720,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::nameChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::nameChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
 
           if( cb )
@@ -1752,7 +1788,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
       if( Signals2_connection( sender, "singleHighlightColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::singleHighlightColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::singleHighlightColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "singleHighlightColorChanged(QColor)" );
 
           if( cb )
@@ -1817,7 +1856,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
       if( Signals2_connection( sender, "singleHighlightGradientChanged(QLinearGradient)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::singleHighlightGradientChanged, [sender](QLinearGradient arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::singleHighlightGradientChanged, 
+                                                              [sender]
+                                                              (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "singleHighlightGradientChanged(QLinearGradient)" );
 
           if( cb )
@@ -1882,7 +1924,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
       if( Signals2_connection( sender, "userDefinedMeshChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::userDefinedMeshChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::userDefinedMeshChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "userDefinedMeshChanged(QString)" );
 
           if( cb )
@@ -1947,7 +1992,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DSeries::visibilityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DSeries::visibilityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
 
           if( cb )

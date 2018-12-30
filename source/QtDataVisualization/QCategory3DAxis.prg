@@ -155,7 +155,10 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
       if( Signals2_connection( sender, "labelsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCategory3DAxis::labelsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCategory3DAxis::labelsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsChanged()" );
 
           if( cb )

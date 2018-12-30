@@ -352,7 +352,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
       if( Signals2_connection( sender, "arrayReset()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::arrayReset, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::arrayReset, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
 
           if( cb )
@@ -415,7 +418,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
       if( Signals2_connection( sender, "columnCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::columnCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::columnCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged(int)" );
 
           if( cb )
@@ -480,7 +486,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
       if( Signals2_connection( sender, "itemChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::itemChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::itemChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(int,int)" );
 
           if( cb )
@@ -547,7 +556,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
       if( Signals2_connection( sender, "rowCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::rowCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged(int)" );
 
           if( cb )
@@ -612,7 +624,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
       if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsAdded, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::rowsAdded, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAdded(int,int)" );
 
           if( cb )
@@ -679,7 +694,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
       if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::rowsChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsChanged(int,int)" );
 
           if( cb )
@@ -746,7 +764,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
       if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsInserted, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::rowsInserted, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsInserted(int,int)" );
 
           if( cb )
@@ -813,7 +834,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
       if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::rowsRemoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::rowsRemoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsRemoved(int,int)" );
 
           if( cb )
@@ -880,7 +904,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
       if( Signals2_connection( sender, "seriesChanged(QSurface3DSeries*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurfaceDataProxy::seriesChanged, [sender](QSurface3DSeries* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurfaceDataProxy::seriesChanged, 
+                                                              [sender]
+                                                              (QSurface3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QSurface3DSeries*)" );
 
           if( cb )

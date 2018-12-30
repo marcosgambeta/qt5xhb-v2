@@ -501,7 +501,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
       if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::axisXChanged, [sender](QValue3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScatter::axisXChanged, 
+                                                              [sender]
+                                                              (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisXChanged(QValue3DAxis*)" );
 
           if( cb )
@@ -566,7 +569,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
       if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::axisYChanged, [sender](QValue3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScatter::axisYChanged, 
+                                                              [sender]
+                                                              (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisYChanged(QValue3DAxis*)" );
 
           if( cb )
@@ -631,7 +637,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
       if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::axisZChanged, [sender](QValue3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScatter::axisZChanged, 
+                                                              [sender]
+                                                              (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisZChanged(QValue3DAxis*)" );
 
           if( cb )
@@ -696,7 +705,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
       if( Signals2_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScatter::selectedSeriesChanged, [sender](QScatter3DSeries* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScatter::selectedSeriesChanged, 
+                                                              [sender]
+                                                              (QScatter3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QScatter3DSeries*)" );
 
           if( cb )

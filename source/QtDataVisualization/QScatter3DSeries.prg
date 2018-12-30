@@ -308,7 +308,10 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
       if( Signals2_connection( sender, "dataProxyChanged(QScatterDataProxy*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatter3DSeries::dataProxyChanged, [sender](QScatterDataProxy* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatter3DSeries::dataProxyChanged, 
+                                                              [sender]
+                                                              (QScatterDataProxy * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QScatterDataProxy*)" );
 
           if( cb )
@@ -373,7 +376,10 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
       if( Signals2_connection( sender, "itemSizeChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatter3DSeries::itemSizeChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatter3DSeries::itemSizeChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSizeChanged(float)" );
 
           if( cb )
@@ -438,7 +444,10 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
       if( Signals2_connection( sender, "selectedItemChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScatter3DSeries::selectedItemChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScatter3DSeries::selectedItemChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedItemChanged(int)" );
 
           if( cb )

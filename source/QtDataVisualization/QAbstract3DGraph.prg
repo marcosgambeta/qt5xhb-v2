@@ -1635,7 +1635,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
       if( Signals2_connection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::activeInputHandlerChanged, [sender](QAbstract3DInputHandler* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::activeInputHandlerChanged, 
+                                                              [sender]
+                                                              (QAbstract3DInputHandler * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
 
           if( cb )
@@ -1700,7 +1703,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
       if( Signals2_connection( sender, "activeThemeChanged(Q3DTheme*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::activeThemeChanged, [sender](Q3DTheme* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::activeThemeChanged, 
+                                                              [sender]
+                                                              (Q3DTheme * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeThemeChanged(Q3DTheme*)" );
 
           if( cb )
@@ -1765,7 +1771,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
       if( Signals2_connection( sender, "aspectRatioChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::aspectRatioChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::aspectRatioChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aspectRatioChanged(qreal)" );
 
           if( cb )
@@ -1830,7 +1839,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
       if( Signals2_connection( sender, "currentFpsChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::currentFpsChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::currentFpsChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentFpsChanged(qreal)" );
 
           if( cb )
@@ -1895,7 +1907,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
       if( Signals2_connection( sender, "horizontalAspectRatioChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::horizontalAspectRatioChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::horizontalAspectRatioChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "horizontalAspectRatioChanged(qreal)" );
 
           if( cb )
@@ -1960,7 +1975,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
       if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::localeChanged, [sender](QLocale arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::localeChanged, 
+                                                              [sender]
+                                                              (const QLocale & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged(QLocale)" );
 
           if( cb )
@@ -2025,7 +2043,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
       if( Signals2_connection( sender, "marginChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::marginChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::marginChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "marginChanged(qreal)" );
 
           if( cb )
@@ -2090,7 +2111,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
       if( Signals2_connection( sender, "measureFpsChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::measureFpsChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::measureFpsChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "measureFpsChanged(bool)" );
 
           if( cb )
@@ -2155,7 +2179,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
       if( Signals2_connection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::optimizationHintsChanged, [sender](QAbstract3DGraph::OptimizationHints arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::optimizationHintsChanged, 
+                                                              [sender]
+                                                              (QAbstract3DGraph::OptimizationHints arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
 
           if( cb )
@@ -2220,7 +2247,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
       if( Signals2_connection( sender, "orthoProjectionChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::orthoProjectionChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::orthoProjectionChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orthoProjectionChanged(bool)" );
 
           if( cb )
@@ -2285,7 +2315,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
       if( Signals2_connection( sender, "polarChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::polarChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::polarChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "polarChanged(bool)" );
 
           if( cb )
@@ -2350,7 +2383,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
       if( Signals2_connection( sender, "queriedGraphPositionChanged(QVector3D)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::queriedGraphPositionChanged, [sender](QVector3D arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::queriedGraphPositionChanged, 
+                                                              [sender]
+                                                              (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "queriedGraphPositionChanged(QVector3D)" );
 
           if( cb )
@@ -2415,7 +2451,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
       if( Signals2_connection( sender, "radialLabelOffsetChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::radialLabelOffsetChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::radialLabelOffsetChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "radialLabelOffsetChanged(float)" );
 
           if( cb )
@@ -2480,7 +2519,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
       if( Signals2_connection( sender, "reflectionChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::reflectionChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::reflectionChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "reflectionChanged(bool)" );
 
           if( cb )
@@ -2545,7 +2587,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
       if( Signals2_connection( sender, "reflectivityChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::reflectivityChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::reflectivityChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "reflectivityChanged(qreal)" );
 
           if( cb )
@@ -2610,7 +2655,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
       if( Signals2_connection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::selectedElementChanged, [sender](QAbstract3DGraph::ElementType arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::selectedElementChanged, 
+                                                              [sender]
+                                                              (QAbstract3DGraph::ElementType arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
 
           if( cb )
@@ -2675,7 +2723,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
       if( Signals2_connection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::selectionModeChanged, [sender](QAbstract3DGraph::SelectionFlags arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::selectionModeChanged, 
+                                                              [sender]
+                                                              (QAbstract3DGraph::SelectionFlags arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
 
           if( cb )
@@ -2740,7 +2791,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
       if( Signals2_connection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DGraph::shadowQualityChanged, [sender](QAbstract3DGraph::ShadowQuality arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DGraph::shadowQualityChanged, 
+                                                              [sender]
+                                                              (QAbstract3DGraph::ShadowQuality arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
 
           if( cb )

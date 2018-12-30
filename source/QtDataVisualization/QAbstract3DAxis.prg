@@ -592,7 +592,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::titleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::titleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
 
           if( cb )
@@ -657,7 +660,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
       if( Signals2_connection( sender, "labelsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::labelsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::labelsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsChanged()" );
 
           if( cb )
@@ -720,7 +726,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
       if( Signals2_connection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::orientationChanged, [sender](QAbstract3DAxis::AxisOrientation arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::orientationChanged, 
+                                                              [sender]
+                                                              (QAbstract3DAxis::AxisOrientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
 
           if( cb )
@@ -785,7 +794,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
       if( Signals2_connection( sender, "minChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::minChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::minChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(float)" );
 
           if( cb )
@@ -850,7 +862,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
       if( Signals2_connection( sender, "maxChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::maxChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::maxChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(float)" );
 
           if( cb )
@@ -915,7 +930,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
       if( Signals2_connection( sender, "rangeChanged(float,float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::rangeChanged, [sender](float arg1, float arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::rangeChanged, 
+                                                              [sender]
+                                                              (float arg1, float arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(float,float)" );
 
           if( cb )
@@ -982,7 +1000,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
       if( Signals2_connection( sender, "autoAdjustRangeChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::autoAdjustRangeChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::autoAdjustRangeChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoAdjustRangeChanged(bool)" );
 
           if( cb )
@@ -1047,7 +1068,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
       if( Signals2_connection( sender, "labelAutoRotationChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::labelAutoRotationChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::labelAutoRotationChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelAutoRotationChanged(float)" );
 
           if( cb )
@@ -1112,7 +1136,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
       if( Signals2_connection( sender, "titleVisibilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::titleVisibilityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::titleVisibilityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleVisibilityChanged(bool)" );
 
           if( cb )
@@ -1177,7 +1204,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
       if( Signals2_connection( sender, "titleFixedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstract3DAxis::titleFixedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstract3DAxis::titleFixedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleFixedChanged(bool)" );
 
           if( cb )

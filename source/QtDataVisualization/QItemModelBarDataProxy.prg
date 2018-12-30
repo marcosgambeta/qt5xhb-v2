@@ -69,6 +69,7 @@ CLASS QItemModelBarDataProxy INHERIT QBarDataProxy
    METHOD onColumnRoleChanged
    METHOD onColumnRolePatternChanged
    METHOD onColumnRoleReplaceChanged
+   METHOD onItemModelChanged
    METHOD onMultiMatchBehaviorChanged
    METHOD onRotationRoleChanged
    METHOD onRotationRolePatternChanged
@@ -1283,7 +1284,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
       if( Signals2_connection( sender, "autoColumnCategoriesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::autoColumnCategoriesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::autoColumnCategoriesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoColumnCategoriesChanged(bool)" );
 
           if( cb )
@@ -1348,7 +1352,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
       if( Signals2_connection( sender, "autoRowCategoriesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::autoRowCategoriesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::autoRowCategoriesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoRowCategoriesChanged(bool)" );
 
           if( cb )
@@ -1413,7 +1420,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
       if( Signals2_connection( sender, "columnCategoriesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnCategoriesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::columnCategoriesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCategoriesChanged()" );
 
           if( cb )
@@ -1476,7 +1486,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
       if( Signals2_connection( sender, "columnRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::columnRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRoleChanged(QString)" );
 
           if( cb )
@@ -1541,7 +1554,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "columnRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::columnRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -1606,7 +1622,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
       if( Signals2_connection( sender, "columnRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::columnRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::columnRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRoleReplaceChanged(QString)" );
 
           if( cb )
@@ -1660,6 +1679,70 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 /*
 void itemModelChanged( const QAbstractItemModel * itemModel )
 */
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemModelChanged(QAbstractItemModel*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::itemModelChanged, 
+                                                              [sender]
+                                                              (const QAbstractItemModel * arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemModelChanged(QAbstractItemModel*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemModelChanged(QAbstractItemModel*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemModelChanged(QAbstractItemModel*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemModelChanged(QAbstractItemModel*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
 
 /*
 void multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behavior )
@@ -1675,7 +1758,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
       if( Signals2_connection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::multiMatchBehaviorChanged, [sender](QItemModelBarDataProxy::MultiMatchBehavior arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::multiMatchBehaviorChanged, 
+                                                              [sender]
+                                                              (QItemModelBarDataProxy::MultiMatchBehavior arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
 
           if( cb )
@@ -1740,7 +1826,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
       if( Signals2_connection( sender, "rotationRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rotationRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::rotationRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleChanged(QString)" );
 
           if( cb )
@@ -1805,7 +1894,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "rotationRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rotationRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::rotationRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -1870,7 +1962,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
       if( Signals2_connection( sender, "rotationRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rotationRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::rotationRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleReplaceChanged(QString)" );
 
           if( cb )
@@ -1935,7 +2030,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
       if( Signals2_connection( sender, "rowCategoriesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowCategoriesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::rowCategoriesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCategoriesChanged()" );
 
           if( cb )
@@ -1998,7 +2096,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
       if( Signals2_connection( sender, "rowRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::rowRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRoleChanged(QString)" );
 
           if( cb )
@@ -2063,7 +2164,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "rowRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::rowRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -2128,7 +2232,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
       if( Signals2_connection( sender, "rowRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::rowRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::rowRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRoleReplaceChanged(QString)" );
 
           if( cb )
@@ -2193,7 +2300,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
       if( Signals2_connection( sender, "useModelCategoriesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::useModelCategoriesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::useModelCategoriesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "useModelCategoriesChanged(bool)" );
 
           if( cb )
@@ -2258,7 +2368,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
       if( Signals2_connection( sender, "valueRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::valueRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::valueRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRoleChanged(QString)" );
 
           if( cb )
@@ -2323,7 +2436,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "valueRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::valueRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::valueRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -2388,7 +2504,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
       if( Signals2_connection( sender, "valueRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelBarDataProxy::valueRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelBarDataProxy::valueRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRoleReplaceChanged(QString)" );
 
           if( cb )

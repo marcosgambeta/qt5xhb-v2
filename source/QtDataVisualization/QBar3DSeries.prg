@@ -307,7 +307,10 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
       if( Signals2_connection( sender, "dataProxyChanged(QBarDataProxy*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBar3DSeries::dataProxyChanged, [sender](QBarDataProxy* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBar3DSeries::dataProxyChanged, 
+                                                              [sender]
+                                                              (QBarDataProxy * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QBarDataProxy*)" );
 
           if( cb )
@@ -372,7 +375,10 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
       if( Signals2_connection( sender, "selectedBarChanged(QPoint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBar3DSeries::selectedBarChanged, [sender](QPoint arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBar3DSeries::selectedBarChanged, 
+                                                              [sender]
+                                                              (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedBarChanged(QPoint)" );
 
           if( cb )
@@ -437,7 +443,10 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
       if( Signals2_connection( sender, "meshAngleChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QBar3DSeries::meshAngleChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QBar3DSeries::meshAngleChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "meshAngleChanged(float)" );
 
           if( cb )

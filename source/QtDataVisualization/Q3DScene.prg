@@ -687,7 +687,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
       if( Signals2_connection( sender, "activeCameraChanged(Q3DCamera*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::activeCameraChanged, [sender](Q3DCamera* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::activeCameraChanged, 
+                                                              [sender]
+                                                              (Q3DCamera * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeCameraChanged(Q3DCamera*)" );
 
           if( cb )
@@ -752,7 +755,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
       if( Signals2_connection( sender, "activeLightChanged(Q3DLight*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::activeLightChanged, [sender](Q3DLight* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::activeLightChanged, 
+                                                              [sender]
+                                                              (Q3DLight * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeLightChanged(Q3DLight*)" );
 
           if( cb )
@@ -817,7 +823,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
       if( Signals2_connection( sender, "devicePixelRatioChanged(float)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::devicePixelRatioChanged, [sender](float arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::devicePixelRatioChanged, 
+                                                              [sender]
+                                                              (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "devicePixelRatioChanged(float)" );
 
           if( cb )
@@ -882,7 +891,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
       if( Signals2_connection( sender, "graphPositionQueryChanged(QPoint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::graphPositionQueryChanged, [sender](QPoint arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::graphPositionQueryChanged, 
+                                                              [sender]
+                                                              (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "graphPositionQueryChanged(QPoint)" );
 
           if( cb )
@@ -947,7 +959,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
       if( Signals2_connection( sender, "primarySubViewportChanged(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::primarySubViewportChanged, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::primarySubViewportChanged, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primarySubViewportChanged(QRect)" );
 
           if( cb )
@@ -1012,7 +1027,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
       if( Signals2_connection( sender, "secondarySubviewOnTopChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::secondarySubviewOnTopChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::secondarySubviewOnTopChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubviewOnTopChanged(bool)" );
 
           if( cb )
@@ -1077,7 +1095,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
       if( Signals2_connection( sender, "secondarySubViewportChanged(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::secondarySubViewportChanged, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::secondarySubViewportChanged, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubViewportChanged(QRect)" );
 
           if( cb )
@@ -1142,7 +1163,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
       if( Signals2_connection( sender, "selectionQueryPositionChanged(QPoint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::selectionQueryPositionChanged, [sender](QPoint arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::selectionQueryPositionChanged, 
+                                                              [sender]
+                                                              (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionQueryPositionChanged(QPoint)" );
 
           if( cb )
@@ -1207,7 +1231,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
       if( Signals2_connection( sender, "slicingActiveChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::slicingActiveChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::slicingActiveChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "slicingActiveChanged(bool)" );
 
           if( cb )
@@ -1272,7 +1299,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
       if( Signals2_connection( sender, "viewportChanged(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DScene::viewportChanged, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DScene::viewportChanged, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportChanged(QRect)" );
 
           if( cb )

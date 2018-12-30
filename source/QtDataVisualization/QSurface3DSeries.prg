@@ -498,7 +498,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
       if( Signals2_connection( sender, "dataProxyChanged(QSurfaceDataProxy*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::dataProxyChanged, [sender](QSurfaceDataProxy* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurface3DSeries::dataProxyChanged, 
+                                                              [sender]
+                                                              (QSurfaceDataProxy * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QSurfaceDataProxy*)" );
 
           if( cb )
@@ -563,7 +566,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
       if( Signals2_connection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::drawModeChanged, [sender](QSurface3DSeries::DrawFlags arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurface3DSeries::drawModeChanged, 
+                                                              [sender]
+                                                              (QSurface3DSeries::DrawFlags arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
 
           if( cb )
@@ -628,7 +634,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
       if( Signals2_connection( sender, "flatShadingEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::flatShadingEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurface3DSeries::flatShadingEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flatShadingEnabledChanged(bool)" );
 
           if( cb )
@@ -693,7 +702,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
       if( Signals2_connection( sender, "flatShadingSupportedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::flatShadingSupportedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurface3DSeries::flatShadingSupportedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flatShadingSupportedChanged(bool)" );
 
           if( cb )
@@ -758,7 +770,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
       if( Signals2_connection( sender, "selectedPointChanged(QPoint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::selectedPointChanged, [sender](QPoint arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurface3DSeries::selectedPointChanged, 
+                                                              [sender]
+                                                              (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedPointChanged(QPoint)" );
 
           if( cb )
@@ -823,7 +838,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
       if( Signals2_connection( sender, "textureChanged(QImage)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::textureChanged, [sender](QImage arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurface3DSeries::textureChanged, 
+                                                              [sender]
+                                                              (const QImage & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureChanged(QImage)" );
 
           if( cb )
@@ -888,7 +906,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
       if( Signals2_connection( sender, "textureFileChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSurface3DSeries::textureFileChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSurface3DSeries::textureFileChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFileChanged(QString)" );
 
           if( cb )

@@ -49,6 +49,7 @@ CLASS QItemModelScatterDataProxy INHERIT QScatterDataProxy
    METHOD setRotationRoleReplace
    METHOD remap
 
+   METHOD onItemModelChanged
    METHOD onRotationRoleChanged
    METHOD onRotationRolePatternChanged
    METHOD onRotationRoleReplaceChanged
@@ -862,6 +863,70 @@ using namespace QtDataVisualization;
 /*
 void itemModelChanged( const QAbstractItemModel * itemModel )
 */
+HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
+{
+  if( hb_pcount() == 1 )
+  {
+    QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      if( Signals2_connection( sender, "itemModelChanged(QAbstractItemModel*)" ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::itemModelChanged, 
+                                                              [sender]
+                                                              (const QAbstractItemModel * arg1) {
+          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemModelChanged(QAbstractItemModel*)" );
+
+          if( cb )
+          {
+            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals2_store_connection( sender, "itemModelChanged(QAbstractItemModel*)", connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+    if( sender )
+    {
+      Signals2_disconnection( sender, "itemModelChanged(QAbstractItemModel*)" );
+
+      QObject::disconnect( Signals2_get_connection( sender, "itemModelChanged(QAbstractItemModel*)" ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
 
 /*
 void rotationRoleChanged( const QString & role )
@@ -877,7 +942,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
       if( Signals2_connection( sender, "rotationRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::rotationRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::rotationRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleChanged(QString)" );
 
           if( cb )
@@ -942,7 +1010,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "rotationRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::rotationRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::rotationRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -1007,7 +1078,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
       if( Signals2_connection( sender, "rotationRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::rotationRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::rotationRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleReplaceChanged(QString)" );
 
           if( cb )
@@ -1072,7 +1146,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
       if( Signals2_connection( sender, "xPosRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::xPosRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::xPosRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xPosRoleChanged(QString)" );
 
           if( cb )
@@ -1137,7 +1214,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "xPosRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::xPosRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::xPosRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xPosRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -1202,7 +1282,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
       if( Signals2_connection( sender, "xPosRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::xPosRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::xPosRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xPosRoleReplaceChanged(QString)" );
 
           if( cb )
@@ -1267,7 +1350,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
       if( Signals2_connection( sender, "yPosRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::yPosRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::yPosRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yPosRoleChanged(QString)" );
 
           if( cb )
@@ -1332,7 +1418,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "yPosRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::yPosRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::yPosRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yPosRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -1397,7 +1486,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
       if( Signals2_connection( sender, "yPosRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::yPosRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::yPosRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yPosRoleReplaceChanged(QString)" );
 
           if( cb )
@@ -1462,7 +1554,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
       if( Signals2_connection( sender, "zPosRoleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::zPosRoleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::zPosRoleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zPosRoleChanged(QString)" );
 
           if( cb )
@@ -1527,7 +1622,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
       if( Signals2_connection( sender, "zPosRolePatternChanged(QRegExp)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::zPosRolePatternChanged, [sender](QRegExp arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::zPosRolePatternChanged, 
+                                                              [sender]
+                                                              (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zPosRolePatternChanged(QRegExp)" );
 
           if( cb )
@@ -1592,7 +1690,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
       if( Signals2_connection( sender, "zPosRoleReplaceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemModelScatterDataProxy::zPosRoleReplaceChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemModelScatterDataProxy::zPosRoleReplaceChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zPosRoleReplaceChanged(QString)" );
 
           if( cb )

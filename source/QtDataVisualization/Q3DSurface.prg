@@ -554,7 +554,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
       if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DSurface::axisXChanged, [sender](QValue3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DSurface::axisXChanged, 
+                                                              [sender]
+                                                              (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisXChanged(QValue3DAxis*)" );
 
           if( cb )
@@ -619,7 +622,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
       if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DSurface::axisYChanged, [sender](QValue3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DSurface::axisYChanged, 
+                                                              [sender]
+                                                              (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisYChanged(QValue3DAxis*)" );
 
           if( cb )
@@ -684,7 +690,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
       if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DSurface::axisZChanged, [sender](QValue3DAxis* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DSurface::axisZChanged, 
+                                                              [sender]
+                                                              (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisZChanged(QValue3DAxis*)" );
 
           if( cb )
@@ -749,7 +758,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
       if( Signals2_connection( sender, "flipHorizontalGridChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DSurface::flipHorizontalGridChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DSurface::flipHorizontalGridChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flipHorizontalGridChanged(bool)" );
 
           if( cb )
@@ -814,7 +826,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
       if( Signals2_connection( sender, "selectedSeriesChanged(QSurface3DSeries*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &Q3DSurface::selectedSeriesChanged, [sender](QSurface3DSeries* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &Q3DSurface::selectedSeriesChanged, 
+                                                              [sender]
+                                                              (QSurface3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QSurface3DSeries*)" );
 
           if( cb )
