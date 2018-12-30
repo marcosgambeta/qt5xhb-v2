@@ -490,7 +490,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeExpression::valueChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDeclarativeExpression::valueChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged()" );
 
           if( cb )

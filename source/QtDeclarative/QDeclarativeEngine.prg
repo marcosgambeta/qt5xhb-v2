@@ -718,7 +718,10 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
       if( Signals2_connection( sender, "quit()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeEngine::quit, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDeclarativeEngine::quit, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "quit()" );
 
           if( cb )
@@ -781,7 +784,10 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
       if( Signals2_connection( sender, "warnings(QList<QDeclarativeError>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeEngine::warnings, [sender](QList<QDeclarativeError> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDeclarativeEngine::warnings, 
+                                                              [sender]
+                                                              (const QList<QDeclarativeError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "warnings(QList<QDeclarativeError>)" );
 
           if( cb )

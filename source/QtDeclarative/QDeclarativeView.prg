@@ -417,7 +417,10 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
       if( Signals2_connection( sender, "sceneResized(QSize)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeView::sceneResized, [sender](QSize arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDeclarativeView::sceneResized, 
+                                                              [sender]
+                                                              (QSize arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneResized(QSize)" );
 
           if( cb )
@@ -482,7 +485,10 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QDeclarativeView::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeView::statusChanged, [sender](QDeclarativeView::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDeclarativeView::statusChanged, 
+                                                              [sender]
+                                                              (QDeclarativeView::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QDeclarativeView::Status)" );
 
           if( cb )

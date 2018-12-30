@@ -527,7 +527,10 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
       if( Signals2_connection( sender, "progressChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeComponent::progressChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDeclarativeComponent::progressChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "progressChanged(qreal)" );
 
           if( cb )
@@ -592,7 +595,10 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QDeclarativeComponent::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDeclarativeComponent::statusChanged, [sender](QDeclarativeComponent::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDeclarativeComponent::statusChanged, 
+                                                              [sender]
+                                                              (QDeclarativeComponent::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QDeclarativeComponent::Status)" );
 
           if( cb )
