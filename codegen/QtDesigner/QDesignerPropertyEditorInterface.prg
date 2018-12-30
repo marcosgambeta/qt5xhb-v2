@@ -58,6 +58,6 @@ $virtualMethod=|void|setReadOnly|bool
 %%
 
 $prototype=void propertyChanged( const QString & name, const QVariant & value )
-$signalMethod=|void|propertyChanged|QString,QVariant
+$signalMethod=|void|propertyChanged|const QString &,const QVariant &
 
 #pragma ENDDUMP
