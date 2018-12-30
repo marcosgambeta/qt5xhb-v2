@@ -765,7 +765,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
       if( Signals2_connection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerFormWindowManagerInterface::activeFormWindowChanged, [sender](QDesignerFormWindowInterface* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDesignerFormWindowManagerInterface::activeFormWindowChanged, 
+                                                              [sender]
+                                                              (QDesignerFormWindowInterface * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
 
           if( cb )
@@ -830,7 +833,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
       if( Signals2_connection( sender, "formWindowAdded(QDesignerFormWindowInterface*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerFormWindowManagerInterface::formWindowAdded, [sender](QDesignerFormWindowInterface* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDesignerFormWindowManagerInterface::formWindowAdded, 
+                                                              [sender]
+                                                              (QDesignerFormWindowInterface * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "formWindowAdded(QDesignerFormWindowInterface*)" );
 
           if( cb )
@@ -895,7 +901,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
       if( Signals2_connection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerFormWindowManagerInterface::formWindowRemoved, [sender](QDesignerFormWindowInterface* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDesignerFormWindowManagerInterface::formWindowRemoved, 
+                                                              [sender]
+                                                              (QDesignerFormWindowInterface * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" );
 
           if( cb )

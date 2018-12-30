@@ -267,7 +267,10 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
       if( Signals2_connection( sender, "propertyChanged(QString,QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDesignerPropertyEditorInterface::propertyChanged, [sender](QString arg1, QVariant arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDesignerPropertyEditorInterface::propertyChanged, 
+                                                              [sender]
+                                                              (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "propertyChanged(QString,QVariant)" );
 
           if( cb )
