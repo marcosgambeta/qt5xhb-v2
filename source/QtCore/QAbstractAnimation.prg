@@ -527,7 +527,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
       if( Signals2_connection( sender, "currentLoopChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAnimation::currentLoopChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAnimation::currentLoopChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentLoopChanged(int)" );
 
           if( cb )
@@ -592,7 +595,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
       if( Signals2_connection( sender, "directionChanged(QAbstractAnimation::Direction)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAnimation::directionChanged, [sender](QAbstractAnimation::Direction arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAnimation::directionChanged, 
+                                                              [sender]
+                                                              (QAbstractAnimation::Direction arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "directionChanged(QAbstractAnimation::Direction)" );
 
           if( cb )
@@ -657,7 +663,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAnimation::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAnimation::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -720,7 +729,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAnimation::stateChanged, [sender](QAbstractAnimation::State arg1, QAbstractAnimation::State arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAnimation::stateChanged, 
+                                                              [sender]
+                                                              (QAbstractAnimation::State arg1, QAbstractAnimation::State arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
 
           if( cb )

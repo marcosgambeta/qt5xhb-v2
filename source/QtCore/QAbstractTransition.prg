@@ -381,7 +381,10 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
       if( Signals2_connection( sender, "triggered()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractTransition::triggered, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractTransition::triggered, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered()" );
 
           if( cb )

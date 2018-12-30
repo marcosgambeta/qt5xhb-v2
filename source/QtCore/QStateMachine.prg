@@ -639,7 +639,10 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
       if( Signals2_connection( sender, "started()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QStateMachine::started, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QStateMachine::started, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
 
           if( cb )
@@ -702,7 +705,10 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
       if( Signals2_connection( sender, "stopped()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QStateMachine::stopped, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QStateMachine::stopped, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stopped()" );
 
           if( cb )

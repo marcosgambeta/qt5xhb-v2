@@ -137,7 +137,10 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
       if( Signals2_connection( sender, "entered()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractState::entered, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractState::entered, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "entered()" );
 
           if( cb )
@@ -200,7 +203,10 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
       if( Signals2_connection( sender, "exited()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractState::exited, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractState::exited, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "exited()" );
 
           if( cb )

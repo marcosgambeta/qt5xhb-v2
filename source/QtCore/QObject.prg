@@ -2252,7 +2252,10 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
       if( Signals2_connection( sender, "destroyed(QObject*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QObject::destroyed, [sender](QObject* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QObject::destroyed, 
+                                                              [sender]
+                                                              (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "destroyed(QObject*)" );
 
           if( cb )
@@ -2318,7 +2321,10 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
       if( Signals2_connection( sender, "objectNameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QObject::objectNameChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QObject::objectNameChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "objectNameChanged(QString)" );
 
           if( cb )

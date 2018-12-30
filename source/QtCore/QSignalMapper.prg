@@ -355,7 +355,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
       if( Signals2_connection( sender, "mapped(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QSignalMapper::mapped), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QSignalMapper::mapped), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(int)" );
 
           if( cb )
@@ -420,7 +423,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
       if( Signals2_connection( sender, "mapped(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QSignalMapper::mapped), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QSignalMapper::mapped), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QString)" );
 
           if( cb )
@@ -485,7 +491,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
       if( Signals2_connection( sender, "mapped(QWidget*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QWidget *>::of(&QSignalMapper::mapped), [sender](QWidget* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QWidget *>::of(&QSignalMapper::mapped), 
+                                                              [sender]
+                                                              (QWidget * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QWidget*)" );
 
           if( cb )
@@ -550,7 +559,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
       if( Signals2_connection( sender, "mapped(QObject*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QObject *>::of(&QSignalMapper::mapped), [sender](QObject* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QObject *>::of(&QSignalMapper::mapped), 
+                                                              [sender]
+                                                              (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QObject*)" );
 
           if( cb )

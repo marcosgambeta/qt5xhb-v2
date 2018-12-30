@@ -270,7 +270,10 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
       if( Signals2_connection( sender, "directoryChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileSystemWatcher::directoryChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileSystemWatcher::directoryChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "directoryChanged(QString)" );
 
           if( cb )
@@ -335,7 +338,10 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
       if( Signals2_connection( sender, "fileChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileSystemWatcher::fileChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileSystemWatcher::fileChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fileChanged(QString)" );
 
           if( cb )

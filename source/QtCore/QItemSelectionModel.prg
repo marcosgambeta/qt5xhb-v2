@@ -698,7 +698,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged(QItemSelection,QItemSelection)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::selectionChanged, [sender](QItemSelection arg1, QItemSelection arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemSelectionModel::selectionChanged, 
+                                                              [sender]
+                                                              (const QItemSelection & arg1, const QItemSelection & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged(QItemSelection,QItemSelection)" );
 
           if( cb )
@@ -765,7 +768,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
       if( Signals2_connection( sender, "currentChanged(QModelIndex,QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::currentChanged, [sender](QModelIndex arg1, QModelIndex arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemSelectionModel::currentChanged, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(QModelIndex,QModelIndex)" );
 
           if( cb )
@@ -832,7 +838,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
       if( Signals2_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::currentRowChanged, [sender](QModelIndex arg1, QModelIndex arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemSelectionModel::currentRowChanged, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentRowChanged(QModelIndex,QModelIndex)" );
 
           if( cb )
@@ -899,7 +908,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
       if( Signals2_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QItemSelectionModel::currentColumnChanged, [sender](QModelIndex arg1, QModelIndex arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QItemSelectionModel::currentColumnChanged, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentColumnChanged(QModelIndex,QModelIndex)" );
 
           if( cb )

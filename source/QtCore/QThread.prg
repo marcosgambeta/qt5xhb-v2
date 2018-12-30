@@ -569,7 +569,10 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QThread::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QThread::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -632,7 +635,10 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
       if( Signals2_connection( sender, "started()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QThread::started, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QThread::started, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
 
           if( cb )

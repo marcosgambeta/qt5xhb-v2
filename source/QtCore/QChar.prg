@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QChar
 
    DATA pointer
@@ -89,6 +92,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_signals2.h"
 
 #ifdef __XHARBOUR__
 #include <QChar>
@@ -100,7 +104,7 @@ QChar ()
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
   QChar * o = new QChar ();
-  _qt5xhb_returnNewObject( o, false );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -128,8 +132,8 @@ QChar ( QLatin1Char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
-  QChar * o = new QChar ();
-  _qt5xhb_returnNewObject( o, false );
+  QChar * o = new QChar ( *PQLATIN1CHAR(1) );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -148,9 +152,8 @@ QChar ( ushort code )
 */
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
-  ushort par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
+  QChar * o = new QChar ( PUSHORT(1) );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -158,9 +161,8 @@ QChar ( short code )
 */
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
-  short par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
+  QChar * o = new QChar ( PSHORT(1) );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -168,9 +170,8 @@ QChar ( uint code )
 */
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
-  uint par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
+  QChar * o = new QChar ( PUINT(1) );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -179,7 +180,7 @@ QChar ( int code )
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
   QChar * o = new QChar ( PINT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -188,7 +189,7 @@ QChar ( SpecialCharacter ch )
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
   QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, false );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[01]QChar ()
@@ -233,14 +234,18 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->category () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -253,14 +258,18 @@ HB_FUNC_STATIC( QCHAR_CELL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       hb_retni( obj->cell () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -273,14 +282,18 @@ HB_FUNC_STATIC( QCHAR_COMBININGCLASS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       hb_retni( obj->combiningClass () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -293,14 +306,18 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->decompositionTag () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -313,14 +330,18 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->digitValue () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -333,14 +354,18 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->direction () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -353,14 +378,18 @@ HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->hasMirrored () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -373,14 +402,18 @@ HB_FUNC_STATIC( QCHAR_ISDIGIT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isDigit () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -393,14 +426,18 @@ HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isHighSurrogate () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -413,14 +450,18 @@ HB_FUNC_STATIC( QCHAR_ISLETTER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isLetter () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -433,14 +474,18 @@ HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isLetterOrNumber () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -453,14 +498,18 @@ HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isLowSurrogate () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -473,14 +522,18 @@ HB_FUNC_STATIC( QCHAR_ISLOWER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isLower () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -493,14 +546,18 @@ HB_FUNC_STATIC( QCHAR_ISMARK )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isMark () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -513,14 +570,18 @@ HB_FUNC_STATIC( QCHAR_ISNULL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isNull () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -533,14 +594,18 @@ HB_FUNC_STATIC( QCHAR_ISNUMBER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isNumber () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -553,14 +618,18 @@ HB_FUNC_STATIC( QCHAR_ISPRINT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isPrint () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -573,14 +642,18 @@ HB_FUNC_STATIC( QCHAR_ISPUNCT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isPunct () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -593,14 +666,18 @@ HB_FUNC_STATIC( QCHAR_ISSPACE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isSpace () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -613,14 +690,18 @@ HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isSymbol () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -633,14 +714,18 @@ HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isTitleCase () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -653,14 +738,18 @@ HB_FUNC_STATIC( QCHAR_ISUPPER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isUpper () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -673,14 +762,18 @@ HB_FUNC_STATIC( QCHAR_JOINING )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->joining () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -693,15 +786,19 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QChar * ptr = new QChar( obj->mirroredChar () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -714,14 +811,18 @@ HB_FUNC_STATIC( QCHAR_ROW )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       hb_retni( obj->row () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -734,15 +835,19 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QChar * ptr = new QChar( obj->toCaseFolded () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -755,14 +860,18 @@ HB_FUNC_STATIC( QCHAR_TOLATIN1 )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       hb_retni( obj->toLatin1 () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -775,15 +884,19 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QChar * ptr = new QChar( obj->toLower () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -796,15 +909,19 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QChar * ptr = new QChar( obj->toTitleCase () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -817,15 +934,19 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QChar * ptr = new QChar( obj->toUpper () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -838,14 +959,18 @@ HB_FUNC_STATIC( QCHAR_UNICODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RUSHORT( obj->unicode () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -858,14 +983,18 @@ HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->unicodeVersion () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

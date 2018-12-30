@@ -453,7 +453,10 @@ HB_FUNC_STATIC( QSTATE_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QState::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QState::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -516,7 +519,10 @@ HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
       if( Signals2_connection( sender, "propertiesAssigned()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QState::propertiesAssigned, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QState::propertiesAssigned, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "propertiesAssigned()" );
 
           if( cb )

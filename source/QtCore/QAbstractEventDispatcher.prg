@@ -600,7 +600,10 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
       if( Signals2_connection( sender, "aboutToBlock()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractEventDispatcher::aboutToBlock, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractEventDispatcher::aboutToBlock, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToBlock()" );
 
           if( cb )
@@ -663,7 +666,10 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
       if( Signals2_connection( sender, "awake()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractEventDispatcher::awake, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractEventDispatcher::awake, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "awake()" );
 
           if( cb )

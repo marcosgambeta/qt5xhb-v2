@@ -921,7 +921,10 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
       if( Signals2_connection( sender, "aboutToQuit()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCoreApplication::aboutToQuit, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCoreApplication::aboutToQuit, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToQuit()" );
 
           if( cb )

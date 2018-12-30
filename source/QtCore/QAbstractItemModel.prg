@@ -944,7 +944,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
       if( Signals2_connection( sender, "columnsAboutToBeInserted(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::columnsAboutToBeInserted, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::columnsAboutToBeInserted, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnsAboutToBeInserted(QModelIndex,int,int)" );
 
           if( cb )
@@ -1013,7 +1016,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
       if( Signals2_connection( sender, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::columnsAboutToBeMoved, [sender](QModelIndex arg1, int arg2, int arg3, QModelIndex arg4, int arg5) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::columnsAboutToBeMoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
 
           if( cb )
@@ -1086,7 +1092,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
       if( Signals2_connection( sender, "columnsAboutToBeRemoved(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::columnsAboutToBeRemoved, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::columnsAboutToBeRemoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
 
           if( cb )
@@ -1155,7 +1164,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
       if( Signals2_connection( sender, "columnsInserted(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::columnsInserted, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::columnsInserted, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnsInserted(QModelIndex,int,int)" );
 
           if( cb )
@@ -1224,7 +1236,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
       if( Signals2_connection( sender, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::columnsMoved, [sender](QModelIndex arg1, int arg2, int arg3, QModelIndex arg4, int arg5) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::columnsMoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
 
           if( cb )
@@ -1297,7 +1312,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
       if( Signals2_connection( sender, "columnsRemoved(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::columnsRemoved, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::columnsRemoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnsRemoved(QModelIndex,int,int)" );
 
           if( cb )
@@ -1366,7 +1384,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
       if( Signals2_connection( sender, "dataChanged(QModelIndex,QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::dataChanged, [sender](QModelIndex arg1, QModelIndex arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::dataChanged, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataChanged(QModelIndex,QModelIndex)" );
 
           if( cb )
@@ -1433,7 +1454,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
       if( Signals2_connection( sender, "headerDataChanged(Qt::Orientation,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::headerDataChanged, [sender](Qt::Orientation arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::headerDataChanged, 
+                                                              [sender]
+                                                              (Qt::Orientation arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "headerDataChanged(Qt::Orientation,int,int)" );
 
           if( cb )
@@ -1502,7 +1526,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
       if( Signals2_connection( sender, "layoutAboutToBeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::layoutAboutToBeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::layoutAboutToBeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "layoutAboutToBeChanged()" );
 
           if( cb )
@@ -1565,7 +1592,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
       if( Signals2_connection( sender, "layoutChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::layoutChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::layoutChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "layoutChanged()" );
 
           if( cb )
@@ -1628,7 +1658,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
       if( Signals2_connection( sender, "modelAboutToBeReset()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::modelAboutToBeReset, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::modelAboutToBeReset, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modelAboutToBeReset()" );
 
           if( cb )
@@ -1691,7 +1724,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
       if( Signals2_connection( sender, "modelReset()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::modelReset, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::modelReset, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReset()" );
 
           if( cb )
@@ -1754,7 +1790,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
       if( Signals2_connection( sender, "rowsAboutToBeInserted(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::rowsAboutToBeInserted, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::rowsAboutToBeInserted, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAboutToBeInserted(QModelIndex,int,int)" );
 
           if( cb )
@@ -1823,7 +1862,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
       if( Signals2_connection( sender, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::rowsAboutToBeMoved, [sender](QModelIndex arg1, int arg2, int arg3, QModelIndex arg4, int arg5) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::rowsAboutToBeMoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
 
           if( cb )
@@ -1896,7 +1938,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
       if( Signals2_connection( sender, "rowsAboutToBeRemoved(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::rowsAboutToBeRemoved, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::rowsAboutToBeRemoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
 
           if( cb )
@@ -1965,7 +2010,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
       if( Signals2_connection( sender, "rowsInserted(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::rowsInserted, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::rowsInserted, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsInserted(QModelIndex,int,int)" );
 
           if( cb )
@@ -2034,7 +2082,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
       if( Signals2_connection( sender, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::rowsMoved, [sender](QModelIndex arg1, int arg2, int arg3, QModelIndex arg4, int arg5) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::rowsMoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
 
           if( cb )
@@ -2107,7 +2158,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
       if( Signals2_connection( sender, "rowsRemoved(QModelIndex,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemModel::rowsRemoved, [sender](QModelIndex arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemModel::rowsRemoved, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsRemoved(QModelIndex,int,int)" );
 
           if( cb )

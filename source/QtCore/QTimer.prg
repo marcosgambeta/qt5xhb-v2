@@ -349,7 +349,10 @@ HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
       if( Signals2_connection( sender, "timeout()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTimer::timeout, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTimer::timeout, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "timeout()" );
 
           if( cb )

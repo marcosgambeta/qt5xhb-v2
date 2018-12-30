@@ -1525,7 +1525,10 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
       if( Signals2_connection( sender, "error(QProcess::ProcessError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QProcess::ProcessError>::of(&QProcess::error), [sender](QProcess::ProcessError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QProcess::ProcessError>::of(&QProcess::error), 
+                                                              [sender]
+                                                              (QProcess::ProcessError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QProcess::ProcessError)" );
 
           if( cb )
@@ -1590,7 +1593,10 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
       if( Signals2_connection( sender, "finished(int,QProcess::ExitStatus)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), [sender](int arg1, QProcess::ExitStatus arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), 
+                                                              [sender]
+                                                              (int arg1, QProcess::ExitStatus arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int,QProcess::ExitStatus)" );
 
           if( cb )
@@ -1657,7 +1663,10 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
       if( Signals2_connection( sender, "readyReadStandardError()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::readyReadStandardError, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QProcess::readyReadStandardError, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readyReadStandardError()" );
 
           if( cb )
@@ -1720,7 +1729,10 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
       if( Signals2_connection( sender, "readyReadStandardOutput()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::readyReadStandardOutput, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QProcess::readyReadStandardOutput, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readyReadStandardOutput()" );
 
           if( cb )
@@ -1783,7 +1795,10 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
       if( Signals2_connection( sender, "started()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::started, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QProcess::started, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
 
           if( cb )
@@ -1846,7 +1861,10 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QProcess::ProcessState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::stateChanged, [sender](QProcess::ProcessState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QProcess::stateChanged, 
+                                                              [sender]
+                                                              (QProcess::ProcessState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QProcess::ProcessState)" );
 
           if( cb )
@@ -1912,7 +1930,10 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
       if( Signals2_connection( sender, "errorOccurred(QProcess::ProcessError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QProcess::errorOccurred, [sender](QProcess::ProcessError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QProcess::errorOccurred, 
+                                                              [sender]
+                                                              (QProcess::ProcessError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QProcess::ProcessError)" );
 
           if( cb )

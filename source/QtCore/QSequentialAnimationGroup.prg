@@ -203,7 +203,10 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
       if( Signals2_connection( sender, "currentAnimationChanged(QAbstractAnimation*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSequentialAnimationGroup::currentAnimationChanged, [sender](QAbstractAnimation* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSequentialAnimationGroup::currentAnimationChanged, 
+                                                              [sender]
+                                                              (QAbstractAnimation * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentAnimationChanged(QAbstractAnimation*)" );
 
           if( cb )

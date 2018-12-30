@@ -895,7 +895,10 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
       if( Signals2_connection( sender, "aboutToClose()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::aboutToClose, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QIODevice::aboutToClose, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToClose()" );
 
           if( cb )
@@ -958,7 +961,10 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
       if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::bytesWritten, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QIODevice::bytesWritten, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bytesWritten(qint64)" );
 
           if( cb )
@@ -1023,7 +1029,10 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
       if( Signals2_connection( sender, "readChannelFinished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::readChannelFinished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QIODevice::readChannelFinished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readChannelFinished()" );
 
           if( cb )
@@ -1086,7 +1095,10 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
       if( Signals2_connection( sender, "readyRead()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QIODevice::readyRead, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QIODevice::readyRead, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readyRead()" );
 
           if( cb )

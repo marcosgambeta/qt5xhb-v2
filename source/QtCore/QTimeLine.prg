@@ -829,7 +829,10 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTimeLine::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTimeLine::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -892,7 +895,10 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
       if( Signals2_connection( sender, "frameChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTimeLine::frameChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTimeLine::frameChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameChanged(int)" );
 
           if( cb )
@@ -957,7 +963,10 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QTimeLine::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTimeLine::stateChanged, [sender](QTimeLine::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTimeLine::stateChanged, 
+                                                              [sender]
+                                                              (QTimeLine::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTimeLine::State)" );
 
           if( cb )
@@ -1022,7 +1031,10 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTimeLine::valueChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTimeLine::valueChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(qreal)" );
 
           if( cb )
