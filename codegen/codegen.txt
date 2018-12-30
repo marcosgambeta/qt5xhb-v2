@@ -1680,3 +1680,4 @@ QVirtualKeyboardSelectionListModel::Role             |enum
 QVirtualKeyboardTrace                                |QObject
 QVirtualKeyboardAbstractInputMethod                  |QObject
 QVirtualKeyboardSelectionListModel                   |QObject
+QLatin1Char                                          |object
