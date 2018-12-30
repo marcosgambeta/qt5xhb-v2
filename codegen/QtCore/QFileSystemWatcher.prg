@@ -79,9 +79,9 @@ $method=|QStringList|removePaths|const QStringList &
 %%
 
 $prototype=void directoryChanged( const QString & path )
-$signalMethod=|void|directoryChanged|QString
+$signalMethod=|void|directoryChanged|const QString &
 
 $prototype=void fileChanged( const QString & path )
-$signalMethod=|void|fileChanged|QString
+$signalMethod=|void|fileChanged|const QString &
 
 #pragma ENDDUMP

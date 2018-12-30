@@ -155,12 +155,12 @@ $prototype=void mapped( int arg )
 $signalMethod=|void|mapped,mapped1,QOverload<int>|int
 
 $prototype=void mapped( const QString & arg )
-$signalMethod=|void|mapped,mapped2,QOverload<const QString &>|QString
+$signalMethod=|void|mapped,mapped2,QOverload<const QString &>|const QString &
 
 $prototype=void mapped( QWidget * arg )
-$signalMethod=|void|mapped,mapped3,QOverload<QWidget *>|QWidget*
+$signalMethod=|void|mapped,mapped3,QOverload<QWidget *>|QWidget *
 
 $prototype=void mapped( QObject * arg )
-$signalMethod=|void|mapped,mapped4,QOverload<QObject *>|QObject*
+$signalMethod=|void|mapped,mapped4,QOverload<QObject *>|QObject *
 
 #pragma ENDDUMP

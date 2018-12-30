@@ -64,6 +64,6 @@ $method=|QVariant|startValue|
 %%
 
 $prototype=void valueChanged( const QVariant & value )
-$signalMethod=|void|valueChanged|QVariant
+$signalMethod=|void|valueChanged|const QVariant &
 
 #pragma ENDDUMP

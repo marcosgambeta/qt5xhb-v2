@@ -26,7 +26,7 @@ $destructor
 $includes
 
 $prototype=QSocketNotifier(qintptr socket, Type, QObject *parent = 0)
-$constructor=|new|qintptrt,QSocketNotifier::Type,QObject *=0
+$constructor=|new|qintptr,QSocketNotifier::Type,QObject *=0
 
 $deleteMethod
 

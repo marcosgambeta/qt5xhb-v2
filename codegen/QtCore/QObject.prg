@@ -1404,10 +1404,10 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 %%
 
 $prototype=void destroyed( QObject * obj = 0 )
-$signalMethod=|void|destroyed|QObject*
+$signalMethod=|void|destroyed|QObject *
 
 $prototype=void objectNameChanged( const QString & objectName )
-$signalMethod=|void|objectNameChanged|QString
+$signalMethod=|void|objectNameChanged|const QString &
 
 $extraMethods
 

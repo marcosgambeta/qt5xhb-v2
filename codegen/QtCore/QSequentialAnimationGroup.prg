@@ -51,6 +51,6 @@ $virtualMethod=|int|duration|
 %%
 
 $prototype=void currentAnimationChanged ( QAbstractAnimation * current )
-$signalMethod=|void|currentAnimationChanged|QAbstractAnimation*
+$signalMethod=|void|currentAnimationChanged|QAbstractAnimation *
 
 #pragma ENDDUMP

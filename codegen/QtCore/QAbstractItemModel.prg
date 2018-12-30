@@ -133,25 +133,25 @@ $virtualMethod=|bool|submit|
 %%
 
 $prototype=void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|columnsAboutToBeInserted|QModelIndex,int,int
+$signalMethod=|void|columnsAboutToBeInserted|const QModelIndex &,int,int
 
 $prototype=void columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
-$signalMethod=|void|columnsAboutToBeMoved|QModelIndex,int,int,QModelIndex,int
+$signalMethod=|void|columnsAboutToBeMoved|const QModelIndex &,int,int,const QModelIndex &,int
 
 $prototype=void columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|columnsAboutToBeRemoved|QModelIndex,int,int
+$signalMethod=|void|columnsAboutToBeRemoved|const QModelIndex &,int,int
 
 $prototype=void columnsInserted( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|columnsInserted|QModelIndex,int,int
+$signalMethod=|void|columnsInserted|const QModelIndex &,int,int
 
 $prototype=void columnsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
-$signalMethod=|void|columnsMoved|QModelIndex,int,int,QModelIndex,int
+$signalMethod=|void|columnsMoved|const QModelIndex &,int,int,const QModelIndex &,int
 
 $prototype=void columnsRemoved( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|columnsRemoved|QModelIndex,int,int
+$signalMethod=|void|columnsRemoved|const QModelIndex &,int,int
 
 $prototype=void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-$signalMethod=|void|dataChanged|QModelIndex,QModelIndex
+$signalMethod=|void|dataChanged|const QModelIndex &,const QModelIndex &
 
 $prototype=void headerDataChanged( Qt::Orientation orientation, int first, int last )
 $signalMethod=|void|headerDataChanged|Qt::Orientation,int,int
@@ -169,21 +169,21 @@ $prototype=void modelReset()
 $signalMethod=|void|modelReset|
 
 $prototype=void rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|rowsAboutToBeInserted|QModelIndex,int,int
+$signalMethod=|void|rowsAboutToBeInserted|const QModelIndex &,int,int
 
 $prototype=void rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
-$signalMethod=|void|rowsAboutToBeMoved|QModelIndex,int,int,QModelIndex,int
+$signalMethod=|void|rowsAboutToBeMoved|const QModelIndex &,int,int,const QModelIndex &,int
 
 $prototype=void rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|rowsAboutToBeRemoved|QModelIndex,int,int
+$signalMethod=|void|rowsAboutToBeRemoved|const QModelIndex &,int,int
 
 $prototype=void rowsInserted( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|rowsInserted|QModelIndex,int,int
+$signalMethod=|void|rowsInserted|const QModelIndex &,int,int
 
 $prototype=void rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
-$signalMethod=|void|rowsMoved|QModelIndex,int,int,QModelIndex,int
+$signalMethod=|void|rowsMoved|const QModelIndex &,int,int,const QModelIndex &,int
 
 $prototype=void rowsRemoved( const QModelIndex & parent, int start, int end )
-$signalMethod=|void|rowsRemoved|QModelIndex,int,int
+$signalMethod=|void|rowsRemoved|const QModelIndex &,int,int
 
 #pragma ENDDUMP

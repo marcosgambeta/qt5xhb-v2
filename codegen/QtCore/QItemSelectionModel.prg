@@ -136,15 +136,15 @@ $virtualMethod=|void|clearCurrentIndex|
 %%
 
 $prototype=void selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
-$signalMethod=|void|selectionChanged|QItemSelection,QItemSelection
+$signalMethod=|void|selectionChanged|const QItemSelection &,const QItemSelection &
 
 $prototype=void currentChanged( const QModelIndex & current, const QModelIndex & previous )
-$signalMethod=|void|currentChanged|QModelIndex,QModelIndex
+$signalMethod=|void|currentChanged|const QModelIndex &,const QModelIndex &
 
 $prototype=void currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
-$signalMethod=|void|currentRowChanged|QModelIndex,QModelIndex
+$signalMethod=|void|currentRowChanged|const QModelIndex &,const QModelIndex &
 
 $prototype=void currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
-$signalMethod=|void|currentColumnChanged|QModelIndex,QModelIndex
+$signalMethod=|void|currentColumnChanged|const QModelIndex &,const QModelIndex &
 
 #pragma ENDDUMP
