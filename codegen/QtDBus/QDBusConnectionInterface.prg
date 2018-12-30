@@ -69,15 +69,15 @@ $prototype=QDBusReply<void> startService(const QString &name)
 %%
 
 $prototype=void serviceRegistered( const QString & service )
-$signalMethod=|void|serviceRegistered|QString
+$signalMethod=|void|serviceRegistered|const QString &
 
 $prototype=void serviceUnregistered( const QString & service )
-$signalMethod=|void|serviceUnregistered|QString
+$signalMethod=|void|serviceUnregistered|const QString &
 
 $prototype=void serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
-$signalMethod=|void|serviceOwnerChanged|QString,QString,QString
+$signalMethod=|void|serviceOwnerChanged|const QString &,const QString &,const QString &
 
 $prototype=void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
-$signalMethod=|void|callWithCallbackFailed|QDBusError,QDBusMessage
+$signalMethod=|void|callWithCallbackFailed|const QDBusError &,const QDBusMessage &
 
 #pragma ENDDUMP

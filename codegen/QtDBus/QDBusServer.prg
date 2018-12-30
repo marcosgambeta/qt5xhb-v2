@@ -59,6 +59,6 @@ $method=|QString|address|
 %%
 
 $prototype=void newConnection( const QDBusConnection & connection )
-$signalMethod=|void|newConnection|QDBusConnection
+$signalMethod=|void|newConnection|const QDBusConnection &
 
 #pragma ENDDUMP

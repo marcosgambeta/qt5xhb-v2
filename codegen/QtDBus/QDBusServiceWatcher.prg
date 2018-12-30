@@ -85,12 +85,12 @@ $method=|void|setConnection|const QDBusConnection &
 %%
 
 $prototype=void serviceRegistered( const QString & service )
-$signalMethod=|void|serviceRegistered|QString
+$signalMethod=|void|serviceRegistered|const QString &
 
 $prototype=void serviceUnregistered( const QString & service )
-$signalMethod=|void|serviceUnregistered|QString
+$signalMethod=|void|serviceUnregistered|const QString &
 
 $prototype=void serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
-$signalMethod=|void|serviceOwnerChanged|QString,QString,QString
+$signalMethod=|void|serviceOwnerChanged|const QString &,const QString &,const QString &
 
 #pragma ENDDUMP
