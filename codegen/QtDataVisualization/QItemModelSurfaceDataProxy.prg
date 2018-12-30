@@ -355,7 +355,7 @@ $prototype=void columnRoleReplaceChanged( const QString & replace )
 $signalMethod=|void|columnRoleReplaceChanged|const QString &
 
 $prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
-%% TODO: $signalMethod=|void|itemModelChanged|const QAbstractItemModel *
+$signalMethod=|void|itemModelChanged|const QAbstractItemModel *
 
 $prototype=void multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
 $signalMethod=|void|multiMatchBehaviorChanged|QItemModelSurfaceDataProxy::MultiMatchBehavior

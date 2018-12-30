@@ -217,7 +217,7 @@ $method=|void|remap|const QString &,const QString &,const QString &,const QStrin
 using namespace QtDataVisualization;
 
 $prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
-%% TODO: $signalMethod=|void|itemModelChanged|const QAbstractItemModel *
+$signalMethod=|void|itemModelChanged|const QAbstractItemModel *
 
 $prototype=void rotationRoleChanged( const QString & role )
 $signalMethod=|void|rotationRoleChanged|const QString &
