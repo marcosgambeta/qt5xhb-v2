@@ -836,7 +836,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
       if( Signals2_connection( sender, "axisLeftXChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::axisLeftXChanged, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::axisLeftXChanged, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisLeftXChanged(double)" );
 
           if( cb )
@@ -903,7 +906,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
       if( Signals2_connection( sender, "axisLeftYChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::axisLeftYChanged, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::axisLeftYChanged, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisLeftYChanged(double)" );
 
           if( cb )
@@ -970,7 +976,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
       if( Signals2_connection( sender, "axisRightXChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::axisRightXChanged, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::axisRightXChanged, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisRightXChanged(double)" );
 
           if( cb )
@@ -1037,7 +1046,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
       if( Signals2_connection( sender, "axisRightYChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::axisRightYChanged, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::axisRightYChanged, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisRightYChanged(double)" );
 
           if( cb )
@@ -1104,7 +1116,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
       if( Signals2_connection( sender, "buttonAChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonAChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonAChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonAChanged(bool)" );
 
           if( cb )
@@ -1171,7 +1186,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
       if( Signals2_connection( sender, "buttonBChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonBChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonBChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonBChanged(bool)" );
 
           if( cb )
@@ -1238,7 +1256,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
       if( Signals2_connection( sender, "buttonCenterChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonCenterChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonCenterChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonCenterChanged(bool)" );
 
           if( cb )
@@ -1305,7 +1326,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
       if( Signals2_connection( sender, "buttonDownChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonDownChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonDownChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonDownChanged(bool)" );
 
           if( cb )
@@ -1372,7 +1396,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
       if( Signals2_connection( sender, "buttonGuideChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonGuideChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonGuideChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonGuideChanged(bool)" );
 
           if( cb )
@@ -1439,7 +1466,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
       if( Signals2_connection( sender, "buttonL1Changed(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonL1Changed, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonL1Changed, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL1Changed(bool)" );
 
           if( cb )
@@ -1506,7 +1536,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
       if( Signals2_connection( sender, "buttonL2Changed(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonL2Changed, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonL2Changed, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL2Changed(double)" );
 
           if( cb )
@@ -1573,7 +1606,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
       if( Signals2_connection( sender, "buttonL3Changed(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonL3Changed, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonL3Changed, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL3Changed(bool)" );
 
           if( cb )
@@ -1640,7 +1676,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
       if( Signals2_connection( sender, "buttonLeftChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonLeftChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonLeftChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonLeftChanged(bool)" );
 
           if( cb )
@@ -1707,7 +1746,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
       if( Signals2_connection( sender, "buttonR1Changed(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonR1Changed, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonR1Changed, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR1Changed(bool)" );
 
           if( cb )
@@ -1774,7 +1816,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
       if( Signals2_connection( sender, "buttonR2Changed(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonR2Changed, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonR2Changed, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR2Changed(double)" );
 
           if( cb )
@@ -1841,7 +1886,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
       if( Signals2_connection( sender, "buttonR3Changed(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonR3Changed, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonR3Changed, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR3Changed(bool)" );
 
           if( cb )
@@ -1908,7 +1956,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
       if( Signals2_connection( sender, "buttonRightChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonRightChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonRightChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonRightChanged(bool)" );
 
           if( cb )
@@ -1975,7 +2026,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
       if( Signals2_connection( sender, "buttonSelectChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonSelectChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonSelectChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonSelectChanged(bool)" );
 
           if( cb )
@@ -2042,7 +2096,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
       if( Signals2_connection( sender, "buttonStartChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonStartChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonStartChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonStartChanged(bool)" );
 
           if( cb )
@@ -2109,7 +2166,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
       if( Signals2_connection( sender, "buttonUpChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonUpChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonUpChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonUpChanged(bool)" );
 
           if( cb )
@@ -2176,7 +2236,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
       if( Signals2_connection( sender, "buttonXChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonXChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonXChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonXChanged(bool)" );
 
           if( cb )
@@ -2243,7 +2306,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
       if( Signals2_connection( sender, "buttonYChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::buttonYChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::buttonYChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonYChanged(bool)" );
 
           if( cb )
@@ -2310,7 +2376,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
       if( Signals2_connection( sender, "connectedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::connectedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::connectedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connectedChanged(bool)" );
 
           if( cb )
@@ -2377,7 +2446,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
       if( Signals2_connection( sender, "deviceIdChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::deviceIdChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::deviceIdChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "deviceIdChanged(int)" );
 
           if( cb )
@@ -2444,7 +2516,10 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepad::nameChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepad::nameChanged, 
+                                                              [sender]
+                                                              (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
 
           if( cb )

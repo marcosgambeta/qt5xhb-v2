@@ -302,7 +302,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
       if( Signals2_connection( sender, "connectedGamepadsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::connectedGamepadsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::connectedGamepadsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connectedGamepadsChanged()" );
 
           if( cb )
@@ -367,7 +370,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
       if( Signals2_connection( sender, "gamepadConnected(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadConnected, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::gamepadConnected, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadConnected(int)" );
 
           if( cb )
@@ -434,7 +440,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
       if( Signals2_connection( sender, "gamepadDisconnected(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadDisconnected, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::gamepadDisconnected, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadDisconnected(int)" );
 
           if( cb )
@@ -501,7 +510,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
       if( Signals2_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadAxisEvent, [sender](int arg1, QGamepadManager::GamepadAxis arg2, double arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::gamepadAxisEvent, 
+                                                              [sender]
+                                                              (int arg1, QGamepadManager::GamepadAxis arg2, double arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
 
           if( cb )
@@ -572,7 +584,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
       if( Signals2_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadButtonPressEvent, [sender](int arg1, QGamepadManager::GamepadButton arg2, double arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::gamepadButtonPressEvent, 
+                                                              [sender]
+                                                              (int arg1, QGamepadManager::GamepadButton arg2, double arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
 
           if( cb )
@@ -643,7 +658,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
       if( Signals2_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::gamepadButtonReleaseEvent, [sender](int arg1, QGamepadManager::GamepadButton arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::gamepadButtonReleaseEvent, 
+                                                              [sender]
+                                                              (int arg1, QGamepadManager::GamepadButton arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
 
           if( cb )
@@ -712,7 +730,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
       if( Signals2_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::buttonConfigured, [sender](int arg1, QGamepadManager::GamepadButton arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::buttonConfigured, 
+                                                              [sender]
+                                                              (int arg1, QGamepadManager::GamepadButton arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
 
           if( cb )
@@ -781,7 +802,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
       if( Signals2_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::axisConfigured, [sender](int arg1, QGamepadManager::GamepadAxis arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::axisConfigured, 
+                                                              [sender]
+                                                              (int arg1, QGamepadManager::GamepadAxis arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
 
           if( cb )
@@ -850,7 +874,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
       if( Signals2_connection( sender, "configurationCanceled(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadManager::configurationCanceled, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadManager::configurationCanceled, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationCanceled(int)" );
 
           if( cb )

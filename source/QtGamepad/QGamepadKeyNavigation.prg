@@ -1171,7 +1171,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
       if( Signals2_connection( sender, "activeChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::activeChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::activeChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged(bool)" );
 
           if( cb )
@@ -1238,7 +1241,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
       if( Signals2_connection( sender, "gamepadChanged(QGamepad*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::gamepadChanged, [sender](QGamepad* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::gamepadChanged, 
+                                                              [sender]
+                                                              (QGamepad * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadChanged(QGamepad*)" );
 
           if( cb )
@@ -1305,7 +1311,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
       if( Signals2_connection( sender, "upKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::upKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::upKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "upKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1372,7 +1381,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
       if( Signals2_connection( sender, "downKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::downKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::downKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "downKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1439,7 +1451,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
       if( Signals2_connection( sender, "leftKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::leftKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::leftKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "leftKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1506,7 +1521,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
       if( Signals2_connection( sender, "rightKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::rightKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::rightKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rightKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1573,7 +1591,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
       if( Signals2_connection( sender, "buttonAKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonAKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonAKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonAKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1640,7 +1661,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
       if( Signals2_connection( sender, "buttonBKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonBKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonBKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonBKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1707,7 +1731,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
       if( Signals2_connection( sender, "buttonXKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonXKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonXKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonXKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1774,7 +1801,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
       if( Signals2_connection( sender, "buttonYKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonYKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonYKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonYKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1841,7 +1871,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
       if( Signals2_connection( sender, "buttonSelectKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonSelectKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonSelectKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonSelectKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1908,7 +1941,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
       if( Signals2_connection( sender, "buttonStartKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonStartKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonStartKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonStartKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -1975,7 +2011,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
       if( Signals2_connection( sender, "buttonGuideKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonGuideKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonGuideKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonGuideKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -2042,7 +2081,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
       if( Signals2_connection( sender, "buttonL1KeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonL1KeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonL1KeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL1KeyChanged(Qt::Key)" );
 
           if( cb )
@@ -2109,7 +2151,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
       if( Signals2_connection( sender, "buttonR1KeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonR1KeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonR1KeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR1KeyChanged(Qt::Key)" );
 
           if( cb )
@@ -2176,7 +2221,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
       if( Signals2_connection( sender, "buttonL2KeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonL2KeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonL2KeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL2KeyChanged(Qt::Key)" );
 
           if( cb )
@@ -2243,7 +2291,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
       if( Signals2_connection( sender, "buttonR2KeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonR2KeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonR2KeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR2KeyChanged(Qt::Key)" );
 
           if( cb )
@@ -2310,7 +2361,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
       if( Signals2_connection( sender, "buttonL3KeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonL3KeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonL3KeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL3KeyChanged(Qt::Key)" );
 
           if( cb )
@@ -2377,7 +2431,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
       if( Signals2_connection( sender, "buttonR3KeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGamepadKeyNavigation::buttonR3KeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGamepadKeyNavigation::buttonR3KeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR3KeyChanged(Qt::Key)" );
 
           if( cb )
