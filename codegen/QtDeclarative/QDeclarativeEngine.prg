@@ -116,6 +116,6 @@ $prototype=void quit()
 $signalMethod=|void|quit|
 
 $prototype=void warnings( const QList<QDeclarativeError> & warnings )
-$signalMethod=|void|warnings|QList<QDeclarativeError>
+$signalMethod=|void|warnings|const QList<QDeclarativeError> &
 
 #pragma ENDDUMP
