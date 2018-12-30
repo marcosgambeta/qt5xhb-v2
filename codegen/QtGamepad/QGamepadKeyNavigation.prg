@@ -236,7 +236,7 @@ $prototype=void activeChanged( bool isActive )
 $signalMethod=5,9,0|void|activeChanged|bool
 
 $prototype=void gamepadChanged( QGamepad * gamepad )
-$signalMethod=5,9,0|void|gamepadChanged|QGamepad*
+$signalMethod=5,9,0|void|gamepadChanged|QGamepad *
 
 $prototype=void upKeyChanged( Qt::Key key )
 $signalMethod=5,9,0|void|upKeyChanged|Qt::Key
