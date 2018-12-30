@@ -54,7 +54,6 @@ RETURN
 #endif
 
 #include <QDBusError>
-#include <QDBusConnection>
 
 /*
 QDBusServer(const QString &address, QObject *parent = 0)
@@ -186,7 +185,10 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
       if( Signals2_connection( sender, "newConnection(QDBusConnection)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDBusServer::newConnection, [sender](QDBusConnection arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDBusServer::newConnection, 
+                                                              [sender]
+                                                              (const QDBusConnection & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection(QDBusConnection)" );
 
           if( cb )

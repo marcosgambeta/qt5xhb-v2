@@ -99,7 +99,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
       if( Signals2_connection( sender, "serviceRegistered(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::serviceRegistered, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDBusConnectionInterface::serviceRegistered, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "serviceRegistered(QString)" );
 
           if( cb )
@@ -164,7 +167,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
       if( Signals2_connection( sender, "serviceUnregistered(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::serviceUnregistered, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDBusConnectionInterface::serviceUnregistered, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "serviceUnregistered(QString)" );
 
           if( cb )
@@ -229,7 +235,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
       if( Signals2_connection( sender, "serviceOwnerChanged(QString,QString,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::serviceOwnerChanged, [sender](QString arg1, QString arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDBusConnectionInterface::serviceOwnerChanged, 
+                                                              [sender]
+                                                              (const QString & arg1, const QString & arg2, const QString & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "serviceOwnerChanged(QString,QString,QString)" );
 
           if( cb )
@@ -298,7 +307,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
       if( Signals2_connection( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDBusConnectionInterface::callWithCallbackFailed, [sender](QDBusError arg1, QDBusMessage arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDBusConnectionInterface::callWithCallbackFailed, 
+                                                              [sender]
+                                                              (const QDBusError & arg1, const QDBusMessage & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
 
           if( cb )

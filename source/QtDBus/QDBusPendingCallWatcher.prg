@@ -148,7 +148,10 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
       if( Signals2_connection( sender, "finished(QDBusPendingCallWatcher*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDBusPendingCallWatcher::finished, [sender](QDBusPendingCallWatcher* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDBusPendingCallWatcher::finished, 
+                                                              [sender]
+                                                              (QDBusPendingCallWatcher * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QDBusPendingCallWatcher*)" );
 
           if( cb )
