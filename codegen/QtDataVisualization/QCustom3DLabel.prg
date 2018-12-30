@@ -138,7 +138,7 @@ $method=|void|setFacingCamera|bool
 using namespace QtDataVisualization;
 
 $prototype=void backgroundColorChanged( const QColor & color )
-$signalMethod=|void|backgroundColorChanged|QColor
+$signalMethod=|void|backgroundColorChanged|const QColor &
 
 $prototype=void backgroundEnabledChanged( bool enabled )
 $signalMethod=|void|backgroundEnabledChanged|bool
@@ -150,12 +150,12 @@ $prototype=void facingCameraChanged( bool enabled )
 $signalMethod=|void|facingCameraChanged|bool
 
 $prototype=void fontChanged( const QFont & font )
-$signalMethod=|void|fontChanged|QFont
+$signalMethod=|void|fontChanged|const QFont &
 
 $prototype=void textChanged( const QString & text )
-$signalMethod=|void|textChanged|QString
+$signalMethod=|void|textChanged|const QString &
 
 $prototype=void textColorChanged( const QColor & color )
-$signalMethod=|void|textColorChanged|QColor
+$signalMethod=|void|textColorChanged|const QColor &
 
 #pragma ENDDUMP

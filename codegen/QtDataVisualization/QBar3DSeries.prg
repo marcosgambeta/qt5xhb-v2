@@ -101,10 +101,10 @@ $staticMethod=|QPoint|invalidSelectionPosition|
 using namespace QtDataVisualization;
 
 $prototype=void dataProxyChanged( QBarDataProxy * proxy )
-$signalMethod=|void|dataProxyChanged|QBarDataProxy*
+$signalMethod=|void|dataProxyChanged|QBarDataProxy *
 
 $prototype=void selectedBarChanged( const QPoint & position )
-$signalMethod=|void|selectedBarChanged|QPoint
+$signalMethod=|void|selectedBarChanged|const QPoint &
 
 $prototype=void meshAngleChanged( float angle )
 $signalMethod=|void|meshAngleChanged|float

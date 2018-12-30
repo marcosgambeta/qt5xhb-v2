@@ -100,9 +100,9 @@ $prototype=void inputViewChanged( QAbstract3DInputHandler::InputView view )
 $signalMethod=|void|inputViewChanged|QAbstract3DInputHandler::InputView
 
 $prototype=void positionChanged( const QPoint & position )
-$signalMethod=|void|positionChanged|QPoint
+$signalMethod=|void|positionChanged|const QPoint &
 
 $prototype=void sceneChanged( Q3DScene * scene )
-$signalMethod=|void|sceneChanged|Q3DScene*
+$signalMethod=|void|sceneChanged|Q3DScene *
 
 #pragma ENDDUMP

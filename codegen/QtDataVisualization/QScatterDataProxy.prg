@@ -118,6 +118,6 @@ $prototype=void itemsRemoved( int startIndex, int count )
 $signalMethod=|void|itemsRemoved|int,int
 
 $prototype=void seriesChanged( QScatter3DSeries * series )
-$signalMethod=|void|seriesChanged|QScatter3DSeries*
+$signalMethod=|void|seriesChanged|QScatter3DSeries *
 
 #pragma ENDDUMP

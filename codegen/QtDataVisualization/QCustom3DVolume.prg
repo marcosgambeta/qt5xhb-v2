@@ -302,16 +302,16 @@ $prototype=void preserveOpacityChanged( bool enabled )
 $signalMethod=|void|preserveOpacityChanged|bool
 
 $prototype=void sliceFrameColorChanged( const QColor & color )
-$signalMethod=|void|sliceFrameColorChanged|QColor
+$signalMethod=|void|sliceFrameColorChanged|const QColor &
 
 $prototype=void sliceFrameGapsChanged( const QVector3D & values )
-$signalMethod=|void|sliceFrameGapsChanged|QVector3D
+$signalMethod=|void|sliceFrameGapsChanged|const QVector3D &
 
 $prototype=void sliceFrameThicknessesChanged( const QVector3D & values )
-$signalMethod=|void|sliceFrameThicknessesChanged|QVector3D
+$signalMethod=|void|sliceFrameThicknessesChanged|const QVector3D &
 
 $prototype=void sliceFrameWidthsChanged( const QVector3D & values )
-$signalMethod=|void|sliceFrameWidthsChanged|QVector3D
+$signalMethod=|void|sliceFrameWidthsChanged|const QVector3D &
 
 $prototype=void sliceIndexXChanged( int value )
 $signalMethod=|void|sliceIndexXChanged|int

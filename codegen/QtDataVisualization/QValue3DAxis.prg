@@ -100,10 +100,10 @@ $method=|void|setReversed|bool
 using namespace QtDataVisualization;
 
 $prototype=void formatterChanged( QValue3DAxisFormatter * formatter )
-%% TODO: $signalMethod=|void|formatterChanged|QValue3DAxisFormatter*
+%% TODO: $signalMethod=|void|formatterChanged|QValue3DAxisFormatter *
 
 $prototype=void labelFormatChanged( const QString & format )
-%% TODO: $signalMethod=|void|labelFormatChanged|QString
+%% TODO: $signalMethod=|void|labelFormatChanged|const QString &
 
 $prototype=void reversedChanged( bool enable )
 %% TODO: $signalMethod=|void|reversedChanged|bool

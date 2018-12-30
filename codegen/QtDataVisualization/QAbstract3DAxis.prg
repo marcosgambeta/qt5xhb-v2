@@ -142,7 +142,7 @@ $method=|void|setRange|float,float
 using namespace QtDataVisualization;
 
 $prototype=void titleChanged( const QString & newTitle )
-$signalMethod=|void|titleChanged|QString
+$signalMethod=|void|titleChanged|const QString &
 
 $prototype=void labelsChanged()
 $signalMethod=|void|labelsChanged|

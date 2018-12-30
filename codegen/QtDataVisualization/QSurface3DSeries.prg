@@ -140,7 +140,7 @@ $staticMethod=|QPoint|invalidSelectionPosition|
 using namespace QtDataVisualization;
 
 $prototype=void dataProxyChanged( QSurfaceDataProxy * proxy )
-$signalMethod=|void|dataProxyChanged|QSurfaceDataProxy*
+$signalMethod=|void|dataProxyChanged|QSurfaceDataProxy *
 
 $prototype=void drawModeChanged( QSurface3DSeries::DrawFlags mode )
 $signalMethod=|void|drawModeChanged|QSurface3DSeries::DrawFlags
@@ -152,12 +152,12 @@ $prototype=void flatShadingSupportedChanged( bool enable )
 $signalMethod=|void|flatShadingSupportedChanged|bool
 
 $prototype=void selectedPointChanged( const QPoint & position )
-$signalMethod=|void|selectedPointChanged|QPoint
+$signalMethod=|void|selectedPointChanged|const QPoint &
 
 $prototype=void textureChanged( const QImage & image )
-$signalMethod=|void|textureChanged|QImage
+$signalMethod=|void|textureChanged|const QImage &
 
 $prototype=void textureFileChanged( const QString & filename )
-$signalMethod=|void|textureFileChanged|QString
+$signalMethod=|void|textureFileChanged|const QString &
 
 #pragma ENDDUMP

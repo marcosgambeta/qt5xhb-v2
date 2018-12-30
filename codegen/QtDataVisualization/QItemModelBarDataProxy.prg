@@ -316,51 +316,51 @@ $prototype=void columnCategoriesChanged()
 $signalMethod=|void|columnCategoriesChanged|
 
 $prototype=void columnRoleChanged( const QString & role )
-$signalMethod=|void|columnRoleChanged|QString
+$signalMethod=|void|columnRoleChanged|const QString &
 
 $prototype=void columnRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|columnRolePatternChanged|QRegExp
+$signalMethod=|void|columnRolePatternChanged|const QRegExp &
 
 $prototype=void columnRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|columnRoleReplaceChanged|QString
+$signalMethod=|void|columnRoleReplaceChanged|const QString &
 
 $prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
-%% TODO: $signalMethod=|void|itemModelChanged|QAbstractItemModel*
+%% TODO: $signalMethod=|void|itemModelChanged|QAbstractItemModel *
 
 $prototype=void multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behavior )
 $signalMethod=|void|multiMatchBehaviorChanged|QItemModelBarDataProxy::MultiMatchBehavior
 
 $prototype=void rotationRoleChanged( const QString & role )
-$signalMethod=|void|rotationRoleChanged|QString
+$signalMethod=|void|rotationRoleChanged|const QString &
 
 $prototype=void rotationRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|rotationRolePatternChanged|QRegExp
+$signalMethod=|void|rotationRolePatternChanged|const QRegExp &
 
 $prototype=void rotationRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|rotationRoleReplaceChanged|QString
+$signalMethod=|void|rotationRoleReplaceChanged|const QString &
 
 $prototype=void rowCategoriesChanged()
 $signalMethod=|void|rowCategoriesChanged|
 
 $prototype=void rowRoleChanged( const QString & role )
-$signalMethod=|void|rowRoleChanged|QString
+$signalMethod=|void|rowRoleChanged|const QString &
 
 $prototype=void rowRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|rowRolePatternChanged|QRegExp
+$signalMethod=|void|rowRolePatternChanged|const QRegExp &
 
 $prototype=void rowRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|rowRoleReplaceChanged|QString
+$signalMethod=|void|rowRoleReplaceChanged|const QString &
 
 $prototype=void useModelCategoriesChanged( bool enable )
 $signalMethod=|void|useModelCategoriesChanged|bool
 
 $prototype=void valueRoleChanged( const QString & role )
-$signalMethod=|void|valueRoleChanged|QString
+$signalMethod=|void|valueRoleChanged|const QString &
 
 $prototype=void valueRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|valueRolePatternChanged|QRegExp
+$signalMethod=|void|valueRolePatternChanged|const QRegExp &
 
 $prototype=void valueRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|valueRoleReplaceChanged|QString
+$signalMethod=|void|valueRoleReplaceChanged|const QString &
 
 #pragma ENDDUMP

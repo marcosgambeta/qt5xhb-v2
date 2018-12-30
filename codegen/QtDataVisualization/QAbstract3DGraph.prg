@@ -307,10 +307,10 @@ $prototype=void wheelEvent(QWheelEvent *event) [protected]
 using namespace QtDataVisualization;
 
 $prototype=void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
-$signalMethod=|void|activeInputHandlerChanged|QAbstract3DInputHandler*
+$signalMethod=|void|activeInputHandlerChanged|QAbstract3DInputHandler *
 
 $prototype=void activeThemeChanged( Q3DTheme * theme )
-$signalMethod=|void|activeThemeChanged|Q3DTheme*
+$signalMethod=|void|activeThemeChanged|Q3DTheme *
 
 $prototype=void aspectRatioChanged( qreal ratio )
 $signalMethod=|void|aspectRatioChanged|qreal
@@ -322,7 +322,7 @@ $prototype=void horizontalAspectRatioChanged( qreal ratio )
 $signalMethod=|void|horizontalAspectRatioChanged|qreal
 
 $prototype=void localeChanged( const QLocale & locale )
-$signalMethod=|void|localeChanged|QLocale
+$signalMethod=|void|localeChanged|const QLocale &
 
 $prototype=void marginChanged( qreal margin )
 $signalMethod=|void|marginChanged|qreal
@@ -340,7 +340,7 @@ $prototype=void polarChanged( bool enabled )
 $signalMethod=|void|polarChanged|bool
 
 $prototype=void queriedGraphPositionChanged( const QVector3D & data )
-$signalMethod=|void|queriedGraphPositionChanged|QVector3D
+$signalMethod=|void|queriedGraphPositionChanged|const QVector3D &
 
 $prototype=void radialLabelOffsetChanged( float offset )
 $signalMethod=|void|radialLabelOffsetChanged|float

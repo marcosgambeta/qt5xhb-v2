@@ -111,18 +111,18 @@ $method=|QList<QValue3DAxis *>|axes|
 using namespace QtDataVisualization;
 
 $prototype=void axisXChanged( QValue3DAxis * axis )
-$signalMethod=|void|axisXChanged|QValue3DAxis*
+$signalMethod=|void|axisXChanged|QValue3DAxis *
 
 $prototype=void axisYChanged( QValue3DAxis * axis )
-$signalMethod=|void|axisYChanged|QValue3DAxis*
+$signalMethod=|void|axisYChanged|QValue3DAxis *
 
 $prototype=void axisZChanged( QValue3DAxis * axis )
-$signalMethod=|void|axisZChanged|QValue3DAxis*
+$signalMethod=|void|axisZChanged|QValue3DAxis *
 
 $prototype=void flipHorizontalGridChanged( bool flip )
 $signalMethod=|void|flipHorizontalGridChanged|bool
 
 $prototype=void selectedSeriesChanged( QSurface3DSeries * series )
-$signalMethod=|void|selectedSeriesChanged|QSurface3DSeries*
+$signalMethod=|void|selectedSeriesChanged|QSurface3DSeries *
 
 #pragma ENDDUMP

@@ -152,33 +152,33 @@ $staticMethod=|QPoint|invalidSelectionPoint|
 using namespace QtDataVisualization;
 
 $prototype=void activeCameraChanged( Q3DCamera * camera )
-$signalMethod=|void|activeCameraChanged|Q3DCamera*
+$signalMethod=|void|activeCameraChanged|Q3DCamera *
 
 $prototype=void activeLightChanged( Q3DLight * light )
-$signalMethod=|void|activeLightChanged|Q3DLight*
+$signalMethod=|void|activeLightChanged|Q3DLight *
 
 $prototype=void devicePixelRatioChanged( float pixelRatio )
 $signalMethod=|void|devicePixelRatioChanged|float
 
 $prototype=void graphPositionQueryChanged( const QPoint & position )
-$signalMethod=|void|graphPositionQueryChanged|QPoint
+$signalMethod=|void|graphPositionQueryChanged|const QPoint &
 
 $prototype=void primarySubViewportChanged( const QRect & subViewport )
-$signalMethod=|void|primarySubViewportChanged|QRect
+$signalMethod=|void|primarySubViewportChanged|const QRect &
 
 $prototype=void secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 $signalMethod=|void|secondarySubviewOnTopChanged|bool
 
 $prototype=void secondarySubViewportChanged( const QRect & subViewport )
-$signalMethod=|void|secondarySubViewportChanged|QRect
+$signalMethod=|void|secondarySubViewportChanged|const QRect &
 
 $prototype=void selectionQueryPositionChanged( const QPoint & position )
-$signalMethod=|void|selectionQueryPositionChanged|QPoint
+$signalMethod=|void|selectionQueryPositionChanged|const QPoint &
 
 $prototype=void slicingActiveChanged( bool isSlicingActive )
 $signalMethod=|void|slicingActiveChanged|bool
 
 $prototype=void viewportChanged( const QRect & viewport )
-$signalMethod=|void|viewportChanged|QRect
+$signalMethod=|void|viewportChanged|const QRect &
 
 #pragma ENDDUMP

@@ -181,6 +181,6 @@ $prototype=void rowsRemoved( int startIndex, int count )
 $signalMethod=|void|rowsRemoved|int,int
 
 $prototype=void seriesChanged( QSurface3DSeries * series )
-$signalMethod=|void|seriesChanged|QSurface3DSeries*
+$signalMethod=|void|seriesChanged|QSurface3DSeries *
 
 #pragma ENDDUMP

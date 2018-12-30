@@ -101,15 +101,15 @@ $method=|QList<QValue3DAxis *>|axes|
 using namespace QtDataVisualization;
 
 $prototype=void axisXChanged( QValue3DAxis * axis )
-$signalMethod=|void|axisXChanged|QValue3DAxis*
+$signalMethod=|void|axisXChanged|QValue3DAxis *
 
 $prototype=void axisYChanged( QValue3DAxis * axis )
-$signalMethod=|void|axisYChanged|QValue3DAxis*
+$signalMethod=|void|axisYChanged|QValue3DAxis *
 
 $prototype=void axisZChanged( QValue3DAxis * axis )
-$signalMethod=|void|axisZChanged|QValue3DAxis*
+$signalMethod=|void|axisZChanged|QValue3DAxis *
 
 $prototype=void selectedSeriesChanged( QScatter3DSeries * series )
-$signalMethod=|void|selectedSeriesChanged|QScatter3DSeries*
+$signalMethod=|void|selectedSeriesChanged|QScatter3DSeries *
 
 #pragma ENDDUMP

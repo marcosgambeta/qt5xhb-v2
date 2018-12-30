@@ -294,34 +294,34 @@ $prototype=void ambientLightStrengthChanged( float strength )
 $signalMethod=|void|ambientLightStrengthChanged|float
 
 $prototype=void backgroundColorChanged( const QColor & color )
-$signalMethod=|void|backgroundColorChanged|QColor
+$signalMethod=|void|backgroundColorChanged|const QColor &
 
 $prototype=void backgroundEnabledChanged( bool enabled )
 $signalMethod=|void|backgroundEnabledChanged|bool
 
 $prototype=void baseColorsChanged( const QList<QColor> & colors )
-$signalMethod=|void|baseColorsChanged|QList<QColor>
+$signalMethod=|void|baseColorsChanged|const QList<QColor> &
 
 $prototype=void baseGradientsChanged( const QList<QLinearGradient> & gradients )
-$signalMethod=|void|baseGradientsChanged|QList<QLinearGradient>
+$signalMethod=|void|baseGradientsChanged|const QList<QLinearGradient> &
 
 $prototype=void colorStyleChanged( Q3DTheme::ColorStyle style )
 $signalMethod=|void|colorStyleChanged|Q3DTheme::ColorStyle
 
 $prototype=void fontChanged( const QFont & font )
-$signalMethod=|void|fontChanged|QFont
+$signalMethod=|void|fontChanged|const QFont &
 
 $prototype=void gridEnabledChanged( bool enabled )
 $signalMethod=|void|gridEnabledChanged|bool
 
 $prototype=void gridLineColorChanged( const QColor & color )
-$signalMethod=|void|gridLineColorChanged|QColor
+$signalMethod=|void|gridLineColorChanged|const QColor &
 
 $prototype=void highlightLightStrengthChanged( float strength )
 $signalMethod=|void|highlightLightStrengthChanged|float
 
 $prototype=void labelBackgroundColorChanged( const QColor & color )
-$signalMethod=|void|labelBackgroundColorChanged|QColor
+$signalMethod=|void|labelBackgroundColorChanged|const QColor &
 
 $prototype=void labelBackgroundEnabledChanged( bool enabled )
 $signalMethod=|void|labelBackgroundEnabledChanged|bool
@@ -330,30 +330,30 @@ $prototype=void labelBorderEnabledChanged( bool enabled )
 $signalMethod=|void|labelBorderEnabledChanged|bool
 
 $prototype=void labelTextColorChanged( const QColor & color )
-$signalMethod=|void|labelTextColorChanged|QColor
+$signalMethod=|void|labelTextColorChanged|const QColor &
 
 $prototype=void lightColorChanged( const QColor & color )
-$signalMethod=|void|lightColorChanged|QColor
+$signalMethod=|void|lightColorChanged|const QColor &
 
 $prototype=void lightStrengthChanged( float strength )
 $signalMethod=|void|lightStrengthChanged|float
 
 $prototype=void multiHighlightColorChanged( const QColor & color )
-$signalMethod=|void|multiHighlightColorChanged|QColor
+$signalMethod=|void|multiHighlightColorChanged|const QColor &
 
 $prototype=void multiHighlightGradientChanged( const QLinearGradient & gradient )
-$signalMethod=|void|multiHighlightGradientChanged|QLinearGradient
+$signalMethod=|void|multiHighlightGradientChanged|const QLinearGradient &
 
 $prototype=void singleHighlightColorChanged( const QColor & color )
-$signalMethod=|void|singleHighlightColorChanged|QColor
+$signalMethod=|void|singleHighlightColorChanged|const QColor &
 
 $prototype=void singleHighlightGradientChanged( const QLinearGradient & gradient )
-$signalMethod=|void|singleHighlightGradientChanged|QLinearGradient
+$signalMethod=|void|singleHighlightGradientChanged|const QLinearGradient &
 
 $prototype=void typeChanged( Q3DTheme::Theme themeType )
 $signalMethod=|void|typeChanged|Q3DTheme::Theme
 
 $prototype=void windowColorChanged( const QColor & color )
-$signalMethod=|void|windowColorChanged|QColor
+$signalMethod=|void|windowColorChanged|const QColor &
 
 #pragma ENDDUMP

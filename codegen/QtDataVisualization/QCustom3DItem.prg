@@ -166,28 +166,28 @@ $method=|void|setTextureImage|const QImage &
 using namespace QtDataVisualization;
 
 $prototype=void meshFileChanged( const QString & meshFile )
-$signalMethod=|void|meshFileChanged|QString
+$signalMethod=|void|meshFileChanged|const QString &
 
 $prototype=void positionAbsoluteChanged( bool positionAbsolute )
 $signalMethod=|void|positionAbsoluteChanged|bool
 
 $prototype=void positionChanged( const QVector3D & position )
-$signalMethod=|void|positionChanged|QVector3D
+$signalMethod=|void|positionChanged|const QVector3D &
 
 $prototype=void rotationChanged( const QQuaternion & rotation )
-$signalMethod=|void|rotationChanged|QQuaternion
+$signalMethod=|void|rotationChanged|const QQuaternion &
 
 $prototype=void scalingAbsoluteChanged( bool scalingAbsolute )
 $signalMethod=|void|scalingAbsoluteChanged|bool
 
 $prototype=void scalingChanged( const QVector3D & scaling )
-$signalMethod=|void|scalingChanged|QVector3D
+$signalMethod=|void|scalingChanged|const QVector3D &
 
 $prototype=void shadowCastingChanged( bool shadowCasting )
 $signalMethod=|void|shadowCastingChanged|bool
 
 $prototype=void textureFileChanged( const QString & textureFile )
-$signalMethod=|void|textureFileChanged|QString
+$signalMethod=|void|textureFileChanged|const QString &
 
 $prototype=void visibleChanged( bool visible )
 $signalMethod=|void|visibleChanged|bool

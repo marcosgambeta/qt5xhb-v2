@@ -368,6 +368,6 @@ $prototype=void rowsRemoved( int startIndex, int count )
 $signalMethod=|void|rowsRemoved|int,int
 
 $prototype=void seriesChanged( QBar3DSeries * series )
-$signalMethod=|void|seriesChanged|QBar3DSeries*
+$signalMethod=|void|seriesChanged|QBar3DSeries *
 
 #pragma ENDDUMP

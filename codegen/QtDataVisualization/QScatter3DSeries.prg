@@ -103,7 +103,7 @@ $staticMethod=|int|invalidSelectionIndex|
 using namespace QtDataVisualization;
 
 $prototype=void dataProxyChanged( QScatterDataProxy * proxy )
-$signalMethod=|void|dataProxyChanged|QScatterDataProxy*
+$signalMethod=|void|dataProxyChanged|QScatterDataProxy *
 
 $prototype=void itemSizeChanged( float size )
 $signalMethod=|void|itemSizeChanged|float

@@ -217,42 +217,42 @@ $method=|void|remap|const QString &,const QString &,const QString &,const QStrin
 using namespace QtDataVisualization;
 
 $prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
-%% TODO: $signalMethod=|void|itemModelChanged|QAbstractItemModel*
+%% TODO: $signalMethod=|void|itemModelChanged|const QAbstractItemModel *
 
 $prototype=void rotationRoleChanged( const QString & role )
-$signalMethod=|void|rotationRoleChanged|QString
+$signalMethod=|void|rotationRoleChanged|const QString &
 
 $prototype=void rotationRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|rotationRolePatternChanged|QRegExp
+$signalMethod=|void|rotationRolePatternChanged|const QRegExp &
 
 $prototype=void rotationRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|rotationRoleReplaceChanged|QString
+$signalMethod=|void|rotationRoleReplaceChanged|const QString &
 
 $prototype=void xPosRoleChanged( const QString & role )
-$signalMethod=|void|xPosRoleChanged|QString
+$signalMethod=|void|xPosRoleChanged|const QString &
 
 $prototype=void xPosRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|xPosRolePatternChanged|QRegExp
+$signalMethod=|void|xPosRolePatternChanged|const QRegExp &
 
 $prototype=void xPosRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|xPosRoleReplaceChanged|QString
+$signalMethod=|void|xPosRoleReplaceChanged|const QString &
 
 $prototype=void yPosRoleChanged( const QString & role )
-$signalMethod=|void|yPosRoleChanged|QString
+$signalMethod=|void|yPosRoleChanged|const QString &
 
 $prototype=void yPosRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|yPosRolePatternChanged|QRegExp
+$signalMethod=|void|yPosRolePatternChanged|const QRegExp &
 
 $prototype=void yPosRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|yPosRoleReplaceChanged|QString
+$signalMethod=|void|yPosRoleReplaceChanged|const QString &
 
 $prototype=void zPosRoleChanged( const QString & role )
-$signalMethod=|void|zPosRoleChanged|QString
+$signalMethod=|void|zPosRoleChanged|const QString &
 
 $prototype=void zPosRolePatternChanged( const QRegExp & pattern )
-$signalMethod=|void|zPosRolePatternChanged|QRegExp
+$signalMethod=|void|zPosRolePatternChanged|const QRegExp &
 
 $prototype=void zPosRoleReplaceChanged( const QString & replace )
-$signalMethod=|void|zPosRoleReplaceChanged|QString
+$signalMethod=|void|zPosRoleReplaceChanged|const QString &
 
 #pragma ENDDUMP

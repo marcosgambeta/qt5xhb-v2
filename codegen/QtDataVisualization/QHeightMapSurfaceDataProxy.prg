@@ -141,10 +141,10 @@ $method=|void|setValueRanges|float,float,float,float
 using namespace QtDataVisualization;
 
 $prototype=void heightMapChanged( const QImage & image )
-$signalMethod=|void|heightMapChanged|QImage
+$signalMethod=|void|heightMapChanged|const QImage &
 
 $prototype=void heightMapFileChanged( const QString & filename )
-$signalMethod=|void|heightMapFileChanged|QString
+$signalMethod=|void|heightMapFileChanged|const QString &
 
 $prototype=void minXValueChanged( float value )
 $signalMethod=|void|minXValueChanged|float

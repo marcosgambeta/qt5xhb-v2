@@ -170,25 +170,25 @@ $prototype=void barThicknessChanged( float thicknessRatio )
 $signalMethod=|void|barThicknessChanged|float
 
 $prototype=void barSpacingChanged( const QSizeF & spacing )
-$signalMethod=|void|barSpacingChanged|QSizeF
+$signalMethod=|void|barSpacingChanged|const QSizeF &
 
 $prototype=void barSpacingRelativeChanged( bool relative )
 $signalMethod=|void|barSpacingRelativeChanged|bool
 
 $prototype=void rowAxisChanged( QCategory3DAxis * axis )
-$signalMethod=|void|rowAxisChanged|QCategory3DAxis*
+$signalMethod=|void|rowAxisChanged|QCategory3DAxis *
 
 $prototype=void columnAxisChanged( QCategory3DAxis * axis )
-$signalMethod=|void|columnAxisChanged|QCategory3DAxis*
+$signalMethod=|void|columnAxisChanged|QCategory3DAxis *
 
 $prototype=void valueAxisChanged( QValue3DAxis * axis )
-$signalMethod=|void|valueAxisChanged|QValue3DAxis*
+$signalMethod=|void|valueAxisChanged|QValue3DAxis *
 
 $prototype=void primarySeriesChanged( QBar3DSeries * series )
-$signalMethod=|void|primarySeriesChanged|QBar3DSeries*
+$signalMethod=|void|primarySeriesChanged|QBar3DSeries *
 
 $prototype=void selectedSeriesChanged( QBar3DSeries * series )
-$signalMethod=|void|selectedSeriesChanged|QBar3DSeries*
+$signalMethod=|void|selectedSeriesChanged|QBar3DSeries *
 
 $prototype=void floorLevelChanged( float level )
 $signalMethod=|void|floorLevelChanged|float

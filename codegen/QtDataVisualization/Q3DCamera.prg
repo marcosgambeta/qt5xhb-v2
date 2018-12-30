@@ -151,7 +151,7 @@ $prototype=void minZoomLevelChanged( float zoomLevel )
 $signalMethod=|void|minZoomLevelChanged|float
 
 $prototype=void targetChanged( const QVector3D & target )
-$signalMethod=|void|targetChanged|QVector3D
+$signalMethod=|void|targetChanged|const QVector3D &
 
 $prototype=void wrapXRotationChanged( bool isEnabled )
 $signalMethod=|void|wrapXRotationChanged|bool
