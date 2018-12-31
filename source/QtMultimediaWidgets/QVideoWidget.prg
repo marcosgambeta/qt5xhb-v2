@@ -466,7 +466,10 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
       if( Signals2_connection( sender, "fullScreenChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWidget::fullScreenChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWidget::fullScreenChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fullScreenChanged(bool)" );
 
           if( cb )
@@ -531,7 +534,10 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
       if( Signals2_connection( sender, "brightnessChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWidget::brightnessChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWidget::brightnessChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brightnessChanged(int)" );
 
           if( cb )
@@ -596,7 +602,10 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
       if( Signals2_connection( sender, "contrastChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWidget::contrastChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWidget::contrastChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contrastChanged(int)" );
 
           if( cb )
@@ -661,7 +670,10 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
       if( Signals2_connection( sender, "hueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWidget::hueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWidget::hueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hueChanged(int)" );
 
           if( cb )
@@ -726,7 +738,10 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
       if( Signals2_connection( sender, "saturationChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWidget::saturationChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWidget::saturationChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "saturationChanged(int)" );
 
           if( cb )

@@ -363,7 +363,10 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
       if( Signals2_connection( sender, "nativeSizeChanged(QSizeF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsVideoItem::nativeSizeChanged, [sender](QSizeF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsVideoItem::nativeSizeChanged, 
+                                                              [sender]
+                                                              (const QSizeF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nativeSizeChanged(QSizeF)" );
 
           if( cb )
