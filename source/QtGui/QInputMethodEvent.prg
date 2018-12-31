@@ -19,6 +19,8 @@ CLASS QInputMethodEvent INHERIT QEvent
 
    METHOD new
    METHOD delete
+   METHOD commitString
+   METHOD preeditString
    METHOD replacementLength
    METHOD replacementStart
    METHOD setCommitString
@@ -112,10 +114,50 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 /*
 const QString & commitString () const
 */
+HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
+{
+  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->commitString () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 const QString & preeditString () const
 */
+HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
+{
+  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->preeditString () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 int replacementLength () const

@@ -26,6 +26,12 @@ CLASS QAccessibleActionInterface
    METHOD localizedActionDescription
    METHOD doAction
    METHOD keyBindingsForAction
+   METHOD pressAction
+   METHOD increaseAction
+   METHOD decreaseAction
+   METHOD showMenuAction
+   METHOD setFocusAction
+   METHOD toggleAction
 
    METHOD newFrom
    METHOD newFromObject
@@ -202,26 +208,116 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
 /*
 static const QString &pressAction()
 */
+HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QAccessibleActionInterface::pressAction () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 static const QString &increaseAction()
 */
+HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QAccessibleActionInterface::increaseAction () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 static const QString &decreaseAction()
 */
+HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QAccessibleActionInterface::decreaseAction () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 static const QString &showMenuAction()
 */
+HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QAccessibleActionInterface::showMenuAction () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 static const QString &setFocusAction()
 */
+HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QAccessibleActionInterface::setFocusAction () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 static const QString &toggleAction()
 */
+HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_TOGGLEACTION )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QAccessibleActionInterface::toggleAction () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_NEWFROM )
 {
