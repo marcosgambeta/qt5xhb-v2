@@ -243,7 +243,10 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceReply::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceReply::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -308,7 +311,10 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
       if( Signals2_connection( sender, "error(QPlaceReply::Error,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error), [sender](QPlaceReply::Error arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error), 
+                                                              [sender]
+                                                              (QPlaceReply::Error arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QPlaceReply::Error,QString)" );
 
           if( cb )

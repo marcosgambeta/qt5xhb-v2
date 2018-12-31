@@ -728,7 +728,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONFINISHED )
       if( Signals2_connection( sender, "finished(QPlaceReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::finished, [sender](QPlaceReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::finished, 
+                                                              [sender]
+                                                              (QPlaceReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QPlaceReply*)" );
 
           if( cb )
@@ -795,7 +798,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONERROR )
       if( Signals2_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::error, [sender](QPlaceReply* arg1, QPlaceReply::Error arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::error, 
+                                                              [sender]
+                                                              (QPlaceReply * arg1, QPlaceReply::Error arg2, const QString & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
 
           if( cb )
@@ -866,7 +872,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEADDED )
       if( Signals2_connection( sender, "placeAdded(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::placeAdded, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::placeAdded, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "placeAdded(QString)" );
 
           if( cb )
@@ -933,7 +942,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEUPDATED )
       if( Signals2_connection( sender, "placeUpdated(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::placeUpdated, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::placeUpdated, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "placeUpdated(QString)" );
 
           if( cb )
@@ -1000,7 +1012,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEREMOVED )
       if( Signals2_connection( sender, "placeRemoved(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::placeRemoved, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::placeRemoved, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "placeRemoved(QString)" );
 
           if( cb )
@@ -1067,7 +1082,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYADDED )
       if( Signals2_connection( sender, "categoryAdded(QPlaceCategory,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::categoryAdded, [sender](QPlaceCategory arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::categoryAdded, 
+                                                              [sender]
+                                                              (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryAdded(QPlaceCategory,QString)" );
 
           if( cb )
@@ -1136,7 +1154,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYUPDATED )
       if( Signals2_connection( sender, "categoryUpdated(QPlaceCategory,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::categoryUpdated, [sender](QPlaceCategory arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::categoryUpdated, 
+                                                              [sender]
+                                                              (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryUpdated(QPlaceCategory,QString)" );
 
           if( cb )
@@ -1205,7 +1226,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYREMOVED )
       if( Signals2_connection( sender, "categoryRemoved(QString,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::categoryRemoved, [sender](QString arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::categoryRemoved, 
+                                                              [sender]
+                                                              (const QString & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryRemoved(QString,QString)" );
 
           if( cb )
@@ -1274,7 +1298,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONDATACHANGED )
       if( Signals2_connection( sender, "dataChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlaceManagerEngine::dataChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlaceManagerEngine::dataChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataChanged()" );
 
           if( cb )

@@ -474,7 +474,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
       if( Signals2_connection( sender, "finished(QGeoRouteReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoRoutingManagerEngine::finished, [sender](QGeoRouteReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoRoutingManagerEngine::finished, 
+                                                              [sender]
+                                                              (QGeoRouteReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QGeoRouteReply*)" );
 
           if( cb )
@@ -541,7 +544,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
       if( Signals2_connection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoRoutingManagerEngine::error, [sender](QGeoRouteReply* arg1, QGeoRouteReply::Error arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoRoutingManagerEngine::error, 
+                                                              [sender]
+                                                              (QGeoRouteReply * arg1, QGeoRouteReply::Error arg2, QString arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
 
           if( cb )

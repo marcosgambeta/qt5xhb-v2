@@ -282,7 +282,10 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
       if( Signals2_connection( sender, "finished(QGeoCodeReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoCodingManagerEngine::finished, [sender](QGeoCodeReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoCodingManagerEngine::finished, 
+                                                              [sender]
+                                                              (QGeoCodeReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QGeoCodeReply*)" );
 
           if( cb )
@@ -349,7 +352,10 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
       if( Signals2_connection( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoCodingManagerEngine::error, [sender](QGeoCodeReply* arg1, QGeoCodeReply::Error arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoCodingManagerEngine::error, 
+                                                              [sender]
+                                                              (QGeoCodeReply * arg1, QGeoCodeReply::Error arg2, QString arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
 
           if( cb )
