@@ -488,7 +488,10 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
       if( Signals2_connection( sender, "digitalZoomChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocus::digitalZoomChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocus::digitalZoomChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "digitalZoomChanged(qreal)" );
 
           if( cb )
@@ -553,7 +556,10 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
       if( Signals2_connection( sender, "focusZonesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocus::focusZonesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocus::focusZonesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusZonesChanged()" );
 
           if( cb )
@@ -616,7 +622,10 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
       if( Signals2_connection( sender, "maximumDigitalZoomChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocus::maximumDigitalZoomChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocus::maximumDigitalZoomChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maximumDigitalZoomChanged(qreal)" );
 
           if( cb )
@@ -681,7 +690,10 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
       if( Signals2_connection( sender, "maximumOpticalZoomChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocus::maximumOpticalZoomChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocus::maximumOpticalZoomChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maximumOpticalZoomChanged(qreal)" );
 
           if( cb )
@@ -746,7 +758,10 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
       if( Signals2_connection( sender, "opticalZoomChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocus::opticalZoomChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocus::opticalZoomChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opticalZoomChanged(qreal)" );
 
           if( cb )

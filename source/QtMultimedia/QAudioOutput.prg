@@ -664,7 +664,10 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
       if( Signals2_connection( sender, "notify()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioOutput::notify, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioOutput::notify, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "notify()" );
 
           if( cb )
@@ -727,7 +730,10 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QAudio::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioOutput::stateChanged, [sender](QAudio::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioOutput::stateChanged, 
+                                                              [sender]
+                                                              (QAudio::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAudio::State)" );
 
           if( cb )

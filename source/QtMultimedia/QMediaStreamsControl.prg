@@ -216,7 +216,10 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
       if( Signals2_connection( sender, "activeStreamsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaStreamsControl::activeStreamsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaStreamsControl::activeStreamsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeStreamsChanged()" );
 
           if( cb )
@@ -279,7 +282,10 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
       if( Signals2_connection( sender, "streamsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaStreamsControl::streamsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaStreamsControl::streamsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "streamsChanged()" );
 
           if( cb )

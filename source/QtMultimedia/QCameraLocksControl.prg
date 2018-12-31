@@ -190,7 +190,10 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
       if( Signals2_connection( sender, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraLocksControl::lockStatusChanged, [sender](QCamera::LockType arg1, QCamera::LockStatus arg2, QCamera::LockChangeReason arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraLocksControl::lockStatusChanged, 
+                                                              [sender]
+                                                              (QCamera::LockType arg1, QCamera::LockStatus arg2, QCamera::LockChangeReason arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
 
           if( cb )

@@ -335,7 +335,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
       if( Signals2_connection( sender, "activeChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::activeChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractVideoSurface::activeChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged(bool)" );
 
           if( cb )
@@ -400,7 +403,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
       if( Signals2_connection( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::surfaceFormatChanged, [sender](QVideoSurfaceFormat arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractVideoSurface::surfaceFormatChanged, 
+                                                              [sender]
+                                                              (const QVideoSurfaceFormat & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" );
 
           if( cb )
@@ -465,7 +471,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
       if( Signals2_connection( sender, "supportedFormatsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::supportedFormatsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractVideoSurface::supportedFormatsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "supportedFormatsChanged()" );
 
           if( cb )
@@ -528,7 +537,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
       if( Signals2_connection( sender, "nativeResolutionChanged(QSize)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoSurface::nativeResolutionChanged, [sender](QSize arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractVideoSurface::nativeResolutionChanged, 
+                                                              [sender]
+                                                              (const QSize & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nativeResolutionChanged(QSize)" );
 
           if( cb )

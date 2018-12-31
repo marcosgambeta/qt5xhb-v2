@@ -268,7 +268,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
       if( Signals2_connection( sender, "captureModeChanged(QCamera::CaptureModes)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraControl::captureModeChanged, [sender](QCamera::CaptureModes arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraControl::captureModeChanged, 
+                                                              [sender]
+                                                              (QCamera::CaptureModes arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "captureModeChanged(QCamera::CaptureModes)" );
 
           if( cb )
@@ -333,7 +336,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
       if( Signals2_connection( sender, "error(int,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraControl::error, [sender](int arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraControl::error, 
+                                                              [sender]
+                                                              (int arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString)" );
 
           if( cb )
@@ -400,7 +406,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QCamera::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraControl::stateChanged, [sender](QCamera::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraControl::stateChanged, 
+                                                              [sender]
+                                                              (QCamera::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QCamera::State)" );
 
           if( cb )
@@ -465,7 +474,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QCamera::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraControl::statusChanged, [sender](QCamera::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraControl::statusChanged, 
+                                                              [sender]
+                                                              (QCamera::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QCamera::Status)" );
 
           if( cb )

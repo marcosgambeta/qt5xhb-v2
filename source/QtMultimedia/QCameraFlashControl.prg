@@ -188,7 +188,10 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
       if( Signals2_connection( sender, "flashReady(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFlashControl::flashReady, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFlashControl::flashReady, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flashReady(bool)" );
 
           if( cb )

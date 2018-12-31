@@ -1165,7 +1165,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
       if( Signals2_connection( sender, "actualLocationChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::actualLocationChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::actualLocationChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actualLocationChanged(QUrl)" );
 
           if( cb )
@@ -1230,7 +1233,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
       if( Signals2_connection( sender, "availabilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<bool>::of(&QMediaRecorder::availabilityChanged), [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<bool>::of(&QMediaRecorder::availabilityChanged), 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availabilityChanged(bool)" );
 
           if( cb )
@@ -1295,7 +1301,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
       if( Signals2_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaRecorder::availabilityChanged), [sender](QMultimedia::AvailabilityStatus arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaRecorder::availabilityChanged), 
+                                                              [sender]
+                                                              (QMultimedia::AvailabilityStatus arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
           if( cb )
@@ -1360,7 +1369,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::durationChanged, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::durationChanged, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
 
           if( cb )
@@ -1425,7 +1437,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
       if( Signals2_connection( sender, "error(QMediaRecorder::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QMediaRecorder::Error>::of(&QMediaRecorder::error), [sender](QMediaRecorder::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QMediaRecorder::Error>::of(&QMediaRecorder::error), 
+                                                              [sender]
+                                                              (QMediaRecorder::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QMediaRecorder::Error)" );
 
           if( cb )
@@ -1490,7 +1505,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::metaDataAvailableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::metaDataAvailableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataAvailableChanged(bool)" );
 
           if( cb )
@@ -1555,7 +1573,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
       if( Signals2_connection( sender, "metaDataChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<>::of(&QMediaRecorder::metaDataChanged), [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<>::of(&QMediaRecorder::metaDataChanged), 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged()" );
 
           if( cb )
@@ -1618,7 +1639,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &,const QVariant &>::of(&QMediaRecorder::metaDataChanged), [sender](QString arg1, QVariant arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &,const QVariant &>::of(&QMediaRecorder::metaDataChanged), 
+                                                              [sender]
+                                                              (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged(QString,QVariant)" );
 
           if( cb )
@@ -1685,7 +1709,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
       if( Signals2_connection( sender, "metaDataWritableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::metaDataWritableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::metaDataWritableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataWritableChanged(bool)" );
 
           if( cb )
@@ -1750,7 +1777,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::mutedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::mutedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged(bool)" );
 
           if( cb )
@@ -1815,7 +1845,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QMediaRecorder::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::stateChanged, [sender](QMediaRecorder::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::stateChanged, 
+                                                              [sender]
+                                                              (QMediaRecorder::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QMediaRecorder::State)" );
 
           if( cb )
@@ -1880,7 +1913,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QMediaRecorder::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::statusChanged, [sender](QMediaRecorder::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::statusChanged, 
+                                                              [sender]
+                                                              (QMediaRecorder::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QMediaRecorder::Status)" );
 
           if( cb )
@@ -1945,7 +1981,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
       if( Signals2_connection( sender, "volumeChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaRecorder::volumeChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaRecorder::volumeChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(qreal)" );
 
           if( cb )

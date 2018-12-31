@@ -352,7 +352,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
       if( Signals2_connection( sender, "customFocusPointChanged(QPointF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::customFocusPointChanged, [sender](QPointF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocusControl::customFocusPointChanged, 
+                                                              [sender]
+                                                              (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "customFocusPointChanged(QPointF)" );
 
           if( cb )
@@ -417,7 +420,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
       if( Signals2_connection( sender, "focusModeChanged(QCameraFocus::FocusModes)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::focusModeChanged, [sender](QCameraFocus::FocusModes arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocusControl::focusModeChanged, 
+                                                              [sender]
+                                                              (QCameraFocus::FocusModes arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusModeChanged(QCameraFocus::FocusModes)" );
 
           if( cb )
@@ -482,7 +488,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
       if( Signals2_connection( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::focusPointModeChanged, [sender](QCameraFocus::FocusPointMode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocusControl::focusPointModeChanged, 
+                                                              [sender]
+                                                              (QCameraFocus::FocusPointMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
 
           if( cb )
@@ -547,7 +556,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
       if( Signals2_connection( sender, "focusZonesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraFocusControl::focusZonesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraFocusControl::focusZonesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusZonesChanged()" );
 
           if( cb )

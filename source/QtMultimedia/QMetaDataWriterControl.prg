@@ -218,7 +218,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
       if( Signals2_connection( sender, "metaDataChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<>::of(&QMetaDataWriterControl::metaDataChanged), [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<>::of(&QMetaDataWriterControl::metaDataChanged), 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged()" );
 
           if( cb )
@@ -281,7 +284,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &,const QVariant &>::of(&QMetaDataWriterControl::metaDataChanged), [sender](QString arg1, QVariant arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &,const QVariant &>::of(&QMetaDataWriterControl::metaDataChanged), 
+                                                              [sender]
+                                                              (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged(QString,QVariant)" );
 
           if( cb )
@@ -348,7 +354,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
       if( Signals2_connection( sender, "writableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMetaDataWriterControl::writableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMetaDataWriterControl::writableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "writableChanged(bool)" );
 
           if( cb )
@@ -413,7 +422,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMetaDataWriterControl::metaDataAvailableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMetaDataWriterControl::metaDataAvailableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataAvailableChanged(bool)" );
 
           if( cb )

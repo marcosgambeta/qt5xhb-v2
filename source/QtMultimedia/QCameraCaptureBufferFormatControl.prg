@@ -172,7 +172,10 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
       if( Signals2_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraCaptureBufferFormatControl::bufferFormatChanged, [sender](QVideoFrame::PixelFormat arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraCaptureBufferFormatControl::bufferFormatChanged, 
+                                                              [sender]
+                                                              (QVideoFrame::PixelFormat arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
 
           if( cb )

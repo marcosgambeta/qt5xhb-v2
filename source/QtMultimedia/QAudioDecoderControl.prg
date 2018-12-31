@@ -435,7 +435,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED )
       if( Signals2_connection( sender, "bufferAvailableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::bufferAvailableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::bufferAvailableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferAvailableChanged(bool)" );
 
           if( cb )
@@ -500,7 +503,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERREADY )
       if( Signals2_connection( sender, "bufferReady()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::bufferReady, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::bufferReady, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferReady()" );
 
           if( cb )
@@ -563,7 +569,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONDURATIONCHANGED )
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::durationChanged, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::durationChanged, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
 
           if( cb )
@@ -628,7 +637,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONERROR )
       if( Signals2_connection( sender, "error(int,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::error, [sender](int arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::error, 
+                                                              [sender]
+                                                              (int arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString)" );
 
           if( cb )
@@ -695,7 +707,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -758,7 +773,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFORMATCHANGED )
       if( Signals2_connection( sender, "formatChanged(QAudioFormat)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::formatChanged, [sender](QAudioFormat arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::formatChanged, 
+                                                              [sender]
+                                                              (const QAudioFormat & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QAudioFormat)" );
 
           if( cb )
@@ -823,7 +841,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONPOSITIONCHANGED )
       if( Signals2_connection( sender, "positionChanged(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::positionChanged, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::positionChanged, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(qint64)" );
 
           if( cb )
@@ -888,7 +909,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSOURCECHANGED )
       if( Signals2_connection( sender, "sourceChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::sourceChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::sourceChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged()" );
 
           if( cb )
@@ -951,7 +975,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QAudioDecoder::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioDecoderControl::stateChanged, [sender](QAudioDecoder::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioDecoderControl::stateChanged, 
+                                                              [sender]
+                                                              (QAudioDecoder::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAudioDecoder::State)" );
 
           if( cb )

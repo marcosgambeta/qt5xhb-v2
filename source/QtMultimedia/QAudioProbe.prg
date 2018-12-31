@@ -171,7 +171,10 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
       if( Signals2_connection( sender, "audioBufferProbed(QAudioBuffer)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioProbe::audioBufferProbed, [sender](QAudioBuffer arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioProbe::audioBufferProbed, 
+                                                              [sender]
+                                                              (const QAudioBuffer & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "audioBufferProbed(QAudioBuffer)" );
 
           if( cb )
@@ -236,7 +239,10 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
       if( Signals2_connection( sender, "flush()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioProbe::flush, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioProbe::flush, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flush()" );
 
           if( cb )

@@ -177,7 +177,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
       if( Signals2_connection( sender, "activeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractVideoFilter::activeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractVideoFilter::activeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged()" );
 
           if( cb )
@@ -227,4 +230,3 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
 }
 
 #pragma ENDDUMP
-

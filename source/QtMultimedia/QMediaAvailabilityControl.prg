@@ -111,7 +111,10 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
       if( Signals2_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaAvailabilityControl::availabilityChanged, [sender](QMultimedia::AvailabilityStatus arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaAvailabilityControl::availabilityChanged, 
+                                                              [sender]
+                                                              (QMultimedia::AvailabilityStatus arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
           if( cb )

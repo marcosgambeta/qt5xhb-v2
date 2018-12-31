@@ -874,7 +874,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
       if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::currentIndexChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::currentIndexChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
 
           if( cb )
@@ -939,7 +942,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
       if( Signals2_connection( sender, "currentMediaChanged(QMediaContent)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::currentMediaChanged, [sender](QMediaContent arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::currentMediaChanged, 
+                                                              [sender]
+                                                              (const QMediaContent & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentMediaChanged(QMediaContent)" );
 
           if( cb )
@@ -1004,7 +1010,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
       if( Signals2_connection( sender, "loadFailed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::loadFailed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::loadFailed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFailed()" );
 
           if( cb )
@@ -1067,7 +1076,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
       if( Signals2_connection( sender, "loaded()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::loaded, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::loaded, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loaded()" );
 
           if( cb )
@@ -1130,7 +1142,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
       if( Signals2_connection( sender, "mediaAboutToBeInserted(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaAboutToBeInserted, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::mediaAboutToBeInserted, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaAboutToBeInserted(int,int)" );
 
           if( cb )
@@ -1197,7 +1212,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
       if( Signals2_connection( sender, "mediaAboutToBeRemoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaAboutToBeRemoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::mediaAboutToBeRemoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaAboutToBeRemoved(int,int)" );
 
           if( cb )
@@ -1264,7 +1282,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
       if( Signals2_connection( sender, "mediaChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::mediaChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaChanged(int,int)" );
 
           if( cb )
@@ -1331,7 +1352,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
       if( Signals2_connection( sender, "mediaInserted(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaInserted, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::mediaInserted, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaInserted(int,int)" );
 
           if( cb )
@@ -1398,7 +1422,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
       if( Signals2_connection( sender, "mediaRemoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::mediaRemoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::mediaRemoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaRemoved(int,int)" );
 
           if( cb )
@@ -1465,7 +1492,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
       if( Signals2_connection( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlaylist::playbackModeChanged, [sender](QMediaPlaylist::PlaybackMode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlaylist::playbackModeChanged, 
+                                                              [sender]
+                                                              (QMediaPlaylist::PlaybackMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
 
           if( cb )

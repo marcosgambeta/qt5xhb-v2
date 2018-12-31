@@ -814,7 +814,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QRadioTuner::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::stateChanged, [sender](QRadioTuner::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::stateChanged, 
+                                                              [sender]
+                                                              (QRadioTuner::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QRadioTuner::State)" );
 
           if( cb )
@@ -879,7 +882,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
       if( Signals2_connection( sender, "bandChanged(QRadioTuner::Band)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::bandChanged, [sender](QRadioTuner::Band arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::bandChanged, 
+                                                              [sender]
+                                                              (QRadioTuner::Band arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bandChanged(QRadioTuner::Band)" );
 
           if( cb )
@@ -944,7 +950,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
       if( Signals2_connection( sender, "frequencyChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::frequencyChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::frequencyChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frequencyChanged(int)" );
 
           if( cb )
@@ -1009,7 +1018,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
       if( Signals2_connection( sender, "stereoStatusChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::stereoStatusChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::stereoStatusChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stereoStatusChanged(bool)" );
 
           if( cb )
@@ -1074,7 +1086,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
       if( Signals2_connection( sender, "searchingChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::searchingChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::searchingChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingChanged(bool)" );
 
           if( cb )
@@ -1139,7 +1154,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
       if( Signals2_connection( sender, "signalStrengthChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::signalStrengthChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::signalStrengthChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "signalStrengthChanged(int)" );
 
           if( cb )
@@ -1204,7 +1222,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::volumeChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::volumeChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
 
           if( cb )
@@ -1269,7 +1290,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::mutedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::mutedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged(bool)" );
 
           if( cb )
@@ -1334,7 +1358,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
       if( Signals2_connection( sender, "stationFound(int,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::stationFound, [sender](int arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::stationFound, 
+                                                              [sender]
+                                                              (int arg1, QString arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stationFound(int,QString)" );
 
           if( cb )
@@ -1401,7 +1428,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
       if( Signals2_connection( sender, "antennaConnectedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioTuner::antennaConnectedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioTuner::antennaConnectedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "antennaConnectedChanged(bool)" );
 
           if( cb )
@@ -1466,7 +1496,10 @@ HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
       if( Signals2_connection( sender, "error(QRadioTuner::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QRadioTuner::Error>::of(&QRadioTuner::error), [sender](QRadioTuner::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QRadioTuner::Error>::of(&QRadioTuner::error), 
+                                                              [sender]
+                                                              (QRadioTuner::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QRadioTuner::Error)" );
 
           if( cb )

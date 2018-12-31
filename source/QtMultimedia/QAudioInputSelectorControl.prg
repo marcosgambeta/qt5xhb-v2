@@ -223,7 +223,10 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED )
       if( Signals2_connection( sender, "activeInputChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioInputSelectorControl::activeInputChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioInputSelectorControl::activeInputChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeInputChanged(QString)" );
 
           if( cb )
@@ -288,7 +291,10 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED )
       if( Signals2_connection( sender, "availableInputsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioInputSelectorControl::availableInputsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioInputSelectorControl::availableInputsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availableInputsChanged()" );
 
           if( cb )

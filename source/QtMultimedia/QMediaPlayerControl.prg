@@ -671,7 +671,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
       if( Signals2_connection( sender, "audioAvailableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::audioAvailableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::audioAvailableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "audioAvailableChanged(bool)" );
 
           if( cb )
@@ -736,7 +739,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
       if( Signals2_connection( sender, "availablePlaybackRangesChanged(QMediaTimeRange)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::availablePlaybackRangesChanged, [sender](QMediaTimeRange arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::availablePlaybackRangesChanged, 
+                                                              [sender]
+                                                              (const QMediaTimeRange & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availablePlaybackRangesChanged(QMediaTimeRange)" );
 
           if( cb )
@@ -801,7 +807,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
       if( Signals2_connection( sender, "bufferStatusChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::bufferStatusChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::bufferStatusChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferStatusChanged(int)" );
 
           if( cb )
@@ -866,7 +875,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::durationChanged, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::durationChanged, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
 
           if( cb )
@@ -931,7 +943,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
       if( Signals2_connection( sender, "error(int,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::error, [sender](int arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::error, 
+                                                              [sender]
+                                                              (int arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString)" );
 
           if( cb )
@@ -998,7 +1013,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
       if( Signals2_connection( sender, "mediaChanged(QMediaContent)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::mediaChanged, [sender](QMediaContent arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::mediaChanged, 
+                                                              [sender]
+                                                              (const QMediaContent & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaChanged(QMediaContent)" );
 
           if( cb )
@@ -1063,7 +1081,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
       if( Signals2_connection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::mediaStatusChanged, [sender](QMediaPlayer::MediaStatus arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::mediaStatusChanged, 
+                                                              [sender]
+                                                              (QMediaPlayer::MediaStatus arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
 
           if( cb )
@@ -1128,7 +1149,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::mutedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::mutedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged(bool)" );
 
           if( cb )
@@ -1193,7 +1217,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
       if( Signals2_connection( sender, "playbackRateChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::playbackRateChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::playbackRateChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "playbackRateChanged(qreal)" );
 
           if( cb )
@@ -1258,7 +1285,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
       if( Signals2_connection( sender, "positionChanged(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::positionChanged, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::positionChanged, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(qint64)" );
 
           if( cb )
@@ -1323,7 +1353,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
       if( Signals2_connection( sender, "seekableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::seekableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::seekableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seekableChanged(bool)" );
 
           if( cb )
@@ -1388,7 +1421,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QMediaPlayer::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::stateChanged, [sender](QMediaPlayer::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::stateChanged, 
+                                                              [sender]
+                                                              (QMediaPlayer::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QMediaPlayer::State)" );
 
           if( cb )
@@ -1453,7 +1489,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
       if( Signals2_connection( sender, "videoAvailableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::videoAvailableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::videoAvailableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "videoAvailableChanged(bool)" );
 
           if( cb )
@@ -1518,7 +1557,10 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaPlayerControl::volumeChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaPlayerControl::volumeChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
 
           if( cb )

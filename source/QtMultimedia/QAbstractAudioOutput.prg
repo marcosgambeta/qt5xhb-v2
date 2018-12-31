@@ -653,7 +653,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
       if( Signals2_connection( sender, "errorChanged(QAudio::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAudioOutput::errorChanged, [sender](QAudio::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAudioOutput::errorChanged, 
+                                                              [sender]
+                                                              (QAudio::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "errorChanged(QAudio::Error)" );
 
           if( cb )
@@ -718,7 +721,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QAudio::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAudioOutput::stateChanged, [sender](QAudio::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAudioOutput::stateChanged, 
+                                                              [sender]
+                                                              (QAudio::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAudio::State)" );
 
           if( cb )
@@ -783,7 +789,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
       if( Signals2_connection( sender, "notify()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractAudioOutput::notify, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractAudioOutput::notify, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "notify()" );
 
           if( cb )

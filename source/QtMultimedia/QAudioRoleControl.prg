@@ -185,7 +185,10 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
       if( Signals2_connection( sender, "audioRoleChanged(QAudio::Role)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAudioRoleControl::audioRoleChanged, [sender](QAudio::Role arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAudioRoleControl::audioRoleChanged, 
+                                                              [sender]
+                                                              (QAudio::Role arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "audioRoleChanged(QAudio::Role)" );
 
           if( cb )

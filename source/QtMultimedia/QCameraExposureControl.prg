@@ -247,7 +247,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
       if( Signals2_connection( sender, "actualValueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposureControl::actualValueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposureControl::actualValueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actualValueChanged(int)" );
 
           if( cb )
@@ -312,7 +315,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
       if( Signals2_connection( sender, "parameterRangeChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposureControl::parameterRangeChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposureControl::parameterRangeChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "parameterRangeChanged(int)" );
 
           if( cb )
@@ -377,7 +383,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
       if( Signals2_connection( sender, "requestedValueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposureControl::requestedValueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposureControl::requestedValueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "requestedValueChanged(int)" );
 
           if( cb )

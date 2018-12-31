@@ -171,7 +171,10 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
       if( Signals2_connection( sender, "flush()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoProbe::flush, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoProbe::flush, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flush()" );
 
           if( cb )
@@ -234,7 +237,10 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
       if( Signals2_connection( sender, "videoFrameProbed(QVideoFrame)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoProbe::videoFrameProbed, [sender](QVideoFrame arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoProbe::videoFrameProbed, 
+                                                              [sender]
+                                                              (const QVideoFrame & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "videoFrameProbed(QVideoFrame)" );
 
           if( cb )

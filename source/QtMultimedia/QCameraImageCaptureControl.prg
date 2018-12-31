@@ -221,7 +221,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
       if( Signals2_connection( sender, "error(int,int,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::error, [sender](int arg1, int arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraImageCaptureControl::error, 
+                                                              [sender]
+                                                              (int arg1, int arg2, const QString & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,int,QString)" );
 
           if( cb )
@@ -290,7 +293,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
       if( Signals2_connection( sender, "imageAvailable(int,QVideoFrame)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageAvailable, [sender](int arg1, QVideoFrame arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraImageCaptureControl::imageAvailable, 
+                                                              [sender]
+                                                              (int arg1, const QVideoFrame & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "imageAvailable(int,QVideoFrame)" );
 
           if( cb )
@@ -357,7 +363,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
       if( Signals2_connection( sender, "imageCaptured(int,QImage)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageCaptured, [sender](int arg1, QImage arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraImageCaptureControl::imageCaptured, 
+                                                              [sender]
+                                                              (int arg1, const QImage & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "imageCaptured(int,QImage)" );
 
           if( cb )
@@ -424,7 +433,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
       if( Signals2_connection( sender, "imageExposed(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageExposed, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraImageCaptureControl::imageExposed, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "imageExposed(int)" );
 
           if( cb )
@@ -489,7 +501,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
       if( Signals2_connection( sender, "imageMetadataAvailable(int,QString,QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageMetadataAvailable, [sender](int arg1, QString arg2, QVariant arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraImageCaptureControl::imageMetadataAvailable, 
+                                                              [sender]
+                                                              (int arg1, const QString & arg2, const QVariant & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "imageMetadataAvailable(int,QString,QVariant)" );
 
           if( cb )
@@ -558,7 +573,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
       if( Signals2_connection( sender, "imageSaved(int,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::imageSaved, [sender](int arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraImageCaptureControl::imageSaved, 
+                                                              [sender]
+                                                              (int arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "imageSaved(int,QString)" );
 
           if( cb )
@@ -625,7 +643,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
       if( Signals2_connection( sender, "readyForCaptureChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraImageCaptureControl::readyForCaptureChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraImageCaptureControl::readyForCaptureChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readyForCaptureChanged(bool)" );
 
           if( cb )

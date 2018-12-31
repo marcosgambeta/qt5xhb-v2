@@ -148,7 +148,10 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
       if( Signals2_connection( sender, "configurationChanged(QNetworkConfiguration)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaNetworkAccessControl::configurationChanged, [sender](QNetworkConfiguration arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaNetworkAccessControl::configurationChanged, 
+                                                              [sender]
+                                                              (const QNetworkConfiguration & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationChanged(QNetworkConfiguration)" );
 
           if( cb )

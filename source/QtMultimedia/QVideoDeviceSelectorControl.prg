@@ -240,7 +240,10 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
       if( Signals2_connection( sender, "devicesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoDeviceSelectorControl::devicesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoDeviceSelectorControl::devicesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "devicesChanged()" );
 
           if( cb )
@@ -303,7 +306,10 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
       if( Signals2_connection( sender, "selectedDeviceChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedDeviceChanged(int)" );
 
           if( cb )
@@ -368,7 +374,10 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
       if( Signals2_connection( sender, "selectedDeviceChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedDeviceChanged(QString)" );
 
           if( cb )

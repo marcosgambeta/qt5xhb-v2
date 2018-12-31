@@ -319,7 +319,10 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
       if( Signals2_connection( sender, "stationIdChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioDataControl::stationIdChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioDataControl::stationIdChanged, 
+                                                              [sender]
+                                                              (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stationIdChanged(QString)" );
 
           if( cb )
@@ -384,7 +387,10 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPECHANGED )
       if( Signals2_connection( sender, "programTypeChanged(QRadioData::ProgramType)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioDataControl::programTypeChanged, [sender](QRadioData::ProgramType arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioDataControl::programTypeChanged, 
+                                                              [sender]
+                                                              (QRadioData::ProgramType arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "programTypeChanged(QRadioData::ProgramType)" );
 
           if( cb )
@@ -449,7 +455,10 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED )
       if( Signals2_connection( sender, "programTypeNameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioDataControl::programTypeNameChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioDataControl::programTypeNameChanged, 
+                                                              [sender]
+                                                              (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "programTypeNameChanged(QString)" );
 
           if( cb )
@@ -514,7 +523,10 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONNAMECHANGED )
       if( Signals2_connection( sender, "stationNameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioDataControl::stationNameChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioDataControl::stationNameChanged, 
+                                                              [sender]
+                                                              (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stationNameChanged(QString)" );
 
           if( cb )
@@ -579,7 +591,10 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ONRADIOTEXTCHANGED )
       if( Signals2_connection( sender, "radioTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioDataControl::radioTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioDataControl::radioTextChanged, 
+                                                              [sender]
+                                                              (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "radioTextChanged(QString)" );
 
           if( cb )
@@ -644,7 +659,10 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
       if( Signals2_connection( sender, "alternativeFrequenciesEnabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRadioDataControl::alternativeFrequenciesEnabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRadioDataControl::alternativeFrequenciesEnabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "alternativeFrequenciesEnabledChanged(bool)" );
 
           if( cb )
@@ -709,7 +727,10 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ONERROR )
       if( Signals2_connection( sender, "error(QRadioData::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QRadioData::Error>::of(&QRadioDataControl::error), [sender](QRadioData::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QRadioData::Error>::of(&QRadioDataControl::error), 
+                                                              [sender]
+                                                              (QRadioData::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QRadioData::Error)" );
 
           if( cb )

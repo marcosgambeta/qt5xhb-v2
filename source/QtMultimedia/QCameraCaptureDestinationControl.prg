@@ -163,7 +163,10 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
       if( Signals2_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraCaptureDestinationControl::captureDestinationChanged, [sender](QCameraImageCapture::CaptureDestinations arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraCaptureDestinationControl::captureDestinationChanged, 
+                                                              [sender]
+                                                              (QCameraImageCapture::CaptureDestinations arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
 
           if( cb )

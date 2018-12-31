@@ -543,7 +543,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
       if( Signals2_connection( sender, "sourceChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::sourceChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::sourceChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged()" );
 
           if( cb )
@@ -606,7 +609,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
       if( Signals2_connection( sender, "loopCountChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::loopCountChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::loopCountChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loopCountChanged()" );
 
           if( cb )
@@ -669,7 +675,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
       if( Signals2_connection( sender, "loopsRemainingChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::loopsRemainingChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::loopsRemainingChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loopsRemainingChanged()" );
 
           if( cb )
@@ -732,7 +741,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
       if( Signals2_connection( sender, "volumeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::volumeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::volumeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged()" );
 
           if( cb )
@@ -795,7 +807,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
       if( Signals2_connection( sender, "mutedChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::mutedChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::mutedChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged()" );
 
           if( cb )
@@ -858,7 +873,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
       if( Signals2_connection( sender, "loadedChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::loadedChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::loadedChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadedChanged()" );
 
           if( cb )
@@ -921,7 +939,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
       if( Signals2_connection( sender, "playingChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::playingChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::playingChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "playingChanged()" );
 
           if( cb )
@@ -984,7 +1005,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::statusChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::statusChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged()" );
 
           if( cb )
@@ -1047,7 +1071,10 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
       if( Signals2_connection( sender, "categoryChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSoundEffect::categoryChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSoundEffect::categoryChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryChanged()" );
 
           if( cb )

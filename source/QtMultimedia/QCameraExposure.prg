@@ -860,7 +860,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
       if( Signals2_connection( sender, "apertureChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::apertureChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposure::apertureChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "apertureChanged(qreal)" );
 
           if( cb )
@@ -925,7 +928,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
       if( Signals2_connection( sender, "apertureRangeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::apertureRangeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposure::apertureRangeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "apertureRangeChanged()" );
 
           if( cb )
@@ -988,7 +994,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
       if( Signals2_connection( sender, "exposureCompensationChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::exposureCompensationChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposure::exposureCompensationChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "exposureCompensationChanged(qreal)" );
 
           if( cb )
@@ -1053,7 +1062,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
       if( Signals2_connection( sender, "flashReady(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::flashReady, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposure::flashReady, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flashReady(bool)" );
 
           if( cb )
@@ -1118,7 +1130,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
       if( Signals2_connection( sender, "isoSensitivityChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::isoSensitivityChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposure::isoSensitivityChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "isoSensitivityChanged(int)" );
 
           if( cb )
@@ -1183,7 +1198,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
       if( Signals2_connection( sender, "shutterSpeedChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::shutterSpeedChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposure::shutterSpeedChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shutterSpeedChanged(qreal)" );
 
           if( cb )
@@ -1248,7 +1266,10 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
       if( Signals2_connection( sender, "shutterSpeedRangeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCameraExposure::shutterSpeedRangeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCameraExposure::shutterSpeedRangeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shutterSpeedRangeChanged()" );
 
           if( cb )

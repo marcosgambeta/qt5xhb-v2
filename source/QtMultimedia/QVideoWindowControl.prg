@@ -563,7 +563,10 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED )
       if( Signals2_connection( sender, "fullScreenChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWindowControl::fullScreenChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWindowControl::fullScreenChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fullScreenChanged(bool)" );
 
           if( cb )
@@ -628,7 +631,10 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED )
       if( Signals2_connection( sender, "brightnessChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWindowControl::brightnessChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWindowControl::brightnessChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brightnessChanged(int)" );
 
           if( cb )
@@ -693,7 +699,10 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED )
       if( Signals2_connection( sender, "contrastChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWindowControl::contrastChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWindowControl::contrastChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contrastChanged(int)" );
 
           if( cb )
@@ -758,7 +767,10 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONHUECHANGED )
       if( Signals2_connection( sender, "hueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWindowControl::hueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWindowControl::hueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hueChanged(int)" );
 
           if( cb )
@@ -823,7 +835,10 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED )
       if( Signals2_connection( sender, "saturationChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWindowControl::saturationChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWindowControl::saturationChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "saturationChanged(int)" );
 
           if( cb )
@@ -888,7 +903,10 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED )
       if( Signals2_connection( sender, "nativeSizeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVideoWindowControl::nativeSizeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVideoWindowControl::nativeSizeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nativeSizeChanged()" );
 
           if( cb )

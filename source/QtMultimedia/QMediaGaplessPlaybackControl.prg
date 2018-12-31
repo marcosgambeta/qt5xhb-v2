@@ -219,7 +219,10 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
       if( Signals2_connection( sender, "advancedToNextMedia()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaGaplessPlaybackControl::advancedToNextMedia, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaGaplessPlaybackControl::advancedToNextMedia, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "advancedToNextMedia()" );
 
           if( cb )
@@ -282,7 +285,10 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
       if( Signals2_connection( sender, "crossfadeTimeChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaGaplessPlaybackControl::crossfadeTimeChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaGaplessPlaybackControl::crossfadeTimeChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "crossfadeTimeChanged(qreal)" );
 
           if( cb )
@@ -347,7 +353,10 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
       if( Signals2_connection( sender, "nextMediaChanged(QMediaContent)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaGaplessPlaybackControl::nextMediaChanged, [sender](QMediaContent arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaGaplessPlaybackControl::nextMediaChanged, 
+                                                              [sender]
+                                                              (const QMediaContent & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nextMediaChanged(QMediaContent)" );
 
           if( cb )

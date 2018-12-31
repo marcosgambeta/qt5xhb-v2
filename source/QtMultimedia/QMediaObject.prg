@@ -368,7 +368,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
       if( Signals2_connection( sender, "availabilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<bool>::of(&QMediaObject::availabilityChanged), [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<bool>::of(&QMediaObject::availabilityChanged), 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availabilityChanged(bool)" );
 
           if( cb )
@@ -433,7 +436,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
       if( Signals2_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaObject::availabilityChanged), [sender](QMultimedia::AvailabilityStatus arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaObject::availabilityChanged), 
+                                                              [sender]
+                                                              (QMultimedia::AvailabilityStatus arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
           if( cb )
@@ -498,7 +504,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaObject::metaDataAvailableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaObject::metaDataAvailableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataAvailableChanged(bool)" );
 
           if( cb )
@@ -563,7 +572,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
       if( Signals2_connection( sender, "metaDataChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<>::of(&QMediaObject::metaDataChanged), [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<>::of(&QMediaObject::metaDataChanged), 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged()" );
 
           if( cb )
@@ -626,7 +638,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &,const QVariant &>::of(&QMediaObject::metaDataChanged), [sender](QString arg1, QVariant arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &,const QVariant &>::of(&QMediaObject::metaDataChanged), 
+                                                              [sender]
+                                                              (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged(QString,QVariant)" );
 
           if( cb )
@@ -693,7 +708,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
       if( Signals2_connection( sender, "notifyIntervalChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMediaObject::notifyIntervalChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMediaObject::notifyIntervalChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "notifyIntervalChanged(int)" );
 
           if( cb )
