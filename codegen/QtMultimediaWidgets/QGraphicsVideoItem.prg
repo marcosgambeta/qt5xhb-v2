@@ -67,6 +67,6 @@ $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 %%
 
 $prototype=void nativeSizeChanged( const QSizeF & size )
-$signalMethod=|void|nativeSizeChanged|QSizeF
+$signalMethod=|void|nativeSizeChanged|const QSizeF &
 
 #pragma ENDDUMP
