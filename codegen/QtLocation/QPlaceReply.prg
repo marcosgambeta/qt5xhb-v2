@@ -55,6 +55,6 @@ $prototype=void finished()
 $signalMethod=5,4,0|void|finished|
 
 $prototype=void error( QPlaceReply::Error error, const QString & errorString = QString() )
-$signalMethod=5,4,0|void|error,error,QOverload<QPlaceReply::Error COMMA const QString &>|QPlaceReply::Error,QString
+$signalMethod=5,4,0|void|error,error,QOverload<QPlaceReply::Error COMMA const QString &>|QPlaceReply::Error,const QString &
 
 #pragma ENDDUMP

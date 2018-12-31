@@ -96,28 +96,28 @@ $method=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
 %%
 
 $prototype=void finished( QPlaceReply * reply )
-$signalMethod=5,4,0|void|finished|QPlaceReply*
+$signalMethod=5,4,0|void|finished|QPlaceReply *
 
 $prototype=void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() )
-$signalMethod=5,4,0|void|error|QPlaceReply*,QPlaceReply::Error,QString
+$signalMethod=5,4,0|void|error|QPlaceReply *,QPlaceReply::Error,const QString &
 
 $prototype=void placeAdded( const QString & placeId )
-$signalMethod=5,4,0|void|placeAdded|QString
+$signalMethod=5,4,0|void|placeAdded|const QString &
 
 $prototype=void placeUpdated( const QString & placeId )
-$signalMethod=5,4,0|void|placeUpdated|QString
+$signalMethod=5,4,0|void|placeUpdated|const QString &
 
 $prototype=void placeRemoved( const QString & placeId )
-$signalMethod=5,4,0|void|placeRemoved|QString
+$signalMethod=5,4,0|void|placeRemoved|const QString &
 
 $prototype=void categoryAdded( const QPlaceCategory & category, const QString & parentId )
-$signalMethod=5,4,0|void|categoryAdded|QPlaceCategory,QString
+$signalMethod=5,4,0|void|categoryAdded|const QPlaceCategory &,const QString &
 
 $prototype=void categoryUpdated( const QPlaceCategory & category, const QString & parentId )
-$signalMethod=5,4,0|void|categoryUpdated|QPlaceCategory,QString
+$signalMethod=5,4,0|void|categoryUpdated|const QPlaceCategory &,const QString &
 
 $prototype=void categoryRemoved( const QString & categoryId, const QString & parentId )
-$signalMethod=5,4,0|void|categoryRemoved|QString,QString
+$signalMethod=5,4,0|void|categoryRemoved|const QString &,const QString &
 
 $prototype=void dataChanged()
 $signalMethod=5,4,0|void|dataChanged|

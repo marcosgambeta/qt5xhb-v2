@@ -76,9 +76,9 @@ $method=5,4,0|QLocale::MeasurementSystem|measurementSystem|
 %%
 
 $prototype=void finished( QGeoRouteReply * reply )
-$signalMethod=5,4,0|void|finished|QGeoRouteReply*
+$signalMethod=5,4,0|void|finished|QGeoRouteReply *
 
 $prototype=void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
-$signalMethod=5,4,0|void|error|QGeoRouteReply*,QGeoRouteReply::Error,QString
+$signalMethod=5,4,0|void|error|QGeoRouteReply *,QGeoRouteReply::Error,QString
 
 #pragma ENDDUMP

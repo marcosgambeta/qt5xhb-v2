@@ -77,9 +77,9 @@ $method=5,4,0|QLocale|locale|
 %%
 
 $prototype=void finished( QGeoCodeReply * reply )
-$signalMethod=5,4,0|void|finished|QGeoCodeReply*
+$signalMethod=5,4,0|void|finished|QGeoCodeReply *
 
 $prototype=void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() )
-$signalMethod=5,4,0|void|error|QGeoCodeReply*,QGeoCodeReply::Error,QString
+$signalMethod=5,4,0|void|error|QGeoCodeReply *,QGeoCodeReply::Error,const QString &
 
 #pragma ENDDUMP
