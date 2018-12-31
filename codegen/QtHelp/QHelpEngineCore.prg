@@ -134,7 +134,7 @@ $staticMethod=|QString|namespaceName|const QString &
 %%
 
 $prototype=void currentFilterChanged( const QString & newFilter )
-$signalMethod=|void|currentFilterChanged|QString
+$signalMethod=|void|currentFilterChanged|const QString &
 
 $prototype=void setupFinished()
 $signalMethod=|void|setupFinished|
@@ -143,6 +143,6 @@ $prototype=void setupStarted()
 $signalMethod=|void|setupStarted|
 
 $prototype=void warning( const QString & msg )
-$signalMethod=|void|warning|QString
+$signalMethod=|void|warning|const QString &
 
 #pragma ENDDUMP

@@ -37,6 +37,6 @@ $method=|QUrl|linkAt|const QPoint &
 %%
 
 $prototype=void requestShowLink( const QUrl & link )
-$signalMethod=|void|requestShowLink|QUrl
+$signalMethod=|void|requestShowLink|const QUrl &
 
 #pragma ENDDUMP

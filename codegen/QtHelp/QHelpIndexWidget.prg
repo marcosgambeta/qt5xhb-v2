@@ -40,6 +40,6 @@ $method=|void|filterIndices|const QString &,const QString &=QString()
 %%
 
 $prototype=void linkActivated( const QUrl & link, const QString & keyword )
-$signalMethod=|void|linkActivated|QUrl,QString
+$signalMethod=|void|linkActivated|const QUrl &,const QString &
 
 #pragma ENDDUMP
