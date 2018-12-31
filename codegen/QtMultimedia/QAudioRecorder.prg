@@ -61,7 +61,7 @@ $method=|QString|defaultAudioInput|
 %%
 
 $prototype=void audioInputChanged( const QString & name )
-$signalMethod=|void|audioInputChanged|QString
+$signalMethod=|void|audioInputChanged|const QString &
 
 $prototype=void availableAudioInputsChanged()
 $signalMethod=|void|availableAudioInputsChanged|

@@ -61,7 +61,7 @@ $prototype=void captureModeChanged( QCamera::CaptureModes mode )
 $signalMethod=|void|captureModeChanged|QCamera::CaptureModes
 
 $prototype=void error( int error, const QString & errorString )
-$signalMethod=|void|error|int,QString
+$signalMethod=|void|error|int,const QString &
 
 $prototype=void stateChanged( QCamera::State state )
 $signalMethod=|void|stateChanged|QCamera::State

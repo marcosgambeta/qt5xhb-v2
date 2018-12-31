@@ -106,7 +106,7 @@ $prototype=void audioAvailableChanged( bool audio )
 $signalMethod=|void|audioAvailableChanged|bool
 
 $prototype=void availablePlaybackRangesChanged( const QMediaTimeRange & ranges )
-$signalMethod=|void|availablePlaybackRangesChanged|QMediaTimeRange
+$signalMethod=|void|availablePlaybackRangesChanged|const QMediaTimeRange &
 
 $prototype=void bufferStatusChanged( int progress )
 $signalMethod=|void|bufferStatusChanged|int
@@ -115,10 +115,10 @@ $prototype=void durationChanged( qint64 duration )
 $signalMethod=|void|durationChanged|qint64
 
 $prototype=void error( int error, const QString & errorString )
-$signalMethod=|void|error|int,QString
+$signalMethod=|void|error|int,const QString &
 
 $prototype=void mediaChanged( const QMediaContent & content )
-$signalMethod=|void|mediaChanged|QMediaContent
+$signalMethod=|void|mediaChanged|const QMediaContent &
 
 $prototype=void mediaStatusChanged( QMediaPlayer::MediaStatus status )
 $signalMethod=|void|mediaStatusChanged|QMediaPlayer::MediaStatus

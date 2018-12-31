@@ -72,13 +72,13 @@ $virtualSlotMethod=|void|setVolume|qreal
 %%
 
 $prototype=void actualLocationChanged( const QUrl & location )
-$signalMethod=|void|actualLocationChanged|QUrl
+$signalMethod=|void|actualLocationChanged|const QUrl &
 
 $prototype=void durationChanged( qint64 duration )
 $signalMethod=|void|durationChanged|qint64
 
 $prototype=void error( int error, const QString & errorString )
-$signalMethod=|void|error|int,QString
+$signalMethod=|void|error|int,const QString &
 
 $prototype=void mutedChanged( bool muted )
 $signalMethod=|void|mutedChanged|bool

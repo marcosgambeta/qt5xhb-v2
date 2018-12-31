@@ -255,7 +255,7 @@ $prototype=void currentIndexChanged( int position )
 $signalMethod=|void|currentIndexChanged|int
 
 $prototype=void currentMediaChanged( const QMediaContent & content )
-$signalMethod=|void|currentMediaChanged|QMediaContent
+$signalMethod=|void|currentMediaChanged|const QMediaContent &
 
 $prototype=void loadFailed()
 $signalMethod=|void|loadFailed|

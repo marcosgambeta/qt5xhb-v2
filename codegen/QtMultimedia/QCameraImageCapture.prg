@@ -113,22 +113,22 @@ $prototype=void captureDestinationChanged( QCameraImageCapture::CaptureDestinati
 $signalMethod=|void|captureDestinationChanged|QCameraImageCapture::CaptureDestinations
 
 $prototype=void error( int id, QCameraImageCapture::Error error, const QString & errorString )
-$signalMethod=|void|error,error,QOverload<int COMMA QCameraImageCapture::Error COMMA const QString &>|int,QCameraImageCapture::Error,QString
+$signalMethod=|void|error,error,QOverload<int COMMA QCameraImageCapture::Error COMMA const QString &>|int,QCameraImageCapture::Error,const QString &
 
 $prototype=void imageAvailable( int id, const QVideoFrame & buffer )
-$signalMethod=|void|imageAvailable|int,QVideoFrame
+$signalMethod=|void|imageAvailable|int,const QVideoFrame &
 
 $prototype=void imageCaptured( int id, const QImage & preview )
-$signalMethod=|void|imageCaptured|int,QImage
+$signalMethod=|void|imageCaptured|int,const QImage &
 
 $prototype=void imageExposed( int id )
 $signalMethod=|void|imageExposed|int
 
 $prototype=void imageMetadataAvailable( int id, const QString & key, const QVariant & value )
-$signalMethod=|void|imageMetadataAvailable|int,QString,QVariant
+$signalMethod=|void|imageMetadataAvailable|int,const QString &,const QVariant &
 
 $prototype=void imageSaved( int id, const QString & fileName )
-$signalMethod=|void|imageSaved|int,QString
+$signalMethod=|void|imageSaved|int,const QString &
 
 $prototype=void readyForCaptureChanged( bool ready )
 $signalMethod=|void|readyForCaptureChanged|bool

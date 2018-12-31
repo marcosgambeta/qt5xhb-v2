@@ -76,16 +76,20 @@ $prototype=void setError(Error error) [protected]
 
 $prototype=void setNativeResolution(const QSize &resolution) [protected]
 
+%%
+%% SIGNALS
+%%
+
 $prototype=void activeChanged(bool active)
 $signalMethod=|void|activeChanged|bool
 
 $prototype=void surfaceFormatChanged(const QVideoSurfaceFormat &format)
-$signalMethod=|void|surfaceFormatChanged|QVideoSurfaceFormat
+$signalMethod=|void|surfaceFormatChanged|const QVideoSurfaceFormat &
 
 $prototype=void supportedFormatsChanged()
 $signalMethod=|void|supportedFormatsChanged|
 
 $prototype=void nativeResolutionChanged(const QSize &)
-$signalMethod=|void|nativeResolutionChanged|QSize
+$signalMethod=|void|nativeResolutionChanged|const QSize &
 
 #pragma ENDDUMP

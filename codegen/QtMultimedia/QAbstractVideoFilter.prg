@@ -50,8 +50,11 @@ $method=5,5,0|void|setActive|bool
 $prototype=virtual QVideoFilterRunnable *createFilterRunnable() = 0
 $virtualMethod=5,5,0|QVideoFilterRunnable *|createFilterRunnable|
 
+%%
+%% SIGNALS
+%%
+
 $prototype=void activeChanged()
 $signalMethod=|void|activeChanged|
 
 #pragma ENDDUMP
-

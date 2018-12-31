@@ -132,6 +132,10 @@ $method=|void|setVolume|qreal
 $prototype=qreal volume() const
 $method=|qreal|volume|
 
+%%
+%% SIGNALS
+%%
+
 $prototype=void stateChanged(QAudio::State)
 $signalMethod=|void|stateChanged|QAudio::State
 

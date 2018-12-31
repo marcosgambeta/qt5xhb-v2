@@ -61,6 +61,6 @@ $prototype=void selectedDeviceChanged( int index )
 $signalMethod=|void|selectedDeviceChanged,selectedDeviceChanged1,QOverload<int>|int
 
 $prototype=void selectedDeviceChanged( const QString & name )
-$signalMethod=|void|selectedDeviceChanged,selectedDeviceChanged2,QOverload<const QString &>|QString
+$signalMethod=|void|selectedDeviceChanged,selectedDeviceChanged2,QOverload<const QString &>|const QString &
 
 #pragma ENDDUMP

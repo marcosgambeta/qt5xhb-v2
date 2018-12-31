@@ -52,22 +52,22 @@ $virtualMethod=|void|setDriveMode|QCameraImageCapture::DriveMode
 %%
 
 $prototype=void error( int id, int error, const QString & errorString )
-$signalMethod=|void|error|int,int,QString
+$signalMethod=|void|error|int,int,const QString &
 
 $prototype=void imageAvailable( int requestId, const QVideoFrame & buffer )
-$signalMethod=|void|imageAvailable|int,QVideoFrame
+$signalMethod=|void|imageAvailable|int,const QVideoFrame &
 
 $prototype=void imageCaptured( int requestId, const QImage & preview )
-$signalMethod=|void|imageCaptured|int,QImage
+$signalMethod=|void|imageCaptured|int,const QImage &
 
 $prototype=void imageExposed( int requestId )
 $signalMethod=|void|imageExposed|int
 
 $prototype=void imageMetadataAvailable( int id, const QString & key, const QVariant & value )
-$signalMethod=|void|imageMetadataAvailable|int,QString,QVariant
+$signalMethod=|void|imageMetadataAvailable|int,const QString &,const QVariant &
 
 $prototype=void imageSaved( int requestId, const QString & fileName )
-$signalMethod=|void|imageSaved|int,QString
+$signalMethod=|void|imageSaved|int,const QString &
 
 $prototype=void readyForCaptureChanged( bool ready )
 $signalMethod=|void|readyForCaptureChanged|bool

@@ -42,6 +42,6 @@ $prototype=void flush()
 $signalMethod=|void|flush|
 
 $prototype=void videoFrameProbed( const QVideoFrame & frame )
-$signalMethod=|void|videoFrameProbed|QVideoFrame
+$signalMethod=|void|videoFrameProbed|const QVideoFrame &
 
 #pragma ENDDUMP

@@ -64,7 +64,7 @@ $virtualMethod=|void|setFocusPointMode|QCameraFocus::FocusPointMode
 %%
 
 $prototype=void customFocusPointChanged( const QPointF & point )
-$signalMethod=|void|customFocusPointChanged|QPointF
+$signalMethod=|void|customFocusPointChanged|const QPointF &
 
 $prototype=void focusModeChanged( QCameraFocus::FocusModes mode )
 $signalMethod=|void|focusModeChanged|QCameraFocus::FocusModes

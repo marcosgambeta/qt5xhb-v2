@@ -58,6 +58,6 @@ $prototype=void crossfadeTimeChanged( qreal crossfadeTime )
 $signalMethod=|void|crossfadeTimeChanged|qreal
 
 $prototype=void nextMediaChanged( const QMediaContent & media )
-$signalMethod=|void|nextMediaChanged|QMediaContent
+$signalMethod=|void|nextMediaChanged|const QMediaContent &
 
 #pragma ENDDUMP

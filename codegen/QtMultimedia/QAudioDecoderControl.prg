@@ -85,13 +85,13 @@ $prototype=void durationChanged( qint64 duration )
 $signalMethod=|void|durationChanged|qint64
 
 $prototype=void error( int error, const QString & errorString )
-$signalMethod=|void|error|int,QString
+$signalMethod=|void|error|int,const QString &
 
 $prototype=void finished()
 $signalMethod=|void|finished|
 
 $prototype=void formatChanged( const QAudioFormat & format )
-$signalMethod=|void|formatChanged|QAudioFormat
+$signalMethod=|void|formatChanged|const QAudioFormat &
 
 $prototype=void positionChanged( qint64 position )
 $signalMethod=|void|positionChanged|qint64

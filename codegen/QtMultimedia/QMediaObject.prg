@@ -98,7 +98,7 @@ $prototype=void metaDataChanged()
 $signalMethod=|void|metaDataChanged,metaDataChanged1,QOverload<>|
 
 $prototype=void metaDataChanged( const QString & key, const QVariant & value )
-$signalMethod=|void|metaDataChanged,metaDataChanged2,QOverload<const QString & COMMA const QVariant &>|QString,QVariant
+$signalMethod=|void|metaDataChanged,metaDataChanged2,QOverload<const QString & COMMA const QVariant &>|const QString &,const QVariant &
 
 $prototype=void notifyIntervalChanged( int milliseconds )
 $signalMethod=|void|notifyIntervalChanged|int

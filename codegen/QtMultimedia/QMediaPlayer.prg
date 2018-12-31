@@ -260,7 +260,7 @@ $prototype=void bufferStatusChanged( int percentFilled )
 $signalMethod=|void|bufferStatusChanged|int
 
 $prototype=void currentMediaChanged( const QMediaContent & media )
-$signalMethod=|void|currentMediaChanged|QMediaContent
+$signalMethod=|void|currentMediaChanged|const QMediaContent &
 
 $prototype=void durationChanged( qint64 duration )
 $signalMethod=|void|durationChanged|qint64
@@ -269,7 +269,7 @@ $prototype=void error( QMediaPlayer::Error error )
 $signalMethod=|void|error,error,QOverload<QMediaPlayer::Error>|QMediaPlayer::Error
 
 $prototype=void mediaChanged( const QMediaContent & media )
-$signalMethod=|void|mediaChanged|QMediaContent
+$signalMethod=|void|mediaChanged|const QMediaContent &
 
 $prototype=void mediaStatusChanged( QMediaPlayer::MediaStatus status )
 $signalMethod=|void|mediaStatusChanged|QMediaPlayer::MediaStatus
@@ -278,7 +278,7 @@ $prototype=void mutedChanged( bool muted )
 $signalMethod=|void|mutedChanged|bool
 
 $prototype=void networkConfigurationChanged( const QNetworkConfiguration & configuration )
-$signalMethod=|void|networkConfigurationChanged|QNetworkConfiguration
+$signalMethod=|void|networkConfigurationChanged|const QNetworkConfiguration &
 
 $prototype=void playbackRateChanged( qreal rate )
 $signalMethod=|void|playbackRateChanged|qreal

@@ -41,6 +41,10 @@ $virtualMethod=5,6,0|void|setAudioRole|QAudio::Role
 $prototype=virtual QList<QAudio::Role> supportedAudioRoles() const = 0
 $virtualMethod=5,6,0|QList<QAudio::Role>|supportedAudioRoles|
 
+%%
+%% SIGNALS
+%%
+
 $prototype=void audioRoleChanged(QAudio::Role role)
 $signalMethod=5,6,0|void|audioRoleChanged|QAudio::Role
 

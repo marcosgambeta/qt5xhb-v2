@@ -125,7 +125,7 @@ $prototype=void finished()
 $signalMethod=|void|finished|
 
 $prototype=void formatChanged( const QAudioFormat & format )
-$signalMethod=|void|formatChanged|QAudioFormat
+$signalMethod=|void|formatChanged|const QAudioFormat &
 
 $prototype=void positionChanged( qint64 position )
 $signalMethod=|void|positionChanged|qint64
