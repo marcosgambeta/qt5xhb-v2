@@ -457,7 +457,10 @@ HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
       if( Signals2_connection( sender, "changed(QClipboard::Mode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QClipboard::changed, [sender](QClipboard::Mode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QClipboard::changed, 
+                                                              [sender]
+                                                              (QClipboard::Mode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed(QClipboard::Mode)" );
 
           if( cb )
@@ -522,7 +525,10 @@ HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
       if( Signals2_connection( sender, "dataChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QClipboard::dataChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QClipboard::dataChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataChanged()" );
 
           if( cb )
@@ -585,7 +591,10 @@ HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
       if( Signals2_connection( sender, "findBufferChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QClipboard::findBufferChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QClipboard::findBufferChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "findBufferChanged()" );
 
           if( cb )
@@ -648,7 +657,10 @@ HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QClipboard::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QClipboard::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )

@@ -331,7 +331,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
       if( Signals2_connection( sender, "messageLogged(QOpenGLDebugMessage)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLDebugLogger::messageLogged, [sender](QOpenGLDebugMessage arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOpenGLDebugLogger::messageLogged, 
+                                                              [sender]
+                                                              (const QOpenGLDebugMessage & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "messageLogged(QOpenGLDebugMessage)" );
 
           if( cb )

@@ -3028,7 +3028,10 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
       if( Signals2_connection( sender, "activeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::activeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::activeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged()" );
 
           if( cb )
@@ -3092,7 +3095,10 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
       if( Signals2_connection( sender, "contentOrientationChanged(Qt::ScreenOrientation)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::contentOrientationChanged, [sender](Qt::ScreenOrientation arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::contentOrientationChanged, 
+                                                              [sender]
+                                                              (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentOrientationChanged(Qt::ScreenOrientation)" );
 
           if( cb )
@@ -3157,7 +3163,10 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
       if( Signals2_connection( sender, "focusObjectChanged(QObject*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::focusObjectChanged, [sender](QObject* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::focusObjectChanged, 
+                                                              [sender]
+                                                              (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusObjectChanged(QObject*)" );
 
           if( cb )
@@ -3222,7 +3231,10 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
       if( Signals2_connection( sender, "heightChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::heightChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::heightChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "heightChanged(int)" );
 
           if( cb )
@@ -3287,7 +3299,10 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
       if( Signals2_connection( sender, "maximumHeightChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::maximumHeightChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::maximumHeightChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maximumHeightChanged(int)" );
 
           if( cb )
@@ -3352,7 +3367,10 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
       if( Signals2_connection( sender, "maximumWidthChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::maximumWidthChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::maximumWidthChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maximumWidthChanged(int)" );
 
           if( cb )
@@ -3417,7 +3435,10 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
       if( Signals2_connection( sender, "minimumHeightChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::minimumHeightChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::minimumHeightChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minimumHeightChanged(int)" );
 
           if( cb )
@@ -3482,7 +3503,10 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
       if( Signals2_connection( sender, "minimumWidthChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::minimumWidthChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::minimumWidthChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minimumWidthChanged(int)" );
 
           if( cb )
@@ -3547,7 +3571,10 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
       if( Signals2_connection( sender, "modalityChanged(Qt::WindowModality)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::modalityChanged, [sender](Qt::WindowModality arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::modalityChanged, 
+                                                              [sender]
+                                                              (Qt::WindowModality arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modalityChanged(Qt::WindowModality)" );
 
           if( cb )
@@ -3613,7 +3640,10 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
       if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::opacityChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::opacityChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged(qreal)" );
 
           if( cb )
@@ -3679,7 +3709,10 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
       if( Signals2_connection( sender, "screenChanged(QScreen*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::screenChanged, [sender](QScreen* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::screenChanged, 
+                                                              [sender]
+                                                              (QScreen * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "screenChanged(QScreen*)" );
 
           if( cb )
@@ -3745,7 +3778,10 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
       if( Signals2_connection( sender, "visibilityChanged(QWindow::Visibility)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::visibilityChanged, [sender](QWindow::Visibility arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::visibilityChanged, 
+                                                              [sender]
+                                                              (QWindow::Visibility arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(QWindow::Visibility)" );
 
           if( cb )
@@ -3811,7 +3847,10 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
       if( Signals2_connection( sender, "visibleChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::visibleChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::visibleChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged(bool)" );
 
           if( cb )
@@ -3876,7 +3915,10 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
       if( Signals2_connection( sender, "widthChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::widthChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::widthChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "widthChanged(int)" );
 
           if( cb )
@@ -3941,7 +3983,10 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
       if( Signals2_connection( sender, "windowStateChanged(Qt::WindowState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::windowStateChanged, [sender](Qt::WindowState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::windowStateChanged, 
+                                                              [sender]
+                                                              (Qt::WindowState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowStateChanged(Qt::WindowState)" );
 
           if( cb )
@@ -4006,7 +4051,10 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
       if( Signals2_connection( sender, "windowTitleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::windowTitleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::windowTitleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowTitleChanged(QString)" );
 
           if( cb )
@@ -4071,7 +4119,10 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
       if( Signals2_connection( sender, "xChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::xChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::xChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xChanged(int)" );
 
           if( cb )
@@ -4136,7 +4187,10 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
       if( Signals2_connection( sender, "yChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWindow::yChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWindow::yChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yChanged(int)" );
 
           if( cb )

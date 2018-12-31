@@ -367,7 +367,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
       if( Signals2_connection( sender, "screenChanged(QScreen*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOffscreenSurface::screenChanged, [sender](QScreen* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOffscreenSurface::screenChanged, 
+                                                              [sender]
+                                                              (QScreen * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "screenChanged(QScreen*)" );
 
           if( cb )

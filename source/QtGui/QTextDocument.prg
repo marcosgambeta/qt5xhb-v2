@@ -2024,7 +2024,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
       if( Signals2_connection( sender, "contentsChange(int,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::contentsChange, [sender](int arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::contentsChange, 
+                                                              [sender]
+                                                              (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsChange(int,int,int)" );
 
           if( cb )
@@ -2093,7 +2096,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
       if( Signals2_connection( sender, "contentsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::contentsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::contentsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsChanged()" );
 
           if( cb )
@@ -2156,7 +2162,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
       if( Signals2_connection( sender, "undoAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::undoAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::undoAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "undoAvailable(bool)" );
 
           if( cb )
@@ -2221,7 +2230,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
       if( Signals2_connection( sender, "redoAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::redoAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::redoAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redoAvailable(bool)" );
 
           if( cb )
@@ -2286,7 +2298,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
       if( Signals2_connection( sender, "undoCommandAdded()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::undoCommandAdded, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::undoCommandAdded, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "undoCommandAdded()" );
 
           if( cb )
@@ -2349,7 +2364,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
       if( Signals2_connection( sender, "modificationChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::modificationChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::modificationChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modificationChanged(bool)" );
 
           if( cb )
@@ -2414,7 +2432,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
       if( Signals2_connection( sender, "cursorPositionChanged(QTextCursor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::cursorPositionChanged, [sender](QTextCursor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::cursorPositionChanged, 
+                                                              [sender]
+                                                              (const QTextCursor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged(QTextCursor)" );
 
           if( cb )
@@ -2479,7 +2500,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
       if( Signals2_connection( sender, "blockCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::blockCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::blockCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blockCountChanged(int)" );
 
           if( cb )
@@ -2544,7 +2568,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
       if( Signals2_connection( sender, "documentLayoutChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextDocument::documentLayoutChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextDocument::documentLayoutChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "documentLayoutChanged()" );
 
           if( cb )

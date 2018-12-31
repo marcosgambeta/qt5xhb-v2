@@ -360,7 +360,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
       if( Signals2_connection( sender, "changed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QIntValidator::changed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QIntValidator::changed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
 
           if( cb )

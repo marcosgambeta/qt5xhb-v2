@@ -374,7 +374,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
       if( Signals2_connection( sender, "documentSizeChanged(QSizeF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractTextDocumentLayout::documentSizeChanged, [sender](QSizeF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractTextDocumentLayout::documentSizeChanged, 
+                                                              [sender]
+                                                              (const QSizeF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "documentSizeChanged(QSizeF)" );
 
           if( cb )
@@ -439,7 +442,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
       if( Signals2_connection( sender, "pageCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractTextDocumentLayout::pageCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractTextDocumentLayout::pageCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pageCountChanged(int)" );
 
           if( cb )
@@ -504,7 +510,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
       if( Signals2_connection( sender, "update(QRectF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractTextDocumentLayout::update, [sender](QRectF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractTextDocumentLayout::update, 
+                                                              [sender]
+                                                              (const QRectF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "update(QRectF)" );
 
           if( cb )
@@ -569,7 +578,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
       if( Signals2_connection( sender, "updateBlock(QTextBlock)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractTextDocumentLayout::updateBlock, [sender](QTextBlock arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractTextDocumentLayout::updateBlock, 
+                                                              [sender]
+                                                              (const QTextBlock & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "updateBlock(QTextBlock)" );
 
           if( cb )

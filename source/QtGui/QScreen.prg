@@ -886,7 +886,10 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
       if( Signals2_connection( sender, "geometryChanged(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::geometryChanged, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::geometryChanged, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChanged(QRect)" );
 
           if( cb )
@@ -951,7 +954,10 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
       if( Signals2_connection( sender, "physicalSizeChanged(QSizeF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::physicalSizeChanged, [sender](QSizeF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::physicalSizeChanged, 
+                                                              [sender]
+                                                              (const QSizeF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalSizeChanged(QSizeF)" );
 
           if( cb )
@@ -1016,7 +1022,10 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
       if( Signals2_connection( sender, "physicalDotsPerInchChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::physicalDotsPerInchChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::physicalDotsPerInchChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalDotsPerInchChanged(qreal)" );
 
           if( cb )
@@ -1081,7 +1090,10 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
       if( Signals2_connection( sender, "logicalDotsPerInchChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::logicalDotsPerInchChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::logicalDotsPerInchChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "logicalDotsPerInchChanged(qreal)" );
 
           if( cb )
@@ -1146,7 +1158,10 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
       if( Signals2_connection( sender, "virtualGeometryChanged(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::virtualGeometryChanged, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::virtualGeometryChanged, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "virtualGeometryChanged(QRect)" );
 
           if( cb )
@@ -1211,7 +1226,10 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
       if( Signals2_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::primaryOrientationChanged, [sender](Qt::ScreenOrientation arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::primaryOrientationChanged, 
+                                                              [sender]
+                                                              (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
 
           if( cb )
@@ -1276,7 +1294,10 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
       if( Signals2_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::orientationChanged, [sender](Qt::ScreenOrientation arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::orientationChanged, 
+                                                              [sender]
+                                                              (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::ScreenOrientation)" );
 
           if( cb )
@@ -1341,7 +1362,10 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
       if( Signals2_connection( sender, "refreshRateChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScreen::refreshRateChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScreen::refreshRateChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "refreshRateChanged(qreal)" );
 
           if( cb )

@@ -973,7 +973,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
       if( Signals2_connection( sender, "focusObjectChanged(QObject*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::focusObjectChanged, [sender](QObject* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::focusObjectChanged, 
+                                                              [sender]
+                                                              (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusObjectChanged(QObject*)" );
 
           if( cb )
@@ -1038,7 +1041,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
       if( Signals2_connection( sender, "focusWindowChanged(QWindow*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::focusWindowChanged, [sender](QWindow* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::focusWindowChanged, 
+                                                              [sender]
+                                                              (QWindow * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusWindowChanged(QWindow*)" );
 
           if( cb )
@@ -1103,7 +1109,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
       if( Signals2_connection( sender, "fontDatabaseChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::fontDatabaseChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::fontDatabaseChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontDatabaseChanged()" );
 
           if( cb )
@@ -1166,7 +1175,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
       if( Signals2_connection( sender, "lastWindowClosed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::lastWindowClosed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::lastWindowClosed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lastWindowClosed()" );
 
           if( cb )
@@ -1229,7 +1241,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
       if( Signals2_connection( sender, "screenAdded(QScreen*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGuiApplication::screenAdded, [sender](QScreen* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::screenAdded, 
+                                                              [sender]
+                                                              (QScreen * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "screenAdded(QScreen*)" );
 
           if( cb )

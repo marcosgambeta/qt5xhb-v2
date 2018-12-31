@@ -171,7 +171,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
       if( Signals2_connection( sender, "regularExpressionChanged(QRegularExpression)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRegularExpressionValidator::regularExpressionChanged, [sender](QRegularExpression arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRegularExpressionValidator::regularExpressionChanged, 
+                                                              [sender]
+                                                              (const QRegularExpression & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "regularExpressionChanged(QRegularExpression)" );
 
           if( cb )

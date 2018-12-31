@@ -468,7 +468,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
       if( Signals2_connection( sender, "animatingChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::animatingChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputMethod::animatingChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "animatingChanged()" );
 
           if( cb )
@@ -531,7 +534,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
       if( Signals2_connection( sender, "cursorRectangleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::cursorRectangleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputMethod::cursorRectangleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorRectangleChanged()" );
 
           if( cb )
@@ -594,7 +600,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
       if( Signals2_connection( sender, "inputDirectionChanged(Qt::LayoutDirection)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::inputDirectionChanged, [sender](Qt::LayoutDirection arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputMethod::inputDirectionChanged, 
+                                                              [sender]
+                                                              (Qt::LayoutDirection arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputDirectionChanged(Qt::LayoutDirection)" );
 
           if( cb )
@@ -659,7 +668,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
       if( Signals2_connection( sender, "keyboardRectangleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::keyboardRectangleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputMethod::keyboardRectangleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "keyboardRectangleChanged()" );
 
           if( cb )
@@ -722,7 +734,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
       if( Signals2_connection( sender, "localeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::localeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputMethod::localeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged()" );
 
           if( cb )
@@ -785,7 +800,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputMethod::visibleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputMethod::visibleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
 
           if( cb )

@@ -564,7 +564,10 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
       if( Signals2_connection( sender, "aboutToBeDestroyed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLContext::aboutToBeDestroyed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOpenGLContext::aboutToBeDestroyed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToBeDestroyed()" );
 
           if( cb )

@@ -874,7 +874,10 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
       if( Signals2_connection( sender, "error(QImageReader::ImageReaderError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::error, [sender](QImageReader::ImageReaderError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMovie::error, 
+                                                              [sender]
+                                                              (QImageReader::ImageReaderError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QImageReader::ImageReaderError)" );
 
           if( cb )
@@ -939,7 +942,10 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMovie::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -1002,7 +1008,10 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
       if( Signals2_connection( sender, "frameChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::frameChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMovie::frameChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameChanged(int)" );
 
           if( cb )
@@ -1067,7 +1076,10 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
       if( Signals2_connection( sender, "resized(QSize)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::resized, [sender](QSize arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMovie::resized, 
+                                                              [sender]
+                                                              (const QSize & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "resized(QSize)" );
 
           if( cb )
@@ -1132,7 +1144,10 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
       if( Signals2_connection( sender, "started()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::started, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMovie::started, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
 
           if( cb )
@@ -1195,7 +1210,10 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QMovie::MovieState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::stateChanged, [sender](QMovie::MovieState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMovie::stateChanged, 
+                                                              [sender]
+                                                              (QMovie::MovieState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QMovie::MovieState)" );
 
           if( cb )
@@ -1260,7 +1278,10 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
       if( Signals2_connection( sender, "updated(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMovie::updated, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMovie::updated, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "updated(QRect)" );
 
           if( cb )

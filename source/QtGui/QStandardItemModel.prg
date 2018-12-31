@@ -1642,7 +1642,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
       if( Signals2_connection( sender, "itemChanged(QStandardItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QStandardItemModel::itemChanged, [sender](QStandardItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QStandardItemModel::itemChanged, 
+                                                              [sender]
+                                                              (QStandardItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QStandardItem*)" );
 
           if( cb )

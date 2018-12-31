@@ -465,7 +465,10 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
       if( Signals2_connection( sender, "actionChanged(Qt::DropAction)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDrag::actionChanged, [sender](Qt::DropAction arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDrag::actionChanged, 
+                                                              [sender]
+                                                              (Qt::DropAction arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actionChanged(Qt::DropAction)" );
 
           if( cb )
@@ -530,7 +533,10 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
       if( Signals2_connection( sender, "targetChanged(QObject*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDrag::targetChanged, [sender](QObject* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDrag::targetChanged, 
+                                                              [sender]
+                                                              (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "targetChanged(QObject*)" );
 
           if( cb )
