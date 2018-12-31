@@ -289,7 +289,10 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
       if( Signals2_connection( sender, "contentsCreated()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpContentModel::contentsCreated, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpContentModel::contentsCreated, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsCreated()" );
 
           if( cb )
@@ -352,7 +355,10 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
       if( Signals2_connection( sender, "contentsCreationStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpContentModel::contentsCreationStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpContentModel::contentsCreationStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsCreationStarted()" );
 
           if( cb )

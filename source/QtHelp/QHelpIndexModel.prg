@@ -141,7 +141,10 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
       if( Signals2_connection( sender, "indexCreated()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpIndexModel::indexCreated, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpIndexModel::indexCreated, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexCreated()" );
 
           if( cb )
@@ -204,7 +207,10 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
       if( Signals2_connection( sender, "indexCreationStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpIndexModel::indexCreationStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpIndexModel::indexCreationStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexCreationStarted()" );
 
           if( cb )

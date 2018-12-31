@@ -106,7 +106,10 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
       if( Signals2_connection( sender, "requestShowLink(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchResultWidget::requestShowLink, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpSearchResultWidget::requestShowLink, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "requestShowLink(QUrl)" );
 
           if( cb )

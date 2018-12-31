@@ -108,7 +108,10 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
       if( Signals2_connection( sender, "linkActivated(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpContentWidget::linkActivated, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpContentWidget::linkActivated, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkActivated(QUrl)" );
 
           if( cb )

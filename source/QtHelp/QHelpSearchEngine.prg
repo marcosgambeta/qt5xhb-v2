@@ -352,7 +352,10 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
       if( Signals2_connection( sender, "indexingFinished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::indexingFinished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpSearchEngine::indexingFinished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexingFinished()" );
 
           if( cb )
@@ -415,7 +418,10 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
       if( Signals2_connection( sender, "indexingStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::indexingStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpSearchEngine::indexingStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexingStarted()" );
 
           if( cb )
@@ -478,7 +484,10 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
       if( Signals2_connection( sender, "searchingFinished(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::searchingFinished, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpSearchEngine::searchingFinished, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingFinished(int)" );
 
           if( cb )
@@ -543,7 +552,10 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
       if( Signals2_connection( sender, "searchingStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchEngine::searchingStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpSearchEngine::searchingStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingStarted()" );
 
           if( cb )

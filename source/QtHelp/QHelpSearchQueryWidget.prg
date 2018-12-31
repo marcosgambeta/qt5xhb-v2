@@ -151,7 +151,10 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
       if( Signals2_connection( sender, "search()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpSearchQueryWidget::search, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpSearchQueryWidget::search, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "search()" );
 
           if( cb )

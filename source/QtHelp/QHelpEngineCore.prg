@@ -725,7 +725,10 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
       if( Signals2_connection( sender, "currentFilterChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpEngineCore::currentFilterChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpEngineCore::currentFilterChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentFilterChanged(QString)" );
 
           if( cb )
@@ -790,7 +793,10 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
       if( Signals2_connection( sender, "setupFinished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpEngineCore::setupFinished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpEngineCore::setupFinished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "setupFinished()" );
 
           if( cb )
@@ -853,7 +859,10 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
       if( Signals2_connection( sender, "setupStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpEngineCore::setupStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpEngineCore::setupStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "setupStarted()" );
 
           if( cb )
@@ -916,7 +925,10 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
       if( Signals2_connection( sender, "warning(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHelpEngineCore::warning, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHelpEngineCore::warning, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "warning(QString)" );
 
           if( cb )
