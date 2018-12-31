@@ -79,6 +79,6 @@ $prototype=void finished( QGeoRouteReply * reply )
 $signalMethod=5,4,0|void|finished|QGeoRouteReply *
 
 $prototype=void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
-$signalMethod=5,4,0|void|error|QGeoRouteReply *,QGeoRouteReply::Error,const QString &
+$signalMethod=5,4,0|void|error|QGeoRouteReply *,QGeoRouteReply::Error,QString
 
 #pragma ENDDUMP
