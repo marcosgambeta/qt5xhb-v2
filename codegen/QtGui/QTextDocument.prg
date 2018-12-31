@@ -379,7 +379,7 @@ $prototype=void modificationChanged( bool m )
 $signalMethod=|void|modificationChanged|bool
 
 $prototype=void cursorPositionChanged( const QTextCursor & cursor )
-$signalMethod=|void|cursorPositionChanged|QTextCursor
+$signalMethod=|void|cursorPositionChanged|const QTextCursor &
 
 $prototype=void blockCountChanged( int newBlockCount )
 $signalMethod=|void|blockCountChanged|int

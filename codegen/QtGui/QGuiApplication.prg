@@ -209,10 +209,10 @@ $staticMethod=|QWindowList|topLevelWindows|
 %%
 
 $prototype=void focusObjectChanged( QObject * focusObject )
-$signalMethod=|void|focusObjectChanged|QObject*
+$signalMethod=|void|focusObjectChanged|QObject *
 
 $prototype=void focusWindowChanged( QWindow * focusWindow )
-$signalMethod=|void|focusWindowChanged|QWindow*
+$signalMethod=|void|focusWindowChanged|QWindow *
 
 $prototype=void fontDatabaseChanged()
 $signalMethod=|void|fontDatabaseChanged|
@@ -221,6 +221,6 @@ $prototype=void lastWindowClosed()
 $signalMethod=|void|lastWindowClosed|
 
 $prototype=void screenAdded( QScreen * screen )
-$signalMethod=|void|screenAdded|QScreen*
+$signalMethod=|void|screenAdded|QScreen *
 
 #pragma ENDDUMP

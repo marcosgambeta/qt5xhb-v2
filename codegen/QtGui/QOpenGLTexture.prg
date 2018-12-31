@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 $addMethod=release
 
 $prototype=bool isBound() const
-$internalMethod=5,2,0|bool|isBound,isBound2|
+$internalMethod=5,2,0|bool|isBound,isBound1|
 
 $prototype=bool isBound(uint unit)
 $internalMethod=5,2,0|bool|isBound,isBound2|uint
@@ -131,18 +131,18 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 {
   if( ISNUMPAR(0) )
   {
-    QOpenGLTexture_isBind1();
+    QOpenGLTexture_isBound1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QOpenGLTexture_isBind2();
+    QOpenGLTexture_isBound2();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-$addMethod=isBind
+$addMethod=isBound
 
 $prototype=void setFormat(TextureFormat format)
 $method=5,2,0|void|setFormat|QOpenGLTexture::TextureFormat
@@ -193,19 +193,19 @@ $prototype=bool isTextureView() const
 $method=5,2,0|bool|isTextureView|
 
 $prototype=void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-$internalMethod=5,2,0|void|setData,setData1|int,int,QOpenGLTexture::CubeMapFace,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions *=0
+%% TODO: $internalMethod=5,2,0|void|setData,setData1|int,int,QOpenGLTexture::CubeMapFace,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions *=0
 
 $prototype=void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-$internalMethod=5,2,0|void|setData,setData2|int,int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $internalMethod=5,2,0|void|setData,setData2|int,int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-$internalMethod=5,2,0|void|setData,setData3|int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $internalMethod=5,2,0|void|setData,setData3|int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-$internalMethod=5,2,0|void|setData,setData4|QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $internalMethod=5,2,0|void|setData,setData4|QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-$internalMethod=5,2,0|void|setData,setData5|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
+%% TODO: $internalMethod=5,2,0|void|setData,setData5|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
 
 //[1]void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 //[2]void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
@@ -213,54 +213,56 @@ $internalMethod=5,2,0|void|setData,setData5|const QImage &,QOpenGLTexture::MipMa
 //[4]void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 //[5]void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA ) // TODO: implementar
+%% TODO: implementar
+HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA )
 {
-  //if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETDATA1 );
-  //}
-  //else if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETDATA2 );
-  //}
-  //else
-  //{
-  //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  //}
+%%  //if( ... )
+%%  //{
+%%  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETDATA1 );
+%%  //}
+%%  //else if( ... )
+%%  //{
+%%  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETDATA2 );
+%%  //}
+%%  //else
+%%  //{
+%%  //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%  //}
 }
 $addMethod=setData
 
 $prototype=void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-$method=5,2,0|void|setCompressedData,setCompressedData1|int,int,QOpenGLTexture::CubeMapFace,int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData1|int,int,QOpenGLTexture::CubeMapFace,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-$method=5,2,0|void|setCompressedData,setCompressedData2|int,int,int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData2|int,int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-$method=5,2,0|void|setCompressedData,setCompressedData3|int,int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData3|int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-$method=5,2,0|void|setCompressedData,setCompressedData4|int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData4|int,void *,const QOpenGLPixelTransferOptions * const=0
 
 //[1]void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 //[2]void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 //[3]void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 //[4]void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA ) // TODO: implementar
+%% TODO: implementar
+HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA )
 {
-  //if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETCOMPRESSEDDATA1 );
-  //}
-  //else if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETCOMPRESSEDDATA2 );
-  //}
-  //else
-  //{
-  //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  //}
+%%  //if( ... )
+%%  //{
+%%  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETCOMPRESSEDDATA1 );
+%%  //}
+%%  //else if( ... )
+%%  //{
+%%  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETCOMPRESSEDDATA2 );
+%%  //}
+%%  //else
+%%  //{
+%%  //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%  //}
 }
 $addMethod=setCompressedData
 
@@ -413,7 +415,8 @@ $method=5,2,0|void|setBorderColor,setBorderColor4|uint,uint,uint,uint
 //[3]void setBorderColor(int r, int g, int b, int a)
 //[4]void setBorderColor(uint r, uint g, uint b, uint a)
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR ) // TODO: resolver conflitos entre casos 2, 3 e 4
+%% TODO: resolver conflitos entre casos 2, 3 e 4
+HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR )
 {
   if( ISNUMPAR(1) && ISQCOLOR(1) )
   {
@@ -442,37 +445,38 @@ $prototype=QColor borderColor() const
 $method=5,2,0|QColor|borderColor,borderColor1|
 
 $prototype=void borderColor(float *border) const
-$method=5,2,0|void|borderColor,borderColor2|float *
+%% TODO: $method=5,2,0|void|borderColor,borderColor2|float *
 
 $prototype=void borderColor(int *border) const
 $method=5,2,0|void|borderColor,borderColor3|int *
 
 $prototype=void borderColor(unsigned int *border) const
-$method=5,2,0|void|borderColor,borderColor4|unsigned int *
+%% TODO: $method=5,2,0|void|borderColor,borderColor4|unsigned int *
 
 //[1]QColor borderColor() const
 //[2]void borderColor(float *border) const
 //[3]void borderColor(int *border) const
 //[4]void borderColor(unsigned int *border) const
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR ) // TODO: resolver conflitos entre casos 2, 3 e 4
+%% TODO: resolver conflitos entre casos 2, 3 e 4
+HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR )
 {
   if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR1 );
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR2 );
-  }
+%%  else if( ISNUMPAR(1) && ISNUM(1) )
+%%  {
+%%    HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR2 );
+%%  }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR3 );
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR4 );
-  }
+%%  else if( ISNUMPAR(1) && ISNUM(1) )
+%%  {
+%%    HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR4 );
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

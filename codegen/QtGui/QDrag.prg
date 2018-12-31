@@ -106,6 +106,6 @@ $prototype=void actionChanged( Qt::DropAction action )
 $signalMethod=|void|actionChanged|Qt::DropAction
 
 $prototype=void targetChanged( QObject * newTarget )
-$signalMethod=|void|targetChanged|QObject*
+$signalMethod=|void|targetChanged|QObject *
 
 #pragma ENDDUMP

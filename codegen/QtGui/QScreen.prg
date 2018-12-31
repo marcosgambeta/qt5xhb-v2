@@ -130,10 +130,10 @@ $method=|qreal|refreshRate|
 %%
 
 $prototype=void geometryChanged( const QRect & geometry )
-$signalMethod=|void|geometryChanged|QRect
+$signalMethod=|void|geometryChanged|const QRect &
 
 $prototype=void physicalSizeChanged( const QSizeF & size )
-$signalMethod=|void|physicalSizeChanged|QSizeF
+$signalMethod=|void|physicalSizeChanged|const QSizeF &
 
 $prototype=void physicalDotsPerInchChanged( qreal dpi )
 $signalMethod=|void|physicalDotsPerInchChanged|qreal
@@ -142,7 +142,7 @@ $prototype=void logicalDotsPerInchChanged( qreal dpi )
 $signalMethod=|void|logicalDotsPerInchChanged|qreal
 
 $prototype=void virtualGeometryChanged( const QRect & rect )
-$signalMethod=|void|virtualGeometryChanged|QRect
+$signalMethod=|void|virtualGeometryChanged|const QRect &
 
 $prototype=void primaryOrientationChanged( Qt::ScreenOrientation orientation )
 $signalMethod=|void|primaryOrientationChanged|Qt::ScreenOrientation

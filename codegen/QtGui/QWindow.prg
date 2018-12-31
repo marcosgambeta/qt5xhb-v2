@@ -590,7 +590,7 @@ $prototype=void contentOrientationChanged(Qt::ScreenOrientation orientation)
 $signalMethod=|void|contentOrientationChanged|Qt::ScreenOrientation
 
 $prototype=void focusObjectChanged(QObject *object)
-$signalMethod=|void|focusObjectChanged|QObject*
+$signalMethod=|void|focusObjectChanged|QObject *
 
 $prototype=void heightChanged(int arg)
 $signalMethod=|void|heightChanged|int
@@ -614,7 +614,7 @@ $prototype=void opacityChanged(qreal opacity)
 $signalMethod=5,1,0|void|opacityChanged|qreal
 
 $prototype=void screenChanged(QScreen *screen)
-$signalMethod=|void|screenChanged|QScreen*
+$signalMethod=|void|screenChanged|QScreen *
 
 $prototype=void visibilityChanged(QWindow::Visibility visibility)
 $signalMethod=5,1,0|void|visibilityChanged|QWindow::Visibility
@@ -629,7 +629,7 @@ $prototype=void windowStateChanged(Qt::WindowState windowState)
 $signalMethod=|void|windowStateChanged|Qt::WindowState
 
 $prototype=void windowTitleChanged(const QString &title)
-$signalMethod=|void|windowTitleChanged|QString
+$signalMethod=|void|windowTitleChanged|const QString &
 
 $prototype=void xChanged(int arg)
 $signalMethod=|void|xChanged|int

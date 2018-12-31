@@ -165,7 +165,7 @@ $prototype=void frameChanged( int frameNumber )
 $signalMethod=|void|frameChanged|int
 
 $prototype=void resized( const QSize & size )
-$signalMethod=|void|resized|QSize
+$signalMethod=|void|resized|const QSize &
 
 $prototype=void started()
 $signalMethod=|void|started|
@@ -174,6 +174,6 @@ $prototype=void stateChanged( QMovie::MovieState state )
 $signalMethod=|void|stateChanged|QMovie::MovieState
 
 $prototype=void updated( const QRect & rect )
-$signalMethod=|void|updated|QRect
+$signalMethod=|void|updated|const QRect &
 
 #pragma ENDDUMP

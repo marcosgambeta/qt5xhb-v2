@@ -331,6 +331,6 @@ $method=5,12,0|bool|clearItemData|const QModelIndex &
 %%
 
 $prototype=void itemChanged( QStandardItem * item )
-$signalMethod=|void|itemChanged|QStandardItem*
+$signalMethod=|void|itemChanged|QStandardItem *
 
 #pragma ENDDUMP

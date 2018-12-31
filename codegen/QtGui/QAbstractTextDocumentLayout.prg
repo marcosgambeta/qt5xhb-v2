@@ -69,15 +69,15 @@ $method=|void|setPaintDevice|QPaintDevice *
 %%
 
 $prototype=void documentSizeChanged( const QSizeF & newSize )
-$signalMethod=|void|documentSizeChanged|QSizeF
+$signalMethod=|void|documentSizeChanged|const QSizeF &
 
 $prototype=void pageCountChanged( int newPages )
 $signalMethod=|void|pageCountChanged|int
 
 $prototype=void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
-$signalMethod=|void|update|QRectF
+$signalMethod=|void|update|const QRectF &
 
 $prototype=void updateBlock( const QTextBlock & block )
-$signalMethod=|void|updateBlock|QTextBlock
+$signalMethod=|void|updateBlock|const QTextBlock &
 
 #pragma ENDDUMP

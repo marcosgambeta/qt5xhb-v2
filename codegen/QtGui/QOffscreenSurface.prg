@@ -73,6 +73,6 @@ $prototype=QPlatformOffscreenSurface *handle() const
 %%
 
 $prototype=void screenChanged( QScreen * screen )
-$signalMethod=|void|screenChanged|QScreen*
+$signalMethod=|void|screenChanged|QScreen *
 
 #pragma ENDDUMP

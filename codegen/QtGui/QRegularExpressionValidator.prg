@@ -65,6 +65,6 @@ $method=|void|setRegularExpression|const QRegularExpression &
 %%
 
 $prototype=void regularExpressionChanged( const QRegularExpression & re )
-$signalMethod=|void|regularExpressionChanged|QRegularExpression
+$signalMethod=|void|regularExpressionChanged|const QRegularExpression &
 
 #pragma ENDDUMP
