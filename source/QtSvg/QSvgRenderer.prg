@@ -590,7 +590,10 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
       if( Signals2_connection( sender, "repaintNeeded()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSvgRenderer::repaintNeeded, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSvgRenderer::repaintNeeded, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "repaintNeeded()" );
 
           if( cb )
