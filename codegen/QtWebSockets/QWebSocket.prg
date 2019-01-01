@@ -177,7 +177,7 @@ $prototype=void stateChanged( QAbstractSocket::SocketState state )
 $signalMethod=5,3,0|void|stateChanged|QAbstractSocket::SocketState
 
 $prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator )
-$signalMethod=5,3,0|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator *
+$signalMethod=5,3,0|void|proxyAuthenticationRequired|const QNetworkProxy &,QAuthenticator *
 
 $prototype=void readChannelFinished()
 $signalMethod=5,3,0|void|readChannelFinished|
