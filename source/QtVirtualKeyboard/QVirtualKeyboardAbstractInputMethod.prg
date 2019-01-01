@@ -552,7 +552,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
       if( Signals2_connection( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardAbstractInputMethod::selectionListChanged, [sender](QVirtualKeyboardSelectionListModel::Type arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardAbstractInputMethod::selectionListChanged, 
+                                                              [sender]
+                                                              (QVirtualKeyboardSelectionListModel::Type arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" );
 
           if( cb )
@@ -617,7 +620,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
       if( Signals2_connection( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged, [sender](QVirtualKeyboardSelectionListModel::Type arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged, 
+                                                              [sender]
+                                                              (QVirtualKeyboardSelectionListModel::Type arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" );
 
           if( cb )
@@ -684,7 +690,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
       if( Signals2_connection( sender, "selectionListsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardAbstractInputMethod::selectionListsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardAbstractInputMethod::selectionListsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionListsChanged()" );
 
           if( cb )

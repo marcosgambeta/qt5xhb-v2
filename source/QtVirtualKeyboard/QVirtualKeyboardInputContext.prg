@@ -717,7 +717,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
       if( Signals2_connection( sender, "preeditTextChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::preeditTextChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::preeditTextChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preeditTextChanged()" );
 
           if( cb )
@@ -780,7 +783,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
       if( Signals2_connection( sender, "inputMethodHintsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::inputMethodHintsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::inputMethodHintsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputMethodHintsChanged()" );
 
           if( cb )
@@ -843,7 +849,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
       if( Signals2_connection( sender, "surroundingTextChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::surroundingTextChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::surroundingTextChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "surroundingTextChanged()" );
 
           if( cb )
@@ -906,7 +915,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
       if( Signals2_connection( sender, "selectedTextChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::selectedTextChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::selectedTextChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedTextChanged()" );
 
           if( cb )
@@ -969,7 +981,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
       if( Signals2_connection( sender, "anchorPositionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::anchorPositionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::anchorPositionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorPositionChanged()" );
 
           if( cb )
@@ -1032,7 +1047,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
       if( Signals2_connection( sender, "cursorPositionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::cursorPositionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::cursorPositionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged()" );
 
           if( cb )
@@ -1095,7 +1113,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
       if( Signals2_connection( sender, "anchorRectangleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::anchorRectangleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::anchorRectangleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorRectangleChanged()" );
 
           if( cb )
@@ -1158,7 +1179,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
       if( Signals2_connection( sender, "cursorRectangleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::cursorRectangleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::cursorRectangleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorRectangleChanged()" );
 
           if( cb )
@@ -1221,7 +1245,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
       if( Signals2_connection( sender, "shiftActiveChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::shiftActiveChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::shiftActiveChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shiftActiveChanged()" );
 
           if( cb )
@@ -1284,7 +1311,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
       if( Signals2_connection( sender, "capsLockActiveChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::capsLockActiveChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::capsLockActiveChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "capsLockActiveChanged()" );
 
           if( cb )
@@ -1347,7 +1377,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
       if( Signals2_connection( sender, "uppercaseChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::uppercaseChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::uppercaseChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "uppercaseChanged()" );
 
           if( cb )
@@ -1410,7 +1443,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
       if( Signals2_connection( sender, "animatingChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::animatingChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::animatingChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "animatingChanged()" );
 
           if( cb )
@@ -1473,7 +1509,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
       if( Signals2_connection( sender, "localeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::localeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::localeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged()" );
 
           if( cb )
@@ -1536,7 +1575,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
       if( Signals2_connection( sender, "selectionControlVisibleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::selectionControlVisibleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::selectionControlVisibleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionControlVisibleChanged()" );
 
           if( cb )
@@ -1599,7 +1641,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANG
       if( Signals2_connection( sender, "anchorRectIntersectsClipRectChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::anchorRectIntersectsClipRectChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::anchorRectIntersectsClipRectChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorRectIntersectsClipRectChanged()" );
 
           if( cb )
@@ -1662,7 +1707,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANG
       if( Signals2_connection( sender, "cursorRectIntersectsClipRectChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputContext::cursorRectIntersectsClipRectChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputContext::cursorRectIntersectsClipRectChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorRectIntersectsClipRectChanged()" );
 
           if( cb )

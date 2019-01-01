@@ -550,7 +550,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
       if( Signals2_connection( sender, "traceIdChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardTrace::traceIdChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardTrace::traceIdChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "traceIdChanged(int)" );
 
           if( cb )
@@ -615,7 +618,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
       if( Signals2_connection( sender, "channelsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardTrace::channelsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardTrace::channelsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "channelsChanged()" );
 
           if( cb )
@@ -678,7 +684,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
       if( Signals2_connection( sender, "lengthChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardTrace::lengthChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardTrace::lengthChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lengthChanged(int)" );
 
           if( cb )
@@ -743,7 +752,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
       if( Signals2_connection( sender, "finalChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardTrace::finalChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardTrace::finalChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finalChanged(bool)" );
 
           if( cb )
@@ -808,7 +820,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
       if( Signals2_connection( sender, "canceledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardTrace::canceledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardTrace::canceledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canceledChanged(bool)" );
 
           if( cb )
@@ -873,7 +888,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
       if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardTrace::opacityChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardTrace::opacityChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged(qreal)" );
 
           if( cb )

@@ -607,7 +607,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
       if( Signals2_connection( sender, "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::virtualKeyClicked, [sender](Qt::Key arg1, QString arg2, Qt::KeyboardModifiers arg3, bool arg4) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::virtualKeyClicked, 
+                                                              [sender]
+                                                              (Qt::Key arg1, const QString & arg2, Qt::KeyboardModifiers arg3, bool arg4) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)" );
 
           if( cb )
@@ -678,7 +681,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
       if( Signals2_connection( sender, "activeKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::activeKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::activeKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -743,7 +749,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
       if( Signals2_connection( sender, "previousKeyChanged(Qt::Key)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::previousKeyChanged, [sender](Qt::Key arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::previousKeyChanged, 
+                                                              [sender]
+                                                              (Qt::Key arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "previousKeyChanged(Qt::Key)" );
 
           if( cb )
@@ -808,7 +817,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
       if( Signals2_connection( sender, "inputMethodChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::inputMethodChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::inputMethodChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputMethodChanged()" );
 
           if( cb )
@@ -871,7 +883,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
       if( Signals2_connection( sender, "inputMethodReset()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::inputMethodReset, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::inputMethodReset, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputMethodReset()" );
 
           if( cb )
@@ -934,7 +949,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
       if( Signals2_connection( sender, "inputMethodUpdate()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::inputMethodUpdate, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::inputMethodUpdate, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputMethodUpdate()" );
 
           if( cb )
@@ -997,7 +1015,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
       if( Signals2_connection( sender, "inputModesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::inputModesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::inputModesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputModesChanged()" );
 
           if( cb )
@@ -1060,7 +1081,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
       if( Signals2_connection( sender, "inputModeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::inputModeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::inputModeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputModeChanged()" );
 
           if( cb )
@@ -1123,7 +1147,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
       if( Signals2_connection( sender, "patternRecognitionModesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::patternRecognitionModesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::patternRecognitionModesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "patternRecognitionModesChanged()" );
 
           if( cb )
@@ -1186,7 +1213,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
       if( Signals2_connection( sender, "wordCandidateListModelChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::wordCandidateListModelChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::wordCandidateListModelChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "wordCandidateListModelChanged()" );
 
           if( cb )
@@ -1249,7 +1279,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGE
       if( Signals2_connection( sender, "wordCandidateListVisibleHintChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardInputEngine::wordCandidateListVisibleHintChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardInputEngine::wordCandidateListVisibleHintChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "wordCandidateListVisibleHintChanged()" );
 
           if( cb )

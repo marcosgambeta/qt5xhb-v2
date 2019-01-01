@@ -302,7 +302,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
       if( Signals2_connection( sender, "countChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardSelectionListModel::countChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardSelectionListModel::countChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
 
           if( cb )
@@ -365,7 +368,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
       if( Signals2_connection( sender, "activeItemChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardSelectionListModel::activeItemChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardSelectionListModel::activeItemChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeItemChanged(int)" );
 
           if( cb )
@@ -430,7 +436,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
       if( Signals2_connection( sender, "itemSelected(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QVirtualKeyboardSelectionListModel::itemSelected, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QVirtualKeyboardSelectionListModel::itemSelected, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelected(int)" );
 
           if( cb )
