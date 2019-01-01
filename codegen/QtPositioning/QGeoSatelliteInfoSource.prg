@@ -69,10 +69,10 @@ $staticMethod=5,2,0|QStringList|availableSources|
 %%
 
 $prototype=void satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites )
-$signalMethod=5,2,0|void|satellitesInViewUpdated|QList<QGeoSatelliteInfo>
+$signalMethod=5,2,0|void|satellitesInViewUpdated|const QList<QGeoSatelliteInfo> &
 
 $prototype=void satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites )
-$signalMethod=5,2,0|void|satellitesInUseUpdated|QList<QGeoSatelliteInfo>
+$signalMethod=5,2,0|void|satellitesInUseUpdated|const QList<QGeoSatelliteInfo> &
 
 $prototype=void requestTimeout()
 $signalMethod=5,2,0|void|requestTimeout|

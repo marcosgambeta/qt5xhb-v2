@@ -93,13 +93,13 @@ $staticMethod=5,2,0|QStringList|availableSources|
 %%
 
 $prototype=void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
-$signalMethod=5,2,0|void|areaEntered|QGeoAreaMonitorInfo,QGeoPositionInfo
+$signalMethod=5,2,0|void|areaEntered|const QGeoAreaMonitorInfo &,const QGeoPositionInfo &
 
 $prototype=void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
-$signalMethod=5,2,0|void|areaExited|QGeoAreaMonitorInfo,QGeoPositionInfo
+$signalMethod=5,2,0|void|areaExited|const QGeoAreaMonitorInfo &,const QGeoPositionInfo &
 
 $prototype=void monitorExpired( const QGeoAreaMonitorInfo & monitor )
-$signalMethod=5,2,0|void|monitorExpired|QGeoAreaMonitorInfo
+$signalMethod=5,2,0|void|monitorExpired|const QGeoAreaMonitorInfo &
 
 $prototype=void error( QGeoAreaMonitorSource::Error error )
 $signalMethod=5,2,0|void|error,error,QOverload<QGeoAreaMonitorSource::Error>|QGeoAreaMonitorSource::Error

@@ -81,7 +81,7 @@ $staticMethod=5,2,0|QStringList|availableSources|
 %%
 
 $prototype=void positionUpdated( const QGeoPositionInfo & update )
-$signalMethod=5,2,0|void|positionUpdated|QGeoPositionInfo
+$signalMethod=5,2,0|void|positionUpdated|const QGeoPositionInfo &
 
 $prototype=void updateTimeout()
 $signalMethod=5,2,0|void|updateTimeout|
