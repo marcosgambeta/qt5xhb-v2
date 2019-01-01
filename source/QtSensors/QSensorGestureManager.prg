@@ -210,7 +210,10 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
       if( Signals2_connection( sender, "newSensorGestureAvailable()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensorGestureManager::newSensorGestureAvailable, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensorGestureManager::newSensorGestureAvailable, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newSensorGestureAvailable()" );
 
           if( cb )

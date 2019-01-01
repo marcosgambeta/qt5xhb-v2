@@ -190,7 +190,10 @@ HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
       if( Signals2_connection( sender, "hasZChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QRotationSensor::hasZChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QRotationSensor::hasZChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hasZChanged(bool)" );
 
           if( cb )

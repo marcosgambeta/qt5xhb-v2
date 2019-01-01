@@ -1258,7 +1258,10 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
       if( Signals2_connection( sender, "busyChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::busyChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::busyChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "busyChanged()" );
 
           if( cb )
@@ -1323,7 +1326,10 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
       if( Signals2_connection( sender, "activeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::activeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::activeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged()" );
 
           if( cb )
@@ -1388,7 +1394,10 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
       if( Signals2_connection( sender, "readingChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::readingChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::readingChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readingChanged()" );
 
           if( cb )
@@ -1453,7 +1462,10 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
       if( Signals2_connection( sender, "sensorError(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::sensorError, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::sensorError, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sensorError(int)" );
 
           if( cb )
@@ -1520,7 +1532,10 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
       if( Signals2_connection( sender, "availableSensorsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::availableSensorsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::availableSensorsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "availableSensorsChanged()" );
 
           if( cb )
@@ -1585,7 +1600,10 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
       if( Signals2_connection( sender, "alwaysOnChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::alwaysOnChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::alwaysOnChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "alwaysOnChanged()" );
 
           if( cb )
@@ -1650,7 +1668,10 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
       if( Signals2_connection( sender, "dataRateChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::dataRateChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::dataRateChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataRateChanged()" );
 
           if( cb )
@@ -1715,7 +1736,10 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
       if( Signals2_connection( sender, "skipDuplicatesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::skipDuplicatesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::skipDuplicatesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "skipDuplicatesChanged(bool)" );
 
           if( cb )
@@ -1782,7 +1806,10 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
       if( Signals2_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::axesOrientationModeChanged, [sender](QSensor::AxesOrientationMode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::axesOrientationModeChanged, 
+                                                              [sender]
+                                                              (QSensor::AxesOrientationMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
 
           if( cb )
@@ -1849,7 +1876,10 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
       if( Signals2_connection( sender, "currentOrientationChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::currentOrientationChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::currentOrientationChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentOrientationChanged(int)" );
 
           if( cb )
@@ -1916,7 +1946,10 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
       if( Signals2_connection( sender, "userOrientationChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::userOrientationChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::userOrientationChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "userOrientationChanged(int)" );
 
           if( cb )
@@ -1983,7 +2016,10 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
       if( Signals2_connection( sender, "maxBufferSizeChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::maxBufferSizeChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::maxBufferSizeChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxBufferSizeChanged(int)" );
 
           if( cb )
@@ -2050,7 +2086,10 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
       if( Signals2_connection( sender, "efficientBufferSizeChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::efficientBufferSizeChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::efficientBufferSizeChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "efficientBufferSizeChanged(int)" );
 
           if( cb )
@@ -2117,7 +2156,10 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
       if( Signals2_connection( sender, "bufferSizeChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensor::bufferSizeChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensor::bufferSizeChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferSizeChanged(int)" );
 
           if( cb )

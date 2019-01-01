@@ -254,7 +254,10 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ONDETECTED )
       if( Signals2_connection( sender, "detected(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSensorGestureRecognizer::detected, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSensorGestureRecognizer::detected, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "detected(QString)" );
 
           if( cb )

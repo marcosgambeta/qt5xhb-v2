@@ -190,7 +190,10 @@ HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
       if( Signals2_connection( sender, "returnDoubleTapEventsChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTapSensor::returnDoubleTapEventsChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTapSensor::returnDoubleTapEventsChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "returnDoubleTapEventsChanged(bool)" );
 
           if( cb )

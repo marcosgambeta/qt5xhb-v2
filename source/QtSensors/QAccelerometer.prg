@@ -190,7 +190,10 @@ HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
       if( Signals2_connection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAccelerometer::accelerationModeChanged, [sender](QAccelerometer::AccelerationMode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAccelerometer::accelerationModeChanged, 
+                                                              [sender]
+                                                              (QAccelerometer::AccelerationMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
 
           if( cb )

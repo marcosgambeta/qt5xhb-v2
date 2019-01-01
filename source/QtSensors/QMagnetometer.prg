@@ -190,7 +190,10 @@ HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
       if( Signals2_connection( sender, "returnGeoValuesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMagnetometer::returnGeoValuesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMagnetometer::returnGeoValuesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "returnGeoValuesChanged(bool)" );
 
           if( cb )

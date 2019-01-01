@@ -190,7 +190,10 @@ HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
       if( Signals2_connection( sender, "fieldOfViewChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLightSensor::fieldOfViewChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLightSensor::fieldOfViewChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fieldOfViewChanged(qreal)" );
 
           if( cb )
