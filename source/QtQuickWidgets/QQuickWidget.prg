@@ -581,7 +581,10 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QQuickWidget::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWidget::statusChanged, [sender](QQuickWidget::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWidget::statusChanged, 
+                                                              [sender]
+                                                              (QQuickWidget::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQuickWidget::Status)" );
 
           if( cb )
@@ -648,7 +651,10 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
       if( Signals2_connection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWidget::sceneGraphError, [sender](QQuickWindow::SceneGraphError arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWidget::sceneGraphError, 
+                                                              [sender]
+                                                              (QQuickWindow::SceneGraphError arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
 
           if( cb )
