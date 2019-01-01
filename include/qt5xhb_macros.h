@@ -42,6 +42,7 @@
 #include "qt5xhb_macros_qtsvg.h"
 #include "qt5xhb_macros_qttexttospeech.h"
 #include "qt5xhb_macros_qtuitools.h"
+#include "qt5xhb_macros_qtvirtualkeyboard.h"
 #include "qt5xhb_macros_qtwebchannel.h"
 #include "qt5xhb_macros_qtwebengine.h"
 #include "qt5xhb_macros_qtwebenginecore.h"
