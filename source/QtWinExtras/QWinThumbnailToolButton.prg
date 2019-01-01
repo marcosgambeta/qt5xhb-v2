@@ -529,7 +529,10 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
       if( Signals2_connection( sender, "clicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinThumbnailToolButton::clicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinThumbnailToolButton::clicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked()" );
 
           if( cb )
@@ -594,7 +597,10 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
       if( Signals2_connection( sender, "changed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinThumbnailToolButton::changed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinThumbnailToolButton::changed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
 
           if( cb )

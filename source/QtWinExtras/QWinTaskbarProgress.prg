@@ -620,7 +620,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinTaskbarProgress::valueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinTaskbarProgress::valueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
 
           if( cb )
@@ -687,7 +690,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
       if( Signals2_connection( sender, "minimumChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinTaskbarProgress::minimumChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinTaskbarProgress::minimumChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minimumChanged(int)" );
 
           if( cb )
@@ -754,7 +760,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
       if( Signals2_connection( sender, "maximumChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinTaskbarProgress::maximumChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinTaskbarProgress::maximumChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maximumChanged(int)" );
 
           if( cb )
@@ -821,7 +830,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinTaskbarProgress::visibilityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinTaskbarProgress::visibilityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
 
           if( cb )
@@ -888,7 +900,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
       if( Signals2_connection( sender, "pausedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinTaskbarProgress::pausedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinTaskbarProgress::pausedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pausedChanged(bool)" );
 
           if( cb )
@@ -955,7 +970,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
       if( Signals2_connection( sender, "stoppedChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWinTaskbarProgress::stoppedChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWinTaskbarProgress::stoppedChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stoppedChanged(bool)" );
 
           if( cb )
