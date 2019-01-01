@@ -383,7 +383,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
       if( Signals2_connection( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoSatelliteInfoSource::satellitesInViewUpdated, [sender](QList<QGeoSatelliteInfo> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoSatelliteInfoSource::satellitesInViewUpdated, 
+                                                              [sender]
+                                                              (const QList<QGeoSatelliteInfo> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
 
           if( cb )
@@ -473,7 +476,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
       if( Signals2_connection( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoSatelliteInfoSource::satellitesInUseUpdated, [sender](QList<QGeoSatelliteInfo> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoSatelliteInfoSource::satellitesInUseUpdated, 
+                                                              [sender]
+                                                              (const QList<QGeoSatelliteInfo> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
 
           if( cb )
@@ -563,7 +569,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
       if( Signals2_connection( sender, "requestTimeout()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoSatelliteInfoSource::requestTimeout, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoSatelliteInfoSource::requestTimeout, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "requestTimeout()" );
 
           if( cb )
@@ -628,7 +637,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
       if( Signals2_connection( sender, "error(QGeoSatelliteInfoSource::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QGeoSatelliteInfoSource::Error>::of(&QGeoSatelliteInfoSource::error), [sender](QGeoSatelliteInfoSource::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QGeoSatelliteInfoSource::Error>::of(&QGeoSatelliteInfoSource::error), 
+                                                              [sender]
+                                                              (QGeoSatelliteInfoSource::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoSatelliteInfoSource::Error)" );
 
           if( cb )

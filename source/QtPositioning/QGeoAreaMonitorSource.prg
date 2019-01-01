@@ -486,7 +486,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
       if( Signals2_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoAreaMonitorSource::areaEntered, [sender](QGeoAreaMonitorInfo arg1, QGeoPositionInfo arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoAreaMonitorSource::areaEntered, 
+                                                              [sender]
+                                                              (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
 
           if( cb )
@@ -555,7 +558,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
       if( Signals2_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoAreaMonitorSource::areaExited, [sender](QGeoAreaMonitorInfo arg1, QGeoPositionInfo arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoAreaMonitorSource::areaExited, 
+                                                              [sender]
+                                                              (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
 
           if( cb )
@@ -624,7 +630,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
       if( Signals2_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoAreaMonitorSource::monitorExpired, [sender](QGeoAreaMonitorInfo arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoAreaMonitorSource::monitorExpired, 
+                                                              [sender]
+                                                              (const QGeoAreaMonitorInfo & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "monitorExpired(QGeoAreaMonitorInfo)" );
 
           if( cb )
@@ -691,7 +700,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
       if( Signals2_connection( sender, "error(QGeoAreaMonitorSource::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error), [sender](QGeoAreaMonitorSource::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error), 
+                                                              [sender]
+                                                              (QGeoAreaMonitorSource::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoAreaMonitorSource::Error)" );
 
           if( cb )

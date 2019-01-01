@@ -494,7 +494,10 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
       if( Signals2_connection( sender, "positionUpdated(QGeoPositionInfo)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoPositionInfoSource::positionUpdated, [sender](QGeoPositionInfo arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoPositionInfoSource::positionUpdated, 
+                                                              [sender]
+                                                              (const QGeoPositionInfo & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionUpdated(QGeoPositionInfo)" );
 
           if( cb )
@@ -561,7 +564,10 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
       if( Signals2_connection( sender, "updateTimeout()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGeoPositionInfoSource::updateTimeout, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGeoPositionInfoSource::updateTimeout, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "updateTimeout()" );
 
           if( cb )
@@ -626,7 +632,10 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
       if( Signals2_connection( sender, "error(QGeoPositionInfoSource::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error), [sender](QGeoPositionInfoSource::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error), 
+                                                              [sender]
+                                                              (QGeoPositionInfoSource::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoPositionInfoSource::Error)" );
 
           if( cb )
