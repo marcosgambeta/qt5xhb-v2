@@ -49,15 +49,15 @@ $virtualMethod=5,10,0|void|networkReplyFinished|QNetworkReply *
 %%
 
 $prototype=void callbackDataReceived( const QByteArray & data )
-$signalMethod=5,10,0|void|callbackDataReceived|QByteArray
+$signalMethod=5,10,0|void|callbackDataReceived|const QByteArray &
 
 $prototype=void callbackReceived( const QVariantMap & values )
-%% TODO: $signalMethod=|void|callbackReceived( const QVariantMap & values )
+%% TODO: $signalMethod=|void|callbackReceived|const QVariantMap &
 
 $prototype=void replyDataReceived( const QByteArray & data )
-$signalMethod=5,10,0|void|replyDataReceived|QByteArray
+$signalMethod=5,10,0|void|replyDataReceived|const QByteArray &
 
 $prototype=void tokensReceived( const QVariantMap & tokens )
-%% TODO: $signalMethod=|void|tokensReceived|QVariantMap
+%% TODO: $signalMethod=|void|tokensReceived|const QVariantMap &
 
 #pragma ENDDUMP

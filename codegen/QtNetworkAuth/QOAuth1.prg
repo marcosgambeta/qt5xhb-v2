@@ -141,18 +141,18 @@ $prototype=static QByteArray generateAuthorizationHeader(const QVariantMap &oaut
 %%
 
 $prototype=void clientSharedSecretChanged( const QString & credential )
-$signalMethod=5,10,0|void|clientSharedSecretChanged|QString
+$signalMethod=5,10,0|void|clientSharedSecretChanged|const QString &
 
 $prototype=void signatureMethodChanged( QOAuth1::SignatureMethod method )
 $signalMethod=5,10,0|void|signatureMethodChanged|QOAuth1::SignatureMethod
 
 $prototype=void temporaryCredentialsUrlChanged( const QUrl & url )
-$signalMethod=5,10,0|void|temporaryCredentialsUrlChanged|QUrl
+$signalMethod=5,10,0|void|temporaryCredentialsUrlChanged|const QUrl &
 
 $prototype=void tokenCredentialsUrlChanged( const QUrl & url )
-$signalMethod=5,10,0|void|tokenCredentialsUrlChanged|QUrl
+$signalMethod=5,10,0|void|tokenCredentialsUrlChanged|const QUrl &
 
 $prototype=void tokenSecretChanged( const QString & token )
-$signalMethod=5,10,0|void|tokenSecretChanged|QString
+$signalMethod=5,10,0|void|tokenSecretChanged|const QString &
 
 #pragma ENDDUMP

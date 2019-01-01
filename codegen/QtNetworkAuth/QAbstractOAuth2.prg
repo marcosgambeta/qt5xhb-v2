@@ -145,27 +145,27 @@ $method=5,10,0|void|setRefreshToken|const QString &
 %%
 
 $prototype=void authorizationCallbackReceived( const QVariantMap & data )
-%% TODO: $signalMethod=|void|authorizationCallbackReceived|QVariantMap
+%% TODO: $signalMethod=|void|authorizationCallbackReceived|const QVariantMap &
 
 $prototype=void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
-$signalMethod=5,10,0|void|clientIdentifierSharedKeyChanged|QString
+$signalMethod=5,10,0|void|clientIdentifierSharedKeyChanged|const QString &
 
 $prototype=void error( const QString & error, const QString & errorDescription, const QUrl & uri )
-$signalMethod=5,10,0|void|error|QString,QString,QUrl
+$signalMethod=5,10,0|void|error|const QString &,const QString &,const QUrl &
 
 $prototype=void expirationAtChanged( const QDateTime & expiration )
-$signalMethod=5,10,0|void|expirationAtChanged|QDateTime
+$signalMethod=5,10,0|void|expirationAtChanged|const QDateTime &
 
 $prototype=void responseTypeChanged( const QString & responseType )
-$signalMethod=5,10,0|void|responseTypeChanged|QString
+$signalMethod=5,10,0|void|responseTypeChanged|const QString &
 
 $prototype=void scopeChanged( const QString & scope )
-$signalMethod=5,10,0|void|scopeChanged|QString
+$signalMethod=5,10,0|void|scopeChanged|const QString &
 
 $prototype=void stateChanged( const QString & state )
-$signalMethod=5,10,0|void|stateChanged|QString
+$signalMethod=5,10,0|void|stateChanged|const QString &
 
 $prototype=void userAgentChanged( const QString & userAgent )
-$signalMethod=5,10,0|void|userAgentChanged|QString
+$signalMethod=5,10,0|void|userAgentChanged|const QString &
 
 #pragma ENDDUMP

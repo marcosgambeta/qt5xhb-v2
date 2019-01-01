@@ -147,19 +147,19 @@ $prototype=static QByteArray generateRandomString(quint8 length) [protected]
 %%
 
 $prototype=void clientIdentifierChanged( const QString & clientIdentifier )
-$signalMethod=5,10,0|void|clientIdentifierChanged|QString
+$signalMethod=5,10,0|void|clientIdentifierChanged|const QString &
 
 $prototype=void tokenChanged( const QString & token )
-$signalMethod=5,10,0|void|tokenChanged|QString
+$signalMethod=5,10,0|void|tokenChanged|const QString &
 
 $prototype=void statusChanged( QAbstractOAuth::Status status )
 $signalMethod=5,10,0|void|statusChanged|QAbstractOAuth::Status
 
 $prototype=void authorizationUrlChanged( const QUrl & url )
-$signalMethod=5,10,0|void|authorizationUrlChanged|QUrl
+$signalMethod=5,10,0|void|authorizationUrlChanged|const QUrl &
 
 $prototype=void extraTokensChanged( const QVariantMap & tokens )
-%% TODO: $signalMethod=5,10,0|void|extraTokensChanged|QVariantMap
+%% TODO: $signalMethod=5,10,0|void|extraTokensChanged|const QVariantMap &
 
 $prototype=void contentTypeChanged( QAbstractOAuth::ContentType contentType )
 $signalMethod=5,10,0|void|contentTypeChanged|QAbstractOAuth::ContentType
@@ -168,15 +168,15 @@ $prototype=void requestFailed( const QAbstractOAuth::Error error )
 $signalMethod=5,10,0|void|requestFailed|QAbstractOAuth::Error
 
 $prototype=void authorizeWithBrowser( const QUrl & url )
-$signalMethod=5,10,0|void|authorizeWithBrowser|QUrl
+$signalMethod=5,10,0|void|authorizeWithBrowser|const QUrl &
 
 $prototype=void granted()
 $signalMethod=5,10,0|void|granted|
 
 $prototype=void finished( QNetworkReply * reply )
-$signalMethod=5,10,0|void|finished|QNetworkReply*
+$signalMethod=5,10,0|void|finished|QNetworkReply *
 
 $prototype=void replyDataReceived( const QByteArray & data )
-$signalMethod=5,10,0|void|replyDataReceived|QByteArray
+$signalMethod=5,10,0|void|replyDataReceived|const QByteArray &
 
 #pragma ENDDUMP

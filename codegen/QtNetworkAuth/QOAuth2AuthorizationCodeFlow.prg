@@ -113,6 +113,6 @@ $prototype=void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &p
 %%
 
 $prototype=void accessTokenUrlChanged( const QUrl & accessTokenUrl )
-$signalMethod=5,10,0|void|accessTokenUrlChanged|QUrl
+$signalMethod=5,10,0|void|accessTokenUrlChanged|const QUrl &
 
 #pragma ENDDUMP
