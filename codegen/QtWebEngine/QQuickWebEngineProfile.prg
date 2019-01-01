@@ -205,9 +205,11 @@ $prototype=QQuickWebEngineSettings *settings() const [private]
 $prototype=void cachePathChanged()
 $signalMethod=|void|cachePathChanged|
 
-%% TODO: $signal=|downloadFinished( QQuickWebEngineDownloadItem * download )
+$prototype=void downloadFinished( QQuickWebEngineDownloadItem * download )
+%% TODO: $signalMethod=|void|downloadFinished|QQuickWebEngineDownloadItem *
 
-%% TODO: $signal=|downloadRequested( QQuickWebEngineDownloadItem * download )
+$prototype=void downloadRequested( QQuickWebEngineDownloadItem * download )
+%% TODO: $signalMethod=|void|downloadRequested|QQuickWebEngineDownloadItem *
 
 $prototype=void httpAcceptLanguageChanged()
 $signalMethod=|void|httpAcceptLanguageChanged|

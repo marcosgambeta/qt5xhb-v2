@@ -108,16 +108,16 @@ $prototype=void injectionPointChanged( QQuickWebEngineScript::InjectionPoint inj
 $signalMethod=|void|injectionPointChanged|QQuickWebEngineScript::InjectionPoint
 
 $prototype=void nameChanged( const QString & name )
-$signalMethod=|void|nameChanged|QString
+$signalMethod=|void|nameChanged|const QString &
 
 $prototype=void runOnSubframesChanged( bool on )
 $signalMethod=|void|runOnSubframesChanged|bool
 
 $prototype=void sourceCodeChanged( const QString & code )
-$signalMethod=|void|sourceCodeChanged|QString
+$signalMethod=|void|sourceCodeChanged|const QString &
 
 $prototype=void sourceUrlChanged( const QUrl & url )
-$signalMethod=|void|sourceUrlChanged|QUrl
+$signalMethod=|void|sourceUrlChanged|const QUrl &
 
 $prototype=void worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 $signalMethod=|void|worldIdChanged|QQuickWebEngineScript::ScriptWorldId
