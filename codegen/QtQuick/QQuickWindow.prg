@@ -145,7 +145,7 @@ $prototype=void beforeSynchronizing()
 $signalMethod=|void|beforeSynchronizing|
 
 $prototype=void colorChanged( const QColor & color )
-$signalMethod=|void|colorChanged|QColor
+$signalMethod=|void|colorChanged|const QColor &
 
 $prototype=void frameSwapped()
 $signalMethod=|void|frameSwapped|
