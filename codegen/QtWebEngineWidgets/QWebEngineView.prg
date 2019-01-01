@@ -115,15 +115,15 @@ $prototype=void loadFinished( bool b )
 $signalMethod=5,4,0|void|loadFinished|bool
 
 $prototype=void titleChanged( const QString & title )
-$signalMethod=5,4,0|void|titleChanged|QString
+$signalMethod=5,4,0|void|titleChanged|const QString &
 
 $prototype=void selectionChanged()
 $signalMethod=5,4,0|void|selectionChanged|
 
 $prototype=void urlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|urlChanged|QUrl
+$signalMethod=5,4,0|void|urlChanged|const QUrl &
 
 $prototype=void iconUrlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|iconUrlChanged|QUrl
+$signalMethod=5,4,0|void|iconUrlChanged|const QUrl &
 
 #pragma ENDDUMP

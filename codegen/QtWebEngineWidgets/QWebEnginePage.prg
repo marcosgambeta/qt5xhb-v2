@@ -151,36 +151,36 @@ $prototype=void loadFinished( bool ok )
 $signalMethod=5,4,0|void|loadFinished|bool
 
 $prototype=void linkHovered( const QString & url )
-$signalMethod=5,4,0|void|linkHovered|QString
+$signalMethod=5,4,0|void|linkHovered|const QString &
 
 $prototype=void selectionChanged()
 $signalMethod=5,4,0|void|selectionChanged|
 
 $prototype=void geometryChangeRequested( const QRect & geom )
-$signalMethod=5,4,0|void|geometryChangeRequested|QRect
+$signalMethod=5,4,0|void|geometryChangeRequested|const QRect &
 
 $prototype=void windowCloseRequested()
 $signalMethod=5,4,0|void|windowCloseRequested|
 
 $prototype=void featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
-$signalMethod=5,4,0|void|featurePermissionRequested|QUrl,QWebEnginePage::Feature
+$signalMethod=5,4,0|void|featurePermissionRequested|const QUrl &,QWebEnginePage::Feature
 
 $prototype=void featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
-$signalMethod=5,4,0|void|featurePermissionRequestCanceled|QUrl,QWebEnginePage::Feature
+$signalMethod=5,4,0|void|featurePermissionRequestCanceled|const QUrl &,QWebEnginePage::Feature
 
 $prototype=void authenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator )
-$signalMethod=5,4,0|void|authenticationRequired|QUrl,QAuthenticator*
+$signalMethod=5,4,0|void|authenticationRequired|const QUrl &,QAuthenticator *
 
 $prototype=void proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator, const QString & proxyHost )
-$signalMethod=5,4,0|void|proxyAuthenticationRequired|QUrl,QAuthenticator*,QString
+$signalMethod=5,4,0|void|proxyAuthenticationRequired|const QUrl &,QAuthenticator *,const QString &
 
 $prototype=void titleChanged( const QString & title )
-$signalMethod=5,4,0|void|titleChanged|QString
+$signalMethod=5,4,0|void|titleChanged|const QString &
 
 $prototype=void urlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|urlChanged|QUrl
+$signalMethod=5,4,0|void|urlChanged|const QUrl &
 
 $prototype=void iconUrlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|iconUrlChanged|QUrl
+$signalMethod=5,4,0|void|iconUrlChanged|const QUrl &
 
 #pragma ENDDUMP
