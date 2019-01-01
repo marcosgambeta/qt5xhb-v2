@@ -145,7 +145,7 @@ $slotMethod=5,10,0|void|resume|
 %%
 
 $prototype=void localeChanged( const QLocale & locale )
-$signalMethod=5,10,0|void|localeChanged|QLocale
+$signalMethod=5,10,0|void|localeChanged|const QLocale &
 
 $prototype=void pitchChanged( double pitch )
 $signalMethod=5,10,0|void|pitchChanged|double
@@ -157,7 +157,7 @@ $prototype=void stateChanged( QTextToSpeech::State state )
 $signalMethod=5,10,0|void|stateChanged|QTextToSpeech::State
 
 $prototype=void voiceChanged( const QVoice & voice )
-$signalMethod=5,10,0|void|voiceChanged|QVoice
+$signalMethod=5,10,0|void|voiceChanged|const QVoice &
 
 $prototype=void volumeChanged( int volume )
 $signalMethod=5,10,0|void|volumeChanged|int
