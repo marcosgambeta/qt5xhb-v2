@@ -440,10 +440,10 @@ $method=|void|clearSelection|
 %%
 
 $prototype=void changed( const QList<QRectF> & region )
-$signalMethod=|void|changed|QList<QRectF>
+$signalMethod=|void|changed|const QList<QRectF> &
 
 $prototype=void sceneRectChanged( const QRectF & rect )
-$signalMethod=|void|sceneRectChanged|QRectF
+$signalMethod=|void|sceneRectChanged|const QRectF &
 
 $prototype=void selectionChanged()
 $signalMethod=|void|selectionChanged|

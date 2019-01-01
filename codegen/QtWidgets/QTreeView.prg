@@ -210,9 +210,9 @@ $method=|void|showColumn|int
 %%
 
 $prototype=void collapsed( const QModelIndex & index )
-$signalMethod=|void|collapsed|QModelIndex
+$signalMethod=|void|collapsed|const QModelIndex &
 
 $prototype=void expanded( const QModelIndex & index )
-$signalMethod=|void|expanded|QModelIndex
+$signalMethod=|void|expanded|const QModelIndex &
 
 #pragma ENDDUMP

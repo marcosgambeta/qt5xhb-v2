@@ -394,10 +394,10 @@ $prototype=void aboutToUseGpuResources()
 %% TODO: check $signalMethod=|void|aboutToUseGpuResources|
 
 $prototype=void commitDataRequest( QSessionManager & manager )
-%% TODO: fix $signalMethod=|void|commitDataRequest|QSessionManager
+%% TODO: fix $signalMethod=|void|commitDataRequest|QSessionManager &
 
 $prototype=void focusChanged( QWidget * old, QWidget * now )
-$signalMethod=|void|focusChanged|QWidget*,QWidget*
+$signalMethod=|void|focusChanged|QWidget *,QWidget *
 
 $prototype=void fontDatabaseChanged()
 $signalMethod=|void|fontDatabaseChanged|
@@ -406,6 +406,6 @@ $prototype=void lastWindowClosed()
 $signalMethod=|void|lastWindowClosed|
 
 $prototype=void saveStateRequest( QSessionManager & manager )
-%% TODO: fix $signalMethod=|void|saveStateRequest|QSessionManager
+%% TODO: fix $signalMethod=|void|saveStateRequest|QSessionManager &
 
 #pragma ENDDUMP

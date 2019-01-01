@@ -196,7 +196,7 @@ $method=|void|ungrabGesture|QObject *
 %%
 
 $prototype=void scrollerPropertiesChanged( const QScrollerProperties & newProperties )
-$signalMethod=|void|scrollerPropertiesChanged|QScrollerProperties
+$signalMethod=|void|scrollerPropertiesChanged|const QScrollerProperties &
 
 $prototype=void stateChanged( QScroller::State newState )
 $signalMethod=|void|stateChanged|QScroller::State

@@ -67,6 +67,6 @@ $method=|void|showMessage|const QString &,int=0
 %%
 
 $prototype=void messageChanged( const QString & message )
-$signalMethod=|void|messageChanged|QString
+$signalMethod=|void|messageChanged|const QString &
 
 #pragma ENDDUMP

@@ -112,9 +112,9 @@ $addMethod=getFont
 %%
 
 $prototype=void currentFontChanged( const QFont & font )
-$signalMethod=|void|currentFontChanged|QFont
+$signalMethod=|void|currentFontChanged|const QFont &
 
 $prototype=void fontSelected( const QFont & font )
-$signalMethod=|void|fontSelected|QFont
+$signalMethod=|void|fontSelected|const QFont &
 
 #pragma ENDDUMP

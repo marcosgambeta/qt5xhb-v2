@@ -228,7 +228,7 @@ $method=5,2,0|QWidget *|takeCentralWidget|
 %%
 
 $prototype=void iconSizeChanged( const QSize & iconSize )
-$signalMethod=|void|iconSizeChanged|QSize
+$signalMethod=|void|iconSizeChanged|const QSize &
 
 $prototype=void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 $signalMethod=|void|toolButtonStyleChanged|Qt::ToolButtonStyle

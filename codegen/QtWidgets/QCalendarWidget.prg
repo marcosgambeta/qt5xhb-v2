@@ -182,10 +182,10 @@ $method=|void|showToday|
 %%
 
 $prototype=void activated( const QDate & date )
-$signalMethod=|void|activated|QDate
+$signalMethod=|void|activated|const QDate &
 
 $prototype=void clicked( const QDate & date )
-$signalMethod=|void|clicked|QDate
+$signalMethod=|void|clicked|const QDate &
 
 $prototype=void currentPageChanged( int year, int month )
 $signalMethod=|void|currentPageChanged|int,int

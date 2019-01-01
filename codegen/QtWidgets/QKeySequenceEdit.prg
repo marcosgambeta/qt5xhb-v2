@@ -73,6 +73,6 @@ $prototype=void editingFinished()
 $signalMethod=5,2,0|void|editingFinished|
 
 $prototype=void keySequenceChanged( const QKeySequence & keySequence )
-$signalMethod=5,2,0|void|keySequenceChanged|QKeySequence
+$signalMethod=5,2,0|void|keySequenceChanged|const QKeySequence &
 
 #pragma ENDDUMP

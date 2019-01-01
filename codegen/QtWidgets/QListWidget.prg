@@ -230,31 +230,31 @@ $method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint
 %%
 
 $prototype=void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
-$signalMethod=|void|currentItemChanged|QListWidgetItem*,QListWidgetItem*
+$signalMethod=|void|currentItemChanged|QListWidgetItem *,QListWidgetItem *
 
 $prototype=void currentRowChanged( int currentRow )
 $signalMethod=|void|currentRowChanged|int
 
 $prototype=void currentTextChanged( const QString & currentText )
-$signalMethod=|void|currentTextChanged|QString
+$signalMethod=|void|currentTextChanged|const QString &
 
 $prototype=void itemActivated( QListWidgetItem * item )
-$signalMethod=|void|itemActivated|QListWidgetItem*
+$signalMethod=|void|itemActivated|QListWidgetItem *
 
 $prototype=void itemChanged( QListWidgetItem * item )
-$signalMethod=|void|itemChanged|QListWidgetItem*
+$signalMethod=|void|itemChanged|QListWidgetItem *
 
 $prototype=void itemClicked( QListWidgetItem * item )
-$signalMethod=|void|itemClicked|QListWidgetItem*
+$signalMethod=|void|itemClicked|QListWidgetItem *
 
 $prototype=void itemDoubleClicked( QListWidgetItem * item )
-$signalMethod=|void|itemDoubleClicked|QListWidgetItem*
+$signalMethod=|void|itemDoubleClicked|QListWidgetItem *
 
 $prototype=void itemEntered( QListWidgetItem * item )
-$signalMethod=|void|itemEntered|QListWidgetItem*
+$signalMethod=|void|itemEntered|QListWidgetItem *
 
 $prototype=void itemPressed( QListWidgetItem * item )
-$signalMethod=|void|itemPressed|QListWidgetItem*
+$signalMethod=|void|itemPressed|QListWidgetItem *
 
 $prototype=void itemSelectionChanged()
 $signalMethod=|void|itemSelectionChanged|

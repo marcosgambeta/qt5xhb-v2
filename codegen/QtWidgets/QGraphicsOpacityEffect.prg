@@ -52,6 +52,6 @@ $prototype=void opacityChanged( qreal opacity )
 $signalMethod=|void|opacityChanged|qreal
 
 $prototype=void opacityMaskChanged( const QBrush & mask )
-$signalMethod=|void|opacityMaskChanged|QBrush
+$signalMethod=|void|opacityMaskChanged|const QBrush &
 
 #pragma ENDDUMP

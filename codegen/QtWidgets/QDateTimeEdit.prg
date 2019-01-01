@@ -221,12 +221,12 @@ $method=|void|setTime|const QTime &
 %%
 
 $prototype=void dateChanged( const QDate & date )
-$signalMethod=|void|dateChanged|QDate
+$signalMethod=|void|dateChanged|const QDate &
 
 $prototype=void dateTimeChanged( const QDateTime & datetime )
-$signalMethod=|void|dateTimeChanged|QDateTime
+$signalMethod=|void|dateTimeChanged|const QDateTime &
 
 $prototype=void timeChanged( const QTime & time )
-$signalMethod=|void|timeChanged|QTime
+$signalMethod=|void|timeChanged|const QTime &
 
 #pragma ENDDUMP

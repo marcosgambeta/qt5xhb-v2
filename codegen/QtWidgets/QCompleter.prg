@@ -172,15 +172,15 @@ $method=5,2,0|Qt::MatchFlags|filterMode|
 %%
 
 $prototype=void activated( const QString & text )
-$signalMethod=|void|activated,activated1,QOverload<const QString &>|QString
+$signalMethod=|void|activated,activated1,QOverload<const QString &>|const QString &
 
 $prototype=void activated( const QModelIndex & index )
-$signalMethod=|void|activated,activated2,QOverload<const QModelIndex &>|QModelIndex
+$signalMethod=|void|activated,activated2,QOverload<const QModelIndex &>|const QModelIndex &
 
 $prototype=void highlighted( const QString & text )
-$signalMethod=|void|highlighted,highlighted1,QOverload<const QString &>|QString
+$signalMethod=|void|highlighted,highlighted1,QOverload<const QString &>|const QString &
 
 $prototype=void highlighted( const QModelIndex & index )
-$signalMethod=|void|highlighted,highlighted2,QOverload<const QModelIndex &>|QModelIndex
+$signalMethod=|void|highlighted,highlighted2,QOverload<const QModelIndex &>|const QModelIndex &
 
 #pragma ENDDUMP

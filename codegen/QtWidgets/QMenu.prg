@@ -341,9 +341,9 @@ $prototype=void aboutToShow()
 $signalMethod=|void|aboutToShow|
 
 $prototype=void hovered( QAction * action )
-$signalMethod=|void|hovered|QAction*
+$signalMethod=|void|hovered|QAction *
 
 $prototype=void triggered( QAction * action )
-$signalMethod=|void|triggered|QAction*
+$signalMethod=|void|triggered|QAction *
 
 #pragma ENDDUMP

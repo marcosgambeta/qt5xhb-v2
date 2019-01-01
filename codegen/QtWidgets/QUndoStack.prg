@@ -123,9 +123,9 @@ $prototype=void indexChanged( int idx )
 $signalMethod=|void|indexChanged|int
 
 $prototype=void redoTextChanged( const QString & redoText )
-$signalMethod=|void|redoTextChanged|QString
+$signalMethod=|void|redoTextChanged|const QString &
 
 $prototype=void undoTextChanged( const QString & undoText )
-$signalMethod=|void|undoTextChanged|QString
+$signalMethod=|void|undoTextChanged|const QString &
 
 #pragma ENDDUMP

@@ -104,9 +104,9 @@ $prototype=void blurRadiusChanged( qreal blurRadius )
 $signalMethod=|void|blurRadiusChanged|qreal
 
 $prototype=void colorChanged( const QColor & color )
-$signalMethod=|void|colorChanged|QColor
+$signalMethod=|void|colorChanged|const QColor &
 
 $prototype=void offsetChanged( const QPointF & offset )
-$signalMethod=|void|offsetChanged|QPointF
+$signalMethod=|void|offsetChanged|const QPointF &
 
 #pragma ENDDUMP

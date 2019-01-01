@@ -275,25 +275,25 @@ $prototype=void currentCellChanged( int currentRow, int currentColumn, int previ
 $signalMethod=|void|currentCellChanged|int,int,int,int
 
 $prototype=void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous )
-$signalMethod=|void|currentItemChanged|QTableWidgetItem*,QTableWidgetItem*
+$signalMethod=|void|currentItemChanged|QTableWidgetItem *,QTableWidgetItem *
 
 $prototype=void itemActivated( QTableWidgetItem * item )
-$signalMethod=|void|itemActivated|QTableWidgetItem*
+$signalMethod=|void|itemActivated|QTableWidgetItem *
 
 $prototype=void itemChanged( QTableWidgetItem * item )
-$signalMethod=|void|itemChanged|QTableWidgetItem*
+$signalMethod=|void|itemChanged|QTableWidgetItem *
 
 $prototype=void itemClicked( QTableWidgetItem * item )
-$signalMethod=|void|itemClicked|QTableWidgetItem*
+$signalMethod=|void|itemClicked|QTableWidgetItem *
 
 $prototype=void itemDoubleClicked( QTableWidgetItem * item )
-$signalMethod=|void|itemDoubleClicked|QTableWidgetItem*
+$signalMethod=|void|itemDoubleClicked|QTableWidgetItem *
 
 $prototype=void itemEntered( QTableWidgetItem * item )
-$signalMethod=|void|itemEntered|QTableWidgetItem*
+$signalMethod=|void|itemEntered|QTableWidgetItem *
 
 $prototype=void itemPressed( QTableWidgetItem * item )
-$signalMethod=|void|itemPressed|QTableWidgetItem*
+$signalMethod=|void|itemPressed|QTableWidgetItem *
 
 $prototype=void itemSelectionChanged()
 $signalMethod=|void|itemSelectionChanged|

@@ -85,6 +85,6 @@ $method=|void|showMenu||#ifndef QT_NO_MENU
 %%
 
 $prototype=void triggered( QAction * action )
-$signalMethod=|void|triggered|QAction*
+$signalMethod=|void|triggered|QAction *
 
 #pragma ENDDUMP

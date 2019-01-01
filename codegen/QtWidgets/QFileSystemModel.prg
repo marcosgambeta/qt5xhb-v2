@@ -195,12 +195,12 @@ $method=|Qt::DropActions|supportedDropActions|
 %%
 
 $prototype=void directoryLoaded( const QString & path )
-$signalMethod=|void|directoryLoaded|QString
+$signalMethod=|void|directoryLoaded|const QString &
 
 $prototype=void fileRenamed( const QString & path, const QString & oldName, const QString & newName )
-$signalMethod=|void|fileRenamed|QString,QString,QString
+$signalMethod=|void|fileRenamed|const QString &,const QString &,const QString &
 
 $prototype=void rootPathChanged( const QString & newPath )
-$signalMethod=|void|rootPathChanged|QString
+$signalMethod=|void|rootPathChanged|const QString &
 
 #pragma ENDDUMP

@@ -58,6 +58,6 @@ $method=|void|setCurrentFont|const QFont &
 %%
 
 $prototype=void currentFontChanged( const QFont & font )
-$signalMethod=|void|currentFontChanged|QFont
+$signalMethod=|void|currentFontChanged|const QFont &
 
 #pragma ENDDUMP

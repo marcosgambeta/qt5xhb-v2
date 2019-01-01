@@ -133,6 +133,6 @@ $virtualMethod=|QRect|visualRect|const QModelIndex &
 %%
 
 $prototype=void indexesMoved( const QModelIndexList & indexes )
-$signalMethod=|void|indexesMoved|QModelIndexList
+$signalMethod=|void|indexesMoved|const QModelIndexList &
 
 #pragma ENDDUMP

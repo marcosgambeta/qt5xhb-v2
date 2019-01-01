@@ -269,6 +269,6 @@ $method=|void|setButtonText|int,const QString &
 %%
 
 $prototype=void buttonClicked( QAbstractButton * button )
-$signalMethod=|void|buttonClicked|QAbstractButton*
+$signalMethod=|void|buttonClicked|QAbstractButton *
 
 #pragma ENDDUMP

@@ -147,9 +147,9 @@ $virtualMethod=|int|type|
 %%
 
 $prototype=void linkActivated( const QString & link )
-$signalMethod=|void|linkActivated|QString
+$signalMethod=|void|linkActivated|const QString &
 
 $prototype=void linkHovered( const QString & link )
-$signalMethod=|void|linkHovered|QString
+$signalMethod=|void|linkHovered|const QString &
 
 #pragma ENDDUMP

@@ -97,7 +97,7 @@ $virtualMethod=|void|setSource|const QUrl &
 %%
 
 $prototype=void anchorClicked( const QUrl & link )
-$signalMethod=|void|anchorClicked|QUrl
+$signalMethod=|void|anchorClicked|const QUrl &
 
 $prototype=void backwardAvailable( bool available )
 $signalMethod=|void|backwardAvailable|bool
@@ -106,15 +106,15 @@ $prototype=void forwardAvailable( bool available )
 $signalMethod=|void|forwardAvailable|bool
 
 $prototype=void highlighted( const QUrl & link )
-$signalMethod=|void|highlighted,highlighted1,QOverload<const QUrl &>|QUrl
+$signalMethod=|void|highlighted,highlighted1,QOverload<const QUrl &>|const QUrl &
 
 $prototype=void highlighted( const QString & link )
-$signalMethod=|void|highlighted,highlighted2,QOverload<const QString &>|QString
+$signalMethod=|void|highlighted,highlighted2,QOverload<const QString &>|const QString &
 
 $prototype=void historyChanged()
 $signalMethod=|void|historyChanged|
 
 $prototype=void sourceChanged( const QUrl & src )
-$signalMethod=|void|sourceChanged|QUrl
+$signalMethod=|void|sourceChanged|const QUrl &
 
 #pragma ENDDUMP

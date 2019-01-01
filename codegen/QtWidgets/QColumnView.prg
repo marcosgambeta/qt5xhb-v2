@@ -79,6 +79,6 @@ $virtualMethod=|QRect|visualRect|const QModelIndex &
 %%
 
 $prototype=void updatePreviewWidget( const QModelIndex & index )
-$signalMethod=|void|updatePreviewWidget|QModelIndex
+$signalMethod=|void|updatePreviewWidget|const QModelIndex &
 
 #pragma ENDDUMP

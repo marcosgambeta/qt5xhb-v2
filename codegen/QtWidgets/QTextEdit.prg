@@ -348,7 +348,7 @@ $prototype=void copyAvailable( bool yes )
 $signalMethod=|void|copyAvailable|bool
 
 $prototype=void currentCharFormatChanged( const QTextCharFormat & f )
-$signalMethod=|void|currentCharFormatChanged|QTextCharFormat
+$signalMethod=|void|currentCharFormatChanged|const QTextCharFormat &
 
 $prototype=void cursorPositionChanged()
 $signalMethod=|void|cursorPositionChanged|

@@ -278,25 +278,25 @@ $prototype=void activated( int index )
 $signalMethod=|void|activated,activated1,QOverload<int>|int
 
 $prototype=void activated( const QString & text )
-$signalMethod=|void|activated,activated2,QOverload<const QString &>|QString
+$signalMethod=|void|activated,activated2,QOverload<const QString &>|const QString &
 
 $prototype=void currentIndexChanged( int index )
 $signalMethod=|void|currentIndexChanged,currentIndexChanged1,QOverload<int>|int
 
 $prototype=void currentIndexChanged( const QString & text )
-$signalMethod=|void|currentIndexChanged,currentIndexChanged2,QOverload<const QString &>|QString
+$signalMethod=|void|currentIndexChanged,currentIndexChanged2,QOverload<const QString &>|const QString &
 
 $prototype=void currentTextChanged(const QString &text)
-$signalMethod=|void|currentTextChanged|QString
+$signalMethod=|void|currentTextChanged|const QString &
 
 $prototype=void editTextChanged( const QString & text )
-$signalMethod=|void|editTextChanged|QString
+$signalMethod=|void|editTextChanged|const QString &
 
 $prototype=void highlighted( int index )
 $signalMethod=|void|highlighted,highlighted1,QOverload<int>|int
 
 $prototype=void highlighted( const QString & text )
-$signalMethod=|void|highlighted,highlighted2,QOverload<const QString &>|QString
+$signalMethod=|void|highlighted,highlighted2,QOverload<const QString &>|const QString &
 
 // for compatibility
 

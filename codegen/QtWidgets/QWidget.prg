@@ -1216,15 +1216,15 @@ $staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=0,Qt::WindowF
 %%
 
 $prototype=void windowTitleChanged( const QString & title )
-$signalMethod=5,2,0|void|windowTitleChanged|QString
+$signalMethod=5,2,0|void|windowTitleChanged|const QString &
 
 $prototype=void windowIconChanged( const QIcon & icon )
-$signalMethod=5,2,0|void|windowIconChanged|QIcon
+$signalMethod=5,2,0|void|windowIconChanged|const QIcon &
 
 $prototype=void windowIconTextChanged( const QString & iconText )
-$signalMethod=|void|windowIconTextChanged|QString
+$signalMethod=|void|windowIconTextChanged|const QString &
 
 $prototype=void customContextMenuRequested( const QPoint & pos )
-$signalMethod=|void|customContextMenuRequested|QPoint
+$signalMethod=|void|customContextMenuRequested|const QPoint &
 
 #pragma ENDDUMP

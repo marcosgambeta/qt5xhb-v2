@@ -100,6 +100,6 @@ $prototype=void valueChanged( double d )
 $signalMethod=|void|valueChanged,valueChanged1,QOverload<double>|double
 
 $prototype=void valueChanged( const QString & text )
-$signalMethod=|void|valueChanged,valueChanged2,QOverload<const QString &>|QString
+$signalMethod=|void|valueChanged,valueChanged2,QOverload<const QString &>|const QString &
 
 #pragma ENDDUMP

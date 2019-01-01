@@ -149,9 +149,9 @@ $staticMethod=|void|setStandardColor|int,QColor
 %%
 
 $prototype=void colorSelected( const QColor & color )
-$signalMethod=|void|colorSelected|QColor
+$signalMethod=|void|colorSelected|const QColor &
 
 $prototype=|currentColorChanged( const QColor & color )
-$signalMethod=|void|currentColorChanged|QColor
+$signalMethod=|void|currentColorChanged|const QColor &
 
 #pragma ENDDUMP

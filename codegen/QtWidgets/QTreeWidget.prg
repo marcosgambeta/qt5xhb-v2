@@ -209,31 +209,31 @@ $method=|void|scrollToItem|const QTreeWidgetItem *,QAbstractItemView::ScrollHint
 %%
 
 $prototype=void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
-$signalMethod=|void|currentItemChanged|QTreeWidgetItem*,QTreeWidgetItem*
+$signalMethod=|void|currentItemChanged|QTreeWidgetItem *,QTreeWidgetItem *
 
 $prototype=void itemActivated( QTreeWidgetItem * item, int column )
-$signalMethod=|void|itemActivated|QTreeWidgetItem*,int
+$signalMethod=|void|itemActivated|QTreeWidgetItem *,int
 
 $prototype=void itemChanged( QTreeWidgetItem * item, int column )
-$signalMethod=|void|itemChanged|QTreeWidgetItem*,int
+$signalMethod=|void|itemChanged|QTreeWidgetItem *,int
 
 $prototype=void itemClicked( QTreeWidgetItem * item, int column )
-$signalMethod=|void|itemClicked|QTreeWidgetItem*,int
+$signalMethod=|void|itemClicked|QTreeWidgetItem *,int
 
 $prototype=void itemCollapsed( QTreeWidgetItem * item )
-$signalMethod=|void|itemCollapsed|QTreeWidgetItem*
+$signalMethod=|void|itemCollapsed|QTreeWidgetItem *
 
 $prototype=void itemDoubleClicked( QTreeWidgetItem * item, int column )
-$signalMethod=|void|itemDoubleClicked|QTreeWidgetItem*,int
+$signalMethod=|void|itemDoubleClicked|QTreeWidgetItem *,int
 
 $prototype=void itemEntered( QTreeWidgetItem * item, int column )
-$signalMethod=|void|itemEntered|QTreeWidgetItem*,int
+$signalMethod=|void|itemEntered|QTreeWidgetItem *,int
 
 $prototype=void itemExpanded( QTreeWidgetItem * item )
-$signalMethod=|void|itemExpanded|QTreeWidgetItem*
+$signalMethod=|void|itemExpanded|QTreeWidgetItem *
 
 $prototype=void itemPressed( QTreeWidgetItem * item, int column )
-$signalMethod=|void|itemPressed|QTreeWidgetItem*,int
+$signalMethod=|void|itemPressed|QTreeWidgetItem *,int
 
 $prototype=void itemSelectionChanged()
 $signalMethod=|void|itemSelectionChanged|

@@ -77,6 +77,6 @@ $method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::b
 %%
 
 $prototype=void messageChanged( const QString & message )
-$signalMethod=|void|messageChanged|QString
+$signalMethod=|void|messageChanged|const QString &
 
 #pragma ENDDUMP

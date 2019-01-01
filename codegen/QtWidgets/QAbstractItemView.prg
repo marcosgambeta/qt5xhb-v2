@@ -302,19 +302,19 @@ $virtualMethod=|void|doItemsLayout|
 %%
 
 $prototype=void activated( const QModelIndex & index )
-$signalMethod=|void|activated|QModelIndex
+$signalMethod=|void|activated|const QModelIndex &
 
 $prototype=void clicked( const QModelIndex & index )
-$signalMethod=|void|clicked|QModelIndex
+$signalMethod=|void|clicked|const QModelIndex &
 
 $prototype=void doubleClicked( const QModelIndex & index )
-$signalMethod=|void|doubleClicked|QModelIndex
+$signalMethod=|void|doubleClicked|const QModelIndex &
 
 $prototype=void entered( const QModelIndex & index )
-$signalMethod=|void|entered|QModelIndex
+$signalMethod=|void|entered|const QModelIndex &
 
 $prototype=void pressed( const QModelIndex & index )
-$signalMethod=|void|pressed|QModelIndex
+$signalMethod=|void|pressed|const QModelIndex &
 
 $prototype=void viewportEntered()
 $signalMethod=|void|viewportEntered|

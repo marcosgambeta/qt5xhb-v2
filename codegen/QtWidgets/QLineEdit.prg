@@ -322,9 +322,9 @@ $prototype=void selectionChanged()
 $signalMethod=|void|selectionChanged|
 
 $prototype=void textChanged( const QString & text )
-$signalMethod=|void|textChanged|QString
+$signalMethod=|void|textChanged|const QString &
 
 $prototype=void textEdited( const QString & text )
-$signalMethod=|void|textEdited|QString
+$signalMethod=|void|textEdited|const QString &
 
 #pragma ENDDUMP

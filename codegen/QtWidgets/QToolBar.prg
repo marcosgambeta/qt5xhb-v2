@@ -201,13 +201,13 @@ $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 %%
 
 $prototype=void actionTriggered( QAction * action )
-$signalMethod=|void|actionTriggered|QAction*
+$signalMethod=|void|actionTriggered|QAction *
 
 $prototype=void allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 $signalMethod=|void|allowedAreasChanged|Qt::ToolBarAreas
 
 $prototype=void iconSizeChanged( const QSize & iconSize )
-$signalMethod=|void|iconSizeChanged|QSize
+$signalMethod=|void|iconSizeChanged|const QSize &
 
 $prototype=void movableChanged( bool movable )
 $signalMethod=|void|movableChanged|bool

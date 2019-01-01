@@ -193,9 +193,9 @@ $prototype=void intValueSelected( int value )
 $signalMethod=|void|intValueSelected|int
 
 $prototype=void textValueChanged( const QString & text )
-$signalMethod=|void|textValueChanged|QString
+$signalMethod=|void|textValueChanged|const QString &
 
 $prototype=void textValueSelected( const QString & text )
-$signalMethod=|void|textValueSelected|QString
+$signalMethod=|void|textValueSelected|const QString &
 
 #pragma ENDDUMP

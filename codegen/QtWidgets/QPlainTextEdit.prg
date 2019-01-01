@@ -280,6 +280,6 @@ $prototype=void undoAvailable( bool available )
 $signalMethod=|void|undoAvailable|bool
 
 $prototype=void updateRequest( const QRect & rect, int dy )
-$signalMethod=|void|updateRequest|QRect,int
+$signalMethod=|void|updateRequest|const QRect &,int
 
 #pragma ENDDUMP

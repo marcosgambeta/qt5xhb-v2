@@ -139,7 +139,7 @@ $prototype=void accepted()
 $signalMethod=|void|accepted|
 
 $prototype=void clicked( QAbstractButton * button )
-$signalMethod=|void|clicked|QAbstractButton*
+$signalMethod=|void|clicked|QAbstractButton *
 
 $prototype=void helpRequested()
 $signalMethod=|void|helpRequested|
