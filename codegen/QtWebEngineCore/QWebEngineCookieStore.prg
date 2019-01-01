@@ -47,10 +47,14 @@ $method=|void|deleteAllCookies|
 $prototype=void loadAllCookies()
 $method=|void|loadAllCookies|
 
+%%
+%% SIGNALS
+%%
+
 $prototype=void cookieAdded(const QNetworkCookie &cookie)
-$signalMethod=|void|cookieAdded|QNetworkCookie
+$signalMethod=|void|cookieAdded|const QNetworkCookie &
 
 $prototype=void cookieRemoved(const QNetworkCookie &cookie)
-$signalMethod=|void|cookieRemoved|QNetworkCookie
+$signalMethod=|void|cookieRemoved|const QNetworkCookie &
 
 #pragma ENDDUMP
