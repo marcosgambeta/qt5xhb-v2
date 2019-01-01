@@ -1162,7 +1162,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::proxyAuthenticationRequired, [sender](QNetworkProxy arg1, QAuthenticator* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::proxyAuthenticationRequired, 
+                                                              [sender]
+                                                              (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
           if( cb )
@@ -1229,7 +1232,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "authenticationRequired(QNetworkReply*,QAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::authenticationRequired, [sender](QNetworkReply* arg1, QAuthenticator* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::authenticationRequired, 
+                                                              [sender]
+                                                              (QNetworkReply * arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
 
           if( cb )
@@ -1296,7 +1302,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
       if( Signals2_connection( sender, "finished(QNetworkReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::finished, [sender](QNetworkReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::finished, 
+                                                              [sender]
+                                                              (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QNetworkReply*)" );
 
           if( cb )
@@ -1362,7 +1371,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
       if( Signals2_connection( sender, "encrypted(QNetworkReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::encrypted, [sender](QNetworkReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::encrypted, 
+                                                              [sender]
+                                                              (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted(QNetworkReply*)" );
 
           if( cb )
@@ -1428,7 +1440,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
       if( Signals2_connection( sender, "sslErrors(QNetworkReply*,QList<QSslError>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::sslErrors, [sender](QNetworkReply* arg1, QList<QSslError> arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::sslErrors, 
+                                                              [sender]
+                                                              (QNetworkReply * arg1, const QList<QSslError> & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QNetworkReply*,QList<QSslError>)" );
 
           if( cb )
@@ -1519,7 +1534,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::preSharedKeyAuthenticationRequired, [sender](QNetworkReply* arg1, QSslPreSharedKeyAuthenticator* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::preSharedKeyAuthenticationRequired, 
+                                                              [sender]
+                                                              (QNetworkReply * arg1, QSslPreSharedKeyAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" );
 
           if( cb )
@@ -1587,7 +1605,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
       if( Signals2_connection( sender, "networkSessionConnected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::networkSessionConnected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::networkSessionConnected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "networkSessionConnected()" );
 
           if( cb )
@@ -1650,7 +1671,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
       if( Signals2_connection( sender, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkAccessManager::networkAccessibleChanged, [sender](QNetworkAccessManager::NetworkAccessibility arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkAccessManager::networkAccessibleChanged, 
+                                                              [sender]
+                                                              (QNetworkAccessManager::NetworkAccessibility arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
 
           if( cb )

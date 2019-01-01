@@ -287,7 +287,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
       if( Signals2_connection( sender, "configurationAdded(QNetworkConfiguration)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::configurationAdded, [sender](QNetworkConfiguration arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkConfigurationManager::configurationAdded, 
+                                                              [sender]
+                                                              (const QNetworkConfiguration & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationAdded(QNetworkConfiguration)" );
 
           if( cb )
@@ -352,7 +355,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
       if( Signals2_connection( sender, "configurationChanged(QNetworkConfiguration)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::configurationChanged, [sender](QNetworkConfiguration arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkConfigurationManager::configurationChanged, 
+                                                              [sender]
+                                                              (const QNetworkConfiguration & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationChanged(QNetworkConfiguration)" );
 
           if( cb )
@@ -417,7 +423,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
       if( Signals2_connection( sender, "configurationRemoved(QNetworkConfiguration)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::configurationRemoved, [sender](QNetworkConfiguration arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkConfigurationManager::configurationRemoved, 
+                                                              [sender]
+                                                              (const QNetworkConfiguration & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationRemoved(QNetworkConfiguration)" );
 
           if( cb )
@@ -482,7 +491,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
       if( Signals2_connection( sender, "onlineStateChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::onlineStateChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkConfigurationManager::onlineStateChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "onlineStateChanged(bool)" );
 
           if( cb )
@@ -547,7 +559,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
       if( Signals2_connection( sender, "updateCompleted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkConfigurationManager::updateCompleted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkConfigurationManager::updateCompleted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "updateCompleted()" );
 
           if( cb )

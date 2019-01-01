@@ -1096,7 +1096,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
       if( Signals2_connection( sender, "connected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSocket::connected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSocket::connected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
 
           if( cb )
@@ -1159,7 +1162,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
       if( Signals2_connection( sender, "disconnected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSocket::disconnected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSocket::disconnected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
 
           if( cb )
@@ -1222,7 +1228,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
       if( Signals2_connection( sender, "error(QAbstractSocket::SocketError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error), [sender](QAbstractSocket::SocketError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error), 
+                                                              [sender]
+                                                              (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAbstractSocket::SocketError)" );
 
           if( cb )
@@ -1287,7 +1296,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
       if( Signals2_connection( sender, "hostFound()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSocket::hostFound, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSocket::hostFound, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hostFound()" );
 
           if( cb )
@@ -1350,7 +1362,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSocket::proxyAuthenticationRequired, [sender](QNetworkProxy arg1, QAuthenticator* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSocket::proxyAuthenticationRequired, 
+                                                              [sender]
+                                                              (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
           if( cb )
@@ -1417,7 +1432,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSocket::stateChanged, [sender](QAbstractSocket::SocketState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSocket::stateChanged, 
+                                                              [sender]
+                                                              (QAbstractSocket::SocketState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAbstractSocket::SocketState)" );
 
           if( cb )

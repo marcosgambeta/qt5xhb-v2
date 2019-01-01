@@ -2282,7 +2282,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
       if( Signals2_connection( sender, "encrypted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::encrypted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSslSocket::encrypted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted()" );
 
           if( cb )
@@ -2345,7 +2348,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
       if( Signals2_connection( sender, "encryptedBytesWritten(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::encryptedBytesWritten, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSslSocket::encryptedBytesWritten, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "encryptedBytesWritten(qint64)" );
 
           if( cb )
@@ -2410,7 +2416,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
       if( Signals2_connection( sender, "modeChanged(QSslSocket::SslMode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::modeChanged, [sender](QSslSocket::SslMode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSslSocket::modeChanged, 
+                                                              [sender]
+                                                              (QSslSocket::SslMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modeChanged(QSslSocket::SslMode)" );
 
           if( cb )
@@ -2475,7 +2484,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
       if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::peerVerifyError, [sender](QSslError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSslSocket::peerVerifyError, 
+                                                              [sender]
+                                                              (const QSslError & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "peerVerifyError(QSslError)" );
 
           if( cb )
@@ -2541,7 +2553,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSslSocket::preSharedKeyAuthenticationRequired, [sender](QSslPreSharedKeyAuthenticator* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSslSocket::preSharedKeyAuthenticationRequired, 
+                                                              [sender]
+                                                              (QSslPreSharedKeyAuthenticator * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
 
           if( cb )
@@ -2607,7 +2622,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors), [sender](QList<QSslError> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors), 
+                                                              [sender]
+                                                              (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
 
           if( cb )

@@ -635,7 +635,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
       if( Signals2_connection( sender, "closed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::closed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkSession::closed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "closed()" );
 
           if( cb )
@@ -698,7 +701,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
       if( Signals2_connection( sender, "error(QNetworkSession::SessionError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QNetworkSession::SessionError>::of(&QNetworkSession::error), [sender](QNetworkSession::SessionError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QNetworkSession::SessionError>::of(&QNetworkSession::error), 
+                                                              [sender]
+                                                              (QNetworkSession::SessionError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QNetworkSession::SessionError)" );
 
           if( cb )
@@ -763,7 +769,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
       if( Signals2_connection( sender, "newConfigurationActivated()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::newConfigurationActivated, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkSession::newConfigurationActivated, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newConfigurationActivated()" );
 
           if( cb )
@@ -826,7 +835,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
       if( Signals2_connection( sender, "opened()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::opened, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkSession::opened, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opened()" );
 
           if( cb )
@@ -889,7 +901,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
       if( Signals2_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::preferredConfigurationChanged, [sender](QNetworkConfiguration arg1, bool arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkSession::preferredConfigurationChanged, 
+                                                              [sender]
+                                                              (const QNetworkConfiguration & arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
 
           if( cb )
@@ -956,7 +971,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QNetworkSession::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::stateChanged, [sender](QNetworkSession::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkSession::stateChanged, 
+                                                              [sender]
+                                                              (QNetworkSession::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QNetworkSession::State)" );
 
           if( cb )
@@ -1021,7 +1039,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
       if( Signals2_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkSession::usagePoliciesChanged, [sender](QNetworkSession::UsagePolicies arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkSession::usagePoliciesChanged, 
+                                                              [sender]
+                                                              (QNetworkSession::UsagePolicies arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
 
           if( cb )

@@ -815,7 +815,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDnsLookup::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -878,7 +881,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::nameChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDnsLookup::nameChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
 
           if( cb )
@@ -943,7 +949,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
       if( Signals2_connection( sender, "nameserverChanged(QHostAddress)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::nameserverChanged, [sender](QHostAddress arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDnsLookup::nameserverChanged, 
+                                                              [sender]
+                                                              (const QHostAddress & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameserverChanged(QHostAddress)" );
 
           if( cb )
@@ -1008,7 +1017,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
       if( Signals2_connection( sender, "typeChanged(QDnsLookup::Type)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDnsLookup::typeChanged, [sender](QDnsLookup::Type arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDnsLookup::typeChanged, 
+                                                              [sender]
+                                                              (QDnsLookup::Type arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "typeChanged(QDnsLookup::Type)" );
 
           if( cb )

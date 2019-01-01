@@ -583,7 +583,10 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
       if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTcpServer::acceptError, [sender](QAbstractSocket::SocketError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTcpServer::acceptError, 
+                                                              [sender]
+                                                              (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "acceptError(QAbstractSocket::SocketError)" );
 
           if( cb )
@@ -648,7 +651,10 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
       if( Signals2_connection( sender, "newConnection()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTcpServer::newConnection, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTcpServer::newConnection, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
 
           if( cb )

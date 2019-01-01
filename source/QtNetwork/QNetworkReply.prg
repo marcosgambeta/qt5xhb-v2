@@ -736,7 +736,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
       if( Signals2_connection( sender, "downloadProgress(qint64,qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::downloadProgress, [sender](qint64 arg1, qint64 arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::downloadProgress, 
+                                                              [sender]
+                                                              (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "downloadProgress(qint64,qint64)" );
 
           if( cb )
@@ -803,7 +806,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
       if( Signals2_connection( sender, "error(QNetworkReply::NetworkError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::error), [sender](QNetworkReply::NetworkError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::error), 
+                                                              [sender]
+                                                              (QNetworkReply::NetworkError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QNetworkReply::NetworkError)" );
 
           if( cb )
@@ -868,7 +874,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -931,7 +940,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
       if( Signals2_connection( sender, "metaDataChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::metaDataChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::metaDataChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged()" );
 
           if( cb )
@@ -994,7 +1006,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
       if( Signals2_connection( sender, "uploadProgress(qint64,qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::uploadProgress, [sender](qint64 arg1, qint64 arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::uploadProgress, 
+                                                              [sender]
+                                                              (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "uploadProgress(qint64,qint64)" );
 
           if( cb )
@@ -1062,7 +1077,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
       if( Signals2_connection( sender, "encrypted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::encrypted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::encrypted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted()" );
 
           if( cb )
@@ -1126,7 +1144,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::sslErrors, [sender](QList<QSslError> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::sslErrors, 
+                                                              [sender]
+                                                              (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
 
           if( cb )
@@ -1215,7 +1236,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::preSharedKeyAuthenticationRequired, [sender](QSslPreSharedKeyAuthenticator* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::preSharedKeyAuthenticationRequired, 
+                                                              [sender]
+                                                              (QSslPreSharedKeyAuthenticator * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
 
           if( cb )
@@ -1282,7 +1306,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
       if( Signals2_connection( sender, "redirected(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::redirected, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::redirected, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redirected(QUrl)" );
 
           if( cb )
@@ -1349,7 +1376,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
       if( Signals2_connection( sender, "redirectAllowed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QNetworkReply::redirectAllowed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QNetworkReply::redirectAllowed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redirectAllowed()" );
 
           if( cb )

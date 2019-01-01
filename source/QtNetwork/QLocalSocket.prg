@@ -745,7 +745,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
       if( Signals2_connection( sender, "connected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLocalSocket::connected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLocalSocket::connected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
 
           if( cb )
@@ -808,7 +811,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
       if( Signals2_connection( sender, "disconnected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLocalSocket::disconnected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLocalSocket::disconnected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
 
           if( cb )
@@ -871,7 +877,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
       if( Signals2_connection( sender, "error(QLocalSocket::LocalSocketError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error), [sender](QLocalSocket::LocalSocketError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error), 
+                                                              [sender]
+                                                              (QLocalSocket::LocalSocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QLocalSocket::LocalSocketError)" );
 
           if( cb )
@@ -936,7 +945,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QLocalSocket::LocalSocketState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLocalSocket::stateChanged, [sender](QLocalSocket::LocalSocketState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLocalSocket::stateChanged, 
+                                                              [sender]
+                                                              (QLocalSocket::LocalSocketState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QLocalSocket::LocalSocketState)" );
 
           if( cb )
