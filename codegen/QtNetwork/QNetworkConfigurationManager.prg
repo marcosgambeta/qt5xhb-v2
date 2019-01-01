@@ -60,13 +60,13 @@ $method=|void|updateConfigurations|
 %%
 
 $prototype=void configurationAdded( const QNetworkConfiguration & config )
-$signalMethod=|void|configurationAdded|QNetworkConfiguration
+$signalMethod=|void|configurationAdded|const QNetworkConfiguration &
 
 $prototype=void configurationChanged( const QNetworkConfiguration & config )
-$signalMethod=|void|configurationChanged|QNetworkConfiguration
+$signalMethod=|void|configurationChanged|const QNetworkConfiguration &
 
 $prototype=void configurationRemoved( const QNetworkConfiguration & config )
-$signalMethod=|void|configurationRemoved|QNetworkConfiguration
+$signalMethod=|void|configurationRemoved|const QNetworkConfiguration &
 
 $prototype=void onlineStateChanged( bool isOnline )
 $signalMethod=|void|onlineStateChanged|bool

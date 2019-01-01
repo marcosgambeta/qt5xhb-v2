@@ -242,7 +242,7 @@ $signalMethod=|void|hostFound|
 
 %% #ifndef QT_NO_NETWORKPROXY
 $prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
-$signalMethod=|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator*
+$signalMethod=|void|proxyAuthenticationRequired|const QNetworkProxy &,QAuthenticator *
 %% #endif
 
 $prototype=void stateChanged( QAbstractSocket::SocketState socketState )

@@ -153,10 +153,10 @@ $prototype=void finished()
 $signalMethod=|void|finished|
 
 $prototype=void nameChanged( const QString & name )
-$signalMethod=|void|nameChanged|QString
+$signalMethod=|void|nameChanged|const QString &
 
 $prototype=void nameserverChanged( const QHostAddress & nameserver )
-$signalMethod=|void|nameserverChanged|QHostAddress
+$signalMethod=|void|nameserverChanged|const QHostAddress &
 
 $prototype=void typeChanged( QDnsLookup::Type type )
 $signalMethod=|void|typeChanged|QDnsLookup::Type

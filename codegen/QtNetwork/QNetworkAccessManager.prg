@@ -298,25 +298,25 @@ $prototype=QStringList supportedSchemesImplementation() const [protected] (slot)
 
 %% #ifndef QT_NO_NETWORKPROXY
 $prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
-$signalMethod=|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator*
+$signalMethod=|void|proxyAuthenticationRequired|const QNetworkProxy &,QAuthenticator *
 %% #endif
 
 $prototype=void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
-$signalMethod=|void|authenticationRequired|QNetworkReply*,QAuthenticator*
+$signalMethod=|void|authenticationRequired|QNetworkReply *,QAuthenticator *
 
 $prototype=void finished( QNetworkReply * reply )
-$signalMethod=|void|finished|QNetworkReply*
+$signalMethod=|void|finished|QNetworkReply *
 
 %% #ifndef QT_NO_SSL
 
 $prototype=void encrypted( QNetworkReply * reply )
-$signalMethod=5,1,0|void|encrypted|QNetworkReply*
+$signalMethod=5,1,0|void|encrypted|QNetworkReply *
 
 $prototype=void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
-$signalMethod=|void|sslErrors|QNetworkReply*,QList<QSslError>
+$signalMethod=|void|sslErrors|QNetworkReply *,const QList<QSslError> &
 
 $prototype=void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
-$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QNetworkReply*,QSslPreSharedKeyAuthenticator*
+$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QNetworkReply *,QSslPreSharedKeyAuthenticator *
 
 %% #endif
 

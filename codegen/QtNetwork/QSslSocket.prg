@@ -444,12 +444,12 @@ $prototype=void modeChanged( QSslSocket::SslMode mode )
 $signalMethod=|void|modeChanged|QSslSocket::SslMode
 
 $prototype=void peerVerifyError( const QSslError & error )
-$signalMethod=|void|peerVerifyError|QSslError
+$signalMethod=|void|peerVerifyError|const QSslError &
 
 $prototype=void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
-$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QSslPreSharedKeyAuthenticator*
+$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QSslPreSharedKeyAuthenticator *
 
 $prototype=void sslErrors( const QList<QSslError> & errors )
-$signalMethod=|void|sslErrors,sslErrors,QOverload<const QList<QSslError> &>|QList<QSslError>
+$signalMethod=|void|sslErrors,sslErrors,QOverload<const QList<QSslError> &>|const QList<QSslError> &
 
 #pragma ENDDUMP

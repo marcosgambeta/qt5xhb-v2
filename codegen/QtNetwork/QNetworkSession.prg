@@ -123,7 +123,7 @@ $prototype=void opened()
 $signalMethod=|void|opened|
 
 $prototype=void preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
-$signalMethod=|void|preferredConfigurationChanged|QNetworkConfiguration,bool
+$signalMethod=|void|preferredConfigurationChanged|const QNetworkConfiguration &,bool
 
 $prototype=void stateChanged( QNetworkSession::State state )
 $signalMethod=|void|stateChanged|QNetworkSession::State

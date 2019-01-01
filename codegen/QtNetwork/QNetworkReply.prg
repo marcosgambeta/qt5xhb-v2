@@ -196,15 +196,15 @@ $prototype=void encrypted()
 $signalMethod=5,1,0|void|encrypted|
 
 $prototype=void sslErrors( const QList<QSslError> & errors )
-$signalMethod=|void|sslErrors|QList<QSslError>
+$signalMethod=|void|sslErrors|const QList<QSslError> &
 
 $prototype=void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
-$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QSslPreSharedKeyAuthenticator*
+$signalMethod=5,5,0|void|preSharedKeyAuthenticationRequired|QSslPreSharedKeyAuthenticator *
 
 %% #endif
 
 $prototype=void redirected( const QUrl & url )
-$signalMethod=5,6,0|void|redirected|QUrl
+$signalMethod=5,6,0|void|redirected|const QUrl &
 
 $prototype=void redirectAllowed()
 $signalMethod=5,9,0|void|redirectAllowed|
