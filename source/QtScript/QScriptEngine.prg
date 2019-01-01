@@ -1194,7 +1194,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
       if( Signals2_connection( sender, "signalHandlerException(QScriptValue)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScriptEngine::signalHandlerException, [sender](QScriptValue arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScriptEngine::signalHandlerException, 
+                                                              [sender]
+                                                              (const QScriptValue & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "signalHandlerException(QScriptValue)" );
 
           if( cb )
