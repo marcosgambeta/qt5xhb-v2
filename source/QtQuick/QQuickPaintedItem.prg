@@ -637,7 +637,10 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
       if( Signals2_connection( sender, "contentsScaleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::contentsScaleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickPaintedItem::contentsScaleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsScaleChanged()" );
 
           if( cb )
@@ -700,7 +703,10 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
       if( Signals2_connection( sender, "contentsSizeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::contentsSizeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickPaintedItem::contentsSizeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsSizeChanged()" );
 
           if( cb )
@@ -763,7 +769,10 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
       if( Signals2_connection( sender, "fillColorChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::fillColorChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickPaintedItem::fillColorChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fillColorChanged()" );
 
           if( cb )
@@ -826,7 +835,10 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
       if( Signals2_connection( sender, "renderTargetChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickPaintedItem::renderTargetChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickPaintedItem::renderTargetChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "renderTargetChanged()" );
 
           if( cb )

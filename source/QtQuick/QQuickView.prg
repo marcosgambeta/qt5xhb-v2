@@ -375,7 +375,10 @@ HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QQuickView::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickView::statusChanged, [sender](QQuickView::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickView::statusChanged, 
+                                                              [sender]
+                                                              (QQuickView::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQuickView::Status)" );
 
           if( cb )

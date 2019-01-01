@@ -764,7 +764,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
       if( Signals2_connection( sender, "afterRendering()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::afterRendering, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWindow::afterRendering, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "afterRendering()" );
 
           if( cb )
@@ -827,7 +830,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
       if( Signals2_connection( sender, "beforeRendering()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::beforeRendering, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWindow::beforeRendering, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeRendering()" );
 
           if( cb )
@@ -890,7 +896,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
       if( Signals2_connection( sender, "beforeSynchronizing()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::beforeSynchronizing, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWindow::beforeSynchronizing, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeSynchronizing()" );
 
           if( cb )
@@ -953,7 +962,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWindow::colorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -1018,7 +1030,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
       if( Signals2_connection( sender, "frameSwapped()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::frameSwapped, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWindow::frameSwapped, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameSwapped()" );
 
           if( cb )
@@ -1081,7 +1096,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
       if( Signals2_connection( sender, "sceneGraphInitialized()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::sceneGraphInitialized, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWindow::sceneGraphInitialized, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneGraphInitialized()" );
 
           if( cb )
@@ -1144,7 +1162,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
       if( Signals2_connection( sender, "sceneGraphInvalidated()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWindow::sceneGraphInvalidated, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWindow::sceneGraphInvalidated, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneGraphInvalidated()" );
 
           if( cb )
