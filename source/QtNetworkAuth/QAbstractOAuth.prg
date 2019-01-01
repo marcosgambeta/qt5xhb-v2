@@ -505,7 +505,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
       if( Signals2_connection( sender, "clientIdentifierChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::clientIdentifierChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::clientIdentifierChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clientIdentifierChanged(QString)" );
 
           if( cb )
@@ -572,7 +575,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
       if( Signals2_connection( sender, "tokenChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::tokenChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::tokenChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenChanged(QString)" );
 
           if( cb )
@@ -639,7 +645,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QAbstractOAuth::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::statusChanged, [sender](QAbstractOAuth::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::statusChanged, 
+                                                              [sender]
+                                                              (QAbstractOAuth::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QAbstractOAuth::Status)" );
 
           if( cb )
@@ -706,7 +715,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
       if( Signals2_connection( sender, "authorizationUrlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::authorizationUrlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::authorizationUrlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "authorizationUrlChanged(QUrl)" );
 
           if( cb )
@@ -777,7 +789,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
       if( Signals2_connection( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::contentTypeChanged, [sender](QAbstractOAuth::ContentType arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::contentTypeChanged, 
+                                                              [sender]
+                                                              (QAbstractOAuth::ContentType arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" );
 
           if( cb )
@@ -844,7 +859,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
       if( Signals2_connection( sender, "requestFailed(QAbstractOAuth::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::requestFailed, [sender](QAbstractOAuth::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::requestFailed, 
+                                                              [sender]
+                                                              (QAbstractOAuth::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "requestFailed(QAbstractOAuth::Error)" );
 
           if( cb )
@@ -911,7 +929,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
       if( Signals2_connection( sender, "authorizeWithBrowser(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::authorizeWithBrowser, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::authorizeWithBrowser, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "authorizeWithBrowser(QUrl)" );
 
           if( cb )
@@ -978,7 +999,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
       if( Signals2_connection( sender, "granted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::granted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::granted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "granted()" );
 
           if( cb )
@@ -1043,7 +1067,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
       if( Signals2_connection( sender, "finished(QNetworkReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::finished, [sender](QNetworkReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::finished, 
+                                                              [sender]
+                                                              (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QNetworkReply*)" );
 
           if( cb )
@@ -1110,7 +1137,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
       if( Signals2_connection( sender, "replyDataReceived(QByteArray)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth::replyDataReceived, [sender](QByteArray arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth::replyDataReceived, 
+                                                              [sender]
+                                                              (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "replyDataReceived(QByteArray)" );
 
           if( cb )

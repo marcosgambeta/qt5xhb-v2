@@ -154,7 +154,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
       if( Signals2_connection( sender, "callbackDataReceived(QByteArray)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuthReplyHandler::callbackDataReceived, [sender](QByteArray arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuthReplyHandler::callbackDataReceived, 
+                                                              [sender]
+                                                              (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "callbackDataReceived(QByteArray)" );
 
           if( cb )
@@ -225,7 +228,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
       if( Signals2_connection( sender, "replyDataReceived(QByteArray)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuthReplyHandler::replyDataReceived, [sender](QByteArray arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuthReplyHandler::replyDataReceived, 
+                                                              [sender]
+                                                              (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "replyDataReceived(QByteArray)" );
 
           if( cb )

@@ -475,7 +475,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
       if( Signals2_connection( sender, "clientIdentifierSharedKeyChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth2::clientIdentifierSharedKeyChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth2::clientIdentifierSharedKeyChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clientIdentifierSharedKeyChanged(QString)" );
 
           if( cb )
@@ -542,7 +545,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
       if( Signals2_connection( sender, "error(QString,QString,QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth2::error, [sender](QString arg1, QString arg2, QUrl arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth2::error, 
+                                                              [sender]
+                                                              (const QString & arg1, const QString & arg2, const QUrl & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QString,QString,QUrl)" );
 
           if( cb )
@@ -613,7 +619,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
       if( Signals2_connection( sender, "expirationAtChanged(QDateTime)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth2::expirationAtChanged, [sender](QDateTime arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth2::expirationAtChanged, 
+                                                              [sender]
+                                                              (const QDateTime & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "expirationAtChanged(QDateTime)" );
 
           if( cb )
@@ -680,7 +689,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
       if( Signals2_connection( sender, "responseTypeChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth2::responseTypeChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth2::responseTypeChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "responseTypeChanged(QString)" );
 
           if( cb )
@@ -747,7 +759,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
       if( Signals2_connection( sender, "scopeChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth2::scopeChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth2::scopeChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scopeChanged(QString)" );
 
           if( cb )
@@ -814,7 +829,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth2::stateChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth2::stateChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QString)" );
 
           if( cb )
@@ -881,7 +899,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
       if( Signals2_connection( sender, "userAgentChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractOAuth2::userAgentChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractOAuth2::userAgentChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "userAgentChanged(QString)" );
 
           if( cb )

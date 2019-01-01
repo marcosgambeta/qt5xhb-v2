@@ -574,7 +574,10 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
       if( Signals2_connection( sender, "clientSharedSecretChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::clientSharedSecretChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOAuth1::clientSharedSecretChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clientSharedSecretChanged(QString)" );
 
           if( cb )
@@ -641,7 +644,10 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
       if( Signals2_connection( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::signatureMethodChanged, [sender](QOAuth1::SignatureMethod arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOAuth1::signatureMethodChanged, 
+                                                              [sender]
+                                                              (QOAuth1::SignatureMethod arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
 
           if( cb )
@@ -708,7 +714,10 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
       if( Signals2_connection( sender, "temporaryCredentialsUrlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::temporaryCredentialsUrlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOAuth1::temporaryCredentialsUrlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "temporaryCredentialsUrlChanged(QUrl)" );
 
           if( cb )
@@ -775,7 +784,10 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
       if( Signals2_connection( sender, "tokenCredentialsUrlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::tokenCredentialsUrlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOAuth1::tokenCredentialsUrlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenCredentialsUrlChanged(QUrl)" );
 
           if( cb )
@@ -842,7 +854,10 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
       if( Signals2_connection( sender, "tokenSecretChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOAuth1::tokenSecretChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOAuth1::tokenSecretChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenSecretChanged(QString)" );
 
           if( cb )
