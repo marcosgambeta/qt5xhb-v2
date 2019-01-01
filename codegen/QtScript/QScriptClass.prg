@@ -25,6 +25,8 @@ $destructor
 
 $includes
 
+#include <QScriptEngine>
+
 $prototype=QScriptClass(QScriptEngine * engine)
 $constructor=|new|QScriptEngine *
 
@@ -52,7 +54,7 @@ $prototype=virtual QScriptValue prototype() const
 $virtualMethod=|QScriptValue|prototype|
 
 $prototype=virtual QueryFlags queryProperty(const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id)
-$virtualMethod=|QScriptClass::QueryFlags|queryProperty|const QScriptValue &,const QScriptString &,QScriptClass::QueryFlags,uint *
+%% TODO: $virtualMethod=|QScriptClass::QueryFlags|queryProperty|const QScriptValue &,const QScriptString &,QScriptClass::QueryFlags,uint *
 
 $prototype=virtual void setProperty(QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value)
 $virtualMethod=|void|setProperty|QScriptValue &,const QScriptString &,uint,const QScriptValue &

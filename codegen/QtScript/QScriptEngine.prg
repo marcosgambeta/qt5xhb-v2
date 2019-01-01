@@ -289,6 +289,6 @@ $staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &
 %%
 
 $prototype=void signalHandlerException( const QScriptValue & exception )
-$signalMethod=|void|signalHandlerException|QScriptValue
+$signalMethod=|void|signalHandlerException|const QScriptValue &
 
 #pragma ENDDUMP
