@@ -58,12 +58,12 @@ $prototype=void setupBackend() [private]
 %%
 
 $prototype=void productRegistered( QInAppProduct * product )
-$signalMethod=|void|productRegistered|QInAppProduct*
+$signalMethod=|void|productRegistered|QInAppProduct *
 
 $prototype=void productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
-$signalMethod=|void|productUnknown|QInAppProduct::ProductType,QString
+$signalMethod=|void|productUnknown|QInAppProduct::ProductType,const QString &
 
 $prototype=void transactionReady( QInAppTransaction * transaction )
-$signalMethod=|void|transactionReady|QInAppTransaction*
+$signalMethod=|void|transactionReady|QInAppTransaction *
 
 #pragma ENDDUMP
