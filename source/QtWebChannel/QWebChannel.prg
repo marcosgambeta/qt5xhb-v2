@@ -277,7 +277,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
       if( Signals2_connection( sender, "blockUpdatesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebChannel::blockUpdatesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebChannel::blockUpdatesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blockUpdatesChanged(bool)" );
 
           if( cb )
