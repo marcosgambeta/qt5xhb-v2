@@ -119,6 +119,6 @@ $prototype=void statusChanged( QQuickWidget::Status status )
 $signalMethod=5,3,0|void|statusChanged|QQuickWidget::Status
 
 $prototype=void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
-$signalMethod=5,3,0|void|sceneGraphError|QQuickWindow::SceneGraphError,QString
+$signalMethod=5,3,0|void|sceneGraphError|QQuickWindow::SceneGraphError,const QString &
 
 #pragma ENDDUMP
