@@ -1268,7 +1268,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
       if( Signals2_connection( sender, "directoryLoaded(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileSystemModel::directoryLoaded, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileSystemModel::directoryLoaded, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "directoryLoaded(QString)" );
 
           if( cb )
@@ -1333,7 +1336,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
       if( Signals2_connection( sender, "fileRenamed(QString,QString,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileSystemModel::fileRenamed, [sender](QString arg1, QString arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileSystemModel::fileRenamed, 
+                                                              [sender]
+                                                              (const QString & arg1, const QString & arg2, const QString & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fileRenamed(QString,QString,QString)" );
 
           if( cb )
@@ -1402,7 +1408,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
       if( Signals2_connection( sender, "rootPathChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileSystemModel::rootPathChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileSystemModel::rootPathChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rootPathChanged(QString)" );
 
           if( cb )

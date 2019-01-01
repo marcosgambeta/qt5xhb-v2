@@ -1640,7 +1640,10 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
       if( Signals2_connection( sender, "changed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAction::changed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAction::changed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
 
           if( cb )
@@ -1703,7 +1706,10 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
       if( Signals2_connection( sender, "hovered()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAction::hovered, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAction::hovered, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered()" );
 
           if( cb )
@@ -1766,7 +1772,10 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
       if( Signals2_connection( sender, "toggled(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAction::toggled, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAction::toggled, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
 
           if( cb )
@@ -1831,7 +1840,10 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
       if( Signals2_connection( sender, "triggered(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAction::triggered, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAction::triggered, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(bool)" );
 
           if( cb )

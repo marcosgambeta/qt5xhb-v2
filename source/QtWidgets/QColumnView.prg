@@ -481,7 +481,10 @@ HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
       if( Signals2_connection( sender, "updatePreviewWidget(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QColumnView::updatePreviewWidget, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QColumnView::updatePreviewWidget, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "updatePreviewWidget(QModelIndex)" );
 
           if( cb )

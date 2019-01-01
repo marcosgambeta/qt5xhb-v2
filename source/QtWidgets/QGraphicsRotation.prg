@@ -307,7 +307,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
       if( Signals2_connection( sender, "angleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsRotation::angleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsRotation::angleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "angleChanged()" );
 
           if( cb )
@@ -370,7 +373,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
       if( Signals2_connection( sender, "axisChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsRotation::axisChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsRotation::axisChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisChanged()" );
 
           if( cb )
@@ -433,7 +439,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
       if( Signals2_connection( sender, "originChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsRotation::originChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsRotation::originChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "originChanged()" );
 
           if( cb )

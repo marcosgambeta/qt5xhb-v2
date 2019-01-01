@@ -218,7 +218,10 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
       if( Signals2_connection( sender, "editingFinished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QKeySequenceEdit::editingFinished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QKeySequenceEdit::editingFinished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "editingFinished()" );
 
           if( cb )
@@ -283,7 +286,10 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
       if( Signals2_connection( sender, "keySequenceChanged(QKeySequence)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QKeySequenceEdit::keySequenceChanged, [sender](QKeySequence arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QKeySequenceEdit::keySequenceChanged, 
+                                                              [sender]
+                                                              (const QKeySequence & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "keySequenceChanged(QKeySequence)" );
 
           if( cb )

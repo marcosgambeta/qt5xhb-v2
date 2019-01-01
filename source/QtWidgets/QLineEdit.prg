@@ -1894,7 +1894,10 @@ HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
       if( Signals2_connection( sender, "cursorPositionChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::cursorPositionChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLineEdit::cursorPositionChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged(int,int)" );
 
           if( cb )
@@ -1961,7 +1964,10 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
       if( Signals2_connection( sender, "editingFinished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::editingFinished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLineEdit::editingFinished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "editingFinished()" );
 
           if( cb )
@@ -2025,7 +2031,10 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
       if( Signals2_connection( sender, "inputRejected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::inputRejected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLineEdit::inputRejected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputRejected()" );
 
           if( cb )
@@ -2089,7 +2098,10 @@ HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
       if( Signals2_connection( sender, "returnPressed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::returnPressed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLineEdit::returnPressed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "returnPressed()" );
 
           if( cb )
@@ -2152,7 +2164,10 @@ HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLineEdit::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )
@@ -2215,7 +2230,10 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
       if( Signals2_connection( sender, "textChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::textChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLineEdit::textChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged(QString)" );
 
           if( cb )
@@ -2280,7 +2298,10 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
       if( Signals2_connection( sender, "textEdited(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLineEdit::textEdited, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLineEdit::textEdited, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textEdited(QString)" );
 
           if( cb )

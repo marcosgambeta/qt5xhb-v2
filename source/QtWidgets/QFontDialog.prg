@@ -400,7 +400,10 @@ HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
       if( Signals2_connection( sender, "currentFontChanged(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFontDialog::currentFontChanged, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFontDialog::currentFontChanged, 
+                                                              [sender]
+                                                              (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentFontChanged(QFont)" );
 
           if( cb )
@@ -465,7 +468,10 @@ HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
       if( Signals2_connection( sender, "fontSelected(QFont)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFontDialog::fontSelected, [sender](QFont arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFontDialog::fontSelected, 
+                                                              [sender]
+                                                              (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontSelected(QFont)" );
 
           if( cb )

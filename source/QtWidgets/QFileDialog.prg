@@ -1832,7 +1832,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
       if( Signals2_connection( sender, "currentChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::currentChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::currentChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(QString)" );
 
           if( cb )
@@ -1897,7 +1900,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
       if( Signals2_connection( sender, "directoryEntered(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::directoryEntered, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::directoryEntered, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "directoryEntered(QString)" );
 
           if( cb )
@@ -1962,7 +1968,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
       if( Signals2_connection( sender, "fileSelected(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::fileSelected, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::fileSelected, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fileSelected(QString)" );
 
           if( cb )
@@ -2027,7 +2036,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
       if( Signals2_connection( sender, "filesSelected(QStringList)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::filesSelected, [sender](QStringList arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::filesSelected, 
+                                                              [sender]
+                                                              (const QStringList & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "filesSelected(QStringList)" );
 
           if( cb )
@@ -2099,7 +2111,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
       if( Signals2_connection( sender, "filterSelected(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::filterSelected, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::filterSelected, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "filterSelected(QString)" );
 
           if( cb )
@@ -2164,7 +2179,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
       if( Signals2_connection( sender, "urlSelected(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::urlSelected, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::urlSelected, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "urlSelected(QUrl)" );
 
           if( cb )
@@ -2229,7 +2247,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
       if( Signals2_connection( sender, "urlsSelected(QList<QUrl>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::urlsSelected, [sender](QList<QUrl> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::urlsSelected, 
+                                                              [sender]
+                                                              (const QList<QUrl> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "urlsSelected(QList<QUrl>)" );
 
           if( cb )
@@ -2317,7 +2338,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
       if( Signals2_connection( sender, "currentUrlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::currentUrlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::currentUrlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentUrlChanged(QUrl)" );
 
           if( cb )
@@ -2382,7 +2406,10 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
       if( Signals2_connection( sender, "directoryUrlEntered(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QFileDialog::directoryUrlEntered, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QFileDialog::directoryUrlEntered, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "directoryUrlEntered(QUrl)" );
 
           if( cb )

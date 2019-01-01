@@ -1164,7 +1164,10 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
       if( Signals2_connection( sender, "currentIdChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::currentIdChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWizard::currentIdChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIdChanged(int)" );
 
           if( cb )
@@ -1229,7 +1232,10 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
       if( Signals2_connection( sender, "customButtonClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::customButtonClicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWizard::customButtonClicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "customButtonClicked(int)" );
 
           if( cb )
@@ -1294,7 +1300,10 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
       if( Signals2_connection( sender, "helpRequested()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::helpRequested, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWizard::helpRequested, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
 
           if( cb )
@@ -1357,7 +1366,10 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
       if( Signals2_connection( sender, "pageAdded(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::pageAdded, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWizard::pageAdded, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pageAdded(int)" );
 
           if( cb )
@@ -1422,7 +1434,10 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
       if( Signals2_connection( sender, "pageRemoved(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWizard::pageRemoved, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWizard::pageRemoved, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pageRemoved(int)" );
 
           if( cb )

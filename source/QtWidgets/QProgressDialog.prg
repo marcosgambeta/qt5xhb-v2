@@ -749,7 +749,10 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
       if( Signals2_connection( sender, "canceled()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QProgressDialog::canceled, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QProgressDialog::canceled, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canceled()" );
 
           if( cb )

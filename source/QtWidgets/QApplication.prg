@@ -1695,7 +1695,10 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
       if( Signals2_connection( sender, "focusChanged(QWidget*,QWidget*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QApplication::focusChanged, [sender](QWidget* arg1, QWidget* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QApplication::focusChanged, 
+                                                              [sender]
+                                                              (QWidget * arg1, QWidget * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusChanged(QWidget*,QWidget*)" );
 
           if( cb )
@@ -1762,7 +1765,10 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
       if( Signals2_connection( sender, "fontDatabaseChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QApplication::fontDatabaseChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QApplication::fontDatabaseChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontDatabaseChanged()" );
 
           if( cb )
@@ -1825,7 +1831,10 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
       if( Signals2_connection( sender, "lastWindowClosed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QApplication::lastWindowClosed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QApplication::lastWindowClosed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lastWindowClosed()" );
 
           if( cb )

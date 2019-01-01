@@ -141,7 +141,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
       if( Signals2_connection( sender, "enabledChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::enabledChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::enabledChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "enabledChanged()" );
 
           if( cb )
@@ -204,7 +207,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
       if( Signals2_connection( sender, "opacityChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::opacityChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::opacityChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged()" );
 
           if( cb )
@@ -267,7 +273,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
       if( Signals2_connection( sender, "parentChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::parentChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::parentChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "parentChanged()" );
 
           if( cb )
@@ -330,7 +339,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
       if( Signals2_connection( sender, "rotationChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::rotationChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::rotationChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationChanged()" );
 
           if( cb )
@@ -393,7 +405,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
       if( Signals2_connection( sender, "scaleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::scaleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::scaleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scaleChanged()" );
 
           if( cb )
@@ -456,7 +471,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::visibleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::visibleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
 
           if( cb )
@@ -519,7 +537,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
       if( Signals2_connection( sender, "xChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::xChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::xChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xChanged()" );
 
           if( cb )
@@ -582,7 +603,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
       if( Signals2_connection( sender, "yChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::yChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::yChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yChanged()" );
 
           if( cb )
@@ -645,7 +669,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
       if( Signals2_connection( sender, "zChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsObject::zChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsObject::zChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zChanged()" );
 
           if( cb )

@@ -364,7 +364,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
       if( Signals2_connection( sender, "resized(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDesktopWidget::resized, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDesktopWidget::resized, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "resized(int)" );
 
           if( cb )
@@ -429,7 +432,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
       if( Signals2_connection( sender, "screenCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDesktopWidget::screenCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDesktopWidget::screenCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "screenCountChanged(int)" );
 
           if( cb )
@@ -494,7 +500,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
       if( Signals2_connection( sender, "workAreaResized(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDesktopWidget::workAreaResized, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDesktopWidget::workAreaResized, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "workAreaResized(int)" );
 
           if( cb )

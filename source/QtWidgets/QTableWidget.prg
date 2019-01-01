@@ -1310,7 +1310,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
       if( Signals2_connection( sender, "cellActivated(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellActivated, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::cellActivated, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cellActivated(int,int)" );
 
           if( cb )
@@ -1377,7 +1380,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
       if( Signals2_connection( sender, "cellChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::cellChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cellChanged(int,int)" );
 
           if( cb )
@@ -1444,7 +1450,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
       if( Signals2_connection( sender, "cellClicked(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellClicked, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::cellClicked, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cellClicked(int,int)" );
 
           if( cb )
@@ -1511,7 +1520,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
       if( Signals2_connection( sender, "cellDoubleClicked(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellDoubleClicked, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::cellDoubleClicked, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cellDoubleClicked(int,int)" );
 
           if( cb )
@@ -1578,7 +1590,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
       if( Signals2_connection( sender, "cellEntered(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellEntered, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::cellEntered, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cellEntered(int,int)" );
 
           if( cb )
@@ -1645,7 +1660,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
       if( Signals2_connection( sender, "cellPressed(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::cellPressed, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::cellPressed, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cellPressed(int,int)" );
 
           if( cb )
@@ -1712,7 +1730,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
       if( Signals2_connection( sender, "currentCellChanged(int,int,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::currentCellChanged, [sender](int arg1, int arg2, int arg3, int arg4) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::currentCellChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2, int arg3, int arg4) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentCellChanged(int,int,int,int)" );
 
           if( cb )
@@ -1783,7 +1804,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
       if( Signals2_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::currentItemChanged, [sender](QTableWidgetItem* arg1, QTableWidgetItem* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::currentItemChanged, 
+                                                              [sender]
+                                                              (QTableWidgetItem * arg1, QTableWidgetItem * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
 
           if( cb )
@@ -1850,7 +1874,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
       if( Signals2_connection( sender, "itemActivated(QTableWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemActivated, [sender](QTableWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::itemActivated, 
+                                                              [sender]
+                                                              (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemActivated(QTableWidgetItem*)" );
 
           if( cb )
@@ -1915,7 +1942,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
       if( Signals2_connection( sender, "itemChanged(QTableWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemChanged, [sender](QTableWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::itemChanged, 
+                                                              [sender]
+                                                              (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QTableWidgetItem*)" );
 
           if( cb )
@@ -1980,7 +2010,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
       if( Signals2_connection( sender, "itemClicked(QTableWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemClicked, [sender](QTableWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::itemClicked, 
+                                                              [sender]
+                                                              (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemClicked(QTableWidgetItem*)" );
 
           if( cb )
@@ -2045,7 +2078,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
       if( Signals2_connection( sender, "itemDoubleClicked(QTableWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemDoubleClicked, [sender](QTableWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::itemDoubleClicked, 
+                                                              [sender]
+                                                              (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemDoubleClicked(QTableWidgetItem*)" );
 
           if( cb )
@@ -2110,7 +2146,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
       if( Signals2_connection( sender, "itemEntered(QTableWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemEntered, [sender](QTableWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::itemEntered, 
+                                                              [sender]
+                                                              (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemEntered(QTableWidgetItem*)" );
 
           if( cb )
@@ -2175,7 +2214,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
       if( Signals2_connection( sender, "itemPressed(QTableWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemPressed, [sender](QTableWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::itemPressed, 
+                                                              [sender]
+                                                              (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemPressed(QTableWidgetItem*)" );
 
           if( cb )
@@ -2240,7 +2282,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
       if( Signals2_connection( sender, "itemSelectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTableWidget::itemSelectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTableWidget::itemSelectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelectionChanged()" );
 
           if( cb )

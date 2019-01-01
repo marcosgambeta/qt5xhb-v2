@@ -432,7 +432,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
       if( Signals2_connection( sender, "blurRadiusChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsDropShadowEffect::blurRadiusChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsDropShadowEffect::blurRadiusChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blurRadiusChanged(qreal)" );
 
           if( cb )
@@ -497,7 +500,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsDropShadowEffect::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsDropShadowEffect::colorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -562,7 +568,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
       if( Signals2_connection( sender, "offsetChanged(QPointF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsDropShadowEffect::offsetChanged, [sender](QPointF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsDropShadowEffect::offsetChanged, 
+                                                              [sender]
+                                                              (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "offsetChanged(QPointF)" );
 
           if( cb )

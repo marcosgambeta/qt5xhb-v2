@@ -1419,7 +1419,10 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
       if( Signals2_connection( sender, "dateChanged(QDate)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeEdit::dateChanged, [sender](QDate arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeEdit::dateChanged, 
+                                                              [sender]
+                                                              (const QDate & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dateChanged(QDate)" );
 
           if( cb )
@@ -1484,7 +1487,10 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
       if( Signals2_connection( sender, "dateTimeChanged(QDateTime)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeEdit::dateTimeChanged, [sender](QDateTime arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeEdit::dateTimeChanged, 
+                                                              [sender]
+                                                              (const QDateTime & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dateTimeChanged(QDateTime)" );
 
           if( cb )
@@ -1549,7 +1555,10 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
       if( Signals2_connection( sender, "timeChanged(QTime)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDateTimeEdit::timeChanged, [sender](QTime arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDateTimeEdit::timeChanged, 
+                                                              [sender]
+                                                              (const QTime & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "timeChanged(QTime)" );
 
           if( cb )

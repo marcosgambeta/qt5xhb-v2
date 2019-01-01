@@ -1273,7 +1273,10 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
       if( Signals2_connection( sender, "aboutToHide()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMenu::aboutToHide, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMenu::aboutToHide, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToHide()" );
 
           if( cb )
@@ -1336,7 +1339,10 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
       if( Signals2_connection( sender, "aboutToShow()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMenu::aboutToShow, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMenu::aboutToShow, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToShow()" );
 
           if( cb )
@@ -1399,7 +1405,10 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
       if( Signals2_connection( sender, "hovered(QAction*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMenu::hovered, [sender](QAction* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMenu::hovered, 
+                                                              [sender]
+                                                              (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QAction*)" );
 
           if( cb )
@@ -1464,7 +1473,10 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
       if( Signals2_connection( sender, "triggered(QAction*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMenu::triggered, [sender](QAction* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMenu::triggered, 
+                                                              [sender]
+                                                              (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(QAction*)" );
 
           if( cb )

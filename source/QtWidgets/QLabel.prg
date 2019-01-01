@@ -1048,7 +1048,10 @@ HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
       if( Signals2_connection( sender, "linkActivated(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLabel::linkActivated, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLabel::linkActivated, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkActivated(QString)" );
 
           if( cb )
@@ -1113,7 +1116,10 @@ HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
       if( Signals2_connection( sender, "linkHovered(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLabel::linkHovered, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLabel::linkHovered, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkHovered(QString)" );
 
           if( cb )

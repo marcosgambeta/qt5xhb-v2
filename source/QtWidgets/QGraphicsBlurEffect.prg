@@ -228,7 +228,10 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
       if( Signals2_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsBlurEffect::blurHintsChanged, [sender](QGraphicsBlurEffect::BlurHints arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsBlurEffect::blurHintsChanged, 
+                                                              [sender]
+                                                              (QGraphicsBlurEffect::BlurHints arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
 
           if( cb )
@@ -293,7 +296,10 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
       if( Signals2_connection( sender, "blurRadiusChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsBlurEffect::blurRadiusChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsBlurEffect::blurRadiusChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blurRadiusChanged(qreal)" );
 
           if( cb )

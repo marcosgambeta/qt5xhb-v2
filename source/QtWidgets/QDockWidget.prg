@@ -438,7 +438,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
       if( Signals2_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::allowedAreasChanged, [sender](Qt::DockWidgetAreas arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDockWidget::allowedAreasChanged, 
+                                                              [sender]
+                                                              (Qt::DockWidgetAreas arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
 
           if( cb )
@@ -503,7 +506,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
       if( Signals2_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::dockLocationChanged, [sender](Qt::DockWidgetArea arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDockWidget::dockLocationChanged, 
+                                                              [sender]
+                                                              (Qt::DockWidgetArea arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
 
           if( cb )
@@ -568,7 +574,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
       if( Signals2_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::featuresChanged, [sender](QDockWidget::DockWidgetFeatures arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDockWidget::featuresChanged, 
+                                                              [sender]
+                                                              (QDockWidget::DockWidgetFeatures arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
 
           if( cb )
@@ -633,7 +642,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
       if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::topLevelChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDockWidget::topLevelChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
 
           if( cb )
@@ -698,7 +710,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDockWidget::visibilityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDockWidget::visibilityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
 
           if( cb )

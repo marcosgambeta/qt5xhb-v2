@@ -412,7 +412,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
       if( Signals2_connection( sender, "buttonClicked(QAbstractButton*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), [sender](QAbstractButton* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), 
+                                                              [sender]
+                                                              (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(QAbstractButton*)" );
 
           if( cb )
@@ -477,7 +480,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
       if( Signals2_connection( sender, "buttonClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QButtonGroup::buttonClicked), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QButtonGroup::buttonClicked), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(int)" );
 
           if( cb )
@@ -542,7 +548,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
       if( Signals2_connection( sender, "buttonPressed(QAbstractButton*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed), [sender](QAbstractButton* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed), 
+                                                              [sender]
+                                                              (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(QAbstractButton*)" );
 
           if( cb )
@@ -607,7 +616,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
       if( Signals2_connection( sender, "buttonPressed(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QButtonGroup::buttonPressed), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QButtonGroup::buttonPressed), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(int)" );
 
           if( cb )
@@ -672,7 +684,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
       if( Signals2_connection( sender, "buttonReleased(QAbstractButton*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased), [sender](QAbstractButton* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased), 
+                                                              [sender]
+                                                              (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(QAbstractButton*)" );
 
           if( cb )
@@ -737,7 +752,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
       if( Signals2_connection( sender, "buttonReleased(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QButtonGroup::buttonReleased), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QButtonGroup::buttonReleased), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(int)" );
 
           if( cb )

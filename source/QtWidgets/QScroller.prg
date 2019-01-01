@@ -707,7 +707,10 @@ HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
       if( Signals2_connection( sender, "scrollerPropertiesChanged(QScrollerProperties)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScroller::scrollerPropertiesChanged, [sender](QScrollerProperties arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScroller::scrollerPropertiesChanged, 
+                                                              [sender]
+                                                              (const QScrollerProperties & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scrollerPropertiesChanged(QScrollerProperties)" );
 
           if( cb )
@@ -772,7 +775,10 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QScroller::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScroller::stateChanged, [sender](QScroller::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScroller::stateChanged, 
+                                                              [sender]
+                                                              (QScroller::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QScroller::State)" );
 
           if( cb )

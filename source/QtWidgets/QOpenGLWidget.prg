@@ -358,7 +358,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
       if( Signals2_connection( sender, "aboutToCompose()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::aboutToCompose, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOpenGLWidget::aboutToCompose, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToCompose()" );
 
           if( cb )
@@ -423,7 +426,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
       if( Signals2_connection( sender, "frameSwapped()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::frameSwapped, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOpenGLWidget::frameSwapped, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameSwapped()" );
 
           if( cb )
@@ -488,7 +494,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
       if( Signals2_connection( sender, "aboutToResize()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::aboutToResize, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOpenGLWidget::aboutToResize, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToResize()" );
 
           if( cb )
@@ -553,7 +562,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
       if( Signals2_connection( sender, "resized()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QOpenGLWidget::resized, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QOpenGLWidget::resized, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "resized()" );
 
           if( cb )

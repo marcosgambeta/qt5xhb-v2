@@ -1652,7 +1652,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
       if( Signals2_connection( sender, "blockCountChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::blockCountChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::blockCountChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blockCountChanged(int)" );
 
           if( cb )
@@ -1717,7 +1720,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
       if( Signals2_connection( sender, "copyAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::copyAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::copyAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "copyAvailable(bool)" );
 
           if( cb )
@@ -1782,7 +1788,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
       if( Signals2_connection( sender, "cursorPositionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::cursorPositionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::cursorPositionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged()" );
 
           if( cb )
@@ -1845,7 +1854,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
       if( Signals2_connection( sender, "modificationChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::modificationChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::modificationChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modificationChanged(bool)" );
 
           if( cb )
@@ -1910,7 +1922,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
       if( Signals2_connection( sender, "redoAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::redoAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::redoAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redoAvailable(bool)" );
 
           if( cb )
@@ -1975,7 +1990,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )
@@ -2038,7 +2056,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONTEXTCHANGED )
       if( Signals2_connection( sender, "textChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::textChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::textChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged()" );
 
           if( cb )
@@ -2101,7 +2122,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
       if( Signals2_connection( sender, "undoAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::undoAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::undoAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "undoAvailable(bool)" );
 
           if( cb )
@@ -2166,7 +2190,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
       if( Signals2_connection( sender, "updateRequest(QRect,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPlainTextEdit::updateRequest, [sender](QRect arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPlainTextEdit::updateRequest, 
+                                                              [sender]
+                                                              (const QRect & arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "updateRequest(QRect,int)" );
 
           if( cb )

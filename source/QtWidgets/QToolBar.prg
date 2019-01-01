@@ -830,7 +830,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
       if( Signals2_connection( sender, "actionTriggered(QAction*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::actionTriggered, [sender](QAction* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::actionTriggered, 
+                                                              [sender]
+                                                              (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actionTriggered(QAction*)" );
 
           if( cb )
@@ -895,7 +898,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
       if( Signals2_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::allowedAreasChanged, [sender](Qt::ToolBarAreas arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::allowedAreasChanged, 
+                                                              [sender]
+                                                              (Qt::ToolBarAreas arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
 
           if( cb )
@@ -960,7 +966,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
       if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::iconSizeChanged, [sender](QSize arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::iconSizeChanged, 
+                                                              [sender]
+                                                              (const QSize & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconSizeChanged(QSize)" );
 
           if( cb )
@@ -1025,7 +1034,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
       if( Signals2_connection( sender, "movableChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::movableChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::movableChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "movableChanged(bool)" );
 
           if( cb )
@@ -1090,7 +1102,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
       if( Signals2_connection( sender, "orientationChanged(Qt::Orientation)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::orientationChanged, [sender](Qt::Orientation arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::orientationChanged, 
+                                                              [sender]
+                                                              (Qt::Orientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::Orientation)" );
 
           if( cb )
@@ -1155,7 +1170,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
       if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::toolButtonStyleChanged, [sender](Qt::ToolButtonStyle arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::toolButtonStyleChanged, 
+                                                              [sender]
+                                                              (Qt::ToolButtonStyle arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
           if( cb )
@@ -1220,7 +1238,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
       if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::topLevelChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::topLevelChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
 
           if( cb )
@@ -1285,7 +1306,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBar::visibilityChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBar::visibilityChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
 
           if( cb )

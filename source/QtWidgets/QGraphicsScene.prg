@@ -1879,7 +1879,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
       if( Signals2_connection( sender, "changed(QList<QRectF>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScene::changed, [sender](QList<QRectF> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScene::changed, 
+                                                              [sender]
+                                                              (const QList<QRectF> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed(QList<QRectF>)" );
 
           if( cb )
@@ -1967,7 +1970,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
       if( Signals2_connection( sender, "sceneRectChanged(QRectF)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScene::sceneRectChanged, [sender](QRectF arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScene::sceneRectChanged, 
+                                                              [sender]
+                                                              (const QRectF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneRectChanged(QRectF)" );
 
           if( cb )
@@ -2032,7 +2038,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScene::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScene::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )

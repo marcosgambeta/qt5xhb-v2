@@ -1330,7 +1330,10 @@ HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
       if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMainWindow::iconSizeChanged, [sender](QSize arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMainWindow::iconSizeChanged, 
+                                                              [sender]
+                                                              (const QSize & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconSizeChanged(QSize)" );
 
           if( cb )
@@ -1395,7 +1398,10 @@ HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
       if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMainWindow::toolButtonStyleChanged, [sender](Qt::ToolButtonStyle arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMainWindow::toolButtonStyleChanged, 
+                                                              [sender]
+                                                              (Qt::ToolButtonStyle arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
           if( cb )

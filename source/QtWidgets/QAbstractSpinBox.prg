@@ -978,7 +978,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
       if( Signals2_connection( sender, "editingFinished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSpinBox::editingFinished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSpinBox::editingFinished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "editingFinished()" );
 
           if( cb )

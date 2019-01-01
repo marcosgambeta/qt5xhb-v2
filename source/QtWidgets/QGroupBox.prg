@@ -405,7 +405,10 @@ HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
       if( Signals2_connection( sender, "clicked(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGroupBox::clicked, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGroupBox::clicked, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(bool)" );
 
           if( cb )
@@ -470,7 +473,10 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
       if( Signals2_connection( sender, "toggled(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGroupBox::toggled, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGroupBox::toggled, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
 
           if( cb )

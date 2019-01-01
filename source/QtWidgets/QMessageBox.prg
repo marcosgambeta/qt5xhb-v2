@@ -1330,7 +1330,10 @@ HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
       if( Signals2_connection( sender, "buttonClicked(QAbstractButton*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMessageBox::buttonClicked, [sender](QAbstractButton* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMessageBox::buttonClicked, 
+                                                              [sender]
+                                                              (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(QAbstractButton*)" );
 
           if( cb )

@@ -374,7 +374,10 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
       if( Signals2_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemDelegate::closeEditor, [sender](QWidget* arg1, QAbstractItemDelegate::EndEditHint arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemDelegate::closeEditor, 
+                                                              [sender]
+                                                              (QWidget * arg1, QAbstractItemDelegate::EndEditHint arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
 
           if( cb )
@@ -441,7 +444,10 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
       if( Signals2_connection( sender, "commitData(QWidget*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemDelegate::commitData, [sender](QWidget* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemDelegate::commitData, 
+                                                              [sender]
+                                                              (QWidget * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "commitData(QWidget*)" );
 
           if( cb )
@@ -506,7 +512,10 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
       if( Signals2_connection( sender, "sizeHintChanged(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemDelegate::sizeHintChanged, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemDelegate::sizeHintChanged, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sizeHintChanged(QModelIndex)" );
 
           if( cb )

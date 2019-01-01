@@ -1335,7 +1335,10 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
       if( Signals2_connection( sender, "doubleValueChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::doubleValueChanged, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputDialog::doubleValueChanged, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleValueChanged(double)" );
 
           if( cb )
@@ -1400,7 +1403,10 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
       if( Signals2_connection( sender, "doubleValueSelected(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::doubleValueSelected, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputDialog::doubleValueSelected, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleValueSelected(double)" );
 
           if( cb )
@@ -1465,7 +1471,10 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
       if( Signals2_connection( sender, "intValueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::intValueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputDialog::intValueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "intValueChanged(int)" );
 
           if( cb )
@@ -1530,7 +1539,10 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
       if( Signals2_connection( sender, "intValueSelected(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::intValueSelected, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputDialog::intValueSelected, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "intValueSelected(int)" );
 
           if( cb )
@@ -1595,7 +1607,10 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
       if( Signals2_connection( sender, "textValueChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::textValueChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputDialog::textValueChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textValueChanged(QString)" );
 
           if( cb )
@@ -1660,7 +1675,10 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
       if( Signals2_connection( sender, "textValueSelected(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInputDialog::textValueSelected, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInputDialog::textValueSelected, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textValueSelected(QString)" );
 
           if( cb )

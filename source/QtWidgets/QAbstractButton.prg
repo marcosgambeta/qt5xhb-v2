@@ -843,7 +843,10 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
       if( Signals2_connection( sender, "clicked(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::clicked, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractButton::clicked, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(bool)" );
 
           if( cb )
@@ -908,7 +911,10 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
       if( Signals2_connection( sender, "pressed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::pressed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractButton::pressed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed()" );
 
           if( cb )
@@ -971,7 +977,10 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
       if( Signals2_connection( sender, "released()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::released, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractButton::released, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released()" );
 
           if( cb )
@@ -1034,7 +1043,10 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
       if( Signals2_connection( sender, "toggled(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractButton::toggled, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractButton::toggled, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
 
           if( cb )

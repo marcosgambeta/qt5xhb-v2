@@ -725,7 +725,10 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
       if( Signals2_connection( sender, "splitterMoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSplitter::splitterMoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSplitter::splitterMoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "splitterMoved(int,int)" );
 
           if( cb )

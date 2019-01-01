@@ -625,7 +625,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
       if( Signals2_connection( sender, "anchorClicked(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::anchorClicked, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextBrowser::anchorClicked, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorClicked(QUrl)" );
 
           if( cb )
@@ -690,7 +693,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
       if( Signals2_connection( sender, "backwardAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::backwardAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextBrowser::backwardAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backwardAvailable(bool)" );
 
           if( cb )
@@ -755,7 +761,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
       if( Signals2_connection( sender, "forwardAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::forwardAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextBrowser::forwardAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "forwardAvailable(bool)" );
 
           if( cb )
@@ -820,7 +829,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
       if( Signals2_connection( sender, "highlighted(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QUrl &>::of(&QTextBrowser::highlighted), [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QUrl &>::of(&QTextBrowser::highlighted), 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QUrl)" );
 
           if( cb )
@@ -885,7 +897,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
       if( Signals2_connection( sender, "highlighted(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QTextBrowser::highlighted), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QTextBrowser::highlighted), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
 
           if( cb )
@@ -950,7 +965,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
       if( Signals2_connection( sender, "historyChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::historyChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextBrowser::historyChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "historyChanged()" );
 
           if( cb )
@@ -1013,7 +1031,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
       if( Signals2_connection( sender, "sourceChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextBrowser::sourceChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextBrowser::sourceChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged(QUrl)" );
 
           if( cb )

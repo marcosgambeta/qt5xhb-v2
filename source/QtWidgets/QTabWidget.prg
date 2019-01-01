@@ -1355,7 +1355,10 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
       if( Signals2_connection( sender, "currentChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::currentChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTabWidget::currentChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(int)" );
 
           if( cb )
@@ -1420,7 +1423,10 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
       if( Signals2_connection( sender, "tabCloseRequested(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::tabCloseRequested, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTabWidget::tabCloseRequested, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabCloseRequested(int)" );
 
           if( cb )
@@ -1486,7 +1492,10 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
       if( Signals2_connection( sender, "tabBarClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::tabBarClicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTabWidget::tabBarClicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabBarClicked(int)" );
 
           if( cb )
@@ -1553,7 +1562,10 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
       if( Signals2_connection( sender, "tabBarDoubleClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTabWidget::tabBarDoubleClicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTabWidget::tabBarDoubleClicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabBarDoubleClicked(int)" );
 
           if( cb )

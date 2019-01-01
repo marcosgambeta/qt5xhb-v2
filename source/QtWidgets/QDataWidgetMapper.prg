@@ -787,7 +787,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
       if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDataWidgetMapper::currentIndexChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDataWidgetMapper::currentIndexChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
 
           if( cb )

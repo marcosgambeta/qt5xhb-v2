@@ -203,7 +203,10 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
       if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsOpacityEffect::opacityChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsOpacityEffect::opacityChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged(qreal)" );
 
           if( cb )
@@ -268,7 +271,10 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
       if( Signals2_connection( sender, "opacityMaskChanged(QBrush)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsOpacityEffect::opacityMaskChanged, [sender](QBrush arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsOpacityEffect::opacityMaskChanged, 
+                                                              [sender]
+                                                              (const QBrush & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityMaskChanged(QBrush)" );
 
           if( cb )

@@ -6759,7 +6759,10 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
       if( Signals2_connection( sender, "windowTitleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWidget::windowTitleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWidget::windowTitleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowTitleChanged(QString)" );
 
           if( cb )
@@ -6826,7 +6829,10 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
       if( Signals2_connection( sender, "windowIconChanged(QIcon)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWidget::windowIconChanged, [sender](QIcon arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWidget::windowIconChanged, 
+                                                              [sender]
+                                                              (const QIcon & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowIconChanged(QIcon)" );
 
           if( cb )
@@ -6892,7 +6898,10 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
       if( Signals2_connection( sender, "windowIconTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWidget::windowIconTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWidget::windowIconTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowIconTextChanged(QString)" );
 
           if( cb )
@@ -6957,7 +6966,10 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
       if( Signals2_connection( sender, "customContextMenuRequested(QPoint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWidget::customContextMenuRequested, [sender](QPoint arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWidget::customContextMenuRequested, 
+                                                              [sender]
+                                                              (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "customContextMenuRequested(QPoint)" );
 
           if( cb )

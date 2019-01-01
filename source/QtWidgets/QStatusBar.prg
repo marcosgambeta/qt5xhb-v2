@@ -358,7 +358,10 @@ HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
       if( Signals2_connection( sender, "messageChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QStatusBar::messageChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QStatusBar::messageChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "messageChanged(QString)" );
 
           if( cb )

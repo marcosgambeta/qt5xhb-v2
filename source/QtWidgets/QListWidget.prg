@@ -910,7 +910,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
       if( Signals2_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::currentItemChanged, [sender](QListWidgetItem* arg1, QListWidgetItem* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::currentItemChanged, 
+                                                              [sender]
+                                                              (QListWidgetItem * arg1, QListWidgetItem * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
 
           if( cb )
@@ -977,7 +980,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
       if( Signals2_connection( sender, "currentRowChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::currentRowChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::currentRowChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentRowChanged(int)" );
 
           if( cb )
@@ -1042,7 +1048,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
       if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::currentTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::currentTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentTextChanged(QString)" );
 
           if( cb )
@@ -1107,7 +1116,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
       if( Signals2_connection( sender, "itemActivated(QListWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemActivated, [sender](QListWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::itemActivated, 
+                                                              [sender]
+                                                              (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemActivated(QListWidgetItem*)" );
 
           if( cb )
@@ -1172,7 +1184,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
       if( Signals2_connection( sender, "itemChanged(QListWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemChanged, [sender](QListWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::itemChanged, 
+                                                              [sender]
+                                                              (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QListWidgetItem*)" );
 
           if( cb )
@@ -1237,7 +1252,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
       if( Signals2_connection( sender, "itemClicked(QListWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemClicked, [sender](QListWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::itemClicked, 
+                                                              [sender]
+                                                              (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemClicked(QListWidgetItem*)" );
 
           if( cb )
@@ -1302,7 +1320,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
       if( Signals2_connection( sender, "itemDoubleClicked(QListWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemDoubleClicked, [sender](QListWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::itemDoubleClicked, 
+                                                              [sender]
+                                                              (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemDoubleClicked(QListWidgetItem*)" );
 
           if( cb )
@@ -1367,7 +1388,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
       if( Signals2_connection( sender, "itemEntered(QListWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemEntered, [sender](QListWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::itemEntered, 
+                                                              [sender]
+                                                              (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemEntered(QListWidgetItem*)" );
 
           if( cb )
@@ -1432,7 +1456,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
       if( Signals2_connection( sender, "itemPressed(QListWidgetItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemPressed, [sender](QListWidgetItem* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::itemPressed, 
+                                                              [sender]
+                                                              (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemPressed(QListWidgetItem*)" );
 
           if( cb )
@@ -1497,7 +1524,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
       if( Signals2_connection( sender, "itemSelectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListWidget::itemSelectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListWidget::itemSelectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelectionChanged()" );
 
           if( cb )

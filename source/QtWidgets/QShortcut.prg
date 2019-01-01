@@ -432,7 +432,10 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
       if( Signals2_connection( sender, "activated()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QShortcut::activated, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QShortcut::activated, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated()" );
 
           if( cb )
@@ -495,7 +498,10 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
       if( Signals2_connection( sender, "activatedAmbiguously()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QShortcut::activatedAmbiguously, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QShortcut::activatedAmbiguously, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activatedAmbiguously()" );
 
           if( cb )

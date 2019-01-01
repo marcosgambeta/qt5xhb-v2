@@ -491,7 +491,10 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
       if( Signals2_connection( sender, "accepted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::accepted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDialogButtonBox::accepted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted()" );
 
           if( cb )
@@ -554,7 +557,10 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
       if( Signals2_connection( sender, "clicked(QAbstractButton*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::clicked, [sender](QAbstractButton* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDialogButtonBox::clicked, 
+                                                              [sender]
+                                                              (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QAbstractButton*)" );
 
           if( cb )
@@ -619,7 +625,10 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
       if( Signals2_connection( sender, "helpRequested()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::helpRequested, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDialogButtonBox::helpRequested, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
 
           if( cb )
@@ -682,7 +691,10 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
       if( Signals2_connection( sender, "rejected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDialogButtonBox::rejected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDialogButtonBox::rejected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rejected()" );
 
           if( cb )

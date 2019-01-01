@@ -337,7 +337,10 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
       if( Signals2_connection( sender, "originChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::originChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScale::originChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "originChanged()" );
 
           if( cb )
@@ -400,7 +403,10 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
       if( Signals2_connection( sender, "scaleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::scaleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScale::scaleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scaleChanged()" );
 
           if( cb )
@@ -463,7 +469,10 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
       if( Signals2_connection( sender, "xScaleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::xScaleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScale::xScaleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xScaleChanged()" );
 
           if( cb )
@@ -526,7 +535,10 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
       if( Signals2_connection( sender, "yScaleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::yScaleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScale::yScaleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yScaleChanged()" );
 
           if( cb )
@@ -589,7 +601,10 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
       if( Signals2_connection( sender, "zScaleChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsScale::zScaleChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsScale::zScaleChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zScaleChanged()" );
 
           if( cb )

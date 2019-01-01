@@ -366,7 +366,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
       if( Signals2_connection( sender, "currentChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QStackedLayout::currentChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QStackedLayout::currentChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(int)" );
 
           if( cb )
@@ -431,7 +434,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
       if( Signals2_connection( sender, "widgetRemoved(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QStackedLayout::widgetRemoved, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QStackedLayout::widgetRemoved, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "widgetRemoved(int)" );
 
           if( cb )

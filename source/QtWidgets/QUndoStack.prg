@@ -728,7 +728,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
       if( Signals2_connection( sender, "canRedoChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoStack::canRedoChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoStack::canRedoChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canRedoChanged(bool)" );
 
           if( cb )
@@ -793,7 +796,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
       if( Signals2_connection( sender, "canUndoChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoStack::canUndoChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoStack::canUndoChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canUndoChanged(bool)" );
 
           if( cb )
@@ -858,7 +864,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
       if( Signals2_connection( sender, "cleanChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoStack::cleanChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoStack::cleanChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cleanChanged(bool)" );
 
           if( cb )
@@ -923,7 +932,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
       if( Signals2_connection( sender, "indexChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoStack::indexChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoStack::indexChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexChanged(int)" );
 
           if( cb )
@@ -988,7 +1000,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
       if( Signals2_connection( sender, "redoTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoStack::redoTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoStack::redoTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redoTextChanged(QString)" );
 
           if( cb )
@@ -1053,7 +1068,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
       if( Signals2_connection( sender, "undoTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoStack::undoTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoStack::undoTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "undoTextChanged(QString)" );
 
           if( cb )

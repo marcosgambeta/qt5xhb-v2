@@ -1932,7 +1932,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
       if( Signals2_connection( sender, "activated(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::activated, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemView::activated, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QModelIndex)" );
 
           if( cb )
@@ -1997,7 +2000,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
       if( Signals2_connection( sender, "clicked(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::clicked, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemView::clicked, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QModelIndex)" );
 
           if( cb )
@@ -2062,7 +2068,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
       if( Signals2_connection( sender, "doubleClicked(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::doubleClicked, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemView::doubleClicked, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QModelIndex)" );
 
           if( cb )
@@ -2127,7 +2136,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
       if( Signals2_connection( sender, "entered(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::entered, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemView::entered, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "entered(QModelIndex)" );
 
           if( cb )
@@ -2192,7 +2204,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
       if( Signals2_connection( sender, "pressed(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::pressed, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemView::pressed, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QModelIndex)" );
 
           if( cb )
@@ -2257,7 +2272,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
       if( Signals2_connection( sender, "viewportEntered()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractItemView::viewportEntered, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractItemView::viewportEntered, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportEntered()" );
 
           if( cb )

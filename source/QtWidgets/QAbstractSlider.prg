@@ -710,7 +710,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
       if( Signals2_connection( sender, "actionTriggered(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSlider::actionTriggered, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSlider::actionTriggered, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actionTriggered(int)" );
 
           if( cb )
@@ -775,7 +778,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
       if( Signals2_connection( sender, "rangeChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSlider::rangeChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSlider::rangeChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(int,int)" );
 
           if( cb )
@@ -842,7 +848,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
       if( Signals2_connection( sender, "sliderMoved(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSlider::sliderMoved, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSlider::sliderMoved, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderMoved(int)" );
 
           if( cb )
@@ -907,7 +916,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
       if( Signals2_connection( sender, "sliderPressed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSlider::sliderPressed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSlider::sliderPressed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderPressed()" );
 
           if( cb )
@@ -970,7 +982,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
       if( Signals2_connection( sender, "sliderReleased()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSlider::sliderReleased, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSlider::sliderReleased, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderReleased()" );
 
           if( cb )
@@ -1033,7 +1048,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAbstractSlider::valueChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAbstractSlider::valueChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
 
           if( cb )

@@ -274,7 +274,10 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCheckBox::stateChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCheckBox::stateChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(int)" );
 
           if( cb )

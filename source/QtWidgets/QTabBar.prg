@@ -1486,7 +1486,10 @@ HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
       if( Signals2_connection( sender, "currentChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTabBar::currentChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTabBar::currentChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(int)" );
 
           if( cb )
@@ -1551,7 +1554,10 @@ HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
       if( Signals2_connection( sender, "tabCloseRequested(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTabBar::tabCloseRequested, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTabBar::tabCloseRequested, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabCloseRequested(int)" );
 
           if( cb )
@@ -1616,7 +1622,10 @@ HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
       if( Signals2_connection( sender, "tabMoved(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTabBar::tabMoved, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTabBar::tabMoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabMoved(int,int)" );
 
           if( cb )

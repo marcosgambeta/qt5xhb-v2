@@ -966,7 +966,10 @@ HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
       if( Signals2_connection( sender, "subWindowActivated(QMdiSubWindow*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMdiArea::subWindowActivated, [sender](QMdiSubWindow* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMdiArea::subWindowActivated, 
+                                                              [sender]
+                                                              (QMdiSubWindow * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "subWindowActivated(QMdiSubWindow*)" );
 
           if( cb )

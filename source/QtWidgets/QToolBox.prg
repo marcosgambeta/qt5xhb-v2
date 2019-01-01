@@ -607,7 +607,10 @@ HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
       if( Signals2_connection( sender, "currentChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QToolBox::currentChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QToolBox::currentChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(int)" );
 
           if( cb )

@@ -539,7 +539,10 @@ HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
       if( Signals2_connection( sender, "completeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWizardPage::completeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWizardPage::completeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "completeChanged()" );
 
           if( cb )

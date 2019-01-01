@@ -1600,7 +1600,10 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
       if( Signals2_connection( sender, "collapsed(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTreeView::collapsed, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTreeView::collapsed, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "collapsed(QModelIndex)" );
 
           if( cb )
@@ -1665,7 +1668,10 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
       if( Signals2_connection( sender, "expanded(QModelIndex)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTreeView::expanded, [sender](QModelIndex arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTreeView::expanded, 
+                                                              [sender]
+                                                              (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "expanded(QModelIndex)" );
 
           if( cb )

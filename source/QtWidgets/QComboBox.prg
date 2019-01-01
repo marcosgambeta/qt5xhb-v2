@@ -1747,7 +1747,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
       if( Signals2_connection( sender, "activated(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QComboBox::activated), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QComboBox::activated), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(int)" );
 
           if( cb )
@@ -1812,7 +1815,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
       if( Signals2_connection( sender, "activated(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QComboBox::activated), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QComboBox::activated), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QString)" );
 
           if( cb )
@@ -1877,7 +1883,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
       if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QComboBox::currentIndexChanged), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QComboBox::currentIndexChanged), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
 
           if( cb )
@@ -1942,7 +1951,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
       if( Signals2_connection( sender, "currentIndexChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QComboBox::currentIndexChanged), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QComboBox::currentIndexChanged), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(QString)" );
 
           if( cb )
@@ -2007,7 +2019,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
       if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QComboBox::currentTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QComboBox::currentTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentTextChanged(QString)" );
 
           if( cb )
@@ -2072,7 +2087,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
       if( Signals2_connection( sender, "editTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QComboBox::editTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QComboBox::editTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "editTextChanged(QString)" );
 
           if( cb )
@@ -2137,7 +2155,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
       if( Signals2_connection( sender, "highlighted(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int>::of(&QComboBox::highlighted), [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int>::of(&QComboBox::highlighted), 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(int)" );
 
           if( cb )
@@ -2202,7 +2223,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
       if( Signals2_connection( sender, "highlighted(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QComboBox::highlighted), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QComboBox::highlighted), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
 
           if( cb )

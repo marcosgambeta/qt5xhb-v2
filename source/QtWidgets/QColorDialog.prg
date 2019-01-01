@@ -529,7 +529,10 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
       if( Signals2_connection( sender, "colorSelected(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QColorDialog::colorSelected, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QColorDialog::colorSelected, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorSelected(QColor)" );
 
           if( cb )
@@ -594,7 +597,10 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
       if( Signals2_connection( sender, "currentColorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QColorDialog::currentColorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QColorDialog::currentColorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentColorChanged(QColor)" );
 
           if( cb )

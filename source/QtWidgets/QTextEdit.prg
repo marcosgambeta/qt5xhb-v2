@@ -2253,7 +2253,10 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
       if( Signals2_connection( sender, "copyAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::copyAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextEdit::copyAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "copyAvailable(bool)" );
 
           if( cb )
@@ -2318,7 +2321,10 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
       if( Signals2_connection( sender, "currentCharFormatChanged(QTextCharFormat)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::currentCharFormatChanged, [sender](QTextCharFormat arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextEdit::currentCharFormatChanged, 
+                                                              [sender]
+                                                              (const QTextCharFormat & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentCharFormatChanged(QTextCharFormat)" );
 
           if( cb )
@@ -2383,7 +2389,10 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
       if( Signals2_connection( sender, "cursorPositionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::cursorPositionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextEdit::cursorPositionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged()" );
 
           if( cb )
@@ -2446,7 +2455,10 @@ HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
       if( Signals2_connection( sender, "redoAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::redoAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextEdit::redoAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redoAvailable(bool)" );
 
           if( cb )
@@ -2511,7 +2523,10 @@ HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextEdit::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )
@@ -2574,7 +2589,10 @@ HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
       if( Signals2_connection( sender, "textChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::textChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextEdit::textChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged()" );
 
           if( cb )
@@ -2637,7 +2655,10 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
       if( Signals2_connection( sender, "undoAvailable(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextEdit::undoAvailable, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextEdit::undoAvailable, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "undoAvailable(bool)" );
 
           if( cb )

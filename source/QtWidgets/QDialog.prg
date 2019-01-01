@@ -575,7 +575,10 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
       if( Signals2_connection( sender, "accepted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDialog::accepted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDialog::accepted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted()" );
 
           if( cb )
@@ -638,7 +641,10 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
       if( Signals2_connection( sender, "finished(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDialog::finished, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDialog::finished, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int)" );
 
           if( cb )
@@ -703,7 +709,10 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
       if( Signals2_connection( sender, "rejected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QDialog::rejected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QDialog::rejected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rejected()" );
 
           if( cb )

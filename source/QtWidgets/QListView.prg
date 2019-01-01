@@ -934,7 +934,10 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
       if( Signals2_connection( sender, "indexesMoved(QModelIndexList)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QListView::indexesMoved, [sender](QModelIndexList arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QListView::indexesMoved, 
+                                                              [sender]
+                                                              (const QModelIndexList & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexesMoved(QModelIndexList)" );
 
           if( cb )

@@ -1777,7 +1777,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
       if( Signals2_connection( sender, "geometriesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::geometriesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::geometriesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "geometriesChanged()" );
 
           if( cb )
@@ -1844,7 +1847,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
       if( Signals2_connection( sender, "sectionClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionClicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionClicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionClicked(int)" );
 
           if( cb )
@@ -1909,7 +1915,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
       if( Signals2_connection( sender, "sectionCountChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionCountChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionCountChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionCountChanged(int,int)" );
 
           if( cb )
@@ -1976,7 +1985,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
       if( Signals2_connection( sender, "sectionDoubleClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionDoubleClicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionDoubleClicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionDoubleClicked(int)" );
 
           if( cb )
@@ -2041,7 +2053,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
       if( Signals2_connection( sender, "sectionEntered(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionEntered, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionEntered, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionEntered(int)" );
 
           if( cb )
@@ -2106,7 +2121,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
       if( Signals2_connection( sender, "sectionHandleDoubleClicked(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionHandleDoubleClicked, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionHandleDoubleClicked, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionHandleDoubleClicked(int)" );
 
           if( cb )
@@ -2171,7 +2189,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
       if( Signals2_connection( sender, "sectionMoved(int,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionMoved, [sender](int arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionMoved, 
+                                                              [sender]
+                                                              (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionMoved(int,int,int)" );
 
           if( cb )
@@ -2240,7 +2261,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
       if( Signals2_connection( sender, "sectionPressed(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionPressed, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionPressed, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionPressed(int)" );
 
           if( cb )
@@ -2305,7 +2329,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
       if( Signals2_connection( sender, "sectionResized(int,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sectionResized, [sender](int arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sectionResized, 
+                                                              [sender]
+                                                              (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionResized(int,int,int)" );
 
           if( cb )
@@ -2374,7 +2401,10 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
       if( Signals2_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QHeaderView::sortIndicatorChanged, [sender](int arg1, Qt::SortOrder arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QHeaderView::sortIndicatorChanged, 
+                                                              [sender]
+                                                              (int arg1, Qt::SortOrder arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );
 
           if( cb )

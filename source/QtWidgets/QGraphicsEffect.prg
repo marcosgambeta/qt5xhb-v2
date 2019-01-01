@@ -211,7 +211,10 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
       if( Signals2_connection( sender, "enabledChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsEffect::enabledChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsEffect::enabledChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "enabledChanged(bool)" );
 
           if( cb )

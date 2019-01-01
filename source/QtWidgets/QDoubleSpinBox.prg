@@ -621,7 +621,10 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
       if( Signals2_connection( sender, "valueChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<double>::of(&QDoubleSpinBox::valueChanged), 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(double)" );
 
           if( cb )
@@ -686,7 +689,10 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
       if( Signals2_connection( sender, "valueChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QDoubleSpinBox::valueChanged), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QDoubleSpinBox::valueChanged), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(QString)" );
 
           if( cb )

@@ -1180,7 +1180,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
       if( Signals2_connection( sender, "activated(QDate)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::activated, [sender](QDate arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCalendarWidget::activated, 
+                                                              [sender]
+                                                              (const QDate & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QDate)" );
 
           if( cb )
@@ -1245,7 +1248,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
       if( Signals2_connection( sender, "clicked(QDate)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::clicked, [sender](QDate arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCalendarWidget::clicked, 
+                                                              [sender]
+                                                              (const QDate & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QDate)" );
 
           if( cb )
@@ -1310,7 +1316,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
       if( Signals2_connection( sender, "currentPageChanged(int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::currentPageChanged, [sender](int arg1, int arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCalendarWidget::currentPageChanged, 
+                                                              [sender]
+                                                              (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentPageChanged(int,int)" );
 
           if( cb )
@@ -1377,7 +1386,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCalendarWidget::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCalendarWidget::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )

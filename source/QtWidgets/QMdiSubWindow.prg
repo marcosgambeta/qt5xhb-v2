@@ -523,7 +523,10 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
       if( Signals2_connection( sender, "aboutToActivate()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMdiSubWindow::aboutToActivate, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMdiSubWindow::aboutToActivate, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToActivate()" );
 
           if( cb )
@@ -586,7 +589,10 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
       if( Signals2_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QMdiSubWindow::windowStateChanged, [sender](Qt::WindowStates arg1, Qt::WindowStates arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QMdiSubWindow::windowStateChanged, 
+                                                              [sender]
+                                                              (Qt::WindowStates arg1, Qt::WindowStates arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
 
           if( cb )

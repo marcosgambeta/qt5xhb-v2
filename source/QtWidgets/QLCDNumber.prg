@@ -663,7 +663,10 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
       if( Signals2_connection( sender, "overflow()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QLCDNumber::overflow, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QLCDNumber::overflow, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "overflow()" );
 
           if( cb )

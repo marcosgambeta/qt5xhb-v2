@@ -480,7 +480,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
       if( Signals2_connection( sender, "activated(QSystemTrayIcon::ActivationReason)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSystemTrayIcon::activated, [sender](QSystemTrayIcon::ActivationReason arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSystemTrayIcon::activated, 
+                                                              [sender]
+                                                              (QSystemTrayIcon::ActivationReason arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QSystemTrayIcon::ActivationReason)" );
 
           if( cb )
@@ -545,7 +548,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
       if( Signals2_connection( sender, "messageClicked()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSystemTrayIcon::messageClicked, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSystemTrayIcon::messageClicked, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "messageClicked()" );
 
           if( cb )

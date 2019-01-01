@@ -203,7 +203,10 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsColorizeEffect::colorChanged, [sender](QColor arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsColorizeEffect::colorChanged, 
+                                                              [sender]
+                                                              (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
           if( cb )
@@ -268,7 +271,10 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
       if( Signals2_connection( sender, "strengthChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QGraphicsColorizeEffect::strengthChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGraphicsColorizeEffect::strengthChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "strengthChanged(qreal)" );
 
           if( cb )

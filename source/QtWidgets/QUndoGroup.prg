@@ -495,7 +495,10 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
       if( Signals2_connection( sender, "activeStackChanged(QUndoStack*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoGroup::activeStackChanged, [sender](QUndoStack* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoGroup::activeStackChanged, 
+                                                              [sender]
+                                                              (QUndoStack * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeStackChanged(QUndoStack*)" );
 
           if( cb )
@@ -560,7 +563,10 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
       if( Signals2_connection( sender, "canRedoChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoGroup::canRedoChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoGroup::canRedoChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canRedoChanged(bool)" );
 
           if( cb )
@@ -625,7 +631,10 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
       if( Signals2_connection( sender, "canUndoChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoGroup::canUndoChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoGroup::canUndoChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canUndoChanged(bool)" );
 
           if( cb )
@@ -690,7 +699,10 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
       if( Signals2_connection( sender, "cleanChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoGroup::cleanChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoGroup::cleanChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cleanChanged(bool)" );
 
           if( cb )
@@ -755,7 +767,10 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
       if( Signals2_connection( sender, "indexChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoGroup::indexChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoGroup::indexChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexChanged(int)" );
 
           if( cb )
@@ -820,7 +835,10 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
       if( Signals2_connection( sender, "redoTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoGroup::redoTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoGroup::redoTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redoTextChanged(QString)" );
 
           if( cb )
@@ -885,7 +903,10 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
       if( Signals2_connection( sender, "undoTextChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QUndoGroup::undoTextChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QUndoGroup::undoTextChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "undoTextChanged(QString)" );
 
           if( cb )

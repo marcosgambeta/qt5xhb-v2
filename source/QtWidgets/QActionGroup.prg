@@ -401,7 +401,10 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
       if( Signals2_connection( sender, "hovered(QAction*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QActionGroup::hovered, [sender](QAction* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QActionGroup::hovered, 
+                                                              [sender]
+                                                              (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QAction*)" );
 
           if( cb )
@@ -466,7 +469,10 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
       if( Signals2_connection( sender, "triggered(QAction*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QActionGroup::triggered, [sender](QAction* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QActionGroup::triggered, 
+                                                              [sender]
+                                                              (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(QAction*)" );
 
           if( cb )
