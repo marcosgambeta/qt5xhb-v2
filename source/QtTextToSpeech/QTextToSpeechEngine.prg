@@ -630,7 +630,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QTextToSpeech::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeechEngine::stateChanged, [sender](QTextToSpeech::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextToSpeechEngine::stateChanged, 
+                                                              [sender]
+                                                              (QTextToSpeech::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTextToSpeech::State)" );
 
           if( cb )

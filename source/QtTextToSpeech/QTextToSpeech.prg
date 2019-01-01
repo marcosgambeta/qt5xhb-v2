@@ -674,7 +674,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
       if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::localeChanged, [sender](QLocale arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextToSpeech::localeChanged, 
+                                                              [sender]
+                                                              (const QLocale & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged(QLocale)" );
 
           if( cb )
@@ -741,7 +744,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
       if( Signals2_connection( sender, "pitchChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::pitchChanged, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextToSpeech::pitchChanged, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pitchChanged(double)" );
 
           if( cb )
@@ -808,7 +814,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
       if( Signals2_connection( sender, "rateChanged(double)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::rateChanged, [sender](double arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextToSpeech::rateChanged, 
+                                                              [sender]
+                                                              (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rateChanged(double)" );
 
           if( cb )
@@ -875,7 +884,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QTextToSpeech::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::stateChanged, [sender](QTextToSpeech::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextToSpeech::stateChanged, 
+                                                              [sender]
+                                                              (QTextToSpeech::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTextToSpeech::State)" );
 
           if( cb )
@@ -942,7 +954,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
       if( Signals2_connection( sender, "voiceChanged(QVoice)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::voiceChanged, [sender](QVoice arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextToSpeech::voiceChanged, 
+                                                              [sender]
+                                                              (const QVoice & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "voiceChanged(QVoice)" );
 
           if( cb )
@@ -1009,7 +1024,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QTextToSpeech::volumeChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QTextToSpeech::volumeChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
 
           if( cb )
