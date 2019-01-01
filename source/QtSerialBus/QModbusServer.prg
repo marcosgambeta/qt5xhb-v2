@@ -152,7 +152,10 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
       if( Signals2_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QModbusServer::dataWritten, [sender](QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QModbusServer::dataWritten, 
+                                                              [sender]
+                                                              (QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
 
           if( cb )

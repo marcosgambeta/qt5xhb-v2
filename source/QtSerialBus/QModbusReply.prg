@@ -114,7 +114,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QModbusReply::finished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QModbusReply::finished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -179,7 +182,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
       if( Signals2_connection( sender, "errorOccurred(QModbusDevice::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QModbusReply::errorOccurred, [sender](QModbusDevice::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QModbusReply::errorOccurred, 
+                                                              [sender]
+                                                              (QModbusDevice::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QModbusDevice::Error)" );
 
           if( cb )

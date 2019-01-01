@@ -595,7 +595,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
       if( Signals2_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::errorOccurred, [sender](QCanBusDevice::CanBusError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCanBusDevice::errorOccurred, 
+                                                              [sender]
+                                                              (QCanBusDevice::CanBusError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QCanBusDevice::CanBusError)" );
 
           if( cb )
@@ -662,7 +665,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
       if( Signals2_connection( sender, "framesReceived()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::framesReceived, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCanBusDevice::framesReceived, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "framesReceived()" );
 
           if( cb )
@@ -727,7 +733,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
       if( Signals2_connection( sender, "framesWritten(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::framesWritten, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCanBusDevice::framesWritten, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "framesWritten(qint64)" );
 
           if( cb )
@@ -794,7 +803,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QCanBusDevice::stateChanged, [sender](QCanBusDevice::CanBusDeviceState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCanBusDevice::stateChanged, 
+                                                              [sender]
+                                                              (QCanBusDevice::CanBusDeviceState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
 
           if( cb )

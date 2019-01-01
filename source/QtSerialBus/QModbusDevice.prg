@@ -141,7 +141,10 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
       if( Signals2_connection( sender, "errorOccurred(QModbusDevice::Error)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QModbusDevice::errorOccurred, [sender](QModbusDevice::Error arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QModbusDevice::errorOccurred, 
+                                                              [sender]
+                                                              (QModbusDevice::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QModbusDevice::Error)" );
 
           if( cb )
@@ -208,7 +211,10 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QModbusDevice::State)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QModbusDevice::stateChanged, [sender](QModbusDevice::State arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QModbusDevice::stateChanged, 
+                                                              [sender]
+                                                              (QModbusDevice::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QModbusDevice::State)" );
 
           if( cb )

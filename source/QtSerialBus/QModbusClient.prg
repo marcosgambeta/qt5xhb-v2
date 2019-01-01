@@ -135,7 +135,10 @@ HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
       if( Signals2_connection( sender, "timeoutChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QModbusClient::timeoutChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QModbusClient::timeoutChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "timeoutChanged(int)" );
 
           if( cb )
