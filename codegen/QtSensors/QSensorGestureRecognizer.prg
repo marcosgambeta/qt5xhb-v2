@@ -52,6 +52,6 @@ $method=5,1,0|QStringList|gestureSignals|
 %%
 
 $prototype=void detected( const QString & s )
-$signalMethod=5,1,0|void|detected|QString
+$signalMethod=5,1,0|void|detected|const QString &
 
 #pragma ENDDUMP
