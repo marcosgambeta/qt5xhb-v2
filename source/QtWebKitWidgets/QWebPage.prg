@@ -1360,7 +1360,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
       if( Signals2_connection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::applicationCacheQuotaExceeded, [sender](QWebSecurityOrigin* arg1, quint64 arg2, quint64 arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::applicationCacheQuotaExceeded, 
+                                                              [sender]
+                                                              (QWebSecurityOrigin * arg1, quint64 arg2, quint64 arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
 
           if( cb )
@@ -1429,7 +1432,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
       if( Signals2_connection( sender, "contentsChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::contentsChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::contentsChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsChanged()" );
 
           if( cb )
@@ -1492,7 +1498,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
       if( Signals2_connection( sender, "databaseQuotaExceeded(QWebFrame*,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::databaseQuotaExceeded, [sender](QWebFrame* arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::databaseQuotaExceeded, 
+                                                              [sender]
+                                                              (QWebFrame * arg1, QString arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "databaseQuotaExceeded(QWebFrame*,QString)" );
 
           if( cb )
@@ -1559,7 +1568,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
       if( Signals2_connection( sender, "downloadRequested(QNetworkRequest)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::downloadRequested, [sender](QNetworkRequest arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::downloadRequested, 
+                                                              [sender]
+                                                              (const QNetworkRequest & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "downloadRequested(QNetworkRequest)" );
 
           if( cb )
@@ -1624,7 +1636,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
       if( Signals2_connection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::featurePermissionRequestCanceled, [sender](QWebFrame* arg1, QWebPage::Feature arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::featurePermissionRequestCanceled, 
+                                                              [sender]
+                                                              (QWebFrame * arg1, QWebPage::Feature arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
 
           if( cb )
@@ -1691,7 +1706,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
       if( Signals2_connection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::featurePermissionRequested, [sender](QWebFrame* arg1, QWebPage::Feature arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::featurePermissionRequested, 
+                                                              [sender]
+                                                              (QWebFrame * arg1, QWebPage::Feature arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
 
           if( cb )
@@ -1758,7 +1776,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
       if( Signals2_connection( sender, "frameCreated(QWebFrame*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::frameCreated, [sender](QWebFrame* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::frameCreated, 
+                                                              [sender]
+                                                              (QWebFrame * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameCreated(QWebFrame*)" );
 
           if( cb )
@@ -1823,7 +1844,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
       if( Signals2_connection( sender, "geometryChangeRequested(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::geometryChangeRequested, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::geometryChangeRequested, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChangeRequested(QRect)" );
 
           if( cb )
@@ -1888,7 +1912,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
       if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::linkClicked, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::linkClicked, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkClicked(QUrl)" );
 
           if( cb )
@@ -1953,7 +1980,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
       if( Signals2_connection( sender, "linkHovered(QString,QString,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::linkHovered, [sender](QString arg1, QString arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::linkHovered, 
+                                                              [sender]
+                                                              (const QString & arg1, const QString & arg2, const QString & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkHovered(QString,QString,QString)" );
 
           if( cb )
@@ -2022,7 +2052,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::loadFinished, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::loadFinished, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
 
           if( cb )
@@ -2087,7 +2120,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
       if( Signals2_connection( sender, "loadProgress(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::loadProgress, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::loadProgress, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
 
           if( cb )
@@ -2152,7 +2188,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::loadStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::loadStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
 
           if( cb )
@@ -2215,7 +2254,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
       if( Signals2_connection( sender, "menuBarVisibilityChangeRequested(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::menuBarVisibilityChangeRequested, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::menuBarVisibilityChangeRequested, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "menuBarVisibilityChangeRequested(bool)" );
 
           if( cb )
@@ -2280,7 +2322,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
       if( Signals2_connection( sender, "microFocusChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::microFocusChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::microFocusChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "microFocusChanged()" );
 
           if( cb )
@@ -2343,7 +2388,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
       if( Signals2_connection( sender, "printRequested(QWebFrame*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::printRequested, [sender](QWebFrame* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::printRequested, 
+                                                              [sender]
+                                                              (QWebFrame * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "printRequested(QWebFrame*)" );
 
           if( cb )
@@ -2408,7 +2456,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
       if( Signals2_connection( sender, "repaintRequested(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::repaintRequested, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::repaintRequested, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "repaintRequested(QRect)" );
 
           if( cb )
@@ -2473,7 +2524,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
       if( Signals2_connection( sender, "restoreFrameStateRequested(QWebFrame*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::restoreFrameStateRequested, [sender](QWebFrame* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::restoreFrameStateRequested, 
+                                                              [sender]
+                                                              (QWebFrame * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "restoreFrameStateRequested(QWebFrame*)" );
 
           if( cb )
@@ -2538,7 +2592,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
       if( Signals2_connection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::saveFrameStateRequested, [sender](QWebFrame* arg1, QWebHistoryItem* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::saveFrameStateRequested, 
+                                                              [sender]
+                                                              (QWebFrame * arg1, QWebHistoryItem * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
 
           if( cb )
@@ -2605,7 +2662,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
       if( Signals2_connection( sender, "scrollRequested(int,int,QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::scrollRequested, [sender](int arg1, int arg2, QRect arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::scrollRequested, 
+                                                              [sender]
+                                                              (int arg1, int arg2, const QRect & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scrollRequested(int,int,QRect)" );
 
           if( cb )
@@ -2674,7 +2734,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )
@@ -2737,7 +2800,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
       if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::statusBarMessage, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::statusBarMessage, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarMessage(QString)" );
 
           if( cb )
@@ -2802,7 +2868,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
       if( Signals2_connection( sender, "statusBarVisibilityChangeRequested(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::statusBarVisibilityChangeRequested, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::statusBarVisibilityChangeRequested, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarVisibilityChangeRequested(bool)" );
 
           if( cb )
@@ -2867,7 +2936,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
       if( Signals2_connection( sender, "toolBarVisibilityChangeRequested(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::toolBarVisibilityChangeRequested, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::toolBarVisibilityChangeRequested, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toolBarVisibilityChangeRequested(bool)" );
 
           if( cb )
@@ -2932,7 +3004,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
       if( Signals2_connection( sender, "unsupportedContent(QNetworkReply*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::unsupportedContent, [sender](QNetworkReply* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::unsupportedContent, 
+                                                              [sender]
+                                                              (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "unsupportedContent(QNetworkReply*)" );
 
           if( cb )
@@ -2997,7 +3072,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
       if( Signals2_connection( sender, "viewportChangeRequested()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::viewportChangeRequested, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::viewportChangeRequested, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportChangeRequested()" );
 
           if( cb )
@@ -3060,7 +3138,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
       if( Signals2_connection( sender, "windowCloseRequested()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebPage::windowCloseRequested, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebPage::windowCloseRequested, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowCloseRequested()" );
 
           if( cb )

@@ -1007,7 +1007,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
       if( Signals2_connection( sender, "iconChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::iconChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::iconChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconChanged()" );
 
           if( cb )
@@ -1070,7 +1073,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
       if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::linkClicked, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::linkClicked, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkClicked(QUrl)" );
 
           if( cb )
@@ -1135,7 +1141,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::loadFinished, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::loadFinished, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
 
           if( cb )
@@ -1200,7 +1209,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
       if( Signals2_connection( sender, "loadProgress(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::loadProgress, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::loadProgress, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
 
           if( cb )
@@ -1265,7 +1277,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::loadStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::loadStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
 
           if( cb )
@@ -1328,7 +1343,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )
@@ -1391,7 +1409,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
       if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::statusBarMessage, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::statusBarMessage, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarMessage(QString)" );
 
           if( cb )
@@ -1456,7 +1477,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::titleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::titleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
 
           if( cb )
@@ -1521,7 +1545,10 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebView::urlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebView::urlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
 
           if( cb )

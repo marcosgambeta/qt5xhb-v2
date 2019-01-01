@@ -1349,7 +1349,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
       if( Signals2_connection( sender, "contentsSizeChanged(QSize)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::contentsSizeChanged, [sender](QSize arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::contentsSizeChanged, 
+                                                              [sender]
+                                                              (const QSize & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsSizeChanged(QSize)" );
 
           if( cb )
@@ -1414,7 +1417,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
       if( Signals2_connection( sender, "iconChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::iconChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::iconChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconChanged()" );
 
           if( cb )
@@ -1477,7 +1483,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
       if( Signals2_connection( sender, "initialLayoutCompleted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::initialLayoutCompleted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::initialLayoutCompleted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "initialLayoutCompleted()" );
 
           if( cb )
@@ -1540,7 +1549,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
       if( Signals2_connection( sender, "javaScriptWindowObjectCleared()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::javaScriptWindowObjectCleared, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::javaScriptWindowObjectCleared, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "javaScriptWindowObjectCleared()" );
 
           if( cb )
@@ -1603,7 +1615,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::loadFinished, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::loadFinished, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
 
           if( cb )
@@ -1668,7 +1683,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::loadStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::loadStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
 
           if( cb )
@@ -1731,7 +1749,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
       if( Signals2_connection( sender, "pageChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::pageChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::pageChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pageChanged()" );
 
           if( cb )
@@ -1794,7 +1815,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::titleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::titleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
 
           if( cb )
@@ -1859,7 +1883,10 @@ HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebFrame::urlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebFrame::urlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
 
           if( cb )
