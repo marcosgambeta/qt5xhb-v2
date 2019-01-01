@@ -946,7 +946,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
       if( Signals2_connection( sender, "beforeDelete(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::beforeDelete, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSqlTableModel::beforeDelete, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeDelete(int)" );
 
           if( cb )
@@ -1011,7 +1014,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
       if( Signals2_connection( sender, "beforeInsert(QSqlRecord)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::beforeInsert, [sender](QSqlRecord arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSqlTableModel::beforeInsert, 
+                                                              [sender]
+                                                              (QSqlRecord & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeInsert(QSqlRecord)" );
 
           if( cb )
@@ -1076,7 +1082,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
       if( Signals2_connection( sender, "beforeUpdate(int,QSqlRecord)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::beforeUpdate, [sender](int arg1, QSqlRecord arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSqlTableModel::beforeUpdate, 
+                                                              [sender]
+                                                              (int arg1, QSqlRecord & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeUpdate(int,QSqlRecord)" );
 
           if( cb )
@@ -1143,7 +1152,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
       if( Signals2_connection( sender, "primeInsert(int,QSqlRecord)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSqlTableModel::primeInsert, [sender](int arg1, QSqlRecord arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSqlTableModel::primeInsert, 
+                                                              [sender]
+                                                              (int arg1, QSqlRecord & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primeInsert(int,QSqlRecord)" );
 
           if( cb )

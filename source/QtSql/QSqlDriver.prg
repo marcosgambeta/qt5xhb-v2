@@ -724,7 +724,10 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
       if( Signals2_connection( sender, "notification(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &>::of(&QSqlDriver::notification), [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &>::of(&QSqlDriver::notification), 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "notification(QString)" );
 
           if( cb )
@@ -789,7 +792,10 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
       if( Signals2_connection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QString &,QSqlDriver::NotificationSource,const QVariant &>::of(&QSqlDriver::notification), [sender](QString arg1, QSqlDriver::NotificationSource arg2, QVariant arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QString &,QSqlDriver::NotificationSource,const QVariant &>::of(&QSqlDriver::notification), 
+                                                              [sender]
+                                                              (const QString & arg1, QSqlDriver::NotificationSource arg2, const QVariant & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
 
           if( cb )
