@@ -223,7 +223,10 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
       if( Signals2_connection( sender, "productRegistered(QInAppProduct*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInAppStore::productRegistered, [sender](QInAppProduct* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInAppStore::productRegistered, 
+                                                              [sender]
+                                                              (QInAppProduct * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "productRegistered(QInAppProduct*)" );
 
           if( cb )
@@ -288,7 +291,10 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
       if( Signals2_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInAppStore::productUnknown, [sender](QInAppProduct::ProductType arg1, QString arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInAppStore::productUnknown, 
+                                                              [sender]
+                                                              (QInAppProduct::ProductType arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "productUnknown(QInAppProduct::ProductType,QString)" );
 
           if( cb )
@@ -355,7 +361,10 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
       if( Signals2_connection( sender, "transactionReady(QInAppTransaction*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QInAppStore::transactionReady, [sender](QInAppTransaction* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QInAppStore::transactionReady, 
+                                                              [sender]
+                                                              (QInAppTransaction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "transactionReady(QInAppTransaction*)" );
 
           if( cb )
