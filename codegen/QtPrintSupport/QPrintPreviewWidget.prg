@@ -128,7 +128,7 @@ $method=|void|zoomOut|qreal=1.1
 %%
 
 $prototype=void paintRequested( QPrinter * printer )
-$signalMethod=|void|paintRequested|QPrinter*
+$signalMethod=|void|paintRequested|QPrinter *
 
 $prototype=void previewChanged()
 $signalMethod=|void|previewChanged|

@@ -88,6 +88,6 @@ $method=|void|setVisible|bool
 %%
 
 $prototype=void accepted( QPrinter * printer )
-$signalMethod=|void|accepted,accepted,QOverload<QPrinter*>|QPrinter*
+$signalMethod=|void|accepted,accepted,QOverload<QPrinter*>|QPrinter *
 
 #pragma ENDDUMP
