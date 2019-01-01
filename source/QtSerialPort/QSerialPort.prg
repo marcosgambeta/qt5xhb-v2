@@ -1220,7 +1220,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
       if( Signals2_connection( sender, "baudRateChanged(qint32,QSerialPort::Directions)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::baudRateChanged, [sender](qint32 arg1, QSerialPort::Directions arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::baudRateChanged, 
+                                                              [sender]
+                                                              (qint32 arg1, QSerialPort::Directions arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baudRateChanged(qint32,QSerialPort::Directions)" );
 
           if( cb )
@@ -1289,7 +1292,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
       if( Signals2_connection( sender, "dataBitsChanged(QSerialPort::DataBits)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::dataBitsChanged, [sender](QSerialPort::DataBits arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::dataBitsChanged, 
+                                                              [sender]
+                                                              (QSerialPort::DataBits arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataBitsChanged(QSerialPort::DataBits)" );
 
           if( cb )
@@ -1356,7 +1362,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
       if( Signals2_connection( sender, "parityChanged(QSerialPort::Parity)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::parityChanged, [sender](QSerialPort::Parity arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::parityChanged, 
+                                                              [sender]
+                                                              (QSerialPort::Parity arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "parityChanged(QSerialPort::Parity)" );
 
           if( cb )
@@ -1423,7 +1432,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
       if( Signals2_connection( sender, "stopBitsChanged(QSerialPort::StopBits)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::stopBitsChanged, [sender](QSerialPort::StopBits arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::stopBitsChanged, 
+                                                              [sender]
+                                                              (QSerialPort::StopBits arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stopBitsChanged(QSerialPort::StopBits)" );
 
           if( cb )
@@ -1490,7 +1502,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
       if( Signals2_connection( sender, "flowControlChanged(QSerialPort::FlowControl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::flowControlChanged, [sender](QSerialPort::FlowControl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::flowControlChanged, 
+                                                              [sender]
+                                                              (QSerialPort::FlowControl arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flowControlChanged(QSerialPort::FlowControl)" );
 
           if( cb )
@@ -1557,7 +1572,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
       if( Signals2_connection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::dataErrorPolicyChanged, [sender](QSerialPort::DataErrorPolicy arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::dataErrorPolicyChanged, 
+                                                              [sender]
+                                                              (QSerialPort::DataErrorPolicy arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
 
           if( cb )
@@ -1624,7 +1642,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
       if( Signals2_connection( sender, "dataTerminalReadyChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::dataTerminalReadyChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::dataTerminalReadyChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataTerminalReadyChanged(bool)" );
 
           if( cb )
@@ -1691,7 +1712,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
       if( Signals2_connection( sender, "requestToSendChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::requestToSendChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::requestToSendChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "requestToSendChanged(bool)" );
 
           if( cb )
@@ -1758,7 +1782,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONERROR )
       if( Signals2_connection( sender, "error(QSerialPort::SerialPortError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error), [sender](QSerialPort::SerialPortError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error), 
+                                                              [sender]
+                                                              (QSerialPort::SerialPortError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QSerialPort::SerialPortError)" );
 
           if( cb )
@@ -1825,7 +1852,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
       if( Signals2_connection( sender, "settingsRestoredOnCloseChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QSerialPort::settingsRestoredOnCloseChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSerialPort::settingsRestoredOnCloseChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "settingsRestoredOnCloseChanged(bool)" );
 
           if( cb )
