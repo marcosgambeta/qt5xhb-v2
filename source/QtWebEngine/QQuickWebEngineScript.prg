@@ -477,7 +477,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
       if( Signals2_connection( sender, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineScript::injectionPointChanged, [sender](QQuickWebEngineScript::InjectionPoint arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineScript::injectionPointChanged, 
+                                                              [sender]
+                                                              (QQuickWebEngineScript::InjectionPoint arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" );
 
           if( cb )
@@ -542,7 +545,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineScript::nameChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineScript::nameChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
 
           if( cb )
@@ -607,7 +613,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
       if( Signals2_connection( sender, "runOnSubframesChanged(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineScript::runOnSubframesChanged, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineScript::runOnSubframesChanged, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "runOnSubframesChanged(bool)" );
 
           if( cb )
@@ -672,7 +681,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
       if( Signals2_connection( sender, "sourceCodeChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineScript::sourceCodeChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineScript::sourceCodeChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceCodeChanged(QString)" );
 
           if( cb )
@@ -737,7 +749,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
       if( Signals2_connection( sender, "sourceUrlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineScript::sourceUrlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineScript::sourceUrlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceUrlChanged(QUrl)" );
 
           if( cb )
@@ -802,7 +817,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
       if( Signals2_connection( sender, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineScript::worldIdChanged, [sender](QQuickWebEngineScript::ScriptWorldId arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineScript::worldIdChanged, 
+                                                              [sender]
+                                                              (QQuickWebEngineScript::ScriptWorldId arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" );
 
           if( cb )

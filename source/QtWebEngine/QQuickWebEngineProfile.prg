@@ -1011,7 +1011,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
       if( Signals2_connection( sender, "cachePathChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::cachePathChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::cachePathChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cachePathChanged()" );
 
           if( cb )
@@ -1061,6 +1064,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
 }
 
 /*
+void downloadFinished( QQuickWebEngineDownloadItem * download )
+*/
+
+/*
+void downloadRequested( QQuickWebEngineDownloadItem * download )
+*/
+
+/*
 void httpAcceptLanguageChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
@@ -1074,7 +1085,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
       if( Signals2_connection( sender, "httpAcceptLanguageChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpAcceptLanguageChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::httpAcceptLanguageChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "httpAcceptLanguageChanged()" );
 
           if( cb )
@@ -1137,7 +1151,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
       if( Signals2_connection( sender, "httpCacheMaximumSizeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpCacheMaximumSizeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::httpCacheMaximumSizeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "httpCacheMaximumSizeChanged()" );
 
           if( cb )
@@ -1200,7 +1217,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
       if( Signals2_connection( sender, "httpCacheTypeChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpCacheTypeChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::httpCacheTypeChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "httpCacheTypeChanged()" );
 
           if( cb )
@@ -1263,7 +1283,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
       if( Signals2_connection( sender, "httpUserAgentChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::httpUserAgentChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::httpUserAgentChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "httpUserAgentChanged()" );
 
           if( cb )
@@ -1326,7 +1349,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
       if( Signals2_connection( sender, "offTheRecordChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::offTheRecordChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::offTheRecordChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "offTheRecordChanged()" );
 
           if( cb )
@@ -1389,7 +1415,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
       if( Signals2_connection( sender, "persistentCookiesPolicyChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::persistentCookiesPolicyChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::persistentCookiesPolicyChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "persistentCookiesPolicyChanged()" );
 
           if( cb )
@@ -1452,7 +1481,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
       if( Signals2_connection( sender, "persistentStoragePathChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::persistentStoragePathChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::persistentStoragePathChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "persistentStoragePathChanged()" );
 
           if( cb )
@@ -1515,7 +1547,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
       if( Signals2_connection( sender, "spellCheckEnabledChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::spellCheckEnabledChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::spellCheckEnabledChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "spellCheckEnabledChanged()" );
 
           if( cb )
@@ -1578,7 +1613,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
       if( Signals2_connection( sender, "spellCheckLanguagesChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::spellCheckLanguagesChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::spellCheckLanguagesChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "spellCheckLanguagesChanged()" );
 
           if( cb )
@@ -1641,7 +1679,10 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
       if( Signals2_connection( sender, "storageNameChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQuickWebEngineProfile::storageNameChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQuickWebEngineProfile::storageNameChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "storageNameChanged()" );
 
           if( cb )
