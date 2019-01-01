@@ -827,7 +827,10 @@ HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
       if( Signals2_connection( sender, "quit()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQmlEngine::quit, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQmlEngine::quit, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "quit()" );
 
           if( cb )

@@ -280,7 +280,10 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
       if( Signals2_connection( sender, "objectCreated(QObject*,QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQmlApplicationEngine::objectCreated, [sender](QObject* arg1, QUrl arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQmlApplicationEngine::objectCreated, 
+                                                              [sender]
+                                                              (QObject * arg1, const QUrl & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "objectCreated(QObject*,QUrl)" );
 
           if( cb )

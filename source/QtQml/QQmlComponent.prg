@@ -546,7 +546,10 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
       if( Signals2_connection( sender, "progressChanged(qreal)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQmlComponent::progressChanged, [sender](qreal arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQmlComponent::progressChanged, 
+                                                              [sender]
+                                                              (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "progressChanged(qreal)" );
 
           if( cb )
@@ -611,7 +614,10 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
       if( Signals2_connection( sender, "statusChanged(QQmlComponent::Status)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQmlComponent::statusChanged, [sender](QQmlComponent::Status arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQmlComponent::statusChanged, 
+                                                              [sender]
+                                                              (QQmlComponent::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQmlComponent::Status)" );
 
           if( cb )

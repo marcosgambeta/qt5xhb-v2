@@ -302,7 +302,10 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
       if( Signals2_connection( sender, "valueChanged(QString,QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QQmlPropertyMap::valueChanged, [sender](QString arg1, QVariant arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QQmlPropertyMap::valueChanged, 
+                                                              [sender]
+                                                              (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(QString,QVariant)" );
 
           if( cb )
