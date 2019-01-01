@@ -146,7 +146,7 @@ $prototype=void timerEvent(QTimerEvent *timerEvent) [protected]
 %%
 
 $prototype=void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat )
-$signalMethod=|void|virtualKeyClicked|Qt::Key,QString,Qt::KeyboardModifiers,bool
+$signalMethod=|void|virtualKeyClicked|Qt::Key,const QString &,Qt::KeyboardModifiers,bool
 
 $prototype=void activeKeyChanged( Qt::Key key )
 $signalMethod=|void|activeKeyChanged|Qt::Key
