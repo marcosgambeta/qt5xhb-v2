@@ -727,7 +727,10 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
       if( Signals2_connection( sender, "paintRequested(QPrinter*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPrintPreviewWidget::paintRequested, [sender](QPrinter* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPrintPreviewWidget::paintRequested, 
+                                                              [sender]
+                                                              (QPrinter * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "paintRequested(QPrinter*)" );
 
           if( cb )
@@ -792,7 +795,10 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
       if( Signals2_connection( sender, "previewChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QPrintPreviewWidget::previewChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QPrintPreviewWidget::previewChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "previewChanged()" );
 
           if( cb )

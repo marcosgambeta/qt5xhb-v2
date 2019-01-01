@@ -356,7 +356,10 @@ HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
       if( Signals2_connection( sender, "accepted(QPrinter*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QPrinter*>::of(&QPrintDialog::accepted), [sender](QPrinter* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QPrinter*>::of(&QPrintDialog::accepted), 
+                                                              [sender]
+                                                              (QPrinter * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted(QPrinter*)" );
 
           if( cb )
