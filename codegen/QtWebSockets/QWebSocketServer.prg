@@ -116,16 +116,16 @@ $prototype=void serverError( QWebSocketProtocol::CloseCode closeCode )
 $signalMethod=5,3,0|void|serverError|QWebSocketProtocol::CloseCode
 
 $prototype=void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
-$signalMethod=5,3,0|void|originAuthenticationRequired|QWebSocketCorsAuthenticator*
+$signalMethod=5,3,0|void|originAuthenticationRequired|QWebSocketCorsAuthenticator *
 
 $prototype=void newConnection()
 $signalMethod=5,3,0|void|newConnection|
 
 $prototype=void peerVerifyError( const QSslError & error )
-$signalMethod=5,3,0|void|peerVerifyError|QSslError
+$signalMethod=5,3,0|void|peerVerifyError|const QSslError &
 
 $prototype=void sslErrors( const QList<QSslError> & errors )
-$signalMethod=5,3,0|void|sslErrors|QList<QSslError>
+$signalMethod=5,3,0|void|sslErrors|const QList<QSslError> &
 
 $prototype=void closed()
 $signalMethod=5,3,0|void|closed|

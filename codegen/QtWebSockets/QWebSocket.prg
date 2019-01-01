@@ -177,33 +177,33 @@ $prototype=void stateChanged( QAbstractSocket::SocketState state )
 $signalMethod=5,3,0|void|stateChanged|QAbstractSocket::SocketState
 
 $prototype=void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator )
-$signalMethod=5,3,0|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator*
+$signalMethod=5,3,0|void|proxyAuthenticationRequired|QNetworkProxy,QAuthenticator *
 
 $prototype=void readChannelFinished()
 $signalMethod=5,3,0|void|readChannelFinished|
 
 $prototype=void textFrameReceived( const QString & frame, bool isLastFrame )
-$signalMethod=5,3,0|void|textFrameReceived|QString,bool
+$signalMethod=5,3,0|void|textFrameReceived|const QString &,bool
 
 $prototype=void binaryFrameReceived( const QByteArray & frame, bool isLastFrame )
-$signalMethod=5,3,0|void|binaryFrameReceived|QByteArray,bool
+$signalMethod=5,3,0|void|binaryFrameReceived|const QByteArray &,bool
 
 $prototype=void textMessageReceived( const QString & message )
-$signalMethod=5,3,0|void|textMessageReceived|QString
+$signalMethod=5,3,0|void|textMessageReceived|const QString &
 
 $prototype=void binaryMessageReceived( const QByteArray & message )
-$signalMethod=5,3,0|void|binaryMessageReceived|QByteArray
+$signalMethod=5,3,0|void|binaryMessageReceived|const QByteArray &
 
 $prototype=void error( QAbstractSocket::SocketError error )
 $signalMethod=5,3,0|void|error,error,QOverload<QAbstractSocket::SocketError>|QAbstractSocket::SocketError
 
 $prototype=void pong( quint64 elapsedTime, const QByteArray & payload )
-$signalMethod=5,3,0|void|pong|quint64,QByteArray
+$signalMethod=5,3,0|void|pong|quint64,const QByteArray &
 
 $prototype=void bytesWritten( qint64 bytes )
 $signalMethod=5,3,0|void|bytesWritten|qint64
 
 $prototype=void sslErrors( const QList<QSslError> & errors )
-$signalMethod=5,3,0|void|sslErrors|QList<QSslError>
+$signalMethod=5,3,0|void|sslErrors|const QList<QSslError> &
 
 #pragma ENDDUMP
