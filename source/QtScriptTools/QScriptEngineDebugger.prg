@@ -368,7 +368,10 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
       if( Signals2_connection( sender, "evaluationResumed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScriptEngineDebugger::evaluationResumed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScriptEngineDebugger::evaluationResumed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationResumed()" );
 
           if( cb )
@@ -431,7 +434,10 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
       if( Signals2_connection( sender, "evaluationSuspended()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QScriptEngineDebugger::evaluationSuspended, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QScriptEngineDebugger::evaluationSuspended, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationSuspended()" );
 
           if( cb )
