@@ -114,9 +114,9 @@ $virtualMethod=|bool|cancelQuery|
 %%
 
 $prototype=void notification( const QString & name )
-$signalMethod=|void|notification,notification1,QOverload<const QString &>|QString
+$signalMethod=|void|notification,notification1,QOverload<const QString &>|const QString &
 
 $prototype=void notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
-$signalMethod=|void|notification,notification2,QOverload<const QString & COMMA QSqlDriver::NotificationSource COMMA const QVariant &>|QString,QSqlDriver::NotificationSource,QVariant
+$signalMethod=|void|notification,notification2,QOverload<const QString & COMMA QSqlDriver::NotificationSource COMMA const QVariant &>|const QString &,QSqlDriver::NotificationSource,const QVariant &
 
 #pragma ENDDUMP

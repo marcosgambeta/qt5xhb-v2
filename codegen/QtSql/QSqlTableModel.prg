@@ -181,12 +181,12 @@ $prototype=void beforeDelete( int row )
 $signalMethod=|void|beforeDelete|int
 
 $prototype=void beforeInsert( QSqlRecord & record )
-$signalMethod=|void|beforeInsert|QSqlRecord
+$signalMethod=|void|beforeInsert|QSqlRecord &
 
 $prototype=void beforeUpdate( int row, QSqlRecord & record )
-$signalMethod=|void|beforeUpdate|int,QSqlRecord
+$signalMethod=|void|beforeUpdate|int,QSqlRecord &
 
 $prototype=void primeInsert( int row, QSqlRecord & record )
-$signalMethod=|void|primeInsert|int,QSqlRecord
+$signalMethod=|void|primeInsert|int,QSqlRecord &
 
 #pragma ENDDUMP
