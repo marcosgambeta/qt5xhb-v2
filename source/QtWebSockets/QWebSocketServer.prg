@@ -767,7 +767,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
       if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::acceptError, [sender](QAbstractSocket::SocketError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocketServer::acceptError, 
+                                                              [sender]
+                                                              (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "acceptError(QAbstractSocket::SocketError)" );
 
           if( cb )
@@ -834,7 +837,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
       if( Signals2_connection( sender, "serverError(QWebSocketProtocol::CloseCode)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::serverError, [sender](QWebSocketProtocol::CloseCode arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocketServer::serverError, 
+                                                              [sender]
+                                                              (QWebSocketProtocol::CloseCode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "serverError(QWebSocketProtocol::CloseCode)" );
 
           if( cb )
@@ -901,7 +907,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::originAuthenticationRequired, [sender](QWebSocketCorsAuthenticator* arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocketServer::originAuthenticationRequired, 
+                                                              [sender]
+                                                              (QWebSocketCorsAuthenticator * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
 
           if( cb )
@@ -968,7 +977,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
       if( Signals2_connection( sender, "newConnection()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::newConnection, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocketServer::newConnection, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
 
           if( cb )
@@ -1033,7 +1045,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
       if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::peerVerifyError, [sender](QSslError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocketServer::peerVerifyError, 
+                                                              [sender]
+                                                              (const QSslError & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "peerVerifyError(QSslError)" );
 
           if( cb )
@@ -1100,7 +1115,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::sslErrors, [sender](QList<QSslError> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocketServer::sslErrors, 
+                                                              [sender]
+                                                              (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
 
           if( cb )
@@ -1190,7 +1208,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
       if( Signals2_connection( sender, "closed()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocketServer::closed, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocketServer::closed, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "closed()" );
 
           if( cb )

@@ -1105,7 +1105,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
       if( Signals2_connection( sender, "aboutToClose()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::aboutToClose, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::aboutToClose, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToClose()" );
 
           if( cb )
@@ -1170,7 +1173,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
       if( Signals2_connection( sender, "connected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::connected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::connected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
 
           if( cb )
@@ -1235,7 +1241,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
       if( Signals2_connection( sender, "disconnected()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::disconnected, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::disconnected, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
 
           if( cb )
@@ -1300,7 +1309,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::stateChanged, [sender](QAbstractSocket::SocketState arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::stateChanged, 
+                                                              [sender]
+                                                              (QAbstractSocket::SocketState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAbstractSocket::SocketState)" );
 
           if( cb )
@@ -1367,7 +1379,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::proxyAuthenticationRequired, [sender](QNetworkProxy arg1, QAuthenticator* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::proxyAuthenticationRequired, 
+                                                              [sender]
+                                                              (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
           if( cb )
@@ -1436,7 +1451,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
       if( Signals2_connection( sender, "readChannelFinished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::readChannelFinished, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::readChannelFinished, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readChannelFinished()" );
 
           if( cb )
@@ -1501,7 +1519,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
       if( Signals2_connection( sender, "textFrameReceived(QString,bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::textFrameReceived, [sender](QString arg1, bool arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::textFrameReceived, 
+                                                              [sender]
+                                                              (const QString & arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textFrameReceived(QString,bool)" );
 
           if( cb )
@@ -1570,7 +1591,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
       if( Signals2_connection( sender, "binaryFrameReceived(QByteArray,bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::binaryFrameReceived, [sender](QByteArray arg1, bool arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::binaryFrameReceived, 
+                                                              [sender]
+                                                              (const QByteArray & arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "binaryFrameReceived(QByteArray,bool)" );
 
           if( cb )
@@ -1639,7 +1663,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
       if( Signals2_connection( sender, "textMessageReceived(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::textMessageReceived, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::textMessageReceived, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textMessageReceived(QString)" );
 
           if( cb )
@@ -1706,7 +1733,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
       if( Signals2_connection( sender, "binaryMessageReceived(QByteArray)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::binaryMessageReceived, [sender](QByteArray arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::binaryMessageReceived, 
+                                                              [sender]
+                                                              (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "binaryMessageReceived(QByteArray)" );
 
           if( cb )
@@ -1773,7 +1803,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
       if( Signals2_connection( sender, "error(QAbstractSocket::SocketError)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<QAbstractSocket::SocketError>::of(&QWebSocket::error), [sender](QAbstractSocket::SocketError arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QAbstractSocket::SocketError>::of(&QWebSocket::error), 
+                                                              [sender]
+                                                              (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAbstractSocket::SocketError)" );
 
           if( cb )
@@ -1840,7 +1873,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
       if( Signals2_connection( sender, "pong(quint64,QByteArray)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::pong, [sender](quint64 arg1, QByteArray arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::pong, 
+                                                              [sender]
+                                                              (quint64 arg1, const QByteArray & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pong(quint64,QByteArray)" );
 
           if( cb )
@@ -1909,7 +1945,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
       if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::bytesWritten, [sender](qint64 arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::bytesWritten, 
+                                                              [sender]
+                                                              (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bytesWritten(qint64)" );
 
           if( cb )
@@ -1976,7 +2015,10 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebSocket::sslErrors, [sender](QList<QSslError> arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebSocket::sslErrors, 
+                                                              [sender]
+                                                              (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
 
           if( cb )
