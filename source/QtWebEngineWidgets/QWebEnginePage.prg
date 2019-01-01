@@ -767,7 +767,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::loadStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::loadStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
 
           if( cb )
@@ -832,7 +835,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
       if( Signals2_connection( sender, "loadProgress(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::loadProgress, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::loadProgress, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
 
           if( cb )
@@ -899,7 +905,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::loadFinished, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::loadFinished, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
 
           if( cb )
@@ -966,7 +975,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
       if( Signals2_connection( sender, "linkHovered(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::linkHovered, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::linkHovered, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkHovered(QString)" );
 
           if( cb )
@@ -1033,7 +1045,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )
@@ -1098,7 +1113,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
       if( Signals2_connection( sender, "geometryChangeRequested(QRect)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::geometryChangeRequested, [sender](QRect arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::geometryChangeRequested, 
+                                                              [sender]
+                                                              (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChangeRequested(QRect)" );
 
           if( cb )
@@ -1165,7 +1183,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
       if( Signals2_connection( sender, "windowCloseRequested()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::windowCloseRequested, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::windowCloseRequested, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowCloseRequested()" );
 
           if( cb )
@@ -1230,7 +1251,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
       if( Signals2_connection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::featurePermissionRequested, [sender](QUrl arg1, QWebEnginePage::Feature arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::featurePermissionRequested, 
+                                                              [sender]
+                                                              (const QUrl & arg1, QWebEnginePage::Feature arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
 
           if( cb )
@@ -1299,7 +1323,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
       if( Signals2_connection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::featurePermissionRequestCanceled, [sender](QUrl arg1, QWebEnginePage::Feature arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::featurePermissionRequestCanceled, 
+                                                              [sender]
+                                                              (const QUrl & arg1, QWebEnginePage::Feature arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
 
           if( cb )
@@ -1368,7 +1395,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "authenticationRequired(QUrl,QAuthenticator*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::authenticationRequired, [sender](QUrl arg1, QAuthenticator* arg2) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::authenticationRequired, 
+                                                              [sender]
+                                                              (const QUrl & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "authenticationRequired(QUrl,QAuthenticator*)" );
 
           if( cb )
@@ -1437,7 +1467,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::proxyAuthenticationRequired, [sender](QUrl arg1, QAuthenticator* arg2, QString arg3) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::proxyAuthenticationRequired, 
+                                                              [sender]
+                                                              (const QUrl & arg1, QAuthenticator * arg2, const QString & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
 
           if( cb )
@@ -1508,7 +1541,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::titleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::titleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
 
           if( cb )
@@ -1575,7 +1611,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::urlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::urlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
 
           if( cb )
@@ -1642,7 +1681,10 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
       if( Signals2_connection( sender, "iconUrlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEnginePage::iconUrlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEnginePage::iconUrlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconUrlChanged(QUrl)" );
 
           if( cb )

@@ -719,7 +719,10 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::loadStarted, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEngineView::loadStarted, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
 
           if( cb )
@@ -784,7 +787,10 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
       if( Signals2_connection( sender, "loadProgress(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::loadProgress, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEngineView::loadProgress, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
 
           if( cb )
@@ -851,7 +857,10 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::loadFinished, [sender](bool arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEngineView::loadFinished, 
+                                                              [sender]
+                                                              (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
 
           if( cb )
@@ -918,7 +927,10 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::titleChanged, [sender](QString arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEngineView::titleChanged, 
+                                                              [sender]
+                                                              (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
 
           if( cb )
@@ -985,7 +997,10 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::selectionChanged, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEngineView::selectionChanged, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
           if( cb )
@@ -1050,7 +1065,10 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::urlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEngineView::urlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
 
           if( cb )
@@ -1117,7 +1135,10 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
       if( Signals2_connection( sender, "iconUrlChanged(QUrl)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QWebEngineView::iconUrlChanged, [sender](QUrl arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QWebEngineView::iconUrlChanged, 
+                                                              [sender]
+                                                              (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconUrlChanged(QUrl)" );
 
           if( cb )
