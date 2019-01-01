@@ -223,7 +223,7 @@ $prototype=void iconChanged()
 $signalMethod=|void|iconChanged|
 
 $prototype=void linkClicked( const QUrl & url )
-$signalMethod=|void|linkClicked|QUrl
+$signalMethod=|void|linkClicked|const QUrl &
 
 $prototype=void loadFinished( bool ok )
 $signalMethod=|void|loadFinished|bool
@@ -238,12 +238,12 @@ $prototype=void selectionChanged()
 $signalMethod=|void|selectionChanged|
 
 $prototype=void statusBarMessage( const QString & text )
-$signalMethod=|void|statusBarMessage|QString
+$signalMethod=|void|statusBarMessage|const QString &
 
 $prototype=void titleChanged( const QString & title )
-$signalMethod=|void|titleChanged|QString
+$signalMethod=|void|titleChanged|const QString &
 
 $prototype=void urlChanged( const QUrl & url )
-$signalMethod=|void|urlChanged|QUrl
+$signalMethod=|void|urlChanged|const QUrl &
 
 #pragma ENDDUMP

@@ -249,34 +249,34 @@ $prototype=QWebPageAdapter* handle() const
 %%
 
 $prototype=void applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded )
-$signalMethod=|void|applicationCacheQuotaExceeded|QWebSecurityOrigin*,quint64,quint64
+$signalMethod=|void|applicationCacheQuotaExceeded|QWebSecurityOrigin *,quint64,quint64
 
 $prototype=void contentsChanged()
 $signalMethod=|void|contentsChanged|
 
 $prototype=void databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
-$signalMethod=|void|databaseQuotaExceeded|QWebFrame*,QString
+$signalMethod=|void|databaseQuotaExceeded|QWebFrame *,QString
 
 $prototype=void downloadRequested( const QNetworkRequest & request )
-$signalMethod=|void|downloadRequested|QNetworkRequest
+$signalMethod=|void|downloadRequested|const QNetworkRequest &
 
 $prototype=void featurePermissionRequestCanceled( QWebFrame * frame, QWebPage::Feature feature )
-$signalMethod=|void|featurePermissionRequestCanceled|QWebFrame*,QWebPage::Feature
+$signalMethod=|void|featurePermissionRequestCanceled|QWebFrame *,QWebPage::Feature
 
 $prototype=void featurePermissionRequested( QWebFrame * frame, QWebPage::Feature feature )
-$signalMethod=|void|featurePermissionRequested|QWebFrame*,QWebPage::Feature
+$signalMethod=|void|featurePermissionRequested|QWebFrame *,QWebPage::Feature
 
 $prototype=void frameCreated( QWebFrame * frame )
-$signalMethod=|void|frameCreated|QWebFrame*
+$signalMethod=|void|frameCreated|QWebFrame *
 
 $prototype=void geometryChangeRequested( const QRect & geom )
-$signalMethod=|void|geometryChangeRequested|QRect
+$signalMethod=|void|geometryChangeRequested|const QRect &
 
 $prototype=void linkClicked( const QUrl & url )
-$signalMethod=|void|linkClicked|QUrl
+$signalMethod=|void|linkClicked|const QUrl &
 
 $prototype=void linkHovered( const QString & link, const QString & title, const QString & textContent )
-$signalMethod=|void|linkHovered|QString,QString,QString
+$signalMethod=|void|linkHovered|const QString &,const QString &,const QString &
 
 $prototype=void loadFinished( bool ok )
 $signalMethod=|void|loadFinished|bool
@@ -294,25 +294,25 @@ $prototype=void microFocusChanged()
 $signalMethod=|void|microFocusChanged|
 
 $prototype=void printRequested( QWebFrame * frame )
-$signalMethod=|void|printRequested|QWebFrame*
+$signalMethod=|void|printRequested|QWebFrame *
 
 $prototype=void repaintRequested( const QRect & dirtyRect )
-$signalMethod=|void|repaintRequested|QRect
+$signalMethod=|void|repaintRequested|const QRect &
 
 $prototype=void restoreFrameStateRequested( QWebFrame * frame )
-$signalMethod=|void|restoreFrameStateRequested|QWebFrame*
+$signalMethod=|void|restoreFrameStateRequested|QWebFrame *
 
 $prototype=void saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item )
-$signalMethod=|void|saveFrameStateRequested|QWebFrame*,QWebHistoryItem*
+$signalMethod=|void|saveFrameStateRequested|QWebFrame *,QWebHistoryItem *
 
 $prototype=void scrollRequested( int dx, int dy, const QRect & rectToScroll )
-$signalMethod=|void|scrollRequested|int,int,QRect
+$signalMethod=|void|scrollRequested|int,int,const QRect &
 
 $prototype=void selectionChanged()
 $signalMethod=|void|selectionChanged|
 
 $prototype=void statusBarMessage( const QString & text )
-$signalMethod=|void|statusBarMessage|QString
+$signalMethod=|void|statusBarMessage|const QString &
 
 $prototype=void statusBarVisibilityChangeRequested( bool visible )
 $signalMethod=|void|statusBarVisibilityChangeRequested|bool
@@ -321,7 +321,7 @@ $prototype=void toolBarVisibilityChangeRequested( bool visible )
 $signalMethod=|void|toolBarVisibilityChangeRequested|bool
 
 $prototype=void unsupportedContent( QNetworkReply * reply )
-$signalMethod=|void|unsupportedContent|QNetworkReply*
+$signalMethod=|void|unsupportedContent|QNetworkReply *
 
 $prototype=void viewportChangeRequested()
 $signalMethod=|void|viewportChangeRequested|

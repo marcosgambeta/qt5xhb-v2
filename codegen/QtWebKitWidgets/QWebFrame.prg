@@ -289,7 +289,7 @@ $prototype=QWebFrameAdapter* handle() const
 %%
 
 $prototype=void contentsSizeChanged( const QSize & size )
-$signalMethod=|void|contentsSizeChanged|QSize
+$signalMethod=|void|contentsSizeChanged|const QSize &
 
 $prototype=void iconChanged()
 $signalMethod=|void|iconChanged|
@@ -310,12 +310,13 @@ $prototype=void pageChanged()
 $signalMethod=|void|pageChanged|
 
 %% TODO: check signal 'provisionalLoad' (not present in the documentation)
-%% $signal=|provisionalLoad()
+%% $prototype=void provisionalLoad()
+%% $signalMethod=|void|provisionalLoad|
 
 $prototype=void titleChanged( const QString & title )
-$signalMethod=|void|titleChanged|QString
+$signalMethod=|void|titleChanged|const QString &
 
 $prototype=void urlChanged( const QUrl & url )
-$signalMethod=|void|urlChanged|QUrl
+$signalMethod=|void|urlChanged|const QUrl &
 
 #pragma ENDDUMP
