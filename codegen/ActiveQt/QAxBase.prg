@@ -124,6 +124,10 @@ $method=|QStringList|verbs|
 
 $extraMethods
 
+%%
+%% SIGNALS
+%%
+
 %% $beginSignals
 %% $signal=|exception(int,QString,QString,QString)
 %% $signal=|propertyChanged(QString)
@@ -131,12 +135,12 @@ $extraMethods
 %% $endSignals
 
 $prototype=void exception( int code, const QString & source, const QString & desc, const QString & help )
-%% TODO: fix $signalMethod=|void|exception|int,QString,QString,QString
+%% TODO: fix $signalMethod=|void|exception|int,const QString &,const QString &,const QString &
 
 $prototype=void propertyChanged( const QString & name )
-%% TODO: fix $signalMethod=|void|propertyChanged|QString
+%% TODO: fix $signalMethod=|void|propertyChanged|const QString &
 
 $prototype=void signal( const QString & name, int argc, void * argv )
-%% TODO: fix $signalMethod=|void|signal|QString,int,void*
+%% TODO: fix $signalMethod=|void|signal|const QString &,int,void *
 
 #pragma ENDDUMP

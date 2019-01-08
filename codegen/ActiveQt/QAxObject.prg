@@ -162,6 +162,10 @@ $method=|QStringList|verbs|
 
 // QAxBase methods - end
 
+%%
+%% SIGNALS
+%%
+
 %% $beginSignals
 %% $signal=|exception(int,QString,QString,QString)
 %% $signal=|propertyChanged(QString)
@@ -169,12 +173,12 @@ $method=|QStringList|verbs|
 %% $endSignals
 
 %% $prototype=void exception( int code, const QString & source, const QString & desc, const QString & help )
-%% $signalMethod=|void|exception|int,QString,QString,QString
+%% $signalMethod=|void|exception|int,const QString &,const QString &,const QString &
 
 %% $prototype=void propertyChanged( const QString & name )
-%% $signalMethod=|void|propertyChanged|QString
+%% $signalMethod=|void|propertyChanged|const QString &
 
 %% $prototype=void signal( const QString & name, int argc, void * argv )
-%% $signalMethod=|void|signal|QString,int,void*
+%% $signalMethod=|void|signal|const QString &,int,void *
 
 #pragma ENDDUMP

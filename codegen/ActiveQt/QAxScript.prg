@@ -75,6 +75,10 @@ $method=|QAxScriptEngine *|scriptEngine|
 $prototype=QString scriptName () const
 $method=|QString|scriptName|
 
+%%
+%% SIGNALS
+%%
+
 %% $beginSignals
 %% $signal=|entered()
 %% $signal=|error(int,QString,int,QString)
@@ -90,16 +94,16 @@ $prototype=void entered()
 $signalMethod=|void|entered|
 
 $prototype=void error( int code, const QString & description, int sourcePosition, const QString & sourceText )
-$signalMethod=|void|error|int,QString,int,QString
+$signalMethod=|void|error|int,const QString &,int,const QString &
 
 $prototype=void finished()
 $signalMethod=|void|finished,finished1,QOverload<>|
 
 $prototype=void finished( const QVariant & result )
-$signalMethod=|void|finished,finished2,QOverload<const QVariant &>|QVariant
+$signalMethod=|void|finished,finished2,QOverload<const QVariant &>|const QVariant &
 
 $prototype=void finished( int code, const QString & source, const QString & description, const QString & help )
-$signalMethod=|void|finished,finished3,QOverload<int COMMA const QString & COMMA const QString & COMMA const QString &>|int,QString,QString,QString
+$signalMethod=|void|finished,finished3,QOverload<int COMMA const QString & COMMA const QString & COMMA const QString &>|int,const QString &,const QString &,const QString &
 
 $prototype=void stateChanged( int state )
 $signalMethod=|void|stateChanged|int
