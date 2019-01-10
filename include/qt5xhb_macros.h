@@ -59,13 +59,14 @@
 
 // TODO: revise
 #define ISQSTRINGREF(n)                                     _qt5xhb_isObjectDerivedFrom(n,"QStringRef")
-#define PQSTRINGREF(n)                                     (QStringRef *) _qt5xhb_itemGetPtr(n)
+#define PQSTRINGREF(n)                                      (QStringRef *) _qt5xhb_itemGetPtr(n)
 #define ISQRUNNABLE(n)                                      _qt5xhb_isObjectDerivedFrom(n,"QRunnable")
-#define PQRUNNABLE(n)                                      (QRunnable *) _qt5xhb_itemGetPtr(n)
+#define PQRUNNABLE(n)                                       (QRunnable *) _qt5xhb_itemGetPtr(n)
 #define ISQLATIN1STRING(n)                                  _qt5xhb_isObjectDerivedFrom(n,"QLatin1String")
-#define PQLATIN1STRING(n)                                  (QLatin1String *) _qt5xhb_itemGetPtr(n)
+#define PQLATIN1STRING(n)                                   (QLatin1String *) _qt5xhb_itemGetPtr(n)
+#define PQLATIN1CHAR(n)                                     (QLatin1Char *) _qt5xhb_itemGetPtr(n)
 #define ISQDESIGNERFORMWINDOWINTERFACE(n)                   _qt5xhb_isObjectDerivedFrom(n,"QDesignerFormWindowInterface")
-#define PQDESIGNERFORMWINDOWINTERFACE(n)                   (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(n)
+#define PQDESIGNERFORMWINDOWINTERFACE(n)                    (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(n)
 
 #define ISOPTQOBJECT(n)                                     (ISQOBJECT(n)||ISNIL(n))
 #define ISOPTQWIDGET(n)                                     (ISQWIDGET(n)||ISNIL(n))
