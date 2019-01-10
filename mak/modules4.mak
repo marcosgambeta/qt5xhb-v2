@@ -89,6 +89,9 @@ endif
 ifeq ($(MODULE_QTSENSORS),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtSensors
 endif
+ifeq ($(MODULE_QTSERIALBUS),yes)
+   CINCLUDES += -I$(QT_INC_DIR)/QtSerialBus
+endif
 ifeq ($(MODULE_QTSERIALPORT),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtSerialPort
 endif
@@ -227,6 +230,9 @@ ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
 endif
 ifeq ($(MODULE_QTSENSORS),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtSensors
+endif
+ifeq ($(MODULE_QTSERIALBUS),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtSerialBus
 endif
 ifeq ($(MODULE_QTSERIALPORT),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtSerialPort

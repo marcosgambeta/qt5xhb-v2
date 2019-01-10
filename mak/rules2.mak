@@ -138,6 +138,11 @@ $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSensors/%.prg
 	$(HB_CMD)
 $(QT5XHB_OBJ_DIR)/%$(OBJEXT) : $(QT5XHB_SRC_DIR)/QtSensors/%.cpp
 	$(CC_CMD)
+# QtSerialBus
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSerialBus/%.prg
+	$(HB_CMD)
+$(QT5XHB_OBJ_DIR)/%$(OBJEXT) : $(QT5XHB_SRC_DIR)/QtSerialBus/%.cpp
+	$(CC_CMD)
 # QtSerialPort
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSerialPort/%.prg
 	$(HB_CMD)

@@ -89,6 +89,9 @@ endif
 ifeq ($(MODULE_QTSENSORS),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsensors5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTSERIALBUS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtserialbus5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTSERIALPORT),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtserialport5$(LIBEXT)
 endif

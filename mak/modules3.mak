@@ -95,6 +95,9 @@ endif
 ifeq ($(MODULE_QTSENSORS),yes)
    CFLAGS += -DQT_SENSORS_LIB
 endif
+ifeq ($(MODULE_QTSERIALBUS),yes)
+   CFLAGS += -DQT_SERIALBUS_LIB
+endif
 ifeq ($(MODULE_QTSERIALPORT),yes)
    CFLAGS += -DQT_SERIALPORT_LIB
 endif

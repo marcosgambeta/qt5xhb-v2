@@ -89,6 +89,9 @@ endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtSensors/.*),)
    MODULE_QTSENSORS = yes
 endif
+ifneq ($(wildcard $(QT_INC_DIR)/QtSerialBus/.*),)
+   MODULE_QTSERIALBUS = yes
+endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtSerialPort/.*),)
    MODULE_QTSERIALPORT = yes
 endif

@@ -89,6 +89,9 @@ endif
 ifeq ($(MODULE_QTSENSORS),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtSensors
 endif
+ifeq ($(MODULE_QTSERIALBUS),yes)
+   MOCINCLUDES += -I$(QT_INC_DIR)/QtSerialBus
+endif
 ifeq ($(MODULE_QTSERIALPORT),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtSerialPort
 endif

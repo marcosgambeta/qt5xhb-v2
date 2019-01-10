@@ -58,6 +58,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtscripttools5$(LIBEXT)       : $(OBJECTS_QTSCRIPTT
 	$(LINK_CMD)
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsensors5$(LIBEXT)           : $(OBJECTS_QTSENSORS)
 	$(LINK_CMD)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtserialbus5$(LIBEXT)         : $(OBJECTS_QTSERIALBUS)
+	$(LINK_CMD)
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtserialport5$(LIBEXT)        : $(OBJECTS_QTSERIALPORT)
 	$(LINK_CMD)
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsql5$(LIBEXT)               : $(OBJECTS_QTSQL)

@@ -89,6 +89,9 @@ endif
 ifeq ($(MODULE_QTSENSORS),yes)
    include mak/QtSensorsMocs.mak
 endif
+ifeq ($(MODULE_QTSERIALBUS),yes)
+   include mak/QtSerialBusMocs.mak
+endif
 ifeq ($(MODULE_QTSERIALPORT),yes)
    include mak/QtSerialPortMocs.mak
 endif
