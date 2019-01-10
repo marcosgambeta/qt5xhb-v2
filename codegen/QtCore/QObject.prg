@@ -210,7 +210,6 @@ $includes
 bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
 bool Events_disconnect_event ( QObject * object, int type );
 void Events_disconnect_all_events ( QObject * object, bool children );
-void Signals_disconnect_all_signals ( QObject * object, bool children );
 void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
@@ -345,12 +344,12 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
     if( hb_pcount() == 0 )
     {
       Events_disconnect_all_events (obj, false);
-      Signals_disconnect_all_signals (obj, false);
+      Signals2_disconnect_all_signals (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
       Events_disconnect_all_events (obj, PBOOL(1) );
-      Signals_disconnect_all_signals (obj, PBOOL(1) );
+      Signals2_disconnect_all_signals (obj, PBOOL(1) );
     }
     else
     {
@@ -392,11 +391,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
   {
     if( hb_pcount() == 0 )
     {
-      Signals_disconnect_all_signals (obj, false);
+      Signals2_disconnect_all_signals (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Signals_disconnect_all_signals (obj, PBOOL(1) );
+      Signals2_disconnect_all_signals (obj, PBOOL(1) );
     }
     else
     {
