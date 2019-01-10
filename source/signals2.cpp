@@ -269,7 +269,7 @@ void Signals2_disconnect_all_signals (QObject * obj, bool children)
               ( s_signals->list2.at(ii) != "destroyed(QObject*)" ) &&
               ( (bool) s_signals->list4.at(ii) == true ) )
           {
-            QObject::disconnect( s_signals->list5[i] );
+            QObject::disconnect( s_signals->list5[ii] );
             hb_itemRelease( (PHB_ITEM) s_signals->list3.at(ii) );
             s_signals->list1[ii] = NULL;
             s_signals->list2[ii] = "";
