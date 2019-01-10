@@ -14,7 +14,7 @@ bool Signals2_disconnect_signal ( QObject * object, QString signal );
 bool Signals2_is_signal_connected( QObject * object, QString signal );
 PHB_ITEM Signals2_return_codeblock ( QObject * object, QString signal );
 void Signals2_release_codeblocks ();
-void Signals2_disconnect_all_signals (QObject * obj);
+void Signals2_disconnect_all_signals (QObject * obj, bool children);
 bool Signals2_connection ( QObject * s, QString signal );
 bool Signals2_disconnection ( QObject * s, QString signal );
 PHB_ITEM Signals2_return_object ( void * ptr, const char * classname );
