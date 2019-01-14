@@ -43,7 +43,7 @@ QMetaObject::Connection Signals2_get_connection ( QObject * s, QString signal );
 class Signals2: public QObject
 {
   public:
-  Signals2(QObject *parent = 0);
+  Signals2(QObject *parent = nullptr);
   ~Signals2();
   QVector<QObject*> list1;                // armazena ponteiro do objeto
   QVector<QString> list2;                 // armazena assinatura do sinal

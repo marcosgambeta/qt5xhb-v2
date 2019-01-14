@@ -8,7 +8,7 @@
 
 #include "signals2.h"
 
-static Signals2 *s_signals = NULL;
+static Signals2 *s_signals = nullptr;
 
 /*
   constructor
@@ -40,28 +40,36 @@ Signals2::~Signals2()
 bool Signals2_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblock )
 {
   int i;
+
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2(QCoreApplication::instance());
   }
+
   // verifica se já está na lista
   int found = -1;
+
   for (i = 0; i < s_signals->list1.size(); ++i)
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
+        ( s_signals->list2.at(i) == signal ) &&
+        ( (bool) s_signals->list4.at(i) == true ) )
     {
       found = i;
       //hb_itemRelease( codeblock );
       break;
     }
   }
+
   bool ret = false;
+
   // se nao encontrado na lista, adiciona
   if( found == -1 )
   {
     // procura por posição livre
     i = s_signals->list4.indexOf( false );
+
     if( i == -1 ) // nao encontrou posicao livre
     {
       // adiciona sinal na lista de sinais
@@ -83,8 +91,10 @@ bool Signals2_connect_signal ( QObject * object, QString signal, PHB_ITEM codebl
       QMetaObject::Connection connection;
       s_signals->list5[i] = connection;
     }
+
     ret = true;
   }
+
   // retorna o resultado da operação
   //hb_retl( ret );
   return ret;
@@ -102,23 +112,27 @@ bool Signals2_connect_signal ( QObject * object, QString signal, PHB_ITEM codebl
 bool Signals2_disconnect_signal ( QObject * object, QString signal )
 {
   int i;
+
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2(QCoreApplication::instance());
   }
+
   bool ret = false;
+
   // remove sinal da lista de sinais
   for (i = 0; i < s_signals->list1.size(); ++i)
   {
     if( (QObject *) s_signals->list1.at(i) == (QObject *) object )
     {
-      if( ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+      if( ( s_signals->list2.at(i) == signal ) &&
+          ( (bool) s_signals->list4.at(i) == true ) )
       {
         hb_itemRelease( (PHB_ITEM) s_signals->list3.at(i) );
-        s_signals->list1[i] = NULL;
+        s_signals->list1[i] = nullptr;
         s_signals->list2[i] = "";
-        s_signals->list3[i] = NULL;
+        s_signals->list3[i] = nullptr;
         s_signals->list4[i] = false;
         QMetaObject::Connection connection;
         s_signals->list5[i] = connection;
@@ -126,6 +140,7 @@ bool Signals2_disconnect_signal ( QObject * object, QString signal )
       }
     }
   }
+
   // retorna o resultado da operação
   //hb_retl( ret );
   return ret;
@@ -143,22 +158,27 @@ bool Signals2_disconnect_signal ( QObject * object, QString signal )
 bool Signals2_is_signal_connected ( QObject * object, QString signal )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2(QCoreApplication::instance());
   }
+
   // valor de retorno
   bool found = false;
+
   // verifica se já está na lista
   //int i;
   for (int i = 0; i < s_signals->list1.size(); ++i)
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
+        ( s_signals->list2.at(i) == signal ) &&
+        ( (bool) s_signals->list4.at(i) == true ) )
     {
       found = true;
       break;
     }
   }
+
   return found;
 }
 
@@ -169,21 +189,26 @@ bool Signals2_is_signal_connected ( QObject * object, QString signal )
 PHB_ITEM Signals2_return_codeblock ( QObject * object, QString signal )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2(QCoreApplication::instance());
   }
+
   int i;
   int found = -1;
+
   // localiza sinal na lista de sinais
   for (i = 0; i < s_signals->list1.size(); ++i)
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
+        ( s_signals->list2.at(i) == signal ) &&
+        ( (bool) s_signals->list4.at(i) == true ) )
     {
       found = i;
       break;
     }
   }
+
   // retorna o resultado da operação
   if( found != -1 )
   {
@@ -191,7 +216,7 @@ PHB_ITEM Signals2_return_codeblock ( QObject * object, QString signal )
   }
   else
   {
-    return NULL;
+    return nullptr;
   }
 }
 
@@ -201,16 +226,16 @@ PHB_ITEM Signals2_return_codeblock ( QObject * object, QString signal )
 
 void Signals2_release_codeblocks ()
 {
-  if( s_signals )
+  if( s_signals != nullptr )
   {
     for (int i = 0; i < s_signals->list1.size(); ++i)
     {
       if( (bool) s_signals->list4.at(i) == true )
       {
         hb_itemRelease((PHB_ITEM) s_signals->list3.at(i) );
-        s_signals->list1[i] = NULL;
+        s_signals->list1[i] = nullptr;
         s_signals->list2[i] = "";
-        s_signals->list3[i] = NULL;
+        s_signals->list3[i] = nullptr;
         s_signals->list4[i] = false;
         QMetaObject::Connection connection;
         s_signals->list5[i] = connection;
@@ -229,7 +254,7 @@ void Signals2_release_codeblocks ()
 
 void Signals2_disconnect_all_signals (QObject * obj, bool children)
 {
-  if( s_signals )
+  if( s_signals != nullptr )
   {
     if( !children )
     {
@@ -243,9 +268,9 @@ void Signals2_disconnect_all_signals (QObject * obj, bool children)
         {
           QObject::disconnect( s_signals->list5[i] );
           hb_itemRelease( (PHB_ITEM) s_signals->list3.at(i) );
-          s_signals->list1[i] = NULL;
+          s_signals->list1[i] = nullptr;
           s_signals->list2[i] = "";
-          s_signals->list3[i] = NULL;
+          s_signals->list3[i] = nullptr;
           s_signals->list4[i] = false;
           QMetaObject::Connection connection;
           s_signals->list5[i] = connection;
@@ -256,8 +281,10 @@ void Signals2_disconnect_all_signals (QObject * obj, bool children)
     {
       // obtém a lista de filhos, netos, bisnetos, etc...
       QList<QObject *> list = obj->findChildren<QObject *>();
+
       // adiciona o pai na lista
       list << obj;
+
       // percorre toda a lista de objetos
       for (int i = 0; i < list.size(); ++i)
       {
@@ -271,9 +298,9 @@ void Signals2_disconnect_all_signals (QObject * obj, bool children)
           {
             QObject::disconnect( s_signals->list5[ii] );
             hb_itemRelease( (PHB_ITEM) s_signals->list3.at(ii) );
-            s_signals->list1[ii] = NULL;
+            s_signals->list1[ii] = nullptr;
             s_signals->list2[ii] = "";
-            s_signals->list3[ii] = NULL;
+            s_signals->list3[ii] = nullptr;
             s_signals->list4[ii] = false;
             QMetaObject::Connection connection;
             s_signals->list5[ii] = connection;
@@ -290,7 +317,7 @@ void Signals2_disconnect_all_signals (QObject * obj, bool children)
 bool Signals2_connection ( QObject * s, QString signal )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2( QCoreApplication::instance() );
   }
@@ -302,10 +329,13 @@ bool Signals2_connection ( QObject * s, QString signal )
   if( hb_pcount() == 1 )
   {
     QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
     bool connected = Signals2_is_signal_connected( object, signal );
+
     if( !connected )
     {
       PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+
       if( codeblock )
       {
 /*
@@ -341,7 +371,7 @@ bool Signals2_connection ( QObject * s, QString signal )
 bool Signals2_disconnection ( QObject * s, QString signal )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2( QCoreApplication::instance() );
   }
@@ -382,7 +412,7 @@ bool Signals2_disconnection ( QObject * s, QString signal )
 
 HB_FUNC( QTXHB_SIGNALS2_SIZE )
 {
-  if( s_signals )
+  if( s_signals != nullptr )
   {
     hb_retni( s_signals->list1.size() );
   }
@@ -400,7 +430,7 @@ HB_FUNC( QTXHB_SIGNALS2_SIZE )
 
 HB_FUNC( QTXHB_SIGNALS2_SIZE_ACTIVE )
 {
-  if( s_signals )
+  if( s_signals != nullptr )
   {
     // inicializa contador
     int count = 0;
@@ -483,12 +513,14 @@ PHB_ITEM Signals2_return_qobject ( QObject * ptr, const char * classname )
 bool Signals2_store_connection ( QObject * s, QString signal, QMetaObject::Connection connection )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2(QCoreApplication::instance());
   }
+
   // valor de retorno
   bool stored = false;
+
   // armazena handle da conexão
   for (int i = 0; i < s_signals->list1.size(); ++i)
   {
@@ -499,6 +531,7 @@ bool Signals2_store_connection ( QObject * s, QString signal, QMetaObject::Conne
       break;
     }
   }
+
   return stored;
 }
 
@@ -506,12 +539,14 @@ bool Signals2_store_connection ( QObject * s, QString signal, QMetaObject::Conne
 QMetaObject::Connection Signals2_get_connection ( QObject * s, QString signal )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
+  if( s_signals == nullptr )
   {
     s_signals = new Signals2(QCoreApplication::instance());
   }
+
   // valor de retorno
   QMetaObject::Connection connection;
+
   // busca handle da conexão
   for (int i = 0; i < s_signals->list1.size(); ++i)
   {
@@ -521,5 +556,6 @@ QMetaObject::Connection Signals2_get_connection ( QObject * s, QString signal )
       break;
     }
   }
+
   return connection;
 }

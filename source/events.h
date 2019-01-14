@@ -36,7 +36,7 @@ class Events: public QObject
 {
 
   public:
-  Events(QObject *parent = 0);
+  Events(QObject *parent = nullptr);
   ~Events();
   QVector<QObject*> list1;     // armazena ponteiro do objeto
   QVector<QEvent::Type> list2; // armazena tipo de evento
