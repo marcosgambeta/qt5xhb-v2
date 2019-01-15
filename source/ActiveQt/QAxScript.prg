@@ -84,10 +84,10 @@ HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -279,7 +279,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
       if( Signals2_connection( sender, "entered()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAxScript::entered, [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAxScript::entered, 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "entered()" );
 
           if( cb )
@@ -342,7 +345,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
       if( Signals2_connection( sender, "error(int,QString,int,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAxScript::error, [sender](int arg1, QString arg2, int arg3, QString arg4) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAxScript::error, 
+                                                              [sender]
+                                                              (int arg1, const QString & arg2, int arg3, const QString & arg4) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString,int,QString)" );
 
           if( cb )
@@ -413,7 +419,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
       if( Signals2_connection( sender, "finished()" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<>::of(&QAxScript::finished), [sender]() {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<>::of(&QAxScript::finished), 
+                                                              [sender]
+                                                              () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
           if( cb )
@@ -476,7 +485,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
       if( Signals2_connection( sender, "finished(QVariant)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<const QVariant &>::of(&QAxScript::finished), [sender](QVariant arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<const QVariant &>::of(&QAxScript::finished), 
+                                                              [sender]
+                                                              (const QVariant & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QVariant)" );
 
           if( cb )
@@ -541,7 +553,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
       if( Signals2_connection( sender, "finished(int,QString,QString,QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, QOverload<int,const QString &,const QString &,const QString &>::of(&QAxScript::finished), [sender](int arg1, QString arg2, QString arg3, QString arg4) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int,const QString &,const QString &,const QString &>::of(&QAxScript::finished), 
+                                                              [sender]
+                                                              (int arg1, const QString & arg2, const QString & arg3, const QString & arg4) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int,QString,QString,QString)" );
 
           if( cb )
@@ -612,7 +627,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
       if( Signals2_connection( sender, "stateChanged(int)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, &QAxScript::stateChanged, [sender](int arg1) {
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QAxScript::stateChanged, 
+                                                              [sender]
+                                                              (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(int)" );
 
           if( cb )
