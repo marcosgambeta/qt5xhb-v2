@@ -79,17 +79,6 @@ $method=|QString|scriptName|
 %% SIGNALS
 %%
 
-%% $beginSignals
-%% $signal=|entered()
-%% $signal=|error(int,QString,int,QString)
-%% $beginGroup
-%% $signal=|finished()
-%% $signal=|finished(QVariant)
-%% $signal=|finished(int,QString,QString,QString)
-%% $endGroup
-%% $signal=|stateChanged(int)
-%% $endSignals
-
 $prototype=void entered()
 $signalMethod=|void|entered|
 

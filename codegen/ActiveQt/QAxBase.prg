@@ -17,9 +17,7 @@ $beginClassFrom=
 
 $addMethods
 
-%%   METHOD onException
-%%   METHOD onPropertyChanged
-%%   METHOD onSignal
+$addSignals
 
 $endClass
 
@@ -128,19 +126,13 @@ $extraMethods
 %% SIGNALS
 %%
 
-%% $beginSignals
-%% $signal=|exception(int,QString,QString,QString)
-%% $signal=|propertyChanged(QString)
-%% $signal=|signal(QString,int,void*)
-%% $endSignals
-
 $prototype=void exception( int code, const QString & source, const QString & desc, const QString & help )
-%% TODO: fix $signalMethod=|void|exception|int,const QString &,const QString &,const QString &
+%% TODO: $signalMethod=|void|exception|int,const QString &,const QString &,const QString &
 
 $prototype=void propertyChanged( const QString & name )
-%% TODO: fix $signalMethod=|void|propertyChanged|const QString &
+%% TODO: $signalMethod=|void|propertyChanged|const QString &
 
 $prototype=void signal( const QString & name, int argc, void * argv )
-%% TODO: fix $signalMethod=|void|signal|const QString &,int,void *
+%% TODO: $signalMethod=|void|signal|const QString &,int,void *
 
 #pragma ENDDUMP

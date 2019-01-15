@@ -166,12 +166,6 @@ $method=|QStringList|verbs|
 %% SIGNALS
 %%
 
-%% $beginSignals
-%% $signal=|exception(int,QString,QString,QString)
-%% $signal=|propertyChanged(QString)
-%% $signal=|signal(QString,int,void*)
-%% $endSignals
-
 %% $prototype=void exception( int code, const QString & source, const QString & desc, const QString & help )
 %% $signalMethod=|void|exception|int,const QString &,const QString &,const QString &
 
