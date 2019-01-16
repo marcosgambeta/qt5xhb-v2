@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SUPPORTEDSCHEMES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CLEARACCESSCACHE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CLEARCONNECTIONCACHE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXYFACTORY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1) )
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCACHE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTNETWORKCACHE(1) )
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKCOOKIEJAR(1) )
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETSTRICTTRANSPORTSECURITYENABLED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYENABLED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTCHAR(2) )
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYSTOREENABLED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ADDSTRICTTRANSPORTSECURITYHOSTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
@@ -734,7 +734,7 @@ void QNetworkAccessManager_post1 ()
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -748,7 +748,7 @@ void QNetworkAccessManager_post2 ()
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -762,7 +762,7 @@ void QNetworkAccessManager_post3 ()
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -800,7 +800,7 @@ void QNetworkAccessManager_put1 ()
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -814,7 +814,7 @@ void QNetworkAccessManager_put2 ()
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -828,7 +828,7 @@ void QNetworkAccessManager_put3 ()
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
@@ -891,7 +891,7 @@ void QNetworkAccessManager_sendCustomRequest1 ()
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3,0) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -906,7 +906,7 @@ void QNetworkAccessManager_sendCustomRequest2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -922,7 +922,7 @@ void QNetworkAccessManager_sendCustomRequest3 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && (ISQSSLCONFIGURATION(3)||ISNIL(3)) )
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOST )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETREDIRECTPOLICY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_REDIRECTPOLICY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
       {
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKPROXY" );
@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "authenticationRequired(QNetworkReply*,QAuthenticator*)" ) )
       {
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
                                                               (QNetworkReply * arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
 
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QNetworkReply*)" ) )
       {
@@ -1308,7 +1308,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
                                                               (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QNetworkReply*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QNetworkReply*)" );
 
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "encrypted(QNetworkReply*)" ) )
       {
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
                                                               (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted(QNetworkReply*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
@@ -1406,7 +1406,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "encrypted(QNetworkReply*)" );
 
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sslErrors(QNetworkReply*,QList<QSslError>)" ) )
       {
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
                                                               (QNetworkReply * arg1, const QList<QSslError> & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QNetworkReply*,QList<QSslError>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sslErrors(QNetworkReply*,QList<QSslError>)" );
 
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" ) )
       {
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
                                                               (QNetworkReply * arg1, QSslPreSharedKeyAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" );
 
@@ -1600,7 +1600,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "networkSessionConnected()" ) )
       {
@@ -1611,7 +1611,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "networkSessionConnected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1638,7 +1638,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "networkSessionConnected()" );
 
@@ -1666,7 +1666,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" ) )
       {
@@ -1677,7 +1677,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
                                                               (QNetworkAccessManager::NetworkAccessibility arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1706,7 +1706,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
   {
     QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
 

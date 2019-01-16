@@ -123,10 +123,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_RESUME )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PAUSEMODE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPAUSEMODE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -219,7 +219,7 @@ void QAbstractSocket_bind1 ()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->bind ( *PQHOSTADDRESS(1), OPQUINT16(2,0), ISNIL(3)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(3) ) );
   }
@@ -232,7 +232,7 @@ void QAbstractSocket_bind2 ()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->bind ( OPQUINT16(1,0), ISNIL(2)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(2) ) );
   }
@@ -264,7 +264,7 @@ void QAbstractSocket_connectToHost1 ()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->connectToHost ( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
   }
@@ -279,7 +279,7 @@ void QAbstractSocket_connectToHost2 ()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->connectToHost ( *PQHOSTADDRESS(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "connected()" ) )
       {
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "connected()" );
 
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "disconnected()" ) )
       {
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "disconnected()" );
 
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QAbstractSocket::SocketError)" ) )
       {
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAbstractSocket::SocketError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QAbstractSocket::SocketError)" );
 
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hostFound()" ) )
       {
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hostFound()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hostFound()" );
 
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
       {
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSOCKET" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKPROXY" );
@@ -1399,7 +1399,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
@@ -1427,7 +1427,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) )
       {
@@ -1438,7 +1438,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
                                                               (QAbstractSocket::SocketState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAbstractSocket::SocketState)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1467,7 +1467,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
   {
     QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QAbstractSocket::SocketState)" );
 

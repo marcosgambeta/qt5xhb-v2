@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QTCPSERVER_DELETE )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTCPSERVER_CLOSE )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTLOG(2) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QTCPSERVER_ERRORSTRING )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTCPSERVER_PAUSEACCEPTING )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QTCPSERVER_RESUMEACCEPTING )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
 {
   QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
   {
     QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
       {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "acceptError(QAbstractSocket::SocketError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTCPSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
   {
     QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "acceptError(QAbstractSocket::SocketError)" );
 
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
   {
     QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConnection()" ) )
       {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTCPSERVER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
   {
     QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConnection()" );
 

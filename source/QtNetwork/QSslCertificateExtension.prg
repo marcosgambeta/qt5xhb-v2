@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_DELETE )
 {
   QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
 {
   QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_OID )
 {
   QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NAME )
 {
   QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_VALUE )
 {
   QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISCRITICAL )
 {
   QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISSUPPORTED )
 {
   QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

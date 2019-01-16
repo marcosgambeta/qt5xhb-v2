@@ -152,10 +152,10 @@ HB_FUNC_STATIC( QSSLKEY_DELETE )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSSLKEY_CLEAR )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSSLKEY_ISNULL )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSSLKEY_LENGTH )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSSLKEY_TODER )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSSLKEY_TOPEM )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSSLKEY_TYPE )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSSLKEY_SWAP )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLKEY(1) )
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QSSLKEY_HANDLE )
 {
   QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

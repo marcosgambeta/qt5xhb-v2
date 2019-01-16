@@ -176,10 +176,10 @@ HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SWAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
@@ -224,7 +224,7 @@ void QHostAddress_setAddress1 ()
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setAddress ( PQUINT32(1) );
   }
@@ -255,7 +255,7 @@ void QHostAddress_setAddress6 ()
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->setAddress ( PQSTRING(1) ) );
   }
@@ -269,7 +269,7 @@ void QHostAddress_setAddress7 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setAddress ( (QHostAddress::SpecialAddress) hb_parni(1) );
   }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -333,7 +333,7 @@ void QHostAddress_toIPv4Address1 ()
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQUINT32( obj->toIPv4Address () );
   }
@@ -347,7 +347,7 @@ void QHostAddress_toIPv4Address2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        bool par1;
       RQUINT32( obj->toIPv4Address ( &par1 ) );
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISEQUAL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQHOSTADDRESS(1) && ISOPTNUM(2) )
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -536,7 +536,7 @@ void QHostAddress_isInSubnet1 ()
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
   }
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISLOOPBACK )
 {
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISMULTICAST )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

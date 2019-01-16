@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ void QLocalSocket_connectToServer1 ()
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->connectToServer ( ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) );
   }
@@ -134,7 +134,7 @@ void QLocalSocket_connectToServer2 ()
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->connectToServer ( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETSERVERNAME )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_OPEN )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETSOCKETDESCRIPTOR )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SOCKETDESCRIPTOR )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
 {
   QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "connected()" ) )
       {
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "connected()" );
 
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "disconnected()" ) )
       {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "disconnected()" );
 
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QLocalSocket::LocalSocketError)" ) )
       {
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
                                                               (QLocalSocket::LocalSocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QLocalSocket::LocalSocketError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QLocalSocket::LocalSocketError)" );
 
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QLocalSocket::LocalSocketState)" ) )
       {
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
                                                               (QLocalSocket::LocalSocketState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QLocalSocket::LocalSocketState)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOCALSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
   {
     QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QLocalSocket::LocalSocketState)" );
 

@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISSEQUENTIAL )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -624,7 +624,7 @@ void QNetworkReply_ignoreSslErrors1 ()
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QSslError> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -647,7 +647,7 @@ void QNetworkReply_ignoreSslErrors2 ()
 {
   QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->ignoreSslErrors ();
   }
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "downloadProgress(qint64,qint64)" ) )
       {
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
                                                               (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "downloadProgress(qint64,qint64)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "downloadProgress(qint64,qint64)" );
 
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QNetworkReply::NetworkError)" ) )
       {
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
                                                               (QNetworkReply::NetworkError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QNetworkReply::NetworkError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QNetworkReply::NetworkError)" );
 
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataChanged()" ) )
       {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataChanged()" );
 
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "uploadProgress(qint64,qint64)" ) )
       {
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
                                                               (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "uploadProgress(qint64,qint64)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "uploadProgress(qint64,qint64)" );
 
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "encrypted()" ) )
       {
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "encrypted()" );
 
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
 
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) )
       {
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
 
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "redirected(QUrl)" ) )
       {
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redirected(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -1341,7 +1341,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "redirected(QUrl)" );
 
@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "redirectAllowed()" ) )
       {
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "redirectAllowed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
   {
     QNetworkReply * sender = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "redirectAllowed()" );
 
