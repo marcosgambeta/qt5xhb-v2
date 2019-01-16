@@ -90,10 +90,10 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DELETE )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
   {
     QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "evaluationResumed()" ) )
       {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationResumed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
   {
     QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "evaluationResumed()" );
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
   {
     QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "evaluationSuspended()" ) )
       {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationSuspended()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
   {
     QScriptEngineDebugger * sender = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "evaluationSuspended()" );
 
