@@ -93,10 +93,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_DELETE )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_TRACEID )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETTRACEID )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELS )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELS )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_LENGTH )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISFINAL )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETFINAL )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISCANCELED )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCANCELED )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_OPACITY )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ADDPOINT )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISQVARIANT(3) )
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "traceIdChanged(int)" ) )
       {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "traceIdChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "traceIdChanged(int)" );
 
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "channelsChanged()" ) )
       {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "channelsChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "channelsChanged()" );
 
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lengthChanged(int)" ) )
       {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lengthChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lengthChanged(int)" );
 
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finalChanged(bool)" ) )
       {
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finalChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finalChanged(bool)" );
 
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "canceledChanged(bool)" ) )
       {
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "canceledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "canceledChanged(bool)" );
 
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
       {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
   {
     QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "opacityChanged(qreal)" );
 

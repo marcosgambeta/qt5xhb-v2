@@ -111,10 +111,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_DELETE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISSHIFTACTIVE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISCAPSLOCKACTIVE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISUPPERCASE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORPOSITION )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORPOSITION )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTMETHODHINTS )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_PREEDITTEXT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SURROUNDINGTEXT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SELECTEDTEXT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTANGLE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTANGLE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISANIMATING )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISSELECTIONCONTROLVISIBLE )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTINTERSECTSCLIPRECT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTINTERSECTSCLIPRECT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "preeditTextChanged()" ) )
       {
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preeditTextChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "preeditTextChanged()" );
 
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "inputMethodHintsChanged()" ) )
       {
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputMethodHintsChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "inputMethodHintsChanged()" );
 
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "surroundingTextChanged()" ) )
       {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "surroundingTextChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "surroundingTextChanged()" );
 
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedTextChanged()" ) )
       {
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedTextChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedTextChanged()" );
 
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "anchorPositionChanged()" ) )
       {
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorPositionChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "anchorPositionChanged()" );
 
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorPositionChanged()" ) )
       {
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorPositionChanged()" );
 
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "anchorRectangleChanged()" ) )
       {
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorRectangleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "anchorRectangleChanged()" );
 
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorRectangleChanged()" ) )
       {
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorRectangleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorRectangleChanged()" );
 
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shiftActiveChanged()" ) )
       {
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shiftActiveChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shiftActiveChanged()" );
 
@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "capsLockActiveChanged()" ) )
       {
@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "capsLockActiveChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "capsLockActiveChanged()" );
 
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "uppercaseChanged()" ) )
       {
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "uppercaseChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1410,7 +1410,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "uppercaseChanged()" );
 
@@ -1438,7 +1438,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "animatingChanged()" ) )
       {
@@ -1449,7 +1449,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "animatingChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "animatingChanged()" );
 
@@ -1504,7 +1504,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "localeChanged()" ) )
       {
@@ -1515,7 +1515,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1542,7 +1542,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "localeChanged()" );
 
@@ -1570,7 +1570,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionControlVisibleChanged()" ) )
       {
@@ -1581,7 +1581,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionControlVisibleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1608,7 +1608,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionControlVisibleChanged()" );
 
@@ -1636,7 +1636,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANG
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "anchorRectIntersectsClipRectChanged()" ) )
       {
@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANG
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorRectIntersectsClipRectChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1674,7 +1674,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANG
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "anchorRectIntersectsClipRectChanged()" );
 
@@ -1702,7 +1702,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANG
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorRectIntersectsClipRectChanged()" ) )
       {
@@ -1713,7 +1713,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANG
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorRectIntersectsClipRectChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1740,7 +1740,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANG
   {
     QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorRectIntersectsClipRectChanged()" );
 
