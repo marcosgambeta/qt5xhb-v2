@@ -92,10 +92,10 @@ HB_FUNC_STATIC( QUILOADER_DELETE )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTCHAR(2) )
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTCHAR(2) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) && ISOPTCHAR(3) )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDIR(1) )
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
   QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
