@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )

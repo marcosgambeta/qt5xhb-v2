@@ -73,10 +73,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SOURCENAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_UPDATEINTERVAL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STARTUPDATES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STOPUPDATES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_REQUESTUPDATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" ) )
       {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
                                                               (const QList<QGeoSatelliteInfo> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" ) )
       {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
                                                               (const QList<QGeoSatelliteInfo> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "requestTimeout()" ) )
       {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "requestTimeout()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "requestTimeout()" );
 
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QGeoSatelliteInfoSource::Error)" ) )
       {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
                                                               (QGeoSatelliteInfoSource::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoSatelliteInfoSource::Error)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
   {
     QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QGeoSatelliteInfoSource::Error)" );
 
