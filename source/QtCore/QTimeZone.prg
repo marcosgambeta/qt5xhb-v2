@@ -177,10 +177,10 @@ HB_FUNC_STATIC( QTIMEZONE_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTIMEZONE_SWAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTIMEZONE(1) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTIMEZONE_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTIMEZONE_ID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -332,7 +332,7 @@ void QTimeZone_displayName1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->displayName ( *PQDATETIME(1), ISNIL(2)? (QTimeZone::NameType) QTimeZone::DefaultName : (QTimeZone::NameType) hb_parni(2), ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3) ) );
   }
@@ -347,7 +347,7 @@ void QTimeZone_displayName2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->displayName ( (QTimeZone::TimeType) hb_parni(1), ISNIL(2)? (QTimeZone::NameType) QTimeZone::DefaultName : (QTimeZone::NameType) hb_parni(2), ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3) ) );
   }
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QTIMEZONE_ABBREVIATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QTIMEZONE_OFFSETFROMUTC )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QTIMEZONE_STANDARDTIMEOFFSET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QTIMEZONE_DAYLIGHTTIMEOFFSET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASDAYLIGHTTIME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QTIMEZONE_ISDAYLIGHTTIME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASTRANSITIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

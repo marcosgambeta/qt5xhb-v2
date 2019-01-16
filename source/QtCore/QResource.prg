@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
   QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

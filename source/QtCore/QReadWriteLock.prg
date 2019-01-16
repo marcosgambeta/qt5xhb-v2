@@ -81,10 +81,10 @@ HB_FUNC_STATIC( QREADWRITELOCK_DELETE )
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -127,7 +127,7 @@ void QReadWriteLock_tryLockForRead1 ()
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->tryLockForRead () );
   }
@@ -140,7 +140,7 @@ void QReadWriteLock_tryLockForRead2 ()
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->tryLockForRead ( PINT(1) ) );
   }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -198,7 +198,7 @@ void QReadWriteLock_tryLockForWrite1 ()
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->tryLockForWrite () );
   }
@@ -211,7 +211,7 @@ void QReadWriteLock_tryLockForWrite2 ()
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->tryLockForWrite ( PINT(1) ) );
   }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
 {
   QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

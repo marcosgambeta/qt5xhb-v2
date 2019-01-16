@@ -60,10 +60,10 @@ HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
   QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
   QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
   QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
   {
     QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "entered()" ) )
       {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "entered()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSTATE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
   {
     QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "entered()" );
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
   {
     QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "exited()" ) )
       {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "exited()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSTATE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
   {
     QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "exited()" );
 

@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QTHREADPOOL_DELETE )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQRUNNABLE(1) && ISOPTNUM(2) )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRUNNABLE(1) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTHREADPOOL_CLEAR )
 {
   QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

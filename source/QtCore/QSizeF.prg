@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QSIZEF_DELETE )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSIZEF_ISNULL )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSIZEF_WIDTH )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -369,7 +369,7 @@ void QSizeF_scale1 ()
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->scale ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) );
   }
@@ -384,7 +384,7 @@ void QSizeF_scale2 ()
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->scale ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) );
   }
@@ -418,7 +418,7 @@ void QSizeF_scaled1 ()
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QSizeF * ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
@@ -432,7 +432,7 @@ void QSizeF_scaled2 ()
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QSizeF * ptr = new QSizeF( obj->scaled ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZEF(1) )
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZEF(1) )
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
 {
   QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

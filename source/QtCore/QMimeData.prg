@@ -94,10 +94,10 @@ HB_FUNC_STATIC( QMIMEDATA_DELETE )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QMIMEDATA_CLEAR )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QMIMEDATA_FORMATS )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASHTML )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISQBYTEARRAY(2) )
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETHTML )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETURLS )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
 {
   QMimeData * obj = (QMimeData *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

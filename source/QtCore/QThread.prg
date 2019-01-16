@@ -92,10 +92,10 @@ HB_FUNC_STATIC( QTHREAD_DELETE )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTHREAD_EXIT )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTHREAD_ISFINISHED )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTHREAD_SETEVENTDISPATCHER )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTEVENTDISPATCHER(1) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTHREAD_EVENT )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEVENT(1) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QTHREAD_QUIT )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QTHREAD_START )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QTHREAD_TERMINATE )
 {
   QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
   {
     QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTHREAD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
   {
     QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
   {
     QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "started()" ) )
       {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTHREAD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
   {
     QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "started()" );
 

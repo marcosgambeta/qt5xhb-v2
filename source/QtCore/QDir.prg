@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QDIR_DELETE )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDIR_ABSOLUTEFILEPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDIR_ABSOLUTEPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDIR_CANONICALPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDIR_CD )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDIR_CDUP )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDIR_COUNT )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDIR_DIRNAME )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -355,7 +355,7 @@ void QDir_entryInfoList1 ()
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), ISNIL(2)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(2), ISNIL(3)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(3) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
@@ -397,7 +397,7 @@ void QDir_entryInfoList2 ()
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QFileInfoList list = obj->entryInfoList ( ISNIL(1)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
@@ -458,7 +458,7 @@ void QDir_entryList1 ()
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRINGLIST( obj->entryList ( PQSTRINGLIST(1), ISNIL(2)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(2), ISNIL(3)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(3) ) );
   }
@@ -471,7 +471,7 @@ void QDir_entryList2 ()
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRINGLIST( obj->entryList ( ISNIL(1)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(2) ) );
   }
@@ -503,7 +503,7 @@ void QDir_exists1 ()
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->exists ( PQSTRING(1) ) );
   }
@@ -516,7 +516,7 @@ void QDir_exists2 ()
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->exists () );
   }
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QDIR_FILEPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QDIR_FILTER )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QDIR_ISABSOLUTE )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QDIR_ISREADABLE )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QDIR_ISRELATIVE )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QDIR_ISROOT )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QDIR_MKDIR )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QDIR_MKPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QDIR_NAMEFILTERS )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QDIR_PATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QDIR_REFRESH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QDIR_REMOVE )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QDIR_REMOVERECURSIVELY )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QDIR_RENAME )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -934,7 +934,7 @@ HB_FUNC_STATIC( QDIR_RMDIR )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QDIR_RMPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QDIR_SETFILTER )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QDIR_SETPATH )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QDIR_SETSORTING )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1086,7 +1086,7 @@ HB_FUNC_STATIC( QDIR_SORTING )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QDIR_SWAP )
 {
   QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDIR(1) )

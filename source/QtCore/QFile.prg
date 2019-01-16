@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QFILE_DELETE )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -163,7 +163,7 @@ void QFile_copy1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->copy ( PQSTRING(1) ) );
   }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QFILE_ERROR )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -228,7 +228,7 @@ void QFile_exists1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->exists () );
   }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QFILE_FILENAME )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QFILE_FLUSH )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QFILE_HANDLE )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -341,7 +341,7 @@ void QFile_link1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->link ( PQSTRING(1) ) );
   }
@@ -386,7 +386,7 @@ void QFile_open1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
   }
@@ -399,7 +399,7 @@ void QFile_open2 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->open ( (FILE *) hb_parptr(1), (QFile::OpenMode) hb_parni(2), ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
   }
@@ -412,7 +412,7 @@ void QFile_open3 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2), ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
   }
@@ -449,7 +449,7 @@ void QFile_permissions1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RENUM( obj->permissions () );
   }
@@ -490,7 +490,7 @@ void QFile_remove1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->remove () );
   }
@@ -531,7 +531,7 @@ void QFile_rename1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->rename ( PQSTRING(1) ) );
   }
@@ -572,7 +572,7 @@ void QFile_resize1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->resize ( PQINT64(1) ) );
   }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QFILE_SETFILENAME )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -639,7 +639,7 @@ void QFile_setPermissions1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->setPermissions ( (QFile::Permissions) hb_parni(1) ) );
   }
@@ -680,7 +680,7 @@ void QFile_symLinkTarget1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->symLinkTarget () );
   }
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QFILE_UNMAP )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QFILE_UNSETERROR )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QFILE_ATEND )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QFILE_CLOSE )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QFILE_POS )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QFILE_SEEK )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QFILE_SIZE )
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -974,7 +974,7 @@ void QFile_readLink1 ()
 {
   QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->readLink () );
   }

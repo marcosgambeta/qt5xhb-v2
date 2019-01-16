@@ -70,10 +70,10 @@ HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -114,7 +114,7 @@ void QTranslator_load1 ()
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
   }
@@ -127,7 +127,7 @@ void QTranslator_load2 ()
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
   }
@@ -140,7 +140,7 @@ void QTranslator_load3 ()
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( PCONSTUCHAR(1), PINT(2), OPQSTRING(3,QString()) ) );
   }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
   QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )

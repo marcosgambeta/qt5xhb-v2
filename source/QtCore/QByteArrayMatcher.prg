@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -149,7 +149,7 @@ void QByteArrayMatcher_indexIn1 ()
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
   }
@@ -162,7 +162,7 @@ void QByteArrayMatcher_indexIn2 ()
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->indexIn ( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
   }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )

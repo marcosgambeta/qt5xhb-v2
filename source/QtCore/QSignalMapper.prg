@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -99,7 +99,7 @@ void QSignalMapper_setMapping1 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setMapping ( PQOBJECT(1), PINT(2) );
   }
@@ -114,7 +114,7 @@ void QSignalMapper_setMapping2 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setMapping ( PQOBJECT(1), PQSTRING(2) );
   }
@@ -129,7 +129,7 @@ void QSignalMapper_setMapping3 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setMapping ( PQOBJECT(1), PQWIDGET(2) );
   }
@@ -144,7 +144,7 @@ void QSignalMapper_setMapping4 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setMapping ( PQOBJECT(1), PQOBJECT(2) );
   }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -214,7 +214,7 @@ void QSignalMapper_mapping1 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QObject * ptr = obj->mapping ( PINT(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
@@ -228,7 +228,7 @@ void QSignalMapper_mapping2 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QObject * ptr = obj->mapping ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
@@ -242,7 +242,7 @@ void QSignalMapper_mapping3 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QObject * ptr = obj->mapping ( PQWIDGET(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
@@ -256,7 +256,7 @@ void QSignalMapper_mapping4 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QObject * ptr = obj->mapping ( PQOBJECT(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
@@ -299,7 +299,7 @@ void QSignalMapper_map1 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->map ();
   }
@@ -314,7 +314,7 @@ void QSignalMapper_map2 ()
 {
   QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->map ( PQOBJECT(1) );
   }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(int)" ) )
       {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(int)" );
 
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(QString)" ) )
       {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(QString)" );
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(QWidget*)" ) )
       {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
                                                               (QWidget * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QWidget*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(QWidget*)" );
 
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(QObject*)" ) )
       {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QObject*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
   {
     QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(QObject*)" );
 

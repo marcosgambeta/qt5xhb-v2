@@ -213,10 +213,10 @@ HB_FUNC_STATIC( QJSONVALUE_DELETE )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISARRAY )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISBOOL )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISDOUBLE )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISNULL )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISOBJECT )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISSTRING )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -401,7 +401,7 @@ void QJsonValue_toArray1 ()
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QJsonArray * ptr = new QJsonArray( obj->toArray ( *PQJSONARRAY(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
@@ -415,7 +415,7 @@ void QJsonValue_toArray2 ()
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QJsonArray * ptr = new QJsonArray( obj->toArray () );
       _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOBOOL )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -496,7 +496,7 @@ void QJsonValue_toObject1 ()
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QJsonObject * ptr = new QJsonObject( obj->toObject ( *PQJSONOBJECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
@@ -510,7 +510,7 @@ void QJsonValue_toObject2 ()
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QJsonObject * ptr = new QJsonObject( obj->toObject () );
       _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOVARIANT )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QJSONVALUE_TYPE )
 {
   QJsonValue * obj = (QJsonValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

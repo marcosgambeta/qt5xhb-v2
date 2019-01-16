@@ -103,10 +103,10 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDOPTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDVERSIONOPTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDHELPOPTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETAPPLICATIONDESCRIPTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_APPLICATIONDESCRIPTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_CLEARPOSITIONALARGUMENTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -343,7 +343,7 @@ void QCommandLineParser_process1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->process ( PQSTRINGLIST(1) );
   }
@@ -360,7 +360,7 @@ void QCommandLineParser_process2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->process ( *PQCOREAPPLICATION(1) );
   }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PARSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ERRORTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -448,7 +448,7 @@ void QCommandLineParser_isSet1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->isSet ( PQSTRING(1) ) );
   }
@@ -463,7 +463,7 @@ void QCommandLineParser_isSet2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->isSet ( *PQCOMMANDLINEOPTION(1) ) );
   }
@@ -497,7 +497,7 @@ void QCommandLineParser_value1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->value ( PQSTRING(1) ) );
   }
@@ -512,7 +512,7 @@ void QCommandLineParser_value2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->value ( *PQCOMMANDLINEOPTION(1) ) );
   }
@@ -546,7 +546,7 @@ void QCommandLineParser_values1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRINGLIST( obj->values ( PQSTRING(1) ) );
   }
@@ -561,7 +561,7 @@ void QCommandLineParser_values2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRINGLIST( obj->values ( *PQCOMMANDLINEOPTION(1) ) );
   }
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_POSITIONALARGUMENTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_OPTIONNAMES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_UNKNOWNOPTIONNAMES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SHOWHELP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_HELPTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

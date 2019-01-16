@@ -53,10 +53,10 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 {
   QAbstractListModel * obj = (QAbstractListModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 {
   QAbstractListModel * obj = (QAbstractListModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(5) && ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
 {
   QAbstractListModel * obj = (QAbstractListModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )

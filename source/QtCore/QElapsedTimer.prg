@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQELAPSEDTIMER(1) )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQELAPSEDTIMER(1) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_START )
 {
   QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

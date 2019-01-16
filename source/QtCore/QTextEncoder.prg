@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 {
   QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -120,7 +120,7 @@ void QTextEncoder_fromUnicode1 ()
 {
   QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
@@ -134,7 +134,7 @@ void QTextEncoder_fromUnicode2 ()
 {
   QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQCHAR(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTEXTENCODER_HASFAILURE )
 {
   QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

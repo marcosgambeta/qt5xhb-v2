@@ -85,10 +85,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -105,7 +105,7 @@ void QXmlStreamAttributes_append1 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
@@ -120,7 +120,7 @@ void QXmlStreamAttributes_append2 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
   }
@@ -135,7 +135,7 @@ void QXmlStreamAttributes_append3 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( PQSTRING(1), PQSTRING(2) );
   }
@@ -174,7 +174,7 @@ void QXmlStreamAttributes_hasAttribute1 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
@@ -187,7 +187,7 @@ void QXmlStreamAttributes_hasAttribute2 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->hasAttribute ( *PQLATIN1STRING(1) ) );
   }
@@ -200,7 +200,7 @@ void QXmlStreamAttributes_hasAttribute3 ()
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
   }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISQLATIN1STRING(2) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2) )
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLATIN1STRING(1) )

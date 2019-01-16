@@ -84,10 +84,10 @@ HB_FUNC_STATIC( QIODEVICE_DELETE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QIODEVICE_ATEND )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QIODEVICE_CLOSE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QIODEVICE_OPENMODE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -442,7 +442,7 @@ void QIODevice_peek1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQINT64( obj->peek ( (char *) hb_parc(1), PQINT64(2) ) );
   }
@@ -455,7 +455,7 @@ void QIODevice_peek2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QIODEVICE_POS )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -536,7 +536,7 @@ void QIODevice_read1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQINT64( obj->read ( (char *) hb_parc(1), PQINT64(2) ) );
   }
@@ -549,7 +549,7 @@ void QIODevice_read2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -607,7 +607,7 @@ void QIODevice_readLine1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQINT64( obj->readLine ( (char *) hb_parc(1), PQINT64(2) ) );
   }
@@ -620,7 +620,7 @@ void QIODevice_readLine2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QIODEVICE_RESET )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QIODEVICE_SIZE )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -825,7 +825,7 @@ void QIODevice_write1 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQINT64( obj->write ( PCONSTCHAR(1), PQINT64(2) ) );
   }
@@ -838,7 +838,7 @@ void QIODevice_write2 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQINT64( obj->write ( PCONSTCHAR(1) ) );
   }
@@ -851,7 +851,7 @@ void QIODevice_write3 ()
 {
   QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
   }
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToClose()" ) )
       {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToClose()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToClose()" );
 
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
       {
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bytesWritten(qint64)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bytesWritten(qint64)" );
 
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "readChannelFinished()" ) )
       {
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readChannelFinished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "readChannelFinished()" );
 
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "readyRead()" ) )
       {
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readyRead()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
   {
     QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "readyRead()" );
 

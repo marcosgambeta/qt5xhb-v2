@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QTIMELINE_DELETE )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDURATION )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QTIMELINE_RESUME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QTIMELINE_START )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QTIMELINE_STOP )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
 {
   QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTIMELINE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frameChanged(int)" ) )
       {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTIMELINE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frameChanged(int)" );
 
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QTimeLine::State)" ) )
       {
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
                                                               (QTimeLine::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTimeLine::State)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTIMELINE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QTimeLine::State)" );
 
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(qreal)" ) )
       {
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTIMELINE" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
   {
     QTimeLine * sender = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(qreal)" );
 

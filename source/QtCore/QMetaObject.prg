@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QMETAOBJECT_DELETE )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
 {
   QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

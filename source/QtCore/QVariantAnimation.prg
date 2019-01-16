@@ -64,10 +64,10 @@ HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
   {
     QVariantAnimation * sender = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(QVariant)" ) )
       {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
                                                               (const QVariant & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(QVariant)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVARIANTANIMATION" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVARIANT" );
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
   {
     QVariantAnimation * sender = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(QVariant)" );
 

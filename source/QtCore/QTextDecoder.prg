@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QTEXTDECODER_DELETE )
 {
   QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ void QTextDecoder_toUnicode1 ()
 {
   QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) );
   }
@@ -136,7 +136,7 @@ void QTextDecoder_toUnicode3 ()
 {
   QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
   }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
 {
   QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

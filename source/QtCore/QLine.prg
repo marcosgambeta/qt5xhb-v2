@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QLINE_DELETE )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QLINE_P1 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QLINE_P2 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QLINE_X1 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QLINE_X2 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QLINE_Y1 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QLINE_Y2 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QLINE_DX )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QLINE_DY )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QLINE_ISNULL )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QLINE_SETP1 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QLINE_SETP2 )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QLINE_SETLINE )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QLINE_SETPOINTS )
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
@@ -469,7 +469,7 @@ void QLine_translate1 ()
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->translate ( *PQPOINT(1) );
   }
@@ -484,7 +484,7 @@ void QLine_translate2 ()
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->translate ( PINT(1), PINT(2) );
   }
@@ -518,7 +518,7 @@ void QLine_translated1 ()
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QLine * ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QLINE", true );
@@ -532,7 +532,7 @@ void QLine_translated2 ()
 {
   QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QLINE", true );
