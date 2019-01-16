@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -199,7 +199,7 @@ void QGraphicsRotation_setAxis1 ()
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setAxis ( *PQVECTOR3D(1) );
   }
@@ -214,7 +214,7 @@ void QGraphicsRotation_setAxis2 ()
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setAxis ( (Qt::Axis) hb_parni(1) );
   }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
   {
     QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "angleChanged()" ) )
       {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "angleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
   {
     QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "angleChanged()" );
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
   {
     QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisChanged()" ) )
       {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
   {
     QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisChanged()" );
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
   {
     QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "originChanged()" ) )
       {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "originChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
   {
     QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "originChanged()" );
 

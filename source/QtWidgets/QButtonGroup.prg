@@ -87,10 +87,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -107,7 +107,7 @@ void QButtonGroup_addButton1 ()
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addButton ( PQABSTRACTBUTTON(1) );
   }
@@ -122,7 +122,7 @@ void QButtonGroup_addButton2 ()
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addButton ( PQABSTRACTBUTTON(1), PINT(2) );
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 {
   QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && ISNUM(2) )
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonClicked(QAbstractButton*)" ) )
       {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(QAbstractButton*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonClicked(QAbstractButton*)" );
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonClicked(int)" ) )
       {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonClicked(int)" );
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonPressed(QAbstractButton*)" ) )
       {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(QAbstractButton*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonPressed(QAbstractButton*)" );
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonPressed(int)" ) )
       {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonPressed(int)" );
 
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonReleased(QAbstractButton*)" ) )
       {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(QAbstractButton*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonReleased(QAbstractButton*)" );
 
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonReleased(int)" ) )
       {
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
   {
     QButtonGroup * sender = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonReleased(int)" );
 

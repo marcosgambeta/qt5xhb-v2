@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 {
   QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {

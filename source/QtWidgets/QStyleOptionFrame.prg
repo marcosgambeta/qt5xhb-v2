@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFEATURES )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFRAMESHAPE )
 {
   QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {

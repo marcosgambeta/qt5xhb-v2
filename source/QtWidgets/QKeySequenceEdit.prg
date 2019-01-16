@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
   {
     QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "editingFinished()" ) )
       {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "editingFinished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QKEYSEQUENCEEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
   {
     QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "editingFinished()" );
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
   {
     QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "keySequenceChanged(QKeySequence)" ) )
       {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
                                                               (const QKeySequence & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "keySequenceChanged(QKeySequence)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QKEYSEQUENCEEDIT" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QKEYSEQUENCE" );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
   {
     QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "keySequenceChanged(QKeySequence)" );
 

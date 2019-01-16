@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 {
   QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" ) )
       {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
                                                               (Qt::DockWidgetAreas arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
 
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)" ) )
       {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
                                                               (Qt::DockWidgetArea arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" ) )
       {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
                                                               (QDockWidget::DockWidgetFeatures arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
 
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
       {
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "topLevelChanged(bool)" );
 
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
       {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
   {
     QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibilityChanged(bool)" );
 

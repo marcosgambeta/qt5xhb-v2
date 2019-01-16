@@ -83,10 +83,10 @@ HB_FUNC_STATIC( QFRAME_DELETE )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
   QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

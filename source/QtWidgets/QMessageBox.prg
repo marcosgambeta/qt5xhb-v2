@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -161,7 +161,7 @@ void QMessageBox_addButton1 ()
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addButton ( PQABSTRACTBUTTON(1), (QMessageBox::ButtonRole) hb_parni(2) );
   }
@@ -176,7 +176,7 @@ void QMessageBox_addButton2 ()
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPushButton * ptr = obj->addButton ( PQSTRING(1), (QMessageBox::ButtonRole) hb_parni(2) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
@@ -190,7 +190,7 @@ void QMessageBox_addButton3 ()
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPushButton * ptr = obj->addButton ( (QMessageBox::StandardButton) hb_parni(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 #ifndef QT_NO_TEXTEDIT
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
 #ifndef QT_NO_TEXTEDIT
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPIXMAP(1) )
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -658,7 +658,7 @@ void QMessageBox_setDefaultButton1 ()
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setDefaultButton ( PQPUSHBUTTON(1) );
   }
@@ -673,7 +673,7 @@ void QMessageBox_setDefaultButton2 ()
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setDefaultButton ( (QMessageBox::StandardButton) hb_parni(1) );
   }
@@ -707,7 +707,7 @@ void QMessageBox_setEscapeButton1 ()
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setEscapeButton ( PQABSTRACTBUTTON(1) );
   }
@@ -722,7 +722,7 @@ void QMessageBox_setEscapeButton2 ()
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setEscapeButton ( (QMessageBox::StandardButton) hb_parni(1) );
   }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
 #ifdef Q_OS_WINCE
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTINTERACTIONFLAGS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTINTERACTIONFLAGS )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETCHECKBOX )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCHECKBOX(1) )
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONTEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
 {
   QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
   {
     QMessageBox * sender = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonClicked(QAbstractButton*)" ) )
       {
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(QAbstractButton*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMESSAGEBOX" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
@@ -1365,7 +1365,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
   {
     QMessageBox * sender = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonClicked(QAbstractButton*)" );
 

@@ -175,10 +175,10 @@ HB_FUNC_STATIC( QLINEEDIT_DELETE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QLINEEDIT_BACKSPACE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCOMPLETER )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOMPLETER(1) )
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTNUM(2) )
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTNUM(2) )
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORPOSITION )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDBACKWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDFORWARD )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QLINEEDIT_DEL )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QLINEEDIT_DESELECT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETDRAGENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QLINEEDIT_END )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QLINEEDIT_HOME )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETINPUTMASK )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QLINEEDIT_INSERT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMODIFIED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETREADONLY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMAXLENGTH )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETPLACEHOLDERTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETFRAME )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1308,7 +1308,7 @@ void QLineEdit_setTextMargins1 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setTextMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
@@ -1323,7 +1323,7 @@ void QLineEdit_setTextMargins2 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setTextMargins ( *PQMARGINS(1) );
   }
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETVALIDATOR )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQVALIDATOR(1)||ISNIL(1)) )
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1433,7 +1433,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1457,7 +1457,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1483,7 +1483,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC( QLINEEDIT_EVENT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEVENT(1) )
@@ -1532,7 +1532,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC( QLINEEDIT_COPY )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QLINEEDIT_CUT )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1609,7 +1609,7 @@ HB_FUNC_STATIC( QLINEEDIT_PASTE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1635,7 +1635,7 @@ HB_FUNC_STATIC( QLINEEDIT_REDO )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1661,7 +1661,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTALL )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1687,7 +1687,7 @@ HB_FUNC_STATIC( QLINEEDIT_UNDO )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1713,7 +1713,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORMOVESTYLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1739,7 +1739,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORMOVESTYLE )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1763,7 +1763,7 @@ HB_FUNC_STATIC( QLINEEDIT_CLEAR )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1789,7 +1789,7 @@ void QLineEdit_addAction1 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addAction ( PQACTION(1), (QLineEdit::ActionPosition) hb_parni(2) );
   }
@@ -1804,7 +1804,7 @@ void QLineEdit_addAction2 ()
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), (QLineEdit::ActionPosition) hb_parni(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCLEARBUTTONENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1863,7 +1863,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISCLEARBUTTONENABLED )
 {
   QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1889,7 +1889,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorPositionChanged(int,int)" ) )
       {
@@ -1900,7 +1900,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1931,7 +1931,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorPositionChanged(int,int)" );
 
@@ -1959,7 +1959,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "editingFinished()" ) )
       {
@@ -1970,7 +1970,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "editingFinished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1997,7 +1997,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "editingFinished()" );
 
@@ -2026,7 +2026,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "inputRejected()" ) )
       {
@@ -2037,7 +2037,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputRejected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -2064,7 +2064,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "inputRejected()" );
 
@@ -2093,7 +2093,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "returnPressed()" ) )
       {
@@ -2104,7 +2104,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "returnPressed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -2131,7 +2131,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "returnPressed()" );
 
@@ -2159,7 +2159,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
@@ -2170,7 +2170,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -2197,7 +2197,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
 
@@ -2225,7 +2225,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textChanged(QString)" ) )
       {
@@ -2236,7 +2236,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2265,7 +2265,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textChanged(QString)" );
 
@@ -2293,7 +2293,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textEdited(QString)" ) )
       {
@@ -2304,7 +2304,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textEdited(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLINEEDIT" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2333,7 +2333,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
   {
     QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textEdited(QString)" );
 

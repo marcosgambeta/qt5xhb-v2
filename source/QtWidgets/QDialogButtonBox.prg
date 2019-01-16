@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -142,7 +142,7 @@ void QDialogButtonBox_addButton1 ()
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addButton ( PQABSTRACTBUTTON(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
   }
@@ -157,7 +157,7 @@ void QDialogButtonBox_addButton2 ()
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
@@ -171,7 +171,7 @@ void QDialogButtonBox_addButton3 ()
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) hb_parni(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "accepted()" ) )
       {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "accepted()" );
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(QAbstractButton*)" ) )
       {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QAbstractButton*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(QAbstractButton*)" );
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "helpRequested()" ) )
       {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "helpRequested()" );
 
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rejected()" ) )
       {
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rejected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
   {
     QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rejected()" );
 

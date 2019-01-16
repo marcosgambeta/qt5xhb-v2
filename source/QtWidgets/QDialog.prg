@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QDIALOG_DELETE )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDIALOG_ACCEPT )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QDIALOG_OPEN )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QDIALOG_REJECT )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QDIALOG_ORIENTATION )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
 {
   QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
   {
     QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "accepted()" ) )
       {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOG" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
   {
     QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "accepted()" );
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
   {
     QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(int)" ) )
       {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
   {
     QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(int)" );
 
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
   {
     QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rejected()" ) )
       {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rejected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOG" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
   {
     QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rejected()" );
 

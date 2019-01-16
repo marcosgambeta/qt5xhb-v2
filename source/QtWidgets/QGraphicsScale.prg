@@ -83,10 +83,10 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
 {
   QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "originChanged()" ) )
       {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "originChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "originChanged()" );
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "scaleChanged()" ) )
       {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scaleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "scaleChanged()" );
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xScaleChanged()" ) )
       {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xScaleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xScaleChanged()" );
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yScaleChanged()" ) )
       {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yScaleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yScaleChanged()" );
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zScaleChanged()" ) )
       {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zScaleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
   {
     QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zScaleChanged()" );
 

@@ -76,10 +76,10 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECTF(1) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
   {
     QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) )
       {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
                                                               (QGraphicsBlurEffect::BlurHints arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
   {
     QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
   {
     QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "blurRadiusChanged(qreal)" ) )
       {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blurRadiusChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
   {
     QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "blurRadiusChanged(qreal)" );
 

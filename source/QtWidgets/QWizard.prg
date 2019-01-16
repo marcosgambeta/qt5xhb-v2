@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QWIZARD_DELETE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWIZARD_ADDPAGE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIZARDPAGE(1) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTON )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQABSTRACTBUTTON(2) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTID )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QWIZARD_NEXTID )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QWIZARD_OPTIONS )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTIONS )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QWIZARD_SETFIELD )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTION )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QWIZARD_SETPAGE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQWIZARDPAGE(2) )
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQPIXMAP(2) )
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QWIZARD_SETSIDEWIDGET )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QWIZARD_STARTID )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QWIZARD_SETSTARTID )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QWIZARD_SETVISIBLE )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QWIZARD_SIZEHINT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QWIZARD_BACK )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC( QWIZARD_NEXT )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QWIZARD_RESTART )
 {
   QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentIdChanged(int)" ) )
       {
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIdChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentIdChanged(int)" );
 
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "customButtonClicked(int)" ) )
       {
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "customButtonClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "customButtonClicked(int)" );
 
@@ -1295,7 +1295,7 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "helpRequested()" ) )
       {
@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "helpRequested()" );
 
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pageAdded(int)" ) )
       {
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pageAdded(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1401,7 +1401,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pageAdded(int)" );
 
@@ -1429,7 +1429,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pageRemoved(int)" ) )
       {
@@ -1440,7 +1440,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pageRemoved(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
   {
     QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pageRemoved(int)" );
 

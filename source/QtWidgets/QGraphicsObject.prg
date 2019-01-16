@@ -62,10 +62,10 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_DELETE )
 {
   QGraphicsObject * obj = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 {
   QGraphicsObject * obj = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
 {
   QGraphicsObject * obj = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "enabledChanged()" ) )
       {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "enabledChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "enabledChanged()" );
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "opacityChanged()" ) )
       {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "opacityChanged()" );
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "parentChanged()" ) )
       {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "parentChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "parentChanged()" );
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationChanged()" ) )
       {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationChanged()" );
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "scaleChanged()" ) )
       {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scaleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "scaleChanged()" );
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged()" );
 
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xChanged()" ) )
       {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xChanged()" );
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yChanged()" ) )
       {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yChanged()" );
 
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zChanged()" ) )
       {
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
   {
     QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zChanged()" );
 

@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -146,7 +146,7 @@ void QToolBar_actionAt1 ()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->actionAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -160,7 +160,7 @@ void QToolBar_actionAt2 ()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->actionAt ( *PQPOINT(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -193,7 +193,7 @@ void QToolBar_addAction1 ()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addAction ( PQACTION(1) );
   }
@@ -208,7 +208,7 @@ void QToolBar_addAction2 ()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -222,7 +222,7 @@ void QToolBar_addAction3 ()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -236,7 +236,7 @@ void QToolBar_addAction4 ()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -250,7 +250,7 @@ void QToolBar_addAction5 ()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTION(1) )
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQACTION(1) && ISQWIDGET(2) )
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTION(1) )
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "actionTriggered(QAction*)" ) )
       {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actionTriggered(QAction*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "actionTriggered(QAction*)" );
 
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) )
       {
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
                                                               (Qt::ToolBarAreas arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
 
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
       {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
                                                               (const QSize & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconSizeChanged(QSize)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "iconSizeChanged(QSize)" );
 
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "movableChanged(bool)" ) )
       {
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "movableChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "movableChanged(bool)" );
 
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orientationChanged(Qt::Orientation)" ) )
       {
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
                                                               (Qt::Orientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::Orientation)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orientationChanged(Qt::Orientation)" );
 
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
       {
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
                                                               (Qt::ToolButtonStyle arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
       {
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "topLevelChanged(bool)" );
 
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
       {
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1341,7 +1341,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
   {
     QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibilityChanged(bool)" );
 

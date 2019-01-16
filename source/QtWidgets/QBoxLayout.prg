@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QBOXLAYOUT_DELETE )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQLAYOUT(1) && ISOPTNUM(2) )
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSPACERITEM(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISQWIDGET(1) && ISOPTNUM(2) && ISOPTNUM(3) )
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISQLAYOUT(2) && ISOPTNUM(3) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSPACERITEM(2) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,4) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) && ISOPTNUM(4) )
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -508,7 +508,7 @@ void QBoxLayout_setStretchFactor1 ()
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->setStretchFactor ( PQWIDGET(1), PINT(2) ) );
   }
@@ -521,7 +521,7 @@ void QBoxLayout_setStretchFactor2 ()
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->setStretchFactor ( PQLAYOUT(1), PINT(2) ) );
   }
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLAYOUTITEM(1) )
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INVALIDATE )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETGEOMETRY )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
 {
   QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )

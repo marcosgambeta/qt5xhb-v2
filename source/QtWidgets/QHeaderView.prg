@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -558,7 +558,7 @@ void QHeaderView_logicalIndexAt1 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->logicalIndexAt ( PINT(1) ) );
   }
@@ -571,7 +571,7 @@ void QHeaderView_logicalIndexAt2 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
   }
@@ -584,7 +584,7 @@ void QHeaderView_logicalIndexAt3 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->logicalIndexAt ( *PQPOINT(1) ) );
   }
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESET )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
@@ -1316,7 +1316,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1341,7 +1341,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1393,7 +1393,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1419,7 +1419,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETVISIBLE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSMOVABLE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVABLE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1521,7 +1521,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSCLICKABLE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1547,7 +1547,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSCLICKABLE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1595,7 +1595,7 @@ void QHeaderView_setSectionResizeMode1 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setSectionResizeMode ( (QHeaderView::ResizeMode) hb_parni(1) );
   }
@@ -1610,7 +1610,7 @@ void QHeaderView_setSectionResizeMode2 ()
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setSectionResizeMode ( PINT(1), (QHeaderView::ResizeMode) hb_parni(2) );
   }
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZECONTENTSPRECISION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1670,7 +1670,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZECONTENTSPRECISION )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1694,7 +1694,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MAXIMUMSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1718,7 +1718,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMAXIMUMSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1744,7 +1744,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DOITEMSLAYOUT )
 {
   QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1772,7 +1772,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "geometriesChanged()" ) )
       {
@@ -1783,7 +1783,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "geometriesChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1810,7 +1810,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "geometriesChanged()" );
 
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionClicked(int)" ) )
       {
@@ -1853,7 +1853,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1882,7 +1882,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionClicked(int)" );
 
@@ -1910,7 +1910,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionCountChanged(int,int)" ) )
       {
@@ -1921,7 +1921,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionCountChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1952,7 +1952,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionCountChanged(int,int)" );
 
@@ -1980,7 +1980,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionDoubleClicked(int)" ) )
       {
@@ -1991,7 +1991,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionDoubleClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2020,7 +2020,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionDoubleClicked(int)" );
 
@@ -2048,7 +2048,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionEntered(int)" ) )
       {
@@ -2059,7 +2059,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionEntered(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2088,7 +2088,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionEntered(int)" );
 
@@ -2116,7 +2116,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionHandleDoubleClicked(int)" ) )
       {
@@ -2127,7 +2127,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionHandleDoubleClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2156,7 +2156,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionHandleDoubleClicked(int)" );
 
@@ -2184,7 +2184,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionMoved(int,int,int)" ) )
       {
@@ -2195,7 +2195,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
                                                               (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionMoved(int,int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2228,7 +2228,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionMoved(int,int,int)" );
 
@@ -2256,7 +2256,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionPressed(int)" ) )
       {
@@ -2267,7 +2267,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionPressed(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2296,7 +2296,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionPressed(int)" );
 
@@ -2324,7 +2324,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionResized(int,int,int)" ) )
       {
@@ -2335,7 +2335,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
                                                               (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionResized(int,int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2368,7 +2368,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionResized(int,int,int)" );
 
@@ -2396,7 +2396,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" ) )
       {
@@ -2407,7 +2407,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
                                                               (int arg1, Qt::SortOrder arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2438,7 +2438,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
   {
     QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );
 

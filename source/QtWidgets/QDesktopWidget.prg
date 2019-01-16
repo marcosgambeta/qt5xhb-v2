@@ -63,10 +63,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -83,7 +83,7 @@ void QDesktopWidget_availableGeometry1 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRect * ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
@@ -97,7 +97,7 @@ void QDesktopWidget_availableGeometry2 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRect * ptr = new QRect( obj->availableGeometry ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
@@ -111,7 +111,7 @@ void QDesktopWidget_availableGeometry3 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRect * ptr = new QRect( obj->availableGeometry ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -246,7 +246,7 @@ void QDesktopWidget_screenGeometry1 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRect * ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
@@ -260,7 +260,7 @@ void QDesktopWidget_screenGeometry2 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRect * ptr = new QRect( obj->screenGeometry ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
@@ -274,7 +274,7 @@ void QDesktopWidget_screenGeometry3 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRect * ptr = new QRect( obj->screenGeometry ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
@@ -312,7 +312,7 @@ void QDesktopWidget_screenNumber1 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->screenNumber ( OPQWIDGET(1,0) ) );
   }
@@ -325,7 +325,7 @@ void QDesktopWidget_screenNumber2 ()
 {
   QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->screenNumber ( *PQPOINT(1) ) );
   }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
   {
     QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "resized(int)" ) )
       {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "resized(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESKTOPWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
   {
     QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "resized(int)" );
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
   {
     QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "screenCountChanged(int)" ) )
       {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "screenCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESKTOPWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
   {
     QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "screenCountChanged(int)" );
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
   {
     QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "workAreaResized(int)" ) )
       {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "workAreaResized(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESKTOPWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
   {
     QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "workAreaResized(int)" );
 

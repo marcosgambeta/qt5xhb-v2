@@ -69,10 +69,10 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
   QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -89,7 +89,7 @@ void QErrorMessage_showMessage1 ()
 {
   QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->showMessage ( PQSTRING(1) );
   }
@@ -104,7 +104,7 @@ void QErrorMessage_showMessage2 ()
 {
   QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->showMessage ( PQSTRING(1), PQSTRING(2) );
   }

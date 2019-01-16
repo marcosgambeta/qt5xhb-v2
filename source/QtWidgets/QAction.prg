@@ -170,10 +170,10 @@ HB_FUNC_STATIC( QACTION_DELETE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QACTION_DATA )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QACTION_FONT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QACTION_ICON )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QACTION_MENU )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QACTION_PRIORITY )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTIONGROUP(1) )
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKABLE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QACTION_SETDATA )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QACTION_SETFONT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QACTION_SETICONTEXT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QACTION_SETMENU )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMENU(1) )
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QACTION_SETMENUROLE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QACTION_SETPRIORITY )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QACTION_SETSEPARATOR )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1068,7 +1068,7 @@ void QAction_setShortcuts1 ()
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QKeySequence> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -1091,7 +1091,7 @@ void QAction_setShortcuts2 ()
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setShortcuts ( (QKeySequence::StandardKey) hb_parni(1) );
   }
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QACTION_SETTEXT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QACTION_SETTOOLTIP )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
@@ -1355,7 +1355,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1427,7 +1427,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1451,7 +1451,7 @@ HB_FUNC_STATIC( QACTION_HOVER )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1477,7 +1477,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKED )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1503,7 +1503,7 @@ HB_FUNC_STATIC( QACTION_SETDISABLED )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC( QACTION_SETENABLED )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1555,7 +1555,7 @@ HB_FUNC_STATIC( QACTION_SETVISIBLE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1581,7 +1581,7 @@ HB_FUNC_STATIC( QACTION_TOGGLE )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1607,7 +1607,7 @@ HB_FUNC_STATIC( QACTION_TRIGGER )
 {
   QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1635,7 +1635,7 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "changed()" ) )
       {
@@ -1646,7 +1646,7 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1673,7 +1673,7 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "changed()" );
 
@@ -1701,7 +1701,7 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered()" ) )
       {
@@ -1712,7 +1712,7 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1739,7 +1739,7 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered()" );
 
@@ -1767,7 +1767,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "toggled(bool)" ) )
       {
@@ -1778,7 +1778,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1807,7 +1807,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "toggled(bool)" );
 
@@ -1835,7 +1835,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "triggered(bool)" ) )
       {
@@ -1846,7 +1846,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1875,7 +1875,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
   {
     QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "triggered(bool)" );
 

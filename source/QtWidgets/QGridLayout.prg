@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3,6) && ISQLAYOUTITEM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) )
@@ -173,7 +173,7 @@ void QGridLayout_addLayout1 ()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
   }
@@ -188,7 +188,7 @@ void QGridLayout_addLayout2 ()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
   }
@@ -222,7 +222,7 @@ void QGridLayout_addWidget1 ()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
   }
@@ -237,7 +237,7 @@ void QGridLayout_addWidget2 ()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
   }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )

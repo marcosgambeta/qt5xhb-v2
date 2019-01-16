@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETTABBARRECT )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_DOCUMENTMODE )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETDOCUMENTMODE )
 {
   QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {

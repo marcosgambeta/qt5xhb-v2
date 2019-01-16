@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QSHORTCUT_DELETE )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSHORTCUT_ID )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSHORTCUT_KEY )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETKEY )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
 {
   QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
   {
     QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated()" ) )
       {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSHORTCUT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
   {
     QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated()" );
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
   {
     QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activatedAmbiguously()" ) )
       {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activatedAmbiguously()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSHORTCUT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
   {
     QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activatedAmbiguously()" );
 

@@ -119,10 +119,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -189,7 +189,7 @@ void QGraphicsLineItem_setLine1 ()
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setLine ( *PQLINEF(1) );
   }
@@ -204,7 +204,7 @@ void QGraphicsLineItem_setLine2 ()
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPEN(1) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

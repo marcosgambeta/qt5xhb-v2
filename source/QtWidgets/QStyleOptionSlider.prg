@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_ORIENTATION )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETORIENTATION )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MINIMUM )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMINIMUM )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MAXIMUM )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMAXIMUM )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKPOSITION )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKPOSITION )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKINTERVAL )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKINTERVAL )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_UPSIDEDOWN )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETUPSIDEDOWN )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERPOSITION )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERPOSITION )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERVALUE )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERVALUE )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SINGLESTEP )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSINGLESTEP )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_PAGESTEP )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETPAGESTEP )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NOTCHTARGET )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETNOTCHTARGET )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_DIALWRAPPING )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETDIALWRAPPING )
 {
   QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {

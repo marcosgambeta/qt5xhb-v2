@@ -158,10 +158,10 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DELETE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -251,7 +251,7 @@ void QGraphicsView_centerOn1 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->centerOn ( *PQPOINTF(1) );
   }
@@ -266,7 +266,7 @@ void QGraphicsView_centerOn2 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->centerOn ( PQREAL(1), PQREAL(2) );
   }
@@ -281,7 +281,7 @@ void QGraphicsView_centerOn3 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->centerOn ( PQGRAPHICSITEM(1) );
   }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -344,7 +344,7 @@ void QGraphicsView_ensureVisible1 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->ensureVisible ( *PQRECTF(1), OPINT(2,50), OPINT(3,50) );
   }
@@ -359,7 +359,7 @@ void QGraphicsView_ensureVisible2 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5,50), OPINT(6,50) );
   }
@@ -374,7 +374,7 @@ void QGraphicsView_ensureVisible3 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->ensureVisible ( PQGRAPHICSITEM(1), OPINT(2,50), OPINT(3,50) );
   }
@@ -413,7 +413,7 @@ void QGraphicsView_fitInView1 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->fitInView ( *PQRECTF(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
   }
@@ -428,7 +428,7 @@ void QGraphicsView_fitInView2 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(5) );
   }
@@ -443,7 +443,7 @@ void QGraphicsView_fitInView3 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->fitInView ( PQGRAPHICSITEM(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
   }
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ISINTERACTIVE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ISTRANSFORMED )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -555,7 +555,7 @@ void QGraphicsView_itemAt1 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QGraphicsItem * ptr = obj->itemAt ( *PQPOINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
@@ -569,7 +569,7 @@ void QGraphicsView_itemAt2 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QGraphicsItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
@@ -602,7 +602,7 @@ void QGraphicsView_mapFromScene1 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPoint * ptr = new QPoint( obj->mapFromScene ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
@@ -616,7 +616,7 @@ void QGraphicsView_mapFromScene2 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
@@ -630,7 +630,7 @@ void QGraphicsView_mapFromScene3 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQPOLYGONF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
@@ -644,7 +644,7 @@ void QGraphicsView_mapFromScene4 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
@@ -658,7 +658,7 @@ void QGraphicsView_mapFromScene5 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPoint * ptr = new QPoint( obj->mapFromScene ( PQREAL(1), PQREAL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
@@ -672,7 +672,7 @@ void QGraphicsView_mapFromScene6 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygon * ptr = new QPolygon( obj->mapFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
@@ -725,7 +725,7 @@ void QGraphicsView_mapToScene1 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
@@ -739,7 +739,7 @@ void QGraphicsView_mapToScene2 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQRECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
@@ -753,7 +753,7 @@ void QGraphicsView_mapToScene3 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGON(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
@@ -767,7 +767,7 @@ void QGraphicsView_mapToScene4 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
@@ -781,7 +781,7 @@ void QGraphicsView_mapToScene5 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPointF * ptr = new QPointF( obj->mapToScene ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
@@ -795,7 +795,7 @@ void QGraphicsView_mapToScene6 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygonF * ptr = new QPolygonF( obj->mapToScene ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECT(3)||ISNIL(3)) && ISOPTNUM(4) )
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1279,7 +1279,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQMATRIX(1) && ISOPTLOG(2) )
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGRAPHICSSCENE(1) )
@@ -1539,7 +1539,7 @@ void QGraphicsView_setSceneRect1 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setSceneRect ( *PQRECTF(1) );
   }
@@ -1554,7 +1554,7 @@ void QGraphicsView_setSceneRect2 ()
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
@@ -1588,7 +1588,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && ISOPTLOG(2) )
@@ -1614,7 +1614,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1640,7 +1640,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1666,7 +1666,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1692,7 +1692,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1717,7 +1717,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1741,7 +1741,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1767,7 +1767,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1792,7 +1792,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1816,7 +1816,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1841,7 +1841,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1866,7 +1866,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && (ISQRECTF(1)||ISNIL(1)) && ISOPTNUM(2) )
@@ -1892,7 +1892,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -1926,7 +1926,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENERECT )
 {
   QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECTF(1) )

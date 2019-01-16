@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QCOLORDIALOG_DELETE )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -179,7 +179,7 @@ void QColorDialog_open1 ()
 #ifdef Q_NO_USING_KEYWORD
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->open ();
   }
@@ -195,7 +195,7 @@ void QColorDialog_open2 ()
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
   }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
 {
   QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
   {
     QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorSelected(QColor)" ) )
       {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorSelected(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOLORDIALOG" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
   {
     QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorSelected(QColor)" );
 
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
   {
     QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentColorChanged(QColor)" ) )
       {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOLORDIALOG" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
   {
     QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentColorChanged(QColor)" );
 

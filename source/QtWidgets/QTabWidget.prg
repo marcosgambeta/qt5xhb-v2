@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QTABWIDGET_DELETE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -144,7 +144,7 @@ void QTabWidget_addTab1 ()
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->addTab ( PQWIDGET(1), PQSTRING(2) ) );
   }
@@ -157,7 +157,7 @@ void QTabWidget_addTab2 ()
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->addTab ( PQWIDGET(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QTABWIDGET_CLEAR )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETCORNERWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QTABWIDGET_COUNT )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETCURRENTINDEX )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETCURRENTWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QTABWIDGET_DOCUMENTMODE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETDOCUMENTMODE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETELIDEMODE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QTABWIDGET_ICONSIZE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETICONSIZE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -566,7 +566,7 @@ void QTabWidget_insertTab1 ()
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->insertTab ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
@@ -579,7 +579,7 @@ void QTabWidget_insertTab2 ()
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->insertTab ( PINT(1), PQWIDGET(2), ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
   }
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISMOVABLE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETMOVABLE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISTABENABLED )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABENABLED )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QTABWIDGET_REMOVETAB )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABICON )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABICON )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABPOSITION )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABSHAPE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABTEXT )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABTEXT )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABTOOLTIP )
 #ifndef QT_NO_TOOLTIP
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABTOOLTIP )
 #ifndef QT_NO_TOOLTIP
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABWHATSTHIS )
 #ifndef QT_NO_WHATSTHIS
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABWHATSTHIS )
 #ifndef QT_NO_WHATSTHIS
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QTABWIDGET_USESSCROLLBUTTONS )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETUSESSCROLLBUTTONS )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSCLOSABLE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABSCLOSABLE )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QTABWIDGET_MINIMUMSIZEHINT )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QTABWIDGET_SIZEHINT )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QTABWIDGET_HEIGHTFORWIDTH )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QTABWIDGET_HASHEIGHTFORWIDTH )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBARAUTOHIDE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABBARAUTOHIDE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
 {
   QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentChanged(int)" ) )
       {
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentChanged(int)" );
 
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tabCloseRequested(int)" ) )
       {
@@ -1429,7 +1429,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabCloseRequested(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tabCloseRequested(int)" );
 
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tabBarClicked(int)" ) )
       {
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabBarClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1527,7 +1527,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tabBarClicked(int)" );
 
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tabBarDoubleClicked(int)" ) )
       {
@@ -1568,7 +1568,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tabBarDoubleClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
   {
     QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tabBarDoubleClicked(int)" );
 

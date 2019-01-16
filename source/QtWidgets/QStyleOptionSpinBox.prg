@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 {
   QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 {
   QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 {
   QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 {
   QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 {
   QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 {
   QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {

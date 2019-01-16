@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QSPLITTER_DELETE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QSPLITTER_REFRESH )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
 {
   QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
   {
     QSplitter * sender = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "splitterMoved(int,int)" ) )
       {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "splitterMoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSPLITTER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
   {
     QSplitter * sender = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "splitterMoved(int,int)" );
 

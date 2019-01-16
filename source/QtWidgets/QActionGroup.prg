@@ -81,10 +81,10 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -101,7 +101,7 @@ void QActionGroup_addAction1 ()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( PQACTION(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -115,7 +115,7 @@ void QActionGroup_addAction2 ()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -129,7 +129,7 @@ void QActionGroup_addAction3 ()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTION(1) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
   {
     QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(QAction*)" ) )
       {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QAction*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTIONGROUP" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
   {
     QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(QAction*)" );
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
   {
     QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "triggered(QAction*)" ) )
       {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(QAction*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTIONGROUP" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
   {
     QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "triggered(QAction*)" );
 

@@ -73,10 +73,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_DELETE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_CHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_ROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALCHANGEFLAGS )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALROTATIONANGLE )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALSCALEFACTOR )
 {
   QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

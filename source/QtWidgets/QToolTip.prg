@@ -69,10 +69,10 @@ HB_FUNC_STATIC( QTOOLTIP_DELETE )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTOOLTIP_FONT )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTOOLTIP_HIDETEXT )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTOOLTIP_ISVISIBLE )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QTOOLTIP_PALETTE )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QTOOLTIP_SETFONT )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTOOLTIP_SETPALETTE )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPALETTE(1) )
@@ -241,7 +241,7 @@ void QToolTip_showText1 ()
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->showText ( *PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4) );
   }
@@ -256,7 +256,7 @@ void QToolTip_showText2 ()
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
   }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTOOLTIP_TEXT )
 {
   QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_LINEWIDTH )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETLINEWIDTH )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_MIDLINEWIDTH )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETMIDLINEWIDTH )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SHAPE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETSHAPE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_TABBARSIZE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETTABBARSIZE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_RIGHTCORNERWIDGETSIZE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETRIGHTCORNERWIDGETSIZE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_LEFTCORNERWIDGETSIZE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETLEFTCORNERWIDGETSIZE )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_TABBARRECT )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETTABBARRECT )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SELECTEDTABRECT )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_SETSELECTEDTABRECT )
 {
   QStyleOptionTabWidgetFrame * obj = (QStyleOptionTabWidgetFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQRECT(1) )
     {

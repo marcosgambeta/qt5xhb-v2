@@ -67,10 +67,10 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISQEVENT(1) && ISQABSTRACTITEMMODEL(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2) )
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISQHELPEVENT(1) && ISQABSTRACTITEMVIEW(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
   {
     QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) )
       {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
                                                               (QWidget * arg1, QAbstractItemDelegate::EndEditHint arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
   {
     QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
   {
     QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "commitData(QWidget*)" ) )
       {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
                                                               (QWidget * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "commitData(QWidget*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
   {
     QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "commitData(QWidget*)" );
 
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
   {
     QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sizeHintChanged(QModelIndex)" ) )
       {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sizeHintChanged(QModelIndex)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
   {
     QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sizeHintChanged(QModelIndex)" );
 

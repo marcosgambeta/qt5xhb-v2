@@ -97,10 +97,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_DELETE )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQURL(2) )
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
 {
   QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "anchorClicked(QUrl)" ) )
       {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorClicked(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "anchorClicked(QUrl)" );
 
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backwardAvailable(bool)" ) )
       {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backwardAvailable(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backwardAvailable(bool)" );
 
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "forwardAvailable(bool)" ) )
       {
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "forwardAvailable(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "forwardAvailable(bool)" );
 
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QUrl)" ) )
       {
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QUrl)" );
 
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QString)" ) )
       {
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QString)" );
 
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "historyChanged()" ) )
       {
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "historyChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "historyChanged()" );
 
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sourceChanged(QUrl)" ) )
       {
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
   {
     QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sourceChanged(QUrl)" );
 

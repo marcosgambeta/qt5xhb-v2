@@ -112,7 +112,7 @@ void QStylePainter_begin1 ()
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->begin ( PQWIDGET(1) ) );
   }
@@ -125,7 +125,7 @@ void QStylePainter_begin2 ()
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->begin ( PQPAINTDEVICE(1), PQWIDGET(2) ) );
   }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSTYLEOPTION(2) )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSTYLEOPTION(2) )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(5,6) && ISQRECT(1) && ISNUM(2) && ISQPALETTE(3) && ISLOG(4) && ISCHAR(5) && ISOPTNUM(6) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISQPIXMAP(3) )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
 {
   QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

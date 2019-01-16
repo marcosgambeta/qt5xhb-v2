@@ -160,10 +160,10 @@ HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
   QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1690,7 +1690,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
   {
     QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusChanged(QWidget*,QWidget*)" ) )
       {
@@ -1701,7 +1701,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
                                                               (QWidget * arg1, QWidget * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "focusChanged(QWidget*,QWidget*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAPPLICATION" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
@@ -1732,7 +1732,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
   {
     QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusChanged(QWidget*,QWidget*)" );
 
@@ -1760,7 +1760,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
   {
     QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontDatabaseChanged()" ) )
       {
@@ -1771,7 +1771,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontDatabaseChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAPPLICATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1798,7 +1798,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
   {
     QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontDatabaseChanged()" );
 
@@ -1826,7 +1826,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
   {
     QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lastWindowClosed()" ) )
       {
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lastWindowClosed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAPPLICATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1864,7 +1864,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
   {
     QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lastWindowClosed()" );
 

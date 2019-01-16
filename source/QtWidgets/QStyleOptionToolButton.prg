@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FEATURES )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFEATURES )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICON )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICONSIZE )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TEXT )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTEXT )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ARROWTYPE )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETPOS )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFONT )
 {
   QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISQFONT(1) )
     {

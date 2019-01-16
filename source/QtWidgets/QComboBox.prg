@@ -158,10 +158,10 @@ HB_FUNC_STATIC( QCOMBOBOX_DELETE )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -178,7 +178,7 @@ void QComboBox_addItem1 ()
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addItem ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) );
   }
@@ -193,7 +193,7 @@ void QComboBox_addItem2 ()
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->addItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
   }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEMS )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COUNT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISQVARIANT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -497,7 +497,7 @@ void QComboBox_insertItem1 ()
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->insertItem ( PINT(1), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
   }
@@ -512,7 +512,7 @@ void QComboBox_insertItem2 ()
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->insertItem ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3), ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4) );
   }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODELCOLUMN )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QCOMBOBOX_REMOVEITEM )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCOMPLETER )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOMPLETER(1) )
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETDUPLICATESENABLED )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITABLE )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETFRAME )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETICONSIZE )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1098,7 +1098,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISQVARIANT(2) && ISOPTNUM(3) )
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDELEGATE )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMTEXT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETLINEEDIT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLINEEDIT(1) )
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXCOUNT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXVISIBLEITEMS )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMINIMUMCONTENTSLENGTH )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMODEL )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMODELCOLUMN )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETROOTMODELINDEX )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETSIZEADJUSTPOLICY )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1410,7 +1410,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETVALIDATOR )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALIDATOR(1) )
@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETVIEW )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMVIEW(1) )
@@ -1462,7 +1462,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SHOWPOPUP )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1488,7 +1488,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1537,7 +1537,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1562,7 +1562,7 @@ HB_FUNC_STATIC( QCOMBOBOX_EVENT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEVENT(1) )
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1611,7 +1611,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1636,7 +1636,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CLEAR )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1662,7 +1662,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CLEAREDITTEXT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1688,7 +1688,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCURRENTINDEX )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1714,7 +1714,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
 {
   QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1742,7 +1742,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(int)" ) )
       {
@@ -1753,7 +1753,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1782,7 +1782,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(int)" );
 
@@ -1810,7 +1810,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(QString)" ) )
       {
@@ -1821,7 +1821,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1850,7 +1850,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(QString)" );
 
@@ -1878,7 +1878,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
       {
@@ -1889,7 +1889,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1918,7 +1918,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentIndexChanged(int)" );
 
@@ -1946,7 +1946,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentIndexChanged(QString)" ) )
       {
@@ -1957,7 +1957,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1986,7 +1986,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentIndexChanged(QString)" );
 
@@ -2014,7 +2014,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
       {
@@ -2025,7 +2025,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentTextChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2054,7 +2054,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentTextChanged(QString)" );
 
@@ -2082,7 +2082,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "editTextChanged(QString)" ) )
       {
@@ -2093,7 +2093,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "editTextChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2122,7 +2122,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "editTextChanged(QString)" );
 
@@ -2150,7 +2150,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(int)" ) )
       {
@@ -2161,7 +2161,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2190,7 +2190,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(int)" );
 
@@ -2218,7 +2218,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QString)" ) )
       {
@@ -2229,7 +2229,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2258,7 +2258,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
   {
     QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QString)" );
 

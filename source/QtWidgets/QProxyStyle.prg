@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QPROXYSTYLE_DELETE )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_BASESTYLE )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SETBASESTYLE )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSTYLE(1) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWPRIMITIVE )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCONTROL )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCOMPLEXCONTROL )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(6,7) && ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISQPALETTE(4) && ISLOG(5) && ISCHAR(6) && ISOPTNUM(7) )
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMPIXMAP )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISQPIXMAP(4) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGET(4) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBELEMENTRECT )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGET(3) )
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBCONTROLRECT )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISNUM(3) && ISQWIDGET(4) )
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && ISNUM(3) && ISLOG(4) && ISCHAR(5) )
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMPIXMAPRECT )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISQPIXMAP(3) )
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4)||ISNIL(4)) )
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,4) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) && (ISQSTYLEHINTRETURN(4)||ISNIL(4)) )
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQSTYLEOPTION(4)||ISNIL(4)) && (ISQWIDGET(5)||ISNIL(5)) )
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3)||ISNIL(3)) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_GENERATEDICONPIXMAP )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3) )
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPALETTE )
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -638,7 +638,7 @@ void QProxyStyle_polish1 ()
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->polish ( PQWIDGET(1) );
   }
@@ -653,7 +653,7 @@ void QProxyStyle_polish2 ()
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->polish ( *PQPALETTE(1) );
   }
@@ -668,7 +668,7 @@ void QProxyStyle_polish3 ()
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->polish ( PQAPPLICATION(1) );
   }
@@ -707,7 +707,7 @@ void QProxyStyle_unpolish1 ()
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->unpolish ( PQWIDGET(1) );
   }
@@ -722,7 +722,7 @@ void QProxyStyle_unpolish2 ()
 {
   QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->unpolish ( PQAPPLICATION(1) );
   }

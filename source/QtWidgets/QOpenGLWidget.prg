@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DELETE )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_SETFORMAT )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_MAKECURRENT )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DONECURRENT )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
 #ifndef QT_NO_OPENGL
   QOpenGLWidget * obj = (QOpenGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToCompose()" ) )
       {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToCompose()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToCompose()" );
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frameSwapped()" ) )
       {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameSwapped()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frameSwapped()" );
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToResize()" ) )
       {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToResize()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToResize()" );
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "resized()" ) )
       {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "resized()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
   {
     QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "resized()" );
 

@@ -89,10 +89,10 @@ HB_FUNC_STATIC( QTOOLBOX_DELETE )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -109,7 +109,7 @@ void QToolBox_addItem1 ()
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->addItem ( PQWIDGET(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
@@ -122,7 +122,7 @@ void QToolBox_addItem2 ()
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->addItem ( PQWIDGET(1), PQSTRING(2) ) );
   }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -251,7 +251,7 @@ void QToolBox_insertItem1 ()
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->insertItem ( PINT(1), PQWIDGET(2), ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
   }
@@ -264,7 +264,7 @@ void QToolBox_insertItem2 ()
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RINT( obj->insertItem ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
 {
   QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
   {
     QToolBox * sender = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentChanged(int)" ) )
       {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
   {
     QToolBox * sender = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentChanged(int)" );
 

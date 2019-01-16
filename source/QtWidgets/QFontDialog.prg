@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QFONTDIALOG_DELETE )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 {
   QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
   {
     QFontDialog * sender = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentFontChanged(QFont)" ) )
       {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentFontChanged(QFont)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFONTDIALOG" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
   {
     QFontDialog * sender = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentFontChanged(QFont)" );
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
   {
     QFontDialog * sender = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontSelected(QFont)" ) )
       {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontSelected(QFont)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFONTDIALOG" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
   {
     QFontDialog * sender = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontSelected(QFont)" );
 

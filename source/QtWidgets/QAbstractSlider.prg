@@ -81,10 +81,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
 {
   QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "actionTriggered(int)" ) )
       {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actionTriggered(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "actionTriggered(int)" );
 
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(int,int)" ) )
       {
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(int,int)" );
 
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliderMoved(int)" ) )
       {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderMoved(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliderMoved(int)" );
 
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliderPressed()" ) )
       {
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderPressed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliderPressed()" );
 
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliderReleased()" ) )
       {
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderReleased()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliderReleased()" );
 
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(int)" ) )
       {
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
   {
     QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(int)" );
 
