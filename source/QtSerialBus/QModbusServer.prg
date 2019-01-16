@@ -67,10 +67,10 @@ HB_FUNC_STATIC( QMODBUSSERVER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusServer * obj = (QModbusServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
   {
     QModbusServer * sender = (QModbusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" ) )
       {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
                                                               (QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
   {
     QModbusServer * sender = (QModbusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
 

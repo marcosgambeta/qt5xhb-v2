@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QCANBUS_PLUGINS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )

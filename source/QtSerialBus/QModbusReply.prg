@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
   {
     QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
   {
     QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
   {
     QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "errorOccurred(QModbusDevice::Error)" ) )
       {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
                                                               (QModbusDevice::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QModbusDevice::Error)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
   {
     QModbusReply * sender = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "errorOccurred(QModbusDevice::Error)" );
 
