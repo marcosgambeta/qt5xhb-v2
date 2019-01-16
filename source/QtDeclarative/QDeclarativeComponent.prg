@@ -125,10 +125,10 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQDECLARATIVECONTEXT(1)||ISNIL(1)) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2) )
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
   {
     QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "progressChanged(qreal)" ) )
       {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "progressChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVECOMPONENT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
   {
     QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "progressChanged(qreal)" );
 
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
   {
     QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QDeclarativeComponent::Status)" ) )
       {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
                                                               (QDeclarativeComponent::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QDeclarativeComponent::Status)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVECOMPONENT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
   {
     QDeclarativeComponent * sender = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QDeclarativeComponent::Status)" );
 

@@ -112,10 +112,10 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
   QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
   {
     QDeclarativeView * sender = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sceneResized(QSize)" ) )
       {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
                                                               (QSize arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneResized(QSize)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
   {
     QDeclarativeView * sender = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sceneResized(QSize)" );
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
   {
     QDeclarativeView * sender = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QDeclarativeView::Status)" ) )
       {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
                                                               (QDeclarativeView::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QDeclarativeView::Status)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
   {
     QDeclarativeView * sender = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QDeclarativeView::Status)" );
 
