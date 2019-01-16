@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -115,7 +115,7 @@ void QSqlIndex_append1 ()
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( *PQSQLFIELD(1) );
   }
@@ -130,7 +130,7 @@ void QSqlIndex_append2 ()
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( *PQSQLFIELD(1), PBOOL(2) );
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETNAME )
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )

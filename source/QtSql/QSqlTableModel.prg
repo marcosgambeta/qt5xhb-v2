@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DELETE )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSQLRECORD(2) )
@@ -302,7 +302,7 @@ void QSqlTableModel_isDirty1 ()
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->isDirty () );
   }
@@ -315,7 +315,7 @@ void QSqlTableModel_isDirty2 ()
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->isDirty ( *PQMODELINDEX(1) ) );
   }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSQLRECORD(2) )
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -868,7 +868,7 @@ void QSqlTableModel_record1 ()
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QSqlRecord * ptr = new QSqlRecord( obj->record () );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
@@ -882,7 +882,7 @@ void QSqlTableModel_record2 ()
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
 {
   QSqlTableModel * obj = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeDelete(int)" ) )
       {
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeDelete(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeDelete(int)" );
 
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeInsert(QSqlRecord)" ) )
       {
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
                                                               (QSqlRecord & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeInsert(QSqlRecord)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSQLRECORD" );
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeInsert(QSqlRecord)" );
 
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeUpdate(int,QSqlRecord)" ) )
       {
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
                                                               (int arg1, QSqlRecord & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "beforeUpdate(int,QSqlRecord)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeUpdate(int,QSqlRecord)" );
 
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "primeInsert(int,QSqlRecord)" ) )
       {
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
                                                               (int arg1, QSqlRecord & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primeInsert(int,QSqlRecord)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
   {
     QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "primeInsert(int,QSqlRecord)" );
 

@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQSQLFIELD(1) && ISOPTLOG(2) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,6) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISNUM(1) && ISCHAR(2) && ISQSQLRECORD(3) && ISLOG(4) )
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
 {
   QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
   {
     QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "notification(QString)" ) )
       {
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "notification(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLDRIVER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
   {
     QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "notification(QString)" );
 
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
   {
     QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) )
       {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
                                                               (const QString & arg1, QSqlDriver::NotificationSource arg2, const QVariant & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSQLDRIVER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
   {
     QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
 

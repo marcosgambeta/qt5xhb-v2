@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QSQLERROR_DELETE )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QSQLERROR_SWAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSQLERROR(1) )
