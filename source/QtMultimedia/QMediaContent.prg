@@ -190,10 +190,10 @@ HB_FUNC_STATIC( QMEDIACONTENT_DELETE )
 {
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
 {
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
 {
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
 {
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
 {
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
 {
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
 {
   QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

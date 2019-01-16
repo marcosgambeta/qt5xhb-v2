@@ -112,10 +112,10 @@ HB_FUNC_STATIC( QRADIOTUNER_DELETE )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STATE )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QRADIOTUNER_BAND )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETBAND )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QRADIOTUNER_FREQUENCY )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETFREQUENCY )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISSTEREO )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STEREOMODE )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETSTEREOMODE )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SIGNALSTRENGTH )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QRADIOTUNER_VOLUME )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETVOLUME )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISMUTED )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETMUTED )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISSEARCHING )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISANTENNACONNECTED )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QRADIOTUNER_RADIODATA )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QRADIOTUNER_AVAILABILITY )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISBANDSUPPORTED )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QRADIOTUNER_FREQUENCYSTEP )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERROR )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERRORSTRING )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHFORWARD )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHBACKWARD )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHALLSTATIONS )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QRADIOTUNER_CANCELSEARCH )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QRADIOTUNER_START )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STOP )
 {
   QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QRadioTuner::State)" ) )
       {
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
                                                               (QRadioTuner::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QRadioTuner::State)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QRadioTuner::State)" );
 
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bandChanged(QRadioTuner::Band)" ) )
       {
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
                                                               (QRadioTuner::Band arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bandChanged(QRadioTuner::Band)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bandChanged(QRadioTuner::Band)" );
 
@@ -945,7 +945,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frequencyChanged(int)" ) )
       {
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frequencyChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frequencyChanged(int)" );
 
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stereoStatusChanged(bool)" ) )
       {
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stereoStatusChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stereoStatusChanged(bool)" );
 
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "searchingChanged(bool)" ) )
       {
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "searchingChanged(bool)" );
 
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "signalStrengthChanged(int)" ) )
       {
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "signalStrengthChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "signalStrengthChanged(int)" );
 
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "volumeChanged(int)" );
 
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
       {
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mutedChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mutedChanged(bool)" );
 
@@ -1353,7 +1353,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stationFound(int,QString)" ) )
       {
@@ -1364,7 +1364,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
                                                               (int arg1, QString arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stationFound(int,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stationFound(int,QString)" );
 
@@ -1423,7 +1423,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "antennaConnectedChanged(bool)" ) )
       {
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "antennaConnectedChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1463,7 +1463,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "antennaConnectedChanged(bool)" );
 
@@ -1491,7 +1491,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QRadioTuner::Error)" ) )
       {
@@ -1502,7 +1502,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
                                                               (QRadioTuner::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QRadioTuner::Error)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIOTUNER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1531,7 +1531,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
   {
     QRadioTuner * sender = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QRadioTuner::Error)" );
 

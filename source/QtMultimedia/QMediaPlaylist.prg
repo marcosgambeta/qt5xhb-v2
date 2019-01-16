@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_DELETE )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PLAYBACKMODE )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETPLAYBACKMODE )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTMEDIA )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTINDEX )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETCURRENTINDEX )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -252,7 +252,7 @@ void QMediaPlaylist_addMedia1 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->addMedia ( *PQMEDIACONTENT(1) ) );
   }
@@ -265,7 +265,7 @@ void QMediaPlaylist_addMedia2 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QMediaContent> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CLEAR )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERROR )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERRORSTRING )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -377,7 +377,7 @@ void QMediaPlaylist_insertMedia1 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->insertMedia ( PINT(1), *PQMEDIACONTENT(2) ) );
   }
@@ -390,7 +390,7 @@ void QMediaPlaylist_insertMedia2 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QMediaContent> par2;
 PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISEMPTY )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISREADONLY )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -478,7 +478,7 @@ void QMediaPlaylist_load1 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->load ( *PQNETWORKREQUEST(1), OPCONSTCHAR(2,0) );
   }
@@ -493,7 +493,7 @@ void QMediaPlaylist_load2 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->load ( *PQURL(1), OPCONSTCHAR(2,0) );
   }
@@ -508,7 +508,7 @@ void QMediaPlaylist_load3 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) );
   }
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIA )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIACOUNT )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -644,7 +644,7 @@ void QMediaPlaylist_removeMedia1 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->removeMedia ( PINT(1) ) );
   }
@@ -657,7 +657,7 @@ void QMediaPlaylist_removeMedia2 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->removeMedia ( PINT(1), PINT(2) ) );
   }
@@ -689,7 +689,7 @@ void QMediaPlaylist_save1 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->save ( *PQURL(1), OPCONSTCHAR(2,0) ) );
   }
@@ -702,7 +702,7 @@ void QMediaPlaylist_save2 ()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->save ( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIAOBJECT )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXT )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUS )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SHUFFLE )
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
       {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentIndexChanged(int)" );
 
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentMediaChanged(QMediaContent)" ) )
       {
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
                                                               (const QMediaContent & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentMediaChanged(QMediaContent)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMEDIACONTENT" );
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentMediaChanged(QMediaContent)" );
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadFailed()" ) )
       {
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFailed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadFailed()" );
 
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loaded()" ) )
       {
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loaded()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loaded()" );
 
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mediaAboutToBeInserted(int,int)" ) )
       {
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaAboutToBeInserted(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1179,7 +1179,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mediaAboutToBeInserted(int,int)" );
 
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mediaAboutToBeRemoved(int,int)" ) )
       {
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaAboutToBeRemoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mediaAboutToBeRemoved(int,int)" );
 
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mediaChanged(int,int)" ) )
       {
@@ -1288,7 +1288,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1319,7 +1319,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mediaChanged(int,int)" );
 
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mediaInserted(int,int)" ) )
       {
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaInserted(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1389,7 +1389,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mediaInserted(int,int)" );
 
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mediaRemoved(int,int)" ) )
       {
@@ -1428,7 +1428,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "mediaRemoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1459,7 +1459,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mediaRemoved(int,int)" );
 
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" ) )
       {
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
                                                               (QMediaPlaylist::PlaybackMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAPLAYLIST" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1527,7 +1527,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
   {
     QMediaPlaylist * sender = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
 

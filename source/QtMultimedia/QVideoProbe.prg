@@ -75,10 +75,10 @@ HB_FUNC_STATIC( QVIDEOPROBE_DELETE )
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -119,7 +119,7 @@ void QVideoProbe_setSource1 ()
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
   }
@@ -132,7 +132,7 @@ void QVideoProbe_setSource2 ()
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
   }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
   {
     QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flush()" ) )
       {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flush()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIDEOPROBE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
   {
     QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flush()" );
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
   {
     QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "videoFrameProbed(QVideoFrame)" ) )
       {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
                                                               (const QVideoFrame & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "videoFrameProbed(QVideoFrame)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIDEOPROBE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVIDEOFRAME" );
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
   {
     QVideoProbe * sender = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "videoFrameProbed(QVideoFrame)" );
 

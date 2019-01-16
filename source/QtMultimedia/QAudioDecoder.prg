@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QAUDIODECODER_DELETE )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEFILENAME )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEFILENAME )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QAUDIODECODER_STATE )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ERRORSTRING )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QAUDIODECODER_BUFFERAVAILABLE )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QAUDIODECODER_AUDIOFORMAT )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETAUDIOFORMAT )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QAUDIODECODER_DURATION )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ERROR )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QAUDIODECODER_POSITION )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QAUDIODECODER_READ )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEDEVICE )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEDEVICE )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QAUDIODECODER_START )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QAUDIODECODER_STOP )
 {
   QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bufferAvailableChanged(bool)" ) )
       {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferAvailableChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bufferAvailableChanged(bool)" );
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bufferReady()" ) )
       {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferReady()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bufferReady()" );
 
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
       {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "durationChanged(qint64)" );
 
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QAudioDecoder::Error)" ) )
       {
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
                                                               (QAudioDecoder::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAudioDecoder::Error)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QAudioDecoder::Error)" );
 
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "formatChanged(QAudioFormat)" ) )
       {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
                                                               (const QAudioFormat & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QAudioFormat)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QAUDIOFORMAT" );
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "formatChanged(QAudioFormat)" );
 
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionChanged(qint64)" ) )
       {
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(qint64)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionChanged(qint64)" );
 
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sourceChanged()" ) )
       {
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sourceChanged()" );
 
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QAudioDecoder::State)" ) )
       {
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
                                                               (QAudioDecoder::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAudioDecoder::State)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
   {
     QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QAudioDecoder::State)" );
 
