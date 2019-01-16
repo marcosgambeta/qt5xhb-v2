@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_CLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -145,7 +145,7 @@ void QBluetoothServer_listen1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->listen ( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1), OPQUINT16(2,0) ) );
   }
@@ -160,7 +160,7 @@ void QBluetoothServer_listen2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
       _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO", true );
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ISLISTENING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_MAXPENDINGCONNECTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_HASPENDINGCONNECTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERADDRESS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETSECURITYFLAGS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SECURITYFLAGS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERTYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
   {
     QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConnection()" ) )
       {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHSERVER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
   {
     QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConnection()" );
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
   {
     QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QBluetoothServer::Error)" ) )
       {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
                                                               (QBluetoothServer::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QBluetoothServer::Error)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
   {
     QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QBluetoothServer::Error)" );
 

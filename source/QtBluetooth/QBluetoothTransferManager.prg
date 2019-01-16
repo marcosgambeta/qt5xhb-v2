@@ -80,10 +80,10 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferManager * obj = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferManager * obj = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQBLUETOOTHTRANSFERREQUEST(1) && ISQIODEVICE(2) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
   {
     QBluetoothTransferManager * sender = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QBluetoothTransferReply*)" ) )
       {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
                                                               (QBluetoothTransferReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QBluetoothTransferReply*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBLUETOOTHTRANSFERREPLY" );
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
   {
     QBluetoothTransferManager * sender = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QBluetoothTransferReply*)" );
 
