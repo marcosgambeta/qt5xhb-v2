@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QQUICKWIDGET_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQURL(1) && ISQQMLCOMPONENT(2) && ISQOBJECT(3) )
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
   {
     QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QQuickWidget::Status)" ) )
       {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
                                                               (QQuickWidget::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQuickWidget::Status)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
   {
     QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QQuickWidget::Status)" );
 
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
   {
     QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" ) )
       {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
                                                               (QQuickWindow::SceneGraphError arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQUICKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
   {
     QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
 
