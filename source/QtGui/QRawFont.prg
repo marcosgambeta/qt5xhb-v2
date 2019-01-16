@@ -161,10 +161,10 @@ HB_FUNC_STATIC( QRAWFONT_DELETE )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QRAWFONT_SWAP )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRAWFONT(1) )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLENAME )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -360,7 +360,7 @@ void QRawFont_advancesForGlyphIndexes1 ()
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QVector<quint32> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQTRANSFORM(3)||ISNIL(3)) )
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QRAWFONT_BOUNDINGRECT )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QRAWFONT_ASCENT )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QRAWFONT_LEADING )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QRAWFONT_LINETHICKNESS )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QRAWFONT_UNDERLINEPOSITION )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISNUM(3) )
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISNUM(2) && ISNUM(3) )
@@ -852,7 +852,7 @@ void QRawFont_supportsCharacter1 ()
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->supportsCharacter ( PUINT(1) ) );
   }
@@ -865,7 +865,7 @@ void QRawFont_supportsCharacter2 ()
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->supportsCharacter ( *PQCHAR(1) ) );
   }
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
 {
   QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )

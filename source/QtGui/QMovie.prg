@@ -148,10 +148,10 @@ HB_FUNC_STATIC( QMOVIE_DELETE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QMOVIE_FILENAME )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QMOVIE_ISVALID )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QMOVIE_SPEED )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QMOVIE_STATE )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QMOVIE_START )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QMOVIE_STOP )
 {
   QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QImageReader::ImageReaderError)" ) )
       {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
                                                               (QImageReader::ImageReaderError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QImageReader::ImageReaderError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QImageReader::ImageReaderError)" );
 
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frameChanged(int)" ) )
       {
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "frameChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frameChanged(int)" );
 
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "resized(QSize)" ) )
       {
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
                                                               (const QSize & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "resized(QSize)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "resized(QSize)" );
 
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "started()" ) )
       {
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "started()" );
 
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QMovie::MovieState)" ) )
       {
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
                                                               (QMovie::MovieState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QMovie::MovieState)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QMovie::MovieState)" );
 
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "updated(QRect)" ) )
       {
@@ -1284,7 +1284,7 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "updated(QRect)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
@@ -1313,7 +1313,7 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
   {
     QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "updated(QRect)" );
 

@@ -96,10 +96,10 @@ HB_FUNC_STATIC( QSCREEN_DELETE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSCREEN_NAME )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSCREEN_DEPTH )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSCREEN_SIZE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSCREEN_GEOMETRY )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALSIZE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCHX )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCHY )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALDOTSPERINCH )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCHX )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCHY )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSCREEN_LOGICALDOTSPERINCH )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QSCREEN_DEVICEPIXELRATIO )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLESIZE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEGEOMETRY )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIBLINGS )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIZE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALGEOMETRY )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALSIZE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALGEOMETRY )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QSCREEN_PRIMARYORIENTATION )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QSCREEN_ORIENTATION )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QSCREEN_ORIENTATIONUPDATEMASK )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QSCREEN_SETORIENTATIONUPDATEMASK )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QSCREEN_ANGLEBETWEEN )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQRECT(3) )
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQRECT(3) )
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QSCREEN_ISPORTRAIT )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QSCREEN_ISLANDSCAPE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QSCREEN_GRABWINDOW )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,5) && ISPOINTER(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QSCREEN_REFRESHRATE )
 {
   QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "geometryChanged(QRect)" ) )
       {
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChanged(QRect)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "geometryChanged(QRect)" );
 
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "physicalSizeChanged(QSizeF)" ) )
       {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
                                                               (const QSizeF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalSizeChanged(QSizeF)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZEF" );
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "physicalSizeChanged(QSizeF)" );
 
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "physicalDotsPerInchChanged(qreal)" ) )
       {
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalDotsPerInchChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "physicalDotsPerInchChanged(qreal)" );
 
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "logicalDotsPerInchChanged(qreal)" ) )
       {
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "logicalDotsPerInchChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "logicalDotsPerInchChanged(qreal)" );
 
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "virtualGeometryChanged(QRect)" ) )
       {
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "virtualGeometryChanged(QRect)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "virtualGeometryChanged(QRect)" );
 
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) )
       {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
                                                               (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
 
@@ -1289,7 +1289,7 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) )
       {
@@ -1300,7 +1300,7 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
                                                               (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::ScreenOrientation)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orientationChanged(Qt::ScreenOrientation)" );
 
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "refreshRateChanged(qreal)" ) )
       {
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "refreshRateChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1397,7 +1397,7 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
   {
     QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "refreshRateChanged(qreal)" );
 

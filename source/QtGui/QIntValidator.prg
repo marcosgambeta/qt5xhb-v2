@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {
   QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
   {
     QIntValidator * sender = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "changed()" ) )
       {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINTVALIDATOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
   {
     QIntValidator * sender = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "changed()" );
 

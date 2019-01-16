@@ -203,10 +203,10 @@ HB_FUNC_STATIC( QTRANSFORM_DELETE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QTRANSFORM_TYPE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QTRANSFORM_DET )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QTRANSFORM_M11 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QTRANSFORM_M12 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QTRANSFORM_M13 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QTRANSFORM_M21 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QTRANSFORM_M22 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QTRANSFORM_M23 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QTRANSFORM_M31 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QTRANSFORM_M32 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QTRANSFORM_M33 )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QTRANSFORM_DX )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISNUM(9) )
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QTRANSFORM_SCALE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QTRANSFORM_SHEAR )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QTRANSFORM_RESET )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -957,7 +957,7 @@ void QTransform_map1 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
@@ -971,7 +971,7 @@ void QTransform_map2 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
@@ -985,7 +985,7 @@ void QTransform_map3 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QLine * ptr = new QLine( obj->map ( *PQLINE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QLINE", true );
@@ -999,7 +999,7 @@ void QTransform_map4 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QLineF * ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
@@ -1013,7 +1013,7 @@ void QTransform_map5 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygonF * ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
@@ -1027,7 +1027,7 @@ void QTransform_map6 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPolygon * ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
@@ -1041,7 +1041,7 @@ void QTransform_map7 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRegion * ptr = new QRegion( obj->map ( *PQREGION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
@@ -1055,7 +1055,7 @@ void QTransform_map8 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPainterPath * ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
@@ -1069,7 +1069,7 @@ void QTransform_map9 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        int par3;
 int par4;
@@ -1088,7 +1088,7 @@ void QTransform_map10 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        qreal par3;
 qreal par4;
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -1191,7 +1191,7 @@ void QTransform_mapRect1 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
@@ -1205,7 +1205,7 @@ void QTransform_mapRect2 ()
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
 {
   QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

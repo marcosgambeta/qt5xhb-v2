@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QTEXTLIST_DELETE )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTEXTLIST_ISEMPTY )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QTEXTLIST_ADD )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 {
   QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QDRAG_DELETE )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDRAG_DEFAULTACTION )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -160,7 +160,7 @@ void QDrag_exec1 ()
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RENUM( obj->exec ( ISNIL(1)? (Qt::DropActions) Qt::MoveAction : (Qt::DropActions) hb_parni(1) ) );
   }
@@ -173,7 +173,7 @@ void QDrag_exec2 ()
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RENUM( obj->exec ( (Qt::DropActions) hb_parni(1), (Qt::DropAction) hb_parni(2) ) );
   }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQPIXMAP(1) && ISNUM(2) )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMIMEDATA(1) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPIXMAP(1) )
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QDRAG_SUPPORTEDACTIONS )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
 {
   QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
   {
     QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "actionChanged(Qt::DropAction)" ) )
       {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
                                                               (Qt::DropAction arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "actionChanged(Qt::DropAction)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDRAG" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
   {
     QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "actionChanged(Qt::DropAction)" );
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
   {
     QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "targetChanged(QObject*)" ) )
       {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "targetChanged(QObject*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDRAG" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
   {
     QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "targetChanged(QObject*)" );
 

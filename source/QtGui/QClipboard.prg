@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQMIMEDATA(1) && ISOPTNUM(2) )
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQPIXMAP(1) && ISOPTNUM(2) )
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -403,7 +403,7 @@ void QClipboard_text1 ()
 {
   QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RQSTRING( obj->text ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
   }
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "changed(QClipboard::Mode)" ) )
       {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
                                                               (QClipboard::Mode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "changed(QClipboard::Mode)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCLIPBOARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "changed(QClipboard::Mode)" );
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataChanged()" ) )
       {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCLIPBOARD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataChanged()" );
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "findBufferChanged()" ) )
       {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "findBufferChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCLIPBOARD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "findBufferChanged()" );
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCLIPBOARD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
   {
     QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
 

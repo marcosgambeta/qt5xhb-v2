@@ -73,10 +73,10 @@ HB_FUNC_STATIC( QICONENGINE_DELETE )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDFILE )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISCHAR(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QICONENGINE_CLONE )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QICONENGINE_ICONNAME )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QICONENGINE_KEY )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QICONENGINE_PAINT )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISNUM(4) )
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QICONENGINE_READ )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QICONENGINE_WRITE )
 {
   QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )

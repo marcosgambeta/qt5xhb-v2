@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QPICTURE_DELETE )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QPICTURE_DATA )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -192,7 +192,7 @@ void QPicture_load1 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
@@ -205,7 +205,7 @@ void QPicture_load2 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTER(1) )
@@ -261,7 +261,7 @@ void QPicture_save1 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
@@ -274,7 +274,7 @@ void QPicture_save2 ()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QPICTURE_SWAP )
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPICTURE(1) )

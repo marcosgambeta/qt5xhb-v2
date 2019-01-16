@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QBACKINGSTORE_DELETE )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_BEGINPAINT )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGION(1) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_ENDPAINT )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_FLUSH )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISQREGION(1) && (ISQWINDOW(2)||ISNIL(2)) && (ISQPOINT(3)||ISNIL(3)) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_HASSTATICCONTENTS )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_PAINTDEVICE )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_RESIZE )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SCROLL )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQREGION(1) && ISNUM(2) && ISNUM(3) )
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SETSTATICCONTENTS )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGION(1) )
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SIZE )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_STATICCONTENTS )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_WINDOW )
 {
   QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
