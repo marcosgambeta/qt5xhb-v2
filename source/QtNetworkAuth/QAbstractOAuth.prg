@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_CLIENTIDENTIFIER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCLIENTIDENTIFIER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_TOKEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_AUTHORIZATIONURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETNETWORKACCESSMANAGER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETREPLYHANDLER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTOAUTHREPLYHANDLER(1) )
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clientIdentifierChanged(QString)" ) )
       {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clientIdentifierChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clientIdentifierChanged(QString)" );
 
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tokenChanged(QString)" ) )
       {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tokenChanged(QString)" );
 
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QAbstractOAuth::Status)" ) )
       {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
                                                               (QAbstractOAuth::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QAbstractOAuth::Status)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QAbstractOAuth::Status)" );
 
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "authorizationUrlChanged(QUrl)" ) )
       {
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "authorizationUrlChanged(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "authorizationUrlChanged(QUrl)" );
 
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" ) )
       {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
                                                               (QAbstractOAuth::ContentType arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "contentTypeChanged(QAbstractOAuth::ContentType)" );
 
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "requestFailed(QAbstractOAuth::Error)" ) )
       {
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
                                                               (QAbstractOAuth::Error arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "requestFailed(QAbstractOAuth::Error)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "requestFailed(QAbstractOAuth::Error)" );
 
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "authorizeWithBrowser(QUrl)" ) )
       {
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "authorizeWithBrowser(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "authorizeWithBrowser(QUrl)" );
 
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "granted()" ) )
       {
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "granted()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "granted()" );
 
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QNetworkReply*)" ) )
       {
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
                                                               (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QNetworkReply*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QNetworkReply*)" );
 
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "replyDataReceived(QByteArray)" ) )
       {
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
                                                               (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "replyDataReceived(QByteArray)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
   {
     QAbstractOAuth * sender = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "replyDataReceived(QByteArray)" );
 

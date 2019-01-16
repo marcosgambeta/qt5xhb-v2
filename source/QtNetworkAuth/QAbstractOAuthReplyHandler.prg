@@ -71,10 +71,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKREPLY(1) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
   {
     QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "callbackDataReceived(QByteArray)" ) )
       {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
                                                               (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "callbackDataReceived(QByteArray)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTHREPLYHANDLER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
   {
     QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "callbackDataReceived(QByteArray)" );
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
   {
     QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "replyDataReceived(QByteArray)" ) )
       {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
                                                               (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "replyDataReceived(QByteArray)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTOAUTHREPLYHANDLER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
   {
     QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "replyDataReceived(QByteArray)" );
 

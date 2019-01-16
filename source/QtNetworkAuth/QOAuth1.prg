@@ -121,10 +121,10 @@ HB_FUNC_STATIC( QOAUTH1_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QOAUTH1_GRANT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clientSharedSecretChanged(QString)" ) )
       {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clientSharedSecretChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clientSharedSecretChanged(QString)" );
 
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" ) )
       {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
                                                               (QOAuth1::SignatureMethod arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
 
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "temporaryCredentialsUrlChanged(QUrl)" ) )
       {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "temporaryCredentialsUrlChanged(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "temporaryCredentialsUrlChanged(QUrl)" );
 
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tokenCredentialsUrlChanged(QUrl)" ) )
       {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenCredentialsUrlChanged(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tokenCredentialsUrlChanged(QUrl)" );
 
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tokenSecretChanged(QString)" ) )
       {
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tokenSecretChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
   {
     QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tokenSecretChanged(QString)" );
 
