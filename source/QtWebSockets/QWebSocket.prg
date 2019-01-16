@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QWEBSOCKET_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ABORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ERRORSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWEBSOCKET_FLUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWEBSOCKET_LOCALADDRESS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWEBSOCKET_LOCALPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PAUSEMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERADDRESS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PROXY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPROXY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QWEBSOCKET_MASKGENERATOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETMASKGENERATOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMASKGENERATOR(1) )
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QWEBSOCKET_READBUFFERSIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETREADBUFFERSIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QWEBSOCKET_RESUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPAUSEMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QWEBSOCKET_STATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QWEBSOCKET_VERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QWEBSOCKET_RESOURCENAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QWEBSOCKET_REQUESTURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ORIGIN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSECODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSEREASON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDTEXTMESSAGE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -898,7 +898,7 @@ void QWebSocket_ignoreSslErrors1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QSslError> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -923,7 +923,7 @@ void QWebSocket_ignoreSslErrors2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->ignoreSslErrors ();
   }
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SSLCONFIGURATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETSSLCONFIGURATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTCHAR(2) )
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QWEBSOCKET_OPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToClose()" ) )
       {
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToClose()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToClose()" );
 
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "connected()" ) )
       {
@@ -1179,7 +1179,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1206,7 +1206,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "connected()" );
 
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "disconnected()" ) )
       {
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "disconnected()" );
 
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) )
       {
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
                                                               (QAbstractSocket::SocketState arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAbstractSocket::SocketState)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QAbstractSocket::SocketState)" );
 
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
       {
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKPROXY" );
@@ -1416,7 +1416,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "readChannelFinished()" ) )
       {
@@ -1457,7 +1457,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "readChannelFinished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "readChannelFinished()" );
 
@@ -1514,7 +1514,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textFrameReceived(QString,bool)" ) )
       {
@@ -1525,7 +1525,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
                                                               (const QString & arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textFrameReceived(QString,bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textFrameReceived(QString,bool)" );
 
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "binaryFrameReceived(QByteArray,bool)" ) )
       {
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
                                                               (const QByteArray & arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "binaryFrameReceived(QByteArray,bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
@@ -1628,7 +1628,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "binaryFrameReceived(QByteArray,bool)" );
 
@@ -1658,7 +1658,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textMessageReceived(QString)" ) )
       {
@@ -1669,7 +1669,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textMessageReceived(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1698,7 +1698,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textMessageReceived(QString)" );
 
@@ -1728,7 +1728,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "binaryMessageReceived(QByteArray)" ) )
       {
@@ -1739,7 +1739,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
                                                               (const QByteArray & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "binaryMessageReceived(QByteArray)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
@@ -1768,7 +1768,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "binaryMessageReceived(QByteArray)" );
 
@@ -1798,7 +1798,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QAbstractSocket::SocketError)" ) )
       {
@@ -1809,7 +1809,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAbstractSocket::SocketError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1838,7 +1838,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QAbstractSocket::SocketError)" );
 
@@ -1868,7 +1868,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pong(quint64,QByteArray)" ) )
       {
@@ -1879,7 +1879,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
                                                               (quint64 arg1, const QByteArray & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pong(quint64,QByteArray)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
@@ -1910,7 +1910,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pong(quint64,QByteArray)" );
 
@@ -1940,7 +1940,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
       {
@@ -1951,7 +1951,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "bytesWritten(qint64)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
@@ -1980,7 +1980,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bytesWritten(qint64)" );
 
@@ -2010,7 +2010,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
@@ -2021,7 +2021,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
@@ -2073,7 +2073,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
   {
     QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
 

@@ -113,10 +113,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_LISTEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_CLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ISLISTENING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_MAXPENDINGCONNECTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETMAXPENDINGCONNECTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERADDRESS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SECUREMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SOCKETDESCRIPTOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSOCKETDESCRIPTOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_HASPENDINGCONNECTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEXTPENDINGCONNECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERRORSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PAUSEACCEPTING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_RESUMEACCEPTING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSERVERNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PROXY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETPROXY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSSLCONFIGURATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SSLCONFIGURATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * obj = (QWebSocketServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
       {
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "acceptError(QAbstractSocket::SocketError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "acceptError(QAbstractSocket::SocketError)" );
 
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "serverError(QWebSocketProtocol::CloseCode)" ) )
       {
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
                                                               (QWebSocketProtocol::CloseCode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "serverError(QWebSocketProtocol::CloseCode)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "serverError(QWebSocketProtocol::CloseCode)" );
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" ) )
       {
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
                                                               (QWebSocketCorsAuthenticator * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QWEBSOCKETCORSAUTHENTICATOR" );
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
 
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConnection()" ) )
       {
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConnection()" );
 
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
       {
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
                                                               (const QSslError & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "peerVerifyError(QSslError)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSSLERROR" );
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "peerVerifyError(QSslError)" );
 
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
 
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "closed()" ) )
       {
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "closed()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
   {
     QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "closed()" );
 
