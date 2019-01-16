@@ -80,10 +80,10 @@ HB_FUNC_STATIC( QACCELEROMETER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
   {
     QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" ) )
       {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
                                                               (QAccelerometer::AccelerationMode arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACCELEROMETER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
   {
     QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
 

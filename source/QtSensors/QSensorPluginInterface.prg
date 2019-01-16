@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSENSORPLUGININTERFACE_REGISTERSENSORS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorPluginInterface * obj = (QSensorPluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
