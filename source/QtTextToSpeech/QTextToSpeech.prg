@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_STATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_LOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETLOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOICE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOICE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVOICE(1) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETRATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_PITCH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETPITCH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOLUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOLUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLELOCALES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEVOICES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SAY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_STOP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_PAUSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RESUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
       {
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
                                                               (const QLocale & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged(QLocale)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QLOCALE" );
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "localeChanged(QLocale)" );
 
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pitchChanged(double)" ) )
       {
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pitchChanged(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pitchChanged(double)" );
 
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rateChanged(double)" ) )
       {
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rateChanged(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rateChanged(double)" );
 
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QTextToSpeech::State)" ) )
       {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
                                                               (QTextToSpeech::State arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTextToSpeech::State)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QTextToSpeech::State)" );
 
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "voiceChanged(QVoice)" ) )
       {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
                                                               (const QVoice & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "voiceChanged(QVoice)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVOICE" );
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "voiceChanged(QVoice)" );
 
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
   {
     QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "volumeChanged(int)" );
 
