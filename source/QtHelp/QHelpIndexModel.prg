@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
   {
     QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "indexCreated()" ) )
       {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexCreated()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPINDEXMODEL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
   {
     QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "indexCreated()" );
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
   {
     QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "indexCreationStarted()" ) )
       {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "indexCreationStarted()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPINDEXMODEL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
   {
     QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "indexCreationStarted()" );
 
