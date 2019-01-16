@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QGEOMANEUVER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_POSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETINSTRUCTIONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_INSTRUCTIONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DIRECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETTIMETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_TIMETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDISTANCETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DISTANCETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETWAYPOINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_WAYPOINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

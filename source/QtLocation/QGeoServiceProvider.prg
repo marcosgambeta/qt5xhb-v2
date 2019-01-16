@@ -74,10 +74,10 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGFEATURES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGFEATURES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_MAPPINGFEATURES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACESFEATURES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGMANAGER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGMANAGER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACEMANAGER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ERRORSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_SETLOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_SETALLOWEXPERIMENTAL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProvider * obj = (QGeoServiceProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )

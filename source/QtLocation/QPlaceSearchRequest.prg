@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHTERM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHTERM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACECATEGORY(1) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHAREA )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHAREA )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RECOMMENDATIONID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRECOMMENDATIONID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHCONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHCONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_VISIBILITYSCOPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETVISIBILITYSCOPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RELEVANCEHINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRELEVANCEHINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_LIMIT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETLIMIT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

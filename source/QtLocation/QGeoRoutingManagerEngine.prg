@@ -74,10 +74,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERVERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_CALCULATEROUTE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGEOROUTEREQUEST(1) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_UPDATEROUTE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQGEOROUTE(1) && ISQGEOCOORDINATE(2) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDTRAVELMODES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATURETYPES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATUREWEIGHTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDROUTEOPTIMIZATIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDSEGMENTDETAILS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDMANEUVERDETAILS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETLOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_LOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETMEASUREMENTSYSTEM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
   {
     QGeoRoutingManagerEngine * sender = (QGeoRoutingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QGeoRouteReply*)" ) )
       {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
                                                               (QGeoRouteReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QGeoRouteReply*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTINGMANAGERENGINE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOROUTEREPLY" );
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
   {
     QGeoRoutingManagerEngine * sender = (QGeoRoutingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QGeoRouteReply*)" );
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
   {
     QGeoRoutingManagerEngine * sender = (QGeoRoutingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) )
       {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
                                                               (QGeoRouteReply * arg1, QGeoRouteReply::Error arg2, QString arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTINGMANAGERENGINE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOROUTEREPLY" );
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
   {
     QGeoRoutingManagerEngine * sender = (QGeoRoutingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
 

@@ -68,10 +68,10 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -142,7 +142,7 @@ void QGeoCodingManager_geocode1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
@@ -158,7 +158,7 @@ void QGeoCodingManager_geocode2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), OPINT(2,-1), OPINT(3,0), ISNIL(4)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(4) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && (ISQGEOSHAPE(2)||ISNIL(2)) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_SETLOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_LOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
   {
     QGeoCodingManager * sender = (QGeoCodingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QGeoCodeReply*)" ) )
       {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
                                                               (QGeoCodeReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QGeoCodeReply*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
   {
     QGeoCodingManager * sender = (QGeoCodingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QGeoCodeReply*)" );
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
   {
     QGeoCodingManager * sender = (QGeoCodingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" ) )
       {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
                                                               (QGeoCodeReply * arg1, QGeoCodeReply::Error arg2, QString arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
   {
     QGeoCodingManager * sender = (QGeoCodingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
 

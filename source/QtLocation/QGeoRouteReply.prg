@@ -85,10 +85,10 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ISFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERRORSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
   {
     QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTEREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
   {
     QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
   {
     QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QGeoRouteReply::Error,QString)" ) )
       {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
                                                               (QGeoRouteReply::Error arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoRouteReply::Error,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOROUTEREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
   {
     QGeoRouteReply * sender = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QGeoRouteReply::Error,QString)" );
 

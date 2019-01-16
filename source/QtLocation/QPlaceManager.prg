@@ -97,10 +97,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_MANAGERNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_MANAGERVERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACEDETAILS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACECONTENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1) )
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCHSUGGESTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVEPLACE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACE(1) )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVEPLACE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQPLACECATEGORY(1) && ISOPTCHAR(2) )
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVECATEGORY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_INITIALIZECATEGORIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_PARENTCATEGORYID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CATEGORY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_LOCALES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_COMPATIBLEPLACE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACE(1) )
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_MATCHINGPLACES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * obj = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1) )
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QPlaceReply*)" ) )
       {
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
                                                               (QPlaceReply * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QPlaceReply*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QPlaceReply*)" );
 
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" ) )
       {
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
                                                               (QPlaceReply * arg1, QPlaceReply::Error arg2, const QString & arg3) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
 
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "placeAdded(QString)" ) )
       {
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "placeAdded(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "placeAdded(QString)" );
 
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "placeUpdated(QString)" ) )
       {
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "placeUpdated(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "placeUpdated(QString)" );
 
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "placeRemoved(QString)" ) )
       {
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "placeRemoved(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "placeRemoved(QString)" );
 
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "categoryAdded(QPlaceCategory,QString)" ) )
       {
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryAdded(QPlaceCategory,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPLACECATEGORY" );
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "categoryAdded(QPlaceCategory,QString)" );
 
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "categoryUpdated(QPlaceCategory,QString)" ) )
       {
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryUpdated(QPlaceCategory,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPLACECATEGORY" );
@@ -1191,7 +1191,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "categoryUpdated(QPlaceCategory,QString)" );
 
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "categoryRemoved(QString,QString)" ) )
       {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
                                                               (const QString & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryRemoved(QString,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "categoryRemoved(QString,QString)" );
 
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataChanged()" ) )
       {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
   {
     QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataChanged()" );
 

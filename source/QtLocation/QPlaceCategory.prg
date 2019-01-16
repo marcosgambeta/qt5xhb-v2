@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETCATEGORYID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ICON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACEICON(1) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

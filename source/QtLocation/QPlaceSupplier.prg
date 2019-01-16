@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QPLACESUPPLIER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETSUPPLIERID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_URL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETICON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACEICON(1) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ISEMPTY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
