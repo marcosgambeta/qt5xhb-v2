@@ -82,10 +82,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
   {
     QWebChannel * sender = (QWebChannel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "blockUpdatesChanged(bool)" ) )
       {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "blockUpdatesChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBCHANNEL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
   {
     QWebChannel * sender = (QWebChannel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "blockUpdatesChanged(bool)" );
 
