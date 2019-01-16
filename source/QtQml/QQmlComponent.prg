@@ -151,10 +151,10 @@ HB_FUNC_STATIC( QQMLCOMPONENT_DELETE )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQQMLCONTEXT(1) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -222,7 +222,7 @@ void QQmlComponent_create1 ()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QObject * ptr = obj->create ( OPQQMLCONTEXT(1,0) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
@@ -236,7 +236,7 @@ void QQmlComponent_create2 ()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->create ( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,0), OPQQMLCONTEXT(3,0) );
   }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATIONCONTEXT )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISERROR )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISLOADING )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISNULL )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISREADY )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_PROGRESS )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_STATUS )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_URL )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -464,7 +464,7 @@ void QQmlComponent_loadUrl1 ()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->loadUrl ( *PQURL(1) );
   }
@@ -479,7 +479,7 @@ void QQmlComponent_loadUrl2 ()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->loadUrl ( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
   }
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2) )
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
   {
     QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "progressChanged(qreal)" ) )
       {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "progressChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQMLCOMPONENT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
   {
     QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "progressChanged(qreal)" );
 
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
   {
     QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QQmlComponent::Status)" ) )
       {
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
                                                               (QQmlComponent::Status arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QQmlComponent::Status)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QQMLCOMPONENT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
   {
     QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QQmlComponent::Status)" );
 

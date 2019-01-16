@@ -225,10 +225,10 @@ HB_FUNC_STATIC( QJSVALUE_DELETE )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QJSVALUE_DELETEPROPERTY )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QJSVALUE_EQUALS )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQJSVALUE(1) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QJSVALUE_HASOWNPROPERTY )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QJSVALUE_HASPROPERTY )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QJSVALUE_ISARRAY )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QJSVALUE_ISBOOL )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QJSVALUE_ISCALLABLE )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QJSVALUE_ISDATE )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QJSVALUE_ISERROR )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QJSVALUE_ISNULL )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QJSVALUE_ISNUMBER )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QJSVALUE_ISOBJECT )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QJSVALUE_ISQOBJECT )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QJSVALUE_ISREGEXP )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QJSVALUE_ISSTRING )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QJSVALUE_ISUNDEFINED )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QJSVALUE_ISVARIANT )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -653,7 +653,7 @@ void QJSValue_property1 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QJSValue * ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
@@ -667,7 +667,7 @@ void QJSValue_property2 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QJSValue * ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -725,7 +725,7 @@ void QJSValue_setProperty1 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setProperty ( PQSTRING(1), *PQJSVALUE(2) );
   }
@@ -740,7 +740,7 @@ void QJSValue_setProperty2 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setProperty ( PQUINT32(1), *PQJSVALUE(2) );
   }
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROTOTYPE )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQJSVALUE(1) )
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QJSVALUE_STRICTLYEQUALS )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQJSVALUE(1) )
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QJSVALUE_TOBOOL )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QJSVALUE_TODATETIME )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QJSVALUE_TOINT )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QJSVALUE_TONUMBER )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QJSVALUE_TOQOBJECT )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QJSVALUE_TOSTRING )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -970,7 +970,7 @@ HB_FUNC_STATIC( QJSVALUE_TOUINT )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QJSVALUE_TOVARIANT )
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
