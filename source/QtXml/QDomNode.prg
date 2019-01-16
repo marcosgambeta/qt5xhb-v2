@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QDOMNODE_DELETE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDOMNODE_CLEAR )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QDOMNODE_ISATTR )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITY )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNULL )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QDOMNODE_ISTEXT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QDOMNODE_NODENAME )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QDOMNODE_PREFIX )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
@@ -1321,7 +1321,7 @@ void QDomNode_save1 ()
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->save ( *PQTEXTSTREAM(1), PINT(2) );
   }
@@ -1336,7 +1336,7 @@ void QDomNode_save2 ()
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->save ( *PQTEXTSTREAM(1), PINT(2), (QDomNode::EncodingPolicy) hb_parni(3) );
   }
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1396,7 +1396,7 @@ HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1422,7 +1422,7 @@ HB_FUNC_STATIC( QDOMNODE_TOATTR )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1447,7 +1447,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1472,7 +1472,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1522,7 +1522,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1547,7 +1547,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1572,7 +1572,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1622,7 +1622,7 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITY )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1672,7 +1672,7 @@ HB_FUNC_STATIC( QDOMNODE_TONOTATION )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1697,7 +1697,7 @@ HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1722,7 +1722,7 @@ HB_FUNC_STATIC( QDOMNODE_TOTEXT )
 {
   QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
