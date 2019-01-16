@@ -69,10 +69,10 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
 {
   QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
