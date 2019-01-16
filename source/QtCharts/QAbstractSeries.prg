@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_TYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_NAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ISVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_OPACITY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_USEOPENGL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTAXIS(1) )
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTAXIS(1) )
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SHOW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "nameChanged()" ) )
       {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "nameChanged()" );
 
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "opacityChanged()" ) )
       {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "opacityChanged()" );
 
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "useOpenGLChanged()" ) )
       {
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "useOpenGLChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "useOpenGLChanged()" );
 
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
   {
     QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged()" );
 

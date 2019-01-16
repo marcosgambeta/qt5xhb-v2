@@ -104,10 +104,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MIN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMIN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MAX )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMAX )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_LABELFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETLABELFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_BASE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETBASE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_TICKCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MINORTICKCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseChanged(qreal)" ) )
       {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseChanged(qreal)" );
 
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelFormatChanged(QString)" ) )
       {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelFormatChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelFormatChanged(QString)" );
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxChanged(qreal)" ) )
       {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxChanged(qreal)" );
 
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minChanged(qreal)" ) )
       {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minChanged(qreal)" );
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minorTickCountChanged(int)" ) )
       {
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minorTickCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minorTickCountChanged(int)" );
 
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(qreal,qreal)" ) )
       {
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
                                                               (qreal arg1, qreal arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(qreal,qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(qreal,qreal)" );
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tickCountChanged(int)" ) )
       {
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
   {
     QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tickCountChanged(int)" );
 

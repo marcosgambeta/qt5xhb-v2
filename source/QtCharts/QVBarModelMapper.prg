@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETSERIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTBARSERIES(1) )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETMODEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTBARSETCOLUMN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_LASTBARSETCOLUMN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETLASTBARSETCOLUMN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTROW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTROW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ROWCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "firstBarSetColumnChanged()" ) )
       {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstBarSetColumnChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "firstBarSetColumnChanged()" );
 
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "firstRowChanged()" ) )
       {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "firstRowChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "firstRowChanged()" );
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lastBarSetColumnChanged()" ) )
       {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lastBarSetColumnChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lastBarSetColumnChanged()" );
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modelReplaced()" ) )
       {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "modelReplaced()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modelReplaced()" );
 
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowCountChanged()" ) )
       {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowCountChanged()" );
 
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seriesReplaced()" ) )
       {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesReplaced()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVBARMODELMAPPER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
   {
     QVBarModelMapper * sender = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seriesReplaced()" );
 

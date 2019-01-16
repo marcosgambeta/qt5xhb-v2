@@ -96,10 +96,10 @@ HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_FONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_PEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPEN(1) )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "brushChanged()" );
 
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked()" ) )
       {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked()" );
 
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontChanged()" ) )
       {
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontChanged()" );
 
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(bool)" ) )
       {
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(bool)" );
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBrushChanged()" ) )
       {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBrushChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBrushChanged()" );
 
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelChanged()" ) )
       {
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelChanged()" );
 
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "penChanged()" ) )
       {
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "penChanged()" );
 
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shapeChanged()" ) )
       {
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shapeChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shapeChanged()" );
 
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
   {
     QLegendMarker * sender = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged()" );
 

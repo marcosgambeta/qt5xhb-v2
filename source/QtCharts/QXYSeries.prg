@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QXYSERIES_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QXYSERIES_COLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCLIPPING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -518,7 +518,7 @@ void QXYSeries_append1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( PQREAL(1), PQREAL(2) );
   }
@@ -535,7 +535,7 @@ void QXYSeries_append2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( *PQPOINTF(1) );
   }
@@ -552,7 +552,7 @@ void QXYSeries_append3 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QPointF> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -601,7 +601,7 @@ void QXYSeries_replace1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->replace ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
@@ -618,7 +618,7 @@ void QXYSeries_replace2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->replace ( *PQPOINTF(1), *PQPOINTF(2) );
   }
@@ -635,7 +635,7 @@ void QXYSeries_replace3 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->replace ( PINT(1), PQREAL(2), PQREAL(3) );
   }
@@ -652,7 +652,7 @@ void QXYSeries_replace4 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->replace ( PINT(1), *PQPOINTF(2) );
   }
@@ -669,7 +669,7 @@ void QXYSeries_replace5 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QPointF> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -694,7 +694,7 @@ void QXYSeries_replace6 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QVector<QPointF> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -758,7 +758,7 @@ void QXYSeries_remove1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->remove ( PQREAL(1), PQREAL(2) );
   }
@@ -775,7 +775,7 @@ void QXYSeries_remove2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->remove ( *PQPOINTF(1) );
   }
@@ -792,7 +792,7 @@ void QXYSeries_remove3 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->remove ( PINT(1) );
   }
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QXYSERIES_INSERT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQPOINTF(2) )
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QXYSERIES_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QXYSERIES_COUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QXYSERIES_AT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPEN(1) )
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QXYSERIES_PEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QXYSERIES_SETBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(QPointF)" ) )
       {
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPointF)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(QPointF)" );
 
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
@@ -1275,7 +1275,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
                                                               (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
 
@@ -1334,7 +1334,7 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "doubleClicked(QPointF)" ) )
       {
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPointF)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "doubleClicked(QPointF)" );
 
@@ -1404,7 +1404,7 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(QPointF,bool)" ) )
       {
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
                                                               (const QPointF & arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPointF,bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(QPointF,bool)" );
 
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "penChanged(QPen)" ) )
       {
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
                                                               (const QPen & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged(QPen)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPEN" );
@@ -1516,7 +1516,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "penChanged(QPen)" );
 
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointAdded(int)" ) )
       {
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointAdded(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointAdded(int)" );
 
@@ -1616,7 +1616,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsClippingChanged(bool)" ) )
       {
@@ -1627,7 +1627,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsClippingChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1656,7 +1656,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsClippingChanged(bool)" );
 
@@ -1686,7 +1686,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsColorChanged(QColor)" ) )
       {
@@ -1697,7 +1697,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1726,7 +1726,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsColorChanged(QColor)" );
 
@@ -1756,7 +1756,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsFontChanged(QFont)" ) )
       {
@@ -1767,7 +1767,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFontChanged(QFont)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
@@ -1796,7 +1796,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsFontChanged(QFont)" );
 
@@ -1826,7 +1826,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsFormatChanged(QString)" ) )
       {
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFormatChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1866,7 +1866,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsFormatChanged(QString)" );
 
@@ -1896,7 +1896,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsVisibilityChanged(bool)" ) )
       {
@@ -1907,7 +1907,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsVisibilityChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1936,7 +1936,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsVisibilityChanged(bool)" );
 
@@ -1966,7 +1966,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointRemoved(int)" ) )
       {
@@ -1977,7 +1977,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointRemoved(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2006,7 +2006,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointRemoved(int)" );
 
@@ -2036,7 +2036,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointReplaced(int)" ) )
       {
@@ -2047,7 +2047,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointReplaced(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2076,7 +2076,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointReplaced(int)" );
 
@@ -2106,7 +2106,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointsRemoved(int,int)" ) )
       {
@@ -2117,7 +2117,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsRemoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2148,7 +2148,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointsRemoved(int,int)" );
 
@@ -2178,7 +2178,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointsReplaced()" ) )
       {
@@ -2189,7 +2189,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsReplaced()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -2216,7 +2216,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointsReplaced()" );
 
@@ -2246,7 +2246,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pressed(QPointF)" ) )
       {
@@ -2257,7 +2257,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPointF)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
@@ -2286,7 +2286,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pressed(QPointF)" );
 
@@ -2316,7 +2316,7 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "released(QPointF)" ) )
       {
@@ -2327,7 +2327,7 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPointF)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
@@ -2356,7 +2356,7 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
   {
     QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "released(QPointF)" );
 

@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QDATETIMEAXIS_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MIN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETMIN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MAX )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETMAX )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_FORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_TICKCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETTICKCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_TYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDATETIME(1) && ISQDATETIME(2) )
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "formatChanged(QString)" ) )
       {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
                                                               (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "formatChanged(QString)" );
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxChanged(QDateTime)" ) )
       {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
                                                               (QDateTime arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(QDateTime)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxChanged(QDateTime)" );
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minChanged(QDateTime)" ) )
       {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
                                                               (QDateTime arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(QDateTime)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minChanged(QDateTime)" );
 
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(QDateTime,QDateTime)" ) )
       {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
                                                               (QDateTime arg1, QDateTime arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(QDateTime,QDateTime)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(QDateTime,QDateTime)" );
 
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tickCountChanged(int)" ) )
       {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
   {
     QDateTimeAxis * sender = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tickCountChanged(int)" );
 

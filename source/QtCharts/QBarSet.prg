@@ -123,10 +123,10 @@ HB_FUNC_STATIC( QBARSET_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QBARSET_LABEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBARSET_SETLABEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QBARSET_PEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QBARSET_SETPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPEN(1) )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QBARSET_BRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QBARSET_SETBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QBARSET_LABELBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QBARSET_LABELFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QBARSET_COLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QBARSET_SETCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLOR(1) )
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QBARSET_BORDERCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QBARSET_SETBORDERCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLOR(1) )
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QBARSET_LABELCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLOR(1) )
@@ -584,7 +584,7 @@ void QBarSet_append1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->append ( PQREAL(1) );
   }
@@ -601,7 +601,7 @@ void QBarSet_append2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<qreal> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QBARSET_INSERT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QBARSET_REMOVE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QBARSET_REPLACE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QBARSET_AT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QBARSET_COUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QBARSET_SUM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
       {
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
                                                               (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "borderColorChanged(QColor)" );
 
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "brushChanged()" );
 
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QBARSET_ONCLICKED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(int)" ) )
       {
@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QBARSET_ONCLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QBARSET_ONCLICKED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(int)" );
 
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
                                                               (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
 
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "doubleClicked(int)" ) )
       {
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "doubleClicked(int)" );
 
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QBARSET_ONHOVERED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(bool,int)" ) )
       {
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC( QBARSET_ONHOVERED )
                                                               (bool arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QBARSET_ONHOVERED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(bool,int)" );
 
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBrushChanged()" ) )
       {
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBrushChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBrushChanged()" );
 
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelChanged()" ) )
       {
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelChanged()" );
 
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelColorChanged(QColor)" ) )
       {
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
                                                               (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelColorChanged(QColor)" );
 
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelFontChanged()" ) )
       {
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelFontChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1477,7 +1477,7 @@ HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelFontChanged()" );
 
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "penChanged()" ) )
       {
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1545,7 +1545,7 @@ HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "penChanged()" );
 
@@ -1575,7 +1575,7 @@ HB_FUNC_STATIC( QBARSET_ONPRESSED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pressed(int)" ) )
       {
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QBARSET_ONPRESSED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1615,7 +1615,7 @@ HB_FUNC_STATIC( QBARSET_ONPRESSED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pressed(int)" );
 
@@ -1645,7 +1645,7 @@ HB_FUNC_STATIC( QBARSET_ONRELEASED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "released(int)" ) )
       {
@@ -1656,7 +1656,7 @@ HB_FUNC_STATIC( QBARSET_ONRELEASED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1685,7 +1685,7 @@ HB_FUNC_STATIC( QBARSET_ONRELEASED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "released(int)" );
 
@@ -1715,7 +1715,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(int)" ) )
       {
@@ -1726,7 +1726,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1755,7 +1755,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(int)" );
 
@@ -1785,7 +1785,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valuesAdded(int,int)" ) )
       {
@@ -1796,7 +1796,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valuesAdded(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1827,7 +1827,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valuesAdded(int,int)" );
 
@@ -1857,7 +1857,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valuesRemoved(int,int)" ) )
       {
@@ -1868,7 +1868,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valuesRemoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
   {
     QBarSet * sender = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valuesRemoved(int,int)" );
 

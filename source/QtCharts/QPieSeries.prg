@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QPIESERIES_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPIESERIES_HORIZONTALPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QPIESERIES_SETHORIZONTALPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QPIESERIES_VERTICALPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QPIESERIES_SETVERTICALPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QPIESERIES_PIESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QPIESERIES_SETPIESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QPIESERIES_PIESTARTANGLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QPIESERIES_SETPIESTARTANGLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QPIESERIES_PIEENDANGLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QPIESERIES_SETPIEENDANGLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QPIESERIES_COUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QPIESERIES_SUM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QPIESERIES_HOLESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QPIESERIES_SETHOLESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QPIESERIES_TYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -538,7 +538,7 @@ void QPieSeries_append1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->append ( PQPIESLICE(1) ) );
   }
@@ -553,7 +553,7 @@ void QPieSeries_append2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
        QList<QPieSlice *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -576,7 +576,7 @@ void QPieSeries_append3 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QPieSlice * ptr = obj->append ( PQSTRING(1), PQREAL(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPIESLICE" );
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QPIESERIES_INSERT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQPIESLICE(2) )
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QPIESERIES_REMOVE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPIESLICE(1) )
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QPIESERIES_TAKE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPIESLICE(1) )
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QPIESERIES_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QPIESERIES_SLICES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QPIESERIES_ISEMPTY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "added(QList<QPieSlice*>)" ) )
       {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
                                                               (QList<QPieSlice*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "added(QList<QPieSlice*>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "added(QList<QPieSlice*>)" );
 
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(QPieSlice*)" ) )
       {
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
                                                               (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPieSlice*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(QPieSlice*)" );
 
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "countChanged()" ) )
       {
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "countChanged()" );
 
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "doubleClicked(QPieSlice*)" ) )
       {
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
                                                               (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPieSlice*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "doubleClicked(QPieSlice*)" );
 
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(QPieSlice*,bool)" ) )
       {
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
                                                               (QPieSlice * arg1, bool arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPieSlice*,bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(QPieSlice*,bool)" );
 
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pressed(QPieSlice*)" ) )
       {
@@ -1243,7 +1243,7 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
                                                               (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPieSlice*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
@@ -1272,7 +1272,7 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pressed(QPieSlice*)" );
 
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "released(QPieSlice*)" ) )
       {
@@ -1313,7 +1313,7 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
                                                               (QPieSlice * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPieSlice*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "released(QPieSlice*)" );
 
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "removed(QList<QPieSlice*>)" ) )
       {
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
                                                               (QList<QPieSlice*> arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "removed(QList<QPieSlice*>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "removed(QList<QPieSlice*>)" );
 
@@ -1465,7 +1465,7 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sumChanged()" ) )
       {
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sumChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1503,7 +1503,7 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
   {
     QPieSeries * sender = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sumChanged()" );
 

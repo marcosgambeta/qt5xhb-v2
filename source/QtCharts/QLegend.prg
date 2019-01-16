@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QLEGEND_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QLEGEND_ALIGNMENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QLEGEND_ISBACKGROUNDVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QLEGEND_SETBACKGROUNDVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QLEGEND_COLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QLEGEND_SETCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLOR(1) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QLEGEND_BORDERCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QLEGEND_SETBORDERCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLOR(1) )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QLEGEND_FONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QLEGEND_SETFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QLEGEND_LABELCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QLEGEND_SETLABELCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLOR(1) )
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QLEGEND_REVERSEMARKERS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QLEGEND_SETREVERSEMARKERS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QLEGEND_SHOWTOOLTIPS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QLEGEND_SETSHOWTOOLTIPS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERSHAPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QLEGEND_PAINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QLEGEND_SETBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QLEGEND_BRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QLEGEND_SETPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPEN(1) )
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QLEGEND_PEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QLEGEND_SETLABELBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QLEGEND_LABELBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QLEGEND_SETALIGNMENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QLEGEND_DETACHFROMCHART )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QLEGEND_ATTACHTOCHART )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QLEGEND_ISATTACHEDTOCHART )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backgroundVisibleChanged(bool)" ) )
       {
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundVisibleChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backgroundVisibleChanged(bool)" );
 
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
       {
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
                                                               (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "borderColorChanged(QColor)" );
 
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
                                                               (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
 
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontChanged(QFont)" ) )
       {
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
                                                               (QFont arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontChanged(QFont)" );
 
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelColorChanged(QColor)" ) )
       {
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
                                                               (QColor arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelColorChanged(QColor)" );
 
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "markerShapeChanged(QLegend::MarkerShape)" ) )
       {
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
                                                               (QLegend::MarkerShape arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "markerShapeChanged(QLegend::MarkerShape)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "markerShapeChanged(QLegend::MarkerShape)" );
 
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "reverseMarkersChanged(bool)" ) )
       {
@@ -1388,7 +1388,7 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "reverseMarkersChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "reverseMarkersChanged(bool)" );
 
@@ -1447,7 +1447,7 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "showToolTipsChanged(bool)" ) )
       {
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "showToolTipsChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
   {
     QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "showToolTipsChanged(bool)" );
 
