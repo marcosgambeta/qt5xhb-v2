@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -352,7 +352,7 @@ void QSvgRenderer_setViewBox1 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setViewBox ( *PQRECT(1) );
   }
@@ -367,7 +367,7 @@ void QSvgRenderer_setViewBox2 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setViewBox ( *PQRECTF(1) );
   }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -451,7 +451,7 @@ void QSvgRenderer_load1 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( PQSTRING(1) ) );
   }
@@ -464,7 +464,7 @@ void QSvgRenderer_load2 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( *PQBYTEARRAY(1) ) );
   }
@@ -477,7 +477,7 @@ void QSvgRenderer_load3 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       RBOOL( obj->load ( PQXMLSTREAMREADER(1) ) );
   }
@@ -514,7 +514,7 @@ void QSvgRenderer_render1 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->render ( PQPAINTER(1) );
   }
@@ -529,7 +529,7 @@ void QSvgRenderer_render2 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->render ( PQPAINTER(1), *PQRECTF(2) );
   }
@@ -544,7 +544,7 @@ void QSvgRenderer_render3 ()
 {
   QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->render ( PQPAINTER(1), PQSTRING(2), ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3) );
   }
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
   {
     QSvgRenderer * sender = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "repaintNeeded()" ) )
       {
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "repaintNeeded()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSVGRENDERER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
   {
     QSvgRenderer * sender = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "repaintNeeded()" );
 
