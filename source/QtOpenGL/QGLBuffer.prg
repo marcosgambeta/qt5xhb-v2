@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QGLBUFFER_DELETE )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -146,7 +146,7 @@ void QGLBuffer_allocate1 ()
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->allocate ( (const void *) hb_parptr(1), PINT(2) );
   }
@@ -161,7 +161,7 @@ void QGLBuffer_allocate2 ()
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->allocate ( PINT(1) );
   }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
@@ -365,7 +365,7 @@ void QGLBuffer_release1 ()
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->release ();
   }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QGLBUFFER_WRITE )
 {
   QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
