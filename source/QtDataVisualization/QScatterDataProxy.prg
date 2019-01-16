@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_DELETE )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMCOUNT )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ADDITEM )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSCATTERDATAITEM(1) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
 {
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "arrayReset()" ) )
       {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "arrayReset()" );
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemCountChanged(int)" ) )
       {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemCountChanged(int)" );
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsAdded(int,int)" ) )
       {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsAdded(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsAdded(int,int)" );
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsChanged(int,int)" ) )
       {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsChanged(int,int)" );
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsInserted(int,int)" ) )
       {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsInserted(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsInserted(int,int)" );
 
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsRemoved(int,int)" ) )
       {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemsRemoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsRemoved(int,int)" );
 
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seriesChanged(QScatter3DSeries*)" ) )
       {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
                                                               (QScatter3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QScatter3DSeries*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES" );
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
   {
     QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seriesChanged(QScatter3DSeries*)" );
 

@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_DELETE )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXT )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXT )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_FONT )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFONT )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXTCOLOR )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_BACKGROUNDCOLOR )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBORDERENABLED )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBORDERENABLED )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBACKGROUNDENABLED )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDENABLED )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISFACINGCAMERA )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backgroundColorChanged(QColor)" ) )
       {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backgroundColorChanged(QColor)" );
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backgroundEnabledChanged(bool)" ) )
       {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backgroundEnabledChanged(bool)" );
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "borderEnabledChanged(bool)" ) )
       {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "borderEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "borderEnabledChanged(bool)" );
 
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "facingCameraChanged(bool)" ) )
       {
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "facingCameraChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "facingCameraChanged(bool)" );
 
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontChanged(QFont)" ) )
       {
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontChanged(QFont)" );
 
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textChanged(QString)" ) )
       {
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textChanged(QString)" );
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textColorChanged(QColor)" ) )
       {
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
   {
     QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textColorChanged(QColor)" );
 

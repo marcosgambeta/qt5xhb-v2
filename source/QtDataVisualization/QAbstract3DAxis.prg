@@ -89,10 +89,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_TITLE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELS )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELS )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ORIENTATION )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_TYPE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MIN )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMIN )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MAX )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMAX )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISAUTOADJUSTRANGE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETAUTOADJUSTRANGE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELAUTOROTATION )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELAUTOROTATION )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEVISIBLE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEVISIBLE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEFIXED )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEFIXED )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
 
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsChanged()" ) )
       {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsChanged()" );
 
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" ) )
       {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
                                                               (QAbstract3DAxis::AxisOrientation arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
 
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minChanged(float)" ) )
       {
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minChanged(float)" );
 
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxChanged(float)" ) )
       {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxChanged(float)" );
 
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(float,float)" ) )
       {
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
                                                               (float arg1, float arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(float,float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(float,float)" );
 
@@ -995,7 +995,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "autoAdjustRangeChanged(bool)" ) )
       {
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoAdjustRangeChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "autoAdjustRangeChanged(bool)" );
 
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelAutoRotationChanged(float)" ) )
       {
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelAutoRotationChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelAutoRotationChanged(float)" );
 
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleVisibilityChanged(bool)" ) )
       {
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleVisibilityChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleVisibilityChanged(bool)" );
 
@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleFixedChanged(bool)" ) )
       {
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleFixedChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1239,7 +1239,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
   {
     QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleFixedChanged(bool)" );
 

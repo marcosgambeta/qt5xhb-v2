@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREWIDTH )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREWIDTH )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREHEIGHT )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREHEIGHT )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDEPTH )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDEPTH )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXX )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXX )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXY )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXY )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXZ )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXZ )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ALPHAMULTIPLIER )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETALPHAMULTIPLIER )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_PRESERVEOPACITY )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETPRESERVEOPACITY )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_USEHIGHDEFSHADER )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICES )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICES )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICEFRAMES )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMECOLOR )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEGAPS )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDATAWIDTH )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
@@ -1012,7 +1012,7 @@ void QCustom3DVolume_setSubTextureData1 ()
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), PCONSTUCHAR(3) );
   }
@@ -1027,7 +1027,7 @@ void QCustom3DVolume_setSubTextureData2 ()
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), *PQIMAGE(3) );
   }
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREFORMAT )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREFORMAT )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "alphaMultiplierChanged(float)" ) )
       {
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "alphaMultiplierChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "alphaMultiplierChanged(float)" );
 
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorTableChanged()" ) )
       {
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorTableChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorTableChanged()" );
 
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "drawSliceFramesChanged(bool)" ) )
       {
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "drawSliceFramesChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1314,7 +1314,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "drawSliceFramesChanged(bool)" );
 
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "drawSlicesChanged(bool)" ) )
       {
@@ -1353,7 +1353,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "drawSlicesChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "drawSlicesChanged(bool)" );
 
@@ -1410,7 +1410,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "preserveOpacityChanged(bool)" ) )
       {
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "preserveOpacityChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "preserveOpacityChanged(bool)" );
 
@@ -1478,7 +1478,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliceFrameColorChanged(QColor)" ) )
       {
@@ -1489,7 +1489,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliceFrameColorChanged(QColor)" );
 
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliceFrameGapsChanged(QVector3D)" ) )
       {
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameGapsChanged(QVector3D)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliceFrameGapsChanged(QVector3D)" );
 
@@ -1614,7 +1614,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliceFrameThicknessesChanged(QVector3D)" ) )
       {
@@ -1625,7 +1625,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameThicknessesChanged(QVector3D)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
@@ -1654,7 +1654,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliceFrameThicknessesChanged(QVector3D)" );
 
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliceFrameWidthsChanged(QVector3D)" ) )
       {
@@ -1693,7 +1693,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceFrameWidthsChanged(QVector3D)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
@@ -1722,7 +1722,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliceFrameWidthsChanged(QVector3D)" );
 
@@ -1750,7 +1750,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliceIndexXChanged(int)" ) )
       {
@@ -1761,7 +1761,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexXChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1790,7 +1790,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliceIndexXChanged(int)" );
 
@@ -1818,7 +1818,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliceIndexYChanged(int)" ) )
       {
@@ -1829,7 +1829,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexYChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1858,7 +1858,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliceIndexYChanged(int)" );
 
@@ -1886,7 +1886,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliceIndexZChanged(int)" ) )
       {
@@ -1897,7 +1897,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sliceIndexZChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1926,7 +1926,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliceIndexZChanged(int)" );
 
@@ -1954,7 +1954,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureDepthChanged(int)" ) )
       {
@@ -1965,7 +1965,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureDepthChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1994,7 +1994,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureDepthChanged(int)" );
 
@@ -2022,7 +2022,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureFormatChanged(QImage::Format)" ) )
       {
@@ -2033,7 +2033,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
                                                               (QImage::Format arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFormatChanged(QImage::Format)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -2062,7 +2062,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureFormatChanged(QImage::Format)" );
 
@@ -2090,7 +2090,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureHeightChanged(int)" ) )
       {
@@ -2101,7 +2101,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureHeightChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2130,7 +2130,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureHeightChanged(int)" );
 
@@ -2158,7 +2158,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureWidthChanged(int)" ) )
       {
@@ -2169,7 +2169,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureWidthChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2198,7 +2198,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureWidthChanged(int)" );
 
@@ -2226,7 +2226,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "useHighDefShaderChanged(bool)" ) )
       {
@@ -2237,7 +2237,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "useHighDefShaderChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2266,7 +2266,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
   {
     QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "useHighDefShaderChanged(bool)" );
 

@@ -168,10 +168,10 @@ HB_FUNC_STATIC( Q3DTHEME_DELETE )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( Q3DTHEME_TYPE )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETTYPE )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBASECOLORS )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( Q3DTHEME_BACKGROUNDCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( Q3DTHEME_WINDOWCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETWINDOWCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELTEXTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELTEXTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELBACKGROUNDCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( Q3DTHEME_GRIDLINECOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETGRIDLINECOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLIGHTCOLOR )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBASEGRADIENTS )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTGRADIENT )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTGRADIENT )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTSTRENGTH )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLIGHTSTRENGTH )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( Q3DTHEME_AMBIENTLIGHTSTRENGTH )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETAMBIENTLIGHTSTRENGTH )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBORDERENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBORDERENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( Q3DTHEME_FONT )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETFONT )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISBACKGROUNDENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISGRIDENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETGRIDENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBACKGROUNDENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDENABLED )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC( Q3DTHEME_COLORSTYLE )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETCOLORSTYLE )
 {
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "ambientLightStrengthChanged(float)" ) )
       {
@@ -1388,7 +1388,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "ambientLightStrengthChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "ambientLightStrengthChanged(float)" );
 
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backgroundColorChanged(QColor)" ) )
       {
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -1485,7 +1485,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backgroundColorChanged(QColor)" );
 
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backgroundEnabledChanged(bool)" ) )
       {
@@ -1524,7 +1524,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1553,7 +1553,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backgroundEnabledChanged(bool)" );
 
@@ -1581,7 +1581,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseColorsChanged(QList<QColor>)" ) )
       {
@@ -1592,7 +1592,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
                                                               (const QList<QColor> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseColorsChanged(QList<QColor>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseColorsChanged(QList<QColor>)" );
 
@@ -1672,7 +1672,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseGradientsChanged(QList<QLinearGradient>)" ) )
       {
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
                                                               (const QList<QLinearGradient> & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseGradientsChanged(QList<QLinearGradient>)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QLINEARGRADIENT" );
@@ -1735,7 +1735,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseGradientsChanged(QList<QLinearGradient>)" );
 
@@ -1763,7 +1763,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" ) )
       {
@@ -1774,7 +1774,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
                                                               (Q3DTheme::ColorStyle arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1803,7 +1803,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" );
 
@@ -1831,7 +1831,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontChanged(QFont)" ) )
       {
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
@@ -1871,7 +1871,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontChanged(QFont)" );
 
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gridEnabledChanged(bool)" ) )
       {
@@ -1910,7 +1910,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gridEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1939,7 +1939,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gridEnabledChanged(bool)" );
 
@@ -1967,7 +1967,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gridLineColorChanged(QColor)" ) )
       {
@@ -1978,7 +1978,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "gridLineColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -2007,7 +2007,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gridLineColorChanged(QColor)" );
 
@@ -2035,7 +2035,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlightLightStrengthChanged(float)" ) )
       {
@@ -2046,7 +2046,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "highlightLightStrengthChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -2075,7 +2075,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlightLightStrengthChanged(float)" );
 
@@ -2103,7 +2103,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBackgroundColorChanged(QColor)" ) )
       {
@@ -2114,7 +2114,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBackgroundColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -2143,7 +2143,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBackgroundColorChanged(QColor)" );
 
@@ -2171,7 +2171,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBackgroundEnabledChanged(bool)" ) )
       {
@@ -2182,7 +2182,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBackgroundEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2211,7 +2211,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBackgroundEnabledChanged(bool)" );
 
@@ -2239,7 +2239,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBorderEnabledChanged(bool)" ) )
       {
@@ -2250,7 +2250,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelBorderEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2279,7 +2279,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBorderEnabledChanged(bool)" );
 
@@ -2307,7 +2307,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelTextColorChanged(QColor)" ) )
       {
@@ -2318,7 +2318,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "labelTextColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -2347,7 +2347,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelTextColorChanged(QColor)" );
 
@@ -2375,7 +2375,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lightColorChanged(QColor)" ) )
       {
@@ -2386,7 +2386,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lightColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -2415,7 +2415,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lightColorChanged(QColor)" );
 
@@ -2443,7 +2443,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lightStrengthChanged(float)" ) )
       {
@@ -2454,7 +2454,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "lightStrengthChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -2483,7 +2483,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lightStrengthChanged(float)" );
 
@@ -2511,7 +2511,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiHighlightColorChanged(QColor)" ) )
       {
@@ -2522,7 +2522,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiHighlightColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -2551,7 +2551,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiHighlightColorChanged(QColor)" );
 
@@ -2579,7 +2579,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiHighlightGradientChanged(QLinearGradient)" ) )
       {
@@ -2590,7 +2590,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
                                                               (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiHighlightGradientChanged(QLinearGradient)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QLINEARGRADIENT" );
@@ -2619,7 +2619,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiHighlightGradientChanged(QLinearGradient)" );
 
@@ -2647,7 +2647,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "singleHighlightColorChanged(QColor)" ) )
       {
@@ -2658,7 +2658,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "singleHighlightColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -2687,7 +2687,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "singleHighlightColorChanged(QColor)" );
 
@@ -2715,7 +2715,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "singleHighlightGradientChanged(QLinearGradient)" ) )
       {
@@ -2726,7 +2726,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
                                                               (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "singleHighlightGradientChanged(QLinearGradient)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QLINEARGRADIENT" );
@@ -2755,7 +2755,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "singleHighlightGradientChanged(QLinearGradient)" );
 
@@ -2783,7 +2783,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "typeChanged(Q3DTheme::Theme)" ) )
       {
@@ -2794,7 +2794,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
                                                               (Q3DTheme::Theme arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "typeChanged(Q3DTheme::Theme)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -2823,7 +2823,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "typeChanged(Q3DTheme::Theme)" );
 
@@ -2851,7 +2851,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowColorChanged(QColor)" ) )
       {
@@ -2862,7 +2862,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "windowColorChanged(QColor)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
@@ -2891,7 +2891,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
   {
     Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowColorChanged(QColor)" );
 

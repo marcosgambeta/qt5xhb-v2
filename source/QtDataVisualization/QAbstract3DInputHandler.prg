@@ -71,10 +71,10 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DSCENE(1) )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
   {
     QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" ) )
       {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
                                                               (QAbstract3DInputHandler::InputView arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
   {
     QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
   {
     QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionChanged(QPoint)" ) )
       {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QPoint)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
   {
     QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionChanged(QPoint)" );
 
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
   {
     QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sceneChanged(Q3DScene*)" ) )
       {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
                                                               (Q3DScene * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneChanged(Q3DScene*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DSCENE" );
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
   {
     QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sceneChanged(Q3DScene*)" );
 

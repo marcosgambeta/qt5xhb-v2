@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_DELETE )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACT3DINPUTHANDLER(1) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVETHEME )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVETHEME )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DTHEME(1) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTIONMODE )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSELECTIONMODE )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWQUALITY )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSHADOWQUALITY )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SCENE )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_MEASUREFPS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMEASUREFPS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CURRENTFPS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISORTHOPROJECTION )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETORTHOPROJECTION )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDELEMENT )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ASPECTRATIO )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETASPECTRATIO )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_OPTIMIZATIONHINTS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISPOLAR )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETPOLAR )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RADIALLABELOFFSET )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETRADIALLABELOFFSET )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISREFLECTION )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTION )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REFLECTIVITY )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTIVITY )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_LOCALE )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETLOCALE )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_MARGIN )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMARGIN )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDINPUTHANDLER )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACT3DINPUTHANDLER(1) )
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASEINPUTHANDLER )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACT3DINPUTHANDLER(1) )
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1115,7 +1115,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDTHEME )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DTHEME(1) )
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASETHEME )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DTHEME(1) )
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWSSUPPORTED )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CLEARSELECTION )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDCUSTOMITEM )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCUSTOM3DITEM(1) )
@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1316,7 +1316,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEM )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCUSTOM3DITEM(1) )
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASECUSTOMITEM )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCUSTOM3DITEM(1) )
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDAXIS )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDLABELINDEX )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1516,7 +1516,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1541,7 +1541,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RENDERTOIMAGE )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQSIZE(2)||ISNIL(2)) )
@@ -1566,7 +1566,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_HASCONTEXT )
 {
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1630,7 +1630,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" ) )
       {
@@ -1641,7 +1641,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
                                                               (QAbstract3DInputHandler * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACT3DINPUTHANDLER" );
@@ -1670,7 +1670,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
 
@@ -1698,7 +1698,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeThemeChanged(Q3DTheme*)" ) )
       {
@@ -1709,7 +1709,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
                                                               (Q3DTheme * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeThemeChanged(Q3DTheme*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DTHEME" );
@@ -1738,7 +1738,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeThemeChanged(Q3DTheme*)" );
 
@@ -1766,7 +1766,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aspectRatioChanged(qreal)" ) )
       {
@@ -1777,7 +1777,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "aspectRatioChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1806,7 +1806,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aspectRatioChanged(qreal)" );
 
@@ -1834,7 +1834,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentFpsChanged(qreal)" ) )
       {
@@ -1845,7 +1845,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "currentFpsChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1874,7 +1874,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentFpsChanged(qreal)" );
 
@@ -1902,7 +1902,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "horizontalAspectRatioChanged(qreal)" ) )
       {
@@ -1913,7 +1913,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "horizontalAspectRatioChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1942,7 +1942,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "horizontalAspectRatioChanged(qreal)" );
 
@@ -1970,7 +1970,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
       {
@@ -1981,7 +1981,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
                                                               (const QLocale & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged(QLocale)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QLOCALE" );
@@ -2010,7 +2010,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "localeChanged(QLocale)" );
 
@@ -2038,7 +2038,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "marginChanged(qreal)" ) )
       {
@@ -2049,7 +2049,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "marginChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -2078,7 +2078,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "marginChanged(qreal)" );
 
@@ -2106,7 +2106,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "measureFpsChanged(bool)" ) )
       {
@@ -2117,7 +2117,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "measureFpsChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2146,7 +2146,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "measureFpsChanged(bool)" );
 
@@ -2174,7 +2174,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" ) )
       {
@@ -2185,7 +2185,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
                                                               (QAbstract3DGraph::OptimizationHints arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -2214,7 +2214,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
 
@@ -2242,7 +2242,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orthoProjectionChanged(bool)" ) )
       {
@@ -2253,7 +2253,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "orthoProjectionChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2282,7 +2282,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orthoProjectionChanged(bool)" );
 
@@ -2310,7 +2310,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "polarChanged(bool)" ) )
       {
@@ -2321,7 +2321,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "polarChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2350,7 +2350,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "polarChanged(bool)" );
 
@@ -2378,7 +2378,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "queriedGraphPositionChanged(QVector3D)" ) )
       {
@@ -2389,7 +2389,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "queriedGraphPositionChanged(QVector3D)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
@@ -2418,7 +2418,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "queriedGraphPositionChanged(QVector3D)" );
 
@@ -2446,7 +2446,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "radialLabelOffsetChanged(float)" ) )
       {
@@ -2457,7 +2457,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "radialLabelOffsetChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -2486,7 +2486,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "radialLabelOffsetChanged(float)" );
 
@@ -2514,7 +2514,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "reflectionChanged(bool)" ) )
       {
@@ -2525,7 +2525,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "reflectionChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2554,7 +2554,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "reflectionChanged(bool)" );
 
@@ -2582,7 +2582,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "reflectivityChanged(qreal)" ) )
       {
@@ -2593,7 +2593,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "reflectivityChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -2622,7 +2622,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "reflectivityChanged(qreal)" );
 
@@ -2650,7 +2650,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" ) )
       {
@@ -2661,7 +2661,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
                                                               (QAbstract3DGraph::ElementType arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -2690,7 +2690,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
 
@@ -2718,7 +2718,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" ) )
       {
@@ -2729,7 +2729,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
                                                               (QAbstract3DGraph::SelectionFlags arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -2758,7 +2758,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
 
@@ -2786,7 +2786,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" ) )
       {
@@ -2797,7 +2797,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
                                                               (QAbstract3DGraph::ShadowQuality arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DGRAPH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -2826,7 +2826,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
   {
     QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
 

@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDATAPROXY )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACEDATAPROXY(1) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGENABLED )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DRAWMODE )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIMAGE(1) )
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTUREFILE )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataProxyChanged(QSurfaceDataProxy*)" ) )
       {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
                                                               (QSurfaceDataProxy * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QSurfaceDataProxy*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSURFACEDATAPROXY" );
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataProxyChanged(QSurfaceDataProxy*)" );
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" ) )
       {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
                                                               (QSurface3DSeries::DrawFlags arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
 
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flatShadingEnabledChanged(bool)" ) )
       {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flatShadingEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flatShadingEnabledChanged(bool)" );
 
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flatShadingSupportedChanged(bool)" ) )
       {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flatShadingSupportedChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flatShadingSupportedChanged(bool)" );
 
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedPointChanged(QPoint)" ) )
       {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedPointChanged(QPoint)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedPointChanged(QPoint)" );
 
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureChanged(QImage)" ) )
       {
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
                                                               (const QImage & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureChanged(QImage)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QIMAGE" );
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureChanged(QImage)" );
 
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureFileChanged(QString)" ) )
       {
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFileChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACE3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
   {
     QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureFileChanged(QString)" );
 

@@ -85,10 +85,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_DELETE )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISROTATIONENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISSELECTIONENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMATTARGETENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationEnabledChanged(bool)" ) )
       {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationEnabledChanged(bool)" );
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionEnabledChanged(bool)" ) )
       {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionEnabledChanged(bool)" );
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zoomAtTargetEnabledChanged(bool)" ) )
       {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomAtTargetEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zoomAtTargetEnabledChanged(bool)" );
 
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zoomEnabledChanged(bool)" ) )
       {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomEnabledChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
   {
     Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zoomEnabledChanged(bool)" );
 

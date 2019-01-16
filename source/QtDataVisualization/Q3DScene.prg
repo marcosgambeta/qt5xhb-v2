@@ -109,10 +109,10 @@ HB_FUNC_STATIC( Q3DSCENE_DELETE )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DCAMERA(1) )
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DLIGHT(1) )
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
 {
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeCameraChanged(Q3DCamera*)" ) )
       {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
                                                               (Q3DCamera * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeCameraChanged(Q3DCamera*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DCAMERA" );
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeCameraChanged(Q3DCamera*)" );
 
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeLightChanged(Q3DLight*)" ) )
       {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
                                                               (Q3DLight * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "activeLightChanged(Q3DLight*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DLIGHT" );
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeLightChanged(Q3DLight*)" );
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "devicePixelRatioChanged(float)" ) )
       {
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "devicePixelRatioChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "devicePixelRatioChanged(float)" );
 
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "graphPositionQueryChanged(QPoint)" ) )
       {
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "graphPositionQueryChanged(QPoint)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "graphPositionQueryChanged(QPoint)" );
 
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "primarySubViewportChanged(QRect)" ) )
       {
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primarySubViewportChanged(QRect)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "primarySubViewportChanged(QRect)" );
 
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "secondarySubviewOnTopChanged(bool)" ) )
       {
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubviewOnTopChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "secondarySubviewOnTopChanged(bool)" );
 
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "secondarySubViewportChanged(QRect)" ) )
       {
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubViewportChanged(QRect)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "secondarySubViewportChanged(QRect)" );
 
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionQueryPositionChanged(QPoint)" ) )
       {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionQueryPositionChanged(QPoint)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionQueryPositionChanged(QPoint)" );
 
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "slicingActiveChanged(bool)" ) )
       {
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "slicingActiveChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "slicingActiveChanged(bool)" );
 
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "viewportChanged(QRect)" ) )
       {
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportChanged(QRect)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
@@ -1334,7 +1334,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
   {
     Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "viewportChanged(QRect)" );
 

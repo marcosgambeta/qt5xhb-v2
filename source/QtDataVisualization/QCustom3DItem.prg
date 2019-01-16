@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_DELETE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_MESHFILE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETMESHFILE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_TEXTUREFILE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREFILE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_POSITION )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITION )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISPOSITIONABSOLUTE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITIONABSOLUTE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SCALING )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALING )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ROTATION )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATION )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQQUATERNION(1) )
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISVISIBLE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETVISIBLE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISSHADOWCASTING )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSHADOWCASTING )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISSCALINGABSOLUTE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALINGABSOLUTE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATIONAXISANDANGLE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISNUM(2) )
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
 {
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIMAGE(1) )
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "meshFileChanged(QString)" ) )
       {
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "meshFileChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "meshFileChanged(QString)" );
 
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionAbsoluteChanged(bool)" ) )
       {
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionAbsoluteChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionAbsoluteChanged(bool)" );
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionChanged(QVector3D)" ) )
       {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QVector3D)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionChanged(QVector3D)" );
 
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationChanged(QQuaternion)" ) )
       {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
                                                               (const QQuaternion & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationChanged(QQuaternion)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QQUATERNION" );
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationChanged(QQuaternion)" );
 
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "scalingAbsoluteChanged(bool)" ) )
       {
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scalingAbsoluteChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -970,7 +970,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "scalingAbsoluteChanged(bool)" );
 
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "scalingChanged(QVector3D)" ) )
       {
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "scalingChanged(QVector3D)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "scalingChanged(QVector3D)" );
 
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadowCastingChanged(bool)" ) )
       {
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "shadowCastingChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadowCastingChanged(bool)" );
 
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureFileChanged(QString)" ) )
       {
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "textureFileChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureFileChanged(QString)" );
 
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged(bool)" ) )
       {
@@ -1213,7 +1213,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "visibleChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCUSTOM3DITEM" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
   {
     QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged(bool)" );
 

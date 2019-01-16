@@ -86,10 +86,10 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
   {
     QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "autoSubGridChanged(bool)" ) )
       {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoSubGridChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
   {
     QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "autoSubGridChanged(bool)" );
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
   {
     QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseChanged(qreal)" ) )
       {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "baseChanged(qreal)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
   {
     QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseChanged(qreal)" );
 
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
   {
     QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "showEdgeLabelsChanged(bool)" ) )
       {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "showEdgeLabelsChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
   {
     QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "showEdgeLabelsChanged(bool)" );
 

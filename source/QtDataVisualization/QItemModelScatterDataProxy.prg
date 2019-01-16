@@ -164,10 +164,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ITEMMODEL )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETITEMMODEL )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_REMAP )
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) )
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemModelChanged(QAbstractItemModel*)" ) )
       {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
                                                               (const QAbstractItemModel * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemModelChanged(QAbstractItemModel*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemModelChanged(QAbstractItemModel*)" );
 
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRoleChanged(QString)" ) )
       {
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRoleChanged(QString)" );
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRolePatternChanged(QRegExp)" ) )
       {
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRolePatternChanged(QRegExp)" );
 
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRoleReplaceChanged(QString)" ) )
       {
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRoleReplaceChanged(QString)" );
 
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xPosRoleChanged(QString)" ) )
       {
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xPosRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xPosRoleChanged(QString)" );
 
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xPosRolePatternChanged(QRegExp)" ) )
       {
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xPosRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xPosRolePatternChanged(QRegExp)" );
 
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xPosRoleReplaceChanged(QString)" ) )
       {
@@ -1288,7 +1288,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "xPosRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xPosRoleReplaceChanged(QString)" );
 
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yPosRoleChanged(QString)" ) )
       {
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yPosRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yPosRoleChanged(QString)" );
 
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yPosRolePatternChanged(QRegExp)" ) )
       {
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yPosRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -1453,7 +1453,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yPosRolePatternChanged(QRegExp)" );
 
@@ -1481,7 +1481,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yPosRoleReplaceChanged(QString)" ) )
       {
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "yPosRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1521,7 +1521,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yPosRoleReplaceChanged(QString)" );
 
@@ -1549,7 +1549,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zPosRoleChanged(QString)" ) )
       {
@@ -1560,7 +1560,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zPosRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zPosRoleChanged(QString)" );
 
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zPosRolePatternChanged(QRegExp)" ) )
       {
@@ -1628,7 +1628,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zPosRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -1657,7 +1657,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zPosRolePatternChanged(QRegExp)" );
 
@@ -1685,7 +1685,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zPosRoleReplaceChanged(QString)" ) )
       {
@@ -1696,7 +1696,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "zPosRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1725,7 +1725,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
   {
     QItemModelScatterDataProxy * sender = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zPosRoleReplaceChanged(QString)" );
 

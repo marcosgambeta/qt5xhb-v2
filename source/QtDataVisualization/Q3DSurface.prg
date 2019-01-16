@@ -95,10 +95,10 @@ HB_FUNC_STATIC( Q3DSURFACE_DELETE )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
 {
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
       {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisXChanged(QValue3DAxis*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisXChanged(QValue3DAxis*)" );
 
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
       {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisYChanged(QValue3DAxis*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisYChanged(QValue3DAxis*)" );
 
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
       {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisZChanged(QValue3DAxis*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisZChanged(QValue3DAxis*)" );
 
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flipHorizontalGridChanged(bool)" ) )
       {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "flipHorizontalGridChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flipHorizontalGridChanged(bool)" );
 
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedSeriesChanged(QSurface3DSeries*)" ) )
       {
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
                                                               (QSurface3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QSurface3DSeries*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSURFACE3DSERIES" );
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
   {
     Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedSeriesChanged(QSurface3DSeries*)" );
 

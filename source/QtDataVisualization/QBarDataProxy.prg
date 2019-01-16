@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_DELETE )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -284,7 +284,7 @@ void QBarDataProxy_itemAt1 ()
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       const QBarDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
@@ -298,7 +298,7 @@ void QBarDataProxy_itemAt2 ()
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       const QBarDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
@@ -381,7 +381,7 @@ void QBarDataProxy_setItem1 ()
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setItem ( PINT(1), PINT(2), *PQBARDATAITEM(3) );
   }
@@ -396,7 +396,7 @@ void QBarDataProxy_setItem2 ()
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setItem ( *PQPOINT(1), *PQBARDATAITEM(2) );
   }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTLOG(3) )
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "arrayReset()" ) )
       {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "arrayReset()" );
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnLabelsChanged()" ) )
       {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnLabelsChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnLabelsChanged()" );
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemChanged(int,int)" ) )
       {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemChanged(int,int)" );
 
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowCountChanged(int)" ) )
       {
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowCountChanged(int)" );
 
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowLabelsChanged()" ) )
       {
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowLabelsChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowLabelsChanged()" );
 
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
       {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAdded(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsAdded(int,int)" );
 
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
       {
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsChanged(int,int)" );
 
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
       {
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsInserted(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsInserted(int,int)" );
 
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
       {
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsRemoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsRemoved(int,int)" );
 
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seriesChanged(QBar3DSeries*)" ) )
       {
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
                                                               (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QBar3DSeries*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBARDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
   {
     QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seriesChanged(QBar3DSeries*)" );
 

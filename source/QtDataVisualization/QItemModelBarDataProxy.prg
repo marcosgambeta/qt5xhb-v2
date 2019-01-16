@@ -226,10 +226,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_DELETE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ITEMMODEL )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETITEMMODEL )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_USEMODELCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_REMAP )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(6) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) && ISARRAY(5) && ISARRAY(6) )
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX )
 {
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1279,7 +1279,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "autoColumnCategoriesChanged(bool)" ) )
       {
@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoColumnCategoriesChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1319,7 +1319,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "autoColumnCategoriesChanged(bool)" );
 
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "autoRowCategoriesChanged(bool)" ) )
       {
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "autoRowCategoriesChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "autoRowCategoriesChanged(bool)" );
 
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnCategoriesChanged()" ) )
       {
@@ -1426,7 +1426,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCategoriesChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1453,7 +1453,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnCategoriesChanged()" );
 
@@ -1481,7 +1481,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnRoleChanged(QString)" ) )
       {
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1521,7 +1521,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnRoleChanged(QString)" );
 
@@ -1549,7 +1549,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnRolePatternChanged(QRegExp)" ) )
       {
@@ -1560,7 +1560,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnRolePatternChanged(QRegExp)" );
 
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnRoleReplaceChanged(QString)" ) )
       {
@@ -1628,7 +1628,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1657,7 +1657,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnRoleReplaceChanged(QString)" );
 
@@ -1685,7 +1685,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemModelChanged(QAbstractItemModel*)" ) )
       {
@@ -1696,7 +1696,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
                                                               (const QAbstractItemModel * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemModelChanged(QAbstractItemModel*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
@@ -1725,7 +1725,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemModelChanged(QAbstractItemModel*)" );
 
@@ -1753,7 +1753,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" ) )
       {
@@ -1764,7 +1764,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
                                                               (QItemModelBarDataProxy::MultiMatchBehavior arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
@@ -1793,7 +1793,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
 
@@ -1821,7 +1821,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRoleChanged(QString)" ) )
       {
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1861,7 +1861,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRoleChanged(QString)" );
 
@@ -1889,7 +1889,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRolePatternChanged(QRegExp)" ) )
       {
@@ -1900,7 +1900,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -1929,7 +1929,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRolePatternChanged(QRegExp)" );
 
@@ -1957,7 +1957,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRoleReplaceChanged(QString)" ) )
       {
@@ -1968,7 +1968,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rotationRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1997,7 +1997,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRoleReplaceChanged(QString)" );
 
@@ -2025,7 +2025,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowCategoriesChanged()" ) )
       {
@@ -2036,7 +2036,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCategoriesChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -2063,7 +2063,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowCategoriesChanged()" );
 
@@ -2091,7 +2091,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowRoleChanged(QString)" ) )
       {
@@ -2102,7 +2102,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2131,7 +2131,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowRoleChanged(QString)" );
 
@@ -2159,7 +2159,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowRolePatternChanged(QRegExp)" ) )
       {
@@ -2170,7 +2170,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -2199,7 +2199,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowRolePatternChanged(QRegExp)" );
 
@@ -2227,7 +2227,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowRoleReplaceChanged(QString)" ) )
       {
@@ -2238,7 +2238,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2267,7 +2267,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowRoleReplaceChanged(QString)" );
 
@@ -2295,7 +2295,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "useModelCategoriesChanged(bool)" ) )
       {
@@ -2306,7 +2306,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "useModelCategoriesChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2335,7 +2335,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "useModelCategoriesChanged(bool)" );
 
@@ -2363,7 +2363,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueRoleChanged(QString)" ) )
       {
@@ -2374,7 +2374,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRoleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2403,7 +2403,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueRoleChanged(QString)" );
 
@@ -2431,7 +2431,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueRolePatternChanged(QRegExp)" ) )
       {
@@ -2442,7 +2442,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRolePatternChanged(QRegExp)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QREGEXP" );
@@ -2471,7 +2471,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueRolePatternChanged(QRegExp)" );
 
@@ -2499,7 +2499,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueRoleReplaceChanged(QString)" ) )
       {
@@ -2510,7 +2510,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueRoleReplaceChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2539,7 +2539,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
   {
     QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueRoleReplaceChanged(QString)" );
 

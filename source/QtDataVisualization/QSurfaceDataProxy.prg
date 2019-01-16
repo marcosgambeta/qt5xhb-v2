@@ -96,10 +96,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_DELETE )
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ROWCOUNT )
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_COLUMNCOUNT )
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ void QSurfaceDataProxy_itemAt1 ()
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       const QSurfaceDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
@@ -207,7 +207,7 @@ void QSurfaceDataProxy_itemAt2 ()
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       const QSurfaceDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
@@ -252,7 +252,7 @@ void QSurfaceDataProxy_setItem1 ()
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setItem ( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
   }
@@ -267,7 +267,7 @@ void QSurfaceDataProxy_setItem2 ()
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->setItem ( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
   }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "arrayReset()" ) )
       {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "arrayReset()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "arrayReset()" );
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnCountChanged(int)" ) )
       {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnCountChanged(int)" );
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemChanged(int,int)" ) )
       {
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemChanged(int,int)" );
 
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowCountChanged(int)" ) )
       {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowCountChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowCountChanged(int)" );
 
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
       {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsAdded(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsAdded(int,int)" );
 
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
       {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsChanged(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsChanged(int,int)" );
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
       {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsInserted(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsInserted(int,int)" );
 
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
       {
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowsRemoved(int,int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsRemoved(int,int)" );
 
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seriesChanged(QSurface3DSeries*)" ) )
       {
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
                                                               (QSurface3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "seriesChanged(QSurface3DSeries*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSURFACE3DSERIES" );
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
   {
     QSurfaceDataProxy * sender = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seriesChanged(QSurface3DSeries*)" );
 

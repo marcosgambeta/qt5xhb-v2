@@ -114,10 +114,10 @@ HB_FUNC_STATIC( Q3DBARS_DELETE )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( Q3DBARS_ISMULTISERIESUNIFORM )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( Q3DBARS_BARTHICKNESS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( Q3DBARS_BARSPACING )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZEF(1) )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( Q3DBARS_ISBARSPACINGRELATIVE )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCATEGORY3DAXIS(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCATEGORY3DAXIS(1) )
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( Q3DBARS_FLOORLEVEL )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQBAR3DSERIES(2) )
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACT3DAXIS(1) )
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACT3DAXIS(1) )
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
 {
   Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiSeriesUniformChanged(bool)" ) )
       {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "multiSeriesUniformChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiSeriesUniformChanged(bool)" );
 
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "barThicknessChanged(float)" ) )
       {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barThicknessChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "barThicknessChanged(float)" );
 
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "barSpacingChanged(QSizeF)" ) )
       {
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
                                                               (const QSizeF & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barSpacingChanged(QSizeF)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZEF" );
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "barSpacingChanged(QSizeF)" );
 
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "barSpacingRelativeChanged(bool)" ) )
       {
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "barSpacingRelativeChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "barSpacingRelativeChanged(bool)" );
 
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowAxisChanged(QCategory3DAxis*)" ) )
       {
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
                                                               (QCategory3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "rowAxisChanged(QCategory3DAxis*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCATEGORY3DAXIS" );
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowAxisChanged(QCategory3DAxis*)" );
 
@@ -1186,7 +1186,7 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnAxisChanged(QCategory3DAxis*)" ) )
       {
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
                                                               (QCategory3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "columnAxisChanged(QCategory3DAxis*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCATEGORY3DAXIS" );
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnAxisChanged(QCategory3DAxis*)" );
 
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueAxisChanged(QValue3DAxis*)" ) )
       {
@@ -1265,7 +1265,7 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "valueAxisChanged(QValue3DAxis*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueAxisChanged(QValue3DAxis*)" );
 
@@ -1322,7 +1322,7 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "primarySeriesChanged(QBar3DSeries*)" ) )
       {
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
                                                               (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "primarySeriesChanged(QBar3DSeries*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
@@ -1362,7 +1362,7 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "primarySeriesChanged(QBar3DSeries*)" );
 
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedSeriesChanged(QBar3DSeries*)" ) )
       {
@@ -1401,7 +1401,7 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
                                                               (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QBar3DSeries*)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedSeriesChanged(QBar3DSeries*)" );
 
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "floorLevelChanged(float)" ) )
       {
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
                                                               (float arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "floorLevelChanged(float)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
   {
     Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "floorLevelChanged(float)" );
 
