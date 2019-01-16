@@ -104,7 +104,7 @@ void QAxScript_call1 ()
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QVariant * ptr = new QVariant( obj->call ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
@@ -118,7 +118,7 @@ void QAxScript_call2 ()
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       QVariant * ptr = new QVariant( obj->call ( PQSTRING(1), PQVARIANTLIST(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 {
   QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "entered()" ) )
       {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "entered()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "entered()" );
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(int,QString,int,QString)" ) )
       {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
                                                               (int arg1, const QString & arg2, int arg3, const QString & arg4) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString,int,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(int,QString,int,QString)" );
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QVariant)" ) )
       {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
                                                               (const QVariant & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QVariant)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVARIANT" );
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QVariant)" );
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(int,QString,QString,QString)" ) )
       {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
                                                               (int arg1, const QString & arg2, const QString & arg3, const QString & arg4) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int,QString,QString,QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(int,QString,QString,QString)" );
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(int)" ) )
       {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
   {
     QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(int)" );
 
