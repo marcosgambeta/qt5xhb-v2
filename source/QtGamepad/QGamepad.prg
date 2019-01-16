@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QGAMEPAD_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGAMEPAD_DEVICEID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGAMEPAD_SETDEVICEID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGAMEPAD_ISCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QGAMEPAD_NAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISLEFTX )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISLEFTY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTX )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONA )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONB )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONX )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONL1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONR1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONL2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONR2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONSELECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONSTART )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONL3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONR3 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONUP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONDOWN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONLEFT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONRIGHT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONCENTER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONGUIDE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisLeftXChanged(double)" ) )
       {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisLeftXChanged(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisLeftXChanged(double)" );
 
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisLeftYChanged(double)" ) )
       {
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisLeftYChanged(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisLeftYChanged(double)" );
 
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisRightXChanged(double)" ) )
       {
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisRightXChanged(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisRightXChanged(double)" );
 
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisRightYChanged(double)" ) )
       {
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "axisRightYChanged(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisRightYChanged(double)" );
 
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonAChanged(bool)" ) )
       {
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonAChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonAChanged(bool)" );
 
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonBChanged(bool)" ) )
       {
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonBChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonBChanged(bool)" );
 
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonCenterChanged(bool)" ) )
       {
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonCenterChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonCenterChanged(bool)" );
 
@@ -1321,7 +1321,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonDownChanged(bool)" ) )
       {
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonDownChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonDownChanged(bool)" );
 
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonGuideChanged(bool)" ) )
       {
@@ -1402,7 +1402,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonGuideChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1431,7 +1431,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonGuideChanged(bool)" );
 
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonL1Changed(bool)" ) )
       {
@@ -1472,7 +1472,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL1Changed(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1501,7 +1501,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonL1Changed(bool)" );
 
@@ -1531,7 +1531,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonL2Changed(double)" ) )
       {
@@ -1542,7 +1542,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL2Changed(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonL2Changed(double)" );
 
@@ -1601,7 +1601,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonL3Changed(bool)" ) )
       {
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL3Changed(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1641,7 +1641,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonL3Changed(bool)" );
 
@@ -1671,7 +1671,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonLeftChanged(bool)" ) )
       {
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonLeftChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1711,7 +1711,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonLeftChanged(bool)" );
 
@@ -1741,7 +1741,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonR1Changed(bool)" ) )
       {
@@ -1752,7 +1752,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR1Changed(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1781,7 +1781,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonR1Changed(bool)" );
 
@@ -1811,7 +1811,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonR2Changed(double)" ) )
       {
@@ -1822,7 +1822,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
                                                               (double arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR2Changed(double)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
@@ -1851,7 +1851,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonR2Changed(double)" );
 
@@ -1881,7 +1881,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonR3Changed(bool)" ) )
       {
@@ -1892,7 +1892,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR3Changed(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1921,7 +1921,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonR3Changed(bool)" );
 
@@ -1951,7 +1951,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonRightChanged(bool)" ) )
       {
@@ -1962,7 +1962,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonRightChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1991,7 +1991,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonRightChanged(bool)" );
 
@@ -2021,7 +2021,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonSelectChanged(bool)" ) )
       {
@@ -2032,7 +2032,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonSelectChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2061,7 +2061,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonSelectChanged(bool)" );
 
@@ -2091,7 +2091,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonStartChanged(bool)" ) )
       {
@@ -2102,7 +2102,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonStartChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2131,7 +2131,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonStartChanged(bool)" );
 
@@ -2161,7 +2161,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonUpChanged(bool)" ) )
       {
@@ -2172,7 +2172,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonUpChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2201,7 +2201,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonUpChanged(bool)" );
 
@@ -2231,7 +2231,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonXChanged(bool)" ) )
       {
@@ -2242,7 +2242,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonXChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2271,7 +2271,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonXChanged(bool)" );
 
@@ -2301,7 +2301,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonYChanged(bool)" ) )
       {
@@ -2312,7 +2312,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonYChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2341,7 +2341,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonYChanged(bool)" );
 
@@ -2371,7 +2371,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "connectedChanged(bool)" ) )
       {
@@ -2382,7 +2382,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "connectedChanged(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -2411,7 +2411,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "connectedChanged(bool)" );
 
@@ -2441,7 +2441,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "deviceIdChanged(int)" ) )
       {
@@ -2452,7 +2452,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "deviceIdChanged(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -2481,7 +2481,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "deviceIdChanged(int)" );
 
@@ -2511,7 +2511,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
       {
@@ -2522,7 +2522,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
                                                               (QString arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -2551,7 +2551,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
   {
     QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "nameChanged(QString)" );
 
