@@ -125,10 +125,10 @@ HB_FUNC_STATIC( QWEBVIEW_DELETE )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBVIEW_URL )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETURL )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QWEBVIEW_ICON )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDHTML )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QWEBVIEW_HASSELECTION )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -540,7 +540,7 @@ void QWebView_load1 ()
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->load ( *PQURL(1) );
   }
@@ -555,7 +555,7 @@ void QWebView_load2 ()
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
       obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) );
   }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 #ifndef QT_NO_ACTION
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQURL(2)||ISNIL(2)) )
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBPAGE(1) )
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QWEBVIEW_BACK )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QWEBVIEW_PRINT )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPRINTER(1) )
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QWEBVIEW_STOP )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QWEBVIEW_INPUTMETHODQUERY )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QWEBVIEW_SIZEHINT )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QWEBVIEW_EVENT )
 {
   QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEVENT(1) )
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "iconChanged()" ) )
       {
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "iconChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "iconChanged()" );
 
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
       {
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "linkClicked(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkClicked(QUrl)" );
 
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
                                                               (bool arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadFinished(bool)" );
 
@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadProgress(int)" ) )
       {
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
                                                               (int arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadProgress(int)" );
 
@@ -1272,7 +1272,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1310,7 +1310,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadStarted()" );
 
@@ -1338,7 +1338,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
@@ -1349,7 +1349,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
                                                               () {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
@@ -1376,7 +1376,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
 
@@ -1404,7 +1404,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
       {
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarMessage(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusBarMessage(QString)" );
 
@@ -1472,7 +1472,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
@@ -1483,7 +1483,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "titleChanged(QString)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
 
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
       {
@@ -1551,7 +1551,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "urlChanged(QUrl)" );
 
-          if( cb )
+          if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBVIEW" );
             PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
@@ -1580,7 +1580,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
   {
     QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( sender )
+    if( sender != nullptr )
     {
       Signals2_disconnection( sender, "urlChanged(QUrl)" );
 
