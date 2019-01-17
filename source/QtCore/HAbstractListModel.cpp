@@ -11,36 +11,36 @@
 HAbstractListModel::HAbstractListModel (QObject * parent) : QAbstractListModel (parent)
 {
   // linhas
-  rowCountCB = NULL;
+  rowCountCB = nullptr;
 
   // células
-  getFieldCB = NULL;
-  getFieldDecorationCB = NULL;
-  getFieldEditCB = NULL;
-  getFieldToolTipCB = NULL;
-  getFieldStatusTipCB = NULL;
-  getFieldWhatsThisCB = NULL;
-  getFieldSizeHintCB = NULL;
-  getFieldFontCB = NULL;
-  getFieldAlignCB = NULL;
-  getFieldBGColorCB = NULL;
-  getFieldFGColorCB = NULL;
+  getFieldCB = nullptr;
+  getFieldDecorationCB = nullptr;
+  getFieldEditCB = nullptr;
+  getFieldToolTipCB = nullptr;
+  getFieldStatusTipCB = nullptr;
+  getFieldWhatsThisCB = nullptr;
+  getFieldSizeHintCB = nullptr;
+  getFieldFontCB = nullptr;
+  getFieldAlignCB = nullptr;
+  getFieldBGColorCB = nullptr;
+  getFieldFGColorCB = nullptr;
 
   // cabeçalho horizontal
-  getHHCB = NULL;
-  getHHDecorationCB = NULL;
-  getHHFontCB = NULL;
-  getHHAlignCB = NULL;
-  getHHBGColorCB = NULL;
-  getHHFGColorCB = NULL;
+  getHHCB = nullptr;
+  getHHDecorationCB = nullptr;
+  getHHFontCB = nullptr;
+  getHHAlignCB = nullptr;
+  getHHBGColorCB = nullptr;
+  getHHFGColorCB = nullptr;
 
   // cabeçalho vertical
-  getVHCB = NULL;
-  getVHDecorationCB = NULL;
-  getVHFontCB = NULL;
-  getVHAlignCB = NULL;
-  getVHBGColorCB = NULL;
-  getVHFGColorCB = NULL;
+  getVHCB = nullptr;
+  getVHDecorationCB = nullptr;
+  getVHFontCB = nullptr;
+  getVHAlignCB = nullptr;
+  getVHBGColorCB = nullptr;
+  getVHFGColorCB = nullptr;
 }
 
 HAbstractListModel::~HAbstractListModel ()

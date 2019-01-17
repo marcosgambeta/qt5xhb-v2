@@ -26,7 +26,7 @@ class HAbstractListModel : public QAbstractListModel
   Q_OBJECT
 
 public:
-  HAbstractListModel( QObject * parent = 0 );
+  HAbstractListModel( QObject * parent = nullptr );
   virtual ~HAbstractListModel();
 
   /*

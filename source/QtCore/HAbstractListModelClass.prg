@@ -69,7 +69,7 @@ END CLASS
 
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_NEW )
 {
-  HAbstractListModel * o = NULL;
+  HAbstractListModel * o = nullptr;
   o = new HAbstractListModel ( OPQOBJECT(1,0) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(HAbstractListModel *) o );
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_DELETE )
   if( obj )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
