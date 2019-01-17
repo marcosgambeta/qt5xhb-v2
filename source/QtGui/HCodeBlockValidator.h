@@ -19,8 +19,8 @@ class HCodeBlockValidator : public QValidator
 {
     Q_OBJECT
 public:
-    explicit HCodeBlockValidator(QObject *parent = 0);
-    HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent = 0);
+    explicit HCodeBlockValidator(QObject *parent = nullptr);
+    HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent = nullptr);
     ~HCodeBlockValidator();
 
     QValidator::State validate ( QString & input, int & pos ) const;

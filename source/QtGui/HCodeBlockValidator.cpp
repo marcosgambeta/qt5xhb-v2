@@ -11,7 +11,7 @@
 HCodeBlockValidator::HCodeBlockValidator(QObject *parent) :
     QValidator(parent)
 {
-  block = NULL;
+  block = nullptr;
 }
 
 HCodeBlockValidator::HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent) :
@@ -22,10 +22,10 @@ HCodeBlockValidator::HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent) :
 
 HCodeBlockValidator::~HCodeBlockValidator ()
 {
-  if( block )
+  if( block != nullptr )
   {
     hb_itemRelease( block );
-    block = NULL;
+    block = nullptr;
   }
 }
 
@@ -39,6 +39,7 @@ QValidator::State HCodeBlockValidator::validate ( QString & input, int & pos ) c
   PHB_ITEM pRet = hb_vmEvalBlockV( block, 2, pInput, pPos );
   hb_itemRelease( pInput );
   hb_itemRelease( pPos );
+
   /*
     processa o resultado armazenado em pRet {cString,nPos,nState}
   */
@@ -58,6 +59,7 @@ QValidator::State HCodeBlockValidator::validate ( QString & input, int & pos ) c
   hb_itemRelease( pTemp1 );
   hb_itemRelease( pTemp2 );
   hb_itemRelease( pTemp3 );
+
   /*
     libera item
   */
@@ -66,4 +68,5 @@ QValidator::State HCodeBlockValidator::validate ( QString & input, int & pos ) c
 
 void HCodeBlockValidator::fixup( QString & input ) const
 {
+  // TODO: implementar
 }

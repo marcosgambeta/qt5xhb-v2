@@ -35,10 +35,10 @@ RETURN
 
 void HCodeBlockValidator_new1 ()
 {
-  HCodeBlockValidator * o = NULL;
+  HCodeBlockValidator * o = nullptr;
   o = new HCodeBlockValidator ( OPQOBJECT(1,0) );
   PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HCodeBlockValidator *) o );
+  PHB_ITEM ptr = hb_itemPutPtr( NULL, (HCodeBlockValidator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
   hb_itemRelease( ptr );
   hb_itemReturn( self );
@@ -46,7 +46,7 @@ void HCodeBlockValidator_new1 ()
 
 void HCodeBlockValidator_new2 ()
 {
-  HCodeBlockValidator * o = NULL;
+  HCodeBlockValidator * o = nullptr;
   PHB_ITEM block = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
   o = new HCodeBlockValidator ( block, OPQOBJECT(2,0) );
   PHB_ITEM self = hb_stackSelfItem();
@@ -76,10 +76,10 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
 {
   HCodeBlockValidator * obj = (HCodeBlockValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
