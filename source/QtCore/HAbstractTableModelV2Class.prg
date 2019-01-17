@@ -59,7 +59,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_DELETE )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETROWCOUNTCB )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setRowCountCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setColumnCountCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETDATACB )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETHEADERDATACB )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setHeaderDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETFLAGSCB )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setFlagsCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETSETDATACB )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setSetDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_RELOADDATA )
 {
   HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->reloadData();
   }

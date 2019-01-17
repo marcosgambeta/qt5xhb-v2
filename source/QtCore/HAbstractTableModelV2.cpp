@@ -23,37 +23,37 @@ HAbstractTableModelV2::HAbstractTableModelV2 (QObject * parent) : QAbstractTable
 
 HAbstractTableModelV2::~HAbstractTableModelV2 ()
 {
-  if( rowCountBlock )
+  if( rowCountBlock != nullptr )
   {
     hb_itemRelease( rowCountBlock );
     rowCountBlock = nullptr;
   }
 
-  if( columnCountBlock )
+  if( columnCountBlock != nullptr )
   {
     hb_itemRelease( columnCountBlock );
     columnCountBlock = nullptr;
   }
 
-  if( dataBlock )
+  if( dataBlock != nullptr )
   {
     hb_itemRelease( dataBlock );
     dataBlock = nullptr;
   }
 
-  if( headerDataBlock )
+  if( headerDataBlock != nullptr )
   {
     hb_itemRelease( headerDataBlock );
     headerDataBlock = nullptr;
   }
 
-  if( flagsBlock )
+  if( flagsBlock != nullptr )
   {
     hb_itemRelease( flagsBlock );
     flagsBlock = nullptr;
   }
 
-  if( setDataBlock )
+  if( setDataBlock != nullptr )
   {
     hb_itemRelease( setDataBlock );
     setDataBlock = nullptr;
@@ -62,11 +62,11 @@ HAbstractTableModelV2::~HAbstractTableModelV2 ()
 
 void HAbstractTableModelV2::setRowCountCB ( PHB_ITEM block )
 {
-  if( rowCountBlock )
+  if( rowCountBlock != nullptr )
   {
     hb_itemRelease( rowCountBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     rowCountBlock = hb_itemNew( block );
   }
@@ -74,11 +74,11 @@ void HAbstractTableModelV2::setRowCountCB ( PHB_ITEM block )
 
 void HAbstractTableModelV2::setColumnCountCB ( PHB_ITEM block )
 {
-  if( columnCountBlock )
+  if( columnCountBlock != nullptr )
   {
     hb_itemRelease( columnCountBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     columnCountBlock = hb_itemNew( block );
   }
@@ -86,11 +86,11 @@ void HAbstractTableModelV2::setColumnCountCB ( PHB_ITEM block )
 
 void HAbstractTableModelV2::setDataCB ( PHB_ITEM block )
 {
-  if( dataBlock )
+  if( dataBlock != nullptr )
   {
     hb_itemRelease( dataBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     dataBlock = hb_itemNew( block );
   }
@@ -98,11 +98,11 @@ void HAbstractTableModelV2::setDataCB ( PHB_ITEM block )
 
 void HAbstractTableModelV2::setHeaderDataCB ( PHB_ITEM block )
 {
-  if( headerDataBlock )
+  if( headerDataBlock != nullptr )
   {
     hb_itemRelease( headerDataBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     headerDataBlock = hb_itemNew( block );
   }
@@ -110,11 +110,11 @@ void HAbstractTableModelV2::setHeaderDataCB ( PHB_ITEM block )
 
 void HAbstractTableModelV2::setFlagsCB ( PHB_ITEM block )
 {
-  if( flagsBlock )
+  if( flagsBlock != nullptr )
   {
     hb_itemRelease( flagsBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     flagsBlock = hb_itemNew( block );
   }
@@ -122,11 +122,11 @@ void HAbstractTableModelV2::setFlagsCB ( PHB_ITEM block )
 
 void HAbstractTableModelV2::setSetDataCB ( PHB_ITEM block )
 {
-  if( setDataBlock )
+  if( setDataBlock != nullptr )
   {
     hb_itemRelease( setDataBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     setDataBlock = hb_itemNew( block );
   }
@@ -134,7 +134,7 @@ void HAbstractTableModelV2::setSetDataCB ( PHB_ITEM block )
 
 int HAbstractTableModelV2::rowCount( const QModelIndex & parent ) const
 {
-  if( rowCountBlock )
+  if( rowCountBlock != nullptr )
   {
     if( parent.isValid() )
     {
@@ -153,7 +153,7 @@ int HAbstractTableModelV2::rowCount( const QModelIndex & parent ) const
 
 int HAbstractTableModelV2::columnCount( const QModelIndex & parent ) const
 {
-  if( columnCountBlock )
+  if( columnCountBlock != nullptr )
   {
     if( parent.isValid() )
     {
@@ -174,7 +174,7 @@ QVariant HAbstractTableModelV2::data( const QModelIndex & index, int role ) cons
 {
   QVariant data;
 
-  if( dataBlock )
+  if( dataBlock != nullptr )
   {
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pRole = hb_itemPutNI( NULL, role );
@@ -203,7 +203,7 @@ QVariant HAbstractTableModelV2::headerData( int section, Qt::Orientation orienta
 {
   QVariant data;
 
-  if( headerDataBlock )
+  if( headerDataBlock != nullptr )
   {
     PHB_ITEM pSection = hb_itemPutNI( NULL, section );
     PHB_ITEM pOrientation = hb_itemPutNI( NULL, (int) orientation );
@@ -234,7 +234,7 @@ Qt::ItemFlags HAbstractTableModelV2::flags(const QModelIndex &index) const
 {
   Qt::ItemFlags flags = Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 
-  if( flagsBlock )
+  if( flagsBlock != nullptr )
   {
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
@@ -260,7 +260,7 @@ bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &va
 {
   bool success = false;
 
-  if( setDataBlock )
+  if( setDataBlock != nullptr )
   {
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
