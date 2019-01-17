@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_NEW )
 {
-  HAbstractTableModelV2 * o = NULL;
+  HAbstractTableModelV2 * o = nullptr;
   o = new HAbstractTableModelV2 ( OPQOBJECT(1,0) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(HAbstractTableModelV2 *) o );
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_DELETE )
   if( obj )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );

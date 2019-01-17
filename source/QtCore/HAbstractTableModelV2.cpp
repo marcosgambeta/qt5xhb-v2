@@ -13,12 +13,12 @@
 */
 HAbstractTableModelV2::HAbstractTableModelV2 (QObject * parent) : QAbstractTableModel (parent)
 {
-  rowCountBlock = NULL;
-  columnCountBlock = NULL;
-  dataBlock = NULL;
-  headerDataBlock = NULL;
-  flagsBlock = NULL;
-  setDataBlock = NULL;
+  rowCountBlock = nullptr;
+  columnCountBlock = nullptr;
+  dataBlock = nullptr;
+  headerDataBlock = nullptr;
+  flagsBlock = nullptr;
+  setDataBlock = nullptr;
 }
 
 HAbstractTableModelV2::~HAbstractTableModelV2 ()
@@ -26,37 +26,37 @@ HAbstractTableModelV2::~HAbstractTableModelV2 ()
   if( rowCountBlock )
   {
     hb_itemRelease( rowCountBlock );
-    rowCountBlock = NULL;
+    rowCountBlock = nullptr;
   }
 
   if( columnCountBlock )
   {
     hb_itemRelease( columnCountBlock );
-    columnCountBlock = NULL;
+    columnCountBlock = nullptr;
   }
 
   if( dataBlock )
   {
     hb_itemRelease( dataBlock );
-    dataBlock = NULL;
+    dataBlock = nullptr;
   }
 
   if( headerDataBlock )
   {
     hb_itemRelease( headerDataBlock );
-    headerDataBlock = NULL;
+    headerDataBlock = nullptr;
   }
 
   if( flagsBlock )
   {
     hb_itemRelease( flagsBlock );
-    flagsBlock = NULL;
+    flagsBlock = nullptr;
   }
 
   if( setDataBlock )
   {
     hb_itemRelease( setDataBlock );
-    setDataBlock = NULL;
+    setDataBlock = nullptr;
   }
 }
 
