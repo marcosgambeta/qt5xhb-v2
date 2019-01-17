@@ -19,9 +19,9 @@ class HStyledItemDelegate : public QStyledItemDelegate
 {
   Q_OBJECT
 public:
-  explicit HStyledItemDelegate(QObject *parent = 0);
-  HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = 0);
-  HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0);
+  explicit HStyledItemDelegate(QObject *parent = nullptr);
+  HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = nullptr);
+  HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = nullptr);
   ~HStyledItemDelegate();
 
   void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;

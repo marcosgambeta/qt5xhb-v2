@@ -10,85 +10,85 @@
 
 HStyledItemDelegate::HStyledItemDelegate(QObject *parent) : QStyledItemDelegate(parent)
 {
-  paintBlock = NULL;
-  sizeHintBlock = NULL;
-  displayTextBlock = NULL;
-  createEditorBlock = NULL;
-  setEditorDataBlock = NULL;
-  setModelDataBlock = NULL;
-  updateEditorGeometryBlock = NULL;
+  paintBlock = nullptr;
+  sizeHintBlock = nullptr;
+  displayTextBlock = nullptr;
+  createEditorBlock = nullptr;
+  setEditorDataBlock = nullptr;
+  setModelDataBlock = nullptr;
+  updateEditorGeometryBlock = nullptr;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, QObject *parent) : QStyledItemDelegate(parent)
 {
   paintBlock = hb_itemNew( paintCB );
-  sizeHintBlock = NULL;
-  displayTextBlock = NULL;
-  createEditorBlock = NULL;
-  setEditorDataBlock = NULL;
-  setModelDataBlock = NULL;
-  updateEditorGeometryBlock = NULL;
+  sizeHintBlock = nullptr;
+  displayTextBlock = nullptr;
+  createEditorBlock = nullptr;
+  setEditorDataBlock = nullptr;
+  setModelDataBlock = nullptr;
+  updateEditorGeometryBlock = nullptr;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, QObject *parent) : QStyledItemDelegate(parent)
 {
   paintBlock = hb_itemNew( paintCB );
   sizeHintBlock = hb_itemNew( sizeHintCB );
-  displayTextBlock = NULL;
-  createEditorBlock = NULL;
-  setEditorDataBlock = NULL;
-  setModelDataBlock = NULL;
-  updateEditorGeometryBlock = NULL;
+  displayTextBlock = nullptr;
+  createEditorBlock = nullptr;
+  setEditorDataBlock = nullptr;
+  setModelDataBlock = nullptr;
+  updateEditorGeometryBlock = nullptr;
 }
 
 HStyledItemDelegate::~HStyledItemDelegate ()
 {
-  if( paintBlock )
+  if( paintBlock != nullptr )
   {
     hb_itemRelease( paintBlock );
-    paintBlock = NULL;
+    paintBlock = nullptr;
   }
 
-  if( sizeHintBlock )
+  if( sizeHintBlock != nullptr )
   {
     hb_itemRelease( sizeHintBlock );
-    sizeHintBlock = NULL;
+    sizeHintBlock = nullptr;
   }
 
-  if( displayTextBlock )
+  if( displayTextBlock != nullptr )
   {
     hb_itemRelease( displayTextBlock );
-    displayTextBlock = NULL;
+    displayTextBlock = nullptr;
   }
 
-  if( createEditorBlock )
+  if( createEditorBlock != nullptr )
   {
     hb_itemRelease( createEditorBlock );
-    createEditorBlock = NULL;
+    createEditorBlock = nullptr;
   }
 
-  if( setEditorDataBlock )
+  if( setEditorDataBlock != nullptr )
   {
     hb_itemRelease( setEditorDataBlock );
-    setEditorDataBlock = NULL;
+    setEditorDataBlock = nullptr;
   }
 
-  if( setModelDataBlock )
+  if( setModelDataBlock != nullptr )
   {
     hb_itemRelease( setModelDataBlock );
-    setEditorDataBlock = NULL;
+    setEditorDataBlock = nullptr;
   }
 
-  if( updateEditorGeometryBlock )
+  if( updateEditorGeometryBlock != nullptr )
   {
     hb_itemRelease( updateEditorGeometryBlock );
-    updateEditorGeometryBlock = NULL;
+    updateEditorGeometryBlock = nullptr;
   }
 }
 
 void HStyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-  if( paintBlock )
+  if( paintBlock != nullptr )
   {
     PHB_ITEM pPainter = hb_itemPutPtr( NULL, (QPainter *) painter );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
@@ -116,7 +116,7 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
 {
   QSize size;
 
-  if( sizeHintBlock )
+  if( sizeHintBlock != nullptr )
   {
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
@@ -148,7 +148,7 @@ QString HStyledItemDelegate::displayText(const QVariant &value, const QLocale &l
 {
   QString data = value.toString();
 
-  if( displayTextBlock )
+  if( displayTextBlock != nullptr )
   {
     PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
     PHB_ITEM pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
@@ -174,9 +174,9 @@ QString HStyledItemDelegate::displayText(const QVariant &value, const QLocale &l
 
 QWidget * HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-  QWidget * widget = NULL;
+  QWidget * widget = nullptr;
 
-  if( createEditorBlock )
+  if( createEditorBlock != nullptr )
   {
     PHB_ITEM pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
@@ -208,7 +208,7 @@ QWidget * HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionV
 
 void HStyledItemDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-  if( setEditorDataBlock )
+  if( setEditorDataBlock != nullptr )
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
@@ -227,7 +227,7 @@ void HStyledItemDelegate::setEditorData(QWidget *editor, const QModelIndex &inde
 
 void HStyledItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-  if( setModelDataBlock )
+  if( setModelDataBlock != nullptr )
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
@@ -248,7 +248,7 @@ void HStyledItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *mode
 
 void HStyledItemDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-  if( updateEditorGeometryBlock )
+  if( updateEditorGeometryBlock != nullptr )
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
@@ -269,11 +269,11 @@ void HStyledItemDelegate::updateEditorGeometry(QWidget *editor, const QStyleOpti
 
 void HStyledItemDelegate::setPaintCB ( PHB_ITEM block )
 {
-  if( paintBlock )
+  if( paintBlock != nullptr )
   {
     hb_itemRelease( paintBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     paintBlock = hb_itemNew( block );
   }
@@ -281,11 +281,11 @@ void HStyledItemDelegate::setPaintCB ( PHB_ITEM block )
 
 void HStyledItemDelegate::setSizeHintCB ( PHB_ITEM block )
 {
-  if( sizeHintBlock )
+  if( sizeHintBlock != nullptr )
   {
     hb_itemRelease( sizeHintBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     sizeHintBlock = hb_itemNew( block );
   }
@@ -293,11 +293,11 @@ void HStyledItemDelegate::setSizeHintCB ( PHB_ITEM block )
 
 void HStyledItemDelegate::setDisplayTextCB ( PHB_ITEM block )
 {
-  if( displayTextBlock )
+  if( displayTextBlock != nullptr )
   {
     hb_itemRelease( displayTextBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     displayTextBlock = hb_itemNew( block );
   }
@@ -305,11 +305,11 @@ void HStyledItemDelegate::setDisplayTextCB ( PHB_ITEM block )
 
 void HStyledItemDelegate::setCreateEditorCB ( PHB_ITEM block )
 {
-  if( createEditorBlock )
+  if( createEditorBlock != nullptr )
   {
     hb_itemRelease( createEditorBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     createEditorBlock = hb_itemNew( block );
   }
@@ -317,11 +317,11 @@ void HStyledItemDelegate::setCreateEditorCB ( PHB_ITEM block )
 
 void HStyledItemDelegate::setEditorDataCB ( PHB_ITEM block )
 {
-  if( setEditorDataBlock )
+  if( setEditorDataBlock != nullptr )
   {
     hb_itemRelease( setEditorDataBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     setEditorDataBlock = hb_itemNew( block );
   }
@@ -329,11 +329,11 @@ void HStyledItemDelegate::setEditorDataCB ( PHB_ITEM block )
 
 void HStyledItemDelegate::setModelDataCB ( PHB_ITEM block )
 {
-  if( setModelDataBlock )
+  if( setModelDataBlock != nullptr )
   {
     hb_itemRelease( setModelDataBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     setModelDataBlock = hb_itemNew( block );
   }
@@ -341,11 +341,11 @@ void HStyledItemDelegate::setModelDataCB ( PHB_ITEM block )
 
 void HStyledItemDelegate::setUpdateEditorGeometryCB ( PHB_ITEM block )
 {
-  if( updateEditorGeometryBlock )
+  if( updateEditorGeometryBlock != nullptr )
   {
     hb_itemRelease( updateEditorGeometryBlock );
   }
-  if( block )
+  if( block != nullptr )
   {
     updateEditorGeometryBlock = hb_itemNew( block );
   }

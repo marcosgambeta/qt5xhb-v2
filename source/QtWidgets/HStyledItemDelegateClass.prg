@@ -45,7 +45,7 @@ RETURN
 
 void HStyledItemDelegate_new1 ()
 {
-  HStyledItemDelegate * o = NULL;
+  HStyledItemDelegate * o = nullptr;
   o = new HStyledItemDelegate ( OPQOBJECT(1,0) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(HStyledItemDelegate *) o );
@@ -56,7 +56,7 @@ void HStyledItemDelegate_new1 ()
 
 void HStyledItemDelegate_new2 ()
 {
-  HStyledItemDelegate * o = NULL;
+  HStyledItemDelegate * o = nullptr;
   PHB_ITEM paintCB = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
   o = new HStyledItemDelegate ( paintCB, OPQOBJECT(2,0) );
   PHB_ITEM self = hb_stackSelfItem();
@@ -68,7 +68,7 @@ void HStyledItemDelegate_new2 ()
 
 void HStyledItemDelegate_new3 ()
 {
-  HStyledItemDelegate * o = NULL;
+  HStyledItemDelegate * o = nullptr;
   PHB_ITEM paintCB = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
   PHB_ITEM sizeHintCB = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
   o = new HStyledItemDelegate ( paintCB, sizeHintCB, OPQOBJECT(3,0) );
@@ -103,10 +103,10 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DELETE )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     delete obj;
-    obj = NULL;
+    obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->defaultPaint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setPaintCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setSizeHintCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setDisplayTextCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setCreateEditorCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setEditorDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setModelDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
 {
   HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     obj->setUpdateEditorGeometryCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
