@@ -27,7 +27,7 @@ class HAbstractTableModel : public QAbstractTableModel
   Q_OBJECT
 
 public:
-  HAbstractTableModel( QObject * parent = 0 );
+  HAbstractTableModel( QObject * parent = nullptr );
   virtual ~HAbstractTableModel();
 
   PHB_ITEM rowCountCB;

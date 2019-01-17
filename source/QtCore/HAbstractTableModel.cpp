@@ -14,37 +14,37 @@
 HAbstractTableModel::HAbstractTableModel (QObject * parent) : QAbstractTableModel (parent)
 {
   // linhas e colunas
-  rowCountCB = NULL;
-  colCountCB = NULL;
+  rowCountCB = nullptr;
+  colCountCB = nullptr;
 
   // células
-  getFieldCB = NULL;
-  getFieldDecorationCB = NULL;
-  getFieldEditCB = NULL;
-  getFieldToolTipCB = NULL;
-  getFieldStatusTipCB = NULL;
-  getFieldWhatsThisCB = NULL;
-  getFieldSizeHintCB = NULL;
-  getFieldFontCB = NULL;
-  getFieldAlignCB = NULL;
-  getFieldBGColorCB = NULL;
-  getFieldFGColorCB = NULL;
+  getFieldCB = nullptr;
+  getFieldDecorationCB = nullptr;
+  getFieldEditCB = nullptr;
+  getFieldToolTipCB = nullptr;
+  getFieldStatusTipCB = nullptr;
+  getFieldWhatsThisCB = nullptr;
+  getFieldSizeHintCB = nullptr;
+  getFieldFontCB = nullptr;
+  getFieldAlignCB = nullptr;
+  getFieldBGColorCB = nullptr;
+  getFieldFGColorCB = nullptr;
 
   // cabeçalho horizontal
-  getHHCB = NULL;
-  getHHDecorationCB = NULL;
-  getHHFontCB = NULL;
-  getHHAlignCB = NULL;
-  getHHBGColorCB = NULL;
-  getHHFGColorCB = NULL;
+  getHHCB = nullptr;
+  getHHDecorationCB = nullptr;
+  getHHFontCB = nullptr;
+  getHHAlignCB = nullptr;
+  getHHBGColorCB = nullptr;
+  getHHFGColorCB = nullptr;
 
   // cabeçalho vertical
-  getVHCB = NULL;
-  getVHDecorationCB = NULL;
-  getVHFontCB = NULL;
-  getVHAlignCB = NULL;
-  getVHBGColorCB = NULL;
-  getVHFGColorCB = NULL;
+  getVHCB = nullptr;
+  getVHDecorationCB = nullptr;
+  getVHFontCB = nullptr;
+  getVHAlignCB = nullptr;
+  getVHBGColorCB = nullptr;
+  getVHFGColorCB = nullptr;
 }
 
 /*
@@ -56,133 +56,133 @@ HAbstractTableModel::~HAbstractTableModel ()
   if( rowCountCB )
   {
     hb_itemRelease( rowCountCB );
-    rowCountCB = NULL;
+    rowCountCB = nullptr;
   }
   if( colCountCB )
   {
     hb_itemRelease( colCountCB );
-    colCountCB = NULL;
+    colCountCB = nullptr;
   }
 
   // células
   if( getFieldCB )
   {
     hb_itemRelease( getFieldCB );
-    getFieldCB = NULL;
+    getFieldCB = nullptr;
   }
   if( getFieldDecorationCB )
   {
     hb_itemRelease( getFieldDecorationCB );
-    getFieldDecorationCB = NULL;
+    getFieldDecorationCB = nullptr;
   }
   if( getFieldEditCB )
   {
     hb_itemRelease( getFieldEditCB );
-    getFieldEditCB = NULL;
+    getFieldEditCB = nullptr;
   }
   if( getFieldToolTipCB )
   {
     hb_itemRelease( getFieldToolTipCB );
-    getFieldToolTipCB = NULL;
+    getFieldToolTipCB = nullptr;
   }
   if( getFieldStatusTipCB )
   {
     hb_itemRelease( getFieldStatusTipCB );
-    getFieldStatusTipCB = NULL;
+    getFieldStatusTipCB = nullptr;
   }
   if( getFieldWhatsThisCB )
   {
     hb_itemRelease( getFieldWhatsThisCB );
-    getFieldWhatsThisCB = NULL;
+    getFieldWhatsThisCB = nullptr;
   }
   if( getFieldSizeHintCB )
   {
     hb_itemRelease( getFieldSizeHintCB );
-    getFieldSizeHintCB = NULL;
+    getFieldSizeHintCB = nullptr;
   }
   if( getFieldFontCB )
   {
     hb_itemRelease( getFieldFontCB );
-    getFieldFontCB = NULL;
+    getFieldFontCB = nullptr;
   }
   if( getFieldAlignCB )
   {
     hb_itemRelease( getFieldAlignCB );
-    getFieldAlignCB = NULL;
+    getFieldAlignCB = nullptr;
   }
   if( getFieldBGColorCB )
   {
     hb_itemRelease( getFieldBGColorCB );
-    getFieldBGColorCB = NULL;
+    getFieldBGColorCB = nullptr;
   }
   if( getFieldFGColorCB )
   {
     hb_itemRelease( getFieldFGColorCB );
-    getFieldFGColorCB = NULL;
+    getFieldFGColorCB = nullptr;
   }
 
   // cabeçalho horizontal
   if( getHHCB )
   {
     hb_itemRelease( getHHCB );
-    getHHCB = NULL;
+    getHHCB = nullptr;
   }
   if( getHHDecorationCB )
   {
     hb_itemRelease( getHHDecorationCB );
-    getHHDecorationCB = NULL;
+    getHHDecorationCB = nullptr;
   }
   if( getHHFontCB )
   {
     hb_itemRelease( getHHFontCB );
-    getHHFontCB = NULL;
+    getHHFontCB = nullptr;
   }
   if( getHHAlignCB )
   {
     hb_itemRelease( getHHAlignCB );
-    getHHAlignCB = NULL;
+    getHHAlignCB = nullptr;
   }
   if( getHHBGColorCB )
   {
     hb_itemRelease( getHHBGColorCB );
-    getHHBGColorCB = NULL;
+    getHHBGColorCB = nullptr;
   }
   if( getHHFGColorCB )
   {
     hb_itemRelease( getHHFGColorCB );
-    getHHFGColorCB = NULL;
+    getHHFGColorCB = nullptr;
   }
 
   // cabeçalho vertical
   if( getVHCB )
   {
     hb_itemRelease( getVHCB );
-    getVHCB = NULL;
+    getVHCB = nullptr;
   }
   if( getVHDecorationCB )
   {
     hb_itemRelease( getVHDecorationCB );
-    getVHDecorationCB = NULL;
+    getVHDecorationCB = nullptr;
   }
   if( getVHFontCB )
   {
     hb_itemRelease( getVHFontCB );
-    getVHFontCB = NULL;
+    getVHFontCB = nullptr;
   }
   if( getVHAlignCB )
   {
     hb_itemRelease( getVHAlignCB );
-    getVHAlignCB = NULL;
+    getVHAlignCB = nullptr;
   }
   if( getVHBGColorCB )
   {
     hb_itemRelease( getVHBGColorCB );
-    getVHBGColorCB = NULL;
+    getVHBGColorCB = nullptr;
   }
   if( getVHFGColorCB )
   {
     hb_itemRelease( getVHFGColorCB );
-    getVHFGColorCB = NULL;
+    getVHFGColorCB = nullptr;
   }
 }
 
@@ -647,7 +647,7 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
        {
          data = *( (QPixmap *) ptr );
        }
-       ptr = NULL;
+       ptr = nullptr;
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
      {
@@ -730,7 +730,7 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
        data = *( (QSize *) ptr );
-       ptr = NULL;
+       ptr = nullptr;
      }
      hb_itemRelease( pRow );
      hb_itemRelease( pCol );
@@ -745,7 +745,7 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
        data = *( (QFont *) ptr );
-       ptr = NULL;
+       ptr = nullptr;
      }
      hb_itemRelease( pRow );
      hb_itemRelease( pCol );
@@ -783,7 +783,7 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
        {
          data = *( (QBrush *) ptr );
        }
-       ptr = NULL;
+       ptr = nullptr;
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
      {
@@ -802,7 +802,7 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
        data = *( (QColor *) ptr );
-       ptr = NULL;
+       ptr = nullptr;
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
      {
@@ -870,7 +870,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
         {
           data = *( (QPixmap *) ptr );
         }
-        ptr = NULL;
+        ptr = nullptr;
       }
       else if( hb_itemType( pRet ) & HB_IT_STRING )
       {
@@ -887,7 +887,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
        data = *( (QFont *) ptr );
-       ptr = NULL;
+       ptr = nullptr;
      }
      hb_itemRelease( pCol );
      hb_itemRelease( pRet );
@@ -921,7 +921,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
        {
          data = *( (QBrush *) ptr );
        }
-       ptr = NULL;
+       ptr = nullptr;
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
      {
@@ -938,7 +938,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
        data = *( (QColor *) ptr );
-       ptr = NULL;
+       ptr = nullptr;
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
      {
@@ -995,7 +995,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
         {
           data = *( (QPixmap *) ptr );
         }
-        ptr = NULL;
+        ptr = nullptr;
       }
       else if( hb_itemType( pRet ) & HB_IT_STRING )
       {
@@ -1012,7 +1012,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
        data = *( (QFont *) ptr );
-       ptr = NULL;
+       ptr = nullptr;
      }
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
@@ -1046,7 +1046,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
        {
          data = *( (QBrush *) ptr );
        }
-       ptr = NULL;
+       ptr = nullptr;
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
      {
