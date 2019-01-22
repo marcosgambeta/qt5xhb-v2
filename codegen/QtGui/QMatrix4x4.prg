@@ -114,9 +114,9 @@ $method=|void|fill|float
 $prototype=double determinant() const
 $method=|double|determinant|
 
-$prototype=QMatrix4x4 inverted(bool *invertible = Q_NULLPTR) const
+$prototype=QMatrix4x4 inverted(bool *invertible = nullptr) const
 %% TODO: revisar implementacao
-$method=|QMatrix4x4|inverted|bool *=Q_NULLPTR
+$method=|QMatrix4x4|inverted|bool *=nullptr
 
 $prototype=QMatrix4x4 transposed() const
 $method=|QMatrix4x4|transposed|

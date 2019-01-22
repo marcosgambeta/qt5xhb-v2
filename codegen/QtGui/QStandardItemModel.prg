@@ -29,14 +29,14 @@ $includes
 
 #include <QMimeData>
 
-$prototype=QStandardItemModel(QObject *parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QStandardItemModel(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QStandardItemModel(int rows, int columns, QObject *parent = 0)
-$internalConstructor=|new2|int,int,QObject *=0
+$prototype=QStandardItemModel(int rows, int columns, QObject *parent = nullptr)
+$internalConstructor=|new2|int,int,QObject *=nullptr
 
-//[1]QStandardItemModel(QObject *parent = 0)
-//[2]QStandardItemModel(int rows, int columns, QObject *parent = 0)
+//[1]QStandardItemModel(QObject *parent = nullptr)
+//[2]QStandardItemModel(int rows, int columns, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 {

@@ -146,9 +146,9 @@ $method=|int|textLength|
 $prototype=int lineNumber() const
 $method=|int|lineNumber|
 
-$prototype=void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = 0) const
+$prototype=void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = nullptr) const
 %% TODO: implementar
-%% $method=|void|draw|QPainter *,const QPointF &,const QTextLayout::FormatRange *=0
+%% $method=|void|draw|QPainter *,const QPointF &,const QTextLayout::FormatRange *=nullptr
 
 $extraMethods
 

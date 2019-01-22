@@ -61,14 +61,14 @@ $method=|const char *|data|
 $prototype=bool isNull () const
 $method=|bool|isNull|
 
-$prototype=bool load ( const QString & fileName, const char * format = 0 )
-$internalMethod=|bool|load,load1|const QString &,const char *=0
+$prototype=bool load ( const QString & fileName, const char * format = nullptr )
+$internalMethod=|bool|load,load1|const QString &,const char *=nullptr
 
-$prototype=bool load ( QIODevice * dev, const char * format = 0 )
-$internalMethod=|bool|load,load2|QIODevice *,const char *=0
+$prototype=bool load ( QIODevice * dev, const char * format = nullptr )
+$internalMethod=|bool|load,load2|QIODevice *,const char *=nullptr
 
-//[1]bool load ( const QString & fileName, const char * format = 0 )
-//[2]bool load ( QIODevice * dev, const char * format = 0 )
+//[1]bool load ( const QString & fileName, const char * format = nullptr )
+//[2]bool load ( QIODevice * dev, const char * format = nullptr )
 
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
@@ -90,14 +90,14 @@ $addMethod=load
 $prototype=bool play ( QPainter * painter )
 $method=|bool|play|QPainter *
 
-$prototype=bool save ( const QString & fileName, const char * format = 0 )
-$internalMethod=|bool|save,save1|const QString &,const char *=0
+$prototype=bool save ( const QString & fileName, const char * format = nullptr )
+$internalMethod=|bool|save,save1|const QString &,const char *=nullptr
 
-$prototype=bool save ( QIODevice * dev, const char * format = 0 )
-$internalMethod=|bool|save,save2|QIODevice *,const char *=0
+$prototype=bool save ( QIODevice * dev, const char * format = nullptr )
+$internalMethod=|bool|save,save2|QIODevice *,const char *=nullptr
 
-//[1]bool save ( const QString & fileName, const char * format = 0 )
-//[2]bool save ( QIODevice * dev, const char * format = 0 )
+//[1]bool save ( const QString & fileName, const char * format = nullptr )
+//[2]bool save ( QIODevice * dev, const char * format = nullptr )
 
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {

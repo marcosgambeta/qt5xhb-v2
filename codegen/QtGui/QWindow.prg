@@ -30,7 +30,7 @@ $includes
 #include <QScreen>
 
 $prototype=QWindow(QScreen * screen = nullptr)
-$internalConstructor=|new1|QScreen *=0
+$internalConstructor=|new1|QScreen *=nullptr
 
 $prototype=QWindow(QWindow * parent)
 $internalConstructor=|new2|QWindow *

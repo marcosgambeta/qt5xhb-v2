@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=QIntValidator(QObject * parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QIntValidator(QObject * parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QIntValidator(int minimum, int maximum, QObject * parent = 0)
-$internalConstructor=|new2|int,int,QObject *=0
+$prototype=QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
+$internalConstructor=|new2|int,int,QObject *=nullptr
 
-//[1]QIntValidator(QObject * parent = 0)
-//[2]QIntValidator(int minimum, int maximum, QObject * parent = 0)
+//[1]QIntValidator(QObject * parent = nullptr)
+//[2]QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {

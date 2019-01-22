@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QOpenGLShaderProgram(QObject *parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QOpenGLShaderProgram(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
@@ -91,7 +91,7 @@ $method=|void|setPatchVertexCount|int
 $prototype=int patchVertexCount() const
 $method=|int|patchVertexCount|
 
-$prototype=static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
-$staticMethod=|bool|hasOpenGLShaderPrograms|QOpenGLContext *=0
+$prototype=static bool hasOpenGLShaderPrograms(QOpenGLContext *context = nullptr)
+$staticMethod=|bool|hasOpenGLShaderPrograms|QOpenGLContext *=nullptr
 
 #pragma ENDDUMP

@@ -847,30 +847,30 @@ $internalMethod=|void|drawText,drawText1|const QPointF &,const QString &
 $prototype=void drawText ( const QPoint & position, const QString & text )
 $internalMethod=|void|drawText,drawText2|const QPoint &,const QString &
 
-$prototype=void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
+$prototype=void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = nullptr )
 %% TODO: corrigir codigo
-$internalMethod=|void|drawText,drawText3|const QRectF &,int,const QString &,QRectF *=0
+$internalMethod=|void|drawText,drawText3|const QRectF &,int,const QString &,QRectF *=nullptr
 
-$prototype=void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
+$prototype=void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = nullptr )
 %% TODO: corrigir codigo
-$internalMethod=|void|drawText,drawText4|const QRect &,int,const QString &,QRect *=0
+$internalMethod=|void|drawText,drawText4|const QRect &,int,const QString &,QRect *=nullptr
 
 $prototype=void drawText ( int x, int y, const QString & text )
 $internalMethod=|void|drawText,drawText5|int,int,const QString &
 
-$prototype=void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
+$prototype=void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = nullptr )
 %% TODO: corrigir codigo
-$internalMethod=|void|drawText,drawText6|int,int,int,int,int,const QString &,QRect *=0
+$internalMethod=|void|drawText,drawText6|int,int,int,int,int,const QString &,QRect *=nullptr
 
 $prototype=void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 $internalMethod=|void|drawText,drawText7|const QRectF &,const QString &,const QTextOption &=QTextOption()
 
 //[1]void drawText ( const QPointF & position, const QString & text )
 //[2]void drawText ( const QPoint & position, const QString & text )
-//[3]void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
-//[4]void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
+//[3]void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = nullptr )
+//[4]void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = nullptr )
 //[5]void drawText ( int x, int y, const QString & text )
-//[6]void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
+//[6]void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = nullptr )
 //[7]void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 
 HB_FUNC_STATIC( QPAINTER_DRAWTEXT )

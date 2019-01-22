@@ -25,8 +25,8 @@ $destructor
 
 $includes=5,1,0
 
-$prototype=explicit QOpenGLTimerQuery(QObject *parent = 0)
-$constructor=5,1,0|new|QObject *=0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$prototype=explicit QOpenGLTimerQuery(QObject *parent = nullptr)
+$constructor=5,1,0|new|QObject *=nullptr|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $deleteMethod=5,1,0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 

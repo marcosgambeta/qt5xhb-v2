@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QRegExpValidator ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QRegExpValidator ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
-$internalConstructor=|new2|const QRegExp &,QObject *=0
+$prototype=QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
+$internalConstructor=|new2|const QRegExp &,QObject *=nullptr
 
-//[1]QRegExpValidator ( QObject * parent = 0 )
-//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+//[1]QRegExpValidator ( QObject * parent = nullptr )
+//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
@@ -40,7 +40,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
   {
     QRegExpValidator_new1();
   }
-  else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QRegExpValidator_new2();
   }

@@ -117,29 +117,29 @@ $method=|qreal|cyanF|
 $prototype=QColor darker ( int factor = 200 ) const
 $method=|QColor|darker|int=200
 
-$prototype=void getCmyk ( int * c, int * m, int * y, int * k, int * a = 0 )
-$method=|void|getCmyk|int *,int *,int *,int *,int *=0
+$prototype=void getCmyk ( int * c, int * m, int * y, int * k, int * a = nullptr )
+$method=|void|getCmyk|int *,int *,int *,int *,int *=nullptr
 
-$prototype=void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
-$method=|void|getCmykF|qreal *,qreal *,qreal *,qreal *,qreal *=0
+$prototype=void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = nullptr )
+$method=|void|getCmykF|qreal *,qreal *,qreal *,qreal *,qreal *=nullptr
 
-$prototype=void getHsl ( int * h, int * s, int * l, int * a = 0 ) const
-$method=|void|getHsl|int *,int *,int *,int *=0
+$prototype=void getHsl ( int * h, int * s, int * l, int * a = nullptr ) const
+$method=|void|getHsl|int *,int *,int *,int *=nullptr
 
-$prototype=void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
-$method=|void|getHslF|qreal *,qreal *,qreal *,qreal *=0
+$prototype=void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = nullptr ) const
+$method=|void|getHslF|qreal *,qreal *,qreal *,qreal *=nullptr
 
-$prototype=void getHsv ( int * h, int * s, int * v, int * a = 0 ) const
-$method=|void|getHsv|int *,int *,int *,int *=0
+$prototype=void getHsv ( int * h, int * s, int * v, int * a = nullptr ) const
+$method=|void|getHsv|int *,int *,int *,int *=nullptr
 
-$prototype=void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
-$method=|void|getHsvF|qreal *,qreal *,qreal *,qreal *=0
+$prototype=void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = nullptr ) const
+$method=|void|getHsvF|qreal *,qreal *,qreal *,qreal *=nullptr
 
-$prototype=void getRgb ( int * r, int * g, int * b, int * a = 0 ) const
-$method=|void|getRgb|int *,int *,int *,int *=0
+$prototype=void getRgb ( int * r, int * g, int * b, int * a = nullptr ) const
+$method=|void|getRgb|int *,int *,int *,int *=nullptr
 
-$prototype=void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
-$method=|void|getRgbF|qreal *,qreal *,qreal *,qreal *=0
+$prototype=void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = nullptr ) const
+$method=|void|getRgbF|qreal *,qreal *,qreal *,qreal *=nullptr
 
 $prototype=int green () const
 $method=|int|green|

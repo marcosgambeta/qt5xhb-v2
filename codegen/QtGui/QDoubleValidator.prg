@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QDoubleValidator ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QDoubleValidator ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
-$internalConstructor=|new2|double,double,int,QObject *
+$prototype=QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = nullptr )
+$internalConstructor=|new2|double,double,int,QObject *=nullptr
 
-//[1]QDoubleValidator ( QObject * parent = 0 )
-//[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = 0 )
+//[1]QDoubleValidator ( QObject * parent = nullptr )
+//[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {

@@ -80,13 +80,13 @@ $internalMethod=|QRectF|boundingRect,boundingRect1|const QString &
 $prototype=QRectF boundingRect ( QChar ch ) const
 $internalMethod=|QRectF|boundingRect,boundingRect2|QChar
 
-$prototype=QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-$internalMethod=|QRectF|boundingRect,boundingRect3|const QRectF &,int,const QString &,int=0,int *=0
+$prototype=QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
+$internalMethod=|QRectF|boundingRect,boundingRect3|const QRectF &,int,const QString &,int=0,int *=nullptr
 
 %% TODO: implementar metodo [3]
 //[1]QRectF boundingRect ( const QString & text ) const
 //[2]QRectF boundingRect ( QChar ch ) const
-//[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+//[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 
 HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {
@@ -142,8 +142,8 @@ $method=|qreal|minRightBearing|
 $prototype=qreal overlinePos () const
 $method=|qreal|overlinePos|
 
-$prototype=QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-$method=|QSizeF|size|int,const QString &,int=0,int *=0
+$prototype=QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
+$method=|QSizeF|size|int,const QString &,int=0,int *=nullptr
 
 $prototype=qreal strikeOutPos () const
 $method=|qreal|strikeOutPos|

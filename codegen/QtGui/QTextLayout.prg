@@ -34,15 +34,15 @@ $internalConstructor=|new1|
 $prototype=QTextLayout(const QString& text)
 $internalConstructor=|new2|const QString &
 
-$prototype=QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 0)
-$internalConstructor=|new3|const QString &,const QFont &,QPaintDevice *=0
+$prototype=QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = nullptr)
+$internalConstructor=|new3|const QString &,const QFont &,QPaintDevice *=nullptr
 
 $prototype=QTextLayout(const QTextBlock &b)
 $internalConstructor=|new4|const QTextBlock &
 
 //[1]QTextLayout()
 //[2]QTextLayout(const QString& text)
-//[3]QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 0)
+//[3]QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = nullptr)
 //[4]QTextLayout(const QTextBlock &b)
 
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW )

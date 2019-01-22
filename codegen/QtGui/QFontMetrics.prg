@@ -72,19 +72,19 @@ $internalMethod=|QRect|boundingRect,boundingRect1|QChar
 $prototype=QRect boundingRect ( const QString & text ) const
 $internalMethod=|QRect|boundingRect,boundingRect2|const QString &
 
-$prototype=QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+$prototype=QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 %% TODO: implementar
-%% $internalMethod=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &,int=0,int *=0
+%% $internalMethod=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &,int=0,int *=nullptr
 
-$prototype=QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+$prototype=QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 %% TODO: implementar
-%% $internalMethod=|QRect|boundingRect,boundingRect4|const QRect &,int,const QString &,int=0,int *=0
+%% $internalMethod=|QRect|boundingRect,boundingRect4|const QRect &,int,const QString &,int=0,int *=nullptr
 
 %% TODO: implementar metodos [3] e [4]
 //[1]QRect boundingRect ( QChar ch ) const
 //[2]QRect boundingRect ( const QString & text ) const
-//[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-//[4]QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+//[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
+//[4]QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 
 HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 {
@@ -144,9 +144,9 @@ $method=|int|minRightBearing|
 $prototype=int overlinePos () const
 $method=|int|overlinePos|
 
-$prototype=QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+$prototype=QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 %% TODO: parametro 4 = array
-$method=|QSize|size|int,const QString &,int=0,int *=0
+$method=|QSize|size|int,const QString &,int=0,int *=nullptr
 
 $prototype=int strikeOutPos () const
 $method=|int|strikeOutPos|

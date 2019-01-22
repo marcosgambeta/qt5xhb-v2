@@ -29,8 +29,8 @@ $includes
 
 #include <QScreen>
 
-$prototype=QOpenGLContext(QObject * parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QOpenGLContext(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

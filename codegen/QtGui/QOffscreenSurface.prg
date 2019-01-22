@@ -29,8 +29,8 @@ $includes
 
 #include <QScreen>
 
-$prototype=QOffscreenSurface(QScreen *screen = 0)
-$constructor=|new|QScreen *=0
+$prototype=QOffscreenSurface(QScreen *screen = nullptr)
+$constructor=|new|QScreen *=nullptr
 
 $deleteMethod
 

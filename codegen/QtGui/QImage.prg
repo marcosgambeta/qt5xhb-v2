@@ -56,11 +56,11 @@ $prototype=QImage ( const char * const[] xpm )
 %% TODO: implementar
 %% $internalConstructor=|new8|const char * const[]
 
-$prototype=QImage ( const QString & fileName, const char * format = 0 )
-$constructor=|new9|const QString &,const char *=0
+$prototype=QImage ( const QString & fileName, const char * format = nullptr )
+$constructor=|new9|const QString &,const char *=nullptr
 
-$prototype=QImage ( const char * fileName, const char * format = 0 )
-$constructor=|new10|const char *,const char *=0
+$prototype=QImage ( const char * fileName, const char * format = nullptr )
+$constructor=|new10|const char *,const char *=nullptr
 
 $prototype=QImage ( const QImage & image )
 $internalConstructor=|new11|const QImage &
@@ -74,20 +74,20 @@ $internalConstructor=|new11|const QImage &
 //[06]QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
 //[07]QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
 //[08]QImage ( const char * const[] xpm )
-//[09]QImage ( const QString & fileName, const char * format = 0 )
-//[10]QImage ( const char * fileName, const char * format = 0 )
+//[09]QImage ( const QString & fileName, const char * format = nullptr )
+//[10]QImage ( const char * fileName, const char * format = nullptr )
 //[11]QImage ( const QImage & image )
 
 %% TODO: revisar construtores
 %% QImage()
 %% QImage(const QSize &size, Format format)
 %% QImage(int width, int height, Format format)
-%% QImage(uchar *data, int width, int height, Format format, QImageCleanupFunction cleanupFunction = Q_NULLPTR, void *cleanupInfo = Q_NULLPTR)
-%% QImage(const uchar *data, int width, int height, Format format, QImageCleanupFunction cleanupFunction = Q_NULLPTR, void *cleanupInfo = Q_NULLPTR)
-%% QImage(uchar *data, int width, int height, int bytesPerLine, Format format, QImageCleanupFunction cleanupFunction = Q_NULLPTR, void *cleanupInfo = Q_NULLPTR)
-%% QImage(const uchar *data, int width, int height, int bytesPerLine, Format format, QImageCleanupFunction cleanupFunction = Q_NULLPTR, void *cleanupInfo = Q_NULLPTR)
+%% QImage(uchar *data, int width, int height, Format format, QImageCleanupFunction cleanupFunction = nullptr, void *cleanupInfo = nullptr)
+%% QImage(const uchar *data, int width, int height, Format format, QImageCleanupFunction cleanupFunction = nullptr, void *cleanupInfo = nullptr)
+%% QImage(uchar *data, int width, int height, int bytesPerLine, Format format, QImageCleanupFunction cleanupFunction = nullptr, void *cleanupInfo = nullptr)
+%% QImage(const uchar *data, int width, int height, int bytesPerLine, Format format, QImageCleanupFunction cleanupFunction = nullptr, void *cleanupInfo = nullptr)
 %% QImage(const char * const[] xpm)
-%% QImage(const QString &fileName, const char *format = Q_NULLPTR)
+%% QImage(const QString &fileName, const char *format = nullptr)
 %% QImage(const QImage &image)
 %% QImage(QImage &&other) >=5.2
 
@@ -268,13 +268,13 @@ $method=|bool|isGrayscale|
 $prototype=bool isNull () const
 $method=|bool|isNull|
 
-$prototype=bool load ( const QString & fileName, const char * format = 0 )
-$internalMethod=|bool|load,load1|const QString &,const char *=0
+$prototype=bool load ( const QString & fileName, const char * format = nullptr )
+$internalMethod=|bool|load,load1|const QString &,const char *=nullptr
 
 $prototype=bool load ( QIODevice * device, const char * format )
 $internalMethod=|bool|load,load2|QIODevice *,const char *
 
-//[1]bool load ( const QString & fileName, const char * format = 0 )
+//[1]bool load ( const QString & fileName, const char * format = nullptr )
 //[2]bool load ( QIODevice * device, const char * format )
 
 HB_FUNC_STATIC( QIMAGE_LOAD )
@@ -294,14 +294,14 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 }
 $addMethod=load
 
-$prototype=bool loadFromData ( const uchar * data, int len, const char * format = 0 )
-$internalMethod=|bool|loadFromData,loadFromData1|const uchar *,int,const char *=0
+$prototype=bool loadFromData ( const uchar * data, int len, const char * format = nullptr )
+$internalMethod=|bool|loadFromData,loadFromData1|const uchar *,int,const char *=nullptr
 
-$prototype=bool loadFromData ( const QByteArray & data, const char * format = 0 )
-$internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0
+$prototype=bool loadFromData ( const QByteArray & data, const char * format = nullptr )
+$internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=nullptr
 
-//[1]bool loadFromData(const uchar *data, int len, const char *format = 0)
-//[2]bool loadFromData(const QByteArray &data, const char *format = 0)
+//[1]bool loadFromData(const uchar *data, int len, const char *format = nullptr)
+//[2]bool loadFromData(const QByteArray &data, const char *format = nullptr)
 
 HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
@@ -384,14 +384,14 @@ $method=|QRect|rect|
 $prototype=QImage rgbSwapped () const
 $method=|QImage|rgbSwapped|
 
-$prototype=bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
-$internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
+$prototype=bool save ( const QString & fileName, const char * format = nullptr, int quality = -1 ) const
+$internalMethod=|bool|save,save1|const QString &,const char *=nullptr,int=-1
 
-$prototype=bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
-$internalMethod=|bool|save,save2|QIODevice *,const char *=0,int=-1
+$prototype=bool save ( QIODevice * device, const char * format = nullptr, int quality = -1 ) const
+$internalMethod=|bool|save,save2|QIODevice *,const char *=nullptr,int=-1
 
-//[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
-//[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
+//[1]bool save ( const QString & fileName, const char * format = nullptr, int quality = -1 ) const
+//[2]bool save ( QIODevice * device, const char * format = nullptr, int quality = -1 ) const
 
 HB_FUNC_STATIC( QIMAGE_SAVE )
 {
@@ -566,14 +566,14 @@ $addMethod=valid
 $prototype=int width () const
 $method=|int|width|
 
-$prototype=static QImage fromData ( const uchar * data, int size, const char * format = 0 )
-$internalStaticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0
+$prototype=static QImage fromData ( const uchar * data, int size, const char * format = nullptr )
+$internalStaticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=nullptr
 
-$prototype=static QImage fromData ( const QByteArray & data, const char * format = 0 )
-$internalStaticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
+$prototype=static QImage fromData ( const QByteArray & data, const char * format = nullptr )
+$internalStaticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=nullptr
 
-//[1]static QImage fromData(const uchar *data, int size, const char *format = 0)
-//[2]static QImage fromData(const QByteArray &data, const char *format = 0)
+//[1]static QImage fromData(const uchar *data, int size, const char *format = nullptr)
+//[2]static QImage fromData(const QByteArray &data, const char *format = nullptr)
 
 HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {

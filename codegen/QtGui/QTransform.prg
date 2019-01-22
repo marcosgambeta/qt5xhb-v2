@@ -148,8 +148,8 @@ $method=|qreal|dy|
 $prototype=void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33)
 $method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
-$prototype=QTransform inverted(bool *invertible = 0) const
-$method=|QTransform|inverted|bool *=0
+$prototype=QTransform inverted(bool *invertible = nullptr) const
+$method=|QTransform|inverted|bool *=nullptr
 
 $prototype=QTransform adjoint() const
 $method=|QTransform|adjoint|

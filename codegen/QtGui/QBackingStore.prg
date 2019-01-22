@@ -36,8 +36,8 @@ $method=|void|beginPaint|const QRegion &
 $prototype=void endPaint()
 $method=|void|endPaint|
 
-$prototype=void flush(const QRegion & region, QWindow * win = 0, const QPoint & offset = QPoint())
-$method=|void|flush|const QRegion &,QWindow *=0,const QPoint &=QPoint()
+$prototype=void flush(const QRegion & region, QWindow * win = nullptr, const QPoint & offset = QPoint())
+$method=|void|flush|const QRegion &,QWindow *=nullptr,const QPoint &=QPoint()
 
 $prototype=QPlatformBackingStore * handle() const
 %% TODO: implementar ?

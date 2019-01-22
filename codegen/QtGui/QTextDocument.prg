@@ -32,14 +32,14 @@ $includes
 #include <QTextBlock>
 #include <QAbstractTextDocumentLayout>
 
-$prototype=QTextDocument(QObject *parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QTextDocument(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QTextDocument(const QString &text, QObject *parent = 0)
-$internalConstructor=|new2|const QString &,QObject *=0
+$prototype=QTextDocument(const QString &text, QObject *parent = nullptr)
+$internalConstructor=|new2|const QString &,QObject *=nullptr
 
-//[1]QTextDocument(QObject *parent = 0)
-//[2]QTextDocument(const QString &text, QObject *parent = 0)
+//[1]QTextDocument(QObject *parent = nullptr)
+//[2]QTextDocument(const QString &text, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 
 $deleteMethod
 
-$prototype=QTextDocument *clone(QObject *parent = 0) const
-$method=|QTextDocument *|clone|QObject *=0
+$prototype=QTextDocument *clone(QObject *parent = nullptr) const
+$method=|QTextDocument *|clone|QObject *=nullptr
 
 $prototype=bool isEmpty() const
 $method=|bool|isEmpty|

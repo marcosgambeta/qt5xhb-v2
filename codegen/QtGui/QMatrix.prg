@@ -236,8 +236,8 @@ $method=|bool|isInvertible|
 $prototype=qreal determinant() const
 $method=|qreal|determinant|
 
-$prototype=QMatrix inverted(bool *invertible = 0) const
-$method=|QMatrix|inverted|bool *=0
+$prototype=QMatrix inverted(bool *invertible = nullptr) const
+$method=|QMatrix|inverted|bool *=nullptr
 
 $extraMethods
 

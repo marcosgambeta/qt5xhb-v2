@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
-$constructor=|new|QOpenGLShader::ShaderType,QObject *=0
+$prototype=QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = nullptr)
+$constructor=|new|QOpenGLShader::ShaderType,QObject *=nullptr
 
 $deleteMethod
 
@@ -67,7 +67,7 @@ $method=|QString|log|
 $prototype=GLuint shaderId() const
 $method=|GLuint|shaderId|
 
-$prototype=static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = 0)
-$staticMethod=|bool|hasOpenGLShaders|QOpenGLShader::ShaderType,QOpenGLContext *=0
+$prototype=static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = nullptr)
+$staticMethod=|bool|hasOpenGLShaders|QOpenGLShader::ShaderType,QOpenGLContext *=nullptr
 
 #pragma ENDDUMP

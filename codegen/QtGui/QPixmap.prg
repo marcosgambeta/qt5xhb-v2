@@ -37,8 +37,8 @@ $internalConstructor=|new3|int,int
 $prototype=QPixmap ( const QSize & size )
 $internalConstructor=|new4|const QSize &
 
-$prototype=QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
-$internalConstructor=|new5|const QString &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
+$prototype=QPixmap ( const QString & fileName, const char * format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor )
+$internalConstructor=|new5|const QString &,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
 
 $prototype=QPixmap ( const QPixmap & pixmap )
 $internalConstructor=|new7|const QPixmap &
@@ -47,7 +47,7 @@ $internalConstructor=|new7|const QPixmap &
 //[2]QPixmap(QPlatformPixmap *data) // TODO: implementar(?)
 //[3]QPixmap(int w, int h)
 //[4]QPixmap(const QSize &)
-//[5]QPixmap(const QString& fileName, const char *format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+//[5]QPixmap(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 //[6]QPixmap(const char * const xpm[]) // TODO: implementar(?)
 //[7]QPixmap(const QPixmap &)
 
@@ -228,17 +228,17 @@ $addMethod=transformed
 $prototype=QImage toImage() const
 $method=|QImage|toImage|
 
-$prototype=bool load(const QString& fileName, const char *format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$method=|bool|load|const QString &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
+$prototype=bool load(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+$method=|bool|load|const QString &,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
 
-$prototype=bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$internalMethod=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
+$prototype=bool loadFromData(const uchar *buf, uint len, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+$internalMethod=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
 
-$prototype=bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
+$prototype=bool loadFromData(const QByteArray &data, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+$internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
 
-//[1]bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
-//[2]bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+//[1]bool loadFromData(const uchar *buf, uint len, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+//[2]bool loadFromData(const QByteArray &data, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 
 HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 {
@@ -257,14 +257,14 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 }
 $addMethod=loadFromData
 
-$prototype=bool save(const QString& fileName, const char* format = 0, int quality = -1) const
-$internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
+$prototype=bool save(const QString& fileName, const char* format = nullptr, int quality = -1) const
+$internalMethod=|bool|save,save1|const QString &,const char *=nullptr,int=-1
 
-$prototype=bool save(QIODevice* device, const char* format = 0, int quality = -1) const
-$internalMethod=|bool|save,save2|QIODevice *,const char *=0,int=-1
+$prototype=bool save(QIODevice* device, const char* format = nullptr, int quality = -1) const
+$internalMethod=|bool|save,save2|QIODevice *,const char *=nullptr,int=-1
 
-//[1]bool save(const QString& fileName, const char* format = 0, int quality = -1) const
-//[2]bool save(QIODevice* device, const char* format = 0, int quality = -1) const
+//[1]bool save(const QString& fileName, const char* format = nullptr, int quality = -1) const
+//[2]bool save(QIODevice* device, const char* format = nullptr, int quality = -1) const
 
 HB_FUNC_STATIC( QPIXMAP_SAVE )
 {
@@ -312,14 +312,14 @@ HB_FUNC_STATIC( QPIXMAP_COPY )
 }
 $addMethod=copy
 
-$prototype=void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
-$internalMethod=|void|scroll,scroll1|int,int,int,int,int,int,QRegion *=0
+$prototype=void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = nullptr)
+$internalMethod=|void|scroll,scroll1|int,int,int,int,int,int,QRegion *=nullptr
 
-$prototype=void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
-$internalMethod=|void|scroll,scroll2|int,int,const QRect &,QRegion *=0
+$prototype=void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
+$internalMethod=|void|scroll,scroll2|int,int,const QRect &,QRegion *=nullptr
 
-//[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
-//[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
+//[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = nullptr)
+//[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
 
 HB_FUNC_STATIC( QPIXMAP_SCROLL )
 {

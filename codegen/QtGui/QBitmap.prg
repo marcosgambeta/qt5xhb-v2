@@ -39,14 +39,14 @@ $internalConstructor=|new3|int,int
 $prototype=QBitmap ( const QSize & size )
 $internalConstructor=|new4|const QSize &
 
-$prototype=QBitmap ( const QString & fileName, const char * format = 0 )
-$internalConstructor=|new5|const QString &,const char *=0
+$prototype=QBitmap ( const QString & fileName, const char * format = nullptr )
+$internalConstructor=|new5|const QString &,const char *=nullptr
 
 //[1]QBitmap ()
 //[2]QBitmap ( const QPixmap & pixmap )
 //[3]QBitmap ( int width, int height )
 //[4]QBitmap ( const QSize & size )
-//[5]QBitmap ( const QString & fileName, const char * format = 0 )
+//[5]QBitmap ( const QString & fileName, const char * format = nullptr )
 
 HB_FUNC_STATIC( QBITMAP_NEW )
 {
