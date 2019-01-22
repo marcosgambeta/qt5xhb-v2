@@ -238,8 +238,8 @@ $staticMethod=|bool|startingUp|
 $prototype=static bool testAttribute ( Qt::ApplicationAttribute attribute )
 $staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
 
-$prototype=static QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1)
-$staticMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
+$prototype=static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1)
+$staticMethod=|QString|translate|const char *,const char *,const char *=nullptr,int=-1
 
 %%
 %% SIGNALS

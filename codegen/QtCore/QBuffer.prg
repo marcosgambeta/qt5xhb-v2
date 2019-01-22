@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QBuffer ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QBuffer ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
-$internalConstructor=|new2|QByteArray *,QObject *=0
+$prototype=QBuffer ( QByteArray * byteArray, QObject * parent = nullptr )
+$internalConstructor=|new2|QByteArray *,QObject *=nullptr
 
-//[1]QBuffer ( QObject * parent = 0 )
-//[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
+//[1]QBuffer ( QObject * parent = nullptr )
+//[2]QBuffer ( QByteArray * byteArray, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {

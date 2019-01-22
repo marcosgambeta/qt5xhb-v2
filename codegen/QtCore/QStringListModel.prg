@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QStringListModel(QObject * parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QStringListModel(QObject * parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QStringListModel(const QStringList & strings, QObject * parent = 0)
-$internalConstructor=|new2|const QStringList &,QObject *=0
+$prototype=QStringListModel(const QStringList & strings, QObject * parent = nullptr)
+$internalConstructor=|new2|const QStringList &,QObject *=nullptr
 
-//[1]QStringListModel(QObject * parent = 0)
-//[2]QStringListModel(const QStringList & strings, QObject * parent = 0)
+//[1]QStringListModel(QObject * parent = nullptr)
+//[2]QStringListModel(const QStringList & strings, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {

@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QPropertyAnimation ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QPropertyAnimation ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
-$internalConstructor=|new2|QObject *,const QByteArray &,QObject *=0
+$prototype=QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
+$internalConstructor=|new2|QObject *,const QByteArray &,QObject *=nullptr
 
-//[1]QPropertyAnimation ( QObject * parent = 0 )
-//[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+//[1]QPropertyAnimation ( QObject * parent = nullptr )
+//[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {

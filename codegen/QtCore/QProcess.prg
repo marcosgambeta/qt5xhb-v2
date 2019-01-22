@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QProcess ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=explicit QProcess ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
@@ -200,9 +200,9 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 }
 $addMethod=execute
 
-$prototype=static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
-%% TODO: implementar 'qint64 *=0'
-%% $staticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
+$prototype=static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
+%% TODO: implementar 'qint64 *=nullptr'
+%% $staticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=nullptr
 $internalStaticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &
 
 $prototype=static bool startDetached ( const QString & program, const QStringList & arguments )
@@ -214,7 +214,7 @@ $internalStaticMethod=|bool|startDetached,startDetached3|const QString &
 $prototype=bool QProcess::startDetached(qint64 *pid = nullptr) Require 5.10.0
 %% TODO: implementar
 
-//[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
+//[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )
 //[3]bool startDetached ( const QString & program )
 

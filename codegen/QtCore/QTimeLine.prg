@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QTimeLine ( int duration = 1000, QObject * parent = 0 )
-$constructor=|new|int=1000,QObject *=0
+$prototype=QTimeLine ( int duration = 1000, QObject * parent = nullptr )
+$constructor=|new|int=1000,QObject *=nullptr
 
 $deleteMethod
 

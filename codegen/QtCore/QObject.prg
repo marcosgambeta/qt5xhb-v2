@@ -213,8 +213,8 @@ void Events_disconnect_all_events ( QObject * object, bool children );
 void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
-$prototype=Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=Q_INVOKABLE explicit QObject ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
@@ -332,14 +332,14 @@ $method=|QThread *|thread|
 $prototype=void deleteLater ()
 $method=|void|deleteLater|
 
-$prototype=static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
-$staticMethod=|QString|tr|const char *,const char *=0,int=-1
+$prototype=static QString tr ( const char * sourceText, const char * disambiguation = nullptr, int n = -1 )
+$staticMethod=|QString|tr|const char *,const char *=nullptr,int=-1
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( hb_pcount() == 0 )
     {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( hb_pcount() == 0 )
     {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( hb_pcount() == 0 )
     {
@@ -1299,7 +1299,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(2) && ISCHAR(1) )
     {
@@ -1364,7 +1364,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
@@ -1402,7 +1402,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 %% SIGNALS
 %%
 
-$prototype=void destroyed( QObject * obj = 0 )
+$prototype=void destroyed( QObject * obj = nullptr )
 $signalMethod=|void|destroyed|QObject *
 
 $prototype=void objectNameChanged( const QString & objectName )

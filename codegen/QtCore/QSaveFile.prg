@@ -28,14 +28,14 @@ $includes=5,1,0
 $prototype=QSaveFile(const QString &name)
 $internalConstructor=5,1,0|new1|const QString &
 
-$prototype=QSaveFile(QObject *parent = 0)
-$internalConstructor=5,1,0|new2|QObject *=0
+$prototype=QSaveFile(QObject *parent = nullptr)
+$internalConstructor=5,1,0|new2|QObject *=nullptr
 
 $prototype=QSaveFile(const QString &name, QObject *parent)
 $internalConstructor=5,1,0|new3|const QString &,QObject *
 
 //[1]QSaveFile(const QString &name)
-//[2]QSaveFile(QObject *parent = 0)
+//[2]QSaveFile(QObject *parent = nullptr)
 //[3]QSaveFile(const QString &name, QObject *parent)
 
 HB_FUNC_STATIC( QSAVEFILE_NEW )

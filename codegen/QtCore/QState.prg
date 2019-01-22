@@ -29,14 +29,14 @@ $includes
 
 #include <QAbstractTransition>
 
-$prototype=QState ( QState * parent = 0 )
-$internalConstructor=|new1|QState *=0
+$prototype=QState ( QState * parent = nullptr )
+$internalConstructor=|new1|QState *=nullptr
 
-$prototype=QState ( ChildMode childMode, QState * parent = 0 )
-$internalConstructor=|new2|QState::ChildMode,QState *=0
+$prototype=QState ( ChildMode childMode, QState * parent = nullptr )
+$internalConstructor=|new2|QState::ChildMode,QState *=nullptr
 
-//[1]QState ( QState * parent = 0 )
-//[2]QState ( ChildMode childMode, QState * parent = 0 )
+//[1]QState ( QState * parent = nullptr )
+//[2]QState ( ChildMode childMode, QState * parent = nullptr )
 
 HB_FUNC_STATIC( QSTATE_NEW )
 {

@@ -111,8 +111,8 @@ $method=|QVariant|toVariant|
 $prototype=static QJsonDocument fromBinaryData(const QByteArray & data, DataValidation validation = Validate)
 $staticMethod=|QJsonDocument|fromBinaryData|const QByteArray &,QJsonDocument::DataValidation=QJsonDocument::Validate
 
-$prototype=static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = 0)
-$staticMethod=|QJsonDocument|fromJson|const QByteArray &,QJsonParseError *=0
+$prototype=static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = nullptr)
+$staticMethod=|QJsonDocument|fromJson|const QByteArray &,QJsonParseError *=nullptr
 
 $prototype=static QJsonDocument fromRawData(const char * data, int size, DataValidation validation = Validate)
 $staticMethod=|QJsonDocument|fromRawData|const char *,int,QJsonDocument::DataValidation=QJsonDocument::Validate

@@ -120,9 +120,9 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 }
 $addMethod=toString
 
-$prototype=int weekNumber ( int * yearNumber = 0 ) const
+$prototype=int weekNumber ( int * yearNumber = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|int|weekNumber|int *=0
+$method=|int|weekNumber|int *=nullptr
 
 $prototype=int year () const
 $method=|int|year|

@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QParallelAnimationGroup ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QParallelAnimationGroup ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QThreadPool(QObject *parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QThreadPool(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

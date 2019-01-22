@@ -54,20 +54,20 @@ $method=|bool|isWritable|
 $prototype=bool isResettable() const
 $method=|bool|isResettable|
 
-$prototype=bool isDesignable(const QObject *obj = 0) const
-$method=|bool|isDesignable|const QObject *=0
+$prototype=bool isDesignable(const QObject *obj = nullptr) const
+$method=|bool|isDesignable|const QObject *=nullptr
 
-$prototype=bool isScriptable(const QObject *obj = 0) const
-$method=|bool|isScriptable|const QObject *=0
+$prototype=bool isScriptable(const QObject *obj = nullptr) const
+$method=|bool|isScriptable|const QObject *=nullptr
 
-$prototype=bool isStored(const QObject *obj = 0) const
-$method=|bool|isStored|const QObject *=0
+$prototype=bool isStored(const QObject *obj = nullptr) const
+$method=|bool|isStored|const QObject *=nullptr
 
-$prototype=bool isEditable(const QObject *obj = 0) const
-$method=|bool|isEditable|const QObject *=0
+$prototype=bool isEditable(const QObject *obj = nullptr) const
+$method=|bool|isEditable|const QObject *=nullptr
 
-$prototype=bool isUser(const QObject *obj = 0) const
-$method=|bool|isUser|const QObject *=0
+$prototype=bool isUser(const QObject *obj = nullptr) const
+$method=|bool|isUser|const QObject *=nullptr
 
 $prototype=bool isConstant() const
 $method=|bool|isConstant|

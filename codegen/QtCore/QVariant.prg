@@ -468,36 +468,36 @@ $method=|void|detach|
 $prototype=bool isDetached() const
 $method=|bool|isDetached|
 
-$prototype=int toInt(bool *ok = 0) const
+$prototype=int toInt(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
-$method=|int|toInt|bool *=0
+$method=|int|toInt|bool *=nullptr
 
-$prototype=uint toUInt(bool *ok = 0) const
+$prototype=uint toUInt(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
-$method=|uint|toUInt|bool *=0
+$method=|uint|toUInt|bool *=nullptr
 
-$prototype=qlonglong toLongLong(bool *ok = 0) const
+$prototype=qlonglong toLongLong(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
-$method=|qlonglong|toLongLong|bool *=0
+$method=|qlonglong|toLongLong|bool *=nullptr
 
-$prototype=qulonglong toULongLong(bool *ok = 0) const
+$prototype=qulonglong toULongLong(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
-$method=|qulonglong|toULongLong|bool *=0
+$method=|qulonglong|toULongLong|bool *=nullptr
 
 $prototype=bool toBool() const
 $method=|bool|toBool|
 
-$prototype=double toDouble(bool *ok = 0) const
+$prototype=double toDouble(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
-$method=|double|toDouble|bool *=0
+$method=|double|toDouble|bool *=nullptr
 
-$prototype=float toFloat(bool *ok = 0) const
+$prototype=float toFloat(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
-$method=|float|toFloat|bool *=0
+$method=|float|toFloat|bool *=nullptr
 
-$prototype=qreal toReal(bool *ok = 0) const
+$prototype=qreal toReal(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
-$method=|qreal|toReal|bool *=0
+$method=|qreal|toReal|bool *=nullptr
 
 $prototype=QByteArray toByteArray() const
 $method=|QByteArray|toByteArray|

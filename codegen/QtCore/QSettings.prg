@@ -27,26 +27,26 @@ $includes
 
 #include <QStringList>
 
-$prototype=QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-$internalConstructor=|new1|const QString &,const QString &=QString(),QObject *=0
+$prototype=QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+$internalConstructor=|new1|const QString &,const QString &=QString(),QObject *=nullptr
 
-$prototype=QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-$internalConstructor=|new2|QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
+$prototype=QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+$internalConstructor=|new2|QSettings::Scope,const QString &,const QString &=QString(),QObject *=nullptr
 
-$prototype=QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-$internalConstructor=|new3|QSettings::Format,QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
+$prototype=QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+$internalConstructor=|new3|QSettings::Format,QSettings::Scope,const QString &,const QString &=QString(),QObject *=nullptr
 
-$prototype=QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
-$internalConstructor=|new4|const QString &,QSettings::Format,QObject *=0
+$prototype=QSettings ( const QString & fileName, Format format, QObject * parent = nullptr )
+$internalConstructor=|new4|const QString &,QSettings::Format,QObject *=nullptr
 
-$prototype=QSettings ( QObject * parent = 0 )
-$internalConstructor=|new5|QObject *=0
+$prototype=QSettings ( QObject * parent = nullptr )
+$internalConstructor=|new5|QObject *=nullptr
 
-//[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[4]QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
-//[5]QSettings ( QObject * parent = 0 )
+//[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+//[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+//[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+//[4]QSettings ( const QString & fileName, Format format, QObject * parent = nullptr )
+//[5]QSettings ( QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {

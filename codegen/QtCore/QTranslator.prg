@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QTranslator(QObject * parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QTranslator(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 }
 $addMethod=load
 
-$prototype=virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
-$virtualMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
+$prototype=virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1) const
+$virtualMethod=|QString|translate|const char *,const char *,const char *=nullptr,int=-1
 
 #pragma ENDDUMP

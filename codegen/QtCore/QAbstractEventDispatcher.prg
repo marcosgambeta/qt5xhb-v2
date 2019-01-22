@@ -100,8 +100,8 @@ $virtualMethod=|bool|unregisterTimers|QObject *
 $prototype=virtual void wakeUp () = 0
 $virtualMethod=|void|wakeUp|
 
-$prototype=static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
-$staticMethod=|QAbstractEventDispatcher *|instance|QThread *=0
+$prototype=static QAbstractEventDispatcher * instance ( QThread * thread = nullptr )
+$staticMethod=|QAbstractEventDispatcher *|instance|QThread *=nullptr
 
 $prototype=virtual void startingUp()
 $virtualMethod=|void|startingUp|

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QAnimationDriver(QObject *parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QAnimationDriver(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

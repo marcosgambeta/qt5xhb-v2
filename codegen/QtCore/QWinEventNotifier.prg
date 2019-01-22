@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=explicit QWinEventNotifier(QObject *parent = 0)
-$internalConstructor=|new1|QObject *=0|#ifdef Q_OS_WIN
+$prototype=explicit QWinEventNotifier(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr|#ifdef Q_OS_WIN
 
-$prototype=explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
-%% TODO: $internalConstructor=|new2|HANDLE,QObject *=0|#ifdef Q_OS_WIN
+$prototype=explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
+%% TODO: $internalConstructor=|new2|HANDLE,QObject *=nullptr|#ifdef Q_OS_WIN
 
-//[1]explicit QWinEventNotifier(QObject *parent = 0)
-//[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
+//[1]explicit QWinEventNotifier(QObject *parent = nullptr)
+//[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {

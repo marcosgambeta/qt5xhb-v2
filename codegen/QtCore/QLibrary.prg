@@ -25,22 +25,22 @@ $destructor
 
 $includes
 
-$prototype=QLibrary(QObject *parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QLibrary(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QLibrary(const QString& fileName, QObject *parent = 0)
-$internalConstructor=|new2|const QString &,QObject *=0
+$prototype=QLibrary(const QString& fileName, QObject *parent = nullptr)
+$internalConstructor=|new2|const QString &,QObject *=nullptr
 
-$prototype=QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-$internalConstructor=|new3|const QString &,int,QObject *=0
+$prototype=QLibrary(const QString& fileName, int verNum, QObject *parent = nullptr)
+$internalConstructor=|new3|const QString &,int,QObject *=nullptr
 
-$prototype=QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
-$internalConstructor=|new4|const QString &,const QString &,QObject *=0
+$prototype=QLibrary(const QString& fileName, const QString &version, QObject *parent = nullptr)
+$internalConstructor=|new4|const QString &,const QString &,QObject *=nullptr
 
-//[1]QLibrary(QObject *parent = 0)
-//[2]QLibrary(const QString& fileName, QObject *parent = 0)
-//[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-//[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+//[1]QLibrary(QObject *parent = nullptr)
+//[2]QLibrary(const QString& fileName, QObject *parent = nullptr)
+//[3]QLibrary(const QString& fileName, int verNum, QObject *parent = nullptr)
+//[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {

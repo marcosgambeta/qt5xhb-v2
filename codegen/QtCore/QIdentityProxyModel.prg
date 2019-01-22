@@ -27,8 +27,8 @@ $includes
 
 #include <QItemSelection>
 
-$prototype=QIdentityProxyModel(QObject* parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QIdentityProxyModel(QObject* parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

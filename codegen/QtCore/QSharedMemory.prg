@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QSharedMemory(QObject *parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QSharedMemory(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QSharedMemory(const QString &key, QObject *parent = 0)
-$internalConstructor=|new2|const QString &,QObject *=0
+$prototype=QSharedMemory(const QString &key, QObject *parent = nullptr)
+$internalConstructor=|new2|const QString &,QObject *=nullptr
 
-//[1]QSharedMemory(QObject *parent = 0)
-//[2]QSharedMemory(const QString &key, QObject *parent = 0)
+//[1]QSharedMemory(QObject *parent = nullptr)
+//[2]QSharedMemory(const QString &key, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {

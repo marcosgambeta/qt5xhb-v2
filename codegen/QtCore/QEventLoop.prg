@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QEventLoop ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QEventLoop ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

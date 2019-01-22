@@ -792,27 +792,27 @@ $addMethod=startsWith
 $prototype=QByteArray toBase64 () const
 $method=|QByteArray|toBase64|
 
-$prototype=double toDouble ( bool * ok = 0 ) const
-$method=|double|toDouble|bool *=0
+$prototype=double toDouble ( bool * ok = nullptr ) const
+$method=|double|toDouble|bool *=nullptr
 
-$prototype=float toFloat ( bool * ok = 0 ) const
+$prototype=float toFloat ( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|float|toFloat|bool *=0
+$method=|float|toFloat|bool *=nullptr
 
 $prototype=QByteArray toHex () const
 $method=|QByteArray|toHex|
 
-$prototype=int toInt ( bool * ok = 0, int base = 10 ) const
+$prototype=int toInt ( bool * ok = nullptr, int base = 10 ) const
 %% TODO: implementar parametro opcional
-$method=|int|toInt|bool *=0,int=10
+$method=|int|toInt|bool *=nullptr,int=10
 
-$prototype=long toLong ( bool * ok = 0, int base = 10 ) const
+$prototype=long toLong ( bool * ok = nullptr, int base = 10 ) const
 %% TODO: implementar parametro opcional
-$method=|long|toLong|bool *=0,int=10
+$method=|long|toLong|bool *=nullptr,int=10
 
-$prototype=qlonglong toLongLong ( bool * ok = 0, int base = 10 ) const
+$prototype=qlonglong toLongLong ( bool * ok = nullptr, int base = 10 ) const
 %% TODO: implementar parametro opcional
-$method=|qlonglong|toLongLong|bool *=0,int=10
+$method=|qlonglong|toLongLong|bool *=nullptr,int=10
 
 $prototype=QByteArray toLower () const
 $method=|QByteArray|toLower|
@@ -820,20 +820,20 @@ $method=|QByteArray|toLower|
 $prototype=QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
 $method=|QByteArray|toPercentEncoding|const QByteArray &=QByteArray(),const QByteArray &=QByteArray(),char='%'
 
-$prototype=short toShort ( bool * ok = 0, int base = 10 ) const
-$method=|short|toShort|bool *=0,int=10
+$prototype=short toShort ( bool * ok = nullptr, int base = 10 ) const
+$method=|short|toShort|bool *=nullptr,int=10
 
-$prototype=uint toUInt ( bool * ok = 0, int base = 10 ) const
-$method=|uint|toUInt|bool *=0,int=10
+$prototype=uint toUInt ( bool * ok = nullptr, int base = 10 ) const
+$method=|uint|toUInt|bool *=nullptr,int=10
 
-$prototype=ulong toULong ( bool * ok = 0, int base = 10 ) const
-$method=|ulong|toULong|bool *=0,int=10
+$prototype=ulong toULong ( bool * ok = nullptr, int base = 10 ) const
+$method=|ulong|toULong|bool *=nullptr,int=10
 
-$prototype=qulonglong toULongLong ( bool * ok = 0, int base = 10 ) const
-$method=|qulonglong|toULongLong|bool *=0,int=10
+$prototype=qulonglong toULongLong ( bool * ok = nullptr, int base = 10 ) const
+$method=|qulonglong|toULongLong|bool *=nullptr,int=10
 
-$prototype=ushort toUShort ( bool * ok = 0, int base = 10 ) const
-$method=|ushort|toUShort|bool *=0,int=10
+$prototype=ushort toUShort ( bool * ok = nullptr, int base = 10 ) const
+$method=|ushort|toUShort|bool *=nullptr,int=10
 
 $prototype=QByteArray toUpper () const
 $method=|QByteArray|toUpper|

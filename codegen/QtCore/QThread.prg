@@ -29,8 +29,8 @@ $includes
 
 #include <QAbstractEventDispatcher>
 
-$prototype=QThread(QObject * parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QThread(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QPluginLoader ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QPluginLoader ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QPluginLoader ( const QString & fileName, QObject * parent = 0 )
-$internalConstructor=|new2|const QString &,QObject *=0
+$prototype=QPluginLoader ( const QString & fileName, QObject * parent = nullptr )
+$internalConstructor=|new2|const QString &,QObject *=nullptr
 
-//[1]QPluginLoader ( QObject * parent = 0 )
-//[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+//[1]QPluginLoader ( QObject * parent = nullptr )
+//[2]QPluginLoader ( const QString & fileName, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {

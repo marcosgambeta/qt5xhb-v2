@@ -27,8 +27,8 @@ $includes
 
 #include <QUrl>
 
-$prototype=QFileSelector(QObject *parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QFileSelector(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

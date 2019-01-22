@@ -275,13 +275,13 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
 }
 $addMethod=toDateTime
 
-$prototype=double toDouble ( const QString & s, bool * ok = 0 ) const
+$prototype=double toDouble ( const QString & s, bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|double|toDouble|const QString &,bool *=0
+$method=|double|toDouble|const QString &,bool *=nullptr
 
-$prototype=float toFloat ( const QString & s, bool * ok = 0 ) const
+$prototype=float toFloat ( const QString & s, bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|float|toFloat|const QString &,bool *=0
+$method=|float|toFloat|const QString &,bool *=nullptr
 
 $prototype=QString toLower ( const QString & str ) const
 $method=|QString|toLower|const QString &

@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QHistoryState(QState *parent = 0)
-$internalConstructor=|new1|QState *=0
+$prototype=QHistoryState(QState *parent = nullptr)
+$internalConstructor=|new1|QState *=nullptr
 
-$prototype=QHistoryState(HistoryType type, QState *parent = 0)
-$internalConstructor=|new2|QHistoryState::HistoryType,QState *=0
+$prototype=QHistoryState(HistoryType type, QState *parent = nullptr)
+$internalConstructor=|new2|QHistoryState::HistoryType,QState *=nullptr
 
-//[1]QHistoryState(QState *parent = 0)
-//[2]QHistoryState(HistoryType type, QState *parent = 0)
+//[1]QHistoryState(QState *parent = nullptr)
+//[2]QHistoryState(HistoryType type, QState *parent = nullptr)
 
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {

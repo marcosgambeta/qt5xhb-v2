@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=QStateMachine(QObject *parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QStateMachine(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
-$internalConstructor=|new2|QState::ChildMode,QObject *=0
+$prototype=QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
+$internalConstructor=|new2|QState::ChildMode,QObject *=nullptr
 
-//[1]QStateMachine(QObject *parent = 0)
-//[2]QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
+//[1]QStateMachine(QObject *parent = nullptr)
+//[2]QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {

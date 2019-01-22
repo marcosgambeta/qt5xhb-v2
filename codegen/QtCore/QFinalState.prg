@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QFinalState(QState * parent = 0)
-$constructor=|new|QState *=0
+$prototype=QFinalState(QState * parent = nullptr)
+$constructor=|new|QState *=nullptr
 
 $deleteMethod
 
