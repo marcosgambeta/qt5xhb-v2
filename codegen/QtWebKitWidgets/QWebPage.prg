@@ -35,8 +35,8 @@ $includes
 #include <QWebPluginFactory>
 #include <QMenu>
 
-$prototype=explicit QWebPage ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=explicit QWebPage ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QWebPage()
 $deleteMethod
@@ -155,9 +155,9 @@ $method=|QMenu *|createStandardContextMenu|
 $prototype=QWebFrame * currentFrame () const
 $method=|QWebFrame *|currentFrame|
 
-$prototype=virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
+$prototype=virtual bool extension ( Extension extension, const ExtensionOption * option = nullptr, ExtensionReturn * output = nullptr )
 %% TODO: corrigir (QWebPage::Extension é uma classe)
-%% $virtualMethod=|bool|extension|QWebPage::Extension,const QWebPage::ExtensionOption *=0,QWebPage::ExtensionReturn *=0
+%% $virtualMethod=|bool|extension|QWebPage::Extension,const QWebPage::ExtensionOption *=nullptr,QWebPage::ExtensionReturn *=nullptr
 
 $prototype=bool findText ( const QString & subString, FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0

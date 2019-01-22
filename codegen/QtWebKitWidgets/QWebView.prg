@@ -31,8 +31,8 @@ $includes
 #include <QUrl>
 #include <QWidget>
 
-$prototype=explicit QWebView ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=explicit QWebView ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $prototype=virtual ~QWebView()
 $deleteMethod

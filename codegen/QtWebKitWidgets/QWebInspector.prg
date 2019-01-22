@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QWebInspector ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QWebInspector ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $prototype=~QWebInspector()
 $deleteMethod

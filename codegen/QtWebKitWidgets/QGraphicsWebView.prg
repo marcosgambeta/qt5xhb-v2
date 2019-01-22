@@ -31,8 +31,8 @@ $includes
 
 #include <QAction>
 
-$prototype=explicit QGraphicsWebView ( QGraphicsItem * parent = 0 )
-$constructor=|new|QGraphicsItem *=0
+$prototype=explicit QGraphicsWebView ( QGraphicsItem * parent = nullptr )
+$constructor=|new|QGraphicsItem *=nullptr
 
 $prototype=~QGraphicsWebView()
 $deleteMethod
@@ -183,8 +183,8 @@ $virtualMethod=|void|setGeometry|const QRectF &
 $prototype=virtual void updateGeometry()
 $virtualMethod=|void|updateGeometry|
 
-$prototype=virtual void paint(QPainter*, const QStyleOptionGraphicsItem* options, QWidget* widget = 0)
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint(QPainter*, const QStyleOptionGraphicsItem* options, QWidget* widget = nullptr)
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=virtual QVariant itemChange(GraphicsItemChange change, const QVariant& value)
 $virtualMethod=|QVariant|itemChange|QGraphicsItem::GraphicsItemChange,const QVariant &
