@@ -30,18 +30,18 @@ $includes
 #include <QStringList>
 #include <QAxObject>
 
-$prototype=QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
+$prototype=QAxWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new1|QWidget *=nullptr,Qt::WindowFlags=0
 
-$prototype=QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
+$prototype=QAxWidget ( const QString & c, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr,Qt::WindowFlags=0
 
-$prototype=QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new3|IUnknown *,QWidget *=0,Qt::WindowFlags=0
+$prototype=QAxWidget ( IUnknown * iface, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new3|IUnknown *,QWidget *=nullptr,Qt::WindowFlags=0
 
-//[1]QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[2]QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[3]QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+//[1]QAxWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+//[2]QAxWidget ( const QString & c, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+//[3]QAxWidget ( IUnknown * iface, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 
 HB_FUNC_STATIC( QAXWIDGET_NEW )
 {

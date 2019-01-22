@@ -29,18 +29,18 @@ $includes
 
 #include <QStringList>
 
-$prototype=QAxObject ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QAxObject ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QAxObject ( const QString & c, QObject * parent = 0 )
-$internalConstructor=|new2|const QString &,QObject *=0
+$prototype=QAxObject ( const QString & c, QObject * parent = nullptr )
+$internalConstructor=|new2|const QString &,QObject *=nullptr
 
-$prototype=QAxObject ( IUnknown * iface, QObject * parent = 0 )
-$internalConstructor=|new3|IUnknown *,QObject *=0
+$prototype=QAxObject ( IUnknown * iface, QObject * parent = nullptr )
+$internalConstructor=|new3|IUnknown *,QObject *=nullptr
 
-//[1]QAxObject ( QObject * parent = 0 )
-//[2]QAxObject ( const QString & c, QObject * parent = 0 )
-//[3]QAxObject ( IUnknown * iface, QObject * parent = 0 )
+//[1]QAxObject ( QObject * parent = nullptr )
+//[2]QAxObject ( const QString & c, QObject * parent = nullptr )
+//[3]QAxObject ( IUnknown * iface, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QAXOBJECT_NEW )
 {
