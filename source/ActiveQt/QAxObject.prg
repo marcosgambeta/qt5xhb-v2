@@ -66,35 +66,35 @@ RETURN
 #include <QStringList>
 
 /*
-QAxObject ( QObject * parent = 0 )
+QAxObject ( QObject * parent = nullptr )
 */
 void QAxObject_new1 ()
 {
-  QAxObject * o = new QAxObject ( OPQOBJECT(1,0) );
+  QAxObject * o = new QAxObject ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QAxObject ( const QString & c, QObject * parent = 0 )
+QAxObject ( const QString & c, QObject * parent = nullptr )
 */
 void QAxObject_new2 ()
 {
-  QAxObject * o = new QAxObject ( PQSTRING(1), OPQOBJECT(2,0) );
+  QAxObject * o = new QAxObject ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QAxObject ( IUnknown * iface, QObject * parent = 0 )
+QAxObject ( IUnknown * iface, QObject * parent = nullptr )
 */
 void QAxObject_new3 ()
 {
-  QAxObject * o = new QAxObject ( (IUnknown *) hb_parptr(1), OPQOBJECT(2,0) );
+  QAxObject * o = new QAxObject ( (IUnknown *) hb_parptr(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QAxObject ( QObject * parent = 0 )
-//[2]QAxObject ( const QString & c, QObject * parent = 0 )
-//[3]QAxObject ( IUnknown * iface, QObject * parent = 0 )
+//[1]QAxObject ( QObject * parent = nullptr )
+//[2]QAxObject ( const QString & c, QObject * parent = nullptr )
+//[3]QAxObject ( IUnknown * iface, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QAXOBJECT_NEW )
 {

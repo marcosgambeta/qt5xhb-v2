@@ -60,13 +60,13 @@ RETURN
 #include <QStringList>
 
 /*
-QAxScriptManager ( QObject * parent = 0 )
+QAxScriptManager ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAxScriptManager * o = new QAxScriptManager ( OPQOBJECT(1,0) );
+    QAxScriptManager * o = new QAxScriptManager ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
