@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QDeclarativePropertyMap ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QDeclarativePropertyMap ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

@@ -28,11 +28,11 @@ $includes
 $prototype=QDeclarativeListReference ()
 $internalConstructor=|new1|
 
-$prototype=QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
-$internalConstructor=|new2|QObject *,const char *,QDeclarativeEngine *=0
+$prototype=QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
+$internalConstructor=|new2|QObject *,const char *,QDeclarativeEngine *=nullptr
 
 //[1]QDeclarativeListReference ()
-//[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+//[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {

@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QDeclarativeItem ( QDeclarativeItem * parent = 0 )
-$constructor=|new|QDeclarativeItem *=0
+$prototype=QDeclarativeItem ( QDeclarativeItem * parent = nullptr )
+$constructor=|new|QDeclarativeItem *=nullptr
 
 $deleteMethod
 

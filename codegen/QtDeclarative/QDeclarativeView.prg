@@ -32,14 +32,14 @@ $includes
 #include <QDeclarativeContext>
 #include <QGraphicsObject>
 
-$prototype=QDeclarativeView ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QDeclarativeView ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
-$internalConstructor=|new2|const QUrl &,QWidget *=0
+$prototype=QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QUrl &,QWidget *=nullptr
 
-//[1]QDeclarativeView ( QWidget * parent = 0 )
-//[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
+//[1]QDeclarativeView ( QWidget * parent = nullptr )
+//[2]QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {

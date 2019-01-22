@@ -29,18 +29,18 @@ $includes
 
 #include <QDeclarativeContext>
 
-$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
-$internalConstructor=|new1|QDeclarativeEngine *,QObject *=0
+$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+$internalConstructor=|new1|QDeclarativeEngine *,QObject *=nullptr
 
-$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
-$internalConstructor=|new2|QDeclarativeEngine *,const QString &,QObject *=0
+$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
+$internalConstructor=|new2|QDeclarativeEngine *,const QString &,QObject *=nullptr
 
-$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
-$internalConstructor=|new3|QDeclarativeEngine *,const QUrl &,QObject *=0
+$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
+$internalConstructor=|new3|QDeclarativeEngine *,const QUrl &,QObject *=nullptr
 
-//[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
-//[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
-//[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
+//[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+//[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
+//[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
@@ -70,8 +70,8 @@ $virtualMethod=|QObject *|beginCreate|QDeclarativeContext *
 $prototype=virtual void completeCreate ()
 $virtualMethod=|void|completeCreate|
 
-$prototype=virtual QObject * create ( QDeclarativeContext * context = 0 )
-$virtualMethod=|QObject *|create|QDeclarativeContext *=0
+$prototype=virtual QObject * create ( QDeclarativeContext * context = nullptr )
+$virtualMethod=|QObject *|create|QDeclarativeContext *=nullptr
 
 $prototype=QDeclarativeContext * creationContext () const
 $method=|QDeclarativeContext *|creationContext|

@@ -33,11 +33,11 @@ $includes
 $prototype=QDeclarativeExpression ()
 $internalConstructor=|new1|
 
-$prototype=QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
-$internalConstructor=|new2|QDeclarativeContext *,QObject *,const QString &,QObject *=0
+$prototype=QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+$internalConstructor=|new2|QDeclarativeContext *,QObject *,const QString &,QObject *=nullptr
 
 //[1]QDeclarativeExpression ()
-//[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
+//[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
@@ -69,8 +69,8 @@ $method=|QDeclarativeEngine *|engine|
 $prototype=QDeclarativeError error () const
 $method=|QDeclarativeError|error|
 
-$prototype=QVariant evaluate ( bool * valueIsUndefined = 0 )
-$method=|QVariant|evaluate|bool *=0
+$prototype=QVariant evaluate ( bool * valueIsUndefined = nullptr )
+$method=|QVariant|evaluate|bool *=nullptr
 
 $prototype=QString expression () const
 $method=|QString|expression|

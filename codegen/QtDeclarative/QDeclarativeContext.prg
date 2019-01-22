@@ -27,14 +27,14 @@ $includes
 
 #include <QDeclarativeEngine>
 
-$prototype=QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
-$internalConstructor=|new1|QDeclarativeEngine *,QObject *=0
+$prototype=QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+$internalConstructor=|new1|QDeclarativeEngine *,QObject *=nullptr
 
-$prototype=QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
-$internalConstructor=|new2|QDeclarativeContext *,QObject *=0
+$prototype=QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
+$internalConstructor=|new2|QDeclarativeContext *,QObject *=nullptr
 
-//[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
-//[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
+//[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+//[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {

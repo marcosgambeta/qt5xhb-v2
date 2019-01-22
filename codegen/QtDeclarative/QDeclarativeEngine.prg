@@ -31,8 +31,8 @@ $includes
 #include <QNetworkAccessManager>
 #include <QDeclarativeContext>
 
-$prototype=QDeclarativeEngine ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QDeclarativeEngine ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
