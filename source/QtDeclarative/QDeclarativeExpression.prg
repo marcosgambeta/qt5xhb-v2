@@ -81,16 +81,16 @@ void QDeclarativeExpression_new1 ()
 }
 
 /*
-QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
+QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
 */
 void QDeclarativeExpression_new2 ()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
+  QDeclarativeExpression * o = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeExpression ()
-//[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
+//[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
 }
 
 /*
-QVariant evaluate ( bool * valueIsUndefined = 0 )
+QVariant evaluate ( bool * valueIsUndefined = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 {

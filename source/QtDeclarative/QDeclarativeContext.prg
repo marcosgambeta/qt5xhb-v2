@@ -64,25 +64,25 @@ RETURN
 #include <QDeclarativeEngine>
 
 /*
-QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
+QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
 */
 void QDeclarativeContext_new1 ()
 {
-  QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
+  QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
+QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
 */
 void QDeclarativeContext_new2 ()
 {
-  QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,0) );
+  QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
-//[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
+//[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+//[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {

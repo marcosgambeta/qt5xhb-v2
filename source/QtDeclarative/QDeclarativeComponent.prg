@@ -71,35 +71,35 @@ RETURN
 #include <QDeclarativeContext>
 
 /*
-QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
+QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
 */
 void QDeclarativeComponent_new1 ()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
+QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
 */
 void QDeclarativeComponent_new2 ()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
+QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
 */
 void QDeclarativeComponent_new3 ()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
-//[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
-//[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
+//[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+//[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
+//[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 }
 
 /*
-virtual QObject * create ( QDeclarativeContext * context = 0 )
+virtual QObject * create ( QDeclarativeContext * context = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
     if( ISBETWEEN(0,1) && (ISQDECLARATIVECONTEXT(1)||ISNIL(1)) )
     {
 #endif
-      QObject * ptr = obj->create ( OPQDECLARATIVECONTEXT(1,0) );
+      QObject * ptr = obj->create ( OPQDECLARATIVECONTEXT(1,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

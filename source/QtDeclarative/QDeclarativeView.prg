@@ -72,25 +72,25 @@ RETURN
 #include <QGraphicsObject>
 
 /*
-QDeclarativeView ( QWidget * parent = 0 )
+QDeclarativeView ( QWidget * parent = nullptr )
 */
 void QDeclarativeView_new1 ()
 {
-  QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
+  QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
+QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
 */
 void QDeclarativeView_new2 ()
 {
-  QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
+  QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QDeclarativeView ( QWidget * parent = 0 )
-//[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
+//[1]QDeclarativeView ( QWidget * parent = nullptr )
+//[2]QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {

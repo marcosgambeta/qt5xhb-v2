@@ -84,13 +84,13 @@ RETURN
 #include <QDeclarativeContext>
 
 /*
-QDeclarativeEngine ( QObject * parent = 0 )
+QDeclarativeEngine ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QDeclarativeEngine * o = new QDeclarativeEngine ( OPQOBJECT(1,0) );
+    QDeclarativeEngine * o = new QDeclarativeEngine ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

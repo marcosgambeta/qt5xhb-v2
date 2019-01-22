@@ -76,16 +76,16 @@ void QDeclarativeListReference_new1 ()
 }
 
 /*
-QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
 */
 void QDeclarativeListReference_new2 ()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
+  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeListReference ()
-//[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+//[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
 
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
