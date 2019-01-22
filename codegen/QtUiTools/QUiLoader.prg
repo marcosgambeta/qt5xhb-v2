@@ -31,8 +31,8 @@ $includes
 #include <QActionGroup>
 #include <QLayout>
 
-$prototype=QUiLoader ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QUiLoader ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
@@ -48,23 +48,23 @@ $method=|QStringList|availableWidgets|
 $prototype=void clearPluginPaths ()
 $method=|void|clearPluginPaths|
 
-$prototype=virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
-$virtualMethod=|QAction *|createAction|QObject *=0,const QString &=QString()
+$prototype=virtual QAction * createAction ( QObject * parent = nullptr, const QString & name = QString() )
+$virtualMethod=|QAction *|createAction|QObject *=nullptr,const QString &=QString()
 
-$prototype=virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
-$virtualMethod=|QActionGroup *|createActionGroup|QObject *=0,const QString &=QString()
+$prototype=virtual QActionGroup * createActionGroup ( QObject * parent = nullptr, const QString & name = QString() )
+$virtualMethod=|QActionGroup *|createActionGroup|QObject *=nullptr,const QString &=QString()
 
-$prototype=virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
-$virtualMethod=|QLayout *|createLayout|const QString &,QObject *=0,const QString &=QString()
+$prototype=virtual QLayout * createLayout ( const QString & className, QObject * parent = nullptr, const QString & name = QString() )
+$virtualMethod=|QLayout *|createLayout|const QString &,QObject *=nullptr,const QString &=QString()
 
-$prototype=virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
-$virtualMethod=|QWidget *|createWidget|const QString &,QWidget *=0,const QString &=QString()
+$prototype=virtual QWidget * createWidget ( const QString & className, QWidget * parent = nullptr, const QString & name = QString() )
+$virtualMethod=|QWidget *|createWidget|const QString &,QWidget *=nullptr,const QString &=QString()
 
 $prototype=bool isLanguageChangeEnabled () const
 $method=|bool|isLanguageChangeEnabled|
 
-$prototype=QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
-$method=|QWidget *|load|QIODevice *,QWidget *=0
+$prototype=QWidget * load ( QIODevice * device, QWidget * parentWidget = nullptr )
+$method=|QWidget *|load|QIODevice *,QWidget *=nullptr
 
 $prototype=QStringList pluginPaths () const
 $method=|QStringList|pluginPaths|
