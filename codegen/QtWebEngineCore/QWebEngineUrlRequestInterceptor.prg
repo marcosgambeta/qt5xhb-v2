@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QWebEngineUrlRequestInterceptor(QObject *p = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$prototype=explicit QWebEngineUrlRequestInterceptor(QObject *p = nullptr)
+$constructor=|new|QObject *=nullptr
 
 %% $deleteMethod
 

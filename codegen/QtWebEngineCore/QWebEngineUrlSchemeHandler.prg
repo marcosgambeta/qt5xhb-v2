@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QWebEngineUrlSchemeHandler(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$prototype=QWebEngineUrlSchemeHandler(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QWebEngineUrlSchemeHandler()
 $deleteMethod
