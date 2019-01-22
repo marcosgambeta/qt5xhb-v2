@@ -33,7 +33,7 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = Q_NULLPTR) [protected]
+$prototype=explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstract3DGraph()
 $deleteMethod

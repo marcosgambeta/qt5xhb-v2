@@ -29,22 +29,22 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QItemModelScatterDataProxy(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QItemModelScatterDataProxy(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|QAbstractItemModel *,QObject *=Q_NULLPTR
+$prototype=explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
+$internalConstructor=|new2|QAbstractItemModel *,QObject *=nullptr
 
-$prototype=explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new3|QAbstractItemModel *,const QString &,const QString &,const QString &,QObject *=Q_NULLPTR
+$prototype=explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
+$internalConstructor=|new3|QAbstractItemModel *,const QString &,const QString &,const QString &,QObject *=nullptr
 
-$prototype=explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new4|QAbstractItemModel *,const QString &,const QString &,const QString &,const QString &,QObject *=Q_NULLPTR
+$prototype=explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = nullptr)
+$internalConstructor=|new4|QAbstractItemModel *,const QString &,const QString &,const QString &,const QString &,QObject *=nullptr
 
-//[1]explicit QItemModelScatterDataProxy(QObject *parent = Q_NULLPTR)
-//[2]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR)
-//[3]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = Q_NULLPTR)
-//[4]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = Q_NULLPTR)
+//[1]explicit QItemModelScatterDataProxy(QObject *parent = nullptr)
+//[2]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
+//[3]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
+//[4]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
 {

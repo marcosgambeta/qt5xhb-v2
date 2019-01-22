@@ -29,7 +29,7 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QAbstract3DInputHandler(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstract3DInputHandler()
 $deleteMethod

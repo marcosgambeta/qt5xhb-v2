@@ -29,15 +29,15 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QCustom3DVolume(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+$prototype=explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
 %% TODO: implementar
-%% $internalConstructor=|new2|const QVector3D &,const QVector3D &,const QQuaternion &,int,int,int,QVector<uchar> *,QImage::Format,const QVector<QRgb> &,QObject *=Q_NULLPTR
+%% $internalConstructor=|new2|const QVector3D &,const QVector3D &,const QQuaternion &,int,int,int,QVector<uchar> *,QImage::Format,const QVector<QRgb> &,QObject *=nullptr
 
-//[1]explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+//[1]explicit QCustom3DVolume(QObject *parent = nullptr)
+//[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {

@@ -29,16 +29,16 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QScatter3DSeries(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|QScatterDataProxy *,QObject *=Q_NULLPTR
+$prototype=explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
+$internalConstructor=|new2|QScatterDataProxy *,QObject *=nullptr
 
-$prototype=explicit QScatter3DSeries(QScatter3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QScatter3DSeries(QScatter3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
 
-//[1]explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+//[1]explicit QScatter3DSeries(QObject *parent = nullptr)
+//[2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSCATTER3DSERIES_NEW )
 {

@@ -29,16 +29,16 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QCustom3DItem(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|const QString &,const QVector3D &,const QVector3D &,const QQuaternion &,const QImage &,QObject *=Q_NULLPTR
+$prototype=explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = nullptr)
+$internalConstructor=|new2|const QString &,const QVector3D &,const QVector3D &,const QQuaternion &,const QImage &,QObject *=nullptr
 
-$prototype=QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = nullptr) [protected]
 
-//[1]explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)
+//[1]explicit QCustom3DItem(QObject *parent = nullptr)
+//[2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCUSTOM3DITEM_NEW )
 {

@@ -29,8 +29,8 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QCategory3DAxis(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$prototype=explicit QCategory3DAxis(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=virtual ~QCategory3DAxis()
 $deleteMethod

@@ -31,10 +31,10 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QBarDataProxy(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$prototype=explicit QBarDataProxy(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
-$prototype=explicit QBarDataProxy(QBarDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QBarDataProxy(QBarDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QBarDataProxy()
 $deleteMethod

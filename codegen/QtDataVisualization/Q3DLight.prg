@@ -29,8 +29,8 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit Q3DLight(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$prototype=explicit Q3DLight(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=virtual ~Q3DLight()
 $deleteMethod

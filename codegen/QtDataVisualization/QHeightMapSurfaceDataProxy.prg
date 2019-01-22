@@ -29,20 +29,20 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|const QImage &,QObject *=Q_NULLPTR
+$prototype=explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
+$internalConstructor=|new2|const QImage &,QObject *=nullptr
 
-$prototype=explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new3|const QString &,QObject *=Q_NULLPTR
+$prototype=explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
+$internalConstructor=|new3|const QString &,QObject *=nullptr
 
-$prototype=explicit QHeightMapSurfaceDataProxy(QHeightMapSurfaceDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QHeightMapSurfaceDataProxy(QHeightMapSurfaceDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 
-//[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
-//[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = Q_NULLPTR)
-//[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = Q_NULLPTR)
+//[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
+//[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
+//[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_NEW )
 {

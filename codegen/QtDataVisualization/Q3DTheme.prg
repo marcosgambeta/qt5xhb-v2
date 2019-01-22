@@ -29,17 +29,17 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit Q3DTheme(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit Q3DTheme(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit Q3DTheme(Theme themeType, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|Q3DTheme::Theme,QObject *=Q_NULLPTR
+$prototype=explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
+$internalConstructor=|new2|Q3DTheme::Theme,QObject *=nullptr
 
-$prototype=explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
 
-//[1]explicit Q3DTheme(QObject *parent = Q_NULLPTR)
-//[2]explicit Q3DTheme(Theme themeType, QObject *parent = Q_NULLPTR)
-//[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = Q_NULLPTR) [protected]
+//[1]explicit Q3DTheme(QObject *parent = nullptr)
+//[2]explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
+//[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
 
 HB_FUNC_STATIC( Q3DTHEME_NEW )
 {

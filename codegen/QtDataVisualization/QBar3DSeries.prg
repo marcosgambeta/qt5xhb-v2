@@ -29,14 +29,14 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QBar3DSeries(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|QBarDataProxy *,QObject *=Q_NULLPTR
+$prototype=explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
+$internalConstructor=|new2|QBarDataProxy *,QObject *=nullptr
 
-//[1]explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+//[1]explicit QBar3DSeries(QObject *parent = nullptr)
+//[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBAR3DSERIES_NEW )
 {

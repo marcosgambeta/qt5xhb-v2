@@ -29,7 +29,7 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QAbstract3DSeries(QAbstract3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QAbstract3DSeries(QAbstract3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstract3DSeries()
 $deleteMethod

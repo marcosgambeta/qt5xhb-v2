@@ -29,10 +29,10 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QLogValue3DAxisFormatter(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$prototype=explicit QLogValue3DAxisFormatter(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
-$prototype=explicit QLogValue3DAxisFormatter(QLogValue3DAxisFormatterPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QLogValue3DAxisFormatter(QLogValue3DAxisFormatterPrivate *d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QLogValue3DAxisFormatter()
 $deleteMethod
