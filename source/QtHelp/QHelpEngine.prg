@@ -62,13 +62,13 @@ RETURN
 #include <QHelpSearchEngine>
 
 /*
-QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
+QHelpEngine ( const QString & collectionFile, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpEngine * o = new QHelpEngine ( PQSTRING(1), OPQOBJECT(2,0) );
+    QHelpEngine * o = new QHelpEngine ( PQSTRING(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -82,13 +82,13 @@ RETURN
 #include <QStringList>
 
 /*
-QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
+QHelpEngineCore ( const QString & collectionFile, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpEngineCore * o = new QHelpEngineCore ( PQSTRING(1), OPQOBJECT(2,0) );
+    QHelpEngineCore * o = new QHelpEngineCore ( PQSTRING(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -52,13 +52,13 @@ RETURN
 #endif
 
 /*
-QHelpSearchQueryWidget ( QWidget * parent = 0 )
+QHelpSearchQueryWidget ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QHelpSearchQueryWidget * o = new QHelpSearchQueryWidget ( OPQWIDGET(1,0) );
+    QHelpSearchQueryWidget * o = new QHelpSearchQueryWidget ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
