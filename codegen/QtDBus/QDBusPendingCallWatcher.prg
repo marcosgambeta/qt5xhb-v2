@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent = 0)
-$constructor=|new|const QDBusPendingCall &,QObject *=0
+$prototype=explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent = nullptr)
+$constructor=|new|const QDBusPendingCall &,QObject *=nullptr
 
 $deleteMethod
 

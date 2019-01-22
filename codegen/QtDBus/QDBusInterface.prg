@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QDBusInterface(const QString &service, const QString &path, const QString &interface = QString(),const QDBusConnection &connection = QDBusConnection::sessionBus(),QObject *parent = 0)
-$constructor=|new|const QString &,const QString &,const QString &=QString(),const QDBusConnection &=QDBusConnection::sessionBus(),QObject *=0
+$prototype=QDBusInterface(const QString &service, const QString &path, const QString &interface = QString(),const QDBusConnection &connection = QDBusConnection::sessionBus(),QObject *parent = nullptr)
+$constructor=|new|const QString &,const QString &,const QString &=QString(),const QDBusConnection &=QDBusConnection::sessionBus(),QObject *=nullptr
 
 $deleteMethod
 

@@ -29,14 +29,14 @@ $includes
 
 #include <QDBusError>
 
-$prototype=QDBusServer(const QString &address, QObject *parent = 0)
-$internalConstructor=|new1|const QString &,QObject *=0
+$prototype=QDBusServer(const QString &address, QObject *parent = nullptr)
+$internalConstructor=|new1|const QString &,QObject *=nullptr
 
-$prototype=QDBusServer(QObject *parent = 0)
-$internalConstructor=|new2|QObject *=0
+$prototype=QDBusServer(QObject *parent = nullptr)
+$internalConstructor=|new2|QObject *=nullptr
 
-//[1]QDBusServer(const QString &address, QObject *parent = 0)
-//[2]QDBusServer(QObject *parent = 0)
+//[1]QDBusServer(const QString &address, QObject *parent = nullptr)
+//[2]QDBusServer(QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
