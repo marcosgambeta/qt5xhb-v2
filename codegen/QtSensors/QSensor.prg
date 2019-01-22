@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,1,0
 
-$prototype=QSensor(const QByteArray &type, QObject *parent = 0)
-$constructor=5,1,0|new|const QByteArray &,QObject *=0
+$prototype=QSensor(const QByteArray &type, QObject *parent = nullptr)
+$constructor=5,1,0|new|const QByteArray &,QObject *=nullptr
 
 $deleteMethod=5,1,0
 

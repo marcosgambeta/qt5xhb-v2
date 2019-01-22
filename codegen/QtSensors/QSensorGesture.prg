@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,1,0
 
-$prototype=QSensorGesture(const QStringList &ids, QObject *parent = 0)
-$constructor=5,1,0|new|const QStringList &,QObject *=0
+$prototype=QSensorGesture(const QStringList &ids, QObject *parent = nullptr)
+$constructor=5,1,0|new|const QStringList &,QObject *=nullptr
 
 $deleteMethod=5,1,0
 

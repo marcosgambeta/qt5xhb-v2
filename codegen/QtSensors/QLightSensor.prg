@@ -29,8 +29,8 @@ $destructor
 
 $includes=5,1,0
 
-$prototype=QLightSensor(QObject *parent = 0)
-$constructor=5,1,0|new|QObject *=0
+$prototype=QLightSensor(QObject *parent = nullptr)
+$constructor=5,1,0|new|QObject *=nullptr
 
 $deleteMethod=5,1,0
 
