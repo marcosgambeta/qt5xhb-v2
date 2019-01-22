@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QFocusFrame ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QFocusFrame ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

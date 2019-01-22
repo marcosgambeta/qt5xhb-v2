@@ -28,7 +28,7 @@ $destructor
 $includes
 
 $prototype=explicit QTreeWidget(QWidget *parent = nullptr)
-$constructor=|new|QWidget *=0
+$constructor=|new|QWidget *=nullptr
 
 $prototype=~QTreeWidget()
 $deleteMethod

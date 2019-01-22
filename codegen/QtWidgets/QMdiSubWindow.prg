@@ -30,8 +30,8 @@ $includes
 #include <QMdiArea>
 #include <QMenu>
 
-$prototype=QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=QMdiSubWindow ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 

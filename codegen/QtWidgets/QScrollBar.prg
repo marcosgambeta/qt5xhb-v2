@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QScrollBar ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QScrollBar ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
-$internalConstructor=|new2|Qt::Orientation,QWidget *=0
+$prototype=QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
+$internalConstructor=|new2|Qt::Orientation,QWidget *=nullptr
 
-//[1]QScrollBar ( QWidget * parent = 0 )
-//[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
+//[1]QScrollBar ( QWidget * parent = nullptr )
+//[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {

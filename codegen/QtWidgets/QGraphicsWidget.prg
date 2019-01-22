@@ -29,8 +29,8 @@ $includes
 
 #include <QStyle>
 
-$prototype=QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
-$constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
+$prototype=QGraphicsWidget ( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = 0 )
+$constructor=|new|QGraphicsItem *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 
@@ -70,8 +70,8 @@ $method=|QGraphicsLayout *|layout|
 $prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|
 
-$prototype=virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paintWindowFrame|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
+$virtualMethod=|void|paintWindowFrame|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=QPalette palette () const
 $method=|QPalette|palette|
@@ -215,8 +215,8 @@ $virtualMethod=|QRectF|boundingRect|
 $prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|

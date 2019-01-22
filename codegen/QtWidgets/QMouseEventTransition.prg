@@ -27,14 +27,14 @@ $includes
 
 #include <QPainterPath>
 
-$prototype=QMouseEventTransition ( QState * sourceState = 0 )
-$internalConstructor=|new1|QState *=0
+$prototype=QMouseEventTransition ( QState * sourceState = nullptr )
+$internalConstructor=|new1|QState *=nullptr
 
-$prototype=QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
-$internalConstructor=|new2|QObject *,QEvent::Type,Qt::MouseButton,QState *=0
+$prototype=QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = nullptr )
+$internalConstructor=|new2|QObject *,QEvent::Type,Qt::MouseButton,QState *=nullptr
 
-//[1]QMouseEventTransition ( QState * sourceState = 0 )
-//[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+//[1]QMouseEventTransition ( QState * sourceState = nullptr )
+//[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = nullptr )
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {

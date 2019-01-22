@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QTextBrowser ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QTextBrowser ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

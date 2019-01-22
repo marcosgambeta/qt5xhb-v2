@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
-$internalConstructor=|new1|const QStringList &,QDir::Filters,QDir::SortFlags,QObject *=0
+$prototype=QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = nullptr)
+$internalConstructor=|new1|const QStringList &,QDir::Filters,QDir::SortFlags,QObject *=nullptr
 
-$prototype=QDirModel(QObject *parent = 0)
-$internalConstructor=|new2|QObject *=0
+$prototype=QDirModel(QObject *parent = nullptr)
+$internalConstructor=|new2|QObject *=nullptr
 
-//[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
-//[2]QDirModel(QObject *parent = 0)
+//[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = nullptr)
+//[2]QDirModel(QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {

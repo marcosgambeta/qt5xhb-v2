@@ -29,18 +29,18 @@ $includes
 
 #include <QPushButton>
 
-$prototype=QDialogButtonBox ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QDialogButtonBox ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
-$internalConstructor=|new2|Qt::Orientation,QWidget *=0
+$prototype=QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
+$internalConstructor=|new2|Qt::Orientation,QWidget *=nullptr
 
-$prototype=QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
-$internalConstructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=0
+$prototype=QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
+$internalConstructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=nullptr
 
-//[1]QDialogButtonBox ( QWidget * parent = 0 )
-//[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
-//[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
+//[1]QDialogButtonBox ( QWidget * parent = nullptr )
+//[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
+//[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {

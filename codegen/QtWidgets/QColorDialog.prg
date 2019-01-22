@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=explicit QColorDialog ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=explicit QColorDialog ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
-$internalConstructor=|new2|const QColor &,QWidget *=0
+$prototype=explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QColor &,QWidget *=nullptr
 
-//[1]explicit QColorDialog ( QWidget * parent = 0 )
-//[2]explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+//[1]explicit QColorDialog ( QWidget * parent = nullptr )
+//[2]explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
@@ -113,13 +113,13 @@ $staticMethod=|void|setCustomColor|int,QColor
 $prototype=static int customCount ()
 $staticMethod=|int|customCount|
 
-$prototype=static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, const QString &title = QString(), ColorDialogOptions options = 0)
-$staticMethod=|QColor|getColor|const QColor &=Qt::white,QWidget *=0,const QString &=QString(),QColorDialog::ColorDialogOptions=0
+$prototype=static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = nullptr, const QString &title = QString(), ColorDialogOptions options = 0)
+$staticMethod=|QColor|getColor|const QColor &=Qt::white,QWidget *=nullptr,const QString &=QString(),QColorDialog::ColorDialogOptions=0
 
 %% TODO: conferir metodo e remover codigo morto
 //
 ////[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
-////[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
+////[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = nullptr )
 //
 //HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 //{

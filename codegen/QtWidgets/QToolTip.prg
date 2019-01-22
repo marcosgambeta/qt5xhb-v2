@@ -48,8 +48,8 @@ $method=|void|setPalette|const QPalette &
 $prototype=void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect)
 $internalMethod=|void|showText,showText1|const QPoint &,const QString &,QWidget *,const QRect &
 
-$prototype=void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
-$internalMethod=|void|showText,showText2|const QPoint &,const QString &,QWidget *=0
+$prototype=void showText(const QPoint & pos, const QString & text, QWidget * w = nullptr)
+$internalMethod=|void|showText,showText2|const QPoint &,const QString &,QWidget *=nullptr
 
 //[1]void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect)
 //[2]void showText(const QPoint & pos, const QString & text, QWidget * w = 0)

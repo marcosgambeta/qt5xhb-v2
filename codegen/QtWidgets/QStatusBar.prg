@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QStatusBar ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QStatusBar ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

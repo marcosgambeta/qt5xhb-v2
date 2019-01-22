@@ -25,18 +25,18 @@ $destructor
 
 $includes
 
-$prototype=QCommandLinkButton ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QCommandLinkButton ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0
+$prototype=QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-$prototype=QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
-$internalConstructor=|new3|const QString &,const QString &,QWidget *=0
+$prototype=QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
+$internalConstructor=|new3|const QString &,const QString &,QWidget *=nullptr
 
-//[1]QCommandLinkButton ( QWidget * parent = 0 )
-//[2]QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
-//[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
+//[1]QCommandLinkButton ( QWidget * parent = nullptr )
+//[2]QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
+//[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {

@@ -30,8 +30,8 @@ $includes
 #include <QAction>
 #include <QMenu>
 
-$prototype=explicit QToolButton ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=explicit QToolButton ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

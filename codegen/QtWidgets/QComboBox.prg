@@ -39,8 +39,8 @@ $includes
 #include <QLineEdit>
 #include <QAbstractItemView>
 
-$prototype=QComboBox ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QComboBox ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

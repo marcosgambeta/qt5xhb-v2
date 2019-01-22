@@ -42,18 +42,18 @@ $includes
 #include <QGraphicsProxyWidget>
 #include <QStyle>
 
-$prototype=QGraphicsScene ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QGraphicsScene ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
-$internalConstructor=|new2|const QRectF &,QObject *=0
+$prototype=QGraphicsScene ( const QRectF & sceneRect, QObject * parent = nullptr )
+$internalConstructor=|new2|const QRectF &,QObject *=nullptr
 
-$prototype=QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
-$internalConstructor=|new3|qreal,qreal,qreal,qreal,QObject *=0
+$prototype=QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = nullptr )
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,QObject *=nullptr
 
-//[1]QGraphicsScene ( QObject * parent = 0 )
-//[2]QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
-//[3]QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
+//[1]QGraphicsScene ( QObject * parent = nullptr )
+//[2]QGraphicsScene ( const QRectF & sceneRect, QObject * parent = nullptr )
+//[3]QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 {

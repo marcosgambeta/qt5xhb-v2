@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QTimeEdit ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QTimeEdit ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QTimeEdit ( const QTime & time, QWidget * parent = 0 )
-$internalConstructor=|new2|const QTime &,QWidget *=0
+$prototype=QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QTime &,QWidget *=nullptr
 
-//[1]QTimeEdit ( QWidget * parent = 0 )
-//[2]QTimeEdit ( const QTime & time, QWidget * parent = 0 )
+//[1]QTimeEdit ( QWidget * parent = nullptr )
+//[2]QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {

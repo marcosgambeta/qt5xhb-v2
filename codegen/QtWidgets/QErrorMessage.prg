@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QErrorMessage ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=explicit QErrorMessage ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

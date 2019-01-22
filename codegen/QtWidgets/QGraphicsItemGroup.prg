@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsItemGroup ( QGraphicsItem * parent = 0 )
-$constructor=|new|QGraphicsItem *=0
+$prototype=QGraphicsItemGroup ( QGraphicsItem * parent = nullptr )
+$constructor=|new|QGraphicsItem *=nullptr
 
 $deleteMethod
 
@@ -45,8 +45,8 @@ $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 $prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=virtual int type () const
 $virtualMethod=|int|type|

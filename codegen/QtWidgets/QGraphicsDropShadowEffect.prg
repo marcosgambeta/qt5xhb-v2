@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsDropShadowEffect ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QGraphicsDropShadowEffect ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

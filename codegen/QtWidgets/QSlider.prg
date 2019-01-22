@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QSlider ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QSlider ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
-$internalConstructor=|new2|Qt::Orientation,QWidget *=0
+$prototype=QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
+$internalConstructor=|new2|Qt::Orientation,QWidget *=nullptr
 
-//[1]QSlider ( QWidget * parent = 0 )
-//[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
+//[1]QSlider ( QWidget * parent = nullptr )
+//[2]QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QSLIDER_NEW )
 {

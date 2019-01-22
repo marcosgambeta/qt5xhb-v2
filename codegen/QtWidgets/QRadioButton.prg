@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=explicit QRadioButton ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=explicit QRadioButton ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=explicit QRadioButton ( const QString & text, QWidget * parent = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0
+$prototype=explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]explicit QRadioButton ( QWidget * parent = 0 )
-//[2]explicit QRadioButton ( const QString & text, QWidget * parent = 0 )
+//[1]explicit QRadioButton ( QWidget * parent = nullptr )
+//[2]explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {

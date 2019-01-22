@@ -34,14 +34,14 @@ $includes
 #include <QAction>
 #include <QMenu>
 
-$prototype=explicit QLineEdit ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=explicit QLineEdit ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0
+$prototype=explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]explicit QLineEdit ( QWidget * parent = 0 )
-//[2]explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
+//[1]explicit QLineEdit ( QWidget * parent = nullptr )
+//[2]explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 $addMethod=setTextMargins
 
 $prototype=void setValidator ( const QValidator * v )
-$method=|void|setValidator|const QValidator *=0
+$method=|void|setValidator|const QValidator *=nullptr
 
 $prototype=const QValidator * validator () const
 $method=|const QValidator *|validator|

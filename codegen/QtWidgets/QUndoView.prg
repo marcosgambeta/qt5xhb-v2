@@ -28,18 +28,18 @@ $includes
 #include <QUndoGroup>
 #include <QUndoStack>
 
-$prototype=QUndoView ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QUndoView ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
-$internalConstructor=|new2|QUndoStack *,QWidget *=0
+$prototype=QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
+$internalConstructor=|new2|QUndoStack *,QWidget *=nullptr
 
-$prototype=QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
-$internalConstructor=|new3|QUndoGroup *,QWidget *=0
+$prototype=QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
+$internalConstructor=|new3|QUndoGroup *,QWidget *=nullptr
 
-//[1]QUndoView ( QWidget * parent = 0 )
-//[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
-//[3]QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
+//[1]QUndoView ( QWidget * parent = nullptr )
+//[2]QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
+//[3]QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {

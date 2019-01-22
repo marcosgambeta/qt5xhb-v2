@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QDateEdit ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QDateEdit ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QDateEdit ( const QDate & date, QWidget * parent = 0 )
-$internalConstructor=|new2|const QDate &,QWidget *=0
+$prototype=QDateEdit ( const QDate & date, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QDate &,QWidget *=nullptr
 
-//[1]QDateEdit ( QWidget * parent = 0 )
-//[2]QDateEdit ( const QDate & date, QWidget * parent = 0 )
+//[1]QDateEdit ( QWidget * parent = nullptr )
+//[2]QDateEdit ( const QDate & date, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QDATEEDIT_NEW )
 {

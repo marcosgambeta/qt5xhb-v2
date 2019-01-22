@@ -29,8 +29,8 @@ $includes=5,4,0
 
 #include <QOpenGLContext>
 
-$prototype=explicit QOpenGLWidget(QWidget* parent = 0, Qt::WindowFlags f = 0)
-$constructor=5,4,0|new|QWidget *=0,Qt::WindowFlags=0|#ifndef QT_NO_OPENGL
+$prototype=explicit QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = 0)
+$constructor=5,4,0|new|QWidget *=nullptr,Qt::WindowFlags=0|#ifndef QT_NO_OPENGL
 
 $deleteMethod=5,4,0|#ifndef QT_NO_OPENGL
 

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QListView ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QListView ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

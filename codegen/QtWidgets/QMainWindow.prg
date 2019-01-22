@@ -32,8 +32,8 @@ $includes
 #include <QMenuBar>
 #include <QStatusBar>
 
-$prototype=QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=QMainWindow ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 

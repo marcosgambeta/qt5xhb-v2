@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QUndoCommand(QUndoCommand * parent = 0)
-$internalConstructor=|new1|QUndoCommand *=0
+$prototype=QUndoCommand(QUndoCommand * parent = nullptr)
+$internalConstructor=|new1|QUndoCommand *=nullptr
 
-$prototype=QUndoCommand(const QString & text, QUndoCommand * parent = 0)
-$internalConstructor=|new2|const QString &,QUndoCommand *=0
+$prototype=QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
+$internalConstructor=|new2|const QString &,QUndoCommand *=nullptr
 
-//[1]QUndoCommand(QUndoCommand * parent = 0)
-//[2]QUndoCommand(const QString & text, QUndoCommand * parent = 0)
+//[1]QUndoCommand(QUndoCommand * parent = nullptr)
+//[2]QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
 
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {

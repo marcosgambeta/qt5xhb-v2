@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=explicit QMenu ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=explicit QMenu ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=explicit QMenu ( const QString & title, QWidget * parent = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0
+$prototype=explicit QMenu ( const QString & title, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]explicit QMenu ( QWidget * parent = 0 )
-//[2]explicit QMenu ( const QString & title, QWidget * parent = 0 )
+//[1]explicit QMenu ( QWidget * parent = nullptr )
+//[2]explicit QMenu ( const QString & title, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QMENU_NEW )
 {
@@ -165,8 +165,8 @@ $method=|void|setDefaultAction|QAction *
 $prototype=QAction * exec ()
 $internalMethod=|QAction *|exec,exec1|
 
-$prototype=QAction * exec ( const QPoint & pos, QAction * at = 0 )
-$internalMethod=|QAction *|exec,exec2|const QPoint &,QAction *=0
+$prototype=QAction * exec ( const QPoint & pos, QAction * at = nullptr )
+$internalMethod=|QAction *|exec,exec2|const QPoint &,QAction *=nullptr
 
 $prototype=static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
 void QMenu_exec3 ()
@@ -238,8 +238,8 @@ $method=|bool|isTearOffMenuVisible|
 $prototype=QAction * menuAction () const
 $method=|QAction *|menuAction|
 
-$prototype=void popup ( const QPoint & pos, QAction * at = 0 )
-$method=|void|popup|const QPoint &,QAction *=0
+$prototype=void popup ( const QPoint & pos, QAction * at = nullptr )
+$method=|void|popup|const QPoint &,QAction *=nullptr
 
 $prototype=bool separatorsCollapsible () const
 $method=|bool|separatorsCollapsible|

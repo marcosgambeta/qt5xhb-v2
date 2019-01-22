@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsGridLayout ( QGraphicsLayoutItem * parent = 0 )
-$constructor=|new|QGraphicsLayoutItem *=0
+$prototype=QGraphicsGridLayout ( QGraphicsLayoutItem * parent = nullptr )
+$constructor=|new|QGraphicsLayoutItem *=nullptr
 
 $deleteMethod
 

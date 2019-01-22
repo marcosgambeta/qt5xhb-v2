@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QKeyEventTransition ( QState * sourceState = 0 )
-$internalConstructor=|new1|QState *=0
+$prototype=QKeyEventTransition ( QState * sourceState = nullptr )
+$internalConstructor=|new1|QState *=nullptr
 
-$prototype=QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
-$internalConstructor=|new2|QObject *,QEvent::Type,int,QState *=0
+$prototype=QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
+$internalConstructor=|new2|QObject *,QEvent::Type,int,QState *=nullptr
 
-//[1]QKeyEventTransition ( QState * sourceState = 0 )
-//[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
+//[1]QKeyEventTransition ( QState * sourceState = nullptr )
+//[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {

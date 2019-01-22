@@ -30,8 +30,8 @@ $includes
 #include <QUndoStack>
 #include <QAction>
 
-$prototype=QUndoGroup(QObject * parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QUndoGroup(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

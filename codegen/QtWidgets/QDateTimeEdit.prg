@@ -29,22 +29,22 @@ $includes
 
 #include <QCalendarWidget>
 
-$prototype=QDateTimeEdit ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QDateTimeEdit ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
-$internalConstructor=|new2|const QDateTime &,QWidget *=0
+$prototype=QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QDateTime &,QWidget *=nullptr
 
-$prototype=QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
-$internalConstructor=|new3|const QDate &,QWidget *=0
+$prototype=QDateTimeEdit ( const QDate & date, QWidget * parent = nullptr )
+$internalConstructor=|new3|const QDate &,QWidget *=nullptr
 
-$prototype=QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
-$internalConstructor=|new4|const QTime &,QWidget *=0
+$prototype=QDateTimeEdit ( const QTime & time, QWidget * parent = nullptr )
+$internalConstructor=|new4|const QTime &,QWidget *=nullptr
 
-//[1]QDateTimeEdit ( QWidget * parent = 0 )
-//[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
-//[3]QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
-//[4]QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
+//[1]QDateTimeEdit ( QWidget * parent = nullptr )
+//[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = nullptr )
+//[3]QDateTimeEdit ( const QDate & date, QWidget * parent = nullptr )
+//[4]QDateTimeEdit ( const QTime & time, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsScale ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QGraphicsScale ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

@@ -29,8 +29,8 @@ $includes
 #include <QPointF>
 #include <QTimeLine>
 
-$prototype=QGraphicsItemAnimation ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QGraphicsItemAnimation ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

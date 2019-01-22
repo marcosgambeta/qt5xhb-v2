@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QBoxLayout ( Direction dir, QWidget * parent = 0 )
-$constructor=|new|QBoxLayout::Direction,QWidget *=0
+$prototype=QBoxLayout ( Direction dir, QWidget * parent = nullptr )
+$constructor=|new|QBoxLayout::Direction,QWidget *=nullptr
 
 $deleteMethod
 

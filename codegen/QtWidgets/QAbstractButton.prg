@@ -29,9 +29,9 @@ $includes
 
 #include <QButtonGroup>
 
-$prototype=explicit QAbstractButton(QWidget *parent = Q_NULLPTR) (abstract)
+$prototype=explicit QAbstractButton(QWidget *parent = nullptr) (abstract)
 
-$prototype=QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = Q_NULLPTR) [protected]
+$prototype=QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = nullptr) [protected]
 
 $prototype=~QAbstractButton()
 $deleteMethod

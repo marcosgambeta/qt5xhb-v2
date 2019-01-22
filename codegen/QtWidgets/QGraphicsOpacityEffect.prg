@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsOpacityEffect ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QGraphicsOpacityEffect ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=QLCDNumber ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QLCDNumber ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QLCDNumber ( uint numDigits, QWidget * parent = 0 )
-$internalConstructor=|new2|uint,QWidget *=0
+$prototype=QLCDNumber ( uint numDigits, QWidget * parent = nullptr )
+$internalConstructor=|new2|uint,QWidget *=nullptr
 
-//[1]QLCDNumber ( QWidget * parent = 0 )
-//[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+//[1]QLCDNumber ( QWidget * parent = nullptr )
+//[2]QLCDNumber ( uint numDigits, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {

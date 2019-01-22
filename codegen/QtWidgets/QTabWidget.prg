@@ -29,8 +29,8 @@ $includes
 
 #include <QTabBar>
 
-$prototype=explicit QTabWidget ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=explicit QTabWidget ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

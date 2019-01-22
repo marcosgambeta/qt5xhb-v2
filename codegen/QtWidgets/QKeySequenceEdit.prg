@@ -27,14 +27,14 @@ $destructor
 
 $includes=5,2,0
 
-$prototype=QKeySequenceEdit(QWidget *parent = 0)
-$internalConstructor=5,2,0|new1|QWidget *=0
+$prototype=QKeySequenceEdit(QWidget *parent = nullptr)
+$internalConstructor=5,2,0|new1|QWidget *=nullptr
 
-$prototype=QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
-$internalConstructor=5,2,0|new2|const QKeySequence &,QWidget *=0
+$prototype=QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
+$internalConstructor=5,2,0|new2|const QKeySequence &,QWidget *=nullptr
 
-//[1]QKeySequenceEdit(QWidget *parent = 0)
-//[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+//[1]QKeySequenceEdit(QWidget *parent = nullptr)
+//[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {

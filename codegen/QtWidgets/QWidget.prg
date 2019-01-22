@@ -38,8 +38,8 @@ $includes
 #include <QStyle>
 #include <QWindow>
 
-$prototype=explicit QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=explicit QWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 
@@ -1208,8 +1208,8 @@ $staticMethod=|QWidget *|mouseGrabber|
 $prototype=static void setTabOrder ( QWidget * first, QWidget * second )
 $staticMethod=|void|setTabOrder|QWidget *,QWidget *
 
-$prototype=static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)
-$staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=0,Qt::WindowFlags=0
+$prototype=static QWidget * createWindowContainer (QWindow *window, QWidget *parent=nullptr, Qt::WindowFlags flags=0)
+$staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=nullptr,Qt::WindowFlags=0
 
 %%
 %% SIGNALS

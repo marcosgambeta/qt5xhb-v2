@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QGesture(QObject * parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QGesture(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

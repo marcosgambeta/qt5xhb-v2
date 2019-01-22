@@ -29,14 +29,14 @@ $includes
 
 #include <QMenu>
 
-$prototype=QSystemTrayIcon(QObject * parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=QSystemTrayIcon(QObject * parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
-$internalConstructor=|new2|const QIcon &,QObject *=0
+$prototype=QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
+$internalConstructor=|new2|const QIcon &,QObject *=nullptr
 
-//[1]QSystemTrayIcon(QObject * parent = 0)
-//[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
+//[1]QSystemTrayIcon(QObject * parent = nullptr)
+//[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {

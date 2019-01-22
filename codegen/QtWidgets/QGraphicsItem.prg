@@ -163,9 +163,9 @@ $method=|bool|isActive|
 $prototype=bool isAncestorOf ( const QGraphicsItem * child ) const
 $method=|bool|isAncestorOf|const QGraphicsItem *
 
-$prototype=bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const
+$prototype=bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = nullptr ) const
 %% TODO: corrigir codigo da funcao
-%% $method=|bool|isBlockedByModalPanel|QGraphicsItem **=0
+%% $method=|bool|isBlockedByModalPanel|QGraphicsItem **=nullptr
 
 $prototype=bool isClipped () const
 $method=|bool|isClipped|
@@ -231,8 +231,8 @@ $method=|bool|isWidget|
 $prototype=bool isWindow () const
 $method=|bool|isWindow|
 
-$prototype=QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
-$method=|QTransform|itemTransform|const QGraphicsItem *,bool *=0
+$prototype=QTransform itemTransform ( const QGraphicsItem * other, bool * ok = nullptr ) const
+$method=|QTransform|itemTransform|const QGraphicsItem *,bool *=nullptr
 
 $prototype=QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
 $internalMethod=|QPointF|mapFromItem,mapFromItem1|const QGraphicsItem *,const QPointF &
@@ -747,8 +747,8 @@ $method=|qreal|opacity|
 $prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr ) = 0
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=QGraphicsItem * panel () const
 $method=|QGraphicsItem *|panel|

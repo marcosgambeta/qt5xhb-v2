@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=explicit QFontDialog ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=explicit QFontDialog ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
-$internalConstructor=|new2|const QFont &,QWidget *=0
+$prototype=explicit QFontDialog ( const QFont & initial, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QFont &,QWidget *=nullptr
 
-//[1]explicit QFontDialog ( QWidget * parent = 0 )
-//[2]explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
+//[1]explicit QFontDialog ( QWidget * parent = nullptr )
+//[2]explicit QFontDialog ( const QFont & initial, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
@@ -81,14 +81,14 @@ $method=|bool|testOption|QFontDialog::FontDialogOption
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-$prototype=static QFont getFont(bool *ok, QWidget *parent = 0)
-$internalStaticMethod=|QFont|getFont,getFont1|bool *,QWidget *=0
+$prototype=static QFont getFont(bool *ok, QWidget *parent = nullptr)
+$internalStaticMethod=|QFont|getFont,getFont1|bool *,QWidget *=nullptr
 
-$prototype=static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)
-$internalStaticMethod=|QFont|getFont,getFont2|bool *,const QFont &,QWidget *=0,const QString &=QString(),QFontDialog::FontDialogOptions=0
+$prototype=static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = nullptr, const QString &title = QString(), FontDialogOptions options = 0)
+$internalStaticMethod=|QFont|getFont,getFont2|bool *,const QFont &,QWidget *=nullptr,const QString &=QString(),QFontDialog::FontDialogOptions=0
 
-//[1]static QFont getFont(bool *ok, QWidget *parent = 0)
-//[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)
+//[1]static QFont getFont(bool *ok, QWidget *parent = nullptr)
+//[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = nullptr, const QString &title = QString(), FontDialogOptions options = 0)
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {

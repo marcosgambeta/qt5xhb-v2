@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QMenuBar ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=explicit QMenuBar ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

@@ -29,14 +29,14 @@ $includes
 
 #include <QMovie>
 
-$prototype=QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
+$prototype=QLabel ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new1|QWidget *=nullptr,Qt::WindowFlags=0
 
-$prototype=QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
+$prototype=QLabel ( const QString & text, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr,Qt::WindowFlags=0
 
-//[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+//[1]QLabel ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+//[2]QLabel ( const QString & text, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 
 HB_FUNC_STATIC( QLABEL_NEW )
 {
@@ -93,7 +93,7 @@ $prototype=void setAlignment ( Qt::Alignment )
 $method=|void|setAlignment|Qt::Alignment
 
 $prototype=void setBuddy ( QWidget * buddy )
-$method=|void|setBuddy|QWidget *=0
+$method=|void|setBuddy|QWidget *=nullptr
 
 $prototype=void setIndent ( int )
 $method=|void|setIndent|int

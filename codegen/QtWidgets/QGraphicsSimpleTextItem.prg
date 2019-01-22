@@ -27,14 +27,14 @@ $includes
 
 #include <QFont>
 
-$prototype=QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsItem *=0
+$prototype=QGraphicsSimpleTextItem ( QGraphicsItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsItem *=nullptr
 
-$prototype=QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
-$internalConstructor=|new2|const QString &,QGraphicsItem *=0
+$prototype=QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new2|const QString &,QGraphicsItem *=nullptr
 
-//[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+//[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {

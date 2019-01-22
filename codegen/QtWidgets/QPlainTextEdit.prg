@@ -30,14 +30,14 @@ $includes
 #include <QPrinter>
 #include <QMenu>
 
-$prototype=QPlainTextEdit ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QPlainTextEdit ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0
+$prototype=QPlainTextEdit ( const QString & text, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]QPlainTextEdit ( QWidget * parent = 0 )
-//[2]QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
+//[1]QPlainTextEdit ( QWidget * parent = nullptr )
+//[2]QPlainTextEdit ( const QString & text, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 {

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsBlurEffect ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QGraphicsBlurEffect ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

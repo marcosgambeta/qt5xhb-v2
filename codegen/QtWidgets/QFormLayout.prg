@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QFormLayout ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QFormLayout ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

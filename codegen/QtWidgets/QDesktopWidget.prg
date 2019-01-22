@@ -109,8 +109,8 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 }
 $addMethod=screenGeometry
 
-$prototype=int screenNumber ( const QWidget * widget = 0 ) const
-$internalMethod=|int|screenNumber,screenNumber1|const QWidget *=0
+$prototype=int screenNumber ( const QWidget * widget = nullptr ) const
+$internalMethod=|int|screenNumber,screenNumber1|const QWidget *=nullptr
 
 $prototype=int screenNumber ( const QPoint & point ) const
 $internalMethod=|int|screenNumber,screenNumber2|const QPoint &

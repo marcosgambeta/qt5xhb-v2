@@ -27,23 +27,23 @@ $includes
 
 #include <QMenu>
 
-$prototype=explicit QPushButton ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=explicit QPushButton ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=explicit QPushButton ( const QString & text, QWidget * parent = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0
+$prototype=explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-$prototype=QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
-$internalConstructor=|new3|const QIcon &,const QString &,QWidget *=0
+$prototype=QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
+$internalConstructor=|new3|const QIcon &,const QString &,QWidget *=nullptr
 
-$prototype=QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
-$internalConstructor=|new4|const QPixmap &,const QString &,QWidget *=0
+$prototype=QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
+$internalConstructor=|new4|const QPixmap &,const QString &,QWidget *=nullptr
 
-//[1]explicit QPushButton ( QWidget * parent = 0 )
-//[2]explicit QPushButton ( const QString & text, QWidget * parent = 0 )
-//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+//[1]explicit QPushButton ( QWidget * parent = nullptr )
+//[2]explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
+//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
 %% metodo extra para permitir o uso da classe QPixmap
-//[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
+//[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {

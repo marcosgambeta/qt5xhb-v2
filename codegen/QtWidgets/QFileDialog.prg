@@ -34,11 +34,11 @@ $includes
 $prototype=QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 $internalConstructor=|new1|QWidget *,Qt::WindowFlags
 
-$prototype=QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
-$internalConstructor=|new2|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString()
+$prototype=QFileDialog ( QWidget * parent = nullptr, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+$internalConstructor=|new2|QWidget *=nullptr,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 //[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
-//[2]explicit QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+//[2]explicit QFileDialog ( QWidget * parent = nullptr, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 
 HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
@@ -243,29 +243,29 @@ $method=|void|setMimeTypeFilters|const QStringList &
 $prototype=void selectMimeTypeFilter(const QString &filter)
 $method=|void|selectMimeTypeFilter|const QString &
 
-$prototype=static QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
-$staticMethod=|QString|getExistingDirectory|QWidget *=0,const QString &=QString(),const QString &=QString(),QFileDialog::Options=QFileDialog::ShowDirsOnly
+$prototype=static QString getExistingDirectory ( QWidget * parent = nullptr, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
+$staticMethod=|QString|getExistingDirectory|QWidget *=nullptr,const QString &=QString(),const QString &=QString(),QFileDialog::Options=QFileDialog::ShowDirsOnly
 
-$prototype=static QString getOpenFileName (QWidget *parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0)
-$staticMethod=|QString|getOpenFileName|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=0,QFileDialog::Options=0
+$prototype=static QString getOpenFileName (QWidget *parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = nullptr, Options options = 0)
+$staticMethod=|QString|getOpenFileName|QWidget *=nullptr,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=nullptr,QFileDialog::Options=0
 
-$prototype=static QStringList getOpenFileNames ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
-$staticMethod=|QStringList|getOpenFileNames|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=0,QFileDialog::Options=0
+$prototype=static QStringList getOpenFileNames ( QWidget * parent = nullptr, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = nullptr, Options options = 0 )
+$staticMethod=|QStringList|getOpenFileNames|QWidget *=nullptr,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=nullptr,QFileDialog::Options=0
 
-$prototype=static QString getSaveFileName (QWidget *parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0)
-$staticMethod=|QString|getSaveFileName|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=0,QFileDialog::Options=0
+$prototype=static QString getSaveFileName (QWidget *parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = nullptr, Options options = 0)
+$staticMethod=|QString|getSaveFileName|QWidget *=nullptr,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=nullptr,QFileDialog::Options=0
 
-$prototype=static QUrl getOpenFileUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
-$staticMethod=|QUrl|getOpenFileUrl|QWidget *=0,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=0,QFileDialog::Options=0,const QStringList &=QStringList()
+$prototype=static QUrl getOpenFileUrl (QWidget *parent = nullptr, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = nullptr, Options options = 0, const QStringList &supportedSchemes = QStringList())
+$staticMethod=|QUrl|getOpenFileUrl|QWidget *=nullptr,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=nullptr,QFileDialog::Options=0,const QStringList &=QStringList()
 
-$prototype=static QUrl getSaveFileUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
-$staticMethod=|QUrl|getSaveFileUrl|QWidget *=0,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=0,QFileDialog::Options=0,const QStringList &=QStringList()
+$prototype=static QUrl getSaveFileUrl (QWidget *parent = nullptr, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = nullptr, Options options = 0, const QStringList &supportedSchemes = QStringList())
+$staticMethod=|QUrl|getSaveFileUrl|QWidget *=nullptr,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=nullptr,QFileDialog::Options=0,const QStringList &=QStringList()
 
-$prototype=static QUrl getExistingDirectoryUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), Options options = ShowDirsOnly, const QStringList &supportedSchemes = QStringList())
-$staticMethod=|QUrl|getExistingDirectoryUrl|QWidget *=0,const QString &=QString(),const QUrl &=QUrl(),QFileDialog::Options=QFileDialog::ShowDirsOnly,const QStringList &=QStringList()
+$prototype=static QUrl getExistingDirectoryUrl (QWidget *parent = nullptr, const QString &caption = QString(), const QUrl &dir = QUrl(), Options options = ShowDirsOnly, const QStringList &supportedSchemes = QStringList())
+$staticMethod=|QUrl|getExistingDirectoryUrl|QWidget *=nullptr,const QString &=QString(),const QUrl &=QUrl(),QFileDialog::Options=QFileDialog::ShowDirsOnly,const QStringList &=QStringList()
 
-$prototype=static QList<QUrl> getOpenFileUrls (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
-$staticMethod=|QList<QUrl>|getOpenFileUrls|QWidget *=0,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=0,QFileDialog::Options=0,const QStringList &=QStringList()
+$prototype=static QList<QUrl> getOpenFileUrls (QWidget *parent = nullptr, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = nullptr, Options options = 0, const QStringList &supportedSchemes = QStringList())
+$staticMethod=|QList<QUrl>|getOpenFileUrls|QWidget *=nullptr,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=nullptr,QFileDialog::Options=0,const QStringList &=QStringList()
 
 %%
 %% SIGNALS

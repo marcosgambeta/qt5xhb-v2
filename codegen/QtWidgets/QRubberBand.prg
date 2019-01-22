@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QRubberBand ( Shape s, QWidget * p = 0 )
-$constructor=|new|QRubberBand::Shape,QWidget *=0
+$prototype=QRubberBand ( Shape s, QWidget * p = nullptr )
+$constructor=|new|QRubberBand::Shape,QWidget *=nullptr
 
 $deleteMethod
 

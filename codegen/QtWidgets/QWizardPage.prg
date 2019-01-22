@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QWizardPage ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=explicit QWizardPage ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

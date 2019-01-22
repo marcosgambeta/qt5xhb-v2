@@ -29,30 +29,32 @@ $includes
 
 #include <QMenu>
 
-$prototype=QAction ( QObject * parent )
-$internalConstructor=|new1|QObject *
+%% NOTE: the parent argument is optional since Qt 5.7
 
-$prototype=QAction ( const QString & text, QObject * parent )
-$internalConstructor=|new2|const QString &,QObject *
+$prototype=QAction ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QAction ( const QIcon & icon, const QString & text, QObject * parent )
-$internalConstructor=|new3|const QIcon &,const QString &,QObject *
+$prototype=QAction ( const QString & text, QObject * parent = nullptr )
+$internalConstructor=|new2|const QString &,QObject *=nullptr
 
-//[1]QAction ( QObject * parent )
-//[2]QAction ( const QString & text, QObject * parent )
-//[3]QAction ( const QIcon & icon, const QString & text, QObject * parent )
+$prototype=QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
+$internalConstructor=|new3|const QIcon &,const QString &,QObject *=nullptr
+
+//[1]QAction ( QObject * parent = nullptr )
+//[2]QAction ( const QString & text, QObject * parent = nullptr )
+//[3]QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QACTION_NEW )
 {
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QAction_new1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QAction_new2();
   }
-  else if( ISNUMPAR(3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QAction_new3();
   }
@@ -210,8 +212,8 @@ $method=|Qt::ShortcutContext|shortcutContext|
 $prototype=QList<QKeySequence> shortcuts () const
 $method=|QList<QKeySequence>|shortcuts|
 
-$prototype=bool showStatusText ( QWidget * widget = 0 )
-$method=|bool|showStatusText|QWidget *=0
+$prototype=bool showStatusText ( QWidget * widget = nullptr )
+$method=|bool|showStatusText|QWidget *=nullptr
 
 $prototype=QString statusTip () const
 $method=|QString|statusTip|

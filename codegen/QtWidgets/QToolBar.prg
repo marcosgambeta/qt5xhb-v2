@@ -30,14 +30,14 @@ $includes
 #include <QIcon>
 #include <QAction>
 
-$prototype=QToolBar ( const QString & title, QWidget * parent = 0 )
-$internalConstructor=|new1|const QString &,QWidget *=0
+$prototype=QToolBar ( const QString & title, QWidget * parent = nullptr )
+$internalConstructor=|new1|const QString &,QWidget *=nullptr
 
-$prototype=QToolBar ( QWidget * parent = 0 )
-$internalConstructor=|new2|QWidget *=0
+$prototype=QToolBar ( QWidget * parent = nullptr )
+$internalConstructor=|new2|QWidget *=nullptr
 
-//[1]QToolBar ( const QString & title, QWidget * parent = 0 )
-//[2]QToolBar ( QWidget * parent = 0 )
+//[1]QToolBar ( const QString & title, QWidget * parent = nullptr )
+//[2]QToolBar ( QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {

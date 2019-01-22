@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=QSplitter ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QSplitter ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
-$internalConstructor=|new2|Qt::Orientation,QWidget *=0
+$prototype=QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
+$internalConstructor=|new2|Qt::Orientation,QWidget *=nullptr
 
-//[1]QSplitter ( QWidget * parent = 0 )
-//[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
+//[1]QSplitter ( QWidget * parent = nullptr )
+//[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {

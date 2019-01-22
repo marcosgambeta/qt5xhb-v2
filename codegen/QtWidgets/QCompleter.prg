@@ -30,18 +30,18 @@ $includes
 #include <QStringList>
 #include <QAbstractItemView>
 
-$prototype=QCompleter ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QCompleter ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
-$internalConstructor=|new2|QAbstractItemModel *,QObject *=0
+$prototype=QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
+$internalConstructor=|new2|QAbstractItemModel *,QObject *=nullptr
 
-$prototype=QCompleter ( const QStringList & list, QObject * parent = 0 )
-$internalConstructor=|new3|const QStringList &,QObject *=0|#ifndef QT_NO_STRINGLISTMODEL
+$prototype=QCompleter ( const QStringList & list, QObject * parent = nullptr )
+$internalConstructor=|new3|const QStringList &,QObject *=nullptr|#ifndef QT_NO_STRINGLISTMODEL
 
-//[1]QCompleter ( QObject * parent = 0 )
-//[2]QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
-//[3]QCompleter ( const QStringList & list, QObject * parent = 0 )
+//[1]QCompleter ( QObject * parent = nullptr )
+//[2]QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
+//[3]QCompleter ( const QStringList & list, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {

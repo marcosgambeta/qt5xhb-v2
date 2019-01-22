@@ -27,18 +27,18 @@ $includes
 
 #include <QPen>
 
-$prototype=QGraphicsLineItem ( QGraphicsItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsItem *=0
+$prototype=QGraphicsLineItem ( QGraphicsItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsItem *=nullptr
 
-$prototype=QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
-$internalConstructor=|new2|const QLineF &,QGraphicsItem *=0
+$prototype=QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new2|const QLineF &,QGraphicsItem *=nullptr
 
-$prototype=QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
-$internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
+$prototype=QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=nullptr
 
-//[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
-//[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+//[1]QGraphicsLineItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = nullptr )
+//[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
@@ -109,8 +109,8 @@ $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 $prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|

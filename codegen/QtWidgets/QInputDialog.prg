@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QInputDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=QInputDialog ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 
@@ -161,20 +161,20 @@ $method=|void|setVisible|bool
 $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-$prototype=static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0)
-$staticMethod=|double|getDouble|QWidget *,const QString &,const QString &,double=0,double=-2147483647,double=2147483647,int=1,bool *=0,Qt::WindowFlags=0
+$prototype=static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
+$staticMethod=|double|getDouble|QWidget *,const QString &,const QString &,double=0,double=-2147483647,double=2147483647,int=1,bool *=nullptr,Qt::WindowFlags=0
 
-$prototype=static int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int minValue = -2147483647, int maxValue = 2147483647, int step = 1, bool * ok = 0, Qt::WindowFlags flags = 0)
-$staticMethod=|int|getInt|QWidget *,const QString &,const QString &,int=0,int=-2147483647,int=2147483647,int=1,bool *=0,Qt::WindowFlags=0
+$prototype=static int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int minValue = -2147483647, int maxValue = 2147483647, int step = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
+$staticMethod=|int|getInt|QWidget *,const QString &,const QString &,int=0,int=-2147483647,int=2147483647,int=1,bool *=nullptr,Qt::WindowFlags=0
 
-$prototype=static QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
-$staticMethod=|QString|getItem|QWidget *,const QString &,const QString &,const QStringList &,int=0,bool=true,bool *=0,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
+$prototype=static QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+$staticMethod=|QString|getItem|QWidget *,const QString &,const QString &,const QStringList &,int=0,bool=true,bool *=nullptr,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
 
-$prototype=static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode echo = QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
-$staticMethod=|QString|getText|QWidget *,const QString &,const QString &,QLineEdit::EchoMode=QLineEdit::Normal,const QString &=QString(),bool *=0,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
+$prototype=static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode echo = QLineEdit::Normal, const QString & text = QString(), bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+$staticMethod=|QString|getText|QWidget *,const QString &,const QString &,QLineEdit::EchoMode=QLineEdit::Normal,const QString &=QString(),bool *=nullptr,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
 
-$prototype=static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text = QString(), bool *ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
-$staticMethod=|QString|getMultiLineText|QWidget *,const QString &,const QString &,const QString &=QString(),bool *=0,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
+$prototype=static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text = QString(), bool *ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+$staticMethod=|QString|getMultiLineText|QWidget *,const QString &,const QString &,const QString &=QString(),bool *=nullptr,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
 
 %%
 %% SIGNALS

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
-$constructor=|new|Qt::Orientation,QWidget *=0
+$prototype=explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = nullptr )
+$constructor=|new|Qt::Orientation,QWidget *=nullptr
 
 $deleteMethod
 

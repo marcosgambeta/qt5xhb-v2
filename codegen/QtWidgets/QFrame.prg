@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=QFrame ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 

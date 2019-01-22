@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsProxyWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
-$constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
+$prototype=QGraphicsProxyWidget ( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = 0 )
+$constructor=|new|QGraphicsItem *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 

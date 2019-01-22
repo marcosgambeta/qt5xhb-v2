@@ -28,7 +28,7 @@ $includes
 #include <QHeaderView>
 
 $prototype=explicit QTableView(QWidget *parent = nullptr)
-$constructor=|new|QWidget *=0
+$constructor=|new|QWidget *=nullptr
 
 $prototype=QTableView(QTableViewPrivate &, QWidget *parent) [protected]
 

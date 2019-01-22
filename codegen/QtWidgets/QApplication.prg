@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QApplication * o = NULL;
+  QApplication * o = nullptr;
   o = new QApplication( argc, argv );
   _qt5xhb_returnNewObject( o, false );
 }
@@ -254,8 +254,8 @@ $staticMethod=|void|setDoubleClickInterval|int
 $prototype=static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 $staticMethod=|void|setEffectEnabled|Qt::UIEffect,bool=true
 
-$prototype=static void setFont ( const QFont & font, const char * className = 0 )
-$staticMethod=|void|setFont|const QFont &,const char *=0
+$prototype=static void setFont ( const QFont & font, const char * className = nullptr )
+$staticMethod=|void|setFont|const QFont &,const char *=nullptr
 
 $prototype=static void setGlobalStrut ( const QSize & )
 $staticMethod=|void|setGlobalStrut|const QSize &
@@ -269,8 +269,8 @@ $staticMethod=|void|setLayoutDirection|Qt::LayoutDirection
 $prototype=static void setOverrideCursor ( const QCursor & cursor )
 $staticMethod=|void|setOverrideCursor|const QCursor &
 
-$prototype=static void setPalette ( const QPalette & palette, const char * className = 0 )
-$staticMethod=|void|setPalette|const QPalette &,const char *=0
+$prototype=static void setPalette ( const QPalette & palette, const char * className = nullptr )
+$staticMethod=|void|setPalette|const QPalette &,const char *=nullptr
 
 $prototype=static void setQuitOnLastWindowClosed ( bool quit )
 $staticMethod=|void|setQuitOnLastWindowClosed|bool

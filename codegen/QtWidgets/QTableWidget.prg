@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=QTableWidget ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QTableWidget ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QTableWidget ( int rows, int columns, QWidget * parent = 0 )
-$internalConstructor=|new2|int,int,QWidget *=0
+$prototype=QTableWidget ( int rows, int columns, QWidget * parent = nullptr )
+$internalConstructor=|new2|int,int,QWidget *=nullptr
 
-//[1]QTableWidget ( QWidget * parent = 0 )
-//[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
+//[1]QTableWidget ( QWidget * parent = nullptr )
+//[2]QTableWidget ( int rows, int columns, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {

@@ -31,14 +31,14 @@ $includes
 #include <QAbstractButton>
 #include <QCheckBox>
 
-$prototype=explicit QMessageBox ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=explicit QMessageBox ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
-$internalConstructor=|new2|QMessageBox::Icon,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::NoButton,QWidget *=0,Qt::WindowFlags=Qt::Dialog OR Qt::MSWindowsFixedSizeDialogHint
+$prototype=QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+$internalConstructor=|new2|QMessageBox::Icon,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::NoButton,QWidget *=nullptr,Qt::WindowFlags=Qt::Dialog OR Qt::MSWindowsFixedSizeDialogHint
 
-//[1]explicit QMessageBox ( QWidget * parent = 0 )
-//[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+//[1]explicit QMessageBox ( QWidget * parent = nullptr )
+//[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {

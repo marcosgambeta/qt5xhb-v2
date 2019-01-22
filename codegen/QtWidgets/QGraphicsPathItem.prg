@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsPathItem ( QGraphicsItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsItem *=0
+$prototype=QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsItem *=nullptr
 
-$prototype=QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
-$internalConstructor=|new2|const QPainterPath &,QGraphicsItem *=0
+$prototype=QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new2|const QPainterPath &,QGraphicsItem *=nullptr
 
-//[1]QGraphicsPathItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
+//[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 {
@@ -70,8 +70,8 @@ $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 $prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|

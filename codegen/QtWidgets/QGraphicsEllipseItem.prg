@@ -25,18 +25,18 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsItem *=0
+$prototype=QGraphicsEllipseItem ( QGraphicsItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsItem *=nullptr
 
-$prototype=QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-$internalConstructor=|new2|const QRectF &,QGraphicsItem *=0
+$prototype=QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new2|const QRectF &,QGraphicsItem *=nullptr
 
-$prototype=QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-$internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
+$prototype=QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=nullptr
 
-//[1]QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-//[3]QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+//[1]QGraphicsEllipseItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = nullptr )
+//[3]QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 {
@@ -113,8 +113,8 @@ $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 $prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=prototype=explicit QDoubleSpinBox ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=prototype=explicit QDoubleSpinBox ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

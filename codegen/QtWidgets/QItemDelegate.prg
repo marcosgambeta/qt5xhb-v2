@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QItemDelegate ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QItemDelegate ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

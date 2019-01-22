@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=explicit QDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 

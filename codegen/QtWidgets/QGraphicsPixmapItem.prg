@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsItem *=0
+$prototype=QGraphicsPixmapItem ( QGraphicsItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsItem *=nullptr
 
-$prototype=QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
-$internalConstructor=|new2|const QPixmap &,QGraphicsItem *=0
+$prototype=QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new2|const QPixmap &,QGraphicsItem *=nullptr
 
-//[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
+//[1]QGraphicsPixmapItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {

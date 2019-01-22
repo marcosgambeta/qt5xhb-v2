@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsLayoutItem *=0
+$prototype=QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsLayoutItem *=nullptr
 
-$prototype=QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
-$internalConstructor=|new2|Qt::Orientation,QGraphicsLayoutItem *=0
+$prototype=QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
+$internalConstructor=|new2|Qt::Orientation,QGraphicsLayoutItem *=nullptr
 
-//[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
-//[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
+//[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = nullptr )
+//[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {

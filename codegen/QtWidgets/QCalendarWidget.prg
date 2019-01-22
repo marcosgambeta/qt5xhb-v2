@@ -29,8 +29,8 @@ $includes
 
 #include <QTextCharFormat>
 
-$prototype=QCalendarWidget ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QCalendarWidget ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

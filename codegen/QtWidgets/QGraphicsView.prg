@@ -27,14 +27,14 @@ $includes
 
 #include <QVariant>
 
-$prototype=QGraphicsView ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QGraphicsView ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
-$internalConstructor=|new2|QGraphicsScene *,QWidget *=0
+$prototype=QGraphicsView ( QGraphicsScene * scene, QWidget * parent = nullptr )
+$internalConstructor=|new2|QGraphicsScene *,QWidget *=nullptr
 
-//[1]QGraphicsView ( QWidget * parent = 0 )
-//[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+//[1]QGraphicsView ( QWidget * parent = nullptr )
+//[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {

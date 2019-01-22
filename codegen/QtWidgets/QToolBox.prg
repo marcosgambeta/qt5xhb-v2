@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QToolBox ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=QToolBox ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 

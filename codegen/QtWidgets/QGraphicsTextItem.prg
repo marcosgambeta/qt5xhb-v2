@@ -31,14 +31,14 @@ $includes
 #include <QTextCursor>
 #include <QTextDocument>
 
-$prototype=QGraphicsTextItem ( QGraphicsItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsItem *=0
+$prototype=QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsItem *=nullptr
 
-$prototype=QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
-$internalConstructor=|new2|const QString &,QGraphicsItem *=0
+$prototype=QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new2|const QString &,QGraphicsItem *=nullptr
 
-//[1]QGraphicsTextItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+//[1]QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {

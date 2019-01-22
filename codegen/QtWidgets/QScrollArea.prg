@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=QScrollArea ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QScrollArea ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

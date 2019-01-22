@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QStackedWidget ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QStackedWidget ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

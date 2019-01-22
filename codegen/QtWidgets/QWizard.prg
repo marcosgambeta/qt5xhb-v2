@@ -30,8 +30,8 @@ $includes
 #include <QVariant>
 #include <QAbstractButton>
 
-$prototype=explicit QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-$constructor=|new|QWidget *=0,Qt::WindowFlags=0
+$prototype=explicit QWizard ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 

@@ -30,8 +30,8 @@ $includes
 #include <QVariant>
 #include <QIcon>
 
-$prototype=QTabBar ( QWidget * parent = 0 )
-$constructor=|new|QWidget *=0
+$prototype=QTabBar ( QWidget * parent = nullptr )
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
