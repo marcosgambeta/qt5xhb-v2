@@ -100,29 +100,29 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QAreaSeries(QObject *parent = Q_NULLPTR)
+explicit QAreaSeries(QObject *parent = nullptr)
 */
 void QAreaSeries_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * o = new QAreaSeries ( OPQOBJECT(1,Q_NULLPTR) );
+  QAreaSeries * o = new QAreaSeries ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
+explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
 */
 void QAreaSeries_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * o = new QAreaSeries ( PQLINESERIES(1), OPQLINESERIES(2,Q_NULLPTR) );
+  QAreaSeries * o = new QAreaSeries ( PQLINESERIES(1), OPQLINESERIES(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]explicit QAreaSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
+//[1]explicit QAreaSeries(QObject *parent = nullptr)
+//[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
 
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {

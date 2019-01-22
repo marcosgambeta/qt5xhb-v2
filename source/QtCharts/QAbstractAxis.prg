@@ -141,7 +141,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

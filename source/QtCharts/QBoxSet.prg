@@ -78,29 +78,29 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
+explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
 */
 void QBoxSet_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * o = new QBoxSet ( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
+  QBoxSet * o = new QBoxSet ( OPQSTRING(1,QString()), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
 */
 void QBoxSet_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * o = new QBoxSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
+  QBoxSet * o = new QBoxSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
-//[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+//[1]explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
+//[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {

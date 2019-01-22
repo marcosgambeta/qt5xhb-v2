@@ -51,7 +51,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBoxPlotModelMapper(QObject *parent = Q_NULLPTR) [protected]
+explicit QBoxPlotModelMapper(QObject *parent = nullptr) [protected]
 */
 
 /*

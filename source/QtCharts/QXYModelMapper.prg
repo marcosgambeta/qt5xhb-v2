@@ -54,7 +54,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QXYModelMapper(QObject *parent = Q_NULLPTR) [protected]
+explicit QXYModelMapper(QObject *parent = nullptr) [protected]
 */
 
 /*

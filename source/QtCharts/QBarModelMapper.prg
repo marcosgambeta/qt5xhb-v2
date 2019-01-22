@@ -51,7 +51,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarModelMapper(QObject *parent = Q_NULLPTR) [protected]
+explicit QBarModelMapper(QObject *parent = nullptr) [protected]
 */
 
 /*

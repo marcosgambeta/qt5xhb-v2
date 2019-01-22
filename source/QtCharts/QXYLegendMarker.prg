@@ -57,14 +57,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
+explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(2,3) && ISQXYSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QXYLegendMarker * o = new QXYLegendMarker ( PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3,Q_NULLPTR) );
+    QXYLegendMarker * o = new QXYLegendMarker ( PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
 }
 
 /*
-QXYLegendMarker(QXYLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+QXYLegendMarker(QXYLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

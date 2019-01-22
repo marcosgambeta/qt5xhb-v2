@@ -89,14 +89,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieSeries(QObject *parent = Q_NULLPTR)
+explicit QPieSeries(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QPIESERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QPieSeries * o = new QPieSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    QPieSeries * o = new QPieSeries ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

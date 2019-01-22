@@ -55,14 +55,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLineSeries(QObject *parent = Q_NULLPTR)
+explicit QLineSeries(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QLINESERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QLineSeries * o = new QLineSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    QLineSeries * o = new QLineSeries ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QLINESERIES_NEW )
 }
 
 /*
-QLineSeries(QLineSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+QLineSeries(QLineSeriesPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

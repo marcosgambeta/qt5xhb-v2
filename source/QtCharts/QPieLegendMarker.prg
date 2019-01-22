@@ -59,14 +59,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = Q_NULLPTR)
+explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(3,4) && ISQPIESERIES(1) && ISQPIESLICE(2) && ISQLEGEND(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
-    QPieLegendMarker * o = new QPieLegendMarker ( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,Q_NULLPTR) );
+    QPieLegendMarker * o = new QPieLegendMarker ( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 }
 
 /*
-QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

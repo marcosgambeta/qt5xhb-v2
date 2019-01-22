@@ -51,7 +51,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieModelMapper(QObject *parent = Q_NULLPTR) [protected]
+explicit QPieModelMapper(QObject *parent = nullptr) [protected]
 */
 
 /*

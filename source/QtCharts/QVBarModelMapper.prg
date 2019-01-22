@@ -77,14 +77,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QVBarModelMapper(QObject *parent = Q_NULLPTR)
+explicit QVBarModelMapper(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QVBarModelMapper * o = new QVBarModelMapper ( OPQOBJECT(1,Q_NULLPTR) );
+    QVBarModelMapper * o = new QVBarModelMapper ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

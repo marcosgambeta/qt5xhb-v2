@@ -77,14 +77,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QVXYModelMapper(QObject *parent = Q_NULLPTR)
+explicit QVXYModelMapper(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QVXYMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QVXYModelMapper * o = new QVXYModelMapper ( OPQOBJECT(1,Q_NULLPTR) );
+    QVXYModelMapper * o = new QVXYModelMapper ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

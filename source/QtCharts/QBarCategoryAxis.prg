@@ -75,14 +75,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarCategoryAxis(QObject *parent = Q_NULLPTR)
+explicit QBarCategoryAxis(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QBarCategoryAxis * o = new QBarCategoryAxis ( OPQOBJECT(1,Q_NULLPTR) );
+    QBarCategoryAxis * o = new QBarCategoryAxis ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
 }
 
 /*
-QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

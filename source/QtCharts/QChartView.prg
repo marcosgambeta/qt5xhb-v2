@@ -58,29 +58,29 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QChartView(QWidget *parent = Q_NULLPTR)
+explicit QChartView(QWidget *parent = nullptr)
 */
 void QChartView_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * o = new QChartView ( OPQWIDGET(1,Q_NULLPTR) );
+  QChartView * o = new QChartView ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
+explicit QChartView(QChart *chart, QWidget *parent = nullptr)
 */
 void QChartView_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * o = new QChartView ( PQCHART(1), OPQWIDGET(2,Q_NULLPTR) );
+  QChartView * o = new QChartView ( PQCHART(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]explicit QChartView(QWidget *parent = Q_NULLPTR)
-//[2]explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
+//[1]explicit QChartView(QWidget *parent = nullptr)
+//[2]explicit QChartView(QChart *chart, QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QCHARTVIEW_NEW )
 {

@@ -115,29 +115,29 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieSlice(QObject *parent = Q_NULLPTR)
+explicit QPieSlice(QObject *parent = nullptr)
 */
 void QPieSlice_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * o = new QPieSlice ( OPQOBJECT(1,Q_NULLPTR) );
+  QPieSlice * o = new QPieSlice ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
+QPieSlice(QString label, qreal value, QObject *parent = nullptr)
 */
 void QPieSlice_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * o = new QPieSlice ( PQSTRING(1), PQREAL(2), OPQOBJECT(3,Q_NULLPTR) );
+  QPieSlice * o = new QPieSlice ( PQSTRING(1), PQREAL(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]explicit QPieSlice(QObject *parent = Q_NULLPTR)
-//[2]QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
+//[1]explicit QPieSlice(QObject *parent = nullptr)
+//[2]QPieSlice(QString label, qreal value, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QPIESLICE_NEW )
 {

@@ -75,14 +75,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLogValueAxis(QObject *parent = Q_NULLPTR)
+explicit QLogValueAxis(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QLogValueAxis * o = new QLogValueAxis ( OPQOBJECT(1,Q_NULLPTR) );
+    QLogValueAxis * o = new QLogValueAxis ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
 }
 
 /*
-QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

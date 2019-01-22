@@ -73,14 +73,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QScatterSeries(QObject *parent = Q_NULLPTR)
+explicit QScatterSeries(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSCATTERSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QScatterSeries * o = new QScatterSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    QScatterSeries * o = new QScatterSeries ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -104,7 +104,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

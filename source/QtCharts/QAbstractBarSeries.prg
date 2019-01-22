@@ -86,7 +86,7 @@ using namespace QtCharts;
 #include <QBarSet>
 
 /*
-explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*

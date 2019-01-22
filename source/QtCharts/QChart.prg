@@ -129,14 +129,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())
+explicit QChart(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
 */
 HB_FUNC_STATIC( QCHART_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QChart * o = new QChart ( ISNIL(1)? Q_NULLPTR : (QGraphicsItem *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    QChart * o = new QChart ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QCHART_SERIES )
 }
 
 /*
-void setAxisX(QAbstractAxis *axis, QAbstractSeries *series = Q_NULLPTR) // DEPRECATED
+void setAxisX(QAbstractAxis *axis, QAbstractSeries *series = nullptr) // DEPRECATED
 */
 HB_FUNC_STATIC( QCHART_SETAXISX )
 {
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QCHART_SETAXISX )
     if( ISBETWEEN(1,2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
     {
 #endif
-      obj->setAxisX ( PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2,Q_NULLPTR) );
+      obj->setAxisX ( PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QCHART_SETAXISX )
 }
 
 /*
-void setAxisY(QAbstractAxis *axis, QAbstractSeries *series = Q_NULLPTR) // DEPRECATED
+void setAxisY(QAbstractAxis *axis, QAbstractSeries *series = nullptr) // DEPRECATED
 */
 HB_FUNC_STATIC( QCHART_SETAXISY )
 {
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QCHART_SETAXISY )
     if( ISBETWEEN(1,2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
     {
 #endif
-      obj->setAxisY ( PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2,Q_NULLPTR) );
+      obj->setAxisY ( PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QCHART_SETAXISY )
 }
 
 /*
-QAbstractAxis *axisX(QAbstractSeries *series = Q_NULLPTR) const         // DEPRECATED
+QAbstractAxis *axisX(QAbstractSeries *series = nullptr) const         // DEPRECATED
 */
 HB_FUNC_STATIC( QCHART_AXISX )
 {
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QCHART_AXISX )
     if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
     {
 #endif
-      QAbstractAxis * ptr = obj->axisX ( OPQABSTRACTSERIES(1,Q_NULLPTR) );
+      QAbstractAxis * ptr = obj->axisX ( OPQABSTRACTSERIES(1,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QCHART_AXISX )
 }
 
 /*
-QAbstractAxis *axisY(QAbstractSeries *series = Q_NULLPTR) const         // DEPRECATED
+QAbstractAxis *axisY(QAbstractSeries *series = nullptr) const         // DEPRECATED
 */
 HB_FUNC_STATIC( QCHART_AXISY )
 {
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QCHART_AXISY )
     if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
     {
 #endif
-      QAbstractAxis * ptr = obj->axisY ( OPQABSTRACTSERIES(1,Q_NULLPTR) );
+      QAbstractAxis * ptr = obj->axisY ( OPQABSTRACTSERIES(1,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QCHART_REMOVEAXIS )
 }
 
 /*
-QList<QAbstractAxis*> axes(Qt::Orientations orientation = Qt::Horizontal|Qt::Vertical, QAbstractSeries *series = Q_NULLPTR) const
+QList<QAbstractAxis*> axes(Qt::Orientations orientation = Qt::Horizontal|Qt::Vertical, QAbstractSeries *series = nullptr) const
 */
 HB_FUNC_STATIC( QCHART_AXES )
 {
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC( QCHART_AXES )
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
     {
 #endif
-      QList<QAbstractAxis *> list = obj->axes ( ISNIL(1)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(1), OPQABSTRACTSERIES(2,Q_NULLPTR) );
+      QList<QAbstractAxis *> list = obj->axes ( ISNIL(1)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(1), OPQABSTRACTSERIES(2,nullptr) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTAXIS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
@@ -1805,7 +1805,7 @@ HB_FUNC_STATIC( QCHART_PLOTAREABACKGROUNDPEN )
 }
 
 /*
-QPointF mapToValue(const QPointF &position, QAbstractSeries *series = Q_NULLPTR)
+QPointF mapToValue(const QPointF &position, QAbstractSeries *series = nullptr)
 */
 HB_FUNC_STATIC( QCHART_MAPTOVALUE )
 {
@@ -1818,7 +1818,7 @@ HB_FUNC_STATIC( QCHART_MAPTOVALUE )
     if( ISBETWEEN(1,2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->mapToValue ( *PQPOINTF(1), OPQABSTRACTSERIES(2,Q_NULLPTR) ) );
+      QPointF * ptr = new QPointF( obj->mapToValue ( *PQPOINTF(1), OPQABSTRACTSERIES(2,nullptr) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC( QCHART_MAPTOVALUE )
 }
 
 /*
-QPointF mapToPosition(const QPointF &value, QAbstractSeries *series = Q_NULLPTR)
+QPointF mapToPosition(const QPointF &value, QAbstractSeries *series = nullptr)
 */
 HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
 {
@@ -1845,7 +1845,7 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
     if( ISBETWEEN(1,2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->mapToPosition ( *PQPOINTF(1), OPQABSTRACTSERIES(2,Q_NULLPTR) ) );
+      QPointF * ptr = new QPointF( obj->mapToPosition ( *PQPOINTF(1), OPQABSTRACTSERIES(2,nullptr) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

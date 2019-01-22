@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
 }
 
 /*
-void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = Q_NULLPTR)
+void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
 */
 HB_FUNC_STATIC( QLEGEND_PAINT )
 {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QLEGEND_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,Q_NULLPTR) );
+      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QLEGEND_ISATTACHEDTOCHART )
 }
 
 /*
-QList <QLegendMarker*> markers(QAbstractSeries *series = Q_NULLPTR) const
+QList <QLegendMarker*> markers(QAbstractSeries *series = nullptr) const
 */
 HB_FUNC_STATIC( QLEGEND_MARKERS )
 {
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
     if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
     {
 #endif
-      QList<QLegendMarker *> list = obj->markers ( OPQABSTRACTSERIES(1,Q_NULLPTR) );
+      QList<QLegendMarker *> list = obj->markers ( OPQABSTRACTSERIES(1,nullptr) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLEGENDMARKER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;

@@ -55,14 +55,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QHorizontalStackedBarSeries(QObject *parent = Q_NULLPTR)
+explicit QHorizontalStackedBarSeries(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QHORIZONTALSTACKEDBARSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QHorizontalStackedBarSeries * o = new QHorizontalStackedBarSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    QHorizontalStackedBarSeries * o = new QHorizontalStackedBarSeries ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

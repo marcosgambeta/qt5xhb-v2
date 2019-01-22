@@ -85,7 +85,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*
