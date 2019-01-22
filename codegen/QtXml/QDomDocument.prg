@@ -122,38 +122,38 @@ $method=|QDomNode|importNode|const QDomNode &,bool
 $prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-$prototype=bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent1|const QByteArray &,bool,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent1|const QByteArray &,bool,QString *=nullptr,int *=nullptr,int *=nullptr
 
-$prototype=bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent2|const QString &,bool,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent2|const QString &,bool,QString *=nullptr,int *=nullptr,int *=nullptr
 
-$prototype=bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent3|QIODevice *,bool,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent3|QIODevice *,bool,QString *=nullptr,int *=nullptr,int *=nullptr
 
-$prototype=bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent4|QXmlInputSource *,bool,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent4|QXmlInputSource *,bool,QString *=nullptr,int *=nullptr,int *=nullptr
 
-$prototype=bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent5|const QString &,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( const QString & text, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent5|const QString &,QString *=nullptr,int *=nullptr,int *=nullptr
 
-$prototype=bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent6|const QByteArray &,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( const QByteArray & buffer, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent6|const QByteArray &,QString *=nullptr,int *=nullptr,int *=nullptr
 
-$prototype=bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent7|QIODevice *,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( QIODevice * dev, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent7|QIODevice *,QString *=nullptr,int *=nullptr,int *=nullptr
 
-$prototype=bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$internalMethod=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=0,int *=0,int *=0
+$prototype=bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+$internalMethod=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=nullptr,int *=nullptr,int *=nullptr
 
-//[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[3]bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[4]bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[5]bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[6]bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[7]bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+//[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[3]bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[4]bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[5]bool setContent ( const QString & text, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[6]bool setContent ( const QByteArray & buffer, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[7]bool setContent ( QIODevice * dev, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 
 HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {

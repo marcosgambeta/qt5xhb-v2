@@ -42,8 +42,8 @@ $virtualMethod=|QXmlEntityResolver *|entityResolver|
 $prototype=virtual QXmlErrorHandler * errorHandler () const = 0
 $virtualMethod=|QXmlErrorHandler *|errorHandler|
 
-$prototype=virtual bool feature ( const QString & name, bool * ok = 0 ) const = 0
-$virtualMethod=|bool|feature|const QString &,bool *=0
+$prototype=virtual bool feature ( const QString & name, bool * ok = nullptr ) const = 0
+$virtualMethod=|bool|feature|const QString &,bool *=nullptr
 
 $prototype=virtual bool hasFeature ( const QString & name ) const = 0
 $virtualMethod=|bool|hasFeature|const QString &
@@ -57,8 +57,8 @@ $virtualMethod=|QXmlLexicalHandler *|lexicalHandler|
 $prototype=virtual bool parse ( const QXmlInputSource * input ) = 0
 $virtualMethod=|bool|parse|const QXmlInputSource *
 
-$prototype=virtual void * property ( const QString & name, bool * ok = 0 ) const = 0
-$virtualMethod=|void *|property|const QString &,bool *=0
+$prototype=virtual void * property ( const QString & name, bool * ok = nullptr ) const = 0
+$virtualMethod=|void *|property|const QString &,bool *=nullptr
 
 $prototype=virtual void setContentHandler ( QXmlContentHandler * handler ) = 0
 $virtualMethod=|void|setContentHandler|QXmlContentHandler *
