@@ -27,8 +27,8 @@ $includes
 
 #include <QNetworkCookie>
 
-$prototype=explicit QNetworkCookieJar(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QNetworkCookieJar(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=virtual ~QNetworkCookieJar()
 $deleteMethod

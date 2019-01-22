@@ -40,8 +40,8 @@ $includes
 #include <QNetworkDatagram>
 #endif
 
-$prototype=explicit QUdpSocket(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QUdpSocket(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=virtual ~QUdpSocket()
 $deleteMethod
@@ -117,9 +117,9 @@ $method=|qint64|pendingDatagramSize|
 $prototype=QNetworkDatagram receiveDatagram(qint64 maxSize = -1)
 $method=5,8,0|QNetworkDatagram|receiveDatagram|qint64=-1
 
-$prototype=qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = Q_NULLPTR, quint16 *port = Q_NULLPTR)
+$prototype=qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = nullptr, quint16 *port = nullptr)
 %% TODO: implementar
-%% $method=|qint64|readDatagram|char *,qint64,QHostAddress *=0,quint16 *=0
+%% $method=|qint64|readDatagram|char *,qint64,QHostAddress *=nullptr,quint16 *=nullptr
 
 $prototype=qint64 writeDatagram(const QNetworkDatagram &datagram)
 $internalMethod=5,8,0|qint64|writeDatagram,writeDatagram1|const QNetworkDatagram &

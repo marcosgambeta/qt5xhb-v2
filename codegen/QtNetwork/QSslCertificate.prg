@@ -204,9 +204,9 @@ $staticMethod=|QList<QSslCertificate>|fromData|const QByteArray &,QSsl::Encoding
 $prototype=static QList<QSslError> verify(QList<QSslCertificate> certificateChain, const QString &hostName = QString())
 $staticMethod=|QList<QSslError>|verify|QList<QSslCertificate>,const QString &=QString()
 
-$prototype=static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = Q_NULLPTR, const QByteArray &passPhrase=QByteArray())
+$prototype=static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = nullptr, const QByteArray &passPhrase=QByteArray())
 %% TODO: implementar
-%% $staticMethod=5,4,0|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=0,const QByteArray &=QByteArray()
+%% $staticMethod=5,4,0|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=nullptr,const QByteArray &=QByteArray()
 
 $prototype=Qt::HANDLE handle() const
 $method=|Qt::HANDLE|handle|

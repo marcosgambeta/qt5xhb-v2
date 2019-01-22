@@ -36,10 +36,10 @@ $includes
 #include <QNetworkProxy>
 #include <QTcpSocket>
 
-$prototype=explicit QTcpServer(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QTcpServer(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
-$prototype=QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
+$prototype=QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QTcpServer()
 $deleteMethod
@@ -71,8 +71,8 @@ $method=|qintptr|socketDescriptor|
 $prototype=bool setSocketDescriptor(qintptr socketDescriptor)
 $method=|bool|setSocketDescriptor|qintptr
 
-$prototype=bool waitForNewConnection(int msec = 0, bool *timedOut = Q_NULLPTR)
-$method=|bool|waitForNewConnection|int=0,bool *=Q_NULLPTR
+$prototype=bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)
+$method=|bool|waitForNewConnection|int=0,bool *=nullptr
 
 $prototype=virtual bool hasPendingConnections() const
 $virtualMethod=|bool|hasPendingConnections|

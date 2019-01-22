@@ -30,7 +30,7 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QSctpSocket(QObject *parent = nullptr)
-$constructor=5,8,0|new|QObject *=0|#if !defined(QT_NO_SCTP)
+$constructor=5,8,0|new|QObject *=nullptr|#if !defined(QT_NO_SCTP)
 
 $prototype=virtual ~QSctpSocket()
 $deleteMethod=5,8,0|#if !defined(QT_NO_SCTP)

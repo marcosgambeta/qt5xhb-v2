@@ -36,7 +36,7 @@ $includes=5,8,0
 #endif
 
 $prototype=explicit QSctpServer(QObject *parent = nullptr)
-$constructor=5,8,0|new|QObject *=0|#if !defined(QT_NO_SCTP)
+$constructor=5,8,0|new|QObject *=nullptr|#if !defined(QT_NO_SCTP)
 
 $prototype=virtual ~QSctpServer()
 $deleteMethod=5,8,0|#if !defined(QT_NO_SCTP)

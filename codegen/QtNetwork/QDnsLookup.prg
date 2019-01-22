@@ -29,18 +29,18 @@ $includes
 
 #include <QHostAddress>
 
-$prototype=explicit QDnsLookup(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QDnsLookup(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|QDnsLookup::Type,const QString &,QObject *=Q_NULLPTR
+$prototype=QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
+$internalConstructor=|new2|QDnsLookup::Type,const QString &,QObject *=nullptr
 
-$prototype=QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
-$internalConstructor=5,4,0|new3|QDnsLookup::Type,const QString &,const QHostAddress &,QObject *=Q_NULLPTR
+$prototype=QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
+$internalConstructor=5,4,0|new3|QDnsLookup::Type,const QString &,const QHostAddress &,QObject *=nullptr
 
-//[1]explicit QDnsLookup(QObject *parent = Q_NULLPTR)
-//[2]QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
-//[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
+//[1]explicit QDnsLookup(QObject *parent = nullptr)
+//[2]QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
+//[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {

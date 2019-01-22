@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=explicit QHttpMultiPart(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=0
+$prototype=explicit QHttpMultiPart(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|QHttpMultiPart::ContentType,QObject *=0
+$prototype=explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr)
+$internalConstructor=|new2|QHttpMultiPart::ContentType,QObject *=nullptr
 
-//[1]explicit QHttpMultiPart(QObject *parent = Q_NULLPTR)
-//[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
+//[1]explicit QHttpMultiPart(QObject *parent = nullptr)
+//[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {

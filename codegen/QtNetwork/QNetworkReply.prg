@@ -47,7 +47,7 @@ $includes
 
 #include <QSslConfiguration>
 
-$prototype=explicit QNetworkReply(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QNetworkReply(QObject *parent = nullptr) [protected]
 
 $prototype=QNetworkReply(QNetworkReplyPrivate &dd, QObject *parent) [protected]
 

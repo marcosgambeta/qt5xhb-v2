@@ -34,8 +34,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = Q_NULLPTR)
-$constructor=|new|const QNetworkConfiguration &,QObject *=0
+$prototype=explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = nullptr)
+$constructor=|new|const QNetworkConfiguration &,QObject *=nullptr
 
 $prototype=virtual ~QNetworkSession()
 $deleteMethod

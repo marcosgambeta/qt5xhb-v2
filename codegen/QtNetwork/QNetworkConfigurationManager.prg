@@ -31,8 +31,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QNetworkConfigurationManager(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QNetworkConfigurationManager(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=virtual ~QNetworkConfigurationManager()
 $deleteMethod

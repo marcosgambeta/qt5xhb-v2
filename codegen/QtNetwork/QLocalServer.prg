@@ -29,8 +29,8 @@ $includes
 
 #include <QLocalSocket>
 
-$prototype=explicit QLocalServer(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QLocalServer(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QLocalServer()
 $deleteMethod
@@ -108,8 +108,8 @@ $method=|QAbstractSocket::SocketError|serverError|
 $prototype=void setMaxPendingConnections(int numConnections)
 $method=|void|setMaxPendingConnections|int
 
-$prototype=bool waitForNewConnection(int msec = 0, bool *timedOut = Q_NULLPTR)
-$method=|bool|waitForNewConnection|int=0,bool *=0
+$prototype=bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)
+$method=|bool|waitForNewConnection|int=0,bool *=nullptr
 
 $prototype=qintptr socketDescriptor() const
 $method=5,10,0|qintptr|socketDescriptor|

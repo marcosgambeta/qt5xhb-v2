@@ -69,8 +69,8 @@ $includes
 #include <QHstsPolicy>
 #endif
 
-$prototype=explicit QNetworkAccessManager(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QNetworkAccessManager(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QNetworkAccessManager()
 $deleteMethod
@@ -225,8 +225,8 @@ $addMethod=put
 $prototype=QNetworkReply *deleteResource(const QNetworkRequest &request)
 $method=|QNetworkReply *|deleteResource|const QNetworkRequest &
 
-$prototype=QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR)
-$internalMethod=|QNetworkReply *|sendCustomRequest,sendCustomRequest1|const QNetworkRequest &,const QByteArray &,QIODevice *=0
+$prototype=QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
+$internalMethod=|QNetworkReply *|sendCustomRequest,sendCustomRequest1|const QNetworkRequest &,const QByteArray &,QIODevice *=nullptr
 
 $prototype=QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
 $internalMethod=5,8,0|QNetworkReply *|sendCustomRequest,sendCustomRequest2|const QNetworkRequest &,const QByteArray &,const QByteArray &
@@ -234,7 +234,7 @@ $internalMethod=5,8,0|QNetworkReply *|sendCustomRequest,sendCustomRequest2|const
 $prototype=QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
 $internalMethod=5,8,0|QNetworkReply *|sendCustomRequest,sendCustomRequest3|const QNetworkRequest &,const QByteArray &,QHttpMultiPart *
 
-//[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR)
+//[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
 //[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
 //[3]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
 
@@ -288,7 +288,7 @@ $method=5,9,0|void|setRedirectPolicy|QNetworkRequest::RedirectPolicy
 $prototype=QNetworkRequest::RedirectPolicy redirectPolicy() const
 $method=5,9,0|QNetworkRequest::RedirectPolicy|redirectPolicy|
 
-$prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = Q_NULLPTR) [protected]
+$prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = nullptr) [protected]
 
 $prototype=QStringList supportedSchemesImplementation() const [protected] (slot) (5,2,0)
 

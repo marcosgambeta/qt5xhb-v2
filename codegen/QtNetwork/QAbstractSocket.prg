@@ -44,7 +44,7 @@ $includes
 $prototype=QAbstractSocket ( SocketType socketType, QObject * parent )
 $constructor=|new|QAbstractSocket::SocketType,QObject *
 
-$prototype=QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
+$prototype=QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstractSocket()
 $deleteMethod

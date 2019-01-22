@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QLocalSocket(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=QLocalSocket(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QLocalSocket()
 $deleteMethod

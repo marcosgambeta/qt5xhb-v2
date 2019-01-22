@@ -27,8 +27,8 @@ $includes
 
 #include <QIODevice>
 
-$prototype=explicit QNetworkDiskCache(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QNetworkDiskCache(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QNetworkDiskCache()
 $deleteMethod

@@ -52,8 +52,8 @@ $includes
 #include <QSslConfiguration>
 #include <QSslPreSharedKeyAuthenticator>
 
-$prototype=explicit QSslSocket(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QSslSocket(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QSslSocket()
 $deleteMethod
