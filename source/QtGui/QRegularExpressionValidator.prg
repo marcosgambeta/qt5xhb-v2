@@ -53,25 +53,25 @@ RETURN
 #endif
 
 /*
-QRegularExpressionValidator(QObject *parent = 0)
+QRegularExpressionValidator(QObject *parent = nullptr)
 */
 void QRegularExpressionValidator_new1 ()
 {
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( OPQOBJECT(1,0) );
+  QRegularExpressionValidator * o = new QRegularExpressionValidator ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
+QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
 */
 void QRegularExpressionValidator_new2 ()
 {
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
+  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QRegularExpressionValidator(QObject *parent = 0)
-//[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
+//[1]QRegularExpressionValidator(QObject *parent = nullptr)
+//[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {

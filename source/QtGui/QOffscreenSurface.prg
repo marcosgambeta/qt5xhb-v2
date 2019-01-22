@@ -65,13 +65,13 @@ RETURN
 #include <QScreen>
 
 /*
-QOffscreenSurface(QScreen *screen = 0)
+QOffscreenSurface(QScreen *screen = nullptr)
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSCREEN(1)||ISNIL(1)) )
   {
-    QOffscreenSurface * o = new QOffscreenSurface ( OPQSCREEN(1,0) );
+    QOffscreenSurface * o = new QOffscreenSurface ( OPQSCREEN(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

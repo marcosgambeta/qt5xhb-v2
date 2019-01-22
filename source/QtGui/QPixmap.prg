@@ -126,11 +126,11 @@ void QPixmap_new4 ()
 }
 
 /*
-QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+QPixmap ( const QString & fileName, const char * format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 void QPixmap_new5 ()
 {
-  QPixmap * o = new QPixmap ( PQSTRING(1), OPCONSTCHAR(2,0), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) );
+  QPixmap * o = new QPixmap ( PQSTRING(1), OPCONSTCHAR(2,nullptr), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -147,7 +147,7 @@ void QPixmap_new7 ()
 //[2]QPixmap(QPlatformPixmap *data) // TODO: implementar(?)
 //[3]QPixmap(int w, int h)
 //[4]QPixmap(const QSize &)
-//[5]QPixmap(const QString& fileName, const char *format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+//[5]QPixmap(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 //[6]QPixmap(const char * const xpm[]) // TODO: implementar(?)
 //[7]QPixmap(const QPixmap &)
 
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QPIXMAP_TOIMAGE )
 }
 
 /*
-bool load(const QString& fileName, const char *format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+bool load(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 */
 HB_FUNC_STATIC( QPIXMAP_LOAD )
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QPIXMAP_LOAD )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
     {
 #endif
-      RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
+      RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,nullptr), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QPIXMAP_LOAD )
 }
 
 /*
-bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+bool loadFromData(const uchar *buf, uint len, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 */
 void QPixmap_loadFromData1 ()
 {
@@ -866,12 +866,12 @@ void QPixmap_loadFromData1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->loadFromData ( PCONSTUCHAR(1), PUINT(2), OPCONSTCHAR(3,0), ISNIL(4)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(4) ) );
+      RBOOL( obj->loadFromData ( PCONSTUCHAR(1), PUINT(2), OPCONSTCHAR(3,nullptr), ISNIL(4)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(4) ) );
   }
 }
 
 /*
-bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+bool loadFromData(const QByteArray &data, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 */
 void QPixmap_loadFromData2 ()
 {
@@ -879,12 +879,12 @@ void QPixmap_loadFromData2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
+      RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,nullptr), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
   }
 }
 
-//[1]bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
-//[2]bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+//[1]bool loadFromData(const uchar *buf, uint len, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+//[2]bool loadFromData(const QByteArray &data, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 
 HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 {
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 }
 
 /*
-bool save(const QString& fileName, const char* format = 0, int quality = -1) const
+bool save(const QString& fileName, const char* format = nullptr, int quality = -1) const
 */
 void QPixmap_save1 ()
 {
@@ -911,12 +911,12 @@ void QPixmap_save1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+      RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,nullptr), OPINT(3,-1) ) );
   }
 }
 
 /*
-bool save(QIODevice* device, const char* format = 0, int quality = -1) const
+bool save(QIODevice* device, const char* format = nullptr, int quality = -1) const
 */
 void QPixmap_save2 ()
 {
@@ -924,12 +924,12 @@ void QPixmap_save2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+      RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr), OPINT(3,-1) ) );
   }
 }
 
-//[1]bool save(const QString& fileName, const char* format = 0, int quality = -1) const
-//[2]bool save(QIODevice* device, const char* format = 0, int quality = -1) const
+//[1]bool save(const QString& fileName, const char* format = nullptr, int quality = -1) const
+//[2]bool save(QIODevice* device, const char* format = nullptr, int quality = -1) const
 
 HB_FUNC_STATIC( QPIXMAP_SAVE )
 {
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QPIXMAP_COPY )
 }
 
 /*
-void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
+void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = nullptr)
 */
 void QPixmap_scroll1 ()
 {
@@ -1027,14 +1027,14 @@ void QPixmap_scroll1 ()
 
   if( obj != nullptr )
   {
-      obj->scroll ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6), ISNIL(7)? 0 : (QRegion *) _qt5xhb_itemGetPtr(7) );
+      obj->scroll ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6), ISNIL(7)? nullptr : (QRegion *) _qt5xhb_itemGetPtr(7) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
+void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
 */
 void QPixmap_scroll2 ()
 {
@@ -1042,14 +1042,14 @@ void QPixmap_scroll2 ()
 
   if( obj != nullptr )
   {
-      obj->scroll ( PINT(1), PINT(2), *PQRECT(3), ISNIL(4)? 0 : (QRegion *) _qt5xhb_itemGetPtr(4) );
+      obj->scroll ( PINT(1), PINT(2), *PQRECT(3), ISNIL(4)? nullptr : (QRegion *) _qt5xhb_itemGetPtr(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
-//[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
+//[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = nullptr)
+//[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
 
 HB_FUNC_STATIC( QPIXMAP_SCROLL )
 {

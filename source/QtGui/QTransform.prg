@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
 }
 
 /*
-QTransform inverted(bool *invertible = 0) const
+QTransform inverted(bool *invertible = nullptr) const
 */
 HB_FUNC_STATIC( QTRANSFORM_INVERTED )
 {

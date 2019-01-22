@@ -62,7 +62,7 @@ RETURN
 #include <QVector>
 
 /*
-explicit QOpenGLTimeMonitor(QObject *parent = 0)
+explicit QOpenGLTimeMonitor(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLTIMEMONITOR_NEW )
 {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_NEW )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLTimeMonitor * o = new QOpenGLTimeMonitor ( OPQOBJECT(1,0) );
+    QOpenGLTimeMonitor * o = new QOpenGLTimeMonitor ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

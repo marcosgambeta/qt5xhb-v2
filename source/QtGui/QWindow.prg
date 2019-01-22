@@ -186,7 +186,7 @@ QWindow(QScreen * screen = nullptr)
 */
 void QWindow_new1 ()
 {
-  QWindow * o = new QWindow ( OPQSCREEN(1,0) );
+  QWindow * o = new QWindow ( OPQSCREEN(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 

@@ -94,35 +94,35 @@ RETURN
 #include <QPixmap>
 
 /*
-QMovie ( QObject * parent = 0 )
+QMovie ( QObject * parent = nullptr )
 */
 void QMovie_new1 ()
 {
-  QMovie * o = new QMovie ( OPQOBJECT(1,0) );
+  QMovie * o = new QMovie ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
 */
 void QMovie_new2 ()
 {
-  QMovie * o = new QMovie ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,0) );
+  QMovie * o = new QMovie ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
 */
 void QMovie_new3 ()
 {
-  QMovie * o = new QMovie ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,0) );
+  QMovie * o = new QMovie ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QMovie ( QObject * parent = 0 )
-//[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-//[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+//[1]QMovie ( QObject * parent = nullptr )
+//[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
+//[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {

@@ -92,11 +92,11 @@ void QBitmap_new4 ()
 }
 
 /*
-QBitmap ( const QString & fileName, const char * format = 0 )
+QBitmap ( const QString & fileName, const char * format = nullptr )
 */
 void QBitmap_new5 ()
 {
-  QBitmap * o = new QBitmap ( PQSTRING(1), OPCONSTCHAR(2,0) );
+  QBitmap * o = new QBitmap ( PQSTRING(1), OPCONSTCHAR(2,nullptr) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -104,7 +104,7 @@ void QBitmap_new5 ()
 //[2]QBitmap ( const QPixmap & pixmap )
 //[3]QBitmap ( int width, int height )
 //[4]QBitmap ( const QSize & size )
-//[5]QBitmap ( const QString & fileName, const char * format = 0 )
+//[5]QBitmap ( const QString & fileName, const char * format = nullptr )
 
 HB_FUNC_STATIC( QBITMAP_NEW )
 {

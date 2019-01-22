@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
 }
 
 /*
-bool load ( const QString & fileName, const char * format = 0 )
+bool load ( const QString & fileName, const char * format = nullptr )
 */
 void QPicture_load1 ()
 {
@@ -194,12 +194,12 @@ void QPicture_load1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+      RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
 /*
-bool load ( QIODevice * dev, const char * format = 0 )
+bool load ( QIODevice * dev, const char * format = nullptr )
 */
 void QPicture_load2 ()
 {
@@ -207,12 +207,12 @@ void QPicture_load2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
+      RBOOL( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
-//[1]bool load ( const QString & fileName, const char * format = 0 )
-//[2]bool load ( QIODevice * dev, const char * format = 0 )
+//[1]bool load ( const QString & fileName, const char * format = nullptr )
+//[2]bool load ( QIODevice * dev, const char * format = nullptr )
 
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
 }
 
 /*
-bool save ( const QString & fileName, const char * format = 0 )
+bool save ( const QString & fileName, const char * format = nullptr )
 */
 void QPicture_save1 ()
 {
@@ -263,12 +263,12 @@ void QPicture_save1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+      RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
 /*
-bool save ( QIODevice * dev, const char * format = 0 )
+bool save ( QIODevice * dev, const char * format = nullptr )
 */
 void QPicture_save2 ()
 {
@@ -276,12 +276,12 @@ void QPicture_save2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
+      RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
-//[1]bool save ( const QString & fileName, const char * format = 0 )
-//[2]bool save ( QIODevice * dev, const char * format = 0 )
+//[1]bool save ( const QString & fileName, const char * format = nullptr )
+//[2]bool save ( QIODevice * dev, const char * format = nullptr )
 
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {

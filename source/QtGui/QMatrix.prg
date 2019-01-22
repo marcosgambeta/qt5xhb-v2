@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QMATRIX_DETERMINANT )
 }
 
 /*
-QMatrix inverted(bool *invertible = 0) const
+QMatrix inverted(bool *invertible = nullptr) const
 */
 HB_FUNC_STATIC( QMATRIX_INVERTED )
 {

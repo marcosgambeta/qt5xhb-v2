@@ -52,25 +52,25 @@ RETURN
 #endif
 
 /*
-QRegExpValidator ( QObject * parent = 0 )
+QRegExpValidator ( QObject * parent = nullptr )
 */
 void QRegExpValidator_new1 ()
 {
-  QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,0) );
+  QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
+QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
 */
 void QRegExpValidator_new2 ()
 {
-  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,0) );
+  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QRegExpValidator ( QObject * parent = 0 )
-//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+//[1]QRegExpValidator ( QObject * parent = nullptr )
+//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
   {
     QRegExpValidator_new1();
   }
-  else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QRegExpValidator_new2();
   }

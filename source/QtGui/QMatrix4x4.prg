@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
 }
 
 /*
-QMatrix4x4 inverted(bool *invertible = Q_NULLPTR) const
+QMatrix4x4 inverted(bool *invertible = nullptr) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
 {

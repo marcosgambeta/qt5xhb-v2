@@ -75,13 +75,13 @@ RETURN
 #include <QScreen>
 
 /*
-QOpenGLContext(QObject * parent = 0)
+QOpenGLContext(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLContext * o = new QOpenGLContext ( OPQOBJECT(1,0) );
+    QOpenGLContext * o = new QOpenGLContext ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

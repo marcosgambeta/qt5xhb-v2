@@ -2272,7 +2272,7 @@ void QPainter_drawText2 ()
 }
 
 /*
-void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
+void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = nullptr )
 */
 void QPainter_drawText3 ()
 {
@@ -2280,14 +2280,14 @@ void QPainter_drawText3 ()
 
   if( obj != nullptr )
   {
-      obj->drawText ( *PQRECTF(1), PINT(2), PQSTRING(3), ISNIL(4)? 0 : (QRectF *) _qt5xhb_itemGetPtr(4) );
+      obj->drawText ( *PQRECTF(1), PINT(2), PQSTRING(3), ISNIL(4)? nullptr : (QRectF *) _qt5xhb_itemGetPtr(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
+void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = nullptr )
 */
 void QPainter_drawText4 ()
 {
@@ -2295,7 +2295,7 @@ void QPainter_drawText4 ()
 
   if( obj != nullptr )
   {
-      obj->drawText ( *PQRECT(1), PINT(2), PQSTRING(3), ISNIL(4)? 0 : (QRect *) _qt5xhb_itemGetPtr(4) );
+      obj->drawText ( *PQRECT(1), PINT(2), PQSTRING(3), ISNIL(4)? nullptr : (QRect *) _qt5xhb_itemGetPtr(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2317,7 +2317,7 @@ void QPainter_drawText5 ()
 }
 
 /*
-void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
+void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = nullptr )
 */
 void QPainter_drawText6 ()
 {
@@ -2325,7 +2325,7 @@ void QPainter_drawText6 ()
 
   if( obj != nullptr )
   {
-      obj->drawText ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), ISNIL(7)? 0 : (QRect *) _qt5xhb_itemGetPtr(7) );
+      obj->drawText ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), ISNIL(7)? nullptr : (QRect *) _qt5xhb_itemGetPtr(7) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2348,10 +2348,10 @@ void QPainter_drawText7 ()
 
 //[1]void drawText ( const QPointF & position, const QString & text )
 //[2]void drawText ( const QPoint & position, const QString & text )
-//[3]void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
-//[4]void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
+//[3]void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = nullptr )
+//[4]void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = nullptr )
 //[5]void drawText ( int x, int y, const QString & text )
-//[6]void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
+//[6]void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = nullptr )
 //[7]void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 
 HB_FUNC_STATIC( QPAINTER_DRAWTEXT )

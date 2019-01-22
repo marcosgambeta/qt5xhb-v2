@@ -60,25 +60,25 @@ RETURN
 #endif
 
 /*
-QIntValidator(QObject * parent = 0)
+QIntValidator(QObject * parent = nullptr)
 */
 void QIntValidator_new1 ()
 {
-  QIntValidator * o = new QIntValidator ( OPQOBJECT(1,0) );
+  QIntValidator * o = new QIntValidator ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QIntValidator(int minimum, int maximum, QObject * parent = 0)
+QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
 */
 void QIntValidator_new2 ()
 {
-  QIntValidator * o = new QIntValidator ( PINT(1), PINT(2), OPQOBJECT(3,0) );
+  QIntValidator * o = new QIntValidator ( PINT(1), PINT(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QIntValidator(QObject * parent = 0)
-//[2]QIntValidator(int minimum, int maximum, QObject * parent = 0)
+//[1]QIntValidator(QObject * parent = nullptr)
+//[2]QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {

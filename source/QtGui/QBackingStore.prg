@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_ENDPAINT )
 }
 
 /*
-void flush(const QRegion & region, QWindow * win = 0, const QPoint & offset = QPoint())
+void flush(const QRegion & region, QWindow * win = nullptr, const QPoint & offset = QPoint())
 */
 HB_FUNC_STATIC( QBACKINGSTORE_FLUSH )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_FLUSH )
     if( ISBETWEEN(1,3) && ISQREGION(1) && (ISQWINDOW(2)||ISNIL(2)) && (ISQPOINT(3)||ISNIL(3)) )
     {
 #endif
-      obj->flush ( *PQREGION(1), OPQWINDOW(2,0), ISNIL(3)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(3) );
+      obj->flush ( *PQREGION(1), OPQWINDOW(2,nullptr), ISNIL(3)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

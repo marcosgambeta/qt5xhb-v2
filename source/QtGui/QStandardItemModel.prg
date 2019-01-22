@@ -106,25 +106,25 @@ RETURN
 #include <QMimeData>
 
 /*
-QStandardItemModel(QObject *parent = 0)
+QStandardItemModel(QObject *parent = nullptr)
 */
 void QStandardItemModel_new1 ()
 {
-  QStandardItemModel * o = new QStandardItemModel ( OPQOBJECT(1,0) );
+  QStandardItemModel * o = new QStandardItemModel ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QStandardItemModel(int rows, int columns, QObject *parent = 0)
+QStandardItemModel(int rows, int columns, QObject *parent = nullptr)
 */
 void QStandardItemModel_new2 ()
 {
-  QStandardItemModel * o = new QStandardItemModel ( PINT(1), PINT(2), OPQOBJECT(3,0) );
+  QStandardItemModel * o = new QStandardItemModel ( PINT(1), PINT(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QStandardItemModel(QObject *parent = 0)
-//[2]QStandardItemModel(int rows, int columns, QObject *parent = 0)
+//[1]QStandardItemModel(QObject *parent = nullptr)
+//[2]QStandardItemModel(int rows, int columns, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 {

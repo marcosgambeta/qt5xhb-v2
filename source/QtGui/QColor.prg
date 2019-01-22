@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
 }
 
 /*
-void getCmyk ( int * c, int * m, int * y, int * k, int * a = 0 )
+void getCmyk ( int * c, int * m, int * y, int * k, int * a = nullptr )
 */
 HB_FUNC_STATIC( QCOLOR_GETCMYK )
 {
@@ -541,7 +541,7 @@ hb_storni( par5, 5 );
 }
 
 /*
-void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
+void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = nullptr )
 */
 HB_FUNC_STATIC( QCOLOR_GETCMYKF )
 {
@@ -577,7 +577,7 @@ hb_stornd( par5, 5 );
 }
 
 /*
-void getHsl ( int * h, int * s, int * l, int * a = 0 ) const
+void getHsl ( int * h, int * s, int * l, int * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSL )
 {
@@ -611,7 +611,7 @@ hb_storni( par4, 4 );
 }
 
 /*
-void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
+void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSLF )
 {
@@ -645,7 +645,7 @@ hb_stornd( par4, 4 );
 }
 
 /*
-void getHsv ( int * h, int * s, int * v, int * a = 0 ) const
+void getHsv ( int * h, int * s, int * v, int * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSV )
 {
@@ -679,7 +679,7 @@ hb_storni( par4, 4 );
 }
 
 /*
-void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
+void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSVF )
 {
@@ -713,7 +713,7 @@ hb_stornd( par4, 4 );
 }
 
 /*
-void getRgb ( int * r, int * g, int * b, int * a = 0 ) const
+void getRgb ( int * r, int * g, int * b, int * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETRGB )
 {
@@ -747,7 +747,7 @@ hb_storni( par4, 4 );
 }
 
 /*
-void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
+void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETRGBF )
 {

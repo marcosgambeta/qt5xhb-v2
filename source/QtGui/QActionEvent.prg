@@ -53,13 +53,13 @@ RETURN
 #include <QAction>
 
 /*
-QActionEvent ( int type, QAction * action, QAction * before = 0 )
+QActionEvent ( int type, QAction * action, QAction * before = nullptr )
 */
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISQACTION(2) && (ISQACTION(3)||ISNIL(3)) )
   {
-    QActionEvent * o = new QActionEvent ( PINT(1), PQACTION(2), OPQACTION(3,0) );
+    QActionEvent * o = new QActionEvent ( PINT(1), PQACTION(2), OPQACTION(3,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

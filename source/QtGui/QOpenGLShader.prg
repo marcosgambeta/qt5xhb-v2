@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
+QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QOpenGLShader * o = new QOpenGLShader ( (QOpenGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
+    QOpenGLShader * o = new QOpenGLShader ( (QOpenGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_SHADERID )
 }
 
 /*
-static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = 0)
+static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLSHADER_HASOPENGLSHADERS )
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_HASOPENGLSHADERS )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOPENGLCONTEXT(2)||ISNIL(2)) )
   {
 #endif
-      RBOOL( QOpenGLShader::hasOpenGLShaders ( (QOpenGLShader::ShaderType) hb_parni(1), OPQOPENGLCONTEXT(2,0) ) );
+      RBOOL( QOpenGLShader::hasOpenGLShaders ( (QOpenGLShader::ShaderType) hb_parni(1), OPQOPENGLCONTEXT(2,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

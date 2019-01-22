@@ -59,13 +59,13 @@ RETURN
 #endif
 
 /*
-QOpenGLDebugLogger(QObject *parent = 0)
+QOpenGLDebugLogger(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLDebugLogger * o = new QOpenGLDebugLogger ( OPQOBJECT(1,0) );
+    QOpenGLDebugLogger * o = new QOpenGLDebugLogger ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

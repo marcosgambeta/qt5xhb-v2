@@ -237,7 +237,7 @@ void QFontMetricsF_boundingRect2 ()
 }
 
 /*
-QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 */
 void QFontMetricsF_boundingRect3 ()
 {
@@ -254,7 +254,7 @@ void QFontMetricsF_boundingRect3 ()
 
 //[1]QRectF boundingRect ( const QString & text ) const
 //[2]QRectF boundingRect ( QChar ch ) const
-//[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+//[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 
 HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
 }
 
 /*
-QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
 {

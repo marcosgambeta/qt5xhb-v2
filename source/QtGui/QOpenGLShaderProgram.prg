@@ -68,13 +68,13 @@ RETURN
 #endif
 
 /*
-QOpenGLShaderProgram(QObject *parent = 0)
+QOpenGLShaderProgram(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLShaderProgram * o = new QOpenGLShaderProgram ( OPQOBJECT(1,0) );
+    QOpenGLShaderProgram * o = new QOpenGLShaderProgram ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PATCHVERTEXCOUNT )
 }
 
 /*
-static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
+static bool hasOpenGLShaderPrograms(QOpenGLContext *context = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
     if( ISBETWEEN(0,1) && (ISQOPENGLCONTEXT(1)||ISNIL(1)) )
   {
 #endif
-      RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( OPQOPENGLCONTEXT(1,0) ) );
+      RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( OPQOPENGLCONTEXT(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

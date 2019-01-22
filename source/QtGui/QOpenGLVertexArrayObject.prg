@@ -54,13 +54,13 @@ RETURN
 #endif
 
 /*
-QOpenGLVertexArrayObject(QObject* parent = 0)
+QOpenGLVertexArrayObject(QObject* parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLVertexArrayObject * o = new QOpenGLVertexArrayObject ( OPQOBJECT(1,0) );
+    QOpenGLVertexArrayObject * o = new QOpenGLVertexArrayObject ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

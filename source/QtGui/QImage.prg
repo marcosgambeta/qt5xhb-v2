@@ -184,20 +184,20 @@ QImage ( const char * const[] xpm )
 */
 
 /*
-QImage ( const QString & fileName, const char * format = 0 )
+QImage ( const QString & fileName, const char * format = nullptr )
 */
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
-  QImage * o = new QImage ( PQSTRING(1), OPCONSTCHAR(2,0) );
+  QImage * o = new QImage ( PQSTRING(1), OPCONSTCHAR(2,nullptr) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QImage ( const char * fileName, const char * format = 0 )
+QImage ( const char * fileName, const char * format = nullptr )
 */
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
-  QImage * o = new QImage ( PCONSTCHAR(1), OPCONSTCHAR(2,0) );
+  QImage * o = new QImage ( PCONSTCHAR(1), OPCONSTCHAR(2,nullptr) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -218,8 +218,8 @@ void QImage_new11 ()
 //[06]QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
 //[07]QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
 //[08]QImage ( const char * const[] xpm )
-//[09]QImage ( const QString & fileName, const char * format = 0 )
-//[10]QImage ( const char * fileName, const char * format = 0 )
+//[09]QImage ( const QString & fileName, const char * format = nullptr )
+//[10]QImage ( const char * fileName, const char * format = nullptr )
 //[11]QImage ( const QImage & image )
 
 HB_FUNC_STATIC( QIMAGE_NEW )
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QIMAGE_ISNULL )
 }
 
 /*
-bool load ( const QString & fileName, const char * format = 0 )
+bool load ( const QString & fileName, const char * format = nullptr )
 */
 void QImage_load1 ()
 {
@@ -943,7 +943,7 @@ void QImage_load1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+      RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
@@ -960,7 +960,7 @@ void QImage_load2 ()
   }
 }
 
-//[1]bool load ( const QString & fileName, const char * format = 0 )
+//[1]bool load ( const QString & fileName, const char * format = nullptr )
 //[2]bool load ( QIODevice * device, const char * format )
 
 HB_FUNC_STATIC( QIMAGE_LOAD )
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 }
 
 /*
-bool loadFromData ( const uchar * data, int len, const char * format = 0 )
+bool loadFromData ( const uchar * data, int len, const char * format = nullptr )
 */
 void QImage_loadFromData1 ()
 {
@@ -988,12 +988,12 @@ void QImage_loadFromData1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->loadFromData ( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3,0) ) );
+      RBOOL( obj->loadFromData ( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3,nullptr) ) );
   }
 }
 
 /*
-bool loadFromData ( const QByteArray & data, const char * format = 0 )
+bool loadFromData ( const QByteArray & data, const char * format = nullptr )
 */
 void QImage_loadFromData2 ()
 {
@@ -1001,12 +1001,12 @@ void QImage_loadFromData2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0) ) );
+      RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
-//[1]bool loadFromData(const uchar *data, int len, const char *format = 0)
-//[2]bool loadFromData(const QByteArray &data, const char *format = 0)
+//[1]bool loadFromData(const uchar *data, int len, const char *format = nullptr)
+//[2]bool loadFromData(const QByteArray &data, const char *format = nullptr)
 
 HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
 }
 
 /*
-bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
+bool save ( const QString & fileName, const char * format = nullptr, int quality = -1 ) const
 */
 void QImage_save1 ()
 {
@@ -1223,12 +1223,12 @@ void QImage_save1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+      RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,nullptr), OPINT(3,-1) ) );
   }
 }
 
 /*
-bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
+bool save ( QIODevice * device, const char * format = nullptr, int quality = -1 ) const
 */
 void QImage_save2 ()
 {
@@ -1236,12 +1236,12 @@ void QImage_save2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+      RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr), OPINT(3,-1) ) );
   }
 }
 
-//[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
-//[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
+//[1]bool save ( const QString & fileName, const char * format = nullptr, int quality = -1 ) const
+//[2]bool save ( QIODevice * device, const char * format = nullptr, int quality = -1 ) const
 
 HB_FUNC_STATIC( QIMAGE_SAVE )
 {
@@ -1792,27 +1792,27 @@ HB_FUNC_STATIC( QIMAGE_WIDTH )
 }
 
 /*
-static QImage fromData ( const uchar * data, int size, const char * format = 0 )
+static QImage fromData ( const uchar * data, int size, const char * format = nullptr )
 */
 void QImage_fromData1 ()
 {
 
-      QImage * ptr = new QImage( QImage::fromData ( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3,0) ) );
+      QImage * ptr = new QImage( QImage::fromData ( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3,nullptr) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 }
 
 /*
-static QImage fromData ( const QByteArray & data, const char * format = 0 )
+static QImage fromData ( const QByteArray & data, const char * format = nullptr )
 */
 void QImage_fromData2 ()
 {
 
-      QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0) ) );
+      QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,nullptr) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 }
 
-//[1]static QImage fromData(const uchar *data, int size, const char *format = 0)
-//[2]static QImage fromData(const QByteArray &data, const char *format = 0)
+//[1]static QImage fromData(const uchar *data, int size, const char *format = nullptr)
+//[2]static QImage fromData(const QByteArray &data, const char *format = nullptr)
 
 HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {

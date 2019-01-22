@@ -141,25 +141,25 @@ RETURN
 #include <QAbstractTextDocumentLayout>
 
 /*
-QTextDocument(QObject *parent = 0)
+QTextDocument(QObject *parent = nullptr)
 */
 void QTextDocument_new1 ()
 {
-  QTextDocument * o = new QTextDocument ( OPQOBJECT(1,0) );
+  QTextDocument * o = new QTextDocument ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QTextDocument(const QString &text, QObject *parent = 0)
+QTextDocument(const QString &text, QObject *parent = nullptr)
 */
 void QTextDocument_new2 ()
 {
-  QTextDocument * o = new QTextDocument ( PQSTRING(1), OPQOBJECT(2,0) );
+  QTextDocument * o = new QTextDocument ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QTextDocument(QObject *parent = 0)
-//[2]QTextDocument(const QString &text, QObject *parent = 0)
+//[1]QTextDocument(QObject *parent = nullptr)
+//[2]QTextDocument(const QString &text, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
 }
 
 /*
-QTextDocument *clone(QObject *parent = 0) const
+QTextDocument *clone(QObject *parent = nullptr) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      QTextDocument * ptr = obj->clone ( OPQOBJECT(1,0) );
+      QTextDocument * ptr = obj->clone ( OPQOBJECT(1,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

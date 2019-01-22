@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-explicit QOpenGLTimerQuery(QObject *parent = 0)
+explicit QOpenGLTimerQuery(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLTimerQuery * o = new QOpenGLTimerQuery ( OPQOBJECT(1,0) );
+    QOpenGLTimerQuery * o = new QOpenGLTimerQuery ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

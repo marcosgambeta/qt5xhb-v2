@@ -58,25 +58,25 @@ RETURN
 #endif
 
 /*
-QDoubleValidator ( QObject * parent = 0 )
+QDoubleValidator ( QObject * parent = nullptr )
 */
 void QDoubleValidator_new1 ()
 {
-  QDoubleValidator * o = new QDoubleValidator ( OPQOBJECT(1,0) );
+  QDoubleValidator * o = new QDoubleValidator ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
+QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = nullptr )
 */
 void QDoubleValidator_new2 ()
 {
-  QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
+  QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QDoubleValidator ( QObject * parent = 0 )
-//[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = 0 )
+//[1]QDoubleValidator ( QObject * parent = nullptr )
+//[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {

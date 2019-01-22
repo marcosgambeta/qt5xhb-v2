@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
 }
 
 /*
-void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = 0) const
+void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = nullptr) const
 */
 
 HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
