@@ -30,8 +30,8 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
-$virtualMethod=|QWidget *|load|QIODevice *,QWidget *=0
+$prototype=virtual QWidget * load ( QIODevice * device, QWidget * parent = nullptr )
+$virtualMethod=|QWidget *|load|QIODevice *,QWidget *=nullptr
 
 $prototype=virtual void save ( QIODevice * device, QWidget * widget )
 $virtualMethod=|void|save|QIODevice *,QWidget *

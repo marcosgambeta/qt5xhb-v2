@@ -32,8 +32,8 @@ $includes
 #include <QDesignerPropertyEditorInterface>
 #include <QDesignerWidgetBoxInterface>
 
-$prototype=QDesignerFormEditorInterface ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=QDesignerFormEditorInterface ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

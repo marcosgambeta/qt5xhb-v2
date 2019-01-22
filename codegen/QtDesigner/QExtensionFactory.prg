@@ -27,8 +27,8 @@ $includes
 
 #include <QExtensionManager>
 
-$prototype=QExtensionFactory ( QExtensionManager * parent = 0 )
-$constructor=|new|QExtensionManager *=0
+$prototype=QExtensionFactory ( QExtensionManager * parent = nullptr )
+$constructor=|new|QExtensionManager *=nullptr
 
 $deleteMethod
 
