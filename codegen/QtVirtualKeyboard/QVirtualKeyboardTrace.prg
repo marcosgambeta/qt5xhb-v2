@@ -28,7 +28,7 @@ $destructor
 $includes
 
 $prototype=explicit QVirtualKeyboardTrace(QObject *parent = nullptr)
-$constructor=|new|QObject *=0
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QVirtualKeyboardTrace()
 $deleteMethod
