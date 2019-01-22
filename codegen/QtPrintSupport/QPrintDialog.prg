@@ -29,14 +29,14 @@ $includes
 
 #include <QPrinter>
 
-$prototype=QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
-$internalConstructor=|new1|QPrinter *,QWidget *=0
+$prototype=QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
+$internalConstructor=|new1|QPrinter *,QWidget *=nullptr
 
-$prototype=QPrintDialog ( QWidget * parent = 0 )
-$internalConstructor=|new2|QWidget *=0
+$prototype=QPrintDialog ( QWidget * parent = nullptr )
+$internalConstructor=|new2|QWidget *=nullptr
 
-//[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
-//[2]QPrintDialog ( QWidget * parent = 0 )
+//[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
+//[2]QPrintDialog ( QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {

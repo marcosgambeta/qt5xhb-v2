@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
-$internalConstructor=|new1|QPrinter *,QWidget *=0
+$prototype=QPageSetupDialog ( QPrinter * printer, QWidget * parent = nullptr )
+$internalConstructor=|new1|QPrinter *,QWidget *=nullptr
 
-$prototype=QPageSetupDialog ( QWidget * parent = 0 )
-$internalConstructor=|new2|QWidget *=0
+$prototype=QPageSetupDialog ( QWidget * parent = nullptr )
+$internalConstructor=|new2|QWidget *=nullptr
 
-//[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
-//[2]QPageSetupDialog(QWidget *parent = 0)
+//[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
+//[2]QPageSetupDialog(QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
