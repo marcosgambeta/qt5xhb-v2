@@ -29,8 +29,8 @@ $includes
 
 #include <QInAppTransaction>
 
-$prototype=explicit QInAppStore(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$prototype=explicit QInAppStore(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QInAppStore()
 $deleteMethod

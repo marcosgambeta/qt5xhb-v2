@@ -27,7 +27,7 @@ $includes
 
 #include <QInAppProduct>
 
-$prototype=explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QObject *parent = nullptr) [protected]
 
 $prototype=~QInAppTransaction()
 $deleteMethod
