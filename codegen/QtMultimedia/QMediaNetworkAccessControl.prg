@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QMediaNetworkAccessControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QMediaNetworkAccessControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QMediaNetworkAccessControl()
 $deleteMethod

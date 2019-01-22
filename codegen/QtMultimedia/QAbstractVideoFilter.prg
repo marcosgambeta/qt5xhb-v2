@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,5,0
 
-$prototype=explicit QAbstractVideoFilter(QObject *parent = Q_NULLPTR) (abstract)
-%% $constructor=5,5,0|new|QObject *=0
+$prototype=explicit QAbstractVideoFilter(QObject *parent = nullptr) (abstract)
+%% $constructor=5,5,0|new|QObject *=nullptr
 
 $prototype=~QAbstractVideoFilter()
 $deleteMethod=5,5,0

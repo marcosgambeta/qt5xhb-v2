@@ -29,9 +29,9 @@ $includes
 
 #include <QMediaPlaylist>
 
-$prototype=explicit QMediaPlayer(QObject *parent = Q_NULLPTR, Flags flags = Flags())
-%% TODO: 'Q_NULLPTR' and 'Flags flags = Flags()'
-$constructor=|new|QObject *=0,QMediaPlayer::Flags=0
+$prototype=explicit QMediaPlayer(QObject *parent = nullptr, Flags flags = Flags())
+%% TODO: 'Flags flags = Flags()'
+$constructor=|new|QObject *=nullptr,QMediaPlayer::Flags=0
 
 $prototype=~QMediaPlayer()
 $deleteMethod
@@ -43,8 +43,8 @@ $deleteMethod
 $prototype=QMediaContent media() const
 $method=|QMediaContent|media|
 
-$prototype=void setMedia(const QMediaContent &media, QIODevice *stream = Q_NULLPTR)
-$slotMethod=|void|setMedia|const QMediaContent &,QIODevice *=0
+$prototype=void setMedia(const QMediaContent &media, QIODevice *stream = nullptr)
+$slotMethod=|void|setMedia|const QMediaContent &,QIODevice *=nullptr
 
 %%
 %% Q_PROPERTY(QMediaContent currentMedia READ currentMedia NOTIFY currentMediaChanged)

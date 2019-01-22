@@ -27,14 +27,14 @@ $destructor
 
 $includes
 
-$prototype=explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
+$prototype=explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+$internalConstructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=nullptr
 
-$prototype=explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
+$prototype=explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+$internalConstructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=nullptr
 
-//[1]explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
-//[2]explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
+//[1]explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+//[2]explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 {

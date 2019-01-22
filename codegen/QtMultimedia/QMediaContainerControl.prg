@@ -27,7 +27,7 @@ $includes
 
 #include <QStringList>
 
-$prototype=explicit QMediaContainerControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QMediaContainerControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QMediaContainerControl()
 $deleteMethod

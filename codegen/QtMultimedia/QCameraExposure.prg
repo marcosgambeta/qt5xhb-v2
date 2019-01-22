@@ -29,7 +29,7 @@ $includes
 
 #include <QPointF>
 
-$prototype=explicit QCameraExposure(QCamera *parent = Q_NULLPTR) [private]
+$prototype=explicit QCameraExposure(QCamera *parent = nullptr) [private]
 
 $prototype=virtual ~QCameraExposure() [private]
 
@@ -132,14 +132,14 @@ $method=|void|setSpotMeteringPoint|const QPointF &
 $prototype=QPointF spotMeteringPoint() const
 $method=|QPointF|spotMeteringPoint|
 
-$prototype=QList<qreal> supportedApertures(bool * continuous = Q_NULLPTR) const
-$method=|QList<qreal>|supportedApertures|bool *=0
+$prototype=QList<qreal> supportedApertures(bool * continuous = nullptr) const
+$method=|QList<qreal>|supportedApertures|bool *=nullptr
 
-$prototype=QList<int> supportedIsoSensitivities(bool * continuous = Q_NULLPTR) const
-$method=|QList<int>|supportedIsoSensitivities|bool *=0
+$prototype=QList<int> supportedIsoSensitivities(bool * continuous = nullptr) const
+$method=|QList<int>|supportedIsoSensitivities|bool *=nullptr
 
-$prototype=QList<qreal> supportedShutterSpeeds(bool * continuous = Q_NULLPTR) const
-$method=|QList<qreal>|supportedShutterSpeeds|bool *=0
+$prototype=QList<qreal> supportedShutterSpeeds(bool * continuous = nullptr) const
+$method=|QList<qreal>|supportedShutterSpeeds|bool *=nullptr
 
 $prototype=void setAutoAperture()
 $slotMethod=|void|setAutoAperture|

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QMediaPlaylist(QObject * parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QMediaPlaylist(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=virtual ~QMediaPlaylist()
 $deleteMethod
@@ -131,18 +131,18 @@ $method=|bool|isEmpty|
 $prototype=bool isReadOnly() const
 $method=|bool|isReadOnly|
 
-$prototype=void load(const QNetworkRequest & request, const char * format = Q_NULLPTR)
-$internalMethod=|void|load,load1|const QNetworkRequest &,const char *=0
+$prototype=void load(const QNetworkRequest & request, const char * format = nullptr)
+$internalMethod=|void|load,load1|const QNetworkRequest &,const char *=nullptr
 
-$prototype=void load(const QUrl & location, const char * format = Q_NULLPTR)
-$internalMethod=|void|load,load2|const QUrl &,const char *=0
+$prototype=void load(const QUrl & location, const char * format = nullptr)
+$internalMethod=|void|load,load2|const QUrl &,const char *=nullptr
 
-$prototype=void load(QIODevice * device, const char * format = Q_NULLPTR)
-$internalMethod=|void|load,load3|QIODevice *,const char *=0
+$prototype=void load(QIODevice * device, const char * format = nullptr)
+$internalMethod=|void|load,load3|QIODevice *,const char *=nullptr
 
-//[1]void load(const QNetworkRequest & request, const char * format = Q_NULLPTR)
-//[2]void load(const QUrl & location, const char * format = Q_NULLPTR)
-//[3]void load(QIODevice * device, const char * format = Q_NULLPTR)
+//[1]void load(const QNetworkRequest & request, const char * format = nullptr)
+//[2]void load(const QUrl & location, const char * format = nullptr)
+//[3]void load(QIODevice * device, const char * format = nullptr)
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
 {
@@ -203,13 +203,13 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
 }
 $addMethod=removeMedia
 
-$prototype=bool save(const QUrl & location, const char * format = Q_NULLPTR)
-$internalMethod=|bool|save,save1|const QUrl &,const char *=0
+$prototype=bool save(const QUrl & location, const char * format = nullptr)
+$internalMethod=|bool|save,save1|const QUrl &,const char *=nullptr
 
 $prototype=bool save(QIODevice * device, const char * format)
 $internalMethod=|bool|save,save2|QIODevice *,const char *
 
-//[1]bool save(const QUrl & location, const char * format = Q_NULLPTR)
+//[1]bool save(const QUrl & location, const char * format = nullptr)
 //[2]bool save(QIODevice * device, const char * format)
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )

@@ -29,7 +29,7 @@ $includes
 
 #include <QVideoSurfaceFormat>
 
-$prototype=explicit QAbstractVideoSurface(QObject *parent = Q_NULLPTR)
+$prototype=explicit QAbstractVideoSurface(QObject *parent = nullptr)
 
 $prototype=~QAbstractVideoSurface()
 $deleteMethod

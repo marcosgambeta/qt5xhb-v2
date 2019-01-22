@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QVideoDeviceSelectorControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QVideoDeviceSelectorControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QVideoDeviceSelectorControl()
 $deleteMethod

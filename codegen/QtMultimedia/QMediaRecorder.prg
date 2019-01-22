@@ -29,10 +29,10 @@ $includes
 
 #include <QUrl>
 
-$prototype=explicit QMediaRecorder(QMediaObject * mediaObject, QObject * parent = Q_NULLPTR)
-$constructor=|new|QMediaObject *,QObject *=0
+$prototype=explicit QMediaRecorder(QMediaObject * mediaObject, QObject * parent = nullptr)
+$constructor=|new|QMediaObject *,QObject *=nullptr
 
-$prototype=QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *parent = Q_NULLPTR) [protected]
+$prototype=QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *parent = nullptr) [protected]
 
 $prototype=~QMediaRecorder()
 $deleteMethod
@@ -161,17 +161,17 @@ $method=|void|setVideoSettings|const QVideoEncoderSettings &
 $prototype=QStringList supportedAudioCodecs() const
 $method=|QStringList|supportedAudioCodecs|
 
-$prototype=QList<int> supportedAudioSampleRates(const QAudioEncoderSettings & settings = QAudioEncoderSettings(), bool * continuous = Q_NULLPTR) const
-$method=|QList<int>|supportedAudioSampleRates|const QAudioEncoderSettings &=QAudioEncoderSettings(),bool *=0
+$prototype=QList<int> supportedAudioSampleRates(const QAudioEncoderSettings & settings = QAudioEncoderSettings(), bool * continuous = nullptr) const
+$method=|QList<int>|supportedAudioSampleRates|const QAudioEncoderSettings &=QAudioEncoderSettings(),bool *=nullptr
 
 $prototype=QStringList supportedContainers() const
 $method=|QStringList|supportedContainers|
 
-$prototype=QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = Q_NULLPTR) const
-$method=|QList<qreal>|supportedFrameRates|const QVideoEncoderSettings &=QVideoEncoderSettings(),bool *=0
+$prototype=QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = nullptr) const
+$method=|QList<qreal>|supportedFrameRates|const QVideoEncoderSettings &=QVideoEncoderSettings(),bool *=nullptr
 
-$prototype=QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = Q_NULLPTR) const
-$method=|QList<QSize>|supportedResolutions|const QVideoEncoderSettings &=QVideoEncoderSettings(),bool *=0
+$prototype=QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = nullptr) const
+$method=|QList<QSize>|supportedResolutions|const QVideoEncoderSettings &=QVideoEncoderSettings(),bool *=nullptr
 
 $prototype=QStringList supportedVideoCodecs() const
 $method=|QStringList|supportedVideoCodecs|

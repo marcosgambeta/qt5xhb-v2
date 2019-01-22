@@ -29,7 +29,7 @@ $includes
 
 #include <QAudioBuffer>
 
-$prototype=explicit QMediaAudioProbeControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QMediaAudioProbeControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QMediaAudioProbeControl()
 $deleteMethod

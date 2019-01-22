@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QCameraViewfinderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QCameraViewfinderSettingsControl(QObject *parent = nullptr) [protected]
 
 $prototype=~QCameraViewfinderSettingsControl()
 $deleteMethod

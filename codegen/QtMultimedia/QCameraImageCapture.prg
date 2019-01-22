@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = Q_NULLPTR)
-$constructor=|new|QMediaObject *,QObject *=0
+$prototype=explicit QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = nullptr)
+$constructor=|new|QMediaObject *,QObject *=nullptr
 
 $prototype=~QCameraImageCapture()
 $deleteMethod
@@ -91,8 +91,8 @@ $method=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
 $prototype=QStringList supportedImageCodecs() const
 $method=|QStringList|supportedImageCodecs|
 
-$prototype=QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = Q_NULLPTR) const
-$method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &=QImageEncoderSettings(),bool *=0
+$prototype=QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = nullptr) const
+$method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &=QImageEncoderSettings(),bool *=nullptr
 
 $prototype=void cancelCapture()
 $slotMethod=|void|cancelCapture|

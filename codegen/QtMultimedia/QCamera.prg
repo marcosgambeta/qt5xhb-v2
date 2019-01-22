@@ -27,22 +27,22 @@ $destructor
 
 $includes
 
-$prototype=explicit QCamera(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$prototype=explicit QCamera(QObject *parent = nullptr)
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|const QByteArray &,QObject *=Q_NULLPTR
+$prototype=explicit QCamera(const QByteArray& deviceName, QObject *parent = nullptr)
+$internalConstructor=|new2|const QByteArray &,QObject *=nullptr
 
-$prototype=explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
-$internalConstructor=5,3,0|new3|const QCameraInfo &,QObject *=Q_NULLPTR
+$prototype=explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = nullptr)
+$internalConstructor=5,3,0|new3|const QCameraInfo &,QObject *=nullptr
 
-$prototype=explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
-$internalConstructor=5,3,0|new4|QCamera::Position,QObject *=Q_NULLPTR
+$prototype=explicit QCamera(QCamera::Position position, QObject *parent = nullptr)
+$internalConstructor=5,3,0|new4|QCamera::Position,QObject *=nullptr
 
-//[1]explicit QCamera(QObject *parent = Q_NULLPTR)
-//[2]explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
-//[3]explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
-//[4]explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
+//[1]explicit QCamera(QObject *parent = nullptr)
+//[2]explicit QCamera(const QByteArray& deviceName, QObject *parent = nullptr)
+//[3]explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = nullptr)
+//[4]explicit QCamera(QCamera::Position position, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCAMERA_NEW )
 {

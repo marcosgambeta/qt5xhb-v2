@@ -29,7 +29,7 @@ $includes
 
 #include <QVideoFrame>
 
-$prototype=explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QMediaVideoProbeControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QMediaVideoProbeControl()
 $deleteMethod

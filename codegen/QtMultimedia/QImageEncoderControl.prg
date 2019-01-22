@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QImageEncoderControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QImageEncoderControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QImageEncoderControl()
 $deleteMethod
@@ -36,8 +36,8 @@ $virtualMethod=|QStringList|supportedImageCodecs|
 $prototype=virtual QString imageCodecDescription(const QString &codecName) const = 0
 $virtualMethod=|QString|imageCodecDescription|const QString &
 
-$prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = Q_NULLPTR) const = 0
-$virtualMethod=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=0
+$prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = nullptr) const = 0
+$virtualMethod=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=nullptr
 
 $prototype=virtual QImageEncoderSettings imageSettings() const = 0
 $virtualMethod=|QImageEncoderSettings|imageSettings|

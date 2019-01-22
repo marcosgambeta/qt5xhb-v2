@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QAudioOutputSelectorControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QAudioOutputSelectorControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAudioOutputSelectorControl()
 $deleteMethod

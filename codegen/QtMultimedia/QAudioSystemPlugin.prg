@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QAudioSystemPlugin(QObject *parent = Q_NULLPTR) (abstract)
-%% $constructor=|new|QObject *=Q_NULLPTR
+$prototype=explicit QAudioSystemPlugin(QObject *parent = nullptr) (abstract)
+%% $constructor=|new|QObject *=nullptr
 
 $prototype=~QAudioSystemPlugin()
 $deleteMethod

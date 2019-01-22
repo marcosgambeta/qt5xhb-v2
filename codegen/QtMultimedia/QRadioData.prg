@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QRadioData(QMediaObject *mediaObject, QObject *parent = Q_NULLPTR)
-$constructor=|new|QMediaObject *,QObject *=0
+$prototype=explicit QRadioData(QMediaObject *mediaObject, QObject *parent = nullptr)
+$constructor=|new|QMediaObject *,QObject *=nullptr
 
 $prototype=~QRadioData()
 $deleteMethod

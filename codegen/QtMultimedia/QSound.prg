@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QSound(const QString& filename, QObject* parent = Q_NULLPTR)
-$constructor=|new|const QString &,QObject *=0
+$prototype=explicit QSound(const QString& filename, QObject* parent = nullptr)
+$constructor=|new|const QString &,QObject *=nullptr
 
 $prototype=~QSound()
 $deleteMethod

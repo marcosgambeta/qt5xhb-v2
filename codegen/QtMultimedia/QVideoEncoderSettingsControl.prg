@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QVideoEncoderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QVideoEncoderSettingsControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QVideoEncoderSettingsControl()
 $deleteMethod
@@ -33,11 +33,11 @@ $deleteMethod
 $prototype=virtual void setVideoSettings(const QVideoEncoderSettings & settings) = 0
 $virtualMethod=|void|setVideoSettings|const QVideoEncoderSettings &
 
-$prototype=virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
-$virtualMethod=|QList<qreal>|supportedFrameRates|const QVideoEncoderSettings &,bool *=0
+$prototype=virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings, bool * continuous = nullptr) const = 0
+$virtualMethod=|QList<qreal>|supportedFrameRates|const QVideoEncoderSettings &,bool *=nullptr
 
-$prototype=virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
-$virtualMethod=|QList<QSize>|supportedResolutions|const QVideoEncoderSettings &,bool *=0
+$prototype=virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings, bool * continuous = nullptr) const = 0
+$virtualMethod=|QList<QSize>|supportedResolutions|const QVideoEncoderSettings &,bool *=nullptr
 
 $prototype=virtual QStringList supportedVideoCodecs() const = 0
 $virtualMethod=|QStringList|supportedVideoCodecs|

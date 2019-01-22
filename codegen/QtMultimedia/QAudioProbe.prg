@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QAudioProbe(QObject * parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QAudioProbe(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QAudioProbe()
 $deleteMethod

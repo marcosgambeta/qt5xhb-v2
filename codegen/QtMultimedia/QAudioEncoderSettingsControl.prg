@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QAudioEncoderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QAudioEncoderSettingsControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAudioEncoderSettingsControl()
 $deleteMethod
@@ -42,7 +42,7 @@ $virtualMethod=|void|setAudioSettings|const QAudioEncoderSettings &
 $prototype=virtual QStringList supportedAudioCodecs() const = 0
 $virtualMethod=|QStringList|supportedAudioCodecs|
 
-$prototype=virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
-$virtualMethod=|QList<int>|supportedSampleRates|const QAudioEncoderSettings &,bool *=0
+$prototype=virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = nullptr) const = 0
+$virtualMethod=|QList<int>|supportedSampleRates|const QAudioEncoderSettings &,bool *=nullptr
 
 #pragma ENDDUMP

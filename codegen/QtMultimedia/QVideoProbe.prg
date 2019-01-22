@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QVideoProbe(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QVideoProbe(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QVideoProbe()
 $deleteMethod

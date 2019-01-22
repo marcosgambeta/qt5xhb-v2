@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QMediaGaplessPlaybackControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QMediaGaplessPlaybackControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QMediaGaplessPlaybackControl()
 $deleteMethod

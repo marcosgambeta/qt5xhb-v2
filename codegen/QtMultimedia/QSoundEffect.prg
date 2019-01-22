@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QSoundEffect(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QSoundEffect(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QSoundEffect()
 $deleteMethod

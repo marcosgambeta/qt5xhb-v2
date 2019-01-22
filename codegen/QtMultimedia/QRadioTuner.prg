@@ -29,8 +29,8 @@ $includes
 
 #include <QRadioData>
 
-$prototype=explicit QRadioTuner(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=0
+$prototype=explicit QRadioTuner(QObject *parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QRadioTuner()
 $deleteMethod

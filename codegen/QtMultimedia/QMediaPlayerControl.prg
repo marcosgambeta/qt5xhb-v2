@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QMediaPlayerControl(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QMediaPlayerControl(QObject *parent = nullptr) [protected]
 
 $prototype=~QMediaPlayerControl()
 $deleteMethod
