@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,9,0
 
-$prototype=explicit QQuickWebEngineScript(QObject *parent = Q_NULLPTR)
-$constructor=5,9,0|new|QObject *=Q_NULLPTR
+$prototype=explicit QQuickWebEngineScript(QObject *parent = nullptr)
+$constructor=5,9,0|new|QObject *=nullptr
 
 $prototype=~QQuickWebEngineScript()
 $deleteMethod=5,9,0

@@ -34,10 +34,10 @@ $includes=5,6,0
 #include <QWebEngineUrlSchemeHandler>
 #endif
 
-$prototype=QQuickWebEngineProfile(QObject *parent = Q_NULLPTR)
-$constructor=5,6,0|new|QObject *=Q_NULLPTR
+$prototype=QQuickWebEngineProfile(QObject *parent = nullptr)
+$constructor=5,6,0|new|QObject *=nullptr
 
-$prototype=QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = Q_NULLPTR) [private]
+$prototype=QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = nullptr) [private]
 
 $prototype=~QQuickWebEngineProfile()
 $deleteMethod=5,6,0
