@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QVideoWidget(QWidget *parent = 0)
-$constructor=|new|QWidget *=0
+$prototype=QVideoWidget(QWidget *parent = nullptr)
+$constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 

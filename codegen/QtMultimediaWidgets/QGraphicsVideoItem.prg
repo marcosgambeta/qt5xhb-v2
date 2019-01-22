@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-$prototype=QGraphicsVideoItem(QGraphicsItem *parent = 0)
-$constructor=|new|QGraphicsItem *=0
+$prototype=QGraphicsVideoItem(QGraphicsItem *parent = nullptr)
+$constructor=|new|QGraphicsItem *=nullptr
 
 $deleteMethod
 
@@ -59,8 +59,8 @@ $method=|QSizeF|nativeSize|
 $prototype=QRectF boundingRect() const
 $method=|QRectF|boundingRect|
 
-$prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
-$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
+$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 %%
 %% SIGNALS
