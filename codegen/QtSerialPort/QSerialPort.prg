@@ -27,18 +27,18 @@ $destructor
 
 $includes=5,1,0
 
-$prototype=QSerialPort(QObject *parent = 0)
-$internalConstructor=5,1,0|new1|QObject *=0
+$prototype=QSerialPort(QObject *parent = nullptr)
+$internalConstructor=5,1,0|new1|QObject *=nullptr
 
-$prototype=QSerialPort(const QString &name, QObject *parent = 0)
-$internalConstructor=5,1,0|new2|const QString &,QObject *=0
+$prototype=QSerialPort(const QString &name, QObject *parent = nullptr)
+$internalConstructor=5,1,0|new2|const QString &,QObject *=nullptr
 
-$prototype=QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
-$internalConstructor=5,1,0|new3|const QSerialPortInfo &,QObject *=0
+$prototype=QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
+$internalConstructor=5,1,0|new3|const QSerialPortInfo &,QObject *=nullptr
 
-//[1]QSerialPort(QObject *parent = 0)
-//[2]QSerialPort(const QString &name, QObject *parent = 0)
-//[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
+//[1]QSerialPort(QObject *parent = nullptr)
+//[2]QSerialPort(const QString &name, QObject *parent = nullptr)
+//[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSERIALPORT_NEW )
 {
