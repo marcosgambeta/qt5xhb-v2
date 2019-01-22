@@ -27,22 +27,22 @@ $destructor
 
 $includes
 
-$prototype=QSvgRenderer ( QObject * parent = 0 )
-$internalConstructor=|new1|QObject *=0
+$prototype=QSvgRenderer ( QObject * parent = nullptr )
+$internalConstructor=|new1|QObject *=nullptr
 
-$prototype=QSvgRenderer ( const QString & filename, QObject * parent = 0 )
-$internalConstructor=|new2|const QString &,QObject *=0
+$prototype=QSvgRenderer ( const QString & filename, QObject * parent = nullptr )
+$internalConstructor=|new2|const QString &,QObject *=nullptr
 
-$prototype=QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
-$internalConstructor=|new3|const QByteArray &,QObject *=0
+$prototype=QSvgRenderer ( const QByteArray & contents, QObject * parent = nullptr )
+$internalConstructor=|new3|const QByteArray &,QObject *=nullptr
 
-$prototype=QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
-$internalConstructor=|new4|QXmlStreamReader *,QObject *=0
+$prototype=QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = nullptr )
+$internalConstructor=|new4|QXmlStreamReader *,QObject *=nullptr
 
-//[1]QSvgRenderer ( QObject * parent = 0 )
-//[2]QSvgRenderer ( const QString & filename, QObject * parent = 0 )
-//[3]QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
-//[4]QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
+//[1]QSvgRenderer ( QObject * parent = nullptr )
+//[2]QSvgRenderer ( const QString & filename, QObject * parent = nullptr )
+//[3]QSvgRenderer ( const QByteArray & contents, QObject * parent = nullptr )
+//[4]QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QSVGRENDERER_NEW )
 {

@@ -27,11 +27,11 @@ $includes
 
 #include <QSvgRenderer>
 
-$prototype=QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
-$internalConstructor=|new1|QGraphicsItem *=0
+$prototype=QGraphicsSvgItem ( QGraphicsItem * parent = nullptr )
+$internalConstructor=|new1|QGraphicsItem *=nullptr
 
-$prototype=QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
-$internalConstructor=|new2|const QString &,QGraphicsItem *=0
+$prototype=QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = nullptr )
+$internalConstructor=|new2|const QString &,QGraphicsItem *=nullptr
 
 //[1]QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
@@ -75,8 +75,8 @@ $method=|void|setSharedRenderer|QSvgRenderer *
 $prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=virtual int type () const
 $virtualMethod=|int|type|

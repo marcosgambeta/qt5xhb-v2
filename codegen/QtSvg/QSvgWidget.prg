@@ -27,14 +27,14 @@ $includes
 
 #include <QSvgRenderer>
 
-$prototype=QSvgWidget ( QWidget * parent = 0 )
-$internalConstructor=|new1|QWidget *=0
+$prototype=QSvgWidget ( QWidget * parent = nullptr )
+$internalConstructor=|new1|QWidget *=nullptr
 
-$prototype=QSvgWidget ( const QString & file, QWidget * parent = 0 )
-$internalConstructor=|new2|const QString &,QWidget *=0
+$prototype=QSvgWidget ( const QString & file, QWidget * parent = nullptr )
+$internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]QSvgWidget ( QWidget * parent = 0 )
-//[2]QSvgWidget ( const QString & file, QWidget * parent = 0 )
+//[1]QSvgWidget ( QWidget * parent = nullptr )
+//[2]QSvgWidget ( const QString & file, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
