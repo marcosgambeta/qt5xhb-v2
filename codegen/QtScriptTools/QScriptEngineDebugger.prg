@@ -32,8 +32,8 @@ $includes
 #include <QToolBar>
 #include <QMainWindow>
 
-$prototype=QScriptEngineDebugger(QObject * parent = 0)
-$constructor=|new|QObject *=0
+$prototype=QScriptEngineDebugger(QObject * parent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
@@ -46,11 +46,11 @@ $method=|void|attachTo|QScriptEngine *
 $prototype=bool autoShowStandardWindow() const
 $method=|bool|autoShowStandardWindow|
 
-$prototype=QMenu * createStandardMenu(QWidget * parent = 0)
-$method=|QMenu *|createStandardMenu|QWidget *=0
+$prototype=QMenu * createStandardMenu(QWidget * parent = nullptr)
+$method=|QMenu *|createStandardMenu|QWidget *=nullptr
 
-$prototype=QToolBar * createStandardToolBar(QWidget * parent = 0)
-$method=|QToolBar *|createStandardToolBar|QWidget *=0
+$prototype=QToolBar * createStandardToolBar(QWidget * parent = nullptr)
+$method=|QToolBar *|createStandardToolBar|QWidget *=nullptr
 
 $prototype=void detach()
 $method=|void|detach|
