@@ -78,29 +78,29 @@ RETURN
 #endif
 
 /*
-QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
+QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = nullptr)
 */
 void QBluetoothSocket_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * o = new QBluetoothSocket ( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
+  QBluetoothSocket * o = new QBluetoothSocket ( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QBluetoothSocket(QObject *parent = 0)
+QBluetoothSocket(QObject *parent = nullptr)
 */
 void QBluetoothSocket_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * o = new QBluetoothSocket ( OPQOBJECT(1,0) );
+  QBluetoothSocket * o = new QBluetoothSocket ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
-//[2]QBluetoothSocket(QObject *parent = 0)
+//[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = nullptr)
+//[2]QBluetoothSocket(QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
 {

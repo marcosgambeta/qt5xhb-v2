@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 }
 
 /*
-quint16 toUInt16(bool *ok = 0) const
+quint16 toUInt16(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
 }
 
 /*
-quint32 toUInt32(bool *ok = 0) const
+quint32 toUInt32(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
 {

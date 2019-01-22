@@ -70,29 +70,29 @@ RETURN
 #endif
 
 /*
-QBluetoothLocalDevice(QObject *parent = 0)
+QBluetoothLocalDevice(QObject *parent = nullptr)
 */
 void QBluetoothLocalDevice_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( OPQOBJECT(1,0) );
+  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
+QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
 */
 void QBluetoothLocalDevice_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
+  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]QBluetoothLocalDevice(QObject *parent = 0)
-//[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
+//[1]QBluetoothLocalDevice(QObject *parent = nullptr)
+//[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 {

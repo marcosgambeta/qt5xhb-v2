@@ -71,29 +71,29 @@ RETURN
 #endif
 
 /*
-QBluetoothServiceDiscoveryAgent(QObject *parent = 0)
+QBluetoothServiceDiscoveryAgent(QObject *parent = nullptr)
 */
 void QBluetoothServiceDiscoveryAgent_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( OPQOBJECT(1,0) );
+  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
+QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
 */
 void QBluetoothServiceDiscoveryAgent_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
+  QBluetoothServiceDiscoveryAgent * o = new QBluetoothServiceDiscoveryAgent ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]QBluetoothServiceDiscoveryAgent(QObject *parent = 0)
-//[2]QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
+//[1]QBluetoothServiceDiscoveryAgent(QObject *parent = nullptr)
+//[2]QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_NEW )
 {

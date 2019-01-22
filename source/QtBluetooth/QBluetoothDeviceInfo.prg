@@ -481,7 +481,7 @@ for (i1=0;i1<nLen1;i1++)
 }
 
 /*
-QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = 0) const
+QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = nullptr) const
 */
 
 /*
