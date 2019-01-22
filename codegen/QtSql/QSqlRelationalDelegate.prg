@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QSqlRelationalDelegate(QObject *aParent = 0)
-$constructor=|new|QObject *=0
+$prototype=explicit QSqlRelationalDelegate(QObject *aParent = nullptr)
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

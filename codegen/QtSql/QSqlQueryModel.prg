@@ -29,8 +29,8 @@ $includes
 #include <QSqlQuery>
 #include <QSqlRecord>
 
-$prototype=explicit QSqlQueryModel ( QObject * parent = 0 )
-$constructor=|new|QObject *=0
+$prototype=explicit QSqlQueryModel ( QObject * parent = nullptr )
+$constructor=|new|QObject *=nullptr
 
 $deleteMethod
 

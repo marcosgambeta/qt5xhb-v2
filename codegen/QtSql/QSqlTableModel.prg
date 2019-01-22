@@ -29,8 +29,8 @@ $includes
 
 #include <QSqlIndex>
 
-$prototype=explicit QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
-$constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()
+$prototype=explicit QSqlTableModel ( QObject * parent = nullptr, QSqlDatabase db = QSqlDatabase() )
+$constructor=|new|QObject *=nullptr,QSqlDatabase=QSqlDatabase()
 
 $deleteMethod
 
