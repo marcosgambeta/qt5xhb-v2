@@ -27,14 +27,14 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QChartView(QWidget *parent = Q_NULLPTR)
-$internalConstructor=5,7,0|new1|QWidget *=Q_NULLPTR
+$prototype=explicit QChartView(QWidget *parent = nullptr)
+$internalConstructor=5,7,0|new1|QWidget *=nullptr
 
-$prototype=explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
-$internalConstructor=5,7,0|new2|QChart *,QWidget *=Q_NULLPTR
+$prototype=explicit QChartView(QChart *chart, QWidget *parent = nullptr)
+$internalConstructor=5,7,0|new2|QChart *,QWidget *=nullptr
 
-//[1]explicit QChartView(QWidget *parent = Q_NULLPTR)
-//[2]explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
+//[1]explicit QChartView(QWidget *parent = nullptr)
+//[2]explicit QChartView(QChart *chart, QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QCHARTVIEW_NEW )
 {

@@ -31,14 +31,14 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QPieSlice(QObject *parent = Q_NULLPTR)
-$internalConstructor=5,7,0|new1|QObject *=Q_NULLPTR
+$prototype=explicit QPieSlice(QObject *parent = nullptr)
+$internalConstructor=5,7,0|new1|QObject *=nullptr
 
-$prototype=QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
-$internalConstructor=5,7,0|new2|QString,qreal,QObject *=Q_NULLPTR
+$prototype=QPieSlice(QString label, qreal value, QObject *parent = nullptr)
+$internalConstructor=5,7,0|new2|QString,qreal,QObject *=nullptr
 
-//[1]explicit QPieSlice(QObject *parent = Q_NULLPTR)
-//[2]QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
+//[1]explicit QPieSlice(QObject *parent = nullptr)
+//[2]QPieSlice(QString label, qreal value, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QPIESLICE_NEW )
 {

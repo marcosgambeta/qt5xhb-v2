@@ -125,8 +125,8 @@ $method=5,9,0|void|setMarkerShape|QLegend::MarkerShape
 %%
 %%
 
-$prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = Q_NULLPTR)
-$method=5,7,0|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=Q_NULLPTR
+$prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
+$method=5,7,0|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=void setBrush(const QBrush &brush)
 $method=5,7,0|void|setBrush|const QBrush &
@@ -158,8 +158,8 @@ $method=5,7,0|void|attachToChart|
 $prototype=bool isAttachedToChart()
 $method=5,7,0|bool|isAttachedToChart|
 
-$prototype=QList <QLegendMarker*> markers(QAbstractSeries *series = Q_NULLPTR) const
-$method=5,7,0|QList<QLegendMarker *>|markers|QAbstractSeries *=Q_NULLPTR
+$prototype=QList <QLegendMarker*> markers(QAbstractSeries *series = nullptr) const
+$method=5,7,0|QList<QLegendMarker *>|markers|QAbstractSeries *=nullptr
 
 $prototype=void hideEvent(QHideEvent *event) [protected]
 

@@ -27,10 +27,10 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|QBoxPlotSeries *,QLegend *,QObject *=Q_NULLPTR
+$prototype=explicit QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *parent = nullptr)
+$constructor=5,7,0|new|QBoxPlotSeries *,QLegend *,QObject *=nullptr
 
-$prototype=QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QBoxPlotLegendMarker()
 $deleteMethod=5,7,0

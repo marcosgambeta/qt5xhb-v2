@@ -29,8 +29,8 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QBarSet(const QString label, QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|const QString &,QObject *=Q_NULLPTR
+$prototype=explicit QBarSet(const QString label, QObject *parent = nullptr)
+$constructor=5,7,0|new|const QString &,QObject *=nullptr
 
 $prototype=virtual ~QBarSet()
 $deleteMethod=5,7,0

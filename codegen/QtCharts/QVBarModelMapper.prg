@@ -32,8 +32,8 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QVBarModelMapper(QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|QObject *=Q_NULLPTR
+$prototype=explicit QVBarModelMapper(QObject *parent = nullptr)
+$constructor=5,7,0|new|QObject *=nullptr
 
 %% $deleteMethod=5,7,0
 

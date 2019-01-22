@@ -27,8 +27,8 @@ $includes
 
 using namespace QtCharts;
 
-$prototype=explicit QHorizontalBarSeries(QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|QObject *=Q_NULLPTR
+$prototype=explicit QHorizontalBarSeries(QObject *parent = nullptr)
+$constructor=5,7,0|new|QObject *=nullptr
 
 $prototype=~QHorizontalBarSeries()
 $deleteMethod=5,7,0

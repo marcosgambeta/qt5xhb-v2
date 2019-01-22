@@ -27,8 +27,8 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QHorizontalPercentBarSeries(QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|QObject *=Q_NULLPTR
+$prototype=explicit QHorizontalPercentBarSeries(QObject *parent = nullptr)
+$constructor=5,7,0|new|QObject *=nullptr
 
 $prototype=~QHorizontalPercentBarSeries()
 $deleteMethod=5,7,0

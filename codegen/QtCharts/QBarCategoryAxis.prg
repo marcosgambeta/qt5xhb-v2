@@ -29,10 +29,10 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QBarCategoryAxis(QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|QObject *=Q_NULLPTR
+$prototype=explicit QBarCategoryAxis(QObject *parent = nullptr)
+$constructor=5,7,0|new|QObject *=nullptr
 
-$prototype=QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=~QBarCategoryAxis()
 $deleteMethod=5,7,0

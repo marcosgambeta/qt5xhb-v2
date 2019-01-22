@@ -29,8 +29,8 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QScatterSeries(QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|QObject *=Q_NULLPTR
+$prototype=explicit QScatterSeries(QObject *parent = nullptr)
+$constructor=5,7,0|new|QObject *=nullptr
 
 $prototype=~QScatterSeries()
 $deleteMethod=5,7,0

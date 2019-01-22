@@ -29,14 +29,14 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
-$internalConstructor=5,7,0|new1|const QString &=QString(),QObject *=Q_NULLPTR
+$prototype=explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
+$internalConstructor=5,7,0|new1|const QString &=QString(),QObject *=nullptr
 
-$prototype=explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
-$internalConstructor=5,7,0|new2|const qreal,const qreal,const qreal,const qreal,const qreal,const QString &=QString(),QObject *=Q_NULLPTR
+$prototype=explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
+$internalConstructor=5,7,0|new2|const qreal,const qreal,const qreal,const qreal,const qreal,const QString &=QString(),QObject *=nullptr
 
-//[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
-//[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+//[1]explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
+//[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {

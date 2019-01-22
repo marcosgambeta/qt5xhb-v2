@@ -32,8 +32,8 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())
-$constructor=5,7,0|new|QGraphicsItem *=Q_NULLPTR,Qt::WindowFlags=Qt::WindowFlags()
+$prototype=explicit QChart(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
+$constructor=5,7,0|new|QGraphicsItem *=nullptr,Qt::WindowFlags=Qt::WindowFlags()
 
 $prototype=explicit QChart(QChart::ChartType type, QGraphicsItem *parent, Qt::WindowFlags wFlags) [protected]
 
@@ -187,17 +187,17 @@ $method=5,7,0|void|removeAllSeries|
 $prototype=QList<QAbstractSeries *> series() const
 $method=5,7,0|QList<QAbstractSeries *>|series|
 
-$prototype=void setAxisX(QAbstractAxis *axis, QAbstractSeries *series = Q_NULLPTR) // DEPRECATED
-$method=5,7,0|void|setAxisX|QAbstractAxis *,QAbstractSeries *=Q_NULLPTR
+$prototype=void setAxisX(QAbstractAxis *axis, QAbstractSeries *series = nullptr) // DEPRECATED
+$method=5,7,0|void|setAxisX|QAbstractAxis *,QAbstractSeries *=nullptr
 
-$prototype=void setAxisY(QAbstractAxis *axis, QAbstractSeries *series = Q_NULLPTR) // DEPRECATED
-$method=5,7,0|void|setAxisY|QAbstractAxis *,QAbstractSeries *=Q_NULLPTR
+$prototype=void setAxisY(QAbstractAxis *axis, QAbstractSeries *series = nullptr) // DEPRECATED
+$method=5,7,0|void|setAxisY|QAbstractAxis *,QAbstractSeries *=nullptr
 
-$prototype=QAbstractAxis *axisX(QAbstractSeries *series = Q_NULLPTR) const         // DEPRECATED
-$method=5,7,0|QAbstractAxis *|axisX|QAbstractSeries *=Q_NULLPTR
+$prototype=QAbstractAxis *axisX(QAbstractSeries *series = nullptr) const         // DEPRECATED
+$method=5,7,0|QAbstractAxis *|axisX|QAbstractSeries *=nullptr
 
-$prototype=QAbstractAxis *axisY(QAbstractSeries *series = Q_NULLPTR) const         // DEPRECATED
-$method=5,7,0|QAbstractAxis *|axisY|QAbstractSeries *=Q_NULLPTR
+$prototype=QAbstractAxis *axisY(QAbstractSeries *series = nullptr) const         // DEPRECATED
+$method=5,7,0|QAbstractAxis *|axisY|QAbstractSeries *=nullptr
 
 $prototype=void addAxis(QAbstractAxis *axis, Qt::Alignment alignment)
 $method=5,7,0|void|addAxis|QAbstractAxis *,Qt::Alignment
@@ -205,8 +205,8 @@ $method=5,7,0|void|addAxis|QAbstractAxis *,Qt::Alignment
 $prototype=void removeAxis(QAbstractAxis *axis)
 $method=5,7,0|void|removeAxis|QAbstractAxis *
 
-$prototype=QList<QAbstractAxis*> axes(Qt::Orientations orientation = Qt::Horizontal|Qt::Vertical, QAbstractSeries *series = Q_NULLPTR) const
-$method=5,7,0|QList<QAbstractAxis *>|axes|Qt::Orientations=Qt::Horizontal OR Qt::Vertical,QAbstractSeries *=Q_NULLPTR
+$prototype=QList<QAbstractAxis*> axes(Qt::Orientations orientation = Qt::Horizontal|Qt::Vertical, QAbstractSeries *series = nullptr) const
+$method=5,7,0|QList<QAbstractAxis *>|axes|Qt::Orientations=Qt::Horizontal OR Qt::Vertical,QAbstractSeries *=nullptr
 
 $prototype=void createDefaultAxes()
 $method=5,7,0|void|createDefaultAxes|
@@ -294,11 +294,11 @@ $method=5,7,0|void|setPlotAreaBackgroundPen|const QPen &
 $prototype=QPen plotAreaBackgroundPen() const
 $method=5,7,0|QPen|plotAreaBackgroundPen|
 
-$prototype=QPointF mapToValue(const QPointF &position, QAbstractSeries *series = Q_NULLPTR)
-$method=5,7,0|QPointF|mapToValue|const QPointF &,QAbstractSeries *=Q_NULLPTR
+$prototype=QPointF mapToValue(const QPointF &position, QAbstractSeries *series = nullptr)
+$method=5,7,0|QPointF|mapToValue|const QPointF &,QAbstractSeries *=nullptr
 
-$prototype=QPointF mapToPosition(const QPointF &value, QAbstractSeries *series = Q_NULLPTR)
-$method=5,7,0|QPointF|mapToPosition|const QPointF &,QAbstractSeries *=Q_NULLPTR
+$prototype=QPointF mapToPosition(const QPointF &value, QAbstractSeries *series = nullptr)
+$method=5,7,0|QPointF|mapToPosition|const QPointF &,QAbstractSeries *=nullptr
 
 %%
 %% SIGNALS

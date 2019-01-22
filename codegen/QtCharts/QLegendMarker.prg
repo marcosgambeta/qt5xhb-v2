@@ -31,7 +31,7 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QLegendMarker()
 $deleteMethod=5,7,0

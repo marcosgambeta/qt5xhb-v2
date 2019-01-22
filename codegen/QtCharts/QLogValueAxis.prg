@@ -29,10 +29,10 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QLogValueAxis(QObject *parent = Q_NULLPTR)
-$constructor=5,7,0|new|QObject *=Q_NULLPTR
+$prototype=explicit QLogValueAxis(QObject *parent = nullptr)
+$constructor=5,7,0|new|QObject *=nullptr
 
-$prototype=QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
+$prototype=QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=~QLogValueAxis()
 $deleteMethod=5,7,0

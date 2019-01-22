@@ -27,7 +27,7 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QPieModelMapper(QObject *parent = Q_NULLPTR) [protected]
+$prototype=explicit QPieModelMapper(QObject *parent = nullptr) [protected]
 
 %% $deleteMethod=5,7,0
 
