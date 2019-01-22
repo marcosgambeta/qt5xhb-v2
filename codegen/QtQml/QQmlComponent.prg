@@ -29,26 +29,26 @@ $includes
 
 #include <QQmlContext>
 
-$prototype=QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
-$internalConstructor=|new1|QQmlEngine *,QObject *=0
+$prototype=QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
+$internalConstructor=|new1|QQmlEngine *,QObject *=nullptr
 
-$prototype=QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
-$internalConstructor=|new2|QQmlEngine *,const QString &,QObject *=0
+$prototype=QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = nullptr)
+$internalConstructor=|new2|QQmlEngine *,const QString &,QObject *=nullptr
 
-$prototype=QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
-$internalConstructor=|new3|QQmlEngine *,const QString &,QQmlComponent::CompilationMode,QObject *=0
+$prototype=QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = nullptr)
+$internalConstructor=|new3|QQmlEngine *,const QString &,QQmlComponent::CompilationMode,QObject *=nullptr
 
-$prototype=QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
-$internalConstructor=|new4|QQmlEngine *,const QUrl &,QObject *=0
+$prototype=QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = nullptr)
+$internalConstructor=|new4|QQmlEngine *,const QUrl &,QObject *=nullptr
 
-$prototype=QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
-$internalConstructor=|new5|QQmlEngine *,const QUrl &,QQmlComponent::CompilationMode,QObject *=0
+$prototype=QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = nullptr)
+$internalConstructor=|new5|QQmlEngine *,const QUrl &,QQmlComponent::CompilationMode,QObject *=nullptr
 
-//[1]QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
-//[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
-//[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
-//[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
-//[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+//[1]QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
+//[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = nullptr)
+//[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = nullptr)
+//[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = nullptr)
+//[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
@@ -86,14 +86,14 @@ $virtualMethod=|QObject *|beginCreate|QQmlContext *
 $prototype=virtual void completeCreate()
 $virtualMethod=|void|completeCreate|
 
-$prototype=virtual QObject * create(QQmlContext * context = 0)
-$internalVirtualMethod=|QObject *|create,create1|QQmlContext *=0
+$prototype=virtual QObject * create(QQmlContext * context = nullptr)
+$internalVirtualMethod=|QObject *|create,create1|QQmlContext *=nullptr
 
-$prototype=void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
-$internalMethod=|void|create,create2|QQmlIncubator &,QQmlContext *=0,QQmlContext *=0
+$prototype=void create(QQmlIncubator & incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)
+$internalMethod=|void|create,create2|QQmlIncubator &,QQmlContext *=nullptr,QQmlContext *=nullptr
 
-//[1]virtual QObject * create(QQmlContext * context = 0)
-//[2]void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+//[1]virtual QObject * create(QQmlContext * context = nullptr)
+//[2]void create(QQmlIncubator & incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)
 
 HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 {

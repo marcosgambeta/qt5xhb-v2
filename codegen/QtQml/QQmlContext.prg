@@ -27,14 +27,14 @@ $includes
 
 #include <QQmlEngine>
 
-$prototype=QQmlContext(QQmlEngine * engine, QObject * parent = 0)
-$internalConstructor=|new1|QQmlEngine *,QObject *=0
+$prototype=QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
+$internalConstructor=|new1|QQmlEngine *,QObject *=nullptr
 
-$prototype=QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
-$internalConstructor=|new2|QQmlContext *,QObject *=0
+$prototype=QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
+$internalConstructor=|new2|QQmlContext *,QObject *=nullptr
 
-//[1]QQmlContext(QQmlEngine * engine, QObject * parent = 0)
-//[2]QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
+//[1]QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
+//[2]QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {

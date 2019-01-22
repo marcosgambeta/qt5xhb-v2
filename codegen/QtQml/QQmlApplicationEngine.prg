@@ -27,18 +27,18 @@ $destructor
 
 $includes=5,1,0
 
-$prototype=QQmlApplicationEngine(QObject *parent=0)
-$internalConstructor=5,1,0|new1|QObject *=0
+$prototype=QQmlApplicationEngine(QObject *parent=nullptr)
+$internalConstructor=5,1,0|new1|QObject *=nullptr
 
-$prototype=QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
-$internalConstructor=5,1,0|new2|const QUrl &,QObject *=0
+$prototype=QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
+$internalConstructor=5,1,0|new2|const QUrl &,QObject *=nullptr
 
-$prototype=QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
-$internalConstructor=5,1,0|new3|const QString &,QObject *=0
+$prototype=QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
+$internalConstructor=5,1,0|new3|const QString &,QObject *=nullptr
 
-//[1]QQmlApplicationEngine(QObject *parent=0)
-//[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
-//[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
+//[1]QQmlApplicationEngine(QObject *parent=nullptr)
+//[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
+//[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
