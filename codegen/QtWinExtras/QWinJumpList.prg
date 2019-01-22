@@ -25,8 +25,8 @@ $destructor
 
 $includes=5,2,0
 
-$prototype=explicit QWinJumpList(QObject *parent = 0)
-$constructor=5,2,0|new|QObject *=0
+$prototype=explicit QWinJumpList(QObject *parent = nullptr)
+$constructor=5,2,0|new|QObject *=nullptr
 
 $deleteMethod=5,2,0
 

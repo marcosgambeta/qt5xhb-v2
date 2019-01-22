@@ -27,8 +27,8 @@ $includes=5,2,0
 
 #include <QWindow>
 
-$prototype=explicit QWinThumbnailToolBar(QObject *parent = 0)
-$constructor=5,2,0|new|QObject *=0
+$prototype=explicit QWinThumbnailToolBar(QObject *parent = nullptr)
+$constructor=5,2,0|new|QObject *=nullptr
 
 $deleteMethod=5,2,0
 

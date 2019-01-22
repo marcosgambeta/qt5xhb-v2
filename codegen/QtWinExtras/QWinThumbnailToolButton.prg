@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,2,0
 
-$prototype=explicit QWinThumbnailToolButton(QObject *parent = 0)
-$constructor=5,2,0|new|QObject *=0
+$prototype=explicit QWinThumbnailToolButton(QObject *parent = nullptr)
+$constructor=5,2,0|new|QObject *=nullptr
 
 $deleteMethod=5,2,0
 

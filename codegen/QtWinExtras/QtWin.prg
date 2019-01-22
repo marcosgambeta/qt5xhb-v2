@@ -55,8 +55,8 @@ $staticMethod=5,2,0|QString|stringFromHresult|HRESULT|#ifndef Q_OS_WIN64
 $prototype=static QString errorStringFromHresult(HRESULT hresult)
 $staticMethod=5,2,0|QString|errorStringFromHresult|HRESULT|#ifndef Q_OS_WIN64
 
-$prototype=static QColor colorizationColor(bool *opaqueBlend = 0)
-$staticMethod=5,2,0|QColor|colorizationColor|bool *=0
+$prototype=static QColor colorizationColor(bool *opaqueBlend = nullptr)
+$staticMethod=5,2,0|QColor|colorizationColor|bool *=nullptr
 
 $prototype=static QColor realColorizationColor()
 $staticMethod=5,2,0|QColor|realColorizationColor|
