@@ -25,14 +25,14 @@ $destructor
 
 $includes
 
-$prototype=QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-$internalConstructor=|new1|QGLShader::ShaderType,QObject *=0
+$prototype=QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )
+$internalConstructor=|new1|QGLShader::ShaderType,QObject *=nullptr
 
-$prototype=QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
-$internalConstructor=|new2|QGLShader::ShaderType,const QGLContext *,QObject *=0
+$prototype=QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = nullptr )
+$internalConstructor=|new2|QGLShader::ShaderType,const QGLContext *,QObject *=nullptr
 
-//[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-//[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+//[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )
+//[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
@@ -100,7 +100,7 @@ $method=|QGLShader::ShaderType|shaderType|
 $prototype=QByteArray sourceCode () const
 $method=|QByteArray|sourceCode|
 
-$prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 ) [private]
-%% $staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=0
+$prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = nullptr ) [private]
+%% $staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=nullptr
 
 #pragma ENDDUMP

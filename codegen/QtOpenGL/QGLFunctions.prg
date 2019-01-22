@@ -299,8 +299,8 @@ $method=|void|glVertexAttrib4f|GLuint,GLfloat,GLfloat,GLfloat,GLfloat
 $prototype=bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
 $method=|bool|hasOpenGLFeature|QGLFunctions::OpenGLFeature
 
-$prototype=void initializeGLFunctions(const QGLContext * context = 0)
-$method=|void|initializeGLFunctions|const QGLContext *=0
+$prototype=void initializeGLFunctions(const QGLContext * context = nullptr)
+$method=|void|initializeGLFunctions|const QGLContext *=nullptr
 
 $prototype=QGLFunctions::OpenGLFeatures openGLFeatures() const
 $method=|QGLFunctions::OpenGLFeatures|openGLFeatures|

@@ -25,18 +25,18 @@ $destructor
 
 $includes
 
-$prototype=QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new1|QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
+$prototype=QGLWidget ( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new1|QWidget *=nullptr,const QGLWidget *=nullptr,Qt::WindowFlags=0
 
-$prototype=QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new2|QGLContext *,QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
+$prototype=QGLWidget ( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new2|QGLContext *,QWidget *=nullptr,const QGLWidget *=nullptr,Qt::WindowFlags=0
 
-$prototype=QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-$internalConstructor=|new3|const QGLFormat &,QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
+$prototype=QGLWidget ( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+$internalConstructor=|new3|const QGLFormat &,QWidget *=nullptr,const QGLWidget *=nullptr,Qt::WindowFlags=0
 
-//[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-//[2]QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-//[3]QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+//[1]QGLWidget ( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+//[2]QGLWidget ( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+//[3]QGLWidget ( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
 
 HB_FUNC_STATIC( QGLWIDGET_NEW )
 {
