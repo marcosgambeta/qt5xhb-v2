@@ -29,8 +29,8 @@ $includes
 #include <QSGTextureProvider>
 #include <QQuickWindow>
 
-$prototype=QQuickItem(QQuickItem * parent = 0)
-$constructor=|new|QQuickItem *=0
+$prototype=QQuickItem(QQuickItem * parent = nullptr)
+$constructor=|new|QQuickItem *=nullptr
 
 $deleteMethod
 

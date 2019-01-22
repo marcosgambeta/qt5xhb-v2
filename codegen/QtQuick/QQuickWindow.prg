@@ -31,8 +31,8 @@ $includes
 #include <QSGTexture>
 #include <QOpenGLContext>
 
-$prototype=QQuickWindow(QWindow * parent = 0)
-$constructor=|new|QWindow *=0
+$prototype=QQuickWindow(QWindow * parent = nullptr)
+$constructor=|new|QWindow *=nullptr
 
 $deleteMethod
 

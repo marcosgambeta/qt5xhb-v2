@@ -32,18 +32,18 @@ $includes
 #include <QQmlContext>
 #include <QQuickItem>
 
-$prototype=QQuickView(QWindow * parent = 0)
-$internalConstructor=|new1|QWindow *=0
+$prototype=QQuickView(QWindow * parent = nullptr)
+$internalConstructor=|new1|QWindow *=nullptr
 
 $prototype=QQuickView(QQmlEngine * engine, QWindow * parent)
 $internalConstructor=|new2|QQmlEngine *,QWindow *
 
-$prototype=QQuickView(const QUrl & source, QWindow * parent = 0)
-$internalConstructor=|new3|const QUrl &,QWindow *=0
+$prototype=QQuickView(const QUrl & source, QWindow * parent = nullptr)
+$internalConstructor=|new3|const QUrl &,QWindow *=nullptr
 
-//[1]QQuickView(QWindow * parent = 0)
+//[1]QQuickView(QWindow * parent = nullptr)
 //[2]QQuickView(QQmlEngine * engine, QWindow * parent)
-//[3]QQuickView(const QUrl & source, QWindow * parent = 0)
+//[3]QQuickView(const QUrl & source, QWindow * parent = nullptr)
 
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
