@@ -29,8 +29,8 @@ $includes=5,4,0
 
 #include <QGeoShape>
 
-$prototype=QGeoCodeReply(Error error, const QString &errorString, QObject *parent = 0)
-$constructor=5,4,0|new|QGeoCodeReply::Error,const QString &,QObject *=0
+$prototype=QGeoCodeReply(Error error, const QString &errorString, QObject *parent = nullptr)
+$constructor=5,4,0|new|QGeoCodeReply::Error,const QString &,QObject *=nullptr
 
 $deleteMethod=5,4,0
 

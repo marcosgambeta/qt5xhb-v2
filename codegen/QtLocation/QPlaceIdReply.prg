@@ -25,8 +25,8 @@ $destructor
 
 $includes=5,4,0
 
-$prototype=explicit QPlaceIdReply(OperationType operationType, QObject *parent = 0)
-$constructor=5,4,0|new|QPlaceIdReply::OperationType,QObject *=0
+$prototype=explicit QPlaceIdReply(OperationType operationType, QObject *parent = nullptr)
+$constructor=5,4,0|new|QPlaceIdReply::OperationType,QObject *=nullptr
 
 $deleteMethod=5,4,0
 

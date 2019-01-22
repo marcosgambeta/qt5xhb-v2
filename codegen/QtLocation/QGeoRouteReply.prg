@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,4,0
 
-$prototype=QGeoRouteReply(Error error, const QString &errorString, QObject *parent = 0)
-$constructor=5,4,0|new|QGeoRouteReply::Error,const QString &,QObject *=0
+$prototype=QGeoRouteReply(Error error, const QString &errorString, QObject *parent = nullptr)
+$constructor=5,4,0|new|QGeoRouteReply::Error,const QString &,QObject *=nullptr
 
 $deleteMethod=5,4,0
 
