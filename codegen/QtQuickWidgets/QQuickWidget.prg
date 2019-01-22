@@ -32,18 +32,18 @@ $includes=5,3,0
 #include <QQmlContext>
 #include <QQuickItem>
 
-$prototype=explicit QQuickWidget(QWidget *parent = 0)
-$internalConstructor=5,3,0|new1|QWidget *=0
+$prototype=explicit QQuickWidget(QWidget *parent = nullptr)
+$internalConstructor=5,3,0|new1|QWidget *=nullptr
 
 $prototype=QQuickWidget(QQmlEngine* engine, QWidget *parent)
 $internalConstructor=5,3,0|new2|QQmlEngine *,QWidget *
 
-$prototype=QQuickWidget(const QUrl &source, QWidget *parent = 0)
-$internalConstructor=5,3,0|new3|const QUrl &,QWidget *=0
+$prototype=QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
+$internalConstructor=5,3,0|new3|const QUrl &,QWidget *=nullptr
 
-//[1]explicit QQuickWidget(QWidget *parent = 0)
+//[1]explicit QQuickWidget(QWidget *parent = nullptr)
 //[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
-//[3]QQuickWidget(const QUrl &source, QWidget *parent = 0)
+//[3]QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 {
