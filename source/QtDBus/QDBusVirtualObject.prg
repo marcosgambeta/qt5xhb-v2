@@ -45,7 +45,7 @@ RETURN
 #endif
 
 /*
-explicit QDBusVirtualObject(QObject *parent = 0)
+explicit QDBusVirtualObject(QObject *parent = nullptr)
 */
 
 /*

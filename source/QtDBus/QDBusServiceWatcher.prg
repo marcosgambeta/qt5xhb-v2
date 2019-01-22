@@ -63,25 +63,25 @@ RETURN
 #include <QDBusConnection>
 
 /*
-explicit QDBusServiceWatcher(QObject *parent = 0)
+explicit QDBusServiceWatcher(QObject *parent = nullptr)
 */
 void QDBusServiceWatcher_new1 ()
 {
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( OPQOBJECT(1,0) );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = 0)
+QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
 */
 void QDBusServiceWatcher_new2 ()
 {
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QDBusServiceWatcher(QObject *parent = 0)
-//[2]QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = 0)
+//[1]explicit QDBusServiceWatcher(QObject *parent = nullptr)
+//[2]QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
 
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {
