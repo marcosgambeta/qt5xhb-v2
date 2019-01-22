@@ -30,8 +30,8 @@ $includes
 #include <QHelpSearchQueryWidget>
 #include <QHelpSearchResultWidget>
 
-$prototype=QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
-$constructor=|new|QHelpEngineCore *,QObject *=0
+$prototype=QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = nullptr )
+$constructor=|new|QHelpEngineCore *,QObject *=nullptr
 
 $deleteMethod
 

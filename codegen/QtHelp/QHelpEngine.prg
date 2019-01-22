@@ -29,8 +29,8 @@ $includes
 #include <QHelpIndexModel>
 #include <QHelpSearchEngine>
 
-$prototype=QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
-$constructor=|new|const QString &,QObject *=0
+$prototype=QHelpEngine ( const QString & collectionFile, QObject * parent = nullptr )
+$constructor=|new|const QString &,QObject *=nullptr
 
 $deleteMethod
 

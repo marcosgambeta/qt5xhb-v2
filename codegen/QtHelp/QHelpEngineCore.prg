@@ -29,8 +29,8 @@ $includes
 
 #include <QStringList>
 
-$prototype=QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
-$constructor=|new|const QString &,QObject *=0
+$prototype=QHelpEngineCore ( const QString & collectionFile, QObject * parent = nullptr )
+$constructor=|new|const QString &,QObject *=nullptr
 
 $deleteMethod
 
