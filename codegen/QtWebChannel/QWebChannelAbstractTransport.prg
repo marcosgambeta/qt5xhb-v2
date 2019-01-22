@@ -29,8 +29,8 @@ $includes=5,4,0
 
 #include <QJsonObject>
 
-$prototype=explicit QWebChannelAbstractTransport(QObject *parent = 0) (abstract)
-%% $constructor=5,4,0|new|QObject *=0
+$prototype=explicit QWebChannelAbstractTransport(QObject *parent = nullptr) (abstract)
+%% $constructor=5,4,0|new|QObject *=nullptr
 
 $deleteMethod=5,4,0
 

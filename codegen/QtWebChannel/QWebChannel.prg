@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,4,0
 
-$prototype=explicit QWebChannel(QObject *parent = 0)
-$constructor=5,4,0|new|QObject *=0
+$prototype=explicit QWebChannel(QObject *parent = nullptr)
+$constructor=5,4,0|new|QObject *=nullptr
 
 $deleteMethod=5,4,0
 
