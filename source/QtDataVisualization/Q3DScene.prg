@@ -87,13 +87,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DScene(QObject *parent = Q_NULLPTR)
+explicit Q3DScene(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DSCENE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    Q3DScene * o = new Q3DScene ( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DScene * o = new Q3DScene ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

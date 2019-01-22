@@ -62,29 +62,29 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
+explicit QScatter3DSeries(QObject *parent = nullptr)
 */
 void QScatter3DSeries_new1 ()
 {
-  QScatter3DSeries * o = new QScatter3DSeries ( OPQOBJECT(1,Q_NULLPTR) );
+  QScatter3DSeries * o = new QScatter3DSeries ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
 */
 void QScatter3DSeries_new2 ()
 {
-  QScatter3DSeries * o = new QScatter3DSeries ( PQSCATTERDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QScatter3DSeries * o = new QScatter3DSeries ( PQSCATTERDATAPROXY(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QScatter3DSeries(QScatter3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QScatter3DSeries(QScatter3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+//[1]explicit QScatter3DSeries(QObject *parent = nullptr)
+//[2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSCATTER3DSERIES_NEW )
 {

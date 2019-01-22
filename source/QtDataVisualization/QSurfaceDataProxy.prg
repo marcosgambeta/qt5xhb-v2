@@ -70,13 +70,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QSurfaceDataProxy(QObject *parent = Q_NULLPTR)
+explicit QSurfaceDataProxy(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSurfaceDataProxy * o = new QSurfaceDataProxy ( OPQOBJECT(1,Q_NULLPTR) );
+    QSurfaceDataProxy * o = new QSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 }
 
 /*
-explicit QSurfaceDataProxy(QSurfaceDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QSurfaceDataProxy(QSurfaceDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 */
 
 /*

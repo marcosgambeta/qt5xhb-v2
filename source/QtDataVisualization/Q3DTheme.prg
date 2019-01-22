@@ -120,30 +120,30 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DTheme(QObject *parent = Q_NULLPTR)
+explicit Q3DTheme(QObject *parent = nullptr)
 */
 void Q3DTheme_new1 ()
 {
-  Q3DTheme * o = new Q3DTheme ( OPQOBJECT(1,Q_NULLPTR) );
+  Q3DTheme * o = new Q3DTheme ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit Q3DTheme(Theme themeType, QObject *parent = Q_NULLPTR)
+explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
 */
 void Q3DTheme_new2 ()
 {
-  Q3DTheme * o = new Q3DTheme ( (Q3DTheme::Theme) hb_parni(1), OPQOBJECT(2,Q_NULLPTR) );
+  Q3DTheme * o = new Q3DTheme ( (Q3DTheme::Theme) hb_parni(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = Q_NULLPTR) [protected]
+explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit Q3DTheme(QObject *parent = Q_NULLPTR)
-//[2]explicit Q3DTheme(Theme themeType, QObject *parent = Q_NULLPTR)
-//[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = Q_NULLPTR) [protected]
+//[1]explicit Q3DTheme(QObject *parent = nullptr)
+//[2]explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
+//[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
 
 HB_FUNC_STATIC( Q3DTHEME_NEW )
 {

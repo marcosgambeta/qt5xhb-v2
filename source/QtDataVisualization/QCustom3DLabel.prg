@@ -74,25 +74,25 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
+explicit QCustom3DLabel(QObject *parent = nullptr)
 */
 void QCustom3DLabel_new1 ()
 {
-  QCustom3DLabel * o = new QCustom3DLabel ( OPQOBJECT(1,Q_NULLPTR) );
+  QCustom3DLabel * o = new QCustom3DLabel ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
+explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = nullptr)
 */
 void QCustom3DLabel_new2 ()
 {
-  QCustom3DLabel * o = new QCustom3DLabel ( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,Q_NULLPTR) );
+  QCustom3DLabel * o = new QCustom3DLabel ( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
+//[1]explicit QCustom3DLabel(QObject *parent = nullptr)
+//[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 {

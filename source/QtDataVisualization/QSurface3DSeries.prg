@@ -75,29 +75,29 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QSurface3DSeries(QObject *parent = Q_NULLPTR)
+explicit QSurface3DSeries(QObject *parent = nullptr)
 */
 void QSurface3DSeries_new1 ()
 {
-  QSurface3DSeries * o = new QSurface3DSeries ( OPQOBJECT(1,Q_NULLPTR) );
+  QSurface3DSeries * o = new QSurface3DSeries ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = nullptr)
 */
 void QSurface3DSeries_new2 ()
 {
-  QSurface3DSeries * o = new QSurface3DSeries ( PQSURFACEDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QSurface3DSeries * o = new QSurface3DSeries ( PQSURFACEDATAPROXY(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QSurface3DSeries(QSurface3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QSurface3DSeries(QSurface3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit QSurface3DSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+//[1]explicit QSurface3DSeries(QObject *parent = nullptr)
+//[2]explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSURFACE3DSERIES_NEW )
 {

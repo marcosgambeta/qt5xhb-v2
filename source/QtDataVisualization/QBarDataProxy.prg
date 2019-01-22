@@ -81,13 +81,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QBarDataProxy(QObject *parent = Q_NULLPTR)
+explicit QBarDataProxy(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QBarDataProxy * o = new QBarDataProxy ( OPQOBJECT(1,Q_NULLPTR) );
+    QBarDataProxy * o = new QBarDataProxy ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 }
 
 /*
-explicit QBarDataProxy(QBarDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QBarDataProxy(QBarDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 */
 
 /*

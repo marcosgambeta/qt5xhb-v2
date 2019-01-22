@@ -81,13 +81,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DCamera(QObject *parent = Q_NULLPTR)
+explicit Q3DCamera(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DCAMERA_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    Q3DCamera * o = new Q3DCamera ( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DCamera * o = new Q3DCamera ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

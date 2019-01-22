@@ -102,7 +102,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DSeries(QAbstract3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QAbstract3DSeries(QAbstract3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -133,7 +133,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = Q_NULLPTR) [protected]
+explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = nullptr) [protected]
 */
 
 /*

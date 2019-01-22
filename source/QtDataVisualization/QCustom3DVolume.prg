@@ -108,20 +108,20 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
+explicit QCustom3DVolume(QObject *parent = nullptr)
 */
 void QCustom3DVolume_new1 ()
 {
-  QCustom3DVolume * o = new QCustom3DVolume ( OPQOBJECT(1,Q_NULLPTR) );
+  QCustom3DVolume * o = new QCustom3DVolume ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
 */
 
-//[1]explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+//[1]explicit QCustom3DVolume(QObject *parent = nullptr)
+//[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {

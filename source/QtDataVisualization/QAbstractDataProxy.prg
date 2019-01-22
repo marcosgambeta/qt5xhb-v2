@@ -50,7 +50,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstractDataProxy(QAbstractDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QAbstractDataProxy(QAbstractDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 */
 
 /*

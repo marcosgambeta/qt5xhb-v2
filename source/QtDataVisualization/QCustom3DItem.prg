@@ -82,29 +82,29 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
+explicit QCustom3DItem(QObject *parent = nullptr)
 */
 void QCustom3DItem_new1 ()
 {
-  QCustom3DItem * o = new QCustom3DItem ( OPQOBJECT(1,Q_NULLPTR) );
+  QCustom3DItem * o = new QCustom3DItem ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)
+explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = nullptr)
 */
 void QCustom3DItem_new2 ()
 {
-  QCustom3DItem * o = new QCustom3DItem ( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,Q_NULLPTR) );
+  QCustom3DItem * o = new QCustom3DItem ( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)
+//[1]explicit QCustom3DItem(QObject *parent = nullptr)
+//[2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCUSTOM3DITEM_NEW )
 {

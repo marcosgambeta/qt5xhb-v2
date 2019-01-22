@@ -60,13 +60,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DObject(QObject *parent = Q_NULLPTR)
+explicit Q3DObject(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DOBJECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    Q3DObject * o = new Q3DObject ( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DObject * o = new Q3DObject ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

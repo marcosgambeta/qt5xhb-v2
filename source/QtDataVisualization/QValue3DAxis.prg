@@ -61,13 +61,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QValue3DAxis(QObject *parent = Q_NULLPTR)
+explicit QValue3DAxis(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QValue3DAxis * o = new QValue3DAxis ( OPQOBJECT(1,Q_NULLPTR) );
+    QValue3DAxis * o = new QValue3DAxis ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

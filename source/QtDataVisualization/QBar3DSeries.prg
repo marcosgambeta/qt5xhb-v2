@@ -63,25 +63,25 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
+explicit QBar3DSeries(QObject *parent = nullptr)
 */
 void QBar3DSeries_new1 ()
 {
-  QBar3DSeries * o = new QBar3DSeries ( OPQOBJECT(1,Q_NULLPTR) );
+  QBar3DSeries * o = new QBar3DSeries ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
 */
 void QBar3DSeries_new2 ()
 {
-  QBar3DSeries * o = new QBar3DSeries ( PQBARDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QBar3DSeries * o = new QBar3DSeries ( PQBARDATAPROXY(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+//[1]explicit QBar3DSeries(QObject *parent = nullptr)
+//[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBAR3DSERIES_NEW )
 {

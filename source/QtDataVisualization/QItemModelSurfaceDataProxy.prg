@@ -122,75 +122,75 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QItemModelSurfaceDataProxy(QObject *parent = Q_NULLPTR)
+explicit QItemModelSurfaceDataProxy(QObject *parent = nullptr)
 */
 void QItemModelSurfaceDataProxy_new1 ()
 {
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( OPQOBJECT(1,Q_NULLPTR) );
+  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR)
+explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
 */
 void QItemModelSurfaceDataProxy_new2 ()
 {
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,Q_NULLPTR) );
+  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &yPosRole, QObject *parent = Q_NULLPTR)
+explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &yPosRole, QObject *parent = nullptr)
 */
 void QItemModelSurfaceDataProxy_new3 ()
 {
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
+  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, QObject *parent = Q_NULLPTR)
+explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, QObject *parent = nullptr)
 */
 void QItemModelSurfaceDataProxy_new4 ()
 {
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,Q_NULLPTR) );
+  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = Q_NULLPTR)
+explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
 */
 void QItemModelSurfaceDataProxy_new5 ()
 {
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7,Q_NULLPTR) );
+  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = Q_NULLPTR)
+explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
 */
 void QItemModelSurfaceDataProxy_new6 ()
 {
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,Q_NULLPTR) );
+  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = Q_NULLPTR)
+explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
 */
 void QItemModelSurfaceDataProxy_new7 ()
 {
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9,Q_NULLPTR) );
+  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QItemModelSurfaceDataProxy(QObject *parent = Q_NULLPTR)
-//[2]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR)
-//[3]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &yPosRole, QObject *parent = Q_NULLPTR)
-//[4]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, QObject *parent = Q_NULLPTR)
-//[5]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = Q_NULLPTR)
-//[6]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = Q_NULLPTR)
-//[7]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = Q_NULLPTR)
+//[1]explicit QItemModelSurfaceDataProxy(QObject *parent = nullptr)
+//[2]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
+//[3]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &yPosRole, QObject *parent = nullptr)
+//[4]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, QObject *parent = nullptr)
+//[5]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
+//[6]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
+//[7]explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
 {

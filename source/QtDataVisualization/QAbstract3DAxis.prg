@@ -79,7 +79,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DAxis(QAbstract3DAxisPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QAbstract3DAxis(QAbstract3DAxisPrivate *d, QObject *parent = nullptr) [protected]
 */
 
 /*

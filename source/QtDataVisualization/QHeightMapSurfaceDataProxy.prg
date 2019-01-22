@@ -71,39 +71,39 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
+explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
 */
 void QHeightMapSurfaceDataProxy_new1 ()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( OPQOBJECT(1,Q_NULLPTR) );
+  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = Q_NULLPTR)
+explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
 */
 void QHeightMapSurfaceDataProxy_new2 ()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( *PQIMAGE(1), OPQOBJECT(2,Q_NULLPTR) );
+  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = Q_NULLPTR)
+explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
 */
 void QHeightMapSurfaceDataProxy_new3 ()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
+  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QHeightMapSurfaceDataProxy(QHeightMapSurfaceDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QHeightMapSurfaceDataProxy(QHeightMapSurfaceDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
-//[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = Q_NULLPTR)
-//[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = Q_NULLPTR)
+//[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
+//[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
+//[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_NEW )
 {

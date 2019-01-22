@@ -61,7 +61,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) [protected]
+explicit QAbstract3DInputHandler(QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -69,13 +69,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QScatterDataProxy(QObject *parent = Q_NULLPTR)
+explicit QScatterDataProxy(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QScatterDataProxy * o = new QScatterDataProxy ( OPQOBJECT(1,Q_NULLPTR) );
+    QScatterDataProxy * o = new QScatterDataProxy ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 }
 
 /*
-explicit QScatterDataProxy(QScatterDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
+explicit QScatterDataProxy(QScatterDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 */
 
 /*

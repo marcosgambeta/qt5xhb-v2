@@ -51,13 +51,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QTouch3DInputHandler(QObject *parent = Q_NULLPTR)
+explicit QTouch3DInputHandler(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTouch3DInputHandler * o = new QTouch3DInputHandler ( OPQOBJECT(1,Q_NULLPTR) );
+    QTouch3DInputHandler * o = new QTouch3DInputHandler ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

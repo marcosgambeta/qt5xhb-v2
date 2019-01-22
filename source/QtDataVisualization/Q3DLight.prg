@@ -54,13 +54,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DLight(QObject *parent = Q_NULLPTR)
+explicit Q3DLight(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DLIGHT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    Q3DLight * o = new Q3DLight ( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DLight * o = new Q3DLight ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
