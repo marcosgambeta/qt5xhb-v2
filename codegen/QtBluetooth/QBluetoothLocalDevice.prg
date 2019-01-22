@@ -27,14 +27,14 @@ $destructor
 
 $includes=5,2,0
 
-$prototype=QBluetoothLocalDevice(QObject *parent = 0)
-$internalConstructor=5,2,0|new1|QObject *=0
+$prototype=QBluetoothLocalDevice(QObject *parent = nullptr)
+$internalConstructor=5,2,0|new1|QObject *=nullptr
 
-$prototype=QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
-$internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=0
+$prototype=QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
+$internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=nullptr
 
-//[1]QBluetoothLocalDevice(QObject *parent = 0)
-//[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
+//[1]QBluetoothLocalDevice(QObject *parent = nullptr)
+//[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 {

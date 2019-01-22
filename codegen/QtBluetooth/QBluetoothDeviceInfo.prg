@@ -108,9 +108,9 @@ $method=5,2,0|void|setRssi|qint16
 $prototype=void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
 $method=5,2,0|void|setServiceUuids|const QList<QBluetoothUuid> &,QBluetoothDeviceInfo::DataCompleteness
 
-$prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = 0) const
+$prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = nullptr) const
 %% TODO: implementar
-%% $method=5,2,0|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=0
+%% $method=5,2,0|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=nullptr
 
 $prototype=DataCompleteness serviceUuidsCompleteness() const
 $method=5,2,0|QBluetoothDeviceInfo::DataCompleteness|serviceUuidsCompleteness|

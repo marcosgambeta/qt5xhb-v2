@@ -29,8 +29,8 @@ $destructor
 
 $includes=5,2,0
 
-$prototype=QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = 0)
-$constructor=5,2,0|new|QBluetoothServiceInfo::Protocol,QObject *=0
+$prototype=QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = nullptr)
+$constructor=5,2,0|new|QBluetoothServiceInfo::Protocol,QObject *=nullptr
 
 $deleteMethod=5,2,0
 

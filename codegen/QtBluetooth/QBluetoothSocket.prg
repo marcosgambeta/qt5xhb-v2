@@ -27,14 +27,14 @@ $destructor
 
 $includes=5,2,0
 
-$prototype=QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
-$internalConstructor=5,2,0|new1|QBluetoothServiceInfo::Protocol,QObject *=0
+$prototype=QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = nullptr)
+$internalConstructor=5,2,0|new1|QBluetoothServiceInfo::Protocol,QObject *=nullptr
 
-$prototype=QBluetoothSocket(QObject *parent = 0)
-$internalConstructor=5,2,0|new2|QObject *=0
+$prototype=QBluetoothSocket(QObject *parent = nullptr)
+$internalConstructor=5,2,0|new2|QObject *=nullptr
 
-//[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
-//[2]QBluetoothSocket(QObject *parent = 0)
+//[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = nullptr)
+//[2]QBluetoothSocket(QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
 {
