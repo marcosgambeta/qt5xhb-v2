@@ -54,13 +54,13 @@ RETURN
 #include <QExtensionManager>
 
 /*
-QExtensionFactory ( QExtensionManager * parent = 0 )
+QExtensionFactory ( QExtensionManager * parent = nullptr )
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQEXTENSIONMANAGER(1)||ISNIL(1)) )
   {
-    QExtensionFactory * o = new QExtensionFactory ( OPQEXTENSIONMANAGER(1,0) );
+    QExtensionFactory * o = new QExtensionFactory ( OPQEXTENSIONMANAGER(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
 }
 
 /*
-virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
+virtual QWidget * load ( QIODevice * device, QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
     {
 #endif
-      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
+      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,nullptr) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
