@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 }
 
 /*
-static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
+static QAbstractEventDispatcher * instance ( QThread * thread = nullptr )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
     if( ISBETWEEN(0,1) && (ISQTHREAD(1)||ISNIL(1)) )
   {
 #endif
-      QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( OPQTHREAD(1,0) );
+      QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( OPQTHREAD(1,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

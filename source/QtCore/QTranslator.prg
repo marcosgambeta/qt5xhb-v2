@@ -51,13 +51,13 @@ RETURN
 #endif
 
 /*
-QTranslator(QObject * parent = 0)
+QTranslator(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTranslator * o = new QTranslator ( OPQOBJECT(1,0) );
+    QTranslator * o = new QTranslator ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 }
 
 /*
-virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
+virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1) const
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
     if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
     {
 #endif
-      RQSTRING( obj->translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
+      RQSTRING( obj->translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,nullptr), OPINT(4,-1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

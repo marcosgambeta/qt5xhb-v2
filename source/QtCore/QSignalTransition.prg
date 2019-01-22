@@ -54,25 +54,25 @@ RETURN
 #endif
 
 /*
-QSignalTransition(QState *sourceState = 0)
+QSignalTransition(QState *sourceState = nullptr)
 */
 void QSignalTransition_new1 ()
 {
-  QSignalTransition * o = new QSignalTransition ( OPQSTATE(1,0) );
+  QSignalTransition * o = new QSignalTransition ( OPQSTATE(1,nullptr) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = 0)
+QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = nullptr)
 */
 void QSignalTransition_new2 ()
 {
-  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
+  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,nullptr) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QSignalTransition(QState *sourceState = 0)
-//[2]QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = 0)
+//[1]QSignalTransition(QState *sourceState = nullptr)
+//[2]QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = nullptr)
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {

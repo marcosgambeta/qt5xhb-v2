@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QThreadPool(QObject *parent = 0)
+QThreadPool(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QThreadPool * o = new QThreadPool ( OPQOBJECT(1,0) );
+    QThreadPool * o = new QThreadPool ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

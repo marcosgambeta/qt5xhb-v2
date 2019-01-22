@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
 }
 
 /*
-bool isDesignable(const QObject *obj = 0) const
+bool isDesignable(const QObject *obj = nullptr) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isDesignable ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isDesignable ( OPQOBJECT(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 }
 
 /*
-bool isScriptable(const QObject *obj = 0) const
+bool isScriptable(const QObject *obj = nullptr) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isScriptable ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isScriptable ( OPQOBJECT(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 }
 
 /*
-bool isStored(const QObject *obj = 0) const
+bool isStored(const QObject *obj = nullptr) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isStored ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isStored ( OPQOBJECT(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 }
 
 /*
-bool isEditable(const QObject *obj = 0) const
+bool isEditable(const QObject *obj = nullptr) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isEditable ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isEditable ( OPQOBJECT(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 }
 
 /*
-bool isUser(const QObject *obj = 0) const
+bool isUser(const QObject *obj = nullptr) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isUser ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isUser ( OPQOBJECT(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

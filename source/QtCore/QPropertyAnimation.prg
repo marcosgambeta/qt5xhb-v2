@@ -54,25 +54,25 @@ RETURN
 #endif
 
 /*
-QPropertyAnimation ( QObject * parent = 0 )
+QPropertyAnimation ( QObject * parent = nullptr )
 */
 void QPropertyAnimation_new1 ()
 {
-  QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,0) );
+  QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
 */
 void QPropertyAnimation_new2 ()
 {
-  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
+  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QPropertyAnimation ( QObject * parent = 0 )
-//[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+//[1]QPropertyAnimation ( QObject * parent = nullptr )
+//[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {

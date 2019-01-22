@@ -53,25 +53,25 @@ RETURN
 #endif
 
 /*
-QHistoryState(QState *parent = 0)
+QHistoryState(QState *parent = nullptr)
 */
 void QHistoryState_new1 ()
 {
-  QHistoryState * o = new QHistoryState ( OPQSTATE(1,0) );
+  QHistoryState * o = new QHistoryState ( OPQSTATE(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QHistoryState(HistoryType type, QState *parent = 0)
+QHistoryState(HistoryType type, QState *parent = nullptr)
 */
 void QHistoryState_new2 ()
 {
-  QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
+  QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QHistoryState(QState *parent = 0)
-//[2]QHistoryState(HistoryType type, QState *parent = 0)
+//[1]QHistoryState(QState *parent = nullptr)
+//[2]QHistoryState(HistoryType type, QState *parent = nullptr)
 
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {

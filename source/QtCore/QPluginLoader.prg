@@ -59,25 +59,25 @@ RETURN
 #endif
 
 /*
-QPluginLoader ( QObject * parent = 0 )
+QPluginLoader ( QObject * parent = nullptr )
 */
 void QPluginLoader_new1 ()
 {
-  QPluginLoader * o = new QPluginLoader ( OPQOBJECT(1,0) );
+  QPluginLoader * o = new QPluginLoader ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+QPluginLoader ( const QString & fileName, QObject * parent = nullptr )
 */
 void QPluginLoader_new2 ()
 {
-  QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,0) );
+  QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QPluginLoader ( QObject * parent = 0 )
-//[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+//[1]QPluginLoader ( QObject * parent = nullptr )
+//[2]QPluginLoader ( const QString & fileName, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {

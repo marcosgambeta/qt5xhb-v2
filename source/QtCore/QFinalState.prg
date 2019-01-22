@@ -48,13 +48,13 @@ RETURN
 #endif
 
 /*
-QFinalState(QState * parent = 0)
+QFinalState(QState * parent = nullptr)
 */
 HB_FUNC_STATIC( QFINALSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    QFinalState * o = new QFinalState ( OPQSTATE(1,0) );
+    QFinalState * o = new QFinalState ( OPQSTATE(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

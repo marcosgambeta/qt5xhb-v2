@@ -59,13 +59,13 @@ RETURN
 #endif
 
 /*
-QTimer ( QObject * parent = 0 )
+QTimer ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTIMER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTimer * o = new QTimer ( OPQOBJECT(1,0) );
+    QTimer * o = new QTimer ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

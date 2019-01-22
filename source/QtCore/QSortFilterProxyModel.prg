@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSortFilterProxyModel * o = new QSortFilterProxyModel ( OPQOBJECT(1,0) );
+    QSortFilterProxyModel * o = new QSortFilterProxyModel ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

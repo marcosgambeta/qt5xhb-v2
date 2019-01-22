@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QVARIANT_ISDETACHED )
 }
 
 /*
-int toInt(bool *ok = 0) const
+int toInt(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QVARIANT_TOINT )
 {
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
 }
 
 /*
-uint toUInt(bool *ok = 0) const
+uint toUInt(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QVARIANT_TOUINT )
 {
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC( QVARIANT_TOUINT )
 }
 
 /*
-qlonglong toLongLong(bool *ok = 0) const
+qlonglong toLongLong(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
 {
@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
 }
 
 /*
-qulonglong toULongLong(bool *ok = 0) const
+qulonglong toULongLong(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
 {
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
 }
 
 /*
-double toDouble(bool *ok = 0) const
+double toDouble(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QVARIANT_TODOUBLE )
 {
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
 }
 
 /*
-float toFloat(bool *ok = 0) const
+float toFloat(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QVARIANT_TOFLOAT )
 {
@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
 }
 
 /*
-qreal toReal(bool *ok = 0) const
+qreal toReal(bool *ok = nullptr) const
 */
 HB_FUNC_STATIC( QVARIANT_TOREAL )
 {

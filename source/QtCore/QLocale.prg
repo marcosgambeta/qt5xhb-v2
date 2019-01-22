@@ -1292,7 +1292,7 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
 }
 
 /*
-double toDouble ( const QString & s, bool * ok = 0 ) const
+double toDouble ( const QString & s, bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODOUBLE )
 {
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QLOCALE_TODOUBLE )
 }
 
 /*
-float toFloat ( const QString & s, bool * ok = 0 ) const
+float toFloat ( const QString & s, bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOFLOAT )
 {

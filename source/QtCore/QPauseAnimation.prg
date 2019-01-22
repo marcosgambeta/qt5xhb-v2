@@ -50,25 +50,25 @@ RETURN
 #endif
 
 /*
-QPauseAnimation ( QObject * parent = 0 )
+QPauseAnimation ( QObject * parent = nullptr )
 */
 void QPauseAnimation_new1 ()
 {
-  QPauseAnimation * o = new QPauseAnimation ( OPQOBJECT(1,0) );
+  QPauseAnimation * o = new QPauseAnimation ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QPauseAnimation ( int msecs, QObject * parent = 0 )
+QPauseAnimation ( int msecs, QObject * parent = nullptr )
 */
 void QPauseAnimation_new2 ()
 {
-  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,0) );
+  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QPauseAnimation ( QObject * parent = 0 )
-//[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
+//[1]QPauseAnimation ( QObject * parent = nullptr )
+//[2]QPauseAnimation ( int msecs, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {

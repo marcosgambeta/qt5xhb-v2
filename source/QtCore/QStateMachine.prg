@@ -71,25 +71,25 @@ RETURN
 #endif
 
 /*
-QStateMachine(QObject *parent = 0)
+QStateMachine(QObject *parent = nullptr)
 */
 void QStateMachine_new1 ()
 {
-  QStateMachine * o = new QStateMachine ( OPQOBJECT(1,0) );
+  QStateMachine * o = new QStateMachine ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
+QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
 */
 void QStateMachine_new2 ()
 {
-  QStateMachine * o = new QStateMachine ( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
+  QStateMachine * o = new QStateMachine ( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QStateMachine(QObject *parent = 0)
-//[2]QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
+//[1]QStateMachine(QObject *parent = nullptr)
+//[2]QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {

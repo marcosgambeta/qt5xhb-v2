@@ -278,13 +278,13 @@ void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
 /*
-Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
+Q_INVOKABLE explicit QObject ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QOBJECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QObject * o = new QObject ( OPQOBJECT(1,0) );
+    QObject * o = new QObject ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QOBJECT_DELETELATER )
 }
 
 /*
-static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
+static QString tr ( const char * sourceText, const char * disambiguation = nullptr, int n = -1 )
 */
 HB_FUNC_STATIC( QOBJECT_TR )
 {
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QOBJECT_TR )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
   {
 #endif
-      RQSTRING( QObject::tr ( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+      RQSTRING( QObject::tr ( PCONSTCHAR(1), OPCONSTCHAR(2,nullptr), OPINT(3,-1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( hb_pcount() == 0 )
     {
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( hb_pcount() == 0 )
     {
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( hb_pcount() == 0 )
     {
@@ -2138,7 +2138,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(2) && ISCHAR(1) )
     {
@@ -2203,7 +2203,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 {
   QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
@@ -2238,7 +2238,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 }
 
 /*
-void destroyed( QObject * obj = 0 )
+void destroyed( QObject * obj = nullptr )
 */
 HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {

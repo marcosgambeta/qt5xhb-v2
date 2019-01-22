@@ -49,13 +49,13 @@ RETURN
 #endif
 
 /*
-QParallelAnimationGroup ( QObject * parent = 0 )
+QParallelAnimationGroup ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QParallelAnimationGroup * o = new QParallelAnimationGroup ( OPQOBJECT(1,0) );
+    QParallelAnimationGroup * o = new QParallelAnimationGroup ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -66,25 +66,25 @@ RETURN
 #include <QAbstractTransition>
 
 /*
-QState ( QState * parent = 0 )
+QState ( QState * parent = nullptr )
 */
 void QState_new1 ()
 {
-  QState * o = new QState ( OPQSTATE(1,0) );
+  QState * o = new QState ( OPQSTATE(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QState ( ChildMode childMode, QState * parent = 0 )
+QState ( ChildMode childMode, QState * parent = nullptr )
 */
 void QState_new2 ()
 {
-  QState * o = new QState ( (QState::ChildMode) hb_parni(1), OPQSTATE(2,0) );
+  QState * o = new QState ( (QState::ChildMode) hb_parni(1), OPQSTATE(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QState ( QState * parent = 0 )
-//[2]QState ( ChildMode childMode, QState * parent = 0 )
+//[1]QState ( QState * parent = nullptr )
+//[2]QState ( ChildMode childMode, QState * parent = nullptr )
 
 HB_FUNC_STATIC( QSTATE_NEW )
 {

@@ -2663,7 +2663,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
 }
 
 /*
-double toDouble ( bool * ok = 0 ) const
+double toDouble ( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
 {
@@ -2689,7 +2689,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
 }
 
 /*
-float toFloat ( bool * ok = 0 ) const
+float toFloat ( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
 {
@@ -2740,7 +2740,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
 }
 
 /*
-int toInt ( bool * ok = 0, int base = 10 ) const
+int toInt ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOINT )
 {
@@ -2766,7 +2766,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
 }
 
 /*
-long toLong ( bool * ok = 0, int base = 10 ) const
+long toLong ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
 {
@@ -2792,7 +2792,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
 }
 
 /*
-qlonglong toLongLong ( bool * ok = 0, int base = 10 ) const
+qlonglong toLongLong ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
 {
@@ -2868,7 +2868,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
 }
 
 /*
-short toShort ( bool * ok = 0, int base = 10 ) const
+short toShort ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
 {
@@ -2894,7 +2894,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
 }
 
 /*
-uint toUInt ( bool * ok = 0, int base = 10 ) const
+uint toUInt ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
 {
@@ -2920,7 +2920,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
 }
 
 /*
-ulong toULong ( bool * ok = 0, int base = 10 ) const
+ulong toULong ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
 {
@@ -2946,7 +2946,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
 }
 
 /*
-qulonglong toULongLong ( bool * ok = 0, int base = 10 ) const
+qulonglong toULongLong ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
 {
@@ -2972,7 +2972,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
 }
 
 /*
-ushort toUShort ( bool * ok = 0, int base = 10 ) const
+ushort toUShort ( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
 {

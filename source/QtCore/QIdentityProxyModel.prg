@@ -70,13 +70,13 @@ RETURN
 #include <QItemSelection>
 
 /*
-QIdentityProxyModel(QObject* parent = 0)
+QIdentityProxyModel(QObject* parent = nullptr)
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QIdentityProxyModel * o = new QIdentityProxyModel ( OPQOBJECT(1,0) );
+    QIdentityProxyModel * o = new QIdentityProxyModel ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

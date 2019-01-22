@@ -59,25 +59,25 @@ RETURN
 #include <QStringList>
 
 /*
-QFileSystemWatcher(QObject * parent = 0)
+QFileSystemWatcher(QObject * parent = nullptr)
 */
 void QFileSystemWatcher_new1 ()
 {
-  QFileSystemWatcher * o = new QFileSystemWatcher ( OPQOBJECT(1,0) );
+  QFileSystemWatcher * o = new QFileSystemWatcher ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
+QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
 */
 void QFileSystemWatcher_new2 ()
 {
-  QFileSystemWatcher * o = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
+  QFileSystemWatcher * o = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QFileSystemWatcher(QObject * parent = 0)
-//[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
+//[1]QFileSystemWatcher(QObject * parent = nullptr)
+//[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {

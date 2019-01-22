@@ -109,13 +109,13 @@ RETURN
 #endif
 
 /*
-explicit QProcess ( QObject * parent = 0 )
+explicit QProcess ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QProcess * o = new QProcess ( OPQOBJECT(1,0) );
+    QProcess * o = new QProcess ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 }
 
 /*
-static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
+static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
 */
 void QProcess_startDetached1 ()
 {
@@ -1181,7 +1181,7 @@ void QProcess_startDetached3 ()
 bool QProcess::startDetached(qint64 *pid = nullptr) Require 5.10.0
 */
 
-//[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
+//[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )
 //[3]bool startDetached ( const QString & program )
 

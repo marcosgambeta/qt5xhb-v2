@@ -73,13 +73,13 @@ RETURN
 #include <QAbstractEventDispatcher>
 
 /*
-QThread(QObject * parent = 0)
+QThread(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QTHREAD_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QThread * o = new QThread ( OPQOBJECT(1,0) );
+    QThread * o = new QThread ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

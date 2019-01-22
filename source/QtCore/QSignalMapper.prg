@@ -60,13 +60,13 @@ RETURN
 #include <QWidget>
 
 /*
-QSignalMapper(QObject *parent = 0)
+QSignalMapper(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSignalMapper * o = new QSignalMapper ( OPQOBJECT(1,0) );
+    QSignalMapper * o = new QSignalMapper ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

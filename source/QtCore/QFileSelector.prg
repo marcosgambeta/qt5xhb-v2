@@ -55,13 +55,13 @@ RETURN
 #include <QUrl>
 
 /*
-QFileSelector(QObject *parent = 0)
+QFileSelector(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QFILESELECTOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QFileSelector * o = new QFileSelector ( OPQOBJECT(1,0) );
+    QFileSelector * o = new QFileSelector ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

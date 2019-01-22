@@ -60,25 +60,25 @@ RETURN
 #endif
 
 /*
-QStringListModel(QObject * parent = 0)
+QStringListModel(QObject * parent = nullptr)
 */
 void QStringListModel_new1 ()
 {
-  QStringListModel * o = new QStringListModel ( OPQOBJECT(1,0) );
+  QStringListModel * o = new QStringListModel ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QStringListModel(const QStringList & strings, QObject * parent = 0)
+QStringListModel(const QStringList & strings, QObject * parent = nullptr)
 */
 void QStringListModel_new2 ()
 {
-  QStringListModel * o = new QStringListModel ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
+  QStringListModel * o = new QStringListModel ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QStringListModel(QObject * parent = 0)
-//[2]QStringListModel(const QStringList & strings, QObject * parent = 0)
+//[1]QStringListModel(QObject * parent = nullptr)
+//[2]QStringListModel(const QStringList & strings, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {

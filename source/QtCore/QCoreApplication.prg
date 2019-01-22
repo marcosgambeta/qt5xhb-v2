@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 }
 
 /*
-static QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1)
+static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1)
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
 #endif
-      RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
+      RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,nullptr), OPINT(4,-1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

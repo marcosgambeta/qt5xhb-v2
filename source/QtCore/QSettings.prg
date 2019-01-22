@@ -82,55 +82,55 @@ RETURN
 #include <QStringList>
 
 /*
-QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
 */
 void QSettings_new1 ()
 {
-  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
+  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
 */
 void QSettings_new2 ()
 {
-  QSettings * o = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
+  QSettings * o = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
 */
 void QSettings_new3 ()
 {
-  QSettings * o = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
+  QSettings * o = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
+QSettings ( const QString & fileName, Format format, QObject * parent = nullptr )
 */
 void QSettings_new4 ()
 {
-  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
+  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSettings ( QObject * parent = 0 )
+QSettings ( QObject * parent = nullptr )
 */
 void QSettings_new5 ()
 {
-  QSettings * o = new QSettings ( OPQOBJECT(1,0) );
+  QSettings * o = new QSettings ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[4]QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
-//[5]QSettings ( QObject * parent = 0 )
+//[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+//[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+//[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+//[4]QSettings ( const QString & fileName, Format format, QObject * parent = nullptr )
+//[5]QSettings ( QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {

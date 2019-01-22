@@ -70,12 +70,12 @@ void QSaveFile_new1 ()
 }
 
 /*
-QSaveFile(QObject *parent = 0)
+QSaveFile(QObject *parent = nullptr)
 */
 void QSaveFile_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( OPQOBJECT(1,0) );
+  QSaveFile * o = new QSaveFile ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -92,7 +92,7 @@ void QSaveFile_new3 ()
 }
 
 //[1]QSaveFile(const QString &name)
-//[2]QSaveFile(QObject *parent = 0)
+//[2]QSaveFile(QObject *parent = nullptr)
 //[3]QSaveFile(const QString &name, QObject *parent)
 
 HB_FUNC_STATIC( QSAVEFILE_NEW )

@@ -59,45 +59,45 @@ RETURN
 #endif
 
 /*
-QLibrary(QObject *parent = 0)
+QLibrary(QObject *parent = nullptr)
 */
 void QLibrary_new1 ()
 {
-  QLibrary * o = new QLibrary ( OPQOBJECT(1,0) );
+  QLibrary * o = new QLibrary ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QLibrary(const QString& fileName, QObject *parent = 0)
+QLibrary(const QString& fileName, QObject *parent = nullptr)
 */
 void QLibrary_new2 ()
 {
-  QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,0) );
+  QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
+QLibrary(const QString& fileName, int verNum, QObject *parent = nullptr)
 */
 void QLibrary_new3 ()
 {
-  QLibrary * o = new QLibrary ( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
+  QLibrary * o = new QLibrary ( PQSTRING(1), PINT(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+QLibrary(const QString& fileName, const QString &version, QObject *parent = nullptr)
 */
 void QLibrary_new4 ()
 {
-  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
+  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QLibrary(QObject *parent = 0)
-//[2]QLibrary(const QString& fileName, QObject *parent = 0)
-//[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-//[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+//[1]QLibrary(QObject *parent = nullptr)
+//[2]QLibrary(const QString& fileName, QObject *parent = nullptr)
+//[3]QLibrary(const QString& fileName, int verNum, QObject *parent = nullptr)
+//[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {

@@ -50,22 +50,22 @@ RETURN
 #endif
 
 /*
-explicit QWinEventNotifier(QObject *parent = 0)
+explicit QWinEventNotifier(QObject *parent = nullptr)
 */
 void QWinEventNotifier_new1 ()
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * o = new QWinEventNotifier ( OPQOBJECT(1,0) );
+  QWinEventNotifier * o = new QWinEventNotifier ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
+explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
 */
 
-//[1]explicit QWinEventNotifier(QObject *parent = 0)
-//[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
+//[1]explicit QWinEventNotifier(QObject *parent = nullptr)
+//[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {

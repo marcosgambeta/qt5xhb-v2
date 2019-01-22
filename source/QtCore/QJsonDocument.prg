@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
 }
 
 /*
-static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = 0)
+static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = nullptr)
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
     if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQJSONPARSEERROR(2)||ISNIL(2)) )
   {
 #endif
-      QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromJson ( *PQBYTEARRAY(1), ISNIL(2)? 0 : (QJsonParseError *) _qt5xhb_itemGetPtr(2) ) );
+      QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromJson ( *PQBYTEARRAY(1), ISNIL(2)? nullptr : (QJsonParseError *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

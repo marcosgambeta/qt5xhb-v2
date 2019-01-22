@@ -62,25 +62,25 @@ RETURN
 #endif
 
 /*
-QSharedMemory(QObject *parent = 0)
+QSharedMemory(QObject *parent = nullptr)
 */
 void QSharedMemory_new1 ()
 {
-  QSharedMemory * o = new QSharedMemory ( OPQOBJECT(1,0) );
+  QSharedMemory * o = new QSharedMemory ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSharedMemory(const QString &key, QObject *parent = 0)
+QSharedMemory(const QString &key, QObject *parent = nullptr)
 */
 void QSharedMemory_new2 ()
 {
-  QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,0) );
+  QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QSharedMemory(QObject *parent = 0)
-//[2]QSharedMemory(const QString &key, QObject *parent = 0)
+//[1]QSharedMemory(QObject *parent = nullptr)
+//[2]QSharedMemory(const QString &key, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
