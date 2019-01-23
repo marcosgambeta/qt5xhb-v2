@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-explicit QVideoDeviceSelectorControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QVideoDeviceSelectorControl(QObject *parent = nullptr) [protected]
 */
 
 /*

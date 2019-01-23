@@ -73,7 +73,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioDecoderControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QAudioDecoderControl(QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraFocusControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraFocusControl(QObject *parent = nullptr) [protected]
 */
 
 /*

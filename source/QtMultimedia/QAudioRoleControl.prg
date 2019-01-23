@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioRoleControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QAudioRoleControl(QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraFeedbackControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraFeedbackControl(QObject *parent = nullptr) [protected]
 */
 
 /*

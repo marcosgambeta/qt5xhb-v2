@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-explicit QMetaDataWriterControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMetaDataWriterControl(QObject *parent = nullptr) [protected]
 */
 
 /*

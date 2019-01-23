@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QImageEncoderControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QImageEncoderControl(QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
 }
 
 /*
-virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = Q_NULLPTR) const = 0
+virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = nullptr) const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
 {

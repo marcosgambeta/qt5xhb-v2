@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioInputSelectorControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QAudioInputSelectorControl(QObject *parent = nullptr) [protected]
 */
 
 /*

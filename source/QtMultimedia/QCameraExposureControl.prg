@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraExposureControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraExposureControl(QObject *parent = nullptr) [protected]
 */
 
 /*

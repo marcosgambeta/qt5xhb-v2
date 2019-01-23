@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraCaptureDestinationControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraCaptureDestinationControl(QObject *parent = nullptr) [protected]
 */
 
 /*

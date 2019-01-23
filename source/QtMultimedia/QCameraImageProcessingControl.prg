@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraImageProcessingControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraImageProcessingControl(QObject *parent = nullptr) [protected]
 */
 
 /*

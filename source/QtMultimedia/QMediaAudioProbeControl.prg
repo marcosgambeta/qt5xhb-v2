@@ -52,7 +52,7 @@ RETURN
 #include <QAudioBuffer>
 
 /*
-explicit QMediaAudioProbeControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaAudioProbeControl(QObject *parent = nullptr) [protected]
 */
 
 /*

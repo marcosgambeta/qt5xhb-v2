@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraZoomControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraZoomControl(QObject *parent = nullptr) [protected]
 */
 
 /*

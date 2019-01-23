@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-explicit QMetaDataReaderControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMetaDataReaderControl(QObject *parent = nullptr) [protected]
 */
 
 /*

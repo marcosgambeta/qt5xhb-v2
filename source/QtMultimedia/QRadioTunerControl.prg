@@ -84,7 +84,7 @@ RETURN
 #endif
 
 /*
-explicit QRadioTunerControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QRadioTunerControl(QObject *parent = nullptr) [protected]
 */
 
 /*

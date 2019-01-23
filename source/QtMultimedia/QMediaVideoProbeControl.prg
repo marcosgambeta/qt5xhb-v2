@@ -52,7 +52,7 @@ RETURN
 #include <QVideoFrame>
 
 /*
-explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaVideoProbeControl(QObject *parent = nullptr) [protected]
 */
 
 /*

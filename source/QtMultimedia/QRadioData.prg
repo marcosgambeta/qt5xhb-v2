@@ -68,13 +68,13 @@ RETURN
 #endif
 
 /*
-explicit QRadioData(QMediaObject *mediaObject, QObject *parent = Q_NULLPTR)
+explicit QRadioData(QMediaObject *mediaObject, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QRADIODATA_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QRadioData * o = new QRadioData ( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
+    QRadioData * o = new QRadioData ( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

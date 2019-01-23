@@ -74,7 +74,7 @@ RETURN
 #endif
 
 /*
-explicit QVideoWindowControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QVideoWindowControl(QObject *parent = nullptr) [protected]
 */
 
 /*

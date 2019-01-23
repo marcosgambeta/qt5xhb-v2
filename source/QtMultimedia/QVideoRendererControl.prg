@@ -52,7 +52,7 @@ RETURN
 #include <QAbstractVideoSurface>
 
 /*
-explicit QVideoRendererControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QVideoRendererControl(QObject *parent = nullptr) [protected]
 */
 
 /*

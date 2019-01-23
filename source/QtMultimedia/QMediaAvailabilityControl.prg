@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-explicit QMediaAvailabilityControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaAvailabilityControl(QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -87,7 +87,7 @@ RETURN
 #include <QPointF>
 
 /*
-explicit QCameraExposure(QCamera *parent = Q_NULLPTR) [private]
+explicit QCameraExposure(QCamera *parent = nullptr) [private]
 */
 
 /*
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SPOTMETERINGPOINT )
 }
 
 /*
-QList<qreal> supportedApertures(bool * continuous = Q_NULLPTR) const
+QList<qreal> supportedApertures(bool * continuous = nullptr) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
 }
 
 /*
-QList<int> supportedIsoSensitivities(bool * continuous = Q_NULLPTR) const
+QList<int> supportedIsoSensitivities(bool * continuous = nullptr) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
 {
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
 }
 
 /*
-QList<qreal> supportedShutterSpeeds(bool * continuous = Q_NULLPTR) const
+QList<qreal> supportedShutterSpeeds(bool * continuous = nullptr) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
 {

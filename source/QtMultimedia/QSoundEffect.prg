@@ -76,13 +76,13 @@ RETURN
 #endif
 
 /*
-explicit QSoundEffect(QObject *parent = Q_NULLPTR)
+explicit QSoundEffect(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSoundEffect * o = new QSoundEffect ( OPQOBJECT(1,0) );
+    QSoundEffect * o = new QSoundEffect ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

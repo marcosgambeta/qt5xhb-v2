@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioEncoderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QAudioEncoderSettingsControl(QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS )
 }
 
 /*
-virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
+virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = nullptr) const = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
 {

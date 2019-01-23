@@ -87,7 +87,7 @@ RETURN
 #endif
 
 /*
-explicit QMediaPlayerControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaPlayerControl(QObject *parent = nullptr) [protected]
 */
 
 /*

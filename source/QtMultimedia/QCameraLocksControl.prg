@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraLocksControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraLocksControl(QObject *parent = nullptr) [protected]
 */
 
 /*

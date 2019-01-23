@@ -53,13 +53,13 @@ RETURN
 #endif
 
 /*
-explicit QVideoProbe(QObject *parent = Q_NULLPTR)
+explicit QVideoProbe(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QVideoProbe * o = new QVideoProbe ( OPQOBJECT(1,0) );
+    QVideoProbe * o = new QVideoProbe ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

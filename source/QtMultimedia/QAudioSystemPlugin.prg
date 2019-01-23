@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioSystemPlugin(QObject *parent = Q_NULLPTR) (abstract)
+explicit QAudioSystemPlugin(QObject *parent = nullptr) (abstract)
 */
 
 /*

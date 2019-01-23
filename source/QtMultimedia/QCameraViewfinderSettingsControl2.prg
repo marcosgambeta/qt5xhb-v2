@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraViewfinderSettingsControl2(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraViewfinderSettingsControl2(QObject *parent = nullptr) [protected]
 */
 
 /*

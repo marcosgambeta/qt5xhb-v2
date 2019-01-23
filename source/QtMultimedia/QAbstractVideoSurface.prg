@@ -65,7 +65,7 @@ RETURN
 #include <QVideoSurfaceFormat>
 
 /*
-explicit QAbstractVideoSurface(QObject *parent = Q_NULLPTR)
+explicit QAbstractVideoSurface(QObject *parent = nullptr)
 */
 
 /*

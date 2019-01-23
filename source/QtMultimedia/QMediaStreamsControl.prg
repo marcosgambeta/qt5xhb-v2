@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-explicit QMediaStreamsControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaStreamsControl(QObject *parent = nullptr) [protected]
 */
 
 /*

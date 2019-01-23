@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraCaptureBufferFormatControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraCaptureBufferFormatControl(QObject *parent = nullptr) [protected]
 */
 
 /*

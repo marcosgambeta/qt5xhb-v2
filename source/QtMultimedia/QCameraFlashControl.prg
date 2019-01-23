@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraFlashControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QCameraFlashControl(QObject *parent = nullptr) [protected]
 */
 
 /*

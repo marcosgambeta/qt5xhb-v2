@@ -53,7 +53,7 @@ RETURN
 #include <QStringList>
 
 /*
-explicit QMediaContainerControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaContainerControl(QObject *parent = nullptr) [protected]
 */
 
 /*

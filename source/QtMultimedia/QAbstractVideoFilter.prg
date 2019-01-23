@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-explicit QAbstractVideoFilter(QObject *parent = Q_NULLPTR) (abstract)
+explicit QAbstractVideoFilter(QObject *parent = nullptr) (abstract)
 */
 
 /*

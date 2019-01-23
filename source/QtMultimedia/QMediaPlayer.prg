@@ -106,13 +106,13 @@ RETURN
 #include <QMediaPlaylist>
 
 /*
-explicit QMediaPlayer(QObject *parent = Q_NULLPTR, Flags flags = Flags())
+explicit QMediaPlayer(QObject *parent = nullptr, Flags flags = Flags())
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QMediaPlayer * o = new QMediaPlayer ( OPQOBJECT(1,0), ISNIL(2)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(2) );
+    QMediaPlayer * o = new QMediaPlayer ( OPQOBJECT(1,nullptr), ISNIL(2)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
 }
 
 /*
-void setMedia(const QMediaContent &media, QIODevice *stream = Q_NULLPTR)
+void setMedia(const QMediaContent &media, QIODevice *stream = nullptr)
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
     if( ISBETWEEN(1,2) && ISQMEDIACONTENT(1) && (ISQIODEVICE(2)||ISNIL(2)) )
     {
 #endif
-      obj->setMedia ( *PQMEDIACONTENT(1), OPQIODEVICE(2,0) );
+      obj->setMedia ( *PQMEDIACONTENT(1), OPQIODEVICE(2,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

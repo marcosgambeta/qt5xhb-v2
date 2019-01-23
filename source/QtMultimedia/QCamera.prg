@@ -91,49 +91,49 @@ RETURN
 #endif
 
 /*
-explicit QCamera(QObject *parent = Q_NULLPTR)
+explicit QCamera(QObject *parent = nullptr)
 */
 void QCamera_new1 ()
 {
-  QCamera * o = new QCamera ( OPQOBJECT(1,Q_NULLPTR) );
+  QCamera * o = new QCamera ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
+explicit QCamera(const QByteArray& deviceName, QObject *parent = nullptr)
 */
 void QCamera_new2 ()
 {
-  QCamera * o = new QCamera ( *PQBYTEARRAY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QCamera * o = new QCamera ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
+explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = nullptr)
 */
 void QCamera_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCamera * o = new QCamera ( *PQCAMERAINFO(1), OPQOBJECT(2,Q_NULLPTR) );
+  QCamera * o = new QCamera ( *PQCAMERAINFO(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
+explicit QCamera(QCamera::Position position, QObject *parent = nullptr)
 */
 void QCamera_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCamera * o = new QCamera ( (QCamera::Position) hb_parni(1), OPQOBJECT(2,Q_NULLPTR) );
+  QCamera * o = new QCamera ( (QCamera::Position) hb_parni(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]explicit QCamera(QObject *parent = Q_NULLPTR)
-//[2]explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
-//[3]explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
-//[4]explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
+//[1]explicit QCamera(QObject *parent = nullptr)
+//[2]explicit QCamera(const QByteArray& deviceName, QObject *parent = nullptr)
+//[3]explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = nullptr)
+//[4]explicit QCamera(QCamera::Position position, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCAMERA_NEW )
 {

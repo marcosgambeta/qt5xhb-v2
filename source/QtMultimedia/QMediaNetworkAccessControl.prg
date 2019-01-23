@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QMediaNetworkAccessControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaNetworkAccessControl(QObject *parent = nullptr) [protected]
 */
 
 /*

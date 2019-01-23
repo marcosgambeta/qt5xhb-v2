@@ -69,7 +69,7 @@ RETURN
 #include <QUrl>
 
 /*
-explicit QMediaRecorderControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaRecorderControl(QObject *parent = nullptr) [protected]
 */
 
 /*

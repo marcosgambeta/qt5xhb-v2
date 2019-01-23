@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-explicit QRadioDataControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QRadioDataControl(QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -80,13 +80,13 @@ RETURN
 #endif
 
 /*
-explicit QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = Q_NULLPTR)
+explicit QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QCameraImageCapture * o = new QCameraImageCapture ( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
+    QCameraImageCapture * o = new QCameraImageCapture ( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS )
 }
 
 /*
-QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = Q_NULLPTR) const
+QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = nullptr) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
 {

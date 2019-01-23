@@ -47,11 +47,11 @@ RETURN
 #endif
 
 /*
-explicit QMediaControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaControl(QObject *parent = nullptr) [protected]
 */
 
 /*
-explicit QMediaControl(QMediaControlPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaControl(QMediaControlPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -55,13 +55,13 @@ RETURN
 #endif
 
 /*
-explicit QSound(const QString& filename, QObject* parent = Q_NULLPTR)
+explicit QSound(const QString& filename, QObject* parent = nullptr)
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QSound * o = new QSound ( PQSTRING(1), OPQOBJECT(2,0) );
+    QSound * o = new QSound ( PQSTRING(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

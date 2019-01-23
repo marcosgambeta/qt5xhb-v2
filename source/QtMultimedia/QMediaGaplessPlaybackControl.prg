@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-explicit QMediaGaplessPlaybackControl(QObject *parent = Q_NULLPTR) [protected]
+explicit QMediaGaplessPlaybackControl(QObject *parent = nullptr) [protected]
 */
 
 /*

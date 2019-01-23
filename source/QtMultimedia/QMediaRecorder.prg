@@ -109,13 +109,13 @@ RETURN
 #include <QUrl>
 
 /*
-explicit QMediaRecorder(QMediaObject * mediaObject, QObject * parent = Q_NULLPTR)
+explicit QMediaRecorder(QMediaObject * mediaObject, QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QMediaRecorder * o = new QMediaRecorder ( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
+    QMediaRecorder * o = new QMediaRecorder ( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_NEW )
 }
 
 /*
-QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *parent = Q_NULLPTR) [protected]
+QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOCODECS )
 }
 
 /*
-QList<int> supportedAudioSampleRates(const QAudioEncoderSettings & settings = QAudioEncoderSettings(), bool * continuous = Q_NULLPTR) const
+QList<int> supportedAudioSampleRates(const QAudioEncoderSettings & settings = QAudioEncoderSettings(), bool * continuous = nullptr) const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES )
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDCONTAINERS )
 }
 
 /*
-QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = Q_NULLPTR) const
+QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = nullptr) const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDFRAMERATES )
 {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDFRAMERATES )
 }
 
 /*
-QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = Q_NULLPTR) const
+QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = nullptr) const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDRESOLUTIONS )
 {
