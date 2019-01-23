@@ -76,35 +76,35 @@ RETURN
 #endif
 
 /*
-QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+QGLWidget ( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
 */
 void QGLWidget_new1 ()
 {
-  QGLWidget * o = new QGLWidget ( OPQWIDGET(1,0), OPQGLWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  QGLWidget * o = new QGLWidget ( OPQWIDGET(1,nullptr), OPQGLWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+QGLWidget ( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
 */
 void QGLWidget_new2 ()
 {
-  QGLWidget * o = new QGLWidget ( PQGLCONTEXT(1), OPQWIDGET(2,0), OPQGLWIDGET(3,0), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
+  QGLWidget * o = new QGLWidget ( PQGLCONTEXT(1), OPQWIDGET(2,nullptr), OPQGLWIDGET(3,nullptr), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+QGLWidget ( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
 */
 void QGLWidget_new3 ()
 {
-  QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,0), OPQGLWIDGET(3,0), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
+  QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,nullptr), OPQGLWIDGET(3,nullptr), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-//[2]QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-//[3]QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+//[1]QGLWidget ( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+//[2]QGLWidget ( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+//[3]QGLWidget ( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
 
 HB_FUNC_STATIC( QGLWIDGET_NEW )
 {

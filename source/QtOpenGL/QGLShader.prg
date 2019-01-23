@@ -59,25 +59,25 @@ RETURN
 #endif
 
 /*
-QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
+QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )
 */
 void QGLShader_new1 ()
 {
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
+  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = nullptr )
 */
 void QGLShader_new2 ()
 {
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3,0) );
+  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-//[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+//[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )
+//[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
 }
 
 /*
-static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 ) [private]
+static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = nullptr ) [private]
 */
 
 #pragma ENDDUMP

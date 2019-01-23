@@ -1610,7 +1610,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
 }
 
 /*
-void initializeGLFunctions(const QGLContext * context = 0)
+void initializeGLFunctions(const QGLContext * context = nullptr)
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
 {
@@ -1622,7 +1622,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
     if( ISBETWEEN(0,1) && (ISQGLCONTEXT(1)||ISNIL(1)) )
     {
 #endif
-      obj->initializeGLFunctions ( ISNIL(1)? 0 : (QGLContext *) _qt5xhb_itemGetPtr(1) );
+      obj->initializeGLFunctions ( ISNIL(1)? nullptr : (QGLContext *) _qt5xhb_itemGetPtr(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
