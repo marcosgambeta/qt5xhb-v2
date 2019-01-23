@@ -69,11 +69,11 @@ RETURN
 #include <QQuickItem>
 
 /*
-QQuickView(QWindow * parent = 0)
+QQuickView(QWindow * parent = nullptr)
 */
 void QQuickView_new1 ()
 {
-  QQuickView * o = new QQuickView ( OPQWINDOW(1,0) );
+  QQuickView * o = new QQuickView ( OPQWINDOW(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -87,17 +87,17 @@ void QQuickView_new2 ()
 }
 
 /*
-QQuickView(const QUrl & source, QWindow * parent = 0)
+QQuickView(const QUrl & source, QWindow * parent = nullptr)
 */
 void QQuickView_new3 ()
 {
-  QQuickView * o = new QQuickView ( *PQURL(1), OPQWINDOW(2,0) );
+  QQuickView * o = new QQuickView ( *PQURL(1), OPQWINDOW(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QQuickView(QWindow * parent = 0)
+//[1]QQuickView(QWindow * parent = nullptr)
 //[2]QQuickView(QQmlEngine * engine, QWindow * parent)
-//[3]QQuickView(const QUrl & source, QWindow * parent = 0)
+//[3]QQuickView(const QUrl & source, QWindow * parent = nullptr)
 
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {

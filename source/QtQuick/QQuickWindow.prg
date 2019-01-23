@@ -93,13 +93,13 @@ RETURN
 #include <QOpenGLContext>
 
 /*
-QQuickWindow(QWindow * parent = 0)
+QQuickWindow(QWindow * parent = nullptr)
 */
 HB_FUNC_STATIC( QQUICKWINDOW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWINDOW(1)||ISNIL(1)) )
   {
-    QQuickWindow * o = new QQuickWindow ( OPQWINDOW(1,0) );
+    QQuickWindow * o = new QQuickWindow ( OPQWINDOW(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
