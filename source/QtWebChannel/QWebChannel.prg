@@ -60,14 +60,14 @@ RETURN
 #endif
 
 /*
-explicit QWebChannel(QObject *parent = 0)
+explicit QWebChannel(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWebChannel * o = new QWebChannel ( OPQOBJECT(1,0) );
+    QWebChannel * o = new QWebChannel ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

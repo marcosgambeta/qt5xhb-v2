@@ -56,7 +56,7 @@ RETURN
 #include <QJsonObject>
 
 /*
-explicit QWebChannelAbstractTransport(QObject *parent = 0) (abstract)
+explicit QWebChannelAbstractTransport(QObject *parent = nullptr) (abstract)
 */
 
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )

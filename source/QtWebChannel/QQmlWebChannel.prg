@@ -54,14 +54,14 @@ RETURN
 #endif
 
 /*
-explicit QQmlWebChannel(QObject *parent = 0)
+explicit QQmlWebChannel(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QQmlWebChannel * o = new QQmlWebChannel ( OPQOBJECT(1,0) );
+    QQmlWebChannel * o = new QQmlWebChannel ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
