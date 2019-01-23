@@ -77,14 +77,14 @@ RETURN
 #endif
 
 /*
-explicit QWinTaskbarProgress(QObject *parent = 0)
+explicit QWinTaskbarProgress(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWinTaskbarProgress * o = new QWinTaskbarProgress ( OPQOBJECT(1,0) );
+    QWinTaskbarProgress * o = new QWinTaskbarProgress ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

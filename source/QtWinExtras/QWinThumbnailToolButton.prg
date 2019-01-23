@@ -71,14 +71,14 @@ RETURN
 #endif
 
 /*
-explicit QWinThumbnailToolButton(QObject *parent = 0)
+explicit QWinThumbnailToolButton(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWinThumbnailToolButton * o = new QWinThumbnailToolButton ( OPQOBJECT(1,0) );
+    QWinThumbnailToolButton * o = new QWinThumbnailToolButton ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

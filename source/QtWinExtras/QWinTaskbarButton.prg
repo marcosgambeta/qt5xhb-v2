@@ -67,14 +67,14 @@ RETURN
 #include <QWinTaskbarProgress>
 
 /*
-explicit QWinTaskbarButton(QObject *parent = 0)
+explicit QWinTaskbarButton(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWinTaskbarButton * o = new QWinTaskbarButton ( OPQOBJECT(1,0) );
+    QWinTaskbarButton * o = new QWinTaskbarButton ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

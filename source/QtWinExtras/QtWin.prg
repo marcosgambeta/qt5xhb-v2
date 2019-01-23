@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QTWIN_ERRORSTRINGFROMHRESULT )
 }
 
 /*
-static QColor colorizationColor(bool *opaqueBlend = 0)
+static QColor colorizationColor(bool *opaqueBlend = nullptr)
 */
 HB_FUNC_STATIC( QTWIN_COLORIZATIONCOLOR )
 {
