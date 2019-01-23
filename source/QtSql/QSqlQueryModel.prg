@@ -70,13 +70,13 @@ RETURN
 #include <QSqlRecord>
 
 /*
-explicit QSqlQueryModel ( QObject * parent = 0 )
+explicit QSqlQueryModel ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSqlQueryModel * o = new QSqlQueryModel ( OPQOBJECT(1,0) );
+    QSqlQueryModel * o = new QSqlQueryModel ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

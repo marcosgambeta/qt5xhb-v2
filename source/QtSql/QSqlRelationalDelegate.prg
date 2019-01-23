@@ -51,13 +51,13 @@ RETURN
 #endif
 
 /*
-explicit QSqlRelationalDelegate(QObject *aParent = 0)
+explicit QSqlRelationalDelegate(QObject *aParent = nullptr)
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSqlRelationalDelegate * o = new QSqlRelationalDelegate ( OPQOBJECT(1,0) );
+    QSqlRelationalDelegate * o = new QSqlRelationalDelegate ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
