@@ -58,14 +58,14 @@ RETURN
 #endif
 
 /*
-explicit QPlaceContentReply(QObject *parent = 0)
+explicit QPlaceContentReply(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QPlaceContentReply * o = new QPlaceContentReply ( OPQOBJECT(1,0) );
+    QPlaceContentReply * o = new QPlaceContentReply ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

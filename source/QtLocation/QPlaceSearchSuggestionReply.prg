@@ -54,14 +54,14 @@ RETURN
 #endif
 
 /*
-explicit QPlaceSearchSuggestionReply(QObject *parent = 0)
+explicit QPlaceSearchSuggestionReply(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QPlaceSearchSuggestionReply * o = new QPlaceSearchSuggestionReply ( OPQOBJECT(1,0) );
+    QPlaceSearchSuggestionReply * o = new QPlaceSearchSuggestionReply ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

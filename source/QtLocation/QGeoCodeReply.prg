@@ -67,14 +67,14 @@ RETURN
 #include <QGeoShape>
 
 /*
-QGeoCodeReply(Error error, const QString &errorString, QObject *parent = 0)
+QGeoCodeReply(Error error, const QString &errorString, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QGEOCODEREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QGeoCodeReply * o = new QGeoCodeReply ( (QGeoCodeReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,0) );
+    QGeoCodeReply * o = new QGeoCodeReply ( (QGeoCodeReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
