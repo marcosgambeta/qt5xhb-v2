@@ -88,13 +88,13 @@ RETURN
 #include <QQmlContext>
 
 /*
-QQmlEngine(QObject * parent = 0)
+QQmlEngine(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QQMLENGINE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QQmlEngine * o = new QQmlEngine ( OPQOBJECT(1,0) );
+    QQmlEngine * o = new QQmlEngine ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -58,41 +58,41 @@ RETURN
 #endif
 
 /*
-QQmlApplicationEngine(QObject *parent=0)
+QQmlApplicationEngine(QObject *parent=nullptr)
 */
 void QQmlApplicationEngine_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * o = new QQmlApplicationEngine ( OPQOBJECT(1,0) );
+  QQmlApplicationEngine * o = new QQmlApplicationEngine ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
+QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
 */
 void QQmlApplicationEngine_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * o = new QQmlApplicationEngine ( *PQURL(1), OPQOBJECT(2,0) );
+  QQmlApplicationEngine * o = new QQmlApplicationEngine ( *PQURL(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
+QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
 */
 void QQmlApplicationEngine_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * o = new QQmlApplicationEngine ( PQSTRING(1), OPQOBJECT(2,0) );
+  QQmlApplicationEngine * o = new QQmlApplicationEngine ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]QQmlApplicationEngine(QObject *parent=0)
-//[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
-//[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
+//[1]QQmlApplicationEngine(QObject *parent=nullptr)
+//[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
+//[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {

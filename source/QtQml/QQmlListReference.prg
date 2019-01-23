@@ -79,16 +79,16 @@ void QQmlListReference_new1 ()
 }
 
 /*
-QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
+QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
 */
 void QQmlListReference_new2 ()
 {
-  QQmlListReference * o = new QQmlListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
+  QQmlListReference * o = new QQmlListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QQmlListReference()
-//[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
+//[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
 
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {

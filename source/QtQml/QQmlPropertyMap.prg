@@ -59,13 +59,13 @@ RETURN
 #endif
 
 /*
-QQmlPropertyMap(QObject * parent = 0)
+QQmlPropertyMap(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QQmlPropertyMap * o = new QQmlPropertyMap ( OPQOBJECT(1,0) );
+    QQmlPropertyMap * o = new QQmlPropertyMap ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

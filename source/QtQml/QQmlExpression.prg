@@ -82,26 +82,26 @@ void QQmlExpression_new1 ()
 }
 
 /*
-QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0)
+QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
 */
 void QQmlExpression_new2 ()
 {
-  QQmlExpression * o = new QQmlExpression ( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
+  QQmlExpression * o = new QQmlExpression ( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0)
+QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
 */
 void QQmlExpression_new3 ()
 {
-  QQmlExpression * o = new QQmlExpression ( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,0), OPQOBJECT(3,0), OPQOBJECT(4,0) );
+  QQmlExpression * o = new QQmlExpression ( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,nullptr), OPQOBJECT(3,nullptr), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QQmlExpression()
-//[2]QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0)
-//[3]QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0)
+//[2]QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
+//[3]QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
 }
 
 /*
-QVariant evaluate(bool * valueIsUndefined = 0)
+QVariant evaluate(bool * valueIsUndefined = nullptr)
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
 {

@@ -69,55 +69,55 @@ RETURN
 #include <QQmlContext>
 
 /*
-QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
+QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
 */
 void QQmlComponent_new1 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
+QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = nullptr)
 */
 void QQmlComponent_new2 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
+QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = nullptr)
 */
 void QQmlComponent_new3 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
+QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = nullptr)
 */
 void QQmlComponent_new4 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = nullptr)
 */
 void QQmlComponent_new5 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
+  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
-//[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
-//[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
-//[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
-//[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+//[1]QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
+//[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = nullptr)
+//[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = nullptr)
+//[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = nullptr)
+//[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
 }
 
 /*
-virtual QObject * create(QQmlContext * context = 0)
+virtual QObject * create(QQmlContext * context = nullptr)
 */
 void QQmlComponent_create1 ()
 {
@@ -224,13 +224,13 @@ void QQmlComponent_create1 ()
 
   if( obj != nullptr )
   {
-      QObject * ptr = obj->create ( OPQQMLCONTEXT(1,0) );
+      QObject * ptr = obj->create ( OPQQMLCONTEXT(1,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
 /*
-void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+void create(QQmlIncubator & incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)
 */
 void QQmlComponent_create2 ()
 {
@@ -238,14 +238,14 @@ void QQmlComponent_create2 ()
 
   if( obj != nullptr )
   {
-      obj->create ( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,0), OPQQMLCONTEXT(3,0) );
+      obj->create ( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,nullptr), OPQQMLCONTEXT(3,nullptr) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual QObject * create(QQmlContext * context = 0)
-//[2]void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+//[1]virtual QObject * create(QQmlContext * context = nullptr)
+//[2]void create(QQmlIncubator & incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)
 
 HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 {

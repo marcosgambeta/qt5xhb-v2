@@ -65,25 +65,25 @@ RETURN
 #include <QQmlEngine>
 
 /*
-QQmlContext(QQmlEngine * engine, QObject * parent = 0)
+QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
 */
 void QQmlContext_new1 ()
 {
-  QQmlContext * o = new QQmlContext ( PQQMLENGINE(1), OPQOBJECT(2,0) );
+  QQmlContext * o = new QQmlContext ( PQQMLENGINE(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
+QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
 */
 void QQmlContext_new2 ()
 {
-  QQmlContext * o = new QQmlContext ( PQQMLCONTEXT(1), OPQOBJECT(2,0) );
+  QQmlContext * o = new QQmlContext ( PQQMLCONTEXT(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QQmlContext(QQmlEngine * engine, QObject * parent = 0)
-//[2]QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
+//[1]QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
+//[2]QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
