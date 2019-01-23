@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 }
 
 /*
-bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent1 ()
 {
@@ -630,7 +630,7 @@ hb_storni( par5, 5 );
 }
 
 /*
-bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent2 ()
 {
@@ -647,7 +647,7 @@ hb_storni( par5, 5 );
 }
 
 /*
-bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent3 ()
 {
@@ -664,7 +664,7 @@ hb_storni( par5, 5 );
 }
 
 /*
-bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent4 ()
 {
@@ -681,7 +681,7 @@ hb_storni( par5, 5 );
 }
 
 /*
-bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( const QString & text, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent5 ()
 {
@@ -698,7 +698,7 @@ hb_storni( par4, 4 );
 }
 
 /*
-bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( const QByteArray & buffer, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent6 ()
 {
@@ -715,7 +715,7 @@ hb_storni( par4, 4 );
 }
 
 /*
-bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( QIODevice * dev, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent7 ()
 {
@@ -732,7 +732,7 @@ hb_storni( par4, 4 );
 }
 
 /*
-bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 */
 void QDomDocument_setContent8 ()
 {
@@ -748,14 +748,14 @@ hb_storni( par5, 5 );
   }
 }
 
-//[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[3]bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[4]bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[5]bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[6]bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[7]bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-//[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+//[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[3]bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[4]bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[5]bool setContent ( const QString & text, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[6]bool setContent ( const QByteArray & buffer, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[7]bool setContent ( QIODevice * dev, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+//[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 
 HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
