@@ -58,14 +58,14 @@ RETURN
 #endif
 
 /*
-QMagnetometer(QObject *parent = 0)
+QMagnetometer(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QMagnetometer * o = new QMagnetometer ( OPQOBJECT(1,0) );
+    QMagnetometer * o = new QMagnetometer ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

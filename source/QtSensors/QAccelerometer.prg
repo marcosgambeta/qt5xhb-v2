@@ -58,14 +58,14 @@ RETURN
 #endif
 
 /*
-QAccelerometer(QObject *parent = 0)
+QAccelerometer(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QACCELEROMETER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAccelerometer * o = new QAccelerometer ( OPQOBJECT(1,0) );
+    QAccelerometer * o = new QAccelerometer ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

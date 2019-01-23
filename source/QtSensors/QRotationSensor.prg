@@ -58,14 +58,14 @@ RETURN
 #endif
 
 /*
-QRotationSensor(QObject *parent = 0)
+QRotationSensor(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QRotationSensor * o = new QRotationSensor ( OPQOBJECT(1,0) );
+    QRotationSensor * o = new QRotationSensor ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

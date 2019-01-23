@@ -55,14 +55,14 @@ RETURN
 #endif
 
 /*
-QTiltSensor(QObject *parent = 0)
+QTiltSensor(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QTILTSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTiltSensor * o = new QTiltSensor ( OPQOBJECT(1,0) );
+    QTiltSensor * o = new QTiltSensor ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

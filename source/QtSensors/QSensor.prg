@@ -108,14 +108,14 @@ RETURN
 #endif
 
 /*
-QSensor(const QByteArray &type, QObject *parent = 0)
+QSensor(const QByteArray &type, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QSensor * o = new QSensor ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
+    QSensor * o = new QSensor ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
