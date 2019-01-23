@@ -102,13 +102,13 @@ RETURN
 #include <QAction>
 
 /*
-explicit QGraphicsWebView ( QGraphicsItem * parent = 0 )
+explicit QGraphicsWebView ( QGraphicsItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    QGraphicsWebView * o = new QGraphicsWebView ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+    QGraphicsWebView * o = new QGraphicsWebView ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_UPDATEGEOMETRY )
 }
 
 /*
-virtual void paint(QPainter*, const QStyleOptionGraphicsItem* options, QWidget* widget = 0)
+virtual void paint(QPainter*, const QStyleOptionGraphicsItem* options, QWidget* widget = nullptr)
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAINT )
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

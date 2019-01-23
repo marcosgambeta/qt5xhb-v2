@@ -103,13 +103,13 @@ RETURN
 #include <QWidget>
 
 /*
-explicit QWebView ( QWidget * parent = 0 )
+explicit QWebView ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWebView * o = new QWebView ( OPQWIDGET(1,0) );
+    QWebView * o = new QWebView ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

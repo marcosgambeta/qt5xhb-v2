@@ -142,13 +142,13 @@ RETURN
 #include <QMenu>
 
 /*
-explicit QWebPage ( QObject * parent = 0 )
+explicit QWebPage ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBPAGE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWebPage * o = new QWebPage ( OPQOBJECT(1,0) );
+    QWebPage * o = new QWebPage ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
 }
 
 /*
-virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
+virtual bool extension ( Extension extension, const ExtensionOption * option = nullptr, ExtensionReturn * output = nullptr )
 */
 
 /*
