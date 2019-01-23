@@ -70,13 +70,13 @@ RETURN
 #endif
 
 /*
-QVideoWidget(QWidget *parent = 0)
+QVideoWidget(QWidget *parent = nullptr)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QVideoWidget * o = new QVideoWidget ( OPQWIDGET(1,0) );
+    QVideoWidget * o = new QVideoWidget ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

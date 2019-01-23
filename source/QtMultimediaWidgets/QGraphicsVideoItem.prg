@@ -64,13 +64,13 @@ RETURN
 #endif
 
 /*
-QGraphicsVideoItem(QGraphicsItem *parent = 0)
+QGraphicsVideoItem(QGraphicsItem *parent = nullptr)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    QGraphicsVideoItem * o = new QGraphicsVideoItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+    QGraphicsVideoItem * o = new QGraphicsVideoItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
 }
 
 /*
-void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
+void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

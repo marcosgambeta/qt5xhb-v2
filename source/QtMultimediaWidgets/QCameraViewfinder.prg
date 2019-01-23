@@ -50,13 +50,13 @@ RETURN
 #endif
 
 /*
-QCameraViewfinder(QWidget * parent = 0)
+QCameraViewfinder(QWidget * parent = nullptr)
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QCameraViewfinder * o = new QCameraViewfinder ( OPQWIDGET(1,0) );
+    QCameraViewfinder * o = new QCameraViewfinder ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
