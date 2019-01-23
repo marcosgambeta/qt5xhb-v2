@@ -997,7 +997,7 @@ for (i1=0;i1<nLen1;i1++)
 }
 
 /*
-static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = Q_NULLPTR, const QByteArray &passPhrase=QByteArray())
+static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = nullptr, const QByteArray &passPhrase=QByteArray())
 */
 
 /*

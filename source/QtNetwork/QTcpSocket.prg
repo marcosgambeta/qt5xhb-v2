@@ -48,13 +48,13 @@ RETURN
 #endif
 
 /*
-explicit QTcpSocket(QObject *parent = Q_NULLPTR)
+explicit QTcpSocket(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QTCPSOCKET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTcpSocket * o = new QTcpSocket ( OPQOBJECT(1,0) );
+    QTcpSocket * o = new QTcpSocket ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -64,11 +64,11 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
 }
 
 /*
-QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
+QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
-QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
+QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*

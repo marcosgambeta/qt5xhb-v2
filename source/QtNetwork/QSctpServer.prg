@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSCTPSERVER_NEW )
 #if !defined(QT_NO_SCTP)
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSctpServer * o = new QSctpServer ( OPQOBJECT(1,0) );
+    QSctpServer * o = new QSctpServer ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

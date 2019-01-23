@@ -86,7 +86,7 @@ RETURN
 #include <QSslConfiguration>
 
 /*
-explicit QNetworkReply(QObject *parent = Q_NULLPTR) [protected]
+explicit QNetworkReply(QObject *parent = nullptr) [protected]
 */
 
 /*

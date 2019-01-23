@@ -109,13 +109,13 @@ RETURN
 #endif
 
 /*
-explicit QNetworkAccessManager(QObject *parent = Q_NULLPTR)
+explicit QNetworkAccessManager(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QNetworkAccessManager * o = new QNetworkAccessManager ( OPQOBJECT(1,0) );
+    QNetworkAccessManager * o = new QNetworkAccessManager ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 }
 
 /*
-QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR)
+QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
 */
 void QNetworkAccessManager_sendCustomRequest1 ()
 {
@@ -893,7 +893,7 @@ void QNetworkAccessManager_sendCustomRequest1 ()
 
   if( obj != nullptr )
   {
-      QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3,0) );
+      QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
@@ -930,7 +930,7 @@ void QNetworkAccessManager_sendCustomRequest3 ()
 #endif
 }
 
-//[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR)
+//[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
 //[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
 //[3]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
 
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_REDIRECTPOLICY )
 }
 
 /*
-virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = Q_NULLPTR) [protected]
+virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = nullptr) [protected]
 */
 
 /*

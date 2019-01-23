@@ -79,37 +79,37 @@ RETURN
 #include <QHostAddress>
 
 /*
-explicit QDnsLookup(QObject *parent = Q_NULLPTR)
+explicit QDnsLookup(QObject *parent = nullptr)
 */
 void QDnsLookup_new1 ()
 {
-  QDnsLookup * o = new QDnsLookup ( OPQOBJECT(1,Q_NULLPTR) );
+  QDnsLookup * o = new QDnsLookup ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
+QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
 */
 void QDnsLookup_new2 ()
 {
-  QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
+  QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
+QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
 */
 void QDnsLookup_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,Q_NULLPTR) );
+  QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]explicit QDnsLookup(QObject *parent = Q_NULLPTR)
-//[2]QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
-//[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
+//[1]explicit QDnsLookup(QObject *parent = nullptr)
+//[2]QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
+//[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {

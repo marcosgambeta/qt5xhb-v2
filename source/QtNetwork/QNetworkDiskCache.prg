@@ -65,13 +65,13 @@ RETURN
 #include <QIODevice>
 
 /*
-explicit QNetworkDiskCache(QObject *parent = Q_NULLPTR)
+explicit QNetworkDiskCache(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QNetworkDiskCache * o = new QNetworkDiskCache ( OPQOBJECT(1,0) );
+    QNetworkDiskCache * o = new QNetworkDiskCache ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

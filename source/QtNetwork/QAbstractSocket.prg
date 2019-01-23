@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 }
 
 /*
-QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
+QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*

@@ -63,13 +63,13 @@ RETURN
 #endif
 
 /*
-explicit QUdpSocket(QObject *parent = Q_NULLPTR)
+explicit QUdpSocket(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QUdpSocket * o = new QUdpSocket ( OPQOBJECT(1,0) );
+    QUdpSocket * o = new QUdpSocket ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
 }
 
 /*
-qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = Q_NULLPTR, quint16 *port = Q_NULLPTR)
+qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = nullptr, quint16 *port = nullptr)
 */
 
 /*

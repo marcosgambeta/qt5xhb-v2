@@ -79,13 +79,13 @@ RETURN
 #endif
 
 /*
-explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = Q_NULLPTR)
+explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
   if( ISBETWEEN(1,2) && ISQNETWORKCONFIGURATION(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QNetworkSession * o = new QNetworkSession ( *PQNETWORKCONFIGURATION(1), OPQOBJECT(2,0) );
+    QNetworkSession * o = new QNetworkSession ( *PQNETWORKCONFIGURATION(1), OPQOBJECT(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_NEW )
 #if !defined(QT_NO_SCTP)
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSctpSocket * o = new QSctpSocket ( OPQOBJECT(1,0) );
+    QSctpSocket * o = new QSctpSocket ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

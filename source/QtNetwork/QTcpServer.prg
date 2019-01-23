@@ -75,13 +75,13 @@ RETURN
 #include <QTcpSocket>
 
 /*
-explicit QTcpServer(QObject *parent = Q_NULLPTR)
+explicit QTcpServer(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QTCPSERVER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTcpServer * o = new QTcpServer ( OPQOBJECT(1,0) );
+    QTcpServer * o = new QTcpServer ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEW )
 }
 
 /*
-QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
+QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
 }
 
 /*
-bool waitForNewConnection(int msec = 0, bool *timedOut = Q_NULLPTR)
+bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)
 */
 HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
 {

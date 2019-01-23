@@ -59,7 +59,7 @@ RETURN
 #include <QIODevice>
 
 /*
-explicit QAbstractNetworkCache(QObject *parent = Q_NULLPTR) [protected]
+explicit QAbstractNetworkCache(QObject *parent = nullptr) [protected]
 */
 
 /*
