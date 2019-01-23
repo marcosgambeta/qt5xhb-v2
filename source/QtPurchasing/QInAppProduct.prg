@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-explicit QInAppProduct(const QString &price, const QString &title, const QString &description, ProductType productType, const QString &identifier, QObject *parent = Q_NULLPTR) [protected]
+explicit QInAppProduct(const QString &price, const QString &title, const QString &description, ProductType productType, const QString &identifier, QObject *parent = nullptr) [protected]
 */
 
 /*

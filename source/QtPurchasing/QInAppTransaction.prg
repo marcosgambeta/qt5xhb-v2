@@ -59,7 +59,7 @@ RETURN
 #include <QInAppProduct>
 
 /*
-explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QObject *parent = Q_NULLPTR) [protected]
+explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QObject *parent = nullptr) [protected]
 */
 
 /*

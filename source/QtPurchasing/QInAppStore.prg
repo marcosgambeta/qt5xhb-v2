@@ -59,13 +59,13 @@ RETURN
 #include <QInAppTransaction>
 
 /*
-explicit QInAppStore(QObject *parent = Q_NULLPTR)
+explicit QInAppStore(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QINAPPSTORE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QInAppStore * o = new QInAppStore ( OPQOBJECT(1,Q_NULLPTR) );
+    QInAppStore * o = new QInAppStore ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
