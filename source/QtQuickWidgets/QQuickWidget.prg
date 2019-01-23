@@ -81,12 +81,12 @@ RETURN
 #include <QQuickItem>
 
 /*
-explicit QQuickWidget(QWidget *parent = 0)
+explicit QQuickWidget(QWidget *parent = nullptr)
 */
 void QQuickWidget_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( OPQWIDGET(1,0) );
+  QQuickWidget * o = new QQuickWidget ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -103,19 +103,19 @@ void QQuickWidget_new2 ()
 }
 
 /*
-QQuickWidget(const QUrl &source, QWidget *parent = 0)
+QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
 */
 void QQuickWidget_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( *PQURL(1), OPQWIDGET(2,0) );
+  QQuickWidget * o = new QQuickWidget ( *PQURL(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]explicit QQuickWidget(QWidget *parent = 0)
+//[1]explicit QQuickWidget(QWidget *parent = nullptr)
 //[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
-//[3]QQuickWidget(const QUrl &source, QWidget *parent = 0)
+//[3]QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 {
