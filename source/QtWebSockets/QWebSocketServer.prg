@@ -91,14 +91,14 @@ RETURN
 #include <QWebSocketCorsAuthenticator>
 
 /*
-explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = Q_NULLPTR)
+explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QWebSocketServer * o = new QWebSocketServer ( PQSTRING(1), (QWebSocketServer::SslMode) hb_parni(2), OPQOBJECT(3,Q_NULLPTR) );
+    QWebSocketServer * o = new QWebSocketServer ( PQSTRING(1), (QWebSocketServer::SslMode) hb_parni(2), OPQOBJECT(3,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
