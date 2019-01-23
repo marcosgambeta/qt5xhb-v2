@@ -67,45 +67,45 @@ RETURN
 #endif
 
 /*
-QSvgRenderer ( QObject * parent = 0 )
+QSvgRenderer ( QObject * parent = nullptr )
 */
 void QSvgRenderer_new1 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( OPQOBJECT(1,0) );
+  QSvgRenderer * o = new QSvgRenderer ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSvgRenderer ( const QString & filename, QObject * parent = 0 )
+QSvgRenderer ( const QString & filename, QObject * parent = nullptr )
 */
 void QSvgRenderer_new2 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), OPQOBJECT(2,0) );
+  QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
+QSvgRenderer ( const QByteArray & contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new3 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
+  QSvgRenderer * o = new QSvgRenderer ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
+QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new4 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( PQXMLSTREAMREADER(1), OPQOBJECT(2,0) );
+  QSvgRenderer * o = new QSvgRenderer ( PQXMLSTREAMREADER(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QSvgRenderer ( QObject * parent = 0 )
-//[2]QSvgRenderer ( const QString & filename, QObject * parent = 0 )
-//[3]QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
-//[4]QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
+//[1]QSvgRenderer ( QObject * parent = nullptr )
+//[2]QSvgRenderer ( const QString & filename, QObject * parent = nullptr )
+//[3]QSvgRenderer ( const QByteArray & contents, QObject * parent = nullptr )
+//[4]QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QSVGRENDERER_NEW )
 {

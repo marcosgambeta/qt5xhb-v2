@@ -62,20 +62,20 @@ RETURN
 #include <QSvgRenderer>
 
 /*
-QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
+QGraphicsSvgItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new1 ()
 {
-  QGraphicsSvgItem * o = new QGraphicsSvgItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  QGraphicsSvgItem * o = new QGraphicsSvgItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
+QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new2 ()
 {
-  QGraphicsSvgItem * o = new QGraphicsSvgItem ( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  QGraphicsSvgItem * o = new QGraphicsSvgItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

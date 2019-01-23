@@ -55,25 +55,25 @@ RETURN
 #include <QSvgRenderer>
 
 /*
-QSvgWidget ( QWidget * parent = 0 )
+QSvgWidget ( QWidget * parent = nullptr )
 */
 void QSvgWidget_new1 ()
 {
-  QSvgWidget * o = new QSvgWidget ( OPQWIDGET(1,0) );
+  QSvgWidget * o = new QSvgWidget ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSvgWidget ( const QString & file, QWidget * parent = 0 )
+QSvgWidget ( const QString & file, QWidget * parent = nullptr )
 */
 void QSvgWidget_new2 ()
 {
-  QSvgWidget * o = new QSvgWidget ( PQSTRING(1), OPQWIDGET(2,0) );
+  QSvgWidget * o = new QSvgWidget ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QSvgWidget ( QWidget * parent = 0 )
-//[2]QSvgWidget ( const QString & file, QWidget * parent = 0 )
+//[1]QSvgWidget ( QWidget * parent = nullptr )
+//[2]QSvgWidget ( const QString & file, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
