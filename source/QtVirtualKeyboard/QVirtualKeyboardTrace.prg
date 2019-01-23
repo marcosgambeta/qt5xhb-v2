@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QVirtualKeyboardTrace * o = new QVirtualKeyboardTrace ( OPQOBJECT(1,0) );
+    QVirtualKeyboardTrace * o = new QVirtualKeyboardTrace ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
