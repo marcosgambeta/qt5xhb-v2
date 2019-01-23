@@ -88,14 +88,14 @@ RETURN
 #include <QAction>
 
 /*
-explicit QWebEngineView(QWidget* parent = 0)
+explicit QWebEngineView(QWidget* parent = nullptr)
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWebEngineView * o = new QWebEngineView ( OPQWIDGET(1,0) );
+    QWebEngineView * o = new QWebEngineView ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
