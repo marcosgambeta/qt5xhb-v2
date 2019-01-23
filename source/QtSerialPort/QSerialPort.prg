@@ -102,41 +102,41 @@ RETURN
 #endif
 
 /*
-QSerialPort(QObject *parent = 0)
+QSerialPort(QObject *parent = nullptr)
 */
 void QSerialPort_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * o = new QSerialPort ( OPQOBJECT(1,0) );
+  QSerialPort * o = new QSerialPort ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QSerialPort(const QString &name, QObject *parent = 0)
+QSerialPort(const QString &name, QObject *parent = nullptr)
 */
 void QSerialPort_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * o = new QSerialPort ( PQSTRING(1), OPQOBJECT(2,0) );
+  QSerialPort * o = new QSerialPort ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
+QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
 */
 void QSerialPort_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * o = new QSerialPort ( *PQSERIALPORTINFO(1), OPQOBJECT(2,0) );
+  QSerialPort * o = new QSerialPort ( *PQSERIALPORTINFO(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]QSerialPort(QObject *parent = 0)
-//[2]QSerialPort(const QString &name, QObject *parent = 0)
-//[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
+//[1]QSerialPort(QObject *parent = nullptr)
+//[2]QSerialPort(const QString &name, QObject *parent = nullptr)
+//[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QSERIALPORT_NEW )
 {
