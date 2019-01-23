@@ -71,13 +71,13 @@ RETURN
 #include <QMainWindow>
 
 /*
-QScriptEngineDebugger(QObject * parent = 0)
+QScriptEngineDebugger(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QScriptEngineDebugger * o = new QScriptEngineDebugger ( OPQOBJECT(1,0) );
+    QScriptEngineDebugger * o = new QScriptEngineDebugger ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 }
 
 /*
-QMenu * createStandardMenu(QWidget * parent = 0)
+QMenu * createStandardMenu(QWidget * parent = nullptr)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
 #endif
-      QMenu * ptr = obj->createStandardMenu ( OPQWIDGET(1,0) );
+      QMenu * ptr = obj->createStandardMenu ( OPQWIDGET(1,nullptr) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 }
 
 /*
-QToolBar * createStandardToolBar(QWidget * parent = 0)
+QToolBar * createStandardToolBar(QWidget * parent = nullptr)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
 #endif
-      QToolBar * ptr = obj->createStandardToolBar ( OPQWIDGET(1,0) );
+      QToolBar * ptr = obj->createStandardToolBar ( OPQWIDGET(1,nullptr) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QTOOLBAR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
