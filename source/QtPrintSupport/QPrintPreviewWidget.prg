@@ -74,25 +74,25 @@ RETURN
 #endif
 
 /*
-explicit QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+explicit QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewWidget_new1 ()
 {
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  QPrintPreviewWidget * o = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+explicit QPrintPreviewWidget ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewWidget_new2 ()
 {
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-//[2]QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+//[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+//[2]QPrintPreviewWidget ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {

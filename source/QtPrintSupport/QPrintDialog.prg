@@ -62,25 +62,25 @@ RETURN
 #include <QPrinter>
 
 /*
-QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
+QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
 */
 void QPrintDialog_new1 ()
 {
-  QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
+  QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QPrintDialog ( QWidget * parent = 0 )
+QPrintDialog ( QWidget * parent = nullptr )
 */
 void QPrintDialog_new2 ()
 {
-  QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,0) );
+  QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
-//[2]QPrintDialog ( QWidget * parent = 0 )
+//[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
+//[2]QPrintDialog ( QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {

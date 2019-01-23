@@ -54,25 +54,25 @@ RETURN
 #endif
 
 /*
-QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
+QPageSetupDialog ( QPrinter * printer, QWidget * parent = nullptr )
 */
 void QPageSetupDialog_new1 ()
 {
-  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
+  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QPageSetupDialog ( QWidget * parent = 0 )
+QPageSetupDialog ( QWidget * parent = nullptr )
 */
 void QPageSetupDialog_new2 ()
 {
-  QPageSetupDialog * o = new QPageSetupDialog ( OPQWIDGET(1,0) );
+  QPageSetupDialog * o = new QPageSetupDialog ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
-//[2]QPageSetupDialog(QWidget *parent = 0)
+//[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
+//[2]QPageSetupDialog(QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
