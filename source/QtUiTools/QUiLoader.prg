@@ -73,13 +73,13 @@ RETURN
 #include <QLayout>
 
 /*
-QUiLoader ( QObject * parent = 0 )
+QUiLoader ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QUILOADER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QUiLoader * o = new QUiLoader ( OPQOBJECT(1,0) );
+    QUiLoader * o = new QUiLoader ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 }
 
 /*
-virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
+virtual QAction * createAction ( QObject * parent = nullptr, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTCHAR(2) )
     {
 #endif
-      QAction * ptr = obj->createAction ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
+      QAction * ptr = obj->createAction ( OPQOBJECT(1,nullptr), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 }
 
 /*
-virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
+virtual QActionGroup * createActionGroup ( QObject * parent = nullptr, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTCHAR(2) )
     {
 #endif
-      QActionGroup * ptr = obj->createActionGroup ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
+      QActionGroup * ptr = obj->createActionGroup ( OPQOBJECT(1,nullptr), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTIONGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 }
 
 /*
-virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
+virtual QLayout * createLayout ( const QString & className, QObject * parent = nullptr, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) && ISOPTCHAR(3) )
     {
 #endif
-      QLayout * ptr = obj->createLayout ( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
+      QLayout * ptr = obj->createLayout ( PQSTRING(1), OPQOBJECT(2,nullptr), OPQSTRING(3,QString()) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QLAYOUT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 }
 
 /*
-virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
+virtual QWidget * createWidget ( const QString & className, QWidget * parent = nullptr, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) )
     {
 #endif
-      QWidget * ptr = obj->createWidget ( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
+      QWidget * ptr = obj->createWidget ( PQSTRING(1), OPQWIDGET(2,nullptr), OPQSTRING(3,QString()) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 }
 
 /*
-QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
+QWidget * load ( QIODevice * device, QWidget * parentWidget = nullptr )
 */
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
     {
 #endif
-      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
+      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,nullptr) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
