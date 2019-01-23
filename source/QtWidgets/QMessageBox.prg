@@ -101,25 +101,25 @@ RETURN
 #include <QCheckBox>
 
 /*
-explicit QMessageBox ( QWidget * parent = 0 )
+explicit QMessageBox ( QWidget * parent = nullptr )
 */
 void QMessageBox_new1 ()
 {
-  QMessageBox * o = new QMessageBox ( OPQWIDGET(1,0) );
+  QMessageBox * o = new QMessageBox ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 */
 void QMessageBox_new2 ()
 {
-  QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::NoButton : (QMessageBox::StandardButtons) hb_parni(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags) hb_parni(6) );
+  QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::NoButton : (QMessageBox::StandardButtons) hb_parni(4), OPQWIDGET(5,nullptr), ISNIL(6)? (Qt::WindowFlags) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags) hb_parni(6) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QMessageBox ( QWidget * parent = 0 )
-//[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+//[1]explicit QMessageBox ( QWidget * parent = nullptr )
+//[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {

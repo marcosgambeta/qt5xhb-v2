@@ -78,13 +78,13 @@ RETURN
 #endif
 
 /*
-QTextBrowser ( QWidget * parent = 0 )
+QTextBrowser ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTextBrowser * o = new QTextBrowser ( OPQWIDGET(1,0) );
+    QTextBrowser * o = new QTextBrowser ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

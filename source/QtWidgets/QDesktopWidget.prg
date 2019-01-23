@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 }
 
 /*
-int screenNumber ( const QWidget * widget = 0 ) const
+int screenNumber ( const QWidget * widget = nullptr ) const
 */
 void QDesktopWidget_screenNumber1 ()
 {
@@ -314,7 +314,7 @@ void QDesktopWidget_screenNumber1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->screenNumber ( OPQWIDGET(1,0) ) );
+      RINT( obj->screenNumber ( OPQWIDGET(1,nullptr) ) );
   }
 }
 

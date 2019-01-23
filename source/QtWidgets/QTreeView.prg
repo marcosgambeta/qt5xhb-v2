@@ -113,13 +113,13 @@ RETURN
 #include <QHeaderView>
 
 /*
-QTreeView ( QWidget * parent = 0 )
+QTreeView ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTREEVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTreeView * o = new QTreeView ( OPQWIDGET(1,0) );
+    QTreeView * o = new QTreeView ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

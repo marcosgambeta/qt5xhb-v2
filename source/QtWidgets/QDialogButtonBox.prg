@@ -68,35 +68,35 @@ RETURN
 #include <QPushButton>
 
 /*
-QDialogButtonBox ( QWidget * parent = 0 )
+QDialogButtonBox ( QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new1 ()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,0) );
+  QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
+QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new2 ()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
+QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new3 ()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,0) );
+  QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QDialogButtonBox ( QWidget * parent = 0 )
-//[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
-//[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
+//[1]QDialogButtonBox ( QWidget * parent = nullptr )
+//[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
+//[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {

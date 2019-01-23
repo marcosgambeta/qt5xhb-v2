@@ -52,35 +52,35 @@ RETURN
 #endif
 
 /*
-QCommandLinkButton ( QWidget * parent = 0 )
+QCommandLinkButton ( QWidget * parent = nullptr )
 */
 void QCommandLinkButton_new1 ()
 {
-  QCommandLinkButton * o = new QCommandLinkButton ( OPQWIDGET(1,0) );
+  QCommandLinkButton * o = new QCommandLinkButton ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
+QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
 */
 void QCommandLinkButton_new2 ()
 {
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), OPQWIDGET(2,0) );
+  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
+QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
 */
 void QCommandLinkButton_new3 ()
 {
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
+  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QCommandLinkButton ( QWidget * parent = 0 )
-//[2]QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
-//[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
+//[1]QCommandLinkButton ( QWidget * parent = nullptr )
+//[2]QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
+//[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {

@@ -51,25 +51,25 @@ RETURN
 #endif
 
 /*
-explicit QRadioButton ( QWidget * parent = 0 )
+explicit QRadioButton ( QWidget * parent = nullptr )
 */
 void QRadioButton_new1 ()
 {
-  QRadioButton * o = new QRadioButton ( OPQWIDGET(1,0) );
+  QRadioButton * o = new QRadioButton ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QRadioButton ( const QString & text, QWidget * parent = 0 )
+explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
 */
 void QRadioButton_new2 ()
 {
-  QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,0) );
+  QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QRadioButton ( QWidget * parent = 0 )
-//[2]explicit QRadioButton ( const QString & text, QWidget * parent = 0 )
+//[1]explicit QRadioButton ( QWidget * parent = nullptr )
+//[2]explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {

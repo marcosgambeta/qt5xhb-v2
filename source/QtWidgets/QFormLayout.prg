@@ -83,13 +83,13 @@ RETURN
 #endif
 
 /*
-QFormLayout ( QWidget * parent = 0 )
+QFormLayout ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QFormLayout * o = new QFormLayout ( OPQWIDGET(1,0) );
+    QFormLayout * o = new QFormLayout ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

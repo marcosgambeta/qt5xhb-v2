@@ -93,37 +93,37 @@ RETURN
 #include <QAbstractItemView>
 
 /*
-QCompleter ( QObject * parent = 0 )
+QCompleter ( QObject * parent = nullptr )
 */
 void QCompleter_new1 ()
 {
-  QCompleter * o = new QCompleter ( OPQOBJECT(1,0) );
+  QCompleter * o = new QCompleter ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
+QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
 */
 void QCompleter_new2 ()
 {
-  QCompleter * o = new QCompleter ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,0) );
+  QCompleter * o = new QCompleter ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QCompleter ( const QStringList & list, QObject * parent = 0 )
+QCompleter ( const QStringList & list, QObject * parent = nullptr )
 */
 void QCompleter_new3 ()
 {
 #ifndef QT_NO_STRINGLISTMODEL
-  QCompleter * o = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
+  QCompleter * o = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]QCompleter ( QObject * parent = 0 )
-//[2]QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
-//[3]QCompleter ( const QStringList & list, QObject * parent = 0 )
+//[1]QCompleter ( QObject * parent = nullptr )
+//[2]QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
+//[3]QCompleter ( const QStringList & list, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {

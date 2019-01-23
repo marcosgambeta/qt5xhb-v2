@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 }
 
 /*
-static QAction * createAction(QObject * parent = 0)
+static QAction * createAction(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
 #endif
-      QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,0) );
+      QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 }
 
 /*
-static void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
+static void showText(const QPoint & pos, const QString & text, QWidget * w = nullptr)
 */
 HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
     if( ISBETWEEN(2,3) && ISQPOINT(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
 #endif
-      QWhatsThis::showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
+      QWhatsThis::showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

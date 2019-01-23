@@ -71,13 +71,13 @@ RETURN
 #include <QMenu>
 
 /*
-explicit QToolButton ( QWidget * parent = 0 )
+explicit QToolButton ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QToolButton * o = new QToolButton ( OPQWIDGET(1,0) );
+    QToolButton * o = new QToolButton ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

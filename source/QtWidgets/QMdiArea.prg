@@ -87,13 +87,13 @@ RETURN
 #include <QMdiSubWindow>
 
 /*
-QMdiArea ( QWidget * parent = 0 )
+QMdiArea ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QMDIAREA_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QMdiArea * o = new QMdiArea ( OPQWIDGET(1,0) );
+    QMdiArea * o = new QMdiArea ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

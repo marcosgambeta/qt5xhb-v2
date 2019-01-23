@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTREEWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTreeWidget * o = new QTreeWidget ( OPQWIDGET(1,0) );
+    QTreeWidget * o = new QTreeWidget ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -68,13 +68,13 @@ RETURN
 #endif
 
 /*
-explicit QWizardPage ( QWidget * parent = 0 )
+explicit QWizardPage ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWizardPage * o = new QWizardPage ( OPQWIDGET(1,0) );
+    QWizardPage * o = new QWizardPage ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

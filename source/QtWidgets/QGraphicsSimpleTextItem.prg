@@ -64,25 +64,25 @@ RETURN
 #include <QFont>
 
 /*
-QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
+QGraphicsSimpleTextItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSimpleTextItem_new1 ()
 {
-  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSimpleTextItem_new2 ()
 {
-  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+//[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {

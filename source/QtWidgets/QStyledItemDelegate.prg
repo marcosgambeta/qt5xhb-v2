@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QStyledItemDelegate(QObject *parent = 0)
+QStyledItemDelegate(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QStyledItemDelegate * o = new QStyledItemDelegate ( OPQOBJECT(1,0) );
+    QStyledItemDelegate * o = new QStyledItemDelegate ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

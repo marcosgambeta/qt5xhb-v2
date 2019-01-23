@@ -104,13 +104,13 @@ RETURN
 #endif
 
 /*
-QInputDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QInputDialog ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QInputDialog * o = new QInputDialog ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QInputDialog * o = new QInputDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
 }
 
 /*
-static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0)
+static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 {
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 }
 
 /*
-static int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int minValue = -2147483647, int maxValue = 2147483647, int step = 1, bool * ok = 0, Qt::WindowFlags flags = 0)
+static int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int minValue = -2147483647, int maxValue = 2147483647, int step = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
@@ -1259,7 +1259,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 }
 
 /*
-static QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+static QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 }
 
 /*
-static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode echo = QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode echo = QLineEdit::Normal, const QString & text = QString(), bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 }
 
 /*
-static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text = QString(), bool *ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text = QString(), bool *ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
 {

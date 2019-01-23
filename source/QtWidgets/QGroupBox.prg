@@ -63,25 +63,25 @@ RETURN
 #endif
 
 /*
-QGroupBox ( QWidget * parent = 0 )
+QGroupBox ( QWidget * parent = nullptr )
 */
 void QGroupBox_new1 ()
 {
-  QGroupBox * o = new QGroupBox ( OPQWIDGET(1,0) );
+  QGroupBox * o = new QGroupBox ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QGroupBox ( const QString & title, QWidget * parent = 0 )
+QGroupBox ( const QString & title, QWidget * parent = nullptr )
 */
 void QGroupBox_new2 ()
 {
-  QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,0) );
+  QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QGroupBox ( QWidget * parent = 0 )
-//[2]QGroupBox ( const QString & title, QWidget * parent = 0 )
+//[1]QGroupBox ( QWidget * parent = nullptr )
+//[2]QGroupBox ( const QString & title, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {

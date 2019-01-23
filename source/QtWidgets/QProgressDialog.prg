@@ -75,25 +75,25 @@ RETURN
 #endif
 
 /*
-explicit QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 void QProgressDialog_new1 ()
 {
-  QProgressDialog * o = new QProgressDialog ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  QProgressDialog * o = new QProgressDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 void QProgressDialog_new2 ()
 {
-  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
+  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,nullptr), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+//[1]explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+//[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {

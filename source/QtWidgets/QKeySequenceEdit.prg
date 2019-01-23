@@ -59,29 +59,29 @@ RETURN
 #endif
 
 /*
-QKeySequenceEdit(QWidget *parent = 0)
+QKeySequenceEdit(QWidget *parent = nullptr)
 */
 void QKeySequenceEdit_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * o = new QKeySequenceEdit ( OPQWIDGET(1,0) );
+  QKeySequenceEdit * o = new QKeySequenceEdit ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
 /*
-QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
 */
 void QKeySequenceEdit_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * o = new QKeySequenceEdit ( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
+  QKeySequenceEdit * o = new QKeySequenceEdit ( *PQKEYSEQUENCE(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
-//[1]QKeySequenceEdit(QWidget *parent = 0)
-//[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+//[1]QKeySequenceEdit(QWidget *parent = nullptr)
+//[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {

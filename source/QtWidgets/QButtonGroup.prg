@@ -68,13 +68,13 @@ RETURN
 #include <QAbstractButton>
 
 /*
-QButtonGroup ( QObject * parent = 0 )
+QButtonGroup ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QButtonGroup * o = new QButtonGroup ( OPQOBJECT(1,0) );
+    QButtonGroup * o = new QButtonGroup ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -85,13 +85,13 @@ RETURN
 #endif
 
 /*
-QListView ( QWidget * parent = 0 )
+QListView ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QLISTVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QListView * o = new QListView ( OPQWIDGET(1,0) );
+    QListView * o = new QListView ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

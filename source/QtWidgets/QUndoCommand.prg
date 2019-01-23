@@ -66,25 +66,25 @@ RETURN
 #endif
 
 /*
-QUndoCommand(QUndoCommand * parent = 0)
+QUndoCommand(QUndoCommand * parent = nullptr)
 */
 void QUndoCommand_new1 ()
 {
-  QUndoCommand * o = new QUndoCommand ( ISNIL(1)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(1) );
+  QUndoCommand * o = new QUndoCommand ( ISNIL(1)? nullptr : (QUndoCommand *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QUndoCommand(const QString & text, QUndoCommand * parent = 0)
+QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
 */
 void QUndoCommand_new2 ()
 {
-  QUndoCommand * o = new QUndoCommand ( PQSTRING(1), ISNIL(2)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(2) );
+  QUndoCommand * o = new QUndoCommand ( PQSTRING(1), ISNIL(2)? nullptr : (QUndoCommand *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QUndoCommand(QUndoCommand * parent = 0)
-//[2]QUndoCommand(const QString & text, QUndoCommand * parent = 0)
+//[1]QUndoCommand(QUndoCommand * parent = nullptr)
+//[2]QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
 
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {

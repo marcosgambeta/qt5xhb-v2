@@ -62,25 +62,25 @@ RETURN
 #endif
 
 /*
-QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
+QGraphicsPolygonItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPolygonItem_new1 ()
 {
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPolygonItem_new2 ()
 {
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( *PQPOLYGONF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+//[1]QGraphicsPolygonItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -48,25 +48,25 @@ RETURN
 #endif
 
 /*
-QTimeEdit ( QWidget * parent = 0 )
+QTimeEdit ( QWidget * parent = nullptr )
 */
 void QTimeEdit_new1 ()
 {
-  QTimeEdit * o = new QTimeEdit ( OPQWIDGET(1,0) );
+  QTimeEdit * o = new QTimeEdit ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QTimeEdit ( const QTime & time, QWidget * parent = 0 )
+QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
 */
 void QTimeEdit_new2 ()
 {
-  QTimeEdit * o = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
+  QTimeEdit * o = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QTimeEdit ( QWidget * parent = 0 )
-//[2]QTimeEdit ( const QTime & time, QWidget * parent = 0 )
+//[1]QTimeEdit ( QWidget * parent = nullptr )
+//[2]QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {

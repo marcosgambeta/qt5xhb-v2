@@ -89,25 +89,25 @@ RETURN
 #include <QTextDocument>
 
 /*
-QGraphicsTextItem ( QGraphicsItem * parent = 0 )
+QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsTextItem_new1 ()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  QGraphicsTextItem * o = new QGraphicsTextItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsTextItem_new2 ()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem ( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  QGraphicsTextItem * o = new QGraphicsTextItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QGraphicsTextItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+//[1]QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {

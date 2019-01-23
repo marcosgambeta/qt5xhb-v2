@@ -67,25 +67,25 @@ RETURN
 #endif
 
 /*
-explicit QColorDialog ( QWidget * parent = 0 )
+explicit QColorDialog ( QWidget * parent = nullptr )
 */
 void QColorDialog_new1 ()
 {
-  QColorDialog * o = new QColorDialog ( OPQWIDGET(1,0) );
+  QColorDialog * o = new QColorDialog ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
 */
 void QColorDialog_new2 ()
 {
-  QColorDialog * o = new QColorDialog ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
+  QColorDialog * o = new QColorDialog ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QColorDialog ( QWidget * parent = 0 )
-//[2]explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+//[1]explicit QColorDialog ( QWidget * parent = nullptr )
+//[2]explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 }
 
 /*
-static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, const QString &title = QString(), ColorDialogOptions options = 0)
+static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = nullptr, const QString &title = QString(), ColorDialogOptions options = 0)
 */
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
     if( ISBETWEEN(0,4) && (ISQCOLOR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
 #endif
-      QColor * ptr = new QColor( QColorDialog::getColor ( ISNIL(1)? Qt::white : *(QColor *) _qt5xhb_itemGetPtr(1), OPQWIDGET(2,0), OPQSTRING(3,QString()), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );
+      QColor * ptr = new QColor( QColorDialog::getColor ( ISNIL(1)? Qt::white : *(QColor *) _qt5xhb_itemGetPtr(1), OPQWIDGET(2,nullptr), OPQSTRING(3,QString()), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 
 //
 ////[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
-////[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
+////[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = nullptr )
 //
 //HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 //{

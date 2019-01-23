@@ -59,25 +59,25 @@ RETURN
 #endif
 
 /*
-QGraphicsPathItem ( QGraphicsItem * parent = 0 )
+QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPathItem_new1 ()
 {
-  QGraphicsPathItem * o = new QGraphicsPathItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  QGraphicsPathItem * o = new QGraphicsPathItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
+QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPathItem_new2 ()
 {
-  QGraphicsPathItem * o = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  QGraphicsPathItem * o = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QGraphicsPathItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
+//[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_PAINT )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

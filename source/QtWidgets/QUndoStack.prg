@@ -83,13 +83,13 @@ RETURN
 #include <QAction>
 
 /*
-QUndoStack(QObject * parent = 0)
+QUndoStack(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QUndoStack * o = new QUndoStack ( OPQOBJECT(1,0) );
+    QUndoStack * o = new QUndoStack ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

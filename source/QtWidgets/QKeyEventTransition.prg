@@ -52,25 +52,25 @@ RETURN
 #endif
 
 /*
-QKeyEventTransition ( QState * sourceState = 0 )
+QKeyEventTransition ( QState * sourceState = nullptr )
 */
 void QKeyEventTransition_new1 ()
 {
-  QKeyEventTransition * o = new QKeyEventTransition ( OPQSTATE(1,0) );
+  QKeyEventTransition * o = new QKeyEventTransition ( OPQSTATE(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
+QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
 */
 void QKeyEventTransition_new2 ()
 {
-  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
+  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QKeyEventTransition ( QState * sourceState = 0 )
-//[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
+//[1]QKeyEventTransition ( QState * sourceState = nullptr )
+//[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {

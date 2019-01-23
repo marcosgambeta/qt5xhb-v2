@@ -139,13 +139,13 @@ RETURN
 #include <QAbstractItemView>
 
 /*
-QComboBox ( QWidget * parent = 0 )
+QComboBox ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QCOMBOBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QComboBox * o = new QComboBox ( OPQWIDGET(1,0) );
+    QComboBox * o = new QComboBox ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

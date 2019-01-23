@@ -109,25 +109,25 @@ RETURN
 #endif
 
 /*
-QTableWidget ( QWidget * parent = 0 )
+QTableWidget ( QWidget * parent = nullptr )
 */
 void QTableWidget_new1 ()
 {
-  QTableWidget * o = new QTableWidget ( OPQWIDGET(1,0) );
+  QTableWidget * o = new QTableWidget ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QTableWidget ( int rows, int columns, QWidget * parent = 0 )
+QTableWidget ( int rows, int columns, QWidget * parent = nullptr )
 */
 void QTableWidget_new2 ()
 {
-  QTableWidget * o = new QTableWidget ( PINT(1), PINT(2), OPQWIDGET(3,0) );
+  QTableWidget * o = new QTableWidget ( PINT(1), PINT(2), OPQWIDGET(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QTableWidget ( QWidget * parent = 0 )
-//[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
+//[1]QTableWidget ( QWidget * parent = nullptr )
+//[2]QTableWidget ( int rows, int columns, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {

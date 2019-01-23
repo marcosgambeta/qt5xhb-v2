@@ -92,25 +92,25 @@ RETURN
 #endif
 
 /*
-explicit QMenu ( QWidget * parent = 0 )
+explicit QMenu ( QWidget * parent = nullptr )
 */
 void QMenu_new1 ()
 {
-  QMenu * o = new QMenu ( OPQWIDGET(1,0) );
+  QMenu * o = new QMenu ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QMenu ( const QString & title, QWidget * parent = 0 )
+explicit QMenu ( const QString & title, QWidget * parent = nullptr )
 */
 void QMenu_new2 ()
 {
-  QMenu * o = new QMenu ( PQSTRING(1), OPQWIDGET(2,0) );
+  QMenu * o = new QMenu ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QMenu ( QWidget * parent = 0 )
-//[2]explicit QMenu ( const QString & title, QWidget * parent = 0 )
+//[1]explicit QMenu ( QWidget * parent = nullptr )
+//[2]explicit QMenu ( const QString & title, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QMENU_NEW )
 {
@@ -534,7 +534,7 @@ void QMenu_exec1 ()
 }
 
 /*
-QAction * exec ( const QPoint & pos, QAction * at = 0 )
+QAction * exec ( const QPoint & pos, QAction * at = nullptr )
 */
 void QMenu_exec2 ()
 {
@@ -542,7 +542,7 @@ void QMenu_exec2 ()
 
   if( obj != nullptr )
   {
-      QAction * ptr = obj->exec ( *PQPOINT(1), OPQACTION(2,0) );
+      QAction * ptr = obj->exec ( *PQPOINT(1), OPQACTION(2,nullptr) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QMENU_MENUACTION )
 }
 
 /*
-void popup ( const QPoint & pos, QAction * at = 0 )
+void popup ( const QPoint & pos, QAction * at = nullptr )
 */
 HB_FUNC_STATIC( QMENU_POPUP )
 {
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QMENU_POPUP )
     if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
     {
 #endif
-      obj->popup ( *PQPOINT(1), OPQACTION(2,0) );
+      obj->popup ( *PQPOINT(1), OPQACTION(2,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

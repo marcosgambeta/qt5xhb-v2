@@ -63,45 +63,45 @@ RETURN
 #include <QMenu>
 
 /*
-explicit QPushButton ( QWidget * parent = 0 )
+explicit QPushButton ( QWidget * parent = nullptr )
 */
 void QPushButton_new1 ()
 {
-  QPushButton * o = new QPushButton ( OPQWIDGET(1,0) );
+  QPushButton * o = new QPushButton ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QPushButton ( const QString & text, QWidget * parent = 0 )
+explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
 */
 void QPushButton_new2 ()
 {
-  QPushButton * o = new QPushButton ( PQSTRING(1), OPQWIDGET(2,0) );
+  QPushButton * o = new QPushButton ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
 */
 void QPushButton_new3 ()
 {
-  QPushButton * o = new QPushButton ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
+  QPushButton * o = new QPushButton ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
+QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
 */
 void QPushButton_new4 ()
 {
-  QPushButton * o = new QPushButton ( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,0) );
+  QPushButton * o = new QPushButton ( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QPushButton ( QWidget * parent = 0 )
-//[2]explicit QPushButton ( const QString & text, QWidget * parent = 0 )
-//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
-//[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
+//[1]explicit QPushButton ( QWidget * parent = nullptr )
+//[2]explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
+//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
+//[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {

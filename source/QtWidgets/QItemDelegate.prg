@@ -53,13 +53,13 @@ RETURN
 #endif
 
 /*
-QItemDelegate ( QObject * parent = 0 )
+QItemDelegate ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QItemDelegate * o = new QItemDelegate ( OPQOBJECT(1,0) );
+    QItemDelegate * o = new QItemDelegate ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

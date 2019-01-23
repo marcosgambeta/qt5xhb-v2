@@ -56,13 +56,13 @@ RETURN
 #endif
 
 /*
-QGraphicsOpacityEffect ( QObject * parent = 0 )
+QGraphicsOpacityEffect ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QGraphicsOpacityEffect * o = new QGraphicsOpacityEffect ( OPQOBJECT(1,0) );
+    QGraphicsOpacityEffect * o = new QGraphicsOpacityEffect ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

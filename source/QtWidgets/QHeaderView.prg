@@ -123,13 +123,13 @@ RETURN
 #endif
 
 /*
-explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
+explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    QHeaderView * o = new QHeaderView ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+    QHeaderView * o = new QHeaderView ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

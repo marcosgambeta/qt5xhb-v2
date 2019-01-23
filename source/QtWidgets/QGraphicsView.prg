@@ -118,25 +118,25 @@ RETURN
 #include <QVariant>
 
 /*
-QGraphicsView ( QWidget * parent = 0 )
+QGraphicsView ( QWidget * parent = nullptr )
 */
 void QGraphicsView_new1 ()
 {
-  QGraphicsView * o = new QGraphicsView ( OPQWIDGET(1,0) );
+  QGraphicsView * o = new QGraphicsView ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+QGraphicsView ( QGraphicsScene * scene, QWidget * parent = nullptr )
 */
 void QGraphicsView_new2 ()
 {
-  QGraphicsView * o = new QGraphicsView ( PQGRAPHICSSCENE(1), OPQWIDGET(2,0) );
+  QGraphicsView * o = new QGraphicsView ( PQGRAPHICSSCENE(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QGraphicsView ( QWidget * parent = 0 )
-//[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+//[1]QGraphicsView ( QWidget * parent = nullptr )
+//[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {

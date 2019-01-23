@@ -86,25 +86,25 @@ RETURN
 #include <QAction>
 
 /*
-QToolBar ( const QString & title, QWidget * parent = 0 )
+QToolBar ( const QString & title, QWidget * parent = nullptr )
 */
 void QToolBar_new1 ()
 {
-  QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,0) );
+  QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QToolBar ( QWidget * parent = 0 )
+QToolBar ( QWidget * parent = nullptr )
 */
 void QToolBar_new2 ()
 {
-  QToolBar * o = new QToolBar ( OPQWIDGET(1,0) );
+  QToolBar * o = new QToolBar ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QToolBar ( const QString & title, QWidget * parent = 0 )
-//[2]QToolBar ( QWidget * parent = 0 )
+//[1]QToolBar ( const QString & title, QWidget * parent = nullptr )
+//[2]QToolBar ( QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {

@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QApplication * o = NULL;
+  QApplication * o = nullptr;
   o = new QApplication( argc, argv );
   _qt5xhb_returnNewObject( o, false );
 }
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 }
 
 /*
-static void setFont ( const QFont & font, const char * className = 0 )
+static void setFont ( const QFont & font, const char * className = nullptr )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETFONT )
     if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTCHAR(2) )
   {
 #endif
-      QApplication::setFont ( *PQFONT(1), OPCONSTCHAR(2,0) );
+      QApplication::setFont ( *PQFONT(1), OPCONSTCHAR(2,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 }
 
 /*
-static void setPalette ( const QPalette & palette, const char * className = 0 )
+static void setPalette ( const QPalette & palette, const char * className = nullptr )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
     if( ISBETWEEN(1,2) && ISQPALETTE(1) && ISOPTCHAR(2) )
   {
 #endif
-      QApplication::setPalette ( *PQPALETTE(1), OPCONSTCHAR(2,0) );
+      QApplication::setPalette ( *PQPALETTE(1), OPCONSTCHAR(2,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -56,25 +56,25 @@ RETURN
 #endif
 
 /*
-QSlider ( QWidget * parent = 0 )
+QSlider ( QWidget * parent = nullptr )
 */
 void QSlider_new1 ()
 {
-  QSlider * o = new QSlider ( OPQWIDGET(1,0) );
+  QSlider * o = new QSlider ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
+QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 void QSlider_new2 ()
 {
-  QSlider * o = new QSlider ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QSlider * o = new QSlider ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QSlider ( QWidget * parent = 0 )
-//[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
+//[1]QSlider ( QWidget * parent = nullptr )
+//[2]QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QSLIDER_NEW )
 {

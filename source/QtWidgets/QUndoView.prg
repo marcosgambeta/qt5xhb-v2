@@ -62,35 +62,35 @@ RETURN
 #include <QUndoStack>
 
 /*
-QUndoView ( QWidget * parent = 0 )
+QUndoView ( QWidget * parent = nullptr )
 */
 void QUndoView_new1 ()
 {
-  QUndoView * o = new QUndoView ( OPQWIDGET(1,0) );
+  QUndoView * o = new QUndoView ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
+QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
 */
 void QUndoView_new2 ()
 {
-  QUndoView * o = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,0) );
+  QUndoView * o = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
+QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
 */
 void QUndoView_new3 ()
 {
-  QUndoView * o = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,0) );
+  QUndoView * o = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QUndoView ( QWidget * parent = 0 )
-//[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
-//[3]QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
+//[1]QUndoView ( QWidget * parent = nullptr )
+//[2]QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
+//[3]QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {

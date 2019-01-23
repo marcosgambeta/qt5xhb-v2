@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QStatusBar ( QWidget * parent = 0 )
+QStatusBar ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QStatusBar * o = new QStatusBar ( OPQWIDGET(1,0) );
+    QStatusBar * o = new QStatusBar ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

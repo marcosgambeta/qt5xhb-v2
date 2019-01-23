@@ -116,47 +116,47 @@ RETURN
 #include <QMenu>
 
 /*
-QAction ( QObject * parent )
+QAction ( QObject * parent = nullptr )
 */
 void QAction_new1 ()
 {
-  QAction * o = new QAction ( PQOBJECT(1) );
+  QAction * o = new QAction ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QAction ( const QString & text, QObject * parent )
+QAction ( const QString & text, QObject * parent = nullptr )
 */
 void QAction_new2 ()
 {
-  QAction * o = new QAction ( PQSTRING(1), PQOBJECT(2) );
+  QAction * o = new QAction ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QAction ( const QIcon & icon, const QString & text, QObject * parent )
+QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
 */
 void QAction_new3 ()
 {
-  QAction * o = new QAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
+  QAction * o = new QAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QAction ( QObject * parent )
-//[2]QAction ( const QString & text, QObject * parent )
-//[3]QAction ( const QIcon & icon, const QString & text, QObject * parent )
+//[1]QAction ( QObject * parent = nullptr )
+//[2]QAction ( const QString & text, QObject * parent = nullptr )
+//[3]QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
 
 HB_FUNC_STATIC( QACTION_NEW )
 {
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QAction_new1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QAction_new2();
   }
-  else if( ISNUMPAR(3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QAction_new3();
   }
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
 }
 
 /*
-bool showStatusText ( QWidget * widget = 0 )
+bool showStatusText ( QWidget * widget = nullptr )
 */
 HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 {
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->showStatusText ( OPQWIDGET(1,0) ) );
+      RBOOL( obj->showStatusText ( OPQWIDGET(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

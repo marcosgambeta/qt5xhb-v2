@@ -316,13 +316,13 @@ RETURN
 #include <QWindow>
 
 /*
-explicit QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+explicit QWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QWIDGET_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QWidget * o = new QWidget ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QWidget * o = new QWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -6725,7 +6725,7 @@ HB_FUNC_STATIC( QWIDGET_SETTABORDER )
 }
 
 /*
-static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)
+static QWidget * createWindowContainer (QWindow *window, QWidget *parent=nullptr, Qt::WindowFlags flags=0)
 */
 HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
 {
@@ -6733,7 +6733,7 @@ HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
     if( ISBETWEEN(1,3) && ISQWINDOW(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
 #endif
-      QWidget * ptr = QWidget::createWindowContainer ( PQWINDOW(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+      QWidget * ptr = QWidget::createWindowContainer ( PQWINDOW(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

@@ -93,13 +93,13 @@ RETURN
 #endif
 
 /*
-QGraphicsGridLayout ( QGraphicsLayoutItem * parent = 0 )
+QGraphicsGridLayout ( QGraphicsLayoutItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSLAYOUTITEM(1)||ISNIL(1)) )
   {
-    QGraphicsGridLayout * o = new QGraphicsGridLayout ( ISNIL(1)? 0 : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1) );
+    QGraphicsGridLayout * o = new QGraphicsGridLayout ( ISNIL(1)? nullptr : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -105,13 +105,13 @@ RETURN
 #include <QTabBar>
 
 /*
-explicit QTabWidget ( QWidget * parent = 0 )
+explicit QTabWidget ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTABWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTabWidget * o = new QTabWidget ( OPQWIDGET(1,0) );
+    QTabWidget * o = new QTabWidget ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

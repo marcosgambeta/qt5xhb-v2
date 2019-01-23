@@ -81,13 +81,13 @@ RETURN
 #endif
 
 /*
-explicit QMenuBar ( QWidget * parent = 0 )
+explicit QMenuBar ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QMENUBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QMenuBar * o = new QMenuBar ( OPQWIDGET(1,0) );
+    QMenuBar * o = new QMenuBar ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -71,13 +71,13 @@ RETURN
 #endif
 
 /*
-prototype=explicit QDoubleSpinBox ( QWidget * parent = 0 )
+prototype=explicit QDoubleSpinBox ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QDoubleSpinBox * o = new QDoubleSpinBox ( OPQWIDGET(1,0) );
+    QDoubleSpinBox * o = new QDoubleSpinBox ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

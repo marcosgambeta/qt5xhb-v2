@@ -77,25 +77,25 @@ RETURN
 #endif
 
 /*
-QSplitter ( QWidget * parent = 0 )
+QSplitter ( QWidget * parent = nullptr )
 */
 void QSplitter_new1 ()
 {
-  QSplitter * o = new QSplitter ( OPQWIDGET(1,0) );
+  QSplitter * o = new QSplitter ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
+QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 void QSplitter_new2 ()
 {
-  QSplitter * o = new QSplitter ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QSplitter * o = new QSplitter ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QSplitter ( QWidget * parent = 0 )
-//[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
+//[1]QSplitter ( QWidget * parent = nullptr )
+//[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {

@@ -59,13 +59,13 @@ RETURN
 #endif
 
 /*
-QFontComboBox ( QWidget * parent = 0 )
+QFontComboBox ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QFontComboBox * o = new QFontComboBox ( OPQWIDGET(1,0) );
+    QFontComboBox * o = new QFontComboBox ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

@@ -250,7 +250,7 @@ void QToolTip_showText1 ()
 }
 
 /*
-void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
+void showText(const QPoint & pos, const QString & text, QWidget * w = nullptr)
 */
 void QToolTip_showText2 ()
 {
@@ -258,7 +258,7 @@ void QToolTip_showText2 ()
 
   if( obj != nullptr )
   {
-      obj->showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
+      obj->showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -67,25 +67,25 @@ RETURN
 #endif
 
 /*
-QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
+QGraphicsPixmapItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPixmapItem_new1 ()
 {
-  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
+QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPixmapItem_new2 ()
 {
-  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( *PQPIXMAP(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( *PQPIXMAP(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
+//[1]QGraphicsPixmapItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {

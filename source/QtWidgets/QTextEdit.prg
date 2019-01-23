@@ -146,25 +146,25 @@ RETURN
 #include <QMenu>
 
 /*
-QTextEdit ( QWidget * parent = 0 )
+QTextEdit ( QWidget * parent = nullptr )
 */
 void QTextEdit_new1 ()
 {
-  QTextEdit * o = new QTextEdit ( OPQWIDGET(1,0) );
+  QTextEdit * o = new QTextEdit ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QTextEdit ( const QString & text, QWidget * parent = 0 )
+QTextEdit ( const QString & text, QWidget * parent = nullptr )
 */
 void QTextEdit_new2 ()
 {
-  QTextEdit * o = new QTextEdit ( PQSTRING(1), OPQWIDGET(2,0) );
+  QTextEdit * o = new QTextEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QTextEdit ( QWidget * parent = 0 )
-//[2]QTextEdit ( const QString & text, QWidget * parent = 0 )
+//[1]QTextEdit ( QWidget * parent = nullptr )
+//[2]QTextEdit ( const QString & text, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {

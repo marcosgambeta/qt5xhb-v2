@@ -135,25 +135,25 @@ RETURN
 #include <QMenu>
 
 /*
-explicit QLineEdit ( QWidget * parent = 0 )
+explicit QLineEdit ( QWidget * parent = nullptr )
 */
 void QLineEdit_new1 ()
 {
-  QLineEdit * o = new QLineEdit ( OPQWIDGET(1,0) );
+  QLineEdit * o = new QLineEdit ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
+explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
 */
 void QLineEdit_new2 ()
 {
-  QLineEdit * o = new QLineEdit ( PQSTRING(1), OPQWIDGET(2,0) );
+  QLineEdit * o = new QLineEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QLineEdit ( QWidget * parent = 0 )
-//[2]explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
+//[1]explicit QLineEdit ( QWidget * parent = nullptr )
+//[2]explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
@@ -1363,7 +1363,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETVALIDATOR )
     if( ISBETWEEN(0,1) && (ISQVALIDATOR(1)||ISNIL(1)) )
     {
 #endif
-      obj->setValidator ( OPQVALIDATOR(1,0) );
+      obj->setValidator ( OPQVALIDATOR(1,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

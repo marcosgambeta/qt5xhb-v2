@@ -67,13 +67,13 @@ RETURN
 #endif
 
 /*
-explicit QSpinBox ( QWidget * parent = 0 )
+explicit QSpinBox ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QSpinBox * o = new QSpinBox ( OPQWIDGET(1,0) );
+    QSpinBox * o = new QSpinBox ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

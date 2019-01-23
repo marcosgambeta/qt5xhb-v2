@@ -88,25 +88,25 @@ RETURN
 #endif
 
 /*
-QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
+QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = nullptr)
 */
 void QDirModel_new1 ()
 {
-  QDirModel * o = new QDirModel ( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,0) );
+  QDirModel * o = new QDirModel ( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QDirModel(QObject *parent = 0)
+QDirModel(QObject *parent = nullptr)
 */
 void QDirModel_new2 ()
 {
-  QDirModel * o = new QDirModel ( OPQOBJECT(1,0) );
+  QDirModel * o = new QDirModel ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
-//[2]QDirModel(QObject *parent = 0)
+//[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = nullptr)
+//[2]QDirModel(QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {

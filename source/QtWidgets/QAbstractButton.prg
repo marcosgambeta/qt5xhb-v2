@@ -84,11 +84,11 @@ RETURN
 #include <QButtonGroup>
 
 /*
-explicit QAbstractButton(QWidget *parent = Q_NULLPTR) (abstract)
+explicit QAbstractButton(QWidget *parent = nullptr) (abstract)
 */
 
 /*
-QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = Q_NULLPTR) [protected]
+QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = nullptr) [protected]
 */
 
 /*

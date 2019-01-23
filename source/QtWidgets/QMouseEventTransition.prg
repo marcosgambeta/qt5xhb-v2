@@ -57,25 +57,25 @@ RETURN
 #include <QPainterPath>
 
 /*
-QMouseEventTransition ( QState * sourceState = 0 )
+QMouseEventTransition ( QState * sourceState = nullptr )
 */
 void QMouseEventTransition_new1 ()
 {
-  QMouseEventTransition * o = new QMouseEventTransition ( OPQSTATE(1,0) );
+  QMouseEventTransition * o = new QMouseEventTransition ( OPQSTATE(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = nullptr )
 */
 void QMouseEventTransition_new2 ()
 {
-  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
+  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QMouseEventTransition ( QState * sourceState = 0 )
-//[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+//[1]QMouseEventTransition ( QState * sourceState = nullptr )
+//[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = nullptr )
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {

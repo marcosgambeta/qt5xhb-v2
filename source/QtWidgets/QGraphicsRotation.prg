@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QGraphicsRotation ( QObject * parent = 0 )
+QGraphicsRotation ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QGraphicsRotation * o = new QGraphicsRotation ( OPQOBJECT(1,0) );
+    QGraphicsRotation * o = new QGraphicsRotation ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

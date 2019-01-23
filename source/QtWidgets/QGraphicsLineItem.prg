@@ -65,35 +65,35 @@ RETURN
 #include <QPen>
 
 /*
-QGraphicsLineItem ( QGraphicsItem * parent = 0 )
+QGraphicsLineItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsLineItem_new1 ()
 {
-  QGraphicsLineItem * o = new QGraphicsLineItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  QGraphicsLineItem * o = new QGraphicsLineItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
+QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsLineItem_new2 ()
 {
-  QGraphicsLineItem * o = new QGraphicsLineItem ( *PQLINEF(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  QGraphicsLineItem * o = new QGraphicsLineItem ( *PQLINEF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsLineItem_new3 ()
 {
-  QGraphicsLineItem * o = new QGraphicsLineItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
+  QGraphicsLineItem * o = new QGraphicsLineItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
-//[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+//[1]QGraphicsLineItem ( QGraphicsItem * parent = nullptr )
+//[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = nullptr )
+//[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = nullptr )
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -70,25 +70,25 @@ RETURN
 #include <QMenu>
 
 /*
-QSystemTrayIcon(QObject * parent = 0)
+QSystemTrayIcon(QObject * parent = nullptr)
 */
 void QSystemTrayIcon_new1 ()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,0) );
+  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
+QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
 */
 void QSystemTrayIcon_new2 ()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
+  QSystemTrayIcon * o = new QSystemTrayIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QSystemTrayIcon(QObject * parent = 0)
-//[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
+//[1]QSystemTrayIcon(QObject * parent = nullptr)
+//[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {

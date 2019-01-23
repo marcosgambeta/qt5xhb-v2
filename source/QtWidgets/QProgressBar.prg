@@ -74,13 +74,13 @@ RETURN
 #endif
 
 /*
-QProgressBar ( QWidget * parent = 0 )
+QProgressBar ( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QProgressBar * o = new QProgressBar ( OPQWIDGET(1,0) );
+    QProgressBar * o = new QProgressBar ( OPQWIDGET(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

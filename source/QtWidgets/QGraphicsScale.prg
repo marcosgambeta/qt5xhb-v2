@@ -64,13 +64,13 @@ RETURN
 #endif
 
 /*
-QGraphicsScale ( QObject * parent = 0 )
+QGraphicsScale ( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QGraphicsScale * o = new QGraphicsScale ( OPQOBJECT(1,0) );
+    QGraphicsScale * o = new QGraphicsScale ( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

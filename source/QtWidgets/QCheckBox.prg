@@ -57,25 +57,25 @@ RETURN
 #endif
 
 /*
-explicit QCheckBox ( QWidget * parent = 0 )
+explicit QCheckBox ( QWidget * parent = nullptr )
 */
 void QCheckBox_new1 ()
 {
-  QCheckBox * o = new QCheckBox ( OPQWIDGET(1,0) );
+  QCheckBox * o = new QCheckBox ( OPQWIDGET(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
+explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
 */
 void QCheckBox_new2 ()
 {
-  QCheckBox * o = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,0) );
+  QCheckBox * o = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]explicit QCheckBox ( QWidget * parent = 0 )
-//[2]explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
+//[1]explicit QCheckBox ( QWidget * parent = nullptr )
+//[2]explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {

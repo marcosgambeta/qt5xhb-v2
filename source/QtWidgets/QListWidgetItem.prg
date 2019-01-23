@@ -103,29 +103,29 @@ RETURN
 #endif
 
 /*
-QListWidgetItem ( QListWidget * parent = 0, int type = Type )
+QListWidgetItem ( QListWidget * parent = nullptr, int type = Type )
 */
 void QListWidgetItem_new1 ()
 {
-  QListWidgetItem * o = new QListWidgetItem ( OPQLISTWIDGET(1,0), OPINT(2,QListWidgetItem::Type) );
+  QListWidgetItem * o = new QListWidgetItem ( OPQLISTWIDGET(1,nullptr), OPINT(2,QListWidgetItem::Type) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
+QListWidgetItem ( const QString & text, QListWidget * parent = nullptr, int type = Type )
 */
 void QListWidgetItem_new2 ()
 {
-  QListWidgetItem * o = new QListWidgetItem ( PQSTRING(1), OPQLISTWIDGET(2,0), OPINT(3,QListWidgetItem::Type) );
+  QListWidgetItem * o = new QListWidgetItem ( PQSTRING(1), OPQLISTWIDGET(2,nullptr), OPINT(3,QListWidgetItem::Type) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
-QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
+QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = nullptr, int type = Type )
 */
 void QListWidgetItem_new3 ()
 {
-  QListWidgetItem * o = new QListWidgetItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,0), OPINT(4,QListWidgetItem::Type) );
+  QListWidgetItem * o = new QListWidgetItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,nullptr), OPINT(4,QListWidgetItem::Type) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -138,9 +138,9 @@ void QListWidgetItem_new4 ()
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
-//[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
-//[3]QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
+//[1]QListWidgetItem ( QListWidget * parent = nullptr, int type = Type )
+//[2]QListWidgetItem ( const QString & text, QListWidget * parent = nullptr, int type = Type )
+//[3]QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = nullptr, int type = Type )
 //[4]QListWidgetItem ( const QListWidgetItem & other )
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
