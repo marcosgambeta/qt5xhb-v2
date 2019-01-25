@@ -9,6 +9,7 @@ $module=QtCore
 
 $header
 
+#include "Qt.ch"
 #include "QAbstractAnimation.ch"
 #include "QAbstractItemModel.ch"
 #include "QByteArray.ch"
@@ -52,7 +53,6 @@ $header
 #include "QStateMachine.ch"
 #include "QSysInfo.ch"
 #include "QSystemSemaphore.ch"
-#include "QtCore.ch"
 #include "QTextBoundaryFinder.ch"
 #include "QTextCodec.ch"
 #include "QTextStream.ch"
