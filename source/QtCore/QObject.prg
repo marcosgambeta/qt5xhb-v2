@@ -37,6 +37,7 @@ CLASS QObject
    METHOD event
    METHOD eventFilter
    METHOD findChild
+   METHOD findChildren<QObject *>
    METHOD findChildren
    METHOD inherits
    METHOD installEventFilter
@@ -2242,10 +2243,10 @@ void destroyed( QObject * obj = nullptr )
 */
 HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {
+  QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "destroyed(QObject*)" ) )
@@ -2285,8 +2286,6 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
   }
   else if( hb_pcount() == 0 )
   {
-    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "destroyed(QObject*)" );
@@ -2311,10 +2310,10 @@ void objectNameChanged( const QString & objectName )
 */
 HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 {
+  QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "objectNameChanged(QString)" ) )
@@ -2353,8 +2352,6 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "objectNameChanged(QString)" );

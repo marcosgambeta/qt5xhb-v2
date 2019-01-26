@@ -518,10 +518,10 @@ void currentLoopChanged( int currentLoop )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 {
+  QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentLoopChanged(int)" ) )
@@ -560,8 +560,6 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentLoopChanged(int)" );
@@ -586,10 +584,10 @@ void directionChanged( QAbstractAnimation::Direction newDirection )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 {
+  QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "directionChanged(QAbstractAnimation::Direction)" ) )
@@ -628,8 +626,6 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "directionChanged(QAbstractAnimation::Direction)" );
@@ -654,10 +650,10 @@ void finished()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
 {
+  QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -694,8 +690,6 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -720,10 +714,10 @@ void stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
 {
+  QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" ) )
@@ -764,8 +758,6 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );

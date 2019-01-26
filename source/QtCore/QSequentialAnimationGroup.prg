@@ -194,10 +194,10 @@ void currentAnimationChanged ( QAbstractAnimation * current )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 {
+  QSequentialAnimationGroup * sender = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSequentialAnimationGroup * sender = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentAnimationChanged(QAbstractAnimation*)" ) )
@@ -236,8 +236,6 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSequentialAnimationGroup * sender = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentAnimationChanged(QAbstractAnimation*)" );

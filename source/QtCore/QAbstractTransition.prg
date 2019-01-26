@@ -372,10 +372,10 @@ void triggered()
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
 {
+  QAbstractTransition * sender = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractTransition * sender = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "triggered()" ) )
@@ -412,8 +412,6 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractTransition * sender = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "triggered()" );

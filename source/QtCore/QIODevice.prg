@@ -886,10 +886,10 @@ void aboutToClose()
 */
 HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 {
+  QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToClose()" ) )
@@ -926,8 +926,6 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
   }
   else if( hb_pcount() == 0 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToClose()" );
@@ -952,10 +950,10 @@ void bytesWritten( qint64 bytes )
 */
 HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 {
+  QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
@@ -994,8 +992,6 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
   }
   else if( hb_pcount() == 0 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bytesWritten(qint64)" );
@@ -1020,10 +1016,10 @@ void readChannelFinished()
 */
 HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 {
+  QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "readChannelFinished()" ) )
@@ -1060,8 +1056,6 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "readChannelFinished()" );
@@ -1086,10 +1080,10 @@ void readyRead()
 */
 HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 {
+  QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "readyRead()" ) )
@@ -1126,8 +1120,6 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
   }
   else if( hb_pcount() == 0 )
   {
-    QIODevice * sender = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "readyRead()" );

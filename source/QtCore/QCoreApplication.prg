@@ -912,10 +912,10 @@ void aboutToQuit()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {
+  QCoreApplication * sender = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCoreApplication * sender = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToQuit()" ) )
@@ -952,8 +952,6 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
   }
   else if( hb_pcount() == 0 )
   {
-    QCoreApplication * sender = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToQuit()" );

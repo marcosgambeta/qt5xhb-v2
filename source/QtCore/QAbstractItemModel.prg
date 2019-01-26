@@ -935,10 +935,10 @@ void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnsAboutToBeInserted(QModelIndex,int,int)" ) )
@@ -981,8 +981,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnsAboutToBeInserted(QModelIndex,int,int)" );
@@ -1007,10 +1005,10 @@ void columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, i
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) )
@@ -1057,8 +1055,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -1083,10 +1079,10 @@ void columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnsAboutToBeRemoved(QModelIndex,int,int)" ) )
@@ -1129,8 +1125,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
@@ -1155,10 +1149,10 @@ void columnsInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnsInserted(QModelIndex,int,int)" ) )
@@ -1201,8 +1195,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnsInserted(QModelIndex,int,int)" );
@@ -1227,10 +1219,10 @@ void columnsMoved( const QModelIndex & sourceParent, int sourceStart, int source
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" ) )
@@ -1277,8 +1269,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -1303,10 +1293,10 @@ void columnsRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnsRemoved(QModelIndex,int,int)" ) )
@@ -1349,8 +1339,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnsRemoved(QModelIndex,int,int)" );
@@ -1375,10 +1363,10 @@ void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataChanged(QModelIndex,QModelIndex)" ) )
@@ -1419,8 +1407,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataChanged(QModelIndex,QModelIndex)" );
@@ -1445,10 +1431,10 @@ void headerDataChanged( Qt::Orientation orientation, int first, int last )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "headerDataChanged(Qt::Orientation,int,int)" ) )
@@ -1491,8 +1477,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "headerDataChanged(Qt::Orientation,int,int)" );
@@ -1517,10 +1501,10 @@ void layoutAboutToBeChanged()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "layoutAboutToBeChanged()" ) )
@@ -1557,8 +1541,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "layoutAboutToBeChanged()" );
@@ -1583,10 +1565,10 @@ void layoutChanged()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "layoutChanged()" ) )
@@ -1623,8 +1605,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "layoutChanged()" );
@@ -1649,10 +1629,10 @@ void modelAboutToBeReset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modelAboutToBeReset()" ) )
@@ -1689,8 +1669,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modelAboutToBeReset()" );
@@ -1715,10 +1693,10 @@ void modelReset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modelReset()" ) )
@@ -1755,8 +1733,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modelReset()" );
@@ -1781,10 +1757,10 @@ void rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsAboutToBeInserted(QModelIndex,int,int)" ) )
@@ -1827,8 +1803,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsAboutToBeInserted(QModelIndex,int,int)" );
@@ -1853,10 +1827,10 @@ void rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) )
@@ -1903,8 +1877,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -1929,10 +1901,10 @@ void rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsAboutToBeRemoved(QModelIndex,int,int)" ) )
@@ -1975,8 +1947,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
@@ -2001,10 +1971,10 @@ void rowsInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsInserted(QModelIndex,int,int)" ) )
@@ -2047,8 +2017,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsInserted(QModelIndex,int,int)" );
@@ -2073,10 +2041,10 @@ void rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" ) )
@@ -2123,8 +2091,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -2149,10 +2115,10 @@ void rowsRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 {
+  QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsRemoved(QModelIndex,int,int)" ) )
@@ -2195,8 +2161,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsRemoved(QModelIndex,int,int)" );

@@ -689,10 +689,10 @@ void selectionChanged( const QItemSelection & selected, const QItemSelection & d
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
+  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged(QItemSelection,QItemSelection)" ) )
@@ -733,8 +733,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged(QItemSelection,QItemSelection)" );
@@ -759,10 +757,10 @@ void currentChanged( const QModelIndex & current, const QModelIndex & previous )
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
+  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentChanged(QModelIndex,QModelIndex)" ) )
@@ -803,8 +801,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentChanged(QModelIndex,QModelIndex)" );
@@ -829,10 +825,10 @@ void currentRowChanged( const QModelIndex & current, const QModelIndex & previou
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
+  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)" ) )
@@ -873,8 +869,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentRowChanged(QModelIndex,QModelIndex)" );
@@ -899,10 +893,10 @@ void currentColumnChanged( const QModelIndex & current, const QModelIndex & prev
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
+  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" ) )
@@ -943,8 +937,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" );

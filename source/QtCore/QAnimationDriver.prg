@@ -271,10 +271,10 @@ void started()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
 {
+  QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "started()" ) )
@@ -311,8 +311,6 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "started()" );
@@ -337,10 +335,10 @@ void stopped()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
 {
+  QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stopped()" ) )
@@ -377,8 +375,6 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stopped()" );

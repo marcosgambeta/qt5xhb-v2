@@ -444,10 +444,10 @@ void finished()
 */
 HB_FUNC_STATIC( QSTATE_ONFINISHED )
 {
+  QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -484,8 +484,6 @@ HB_FUNC_STATIC( QSTATE_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -510,10 +508,10 @@ void propertiesAssigned()
 */
 HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
 {
+  QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "propertiesAssigned()" ) )
@@ -550,8 +548,6 @@ HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
   }
   else if( hb_pcount() == 0 )
   {
-    QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "propertiesAssigned()" );

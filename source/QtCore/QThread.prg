@@ -560,10 +560,10 @@ void finished()
 */
 HB_FUNC_STATIC( QTHREAD_ONFINISHED )
 {
+  QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -600,8 +600,6 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -626,10 +624,10 @@ void started()
 */
 HB_FUNC_STATIC( QTHREAD_ONSTARTED )
 {
+  QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "started()" ) )
@@ -666,8 +664,6 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "started()" );

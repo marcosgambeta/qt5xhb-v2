@@ -346,10 +346,10 @@ void mapped( int arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
 {
+  QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(int)" ) )
@@ -388,8 +388,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(int)" );
@@ -414,10 +412,10 @@ void mapped( const QString & arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
 {
+  QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(QString)" ) )
@@ -456,8 +454,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(QString)" );
@@ -482,10 +478,10 @@ void mapped( QWidget * arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
 {
+  QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(QWidget*)" ) )
@@ -524,8 +520,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
   }
   else if( hb_pcount() == 0 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(QWidget*)" );
@@ -550,10 +544,10 @@ void mapped( QObject * arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
 {
+  QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mapped(QObject*)" ) )
@@ -592,8 +586,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
   }
   else if( hb_pcount() == 0 )
   {
-    QSignalMapper * sender = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mapped(QObject*)" );
