@@ -298,10 +298,10 @@ void accessTokenUrlChanged( const QUrl & accessTokenUrl )
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QOAuth2AuthorizationCodeFlow * sender = (QOAuth2AuthorizationCodeFlow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QOAuth2AuthorizationCodeFlow * sender = (QOAuth2AuthorizationCodeFlow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "accessTokenUrlChanged(QUrl)" ) )
@@ -340,8 +340,6 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QOAuth2AuthorizationCodeFlow * sender = (QOAuth2AuthorizationCodeFlow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "accessTokenUrlChanged(QUrl)" );
