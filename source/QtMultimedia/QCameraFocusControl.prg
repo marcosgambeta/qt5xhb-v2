@@ -343,10 +343,10 @@ void customFocusPointChanged( const QPointF & point )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
 {
+  QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "customFocusPointChanged(QPointF)" ) )
@@ -385,8 +385,6 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "customFocusPointChanged(QPointF)" );
@@ -411,10 +409,10 @@ void focusModeChanged( QCameraFocus::FocusModes mode )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
 {
+  QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusModeChanged(QCameraFocus::FocusModes)" ) )
@@ -453,8 +451,6 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusModeChanged(QCameraFocus::FocusModes)" );
@@ -479,10 +475,10 @@ void focusPointModeChanged( QCameraFocus::FocusPointMode mode )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
 {
+  QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" ) )
@@ -521,8 +517,6 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
@@ -547,10 +541,10 @@ void focusZonesChanged()
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
 {
+  QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusZonesChanged()" ) )
@@ -587,8 +581,6 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraFocusControl * sender = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusZonesChanged()" );

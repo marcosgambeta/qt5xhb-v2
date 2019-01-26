@@ -139,10 +139,10 @@ void configurationChanged( const QNetworkConfiguration & configuration )
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 {
+  QMediaNetworkAccessControl * sender = (QMediaNetworkAccessControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaNetworkAccessControl * sender = (QMediaNetworkAccessControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "configurationChanged(QNetworkConfiguration)" ) )
@@ -181,8 +181,6 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaNetworkAccessControl * sender = (QMediaNetworkAccessControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "configurationChanged(QNetworkConfiguration)" );

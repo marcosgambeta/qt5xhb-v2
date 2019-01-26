@@ -1079,10 +1079,10 @@ void audioAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOAVAILABLECHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "audioAvailableChanged(bool)" ) )
@@ -1121,8 +1121,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOAVAILABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "audioAvailableChanged(bool)" );
@@ -1148,10 +1146,10 @@ void audioRoleChanged( QAudio::Role role )
 HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "audioRoleChanged(QAudio::Role)" ) )
@@ -1190,8 +1188,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "audioRoleChanged(QAudio::Role)" );
@@ -1217,10 +1213,10 @@ void bufferStatusChanged( int percentFilled )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONBUFFERSTATUSCHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bufferStatusChanged(int)" ) )
@@ -1259,8 +1255,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONBUFFERSTATUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bufferStatusChanged(int)" );
@@ -1285,10 +1279,10 @@ void currentMediaChanged( const QMediaContent & media )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONCURRENTMEDIACHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentMediaChanged(QMediaContent)" ) )
@@ -1327,8 +1321,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONCURRENTMEDIACHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentMediaChanged(QMediaContent)" );
@@ -1353,10 +1345,10 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONDURATIONCHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
@@ -1395,8 +1387,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONDURATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "durationChanged(qint64)" );
@@ -1421,10 +1411,10 @@ void error( QMediaPlayer::Error error )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONERROR )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QMediaPlayer::Error)" ) )
@@ -1463,8 +1453,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QMediaPlayer::Error)" );
@@ -1489,10 +1477,10 @@ void mediaChanged( const QMediaContent & media )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIACHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mediaChanged(QMediaContent)" ) )
@@ -1531,8 +1519,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIACHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mediaChanged(QMediaContent)" );
@@ -1557,10 +1543,10 @@ void mediaStatusChanged( QMediaPlayer::MediaStatus status )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIASTATUSCHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" ) )
@@ -1599,8 +1585,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIASTATUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
@@ -1625,10 +1609,10 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONMUTEDCHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
@@ -1667,8 +1651,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMUTEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mutedChanged(bool)" );
@@ -1693,10 +1675,10 @@ void networkConfigurationChanged( const QNetworkConfiguration & configuration )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONNETWORKCONFIGURATIONCHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "networkConfigurationChanged(QNetworkConfiguration)" ) )
@@ -1735,8 +1717,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONNETWORKCONFIGURATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "networkConfigurationChanged(QNetworkConfiguration)" );
@@ -1761,10 +1741,10 @@ void playbackRateChanged( qreal rate )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONPLAYBACKRATECHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "playbackRateChanged(qreal)" ) )
@@ -1803,8 +1783,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONPLAYBACKRATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "playbackRateChanged(qreal)" );
@@ -1829,10 +1807,10 @@ void positionChanged( qint64 position )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONPOSITIONCHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionChanged(qint64)" ) )
@@ -1871,8 +1849,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionChanged(qint64)" );
@@ -1897,10 +1873,10 @@ void seekableChanged( bool seekable )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONSEEKABLECHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seekableChanged(bool)" ) )
@@ -1939,8 +1915,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONSEEKABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seekableChanged(bool)" );
@@ -1965,10 +1939,10 @@ void stateChanged( QMediaPlayer::State state )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONSTATECHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QMediaPlayer::State)" ) )
@@ -2007,8 +1981,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QMediaPlayer::State)" );
@@ -2033,10 +2005,10 @@ void videoAvailableChanged( bool videoAvailable )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONVIDEOAVAILABLECHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "videoAvailableChanged(bool)" ) )
@@ -2075,8 +2047,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONVIDEOAVAILABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "videoAvailableChanged(bool)" );
@@ -2101,10 +2071,10 @@ void volumeChanged( int volume )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ONVOLUMECHANGED )
 {
+  QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
@@ -2143,8 +2113,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONVOLUMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "volumeChanged(int)" );

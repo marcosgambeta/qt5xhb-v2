@@ -517,10 +517,10 @@ void bufferAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bufferAvailableChanged(bool)" ) )
@@ -559,8 +559,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bufferAvailableChanged(bool)" );
@@ -585,10 +583,10 @@ void bufferReady()
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bufferReady()" ) )
@@ -625,8 +623,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bufferReady()" );
@@ -651,10 +647,10 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
@@ -693,8 +689,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "durationChanged(qint64)" );
@@ -719,10 +713,10 @@ void error( QAudioDecoder::Error error )
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QAudioDecoder::Error)" ) )
@@ -761,8 +755,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QAudioDecoder::Error)" );
@@ -787,10 +779,10 @@ void finished()
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -827,8 +819,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -853,10 +843,10 @@ void formatChanged( const QAudioFormat & format )
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "formatChanged(QAudioFormat)" ) )
@@ -895,8 +885,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "formatChanged(QAudioFormat)" );
@@ -921,10 +909,10 @@ void positionChanged( qint64 position )
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionChanged(qint64)" ) )
@@ -963,8 +951,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionChanged(qint64)" );
@@ -989,10 +975,10 @@ void sourceChanged()
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sourceChanged()" ) )
@@ -1029,8 +1015,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sourceChanged()" );
@@ -1055,10 +1039,10 @@ void stateChanged( QAudioDecoder::State state )
 */
 HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 {
+  QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QAudioDecoder::State)" ) )
@@ -1097,8 +1081,6 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QAudioDecoder::State)" );

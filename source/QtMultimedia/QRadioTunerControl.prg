@@ -738,10 +738,10 @@ void stateChanged( QRadioTuner::State state )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QRadioTuner::State)" ) )
@@ -780,8 +780,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QRadioTuner::State)" );
@@ -806,10 +804,10 @@ void bandChanged( QRadioTuner::Band band )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bandChanged(QRadioTuner::Band)" ) )
@@ -848,8 +846,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bandChanged(QRadioTuner::Band)" );
@@ -874,10 +870,10 @@ void frequencyChanged( int frequency )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frequencyChanged(int)" ) )
@@ -916,8 +912,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frequencyChanged(int)" );
@@ -942,10 +936,10 @@ void stereoStatusChanged( bool stereo )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stereoStatusChanged(bool)" ) )
@@ -984,8 +978,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stereoStatusChanged(bool)" );
@@ -1010,10 +1002,10 @@ void searchingChanged( bool searching )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "searchingChanged(bool)" ) )
@@ -1052,8 +1044,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "searchingChanged(bool)" );
@@ -1078,10 +1068,10 @@ void signalStrengthChanged( int signalStrength )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "signalStrengthChanged(int)" ) )
@@ -1120,8 +1110,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "signalStrengthChanged(int)" );
@@ -1146,10 +1134,10 @@ void volumeChanged( int volume )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
@@ -1188,8 +1176,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "volumeChanged(int)" );
@@ -1214,10 +1200,10 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
@@ -1256,8 +1242,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mutedChanged(bool)" );
@@ -1282,10 +1266,10 @@ void error( QRadioTuner::Error err )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QRadioTuner::Error)" ) )
@@ -1324,8 +1308,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QRadioTuner::Error)" );
@@ -1350,10 +1332,10 @@ void stationFound( int frequency, QString stationId )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stationFound(int,QString)" ) )
@@ -1394,8 +1376,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stationFound(int,QString)" );
@@ -1420,10 +1400,10 @@ void antennaConnectedChanged( bool connectionStatus )
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
 {
+  QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "antennaConnectedChanged(bool)" ) )
@@ -1462,8 +1442,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "antennaConnectedChanged(bool)" );

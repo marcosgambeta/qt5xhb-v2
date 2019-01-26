@@ -630,10 +630,10 @@ void bufferFormatChanged( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" ) )
@@ -672,8 +672,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
@@ -698,10 +696,10 @@ void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destina
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) )
@@ -740,8 +738,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
@@ -766,10 +762,10 @@ void error( int id, QCameraImageCapture::Error error, const QString & errorStrin
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(int,QCameraImageCapture::Error,QString)" ) )
@@ -812,8 +808,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(int,QCameraImageCapture::Error,QString)" );
@@ -838,10 +832,10 @@ void imageAvailable( int id, const QVideoFrame & buffer )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "imageAvailable(int,QVideoFrame)" ) )
@@ -882,8 +876,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "imageAvailable(int,QVideoFrame)" );
@@ -908,10 +900,10 @@ void imageCaptured( int id, const QImage & preview )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "imageCaptured(int,QImage)" ) )
@@ -952,8 +944,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "imageCaptured(int,QImage)" );
@@ -978,10 +968,10 @@ void imageExposed( int id )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "imageExposed(int)" ) )
@@ -1020,8 +1010,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "imageExposed(int)" );
@@ -1046,10 +1034,10 @@ void imageMetadataAvailable( int id, const QString & key, const QVariant & value
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "imageMetadataAvailable(int,QString,QVariant)" ) )
@@ -1092,8 +1080,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "imageMetadataAvailable(int,QString,QVariant)" );
@@ -1118,10 +1104,10 @@ void imageSaved( int id, const QString & fileName )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "imageSaved(int,QString)" ) )
@@ -1162,8 +1148,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "imageSaved(int,QString)" );
@@ -1188,10 +1172,10 @@ void readyForCaptureChanged( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
 {
+  QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "readyForCaptureChanged(bool)" ) )
@@ -1230,8 +1214,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraImageCapture * sender = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "readyForCaptureChanged(bool)" );

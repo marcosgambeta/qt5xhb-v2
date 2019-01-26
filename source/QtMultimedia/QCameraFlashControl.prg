@@ -179,10 +179,10 @@ void flashReady( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 {
+  QCameraFlashControl * sender = (QCameraFlashControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraFlashControl * sender = (QCameraFlashControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flashReady(bool)" ) )
@@ -221,8 +221,6 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraFlashControl * sender = (QCameraFlashControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flashReady(bool)" );

@@ -259,10 +259,10 @@ void captureModeChanged( QCamera::CaptureModes mode )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 {
+  QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "captureModeChanged(QCamera::CaptureModes)" ) )
@@ -301,8 +301,6 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "captureModeChanged(QCamera::CaptureModes)" );
@@ -327,10 +325,10 @@ void error( int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
 {
+  QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(int,QString)" ) )
@@ -371,8 +369,6 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(int,QString)" );
@@ -397,10 +393,10 @@ void stateChanged( QCamera::State state )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
 {
+  QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QCamera::State)" ) )
@@ -439,8 +435,6 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QCamera::State)" );
@@ -465,10 +459,10 @@ void statusChanged( QCamera::Status status )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
 {
+  QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QCamera::Status)" ) )
@@ -507,8 +501,6 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QCamera::Status)" );

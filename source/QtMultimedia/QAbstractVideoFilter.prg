@@ -168,10 +168,10 @@ void activeChanged()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
 {
+  QAbstractVideoFilter * sender = (QAbstractVideoFilter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractVideoFilter * sender = (QAbstractVideoFilter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeChanged()" ) )
@@ -208,8 +208,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractVideoFilter * sender = (QAbstractVideoFilter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeChanged()" );

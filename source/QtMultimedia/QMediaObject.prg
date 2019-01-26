@@ -359,10 +359,10 @@ void availabilityChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
 {
+  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "availabilityChanged(bool)" ) )
@@ -401,8 +401,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "availabilityChanged(bool)" );
@@ -427,10 +425,10 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
 {
+  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) )
@@ -469,8 +467,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
@@ -495,10 +491,10 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
 {
+  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
@@ -537,8 +533,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataAvailableChanged(bool)" );
@@ -563,10 +557,10 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
 {
+  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataChanged()" ) )
@@ -603,8 +597,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataChanged()" );
@@ -629,10 +621,10 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
 {
+  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
@@ -673,8 +665,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataChanged(QString,QVariant)" );
@@ -699,10 +689,10 @@ void notifyIntervalChanged( int milliseconds )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
 {
+  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "notifyIntervalChanged(int)" ) )
@@ -741,8 +731,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "notifyIntervalChanged(int)" );

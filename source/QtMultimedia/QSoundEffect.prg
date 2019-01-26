@@ -534,10 +534,10 @@ void sourceChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sourceChanged()" ) )
@@ -574,8 +574,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sourceChanged()" );
@@ -600,10 +598,10 @@ void loopCountChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loopCountChanged()" ) )
@@ -640,8 +638,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loopCountChanged()" );
@@ -666,10 +662,10 @@ void loopsRemainingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loopsRemainingChanged()" ) )
@@ -706,8 +702,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loopsRemainingChanged()" );
@@ -732,10 +726,10 @@ void volumeChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "volumeChanged()" ) )
@@ -772,8 +766,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "volumeChanged()" );
@@ -798,10 +790,10 @@ void mutedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mutedChanged()" ) )
@@ -838,8 +830,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mutedChanged()" );
@@ -864,10 +854,10 @@ void loadedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadedChanged()" ) )
@@ -904,8 +894,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadedChanged()" );
@@ -930,10 +918,10 @@ void playingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "playingChanged()" ) )
@@ -970,8 +958,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "playingChanged()" );
@@ -996,10 +982,10 @@ void statusChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged()" ) )
@@ -1036,8 +1022,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged()" );
@@ -1062,10 +1046,10 @@ void categoryChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 {
+  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "categoryChanged()" ) )
@@ -1102,8 +1086,6 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "categoryChanged()" );

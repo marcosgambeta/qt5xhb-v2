@@ -1156,10 +1156,10 @@ void actualLocationChanged( const QUrl & location )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "actualLocationChanged(QUrl)" ) )
@@ -1198,8 +1198,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "actualLocationChanged(QUrl)" );
@@ -1224,10 +1222,10 @@ void availabilityChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "availabilityChanged(bool)" ) )
@@ -1266,8 +1264,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "availabilityChanged(bool)" );
@@ -1292,10 +1288,10 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) )
@@ -1334,8 +1330,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
@@ -1360,10 +1354,10 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
@@ -1402,8 +1396,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "durationChanged(qint64)" );
@@ -1428,10 +1420,10 @@ void error( QMediaRecorder::Error error )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QMediaRecorder::Error)" ) )
@@ -1470,8 +1462,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QMediaRecorder::Error)" );
@@ -1496,10 +1486,10 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
@@ -1538,8 +1528,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataAvailableChanged(bool)" );
@@ -1564,10 +1552,10 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataChanged()" ) )
@@ -1604,8 +1592,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataChanged()" );
@@ -1630,10 +1616,10 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
@@ -1674,8 +1660,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataChanged(QString,QVariant)" );
@@ -1700,10 +1684,10 @@ void metaDataWritableChanged( bool writable )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataWritableChanged(bool)" ) )
@@ -1742,8 +1726,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataWritableChanged(bool)" );
@@ -1768,10 +1750,10 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
@@ -1810,8 +1792,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "mutedChanged(bool)" );
@@ -1836,10 +1816,10 @@ void stateChanged( QMediaRecorder::State state )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QMediaRecorder::State)" ) )
@@ -1878,8 +1858,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QMediaRecorder::State)" );
@@ -1904,10 +1882,10 @@ void statusChanged( QMediaRecorder::Status status )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QMediaRecorder::Status)" ) )
@@ -1946,8 +1924,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QMediaRecorder::Status)" );
@@ -1972,10 +1948,10 @@ void volumeChanged( qreal volume )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
 {
+  QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "volumeChanged(qreal)" ) )
@@ -2014,8 +1990,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "volumeChanged(qreal)" );

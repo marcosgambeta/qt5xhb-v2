@@ -176,10 +176,10 @@ void audioRoleChanged(QAudio::Role role)
 HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  QAudioRoleControl * sender = (QAudioRoleControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioRoleControl * sender = (QAudioRoleControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "audioRoleChanged(QAudio::Role)" ) )
@@ -218,8 +218,6 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioRoleControl * sender = (QAudioRoleControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "audioRoleChanged(QAudio::Role)" );

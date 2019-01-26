@@ -851,10 +851,10 @@ void apertureChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 {
+  QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "apertureChanged(qreal)" ) )
@@ -893,8 +893,6 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "apertureChanged(qreal)" );
@@ -919,10 +917,10 @@ void apertureRangeChanged()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 {
+  QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "apertureRangeChanged()" ) )
@@ -959,8 +957,6 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "apertureRangeChanged()" );
@@ -985,10 +981,10 @@ void exposureCompensationChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 {
+  QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "exposureCompensationChanged(qreal)" ) )
@@ -1027,8 +1023,6 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "exposureCompensationChanged(qreal)" );
@@ -1053,10 +1047,10 @@ void flashReady( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
 {
+  QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flashReady(bool)" ) )
@@ -1095,8 +1089,6 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flashReady(bool)" );
@@ -1121,10 +1113,10 @@ void isoSensitivityChanged( int value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 {
+  QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "isoSensitivityChanged(int)" ) )
@@ -1163,8 +1155,6 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "isoSensitivityChanged(int)" );
@@ -1189,10 +1179,10 @@ void shutterSpeedChanged( qreal speed )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 {
+  QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shutterSpeedChanged(qreal)" ) )
@@ -1231,8 +1221,6 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shutterSpeedChanged(qreal)" );
@@ -1257,10 +1245,10 @@ void shutterSpeedRangeChanged()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 {
+  QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shutterSpeedRangeChanged()" ) )
@@ -1297,8 +1285,6 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCameraExposure * sender = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shutterSpeedRangeChanged()" );

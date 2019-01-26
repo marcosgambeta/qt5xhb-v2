@@ -379,10 +379,10 @@ void stationIdChanged( QString stationId )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 {
+  QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stationIdChanged(QString)" ) )
@@ -421,8 +421,6 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stationIdChanged(QString)" );
@@ -447,10 +445,10 @@ void programTypeChanged( QRadioData::ProgramType programType )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 {
+  QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "programTypeChanged(QRadioData::ProgramType)" ) )
@@ -489,8 +487,6 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "programTypeChanged(QRadioData::ProgramType)" );
@@ -515,10 +511,10 @@ void programTypeNameChanged( QString programTypeName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 {
+  QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "programTypeNameChanged(QString)" ) )
@@ -557,8 +553,6 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "programTypeNameChanged(QString)" );
@@ -583,10 +577,10 @@ void stationNameChanged( QString stationName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 {
+  QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stationNameChanged(QString)" ) )
@@ -625,8 +619,6 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stationNameChanged(QString)" );
@@ -651,10 +643,10 @@ void radioTextChanged( QString radioText )
 */
 HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 {
+  QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "radioTextChanged(QString)" ) )
@@ -693,8 +685,6 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "radioTextChanged(QString)" );
@@ -719,10 +709,10 @@ void alternativeFrequenciesEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
+  QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "alternativeFrequenciesEnabledChanged(bool)" ) )
@@ -761,8 +751,6 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "alternativeFrequenciesEnabledChanged(bool)" );
@@ -787,10 +775,10 @@ void error( QRadioData::Error error )
 */
 HB_FUNC_STATIC( QRADIODATA_ONERROR )
 {
+  QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QRadioData::Error)" ) )
@@ -829,8 +817,6 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QRadioData::Error)" );

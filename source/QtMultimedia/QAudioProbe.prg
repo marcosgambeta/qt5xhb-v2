@@ -162,10 +162,10 @@ void audioBufferProbed( const QAudioBuffer & buffer )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 {
+  QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "audioBufferProbed(QAudioBuffer)" ) )
@@ -204,8 +204,6 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "audioBufferProbed(QAudioBuffer)" );
@@ -230,10 +228,10 @@ void flush()
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
 {
+  QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flush()" ) )
@@ -270,8 +268,6 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioProbe * sender = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flush()" );

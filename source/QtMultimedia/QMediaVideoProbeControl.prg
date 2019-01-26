@@ -80,10 +80,10 @@ void flush()
 */
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 {
+  QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flush()" ) )
@@ -120,8 +120,6 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flush()" );
@@ -146,10 +144,10 @@ void videoFrameProbed( const QVideoFrame & frame )
 */
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 {
+  QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "videoFrameProbed(QVideoFrame)" ) )
@@ -188,8 +186,6 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "videoFrameProbed(QVideoFrame)" );

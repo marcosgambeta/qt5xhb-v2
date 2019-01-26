@@ -156,10 +156,10 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
 {
+  QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataChanged()" ) )
@@ -196,8 +196,6 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataChanged()" );
@@ -222,10 +220,10 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
 {
+  QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
@@ -266,8 +264,6 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataChanged(QString,QVariant)" );
@@ -292,10 +288,10 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
 {
+  QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
@@ -334,8 +330,6 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMetaDataReaderControl * sender = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "metaDataAvailableChanged(bool)" );

@@ -655,10 +655,10 @@ void notify()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
 {
+  QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "notify()" ) )
@@ -695,8 +695,6 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "notify()" );
@@ -721,10 +719,10 @@ void stateChanged( QAudio::State state )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
 {
+  QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QAudio::State)" ) )
@@ -763,8 +761,6 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QAudio::State)" );
