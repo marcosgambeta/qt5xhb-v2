@@ -520,10 +520,10 @@ void clicked()
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked()" ) )
@@ -560,8 +560,6 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked()" );
@@ -588,10 +586,10 @@ void changed()
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "changed()" ) )
@@ -628,8 +626,6 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "changed()" );

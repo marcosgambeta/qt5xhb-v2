@@ -611,10 +611,10 @@ void valueChanged( int value )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(int)" ) )
@@ -653,8 +653,6 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(int)" );
@@ -681,10 +679,10 @@ void minimumChanged( int minimum )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minimumChanged(int)" ) )
@@ -723,8 +721,6 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minimumChanged(int)" );
@@ -751,10 +747,10 @@ void maximumChanged( int maximum )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maximumChanged(int)" ) )
@@ -793,8 +789,6 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maximumChanged(int)" );
@@ -821,10 +815,10 @@ void visibilityChanged( bool visible )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
@@ -863,8 +857,6 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibilityChanged(bool)" );
@@ -891,10 +883,10 @@ void pausedChanged( bool paused )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pausedChanged(bool)" ) )
@@ -933,8 +925,6 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pausedChanged(bool)" );
@@ -961,10 +951,10 @@ void stoppedChanged( bool stopped )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stoppedChanged(bool)" ) )
@@ -1003,8 +993,6 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWinTaskbarProgress * sender = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stoppedChanged(bool)" );
