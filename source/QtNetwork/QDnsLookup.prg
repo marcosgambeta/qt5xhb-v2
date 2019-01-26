@@ -806,10 +806,10 @@ void finished()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 {
+  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -846,8 +846,6 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -872,10 +870,10 @@ void nameChanged( const QString & name )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 {
+  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
@@ -914,8 +912,6 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "nameChanged(QString)" );
@@ -940,10 +936,10 @@ void nameserverChanged( const QHostAddress & nameserver )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 {
+  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "nameserverChanged(QHostAddress)" ) )
@@ -982,8 +978,6 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "nameserverChanged(QHostAddress)" );
@@ -1008,10 +1002,10 @@ void typeChanged( QDnsLookup::Type type )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 {
+  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "typeChanged(QDnsLookup::Type)" ) )
@@ -1050,8 +1044,6 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "typeChanged(QDnsLookup::Type)" );

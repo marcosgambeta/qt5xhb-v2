@@ -574,10 +574,10 @@ void acceptError( QAbstractSocket::SocketError socketError )
 */
 HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 {
+  QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
@@ -616,8 +616,6 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "acceptError(QAbstractSocket::SocketError)" );
@@ -642,10 +640,10 @@ void newConnection()
 */
 HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 {
+  QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConnection()" ) )
@@ -682,8 +680,6 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
   }
   else if( hb_pcount() == 0 )
   {
-    QTcpServer * sender = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConnection()" );

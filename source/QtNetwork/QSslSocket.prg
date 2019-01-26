@@ -2273,10 +2273,10 @@ void encrypted()
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 {
+  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "encrypted()" ) )
@@ -2313,8 +2313,6 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "encrypted()" );
@@ -2339,10 +2337,10 @@ void encryptedBytesWritten( qint64 written )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
+  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "encryptedBytesWritten(qint64)" ) )
@@ -2381,8 +2379,6 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
   }
   else if( hb_pcount() == 0 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "encryptedBytesWritten(qint64)" );
@@ -2407,10 +2403,10 @@ void modeChanged( QSslSocket::SslMode mode )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 {
+  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modeChanged(QSslSocket::SslMode)" ) )
@@ -2449,8 +2445,6 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modeChanged(QSslSocket::SslMode)" );
@@ -2475,10 +2469,10 @@ void peerVerifyError( const QSslError & error )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
+  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
@@ -2517,8 +2511,6 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "peerVerifyError(QSslError)" );
@@ -2544,10 +2536,10 @@ void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenti
 HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) )
@@ -2586,8 +2578,6 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
@@ -2613,10 +2603,10 @@ void sslErrors( const QList<QSslError> & errors )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 {
+  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
@@ -2678,8 +2668,6 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
   }
   else if( hb_pcount() == 0 )
   {
-    QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );

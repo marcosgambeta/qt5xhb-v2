@@ -1087,10 +1087,10 @@ void connected()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
 {
+  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "connected()" ) )
@@ -1127,8 +1127,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "connected()" );
@@ -1153,10 +1151,10 @@ void disconnected()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
 {
+  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "disconnected()" ) )
@@ -1193,8 +1191,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "disconnected()" );
@@ -1219,10 +1215,10 @@ void error( QAbstractSocket::SocketError socketError )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
 {
+  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QAbstractSocket::SocketError)" ) )
@@ -1261,8 +1257,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QAbstractSocket::SocketError)" );
@@ -1287,10 +1281,10 @@ void hostFound()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
 {
+  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hostFound()" ) )
@@ -1327,8 +1321,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hostFound()" );
@@ -1353,10 +1345,10 @@ void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * 
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 {
+  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
@@ -1397,8 +1389,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
@@ -1423,10 +1413,10 @@ void stateChanged( QAbstractSocket::SocketState socketState )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
 {
+  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) )
@@ -1465,8 +1455,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QAbstractSocket::SocketState)" );

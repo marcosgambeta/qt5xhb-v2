@@ -626,10 +626,10 @@ void closed()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 {
+  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "closed()" ) )
@@ -666,8 +666,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "closed()" );
@@ -692,10 +690,10 @@ void error( QNetworkSession::SessionError error )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 {
+  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QNetworkSession::SessionError)" ) )
@@ -734,8 +732,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QNetworkSession::SessionError)" );
@@ -760,10 +756,10 @@ void newConfigurationActivated()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 {
+  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConfigurationActivated()" ) )
@@ -800,8 +796,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConfigurationActivated()" );
@@ -826,10 +820,10 @@ void opened()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 {
+  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "opened()" ) )
@@ -866,8 +860,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
   }
   else if( hb_pcount() == 0 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "opened()" );
@@ -892,10 +884,10 @@ void preferredConfigurationChanged( const QNetworkConfiguration & config, bool i
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 {
+  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) )
@@ -936,8 +928,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
@@ -962,10 +952,10 @@ void stateChanged( QNetworkSession::State state )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 {
+  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QNetworkSession::State)" ) )
@@ -1004,8 +994,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QNetworkSession::State)" );
@@ -1030,10 +1018,10 @@ void usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 {
+  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" ) )
@@ -1072,8 +1060,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
