@@ -477,10 +477,10 @@ void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & 
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
@@ -521,8 +521,6 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
@@ -549,10 +547,10 @@ void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & u
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
@@ -593,8 +591,6 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
@@ -621,10 +617,10 @@ void monitorExpired( const QGeoAreaMonitorInfo & monitor )
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)" ) )
@@ -663,8 +659,6 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "monitorExpired(QGeoAreaMonitorInfo)" );
@@ -691,10 +685,10 @@ void error( QGeoAreaMonitorSource::Error error )
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QGeoAreaMonitorSource::Error)" ) )
@@ -733,8 +727,6 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QGeoAreaMonitorSource * sender = (QGeoAreaMonitorSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QGeoAreaMonitorSource::Error)" );
