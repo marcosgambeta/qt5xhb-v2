@@ -476,10 +476,10 @@ void baseChanged( qreal base )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseChanged(qreal)" ) )
@@ -518,8 +518,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseChanged(qreal)" );
@@ -546,10 +544,10 @@ void labelFormatChanged( const QString & format )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelFormatChanged(QString)" ) )
@@ -588,8 +586,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelFormatChanged(QString)" );
@@ -616,10 +612,10 @@ void maxChanged( qreal max )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxChanged(qreal)" ) )
@@ -658,8 +654,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxChanged(qreal)" );
@@ -686,10 +680,10 @@ void minChanged( qreal min )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minChanged(qreal)" ) )
@@ -728,8 +722,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minChanged(qreal)" );
@@ -756,10 +748,10 @@ void minorTickCountChanged( int minorTickCount )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minorTickCountChanged(int)" ) )
@@ -798,8 +790,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minorTickCountChanged(int)" );
@@ -826,10 +816,10 @@ void rangeChanged( qreal min, qreal max )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(qreal,qreal)" ) )
@@ -870,8 +860,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(qreal,qreal)" );
@@ -898,10 +886,10 @@ void tickCountChanged( int tickCount )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "tickCountChanged(int)" ) )
@@ -940,8 +928,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLogValueAxis * sender = (QLogValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "tickCountChanged(int)" );

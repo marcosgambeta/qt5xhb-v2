@@ -428,10 +428,10 @@ void columnCountChanged()
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnCountChanged()" ) )
@@ -468,8 +468,6 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnCountChanged()" );
@@ -496,10 +494,10 @@ void firstColumnChanged()
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "firstColumnChanged()" ) )
@@ -536,8 +534,6 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "firstColumnChanged()" );
@@ -564,10 +560,10 @@ void modelReplaced()
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modelReplaced()" ) )
@@ -604,8 +600,6 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONMODELREPLACED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modelReplaced()" );
@@ -632,10 +626,10 @@ void seriesReplaced()
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seriesReplaced()" ) )
@@ -672,8 +666,6 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONSERIESREPLACED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seriesReplaced()" );
@@ -700,10 +692,10 @@ void xRowChanged()
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONXROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xRowChanged()" ) )
@@ -740,8 +732,6 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONXROWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xRowChanged()" );
@@ -768,10 +758,10 @@ void yRowChanged()
 HB_FUNC_STATIC( QHXYMODELMAPPER_ONYROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yRowChanged()" ) )
@@ -808,8 +798,6 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_ONYROWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHXYModelMapper * sender = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yRowChanged()" );

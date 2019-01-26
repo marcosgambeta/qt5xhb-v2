@@ -447,10 +447,10 @@ void borderColorChanged( QColor color )
 HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
@@ -489,8 +489,6 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "borderColorChanged(QColor)" );
@@ -517,10 +515,10 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
@@ -559,8 +557,6 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
@@ -587,10 +583,10 @@ void markerShapeChanged( QScatterSeries::MarkerShape shape )
 HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" ) )
@@ -629,8 +625,6 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" );
@@ -657,10 +651,10 @@ void markerSizeChanged( qreal size )
 HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "markerSizeChanged(qreal)" ) )
@@ -699,8 +693,6 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterSeries * sender = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "markerSizeChanged(qreal)" );

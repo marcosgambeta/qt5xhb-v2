@@ -559,10 +559,10 @@ void categoriesChanged()
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "categoriesChanged()" ) )
@@ -599,8 +599,6 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "categoriesChanged()" );
@@ -627,10 +625,10 @@ void countChanged()
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "countChanged()" ) )
@@ -667,8 +665,6 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "countChanged()" );
@@ -695,10 +691,10 @@ void maxChanged( const QString & max )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxChanged(QString)" ) )
@@ -737,8 +733,6 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxChanged(QString)" );
@@ -765,10 +759,10 @@ void minChanged( const QString & min )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minChanged(QString)" ) )
@@ -807,8 +801,6 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minChanged(QString)" );
@@ -835,10 +827,10 @@ void rangeChanged( const QString & min, const QString & max )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(QString,QString)" ) )
@@ -879,8 +871,6 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarCategoryAxis * sender = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(QString,QString)" );

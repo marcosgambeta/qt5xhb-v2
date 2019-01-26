@@ -1866,10 +1866,10 @@ void plotAreaChanged( const QRectF & plotArea )
 HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QChart * sender = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QChart * sender = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "plotAreaChanged(QRectF)" ) )
@@ -1908,8 +1908,6 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QChart * sender = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "plotAreaChanged(QRectF)" );

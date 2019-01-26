@@ -538,10 +538,10 @@ void nameChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "nameChanged()" ) )
@@ -578,8 +578,6 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "nameChanged()" );
@@ -606,10 +604,10 @@ void opacityChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "opacityChanged()" ) )
@@ -646,8 +644,6 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "opacityChanged()" );
@@ -674,10 +670,10 @@ void useOpenGLChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "useOpenGLChanged()" ) )
@@ -714,8 +710,6 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "useOpenGLChanged()" );
@@ -742,10 +736,10 @@ void visibleChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
@@ -782,8 +776,6 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged()" );

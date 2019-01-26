@@ -1757,10 +1757,10 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
@@ -1799,8 +1799,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
@@ -1827,10 +1825,10 @@ void gridLineColorChanged( const QColor & color )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINECOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gridLineColorChanged(QColor)" ) )
@@ -1869,8 +1867,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINECOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gridLineColorChanged(QColor)" );
@@ -1897,10 +1893,10 @@ void gridLinePenChanged( const QPen & pen )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINEPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gridLinePenChanged(QPen)" ) )
@@ -1939,8 +1935,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINEPENCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gridLinePenChanged(QPen)" );
@@ -1967,10 +1961,10 @@ void gridVisibleChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gridVisibleChanged(bool)" ) )
@@ -2009,8 +2003,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gridVisibleChanged(bool)" );
@@ -2037,10 +2029,10 @@ void labelsAngleChanged( int angle )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSANGLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsAngleChanged(int)" ) )
@@ -2079,8 +2071,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSANGLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsAngleChanged(int)" );
@@ -2107,10 +2097,10 @@ void labelsBrushChanged( const QBrush & brush )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsBrushChanged(QBrush)" ) )
@@ -2149,8 +2139,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSBRUSHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsBrushChanged(QBrush)" );
@@ -2177,10 +2165,10 @@ void labelsColorChanged( QColor color )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsColorChanged(QColor)" ) )
@@ -2219,8 +2207,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsColorChanged(QColor)" );
@@ -2247,10 +2233,10 @@ void labelsFontChanged( const QFont & pen )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsFontChanged(QFont)" ) )
@@ -2289,8 +2275,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSFONTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsFontChanged(QFont)" );
@@ -2317,10 +2301,10 @@ void labelsVisibleChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsVisibleChanged(bool)" ) )
@@ -2359,8 +2343,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsVisibleChanged(bool)" );
@@ -2387,10 +2369,10 @@ void linePenChanged( const QPen & pen )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linePenChanged(QPen)" ) )
@@ -2429,8 +2411,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEPENCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linePenChanged(QPen)" );
@@ -2457,10 +2437,10 @@ void lineVisibleChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lineVisibleChanged(bool)" ) )
@@ -2499,8 +2479,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lineVisibleChanged(bool)" );
@@ -2527,10 +2505,10 @@ void minorGridLineColorChanged( const QColor & color )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minorGridLineColorChanged(QColor)" ) )
@@ -2569,8 +2547,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minorGridLineColorChanged(QColor)" );
@@ -2597,10 +2573,10 @@ void minorGridLinePenChanged( const QPen & pen )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minorGridLinePenChanged(QPen)" ) )
@@ -2639,8 +2615,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minorGridLinePenChanged(QPen)" );
@@ -2667,10 +2641,10 @@ void minorGridVisibleChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minorGridVisibleChanged(bool)" ) )
@@ -2709,8 +2683,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minorGridVisibleChanged(bool)" );
@@ -2737,10 +2709,10 @@ void reverseChanged( bool reverse )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONREVERSECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "reverseChanged(bool)" ) )
@@ -2779,8 +2751,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONREVERSECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "reverseChanged(bool)" );
@@ -2807,10 +2777,10 @@ void shadesBorderColorChanged( QColor color )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadesBorderColorChanged(QColor)" ) )
@@ -2849,8 +2819,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadesBorderColorChanged(QColor)" );
@@ -2877,10 +2845,10 @@ void shadesBrushChanged( const QBrush & brush )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadesBrushChanged(QBrush)" ) )
@@ -2919,8 +2887,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBRUSHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadesBrushChanged(QBrush)" );
@@ -2947,10 +2913,10 @@ void shadesColorChanged( QColor color )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadesColorChanged(QColor)" ) )
@@ -2989,8 +2955,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadesColorChanged(QColor)" );
@@ -3017,10 +2981,10 @@ void shadesPenChanged( const QPen & pen )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadesPenChanged(QPen)" ) )
@@ -3059,8 +3023,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESPENCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadesPenChanged(QPen)" );
@@ -3087,10 +3049,10 @@ void shadesVisibleChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadesVisibleChanged(bool)" ) )
@@ -3129,8 +3091,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadesVisibleChanged(bool)" );
@@ -3157,10 +3117,10 @@ void titleBrushChanged( const QBrush & brush )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleBrushChanged(QBrush)" ) )
@@ -3199,8 +3159,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEBRUSHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleBrushChanged(QBrush)" );
@@ -3227,10 +3185,10 @@ void titleFontChanged( const QFont & font )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleFontChanged(QFont)" ) )
@@ -3269,8 +3227,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEFONTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleFontChanged(QFont)" );
@@ -3297,10 +3253,10 @@ void titleTextChanged( const QString & title )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLETEXTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleTextChanged(QString)" ) )
@@ -3339,8 +3295,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLETEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleTextChanged(QString)" );
@@ -3367,10 +3321,10 @@ void titleVisibleChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleVisibleChanged(bool)" ) )
@@ -3409,8 +3363,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleVisibleChanged(bool)" );
@@ -3437,10 +3389,10 @@ void visibleChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACTAXIS_ONVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged(bool)" ) )
@@ -3479,8 +3431,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractAxis * sender = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged(bool)" );

@@ -852,10 +852,10 @@ void borderColorChanged( QColor color )
 HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
@@ -894,8 +894,6 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "borderColorChanged(QColor)" );
@@ -922,10 +920,10 @@ void clicked( const QPointF & point )
 HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(QPointF)" ) )
@@ -964,8 +962,6 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(QPointF)" );
@@ -992,10 +988,10 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
@@ -1034,8 +1030,6 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
@@ -1062,10 +1056,10 @@ void doubleClicked( const QPointF & point )
 HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "doubleClicked(QPointF)" ) )
@@ -1104,8 +1098,6 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "doubleClicked(QPointF)" );
@@ -1132,10 +1124,10 @@ void hovered( const QPointF & point, bool state )
 HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(QPointF,bool)" ) )
@@ -1176,8 +1168,6 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(QPointF,bool)" );
@@ -1204,10 +1194,10 @@ void pointLabelsClippingChanged( bool clipping )
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsClippingChanged(bool)" ) )
@@ -1246,8 +1236,6 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsClippingChanged(bool)" );
@@ -1274,10 +1262,10 @@ void pointLabelsColorChanged( const QColor & color )
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsColorChanged(QColor)" ) )
@@ -1316,8 +1304,6 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsColorChanged(QColor)" );
@@ -1344,10 +1330,10 @@ void pointLabelsFontChanged( const QFont & font )
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsFontChanged(QFont)" ) )
@@ -1386,8 +1372,6 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsFontChanged(QFont)" );
@@ -1414,10 +1398,10 @@ void pointLabelsFormatChanged( const QString & format )
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsFormatChanged(QString)" ) )
@@ -1456,8 +1440,6 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsFormatChanged(QString)" );
@@ -1484,10 +1466,10 @@ void pointLabelsVisibilityChanged( bool visible )
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pointLabelsVisibilityChanged(bool)" ) )
@@ -1526,8 +1508,6 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pointLabelsVisibilityChanged(bool)" );
@@ -1554,10 +1534,10 @@ void pressed( const QPointF & point )
 HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pressed(QPointF)" ) )
@@ -1596,8 +1576,6 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pressed(QPointF)" );
@@ -1624,10 +1602,10 @@ void released( const QPointF & point )
 HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "released(QPointF)" ) )
@@ -1666,8 +1644,6 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "released(QPointF)" );
@@ -1694,10 +1670,10 @@ void selected()
 HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selected()" ) )
@@ -1734,8 +1710,6 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAreaSeries * sender = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selected()" );
