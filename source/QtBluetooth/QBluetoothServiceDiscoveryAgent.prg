@@ -522,10 +522,10 @@ void serviceDiscovered( const QBluetoothServiceInfo & info )
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "serviceDiscovered(QBluetoothServiceInfo)" ) )
@@ -564,8 +564,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "serviceDiscovered(QBluetoothServiceInfo)" );
@@ -592,10 +590,10 @@ void finished()
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -632,8 +630,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -660,10 +656,10 @@ void canceled()
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "canceled()" ) )
@@ -700,8 +696,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "canceled()" );
@@ -728,10 +722,10 @@ void error( QBluetoothServiceDiscoveryAgent::Error error )
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QBluetoothServiceDiscoveryAgent::Error)" ) )
@@ -770,8 +764,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothServiceDiscoveryAgent * sender = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QBluetoothServiceDiscoveryAgent::Error)" );

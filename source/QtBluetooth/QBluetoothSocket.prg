@@ -720,10 +720,10 @@ void connected()
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "connected()" ) )
@@ -760,8 +760,6 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "connected()" );
@@ -788,10 +786,10 @@ void disconnected()
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "disconnected()" ) )
@@ -828,8 +826,6 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "disconnected()" );
@@ -856,10 +852,10 @@ void error( QBluetoothSocket::SocketError error )
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QBluetoothSocket::SocketError)" ) )
@@ -898,8 +894,6 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QBluetoothSocket::SocketError)" );
@@ -926,10 +920,10 @@ void stateChanged( QBluetoothSocket::SocketState state )
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QBluetoothSocket::SocketState)" ) )
@@ -968,8 +962,6 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QBluetoothSocket::SocketState)" );

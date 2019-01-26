@@ -485,10 +485,10 @@ void newConnection()
 HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConnection()" ) )
@@ -525,8 +525,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConnection()" );
@@ -553,10 +551,10 @@ void error( QBluetoothServer::Error error )
 HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QBluetoothServer::Error)" ) )
@@ -595,8 +593,6 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothServer * sender = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QBluetoothServer::Error)" );

@@ -127,10 +127,10 @@ void finished( QBluetoothTransferReply * reply )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothTransferManager * sender = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBluetoothTransferManager * sender = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QBluetoothTransferReply*)" ) )
@@ -169,8 +169,6 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBluetoothTransferManager * sender = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QBluetoothTransferReply*)" );
