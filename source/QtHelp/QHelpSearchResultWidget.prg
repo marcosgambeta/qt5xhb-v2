@@ -97,10 +97,10 @@ void requestShowLink( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
 {
+  QHelpSearchResultWidget * sender = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpSearchResultWidget * sender = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "requestShowLink(QUrl)" ) )
@@ -139,8 +139,6 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpSearchResultWidget * sender = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "requestShowLink(QUrl)" );

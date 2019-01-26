@@ -132,10 +132,10 @@ void indexCreated()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
+  QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "indexCreated()" ) )
@@ -172,8 +172,6 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "indexCreated()" );
@@ -198,10 +196,10 @@ void indexCreationStarted()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
+  QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "indexCreationStarted()" ) )
@@ -238,8 +236,6 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "indexCreationStarted()" );

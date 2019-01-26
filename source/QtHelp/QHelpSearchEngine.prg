@@ -343,10 +343,10 @@ void indexingFinished()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
+  QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "indexingFinished()" ) )
@@ -383,8 +383,6 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "indexingFinished()" );
@@ -409,10 +407,10 @@ void indexingStarted()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
+  QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "indexingStarted()" ) )
@@ -449,8 +447,6 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "indexingStarted()" );
@@ -475,10 +471,10 @@ void searchingFinished( int hits )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
+  QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "searchingFinished(int)" ) )
@@ -517,8 +513,6 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "searchingFinished(int)" );
@@ -543,10 +537,10 @@ void searchingStarted()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
+  QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "searchingStarted()" ) )
@@ -583,8 +577,6 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpSearchEngine * sender = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "searchingStarted()" );

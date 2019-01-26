@@ -716,10 +716,10 @@ void currentFilterChanged( const QString & newFilter )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
+  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentFilterChanged(QString)" ) )
@@ -758,8 +758,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentFilterChanged(QString)" );
@@ -784,10 +782,10 @@ void setupFinished()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 {
+  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "setupFinished()" ) )
@@ -824,8 +822,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "setupFinished()" );
@@ -850,10 +846,10 @@ void setupStarted()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 {
+  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "setupStarted()" ) )
@@ -890,8 +886,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "setupStarted()" );
@@ -916,10 +910,10 @@ void warning( const QString & msg )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 {
+  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "warning(QString)" ) )
@@ -958,8 +952,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "warning(QString)" );

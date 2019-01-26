@@ -142,10 +142,10 @@ void search()
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 {
+  QHelpSearchQueryWidget * sender = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpSearchQueryWidget * sender = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "search()" ) )
@@ -182,8 +182,6 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpSearchQueryWidget * sender = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "search()" );

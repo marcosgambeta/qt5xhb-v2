@@ -280,10 +280,10 @@ void contentsCreated()
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
+  QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "contentsCreated()" ) )
@@ -320,8 +320,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "contentsCreated()" );
@@ -346,10 +344,10 @@ void contentsCreationStarted()
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 {
+  QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "contentsCreationStarted()" ) )
@@ -386,8 +384,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpContentModel * sender = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "contentsCreationStarted()" );

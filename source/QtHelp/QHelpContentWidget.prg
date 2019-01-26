@@ -99,10 +99,10 @@ void linkActivated( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
 {
+  QHelpContentWidget * sender = (QHelpContentWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHelpContentWidget * sender = (QHelpContentWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkActivated(QUrl)" ) )
@@ -141,8 +141,6 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHelpContentWidget * sender = (QHelpContentWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkActivated(QUrl)" );
