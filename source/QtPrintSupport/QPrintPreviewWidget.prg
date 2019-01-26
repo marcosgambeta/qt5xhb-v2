@@ -718,10 +718,10 @@ void paintRequested( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {
+  QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "paintRequested(QPrinter*)" ) )
@@ -760,8 +760,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "paintRequested(QPrinter*)" );
@@ -786,10 +784,10 @@ void previewChanged()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 {
+  QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "previewChanged()" ) )
@@ -826,8 +824,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPrintPreviewWidget * sender = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "previewChanged()" );
