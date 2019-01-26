@@ -740,10 +740,10 @@ void canceled()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
 {
+  QProgressDialog * sender = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QProgressDialog * sender = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "canceled()" ) )
@@ -780,8 +780,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
   }
   else if( hb_pcount() == 0 )
   {
-    QProgressDialog * sender = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "canceled()" );

@@ -834,10 +834,10 @@ void clicked( bool checked = false )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 {
+  QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(bool)" ) )
@@ -876,8 +876,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(bool)" );
@@ -902,10 +900,10 @@ void pressed()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 {
+  QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pressed()" ) )
@@ -942,8 +940,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pressed()" );
@@ -968,10 +964,10 @@ void released()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 {
+  QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "released()" ) )
@@ -1008,8 +1004,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "released()" );
@@ -1034,10 +1028,10 @@ void toggled( bool checked )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 {
+  QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "toggled(bool)" ) )
@@ -1076,8 +1070,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractButton * sender = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "toggled(bool)" );

@@ -429,10 +429,10 @@ void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {
+  QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" ) )
@@ -471,8 +471,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
@@ -497,10 +495,10 @@ void dockLocationChanged( Qt::DockWidgetArea area )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 {
+  QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)" ) )
@@ -539,8 +537,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
@@ -565,10 +561,10 @@ void featuresChanged( QDockWidget::DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 {
+  QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" ) )
@@ -607,8 +603,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
@@ -633,10 +627,10 @@ void topLevelChanged( bool topLevel )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 {
+  QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
@@ -675,8 +669,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "topLevelChanged(bool)" );
@@ -701,10 +693,10 @@ void visibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 {
+  QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
@@ -743,8 +735,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDockWidget * sender = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibilityChanged(bool)" );

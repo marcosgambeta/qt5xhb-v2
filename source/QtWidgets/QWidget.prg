@@ -6750,10 +6750,10 @@ void windowTitleChanged( const QString & title )
 HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowTitleChanged(QString)" ) )
@@ -6792,8 +6792,6 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowTitleChanged(QString)" );
@@ -6820,10 +6818,10 @@ void windowIconChanged( const QIcon & icon )
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowIconChanged(QIcon)" ) )
@@ -6862,8 +6860,6 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowIconChanged(QIcon)" );
@@ -6889,10 +6885,10 @@ void windowIconTextChanged( const QString & iconText )
 */
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 {
+  QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowIconTextChanged(QString)" ) )
@@ -6931,8 +6927,6 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowIconTextChanged(QString)" );
@@ -6957,10 +6951,10 @@ void customContextMenuRequested( const QPoint & pos )
 */
 HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
+  QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "customContextMenuRequested(QPoint)" ) )
@@ -6999,8 +6993,6 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "customContextMenuRequested(QPoint)" );

@@ -520,10 +520,10 @@ void colorSelected( const QColor & color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 {
+  QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorSelected(QColor)" ) )
@@ -562,8 +562,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorSelected(QColor)" );
@@ -588,10 +586,10 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 {
+  QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentColorChanged(QColor)" ) )
@@ -630,8 +628,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QColorDialog * sender = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentColorChanged(QColor)" );

@@ -957,10 +957,10 @@ void subWindowActivated( QMdiSubWindow * window )
 */
 HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
 {
+  QMdiArea * sender = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMdiArea * sender = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "subWindowActivated(QMdiSubWindow*)" ) )
@@ -999,8 +999,6 @@ HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMdiArea * sender = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "subWindowActivated(QMdiSubWindow*)" );

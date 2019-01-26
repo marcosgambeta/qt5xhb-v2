@@ -423,10 +423,10 @@ void blurRadiusChanged( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
 {
+  QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "blurRadiusChanged(qreal)" ) )
@@ -465,8 +465,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "blurRadiusChanged(qreal)" );
@@ -491,10 +489,10 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
 {
+  QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
@@ -533,8 +531,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
@@ -559,10 +555,10 @@ void offsetChanged( const QPointF & offset )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 {
+  QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "offsetChanged(QPointF)" ) )
@@ -601,8 +597,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsDropShadowEffect * sender = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "offsetChanged(QPointF)" );

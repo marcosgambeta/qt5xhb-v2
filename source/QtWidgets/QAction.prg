@@ -1631,10 +1631,10 @@ void changed()
 */
 HB_FUNC_STATIC( QACTION_ONCHANGED )
 {
+  QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "changed()" ) )
@@ -1671,8 +1671,6 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "changed()" );
@@ -1697,10 +1695,10 @@ void hovered()
 */
 HB_FUNC_STATIC( QACTION_ONHOVERED )
 {
+  QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered()" ) )
@@ -1737,8 +1735,6 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered()" );
@@ -1763,10 +1759,10 @@ void toggled( bool checked )
 */
 HB_FUNC_STATIC( QACTION_ONTOGGLED )
 {
+  QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "toggled(bool)" ) )
@@ -1805,8 +1801,6 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "toggled(bool)" );
@@ -1831,10 +1825,10 @@ void triggered( bool checked = false )
 */
 HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 {
+  QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "triggered(bool)" ) )
@@ -1873,8 +1867,6 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAction * sender = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "triggered(bool)" );

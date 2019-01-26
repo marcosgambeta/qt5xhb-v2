@@ -1738,10 +1738,10 @@ void activated( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(int)" ) )
@@ -1780,8 +1780,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(int)" );
@@ -1806,10 +1804,10 @@ void activated( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(QString)" ) )
@@ -1848,8 +1846,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(QString)" );
@@ -1874,10 +1870,10 @@ void currentIndexChanged( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
@@ -1916,8 +1912,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentIndexChanged(int)" );
@@ -1942,10 +1936,10 @@ void currentIndexChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentIndexChanged(QString)" ) )
@@ -1984,8 +1978,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentIndexChanged(QString)" );
@@ -2010,10 +2002,10 @@ void currentTextChanged(const QString &text)
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
@@ -2052,8 +2044,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentTextChanged(QString)" );
@@ -2078,10 +2068,10 @@ void editTextChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "editTextChanged(QString)" ) )
@@ -2120,8 +2110,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "editTextChanged(QString)" );
@@ -2146,10 +2134,10 @@ void highlighted( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(int)" ) )
@@ -2188,8 +2176,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(int)" );
@@ -2214,10 +2200,10 @@ void highlighted( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 {
+  QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QString)" ) )
@@ -2256,8 +2242,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QComboBox * sender = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QString)" );

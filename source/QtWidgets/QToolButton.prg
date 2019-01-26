@@ -496,10 +496,10 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 {
+  QToolButton * sender = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolButton * sender = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "triggered(QAction*)" ) )
@@ -538,8 +538,6 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolButton * sender = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "triggered(QAction*)" );

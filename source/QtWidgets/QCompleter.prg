@@ -999,10 +999,10 @@ void activated( const QString & text )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
+  QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(QString)" ) )
@@ -1041,8 +1041,6 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(QString)" );
@@ -1067,10 +1065,10 @@ void activated( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
+  QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(QModelIndex)" ) )
@@ -1109,8 +1107,6 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(QModelIndex)" );
@@ -1135,10 +1131,10 @@ void highlighted( const QString & text )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
+  QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QString)" ) )
@@ -1177,8 +1173,6 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QString)" );
@@ -1203,10 +1197,10 @@ void highlighted( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
+  QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QModelIndex)" ) )
@@ -1245,8 +1239,6 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QModelIndex)" );

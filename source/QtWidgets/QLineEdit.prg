@@ -1885,10 +1885,10 @@ void cursorPositionChanged( int oldPos, int newPos )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
+  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorPositionChanged(int,int)" ) )
@@ -1929,8 +1929,6 @@ HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorPositionChanged(int,int)" );
@@ -1955,10 +1953,10 @@ void editingFinished()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
 {
+  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "editingFinished()" ) )
@@ -1995,8 +1993,6 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "editingFinished()" );
@@ -2022,10 +2018,10 @@ void inputRejected()
 HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "inputRejected()" ) )
@@ -2062,8 +2058,6 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "inputRejected()" );
@@ -2089,10 +2083,10 @@ void returnPressed()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
 {
+  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "returnPressed()" ) )
@@ -2129,8 +2123,6 @@ HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "returnPressed()" );
@@ -2155,10 +2147,10 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
 {
+  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
@@ -2195,8 +2187,6 @@ HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
@@ -2221,10 +2211,10 @@ void textChanged( const QString & text )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
 {
+  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textChanged(QString)" ) )
@@ -2263,8 +2253,6 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textChanged(QString)" );
@@ -2289,10 +2277,10 @@ void textEdited( const QString & text )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
 {
+  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textEdited(QString)" ) )
@@ -2331,8 +2319,6 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textEdited(QString)" );

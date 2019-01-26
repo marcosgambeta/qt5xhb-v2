@@ -1643,10 +1643,10 @@ void blockCountChanged( int newBlockCount )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "blockCountChanged(int)" ) )
@@ -1685,8 +1685,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "blockCountChanged(int)" );
@@ -1711,10 +1709,10 @@ void copyAvailable( bool yes )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "copyAvailable(bool)" ) )
@@ -1753,8 +1751,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "copyAvailable(bool)" );
@@ -1779,10 +1775,10 @@ void cursorPositionChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorPositionChanged()" ) )
@@ -1819,8 +1815,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorPositionChanged()" );
@@ -1845,10 +1839,10 @@ void modificationChanged( bool changed )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modificationChanged(bool)" ) )
@@ -1887,8 +1881,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modificationChanged(bool)" );
@@ -1913,10 +1905,10 @@ void redoAvailable( bool available )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "redoAvailable(bool)" ) )
@@ -1955,8 +1947,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "redoAvailable(bool)" );
@@ -1981,10 +1971,10 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
@@ -2021,8 +2011,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
@@ -2047,10 +2035,10 @@ void textChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONTEXTCHANGED )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textChanged()" ) )
@@ -2087,8 +2075,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textChanged()" );
@@ -2113,10 +2099,10 @@ void undoAvailable( bool available )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "undoAvailable(bool)" ) )
@@ -2155,8 +2141,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "undoAvailable(bool)" );
@@ -2181,10 +2165,10 @@ void updateRequest( const QRect & rect, int dy )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
 {
+  QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "updateRequest(QRect,int)" ) )
@@ -2225,8 +2209,6 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlainTextEdit * sender = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "updateRequest(QRect,int)" );

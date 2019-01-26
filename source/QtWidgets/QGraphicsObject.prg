@@ -132,10 +132,10 @@ void enabledChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "enabledChanged()" ) )
@@ -172,8 +172,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "enabledChanged()" );
@@ -198,10 +196,10 @@ void opacityChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "opacityChanged()" ) )
@@ -238,8 +236,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "opacityChanged()" );
@@ -264,10 +260,10 @@ void parentChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "parentChanged()" ) )
@@ -304,8 +300,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "parentChanged()" );
@@ -330,10 +324,10 @@ void rotationChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationChanged()" ) )
@@ -370,8 +364,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationChanged()" );
@@ -396,10 +388,10 @@ void scaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "scaleChanged()" ) )
@@ -436,8 +428,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "scaleChanged()" );
@@ -462,10 +452,10 @@ void visibleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
@@ -502,8 +492,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged()" );
@@ -528,10 +516,10 @@ void xChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xChanged()" ) )
@@ -568,8 +556,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xChanged()" );
@@ -594,10 +580,10 @@ void yChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yChanged()" ) )
@@ -634,8 +620,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yChanged()" );
@@ -660,10 +644,10 @@ void zChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
 {
+  QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zChanged()" ) )
@@ -700,8 +684,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsObject * sender = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zChanged()" );

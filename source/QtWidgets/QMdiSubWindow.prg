@@ -514,10 +514,10 @@ void aboutToActivate()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
+  QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToActivate()" ) )
@@ -554,8 +554,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
   }
   else if( hb_pcount() == 0 )
   {
-    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToActivate()" );
@@ -580,10 +578,10 @@ void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
+  QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) )
@@ -624,8 +622,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMdiSubWindow * sender = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );

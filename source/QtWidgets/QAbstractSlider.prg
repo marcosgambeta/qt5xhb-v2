@@ -701,10 +701,10 @@ void actionTriggered( int action )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 {
+  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "actionTriggered(int)" ) )
@@ -743,8 +743,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "actionTriggered(int)" );
@@ -769,10 +767,10 @@ void rangeChanged( int min, int max )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 {
+  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(int,int)" ) )
@@ -813,8 +811,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(int,int)" );
@@ -839,10 +835,10 @@ void sliderMoved( int value )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 {
+  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliderMoved(int)" ) )
@@ -881,8 +877,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliderMoved(int)" );
@@ -907,10 +901,10 @@ void sliderPressed()
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 {
+  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliderPressed()" ) )
@@ -947,8 +941,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliderPressed()" );
@@ -973,10 +965,10 @@ void sliderReleased()
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 {
+  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sliderReleased()" ) )
@@ -1013,8 +1005,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sliderReleased()" );
@@ -1039,10 +1029,10 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 {
+  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(int)" ) )
@@ -1081,8 +1071,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(int)" );

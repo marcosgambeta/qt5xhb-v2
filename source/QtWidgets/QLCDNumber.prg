@@ -654,10 +654,10 @@ void overflow()
 */
 HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 {
+  QLCDNumber * sender = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLCDNumber * sender = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "overflow()" ) )
@@ -694,8 +694,6 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
   }
   else if( hb_pcount() == 0 )
   {
-    QLCDNumber * sender = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "overflow()" );

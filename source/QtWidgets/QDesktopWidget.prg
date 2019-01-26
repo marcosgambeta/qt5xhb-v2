@@ -355,10 +355,10 @@ void resized( int screen )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
 {
+  QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "resized(int)" ) )
@@ -397,8 +397,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "resized(int)" );
@@ -423,10 +421,10 @@ void screenCountChanged( int newCount )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 {
+  QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "screenCountChanged(int)" ) )
@@ -465,8 +463,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "screenCountChanged(int)" );
@@ -491,10 +487,10 @@ void workAreaResized( int screen )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 {
+  QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "workAreaResized(int)" ) )
@@ -533,8 +529,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDesktopWidget * sender = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "workAreaResized(int)" );

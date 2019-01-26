@@ -1923,10 +1923,10 @@ void activated( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
+  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(QModelIndex)" ) )
@@ -1965,8 +1965,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(QModelIndex)" );
@@ -1991,10 +1989,10 @@ void clicked( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
+  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(QModelIndex)" ) )
@@ -2033,8 +2031,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(QModelIndex)" );
@@ -2059,10 +2055,10 @@ void doubleClicked( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
+  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "doubleClicked(QModelIndex)" ) )
@@ -2101,8 +2097,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "doubleClicked(QModelIndex)" );
@@ -2127,10 +2121,10 @@ void entered( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
+  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "entered(QModelIndex)" ) )
@@ -2169,8 +2163,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "entered(QModelIndex)" );
@@ -2195,10 +2187,10 @@ void pressed( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
+  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pressed(QModelIndex)" ) )
@@ -2237,8 +2229,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pressed(QModelIndex)" );
@@ -2263,10 +2253,10 @@ void viewportEntered()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
+  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "viewportEntered()" ) )
@@ -2303,8 +2293,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "viewportEntered()" );

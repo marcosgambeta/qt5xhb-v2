@@ -612,10 +612,10 @@ void valueChanged( double d )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
+  QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(double)" ) )
@@ -654,8 +654,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(double)" );
@@ -680,10 +678,10 @@ void valueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
+  QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(QString)" ) )
@@ -722,8 +720,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(QString)" );

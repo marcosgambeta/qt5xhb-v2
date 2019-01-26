@@ -821,10 +821,10 @@ void actionTriggered( QAction * action )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "actionTriggered(QAction*)" ) )
@@ -863,8 +863,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "actionTriggered(QAction*)" );
@@ -889,10 +887,10 @@ void allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) )
@@ -931,8 +929,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
@@ -957,10 +953,10 @@ void iconSizeChanged( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
@@ -999,8 +995,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "iconSizeChanged(QSize)" );
@@ -1025,10 +1019,10 @@ void movableChanged( bool movable )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "movableChanged(bool)" ) )
@@ -1067,8 +1061,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "movableChanged(bool)" );
@@ -1093,10 +1085,10 @@ void orientationChanged( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orientationChanged(Qt::Orientation)" ) )
@@ -1135,8 +1127,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orientationChanged(Qt::Orientation)" );
@@ -1161,10 +1151,10 @@ void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
@@ -1203,8 +1193,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
@@ -1229,10 +1217,10 @@ void topLevelChanged( bool topLevel )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
@@ -1271,8 +1259,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "topLevelChanged(bool)" );
@@ -1297,10 +1283,10 @@ void visibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 {
+  QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
@@ -1339,8 +1325,6 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibilityChanged(bool)" );

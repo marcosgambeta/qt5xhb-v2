@@ -423,10 +423,10 @@ void activated()
 */
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 {
+  QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated()" ) )
@@ -463,8 +463,6 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated()" );
@@ -489,10 +487,10 @@ void activatedAmbiguously()
 */
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 {
+  QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activatedAmbiguously()" ) )
@@ -529,8 +527,6 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
   }
   else if( hb_pcount() == 0 )
   {
-    QShortcut * sender = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activatedAmbiguously()" );

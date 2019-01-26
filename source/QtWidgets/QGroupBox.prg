@@ -396,10 +396,10 @@ void clicked( bool checked = false )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {
+  QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(bool)" ) )
@@ -438,8 +438,6 @@ HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(bool)" );
@@ -464,10 +462,10 @@ void toggled( bool on )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 {
+  QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "toggled(bool)" ) )
@@ -506,8 +504,6 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "toggled(bool)" );

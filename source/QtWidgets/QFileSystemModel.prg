@@ -1259,10 +1259,10 @@ void directoryLoaded( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {
+  QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "directoryLoaded(QString)" ) )
@@ -1301,8 +1301,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "directoryLoaded(QString)" );
@@ -1327,10 +1325,10 @@ void fileRenamed( const QString & path, const QString & oldName, const QString &
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 {
+  QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fileRenamed(QString,QString,QString)" ) )
@@ -1373,8 +1371,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fileRenamed(QString,QString,QString)" );
@@ -1399,10 +1395,10 @@ void rootPathChanged( const QString & newPath )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 {
+  QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rootPathChanged(QString)" ) )
@@ -1441,8 +1437,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileSystemModel * sender = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rootPathChanged(QString)" );

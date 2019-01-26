@@ -265,10 +265,10 @@ void stateChanged( int state )
 */
 HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
 {
+  QCheckBox * sender = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCheckBox * sender = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(int)" ) )
@@ -307,8 +307,6 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCheckBox * sender = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(int)" );

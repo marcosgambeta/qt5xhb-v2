@@ -616,10 +616,10 @@ void anchorClicked( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 {
+  QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "anchorClicked(QUrl)" ) )
@@ -658,8 +658,6 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "anchorClicked(QUrl)" );
@@ -684,10 +682,10 @@ void backwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
+  QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backwardAvailable(bool)" ) )
@@ -726,8 +724,6 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backwardAvailable(bool)" );
@@ -752,10 +748,10 @@ void forwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
+  QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "forwardAvailable(bool)" ) )
@@ -794,8 +790,6 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "forwardAvailable(bool)" );
@@ -820,10 +814,10 @@ void highlighted( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
+  QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QUrl)" ) )
@@ -862,8 +856,6 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QUrl)" );
@@ -888,10 +880,10 @@ void highlighted( const QString & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
+  QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlighted(QString)" ) )
@@ -930,8 +922,6 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlighted(QString)" );
@@ -956,10 +946,10 @@ void historyChanged()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
+  QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "historyChanged()" ) )
@@ -996,8 +986,6 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "historyChanged()" );
@@ -1022,10 +1010,10 @@ void sourceChanged( const QUrl & src )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 {
+  QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sourceChanged(QUrl)" ) )
@@ -1064,8 +1052,6 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextBrowser * sender = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sourceChanged(QUrl)" );

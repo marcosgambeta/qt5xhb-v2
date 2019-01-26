@@ -486,10 +486,10 @@ void activeStackChanged( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 {
+  QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeStackChanged(QUndoStack*)" ) )
@@ -528,8 +528,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeStackChanged(QUndoStack*)" );
@@ -554,10 +552,10 @@ void canRedoChanged( bool canRedo )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 {
+  QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "canRedoChanged(bool)" ) )
@@ -596,8 +594,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "canRedoChanged(bool)" );
@@ -622,10 +618,10 @@ void canUndoChanged( bool canUndo )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 {
+  QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "canUndoChanged(bool)" ) )
@@ -664,8 +660,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "canUndoChanged(bool)" );
@@ -690,10 +684,10 @@ void cleanChanged( bool clean )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 {
+  QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cleanChanged(bool)" ) )
@@ -732,8 +726,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cleanChanged(bool)" );
@@ -758,10 +750,10 @@ void indexChanged( int idx )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 {
+  QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "indexChanged(int)" ) )
@@ -800,8 +792,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "indexChanged(int)" );
@@ -826,10 +816,10 @@ void redoTextChanged( const QString & redoText )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 {
+  QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "redoTextChanged(QString)" ) )
@@ -868,8 +858,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "redoTextChanged(QString)" );
@@ -894,10 +882,10 @@ void undoTextChanged( const QString & undoText )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 {
+  QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "undoTextChanged(QString)" ) )
@@ -936,8 +924,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "undoTextChanged(QString)" );

@@ -194,10 +194,10 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {
+  QGraphicsColorizeEffect * sender = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsColorizeEffect * sender = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
@@ -236,8 +236,6 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsColorizeEffect * sender = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
@@ -262,10 +260,10 @@ void strengthChanged( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 {
+  QGraphicsColorizeEffect * sender = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsColorizeEffect * sender = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "strengthChanged(qreal)" ) )
@@ -304,8 +302,6 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsColorizeEffect * sender = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "strengthChanged(qreal)" );

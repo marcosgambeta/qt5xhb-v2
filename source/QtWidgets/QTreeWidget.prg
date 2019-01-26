@@ -1090,10 +1090,10 @@ void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" ) )
@@ -1134,8 +1134,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
@@ -1160,10 +1158,10 @@ void itemActivated( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemActivated(QTreeWidgetItem*,int)" ) )
@@ -1204,8 +1202,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemActivated(QTreeWidgetItem*,int)" );
@@ -1230,10 +1226,10 @@ void itemChanged( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemChanged(QTreeWidgetItem*,int)" ) )
@@ -1274,8 +1270,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemChanged(QTreeWidgetItem*,int)" );
@@ -1300,10 +1294,10 @@ void itemClicked( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemClicked(QTreeWidgetItem*,int)" ) )
@@ -1344,8 +1338,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemClicked(QTreeWidgetItem*,int)" );
@@ -1370,10 +1362,10 @@ void itemCollapsed( QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemCollapsed(QTreeWidgetItem*)" ) )
@@ -1412,8 +1404,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemCollapsed(QTreeWidgetItem*)" );
@@ -1438,10 +1428,10 @@ void itemDoubleClicked( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" ) )
@@ -1482,8 +1472,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" );
@@ -1508,10 +1496,10 @@ void itemEntered( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemEntered(QTreeWidgetItem*,int)" ) )
@@ -1552,8 +1540,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemEntered(QTreeWidgetItem*,int)" );
@@ -1578,10 +1564,10 @@ void itemExpanded( QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemExpanded(QTreeWidgetItem*)" ) )
@@ -1620,8 +1606,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemExpanded(QTreeWidgetItem*)" );
@@ -1646,10 +1630,10 @@ void itemPressed( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemPressed(QTreeWidgetItem*,int)" ) )
@@ -1690,8 +1674,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemPressed(QTreeWidgetItem*,int)" );
@@ -1716,10 +1698,10 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
+  QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemSelectionChanged()" ) )
@@ -1756,8 +1738,6 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemSelectionChanged()" );

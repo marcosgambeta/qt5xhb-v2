@@ -1768,10 +1768,10 @@ void geometriesChanged()
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "geometriesChanged()" ) )
@@ -1808,8 +1808,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "geometriesChanged()" );
@@ -1838,10 +1836,10 @@ void sectionClicked( int logicalIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionClicked(int)" ) )
@@ -1880,8 +1878,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionClicked(int)" );
@@ -1906,10 +1902,10 @@ void sectionCountChanged( int oldCount, int newCount )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionCountChanged(int,int)" ) )
@@ -1950,8 +1946,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionCountChanged(int,int)" );
@@ -1976,10 +1970,10 @@ void sectionDoubleClicked( int logicalIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionDoubleClicked(int)" ) )
@@ -2018,8 +2012,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionDoubleClicked(int)" );
@@ -2044,10 +2036,10 @@ void sectionEntered( int logicalIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionEntered(int)" ) )
@@ -2086,8 +2078,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionEntered(int)" );
@@ -2112,10 +2102,10 @@ void sectionHandleDoubleClicked( int logicalIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionHandleDoubleClicked(int)" ) )
@@ -2154,8 +2144,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionHandleDoubleClicked(int)" );
@@ -2180,10 +2168,10 @@ void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionMoved(int,int,int)" ) )
@@ -2226,8 +2214,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionMoved(int,int,int)" );
@@ -2252,10 +2238,10 @@ void sectionPressed( int logicalIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionPressed(int)" ) )
@@ -2294,8 +2280,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionPressed(int)" );
@@ -2320,10 +2304,10 @@ void sectionResized( int logicalIndex, int oldSize, int newSize )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sectionResized(int,int,int)" ) )
@@ -2366,8 +2350,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sectionResized(int,int,int)" );
@@ -2392,10 +2374,10 @@ void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 {
+  QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" ) )
@@ -2436,8 +2418,6 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QHeaderView * sender = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );

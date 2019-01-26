@@ -1410,10 +1410,10 @@ void dateChanged( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
+  QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dateChanged(QDate)" ) )
@@ -1452,8 +1452,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dateChanged(QDate)" );
@@ -1478,10 +1476,10 @@ void dateTimeChanged( const QDateTime & datetime )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
+  QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dateTimeChanged(QDateTime)" ) )
@@ -1520,8 +1518,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dateTimeChanged(QDateTime)" );
@@ -1546,10 +1542,10 @@ void timeChanged( const QTime & time )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
+  QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "timeChanged(QTime)" ) )
@@ -1588,8 +1584,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "timeChanged(QTime)" );

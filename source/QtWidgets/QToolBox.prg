@@ -598,10 +598,10 @@ void currentChanged( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
 {
+  QToolBox * sender = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QToolBox * sender = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentChanged(int)" ) )
@@ -640,8 +640,6 @@ HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QToolBox * sender = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentChanged(int)" );

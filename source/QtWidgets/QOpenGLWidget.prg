@@ -349,10 +349,10 @@ void aboutToCompose()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToCompose()" ) )
@@ -389,8 +389,6 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
   }
   else if( hb_pcount() == 0 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToCompose()" );
@@ -417,10 +415,10 @@ void frameSwapped()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frameSwapped()" ) )
@@ -457,8 +455,6 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
   }
   else if( hb_pcount() == 0 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frameSwapped()" );
@@ -485,10 +481,10 @@ void aboutToResize()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToResize()" ) )
@@ -525,8 +521,6 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
   }
   else if( hb_pcount() == 0 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToResize()" );
@@ -553,10 +547,10 @@ void resized()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "resized()" ) )
@@ -593,8 +587,6 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
   }
   else if( hb_pcount() == 0 )
   {
-    QOpenGLWidget * sender = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "resized()" );

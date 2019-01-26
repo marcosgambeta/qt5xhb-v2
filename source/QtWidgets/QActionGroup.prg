@@ -392,10 +392,10 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 {
+  QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(QAction*)" ) )
@@ -434,8 +434,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(QAction*)" );
@@ -460,10 +458,10 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
 {
+  QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "triggered(QAction*)" ) )
@@ -502,8 +500,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QActionGroup * sender = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "triggered(QAction*)" );

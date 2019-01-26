@@ -1823,10 +1823,10 @@ void currentChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentChanged(QString)" ) )
@@ -1865,8 +1865,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentChanged(QString)" );
@@ -1891,10 +1889,10 @@ void directoryEntered( const QString & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "directoryEntered(QString)" ) )
@@ -1933,8 +1931,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "directoryEntered(QString)" );
@@ -1959,10 +1955,10 @@ void fileSelected( const QString & file )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fileSelected(QString)" ) )
@@ -2001,8 +1997,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fileSelected(QString)" );
@@ -2027,10 +2021,10 @@ void filesSelected( const QStringList & selected )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "filesSelected(QStringList)" ) )
@@ -2076,8 +2070,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "filesSelected(QStringList)" );
@@ -2102,10 +2094,10 @@ void filterSelected( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "filterSelected(QString)" ) )
@@ -2144,8 +2136,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "filterSelected(QString)" );
@@ -2170,10 +2160,10 @@ void urlSelected( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "urlSelected(QUrl)" ) )
@@ -2212,8 +2202,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "urlSelected(QUrl)" );
@@ -2238,10 +2226,10 @@ void urlsSelected( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "urlsSelected(QList<QUrl>)" ) )
@@ -2303,8 +2291,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "urlsSelected(QList<QUrl>)" );
@@ -2329,10 +2315,10 @@ void currentUrlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentUrlChanged(QUrl)" ) )
@@ -2371,8 +2357,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentUrlChanged(QUrl)" );
@@ -2397,10 +2381,10 @@ void directoryUrlEntered( const QUrl & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
+  QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "directoryUrlEntered(QUrl)" ) )
@@ -2439,8 +2423,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFileDialog * sender = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "directoryUrlEntered(QUrl)" );

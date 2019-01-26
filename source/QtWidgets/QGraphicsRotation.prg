@@ -298,10 +298,10 @@ void angleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
+  QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "angleChanged()" ) )
@@ -338,8 +338,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "angleChanged()" );
@@ -364,10 +362,10 @@ void axisChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
+  QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisChanged()" ) )
@@ -404,8 +402,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisChanged()" );
@@ -430,10 +426,10 @@ void originChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
+  QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "originChanged()" ) )
@@ -470,8 +466,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "originChanged()" );

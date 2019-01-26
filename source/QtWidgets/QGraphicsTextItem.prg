@@ -850,10 +850,10 @@ void linkActivated( const QString & link )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 {
+  QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkActivated(QString)" ) )
@@ -892,8 +892,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkActivated(QString)" );
@@ -918,10 +916,10 @@ void linkHovered( const QString & link )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 {
+  QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkHovered(QString)" ) )
@@ -960,8 +958,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkHovered(QString)" );

@@ -357,10 +357,10 @@ void currentChanged(int index)
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
 {
+  QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentChanged(int)" ) )
@@ -399,8 +399,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentChanged(int)" );
@@ -425,10 +423,10 @@ void widgetRemoved(int index)
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
 {
+  QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "widgetRemoved(int)" ) )
@@ -467,8 +465,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "widgetRemoved(int)" );

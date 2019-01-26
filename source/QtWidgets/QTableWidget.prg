@@ -1301,10 +1301,10 @@ void cellActivated( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cellActivated(int,int)" ) )
@@ -1345,8 +1345,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cellActivated(int,int)" );
@@ -1371,10 +1369,10 @@ void cellChanged( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cellChanged(int,int)" ) )
@@ -1415,8 +1413,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cellChanged(int,int)" );
@@ -1441,10 +1437,10 @@ void cellClicked( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cellClicked(int,int)" ) )
@@ -1485,8 +1481,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cellClicked(int,int)" );
@@ -1511,10 +1505,10 @@ void cellDoubleClicked( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cellDoubleClicked(int,int)" ) )
@@ -1555,8 +1549,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cellDoubleClicked(int,int)" );
@@ -1581,10 +1573,10 @@ void cellEntered( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cellEntered(int,int)" ) )
@@ -1625,8 +1617,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cellEntered(int,int)" );
@@ -1651,10 +1641,10 @@ void cellPressed( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cellPressed(int,int)" ) )
@@ -1695,8 +1685,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cellPressed(int,int)" );
@@ -1721,10 +1709,10 @@ void currentCellChanged( int currentRow, int currentColumn, int previousRow, int
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentCellChanged(int,int,int,int)" ) )
@@ -1769,8 +1757,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentCellChanged(int,int,int,int)" );
@@ -1795,10 +1781,10 @@ void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) )
@@ -1839,8 +1825,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
@@ -1865,10 +1849,10 @@ void itemActivated( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemActivated(QTableWidgetItem*)" ) )
@@ -1907,8 +1891,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemActivated(QTableWidgetItem*)" );
@@ -1933,10 +1915,10 @@ void itemChanged( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemChanged(QTableWidgetItem*)" ) )
@@ -1975,8 +1957,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemChanged(QTableWidgetItem*)" );
@@ -2001,10 +1981,10 @@ void itemClicked( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemClicked(QTableWidgetItem*)" ) )
@@ -2043,8 +2023,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemClicked(QTableWidgetItem*)" );
@@ -2069,10 +2047,10 @@ void itemDoubleClicked( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemDoubleClicked(QTableWidgetItem*)" ) )
@@ -2111,8 +2089,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemDoubleClicked(QTableWidgetItem*)" );
@@ -2137,10 +2113,10 @@ void itemEntered( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemEntered(QTableWidgetItem*)" ) )
@@ -2179,8 +2155,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemEntered(QTableWidgetItem*)" );
@@ -2205,10 +2179,10 @@ void itemPressed( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemPressed(QTableWidgetItem*)" ) )
@@ -2247,8 +2221,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemPressed(QTableWidgetItem*)" );
@@ -2273,10 +2245,10 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
+  QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemSelectionChanged()" ) )
@@ -2313,8 +2285,6 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemSelectionChanged()" );

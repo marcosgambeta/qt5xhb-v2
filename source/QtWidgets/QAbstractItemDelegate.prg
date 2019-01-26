@@ -365,10 +365,10 @@ void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QA
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 {
+  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) )
@@ -409,8 +409,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
@@ -435,10 +433,10 @@ void commitData( QWidget * editor )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 {
+  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "commitData(QWidget*)" ) )
@@ -477,8 +475,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "commitData(QWidget*)" );
@@ -503,10 +499,10 @@ void sizeHintChanged( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 {
+  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sizeHintChanged(QModelIndex)" ) )
@@ -545,8 +541,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sizeHintChanged(QModelIndex)" );

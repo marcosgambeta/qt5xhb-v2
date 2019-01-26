@@ -687,10 +687,10 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
 {
+  QProgressBar * sender = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QProgressBar * sender = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(int)" ) )
@@ -729,8 +729,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QProgressBar * sender = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(int)" );

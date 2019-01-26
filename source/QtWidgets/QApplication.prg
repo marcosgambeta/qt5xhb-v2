@@ -1686,10 +1686,10 @@ void focusChanged( QWidget * old, QWidget * now )
 */
 HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 {
+  QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusChanged(QWidget*,QWidget*)" ) )
@@ -1730,8 +1730,6 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusChanged(QWidget*,QWidget*)" );
@@ -1756,10 +1754,10 @@ void fontDatabaseChanged()
 */
 HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
 {
+  QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontDatabaseChanged()" ) )
@@ -1796,8 +1794,6 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontDatabaseChanged()" );
@@ -1822,10 +1818,10 @@ void lastWindowClosed()
 */
 HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
 {
+  QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lastWindowClosed()" ) )
@@ -1862,8 +1858,6 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QApplication * sender = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lastWindowClosed()" );

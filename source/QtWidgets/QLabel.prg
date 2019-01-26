@@ -1039,10 +1039,10 @@ void linkActivated( const QString & link )
 */
 HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 {
+  QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkActivated(QString)" ) )
@@ -1081,8 +1081,6 @@ HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkActivated(QString)" );
@@ -1107,10 +1105,10 @@ void linkHovered( const QString & link )
 */
 HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
 {
+  QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkHovered(QString)" ) )
@@ -1149,8 +1147,6 @@ HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLabel * sender = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkHovered(QString)" );

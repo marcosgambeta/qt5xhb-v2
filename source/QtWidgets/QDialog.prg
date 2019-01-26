@@ -566,10 +566,10 @@ void accepted()
 */
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
+  QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "accepted()" ) )
@@ -606,8 +606,6 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "accepted()" );
@@ -632,10 +630,10 @@ void finished( int result )
 */
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
+  QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(int)" ) )
@@ -674,8 +672,6 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(int)" );
@@ -700,10 +696,10 @@ void rejected()
 */
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
+  QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rejected()" ) )
@@ -740,8 +736,6 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rejected()" );

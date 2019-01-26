@@ -530,10 +530,10 @@ void completeChanged()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {
+  QWizardPage * sender = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWizardPage * sender = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "completeChanged()" ) )
@@ -570,8 +570,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWizardPage * sender = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "completeChanged()" );

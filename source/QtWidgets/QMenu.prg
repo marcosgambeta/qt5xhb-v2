@@ -1264,10 +1264,10 @@ void aboutToHide()
 */
 HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
 {
+  QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToHide()" ) )
@@ -1304,8 +1304,6 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
   }
   else if( hb_pcount() == 0 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToHide()" );
@@ -1330,10 +1328,10 @@ void aboutToShow()
 */
 HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
 {
+  QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aboutToShow()" ) )
@@ -1370,8 +1368,6 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
   }
   else if( hb_pcount() == 0 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aboutToShow()" );
@@ -1396,10 +1392,10 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QMENU_ONHOVERED )
 {
+  QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hovered(QAction*)" ) )
@@ -1438,8 +1434,6 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hovered(QAction*)" );
@@ -1464,10 +1458,10 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 {
+  QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "triggered(QAction*)" ) )
@@ -1506,8 +1500,6 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMenu * sender = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "triggered(QAction*)" );

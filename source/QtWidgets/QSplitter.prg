@@ -716,10 +716,10 @@ void splitterMoved( int pos, int index )
 */
 HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {
+  QSplitter * sender = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSplitter * sender = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "splitterMoved(int,int)" ) )
@@ -760,8 +760,6 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSplitter * sender = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "splitterMoved(int,int)" );

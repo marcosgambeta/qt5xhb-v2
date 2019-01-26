@@ -1171,10 +1171,10 @@ void activated( const QDate & date )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 {
+  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activated(QDate)" ) )
@@ -1213,8 +1213,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activated(QDate)" );
@@ -1239,10 +1237,10 @@ void clicked( const QDate & date )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 {
+  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "clicked(QDate)" ) )
@@ -1281,8 +1279,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "clicked(QDate)" );
@@ -1307,10 +1303,10 @@ void currentPageChanged( int year, int month )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
+  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentPageChanged(int,int)" ) )
@@ -1351,8 +1347,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentPageChanged(int,int)" );
@@ -1377,10 +1371,10 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
+  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
@@ -1417,8 +1411,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );

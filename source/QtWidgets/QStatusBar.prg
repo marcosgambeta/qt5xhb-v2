@@ -349,10 +349,10 @@ void messageChanged( const QString & message )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
 {
+  QStatusBar * sender = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QStatusBar * sender = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "messageChanged(QString)" ) )
@@ -391,8 +391,6 @@ HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QStatusBar * sender = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "messageChanged(QString)" );

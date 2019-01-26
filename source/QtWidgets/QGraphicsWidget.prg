@@ -1470,10 +1470,10 @@ void geometryChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
 {
+  QGraphicsWidget * sender = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGraphicsWidget * sender = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "geometryChanged()" ) )
@@ -1510,8 +1510,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGraphicsWidget * sender = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "geometryChanged()" );

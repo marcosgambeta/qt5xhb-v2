@@ -1326,10 +1326,10 @@ void doubleValueChanged( double value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 {
+  QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "doubleValueChanged(double)" ) )
@@ -1368,8 +1368,6 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "doubleValueChanged(double)" );
@@ -1394,10 +1392,10 @@ void doubleValueSelected( double value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 {
+  QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "doubleValueSelected(double)" ) )
@@ -1436,8 +1434,6 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "doubleValueSelected(double)" );
@@ -1462,10 +1458,10 @@ void intValueChanged( int value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
 {
+  QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "intValueChanged(int)" ) )
@@ -1504,8 +1500,6 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "intValueChanged(int)" );
@@ -1530,10 +1524,10 @@ void intValueSelected( int value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
 {
+  QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "intValueSelected(int)" ) )
@@ -1572,8 +1566,6 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "intValueSelected(int)" );
@@ -1598,10 +1590,10 @@ void textValueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 {
+  QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textValueChanged(QString)" ) )
@@ -1640,8 +1632,6 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textValueChanged(QString)" );
@@ -1666,10 +1656,10 @@ void textValueSelected( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 {
+  QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textValueSelected(QString)" ) )
@@ -1708,8 +1698,6 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputDialog * sender = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textValueSelected(QString)" );

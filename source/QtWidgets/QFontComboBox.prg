@@ -272,10 +272,10 @@ void currentFontChanged( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
 {
+  QFontComboBox * sender = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QFontComboBox * sender = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentFontChanged(QFont)" ) )
@@ -314,8 +314,6 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QFontComboBox * sender = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentFontChanged(QFont)" );

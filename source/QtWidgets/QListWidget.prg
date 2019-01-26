@@ -901,10 +901,10 @@ void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) )
@@ -945,8 +945,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
@@ -971,10 +969,10 @@ void currentRowChanged( int currentRow )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentRowChanged(int)" ) )
@@ -1013,8 +1011,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentRowChanged(int)" );
@@ -1039,10 +1035,10 @@ void currentTextChanged( const QString & currentText )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
@@ -1081,8 +1077,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentTextChanged(QString)" );
@@ -1107,10 +1101,10 @@ void itemActivated( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemActivated(QListWidgetItem*)" ) )
@@ -1149,8 +1143,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemActivated(QListWidgetItem*)" );
@@ -1175,10 +1167,10 @@ void itemChanged( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemChanged(QListWidgetItem*)" ) )
@@ -1217,8 +1209,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemChanged(QListWidgetItem*)" );
@@ -1243,10 +1233,10 @@ void itemClicked( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemClicked(QListWidgetItem*)" ) )
@@ -1285,8 +1275,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemClicked(QListWidgetItem*)" );
@@ -1311,10 +1299,10 @@ void itemDoubleClicked( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemDoubleClicked(QListWidgetItem*)" ) )
@@ -1353,8 +1341,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemDoubleClicked(QListWidgetItem*)" );
@@ -1379,10 +1365,10 @@ void itemEntered( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemEntered(QListWidgetItem*)" ) )
@@ -1421,8 +1407,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemEntered(QListWidgetItem*)" );
@@ -1447,10 +1431,10 @@ void itemPressed( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemPressed(QListWidgetItem*)" ) )
@@ -1489,8 +1473,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemPressed(QListWidgetItem*)" );
@@ -1515,10 +1497,10 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
+  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemSelectionChanged()" ) )
@@ -1555,8 +1537,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemSelectionChanged()" );

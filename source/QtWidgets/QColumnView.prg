@@ -472,10 +472,10 @@ void updatePreviewWidget( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {
+  QColumnView * sender = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QColumnView * sender = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "updatePreviewWidget(QModelIndex)" ) )
@@ -514,8 +514,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
   }
   else if( hb_pcount() == 0 )
   {
-    QColumnView * sender = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "updatePreviewWidget(QModelIndex)" );
