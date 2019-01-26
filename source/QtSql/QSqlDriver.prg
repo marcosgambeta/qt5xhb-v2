@@ -715,10 +715,10 @@ void notification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 {
+  QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "notification(QString)" ) )
@@ -757,8 +757,6 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "notification(QString)" );
@@ -783,10 +781,10 @@ void notification( const QString & name, QSqlDriver::NotificationSource source, 
 */
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 {
+  QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) )
@@ -829,8 +827,6 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );

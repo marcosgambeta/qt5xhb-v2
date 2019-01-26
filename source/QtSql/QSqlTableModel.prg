@@ -937,10 +937,10 @@ void beforeDelete( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
+  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeDelete(int)" ) )
@@ -979,8 +979,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
   }
   else if( hb_pcount() == 0 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeDelete(int)" );
@@ -1005,10 +1003,10 @@ void beforeInsert( QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
+  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeInsert(QSqlRecord)" ) )
@@ -1047,8 +1045,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
   }
   else if( hb_pcount() == 0 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeInsert(QSqlRecord)" );
@@ -1073,10 +1069,10 @@ void beforeUpdate( int row, QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
+  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeUpdate(int,QSqlRecord)" ) )
@@ -1117,8 +1113,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
   }
   else if( hb_pcount() == 0 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeUpdate(int,QSqlRecord)" );
@@ -1143,10 +1137,10 @@ void primeInsert( int row, QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
+  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "primeInsert(int,QSqlRecord)" ) )
@@ -1187,8 +1181,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
   }
   else if( hb_pcount() == 0 )
   {
-    QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "primeInsert(int,QSqlRecord)" );
