@@ -181,10 +181,10 @@ void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QTapSensor * sender = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTapSensor * sender = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "returnDoubleTapEventsChanged(bool)" ) )
@@ -223,8 +223,6 @@ HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTapSensor * sender = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "returnDoubleTapEventsChanged(bool)" );

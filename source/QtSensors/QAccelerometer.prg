@@ -181,10 +181,10 @@ void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode 
 HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" ) )
@@ -223,8 +223,6 @@ HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );

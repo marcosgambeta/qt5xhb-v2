@@ -181,10 +181,10 @@ void hasZChanged( bool hasZ )
 HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QRotationSensor * sender = (QRotationSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRotationSensor * sender = (QRotationSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "hasZChanged(bool)" ) )
@@ -223,8 +223,6 @@ HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRotationSensor * sender = (QRotationSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "hasZChanged(bool)" );

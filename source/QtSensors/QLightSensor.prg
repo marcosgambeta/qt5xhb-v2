@@ -181,10 +181,10 @@ void fieldOfViewChanged( qreal fieldOfView )
 HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QLightSensor * sender = (QLightSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QLightSensor * sender = (QLightSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fieldOfViewChanged(qreal)" ) )
@@ -223,8 +223,6 @@ HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QLightSensor * sender = (QLightSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fieldOfViewChanged(qreal)" );

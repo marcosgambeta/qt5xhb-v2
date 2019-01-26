@@ -1249,10 +1249,10 @@ void busyChanged()
 HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "busyChanged()" ) )
@@ -1289,8 +1289,6 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "busyChanged()" );
@@ -1317,10 +1315,10 @@ void activeChanged()
 HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeChanged()" ) )
@@ -1357,8 +1355,6 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeChanged()" );
@@ -1385,10 +1381,10 @@ void readingChanged()
 HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "readingChanged()" ) )
@@ -1425,8 +1421,6 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "readingChanged()" );
@@ -1453,10 +1447,10 @@ void sensorError( int error )
 HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sensorError(int)" ) )
@@ -1495,8 +1489,6 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sensorError(int)" );
@@ -1523,10 +1515,10 @@ void availableSensorsChanged()
 HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "availableSensorsChanged()" ) )
@@ -1563,8 +1555,6 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "availableSensorsChanged()" );
@@ -1591,10 +1581,10 @@ void alwaysOnChanged()
 HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "alwaysOnChanged()" ) )
@@ -1631,8 +1621,6 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "alwaysOnChanged()" );
@@ -1659,10 +1647,10 @@ void dataRateChanged()
 HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataRateChanged()" ) )
@@ -1699,8 +1687,6 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataRateChanged()" );
@@ -1727,10 +1713,10 @@ void skipDuplicatesChanged( bool skipDuplicates )
 HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "skipDuplicatesChanged(bool)" ) )
@@ -1769,8 +1755,6 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "skipDuplicatesChanged(bool)" );
@@ -1797,10 +1781,10 @@ void axesOrientationModeChanged( QSensor::AxesOrientationMode axesOrientationMod
 HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" ) )
@@ -1839,8 +1823,6 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
@@ -1867,10 +1849,10 @@ void currentOrientationChanged( int currentOrientation )
 HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentOrientationChanged(int)" ) )
@@ -1909,8 +1891,6 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentOrientationChanged(int)" );
@@ -1937,10 +1917,10 @@ void userOrientationChanged( int userOrientation )
 HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "userOrientationChanged(int)" ) )
@@ -1979,8 +1959,6 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "userOrientationChanged(int)" );
@@ -2007,10 +1985,10 @@ void maxBufferSizeChanged( int maxBufferSize )
 HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxBufferSizeChanged(int)" ) )
@@ -2049,8 +2027,6 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxBufferSizeChanged(int)" );
@@ -2077,10 +2053,10 @@ void efficientBufferSizeChanged( int efficientBufferSize )
 HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "efficientBufferSizeChanged(int)" ) )
@@ -2119,8 +2095,6 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "efficientBufferSizeChanged(int)" );
@@ -2147,10 +2121,10 @@ void bufferSizeChanged( int bufferSize )
 HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "bufferSizeChanged(int)" ) )
@@ -2189,8 +2163,6 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSensor * sender = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "bufferSizeChanged(int)" );

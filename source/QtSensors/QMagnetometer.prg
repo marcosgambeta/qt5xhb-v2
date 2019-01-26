@@ -181,10 +181,10 @@ void returnGeoValuesChanged( bool returnGeoValues )
 HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QMagnetometer * sender = (QMagnetometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMagnetometer * sender = (QMagnetometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "returnGeoValuesChanged(bool)" ) )
@@ -223,8 +223,6 @@ HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMagnetometer * sender = (QMagnetometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "returnGeoValuesChanged(bool)" );
