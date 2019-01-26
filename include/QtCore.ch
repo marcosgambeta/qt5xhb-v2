@@ -13,6 +13,7 @@
 #ifndef QTCORE_CH
 #define QTCORE_CH
 
+#include "Qt.ch"
 #include "QAbstractAnimation.ch"
 #include "QAbstractItemModel.ch"
 #include "QByteArray.ch"
@@ -56,7 +57,6 @@
 #include "QStateMachine.ch"
 #include "QSysInfo.ch"
 #include "QSystemSemaphore.ch"
-#include "QtCore.ch"
 #include "QTextBoundaryFinder.ch"
 #include "QTextCodec.ch"
 #include "QTextStream.ch"
