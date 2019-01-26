@@ -270,10 +270,10 @@ void entered()
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 {
+  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "entered()" ) )
@@ -310,8 +310,6 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "entered()" );
@@ -336,10 +334,10 @@ void error( int code, const QString & description, int sourcePosition, const QSt
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 {
+  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(int,QString,int,QString)" ) )
@@ -384,8 +382,6 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(int,QString,int,QString)" );
@@ -410,10 +406,10 @@ void finished()
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 {
+  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -450,8 +446,6 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
   }
   else if( hb_pcount() == 0 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -476,10 +470,10 @@ void finished( const QVariant & result )
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 {
+  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QVariant)" ) )
@@ -518,8 +512,6 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
   }
   else if( hb_pcount() == 0 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QVariant)" );
@@ -544,10 +536,10 @@ void finished( int code, const QString & source, const QString & description, co
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 {
+  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(int,QString,QString,QString)" ) )
@@ -592,8 +584,6 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
   }
   else if( hb_pcount() == 0 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(int,QString,QString,QString)" );
@@ -618,10 +608,10 @@ void stateChanged( int state )
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 {
+  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(int)" ) )
@@ -660,8 +650,6 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(int)" );
