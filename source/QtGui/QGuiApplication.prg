@@ -964,10 +964,10 @@ void focusObjectChanged( QObject * focusObject )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 {
+  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusObjectChanged(QObject*)" ) )
@@ -1006,8 +1006,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusObjectChanged(QObject*)" );
@@ -1032,10 +1030,10 @@ void focusWindowChanged( QWindow * focusWindow )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 {
+  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusWindowChanged(QWindow*)" ) )
@@ -1074,8 +1072,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusWindowChanged(QWindow*)" );
@@ -1100,10 +1096,10 @@ void fontDatabaseChanged()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 {
+  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontDatabaseChanged()" ) )
@@ -1140,8 +1136,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontDatabaseChanged()" );
@@ -1166,10 +1160,10 @@ void lastWindowClosed()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 {
+  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lastWindowClosed()" ) )
@@ -1206,8 +1200,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lastWindowClosed()" );
@@ -1232,10 +1224,10 @@ void screenAdded( QScreen * screen )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
 {
+  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "screenAdded(QScreen*)" ) )
@@ -1274,8 +1266,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "screenAdded(QScreen*)" );

@@ -877,10 +877,10 @@ void geometryChanged( const QRect & geometry )
 */
 HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "geometryChanged(QRect)" ) )
@@ -919,8 +919,6 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "geometryChanged(QRect)" );
@@ -945,10 +943,10 @@ void physicalSizeChanged( const QSizeF & size )
 */
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "physicalSizeChanged(QSizeF)" ) )
@@ -987,8 +985,6 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "physicalSizeChanged(QSizeF)" );
@@ -1013,10 +1009,10 @@ void physicalDotsPerInchChanged( qreal dpi )
 */
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "physicalDotsPerInchChanged(qreal)" ) )
@@ -1055,8 +1051,6 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "physicalDotsPerInchChanged(qreal)" );
@@ -1081,10 +1075,10 @@ void logicalDotsPerInchChanged( qreal dpi )
 */
 HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "logicalDotsPerInchChanged(qreal)" ) )
@@ -1123,8 +1117,6 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "logicalDotsPerInchChanged(qreal)" );
@@ -1149,10 +1141,10 @@ void virtualGeometryChanged( const QRect & rect )
 */
 HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "virtualGeometryChanged(QRect)" ) )
@@ -1191,8 +1183,6 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "virtualGeometryChanged(QRect)" );
@@ -1217,10 +1207,10 @@ void primaryOrientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) )
@@ -1259,8 +1249,6 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
@@ -1285,10 +1273,10 @@ void orientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) )
@@ -1327,8 +1315,6 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orientationChanged(Qt::ScreenOrientation)" );
@@ -1353,10 +1339,10 @@ void refreshRateChanged( qreal refreshRate )
 */
 HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 {
+  QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "refreshRateChanged(qreal)" ) )
@@ -1395,8 +1381,6 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "refreshRateChanged(qreal)" );

@@ -456,10 +456,10 @@ void actionChanged( Qt::DropAction action )
 */
 HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 {
+  QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "actionChanged(Qt::DropAction)" ) )
@@ -498,8 +498,6 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "actionChanged(Qt::DropAction)" );
@@ -524,10 +522,10 @@ void targetChanged( QObject * newTarget )
 */
 HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
 {
+  QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "targetChanged(QObject*)" ) )
@@ -566,8 +564,6 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDrag * sender = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "targetChanged(QObject*)" );

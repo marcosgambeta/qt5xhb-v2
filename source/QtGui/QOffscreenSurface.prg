@@ -358,10 +358,10 @@ void screenChanged( QScreen * screen )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 {
+  QOffscreenSurface * sender = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QOffscreenSurface * sender = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "screenChanged(QScreen*)" ) )
@@ -400,8 +400,6 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QOffscreenSurface * sender = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "screenChanged(QScreen*)" );

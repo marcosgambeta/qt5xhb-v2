@@ -865,10 +865,10 @@ void error( QImageReader::ImageReaderError error )
 */
 HB_FUNC_STATIC( QMOVIE_ONERROR )
 {
+  QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QImageReader::ImageReaderError)" ) )
@@ -907,8 +907,6 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QImageReader::ImageReaderError)" );
@@ -933,10 +931,10 @@ void finished()
 */
 HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 {
+  QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -973,8 +971,6 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -999,10 +995,10 @@ void frameChanged( int frameNumber )
 */
 HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 {
+  QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frameChanged(int)" ) )
@@ -1041,8 +1037,6 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frameChanged(int)" );
@@ -1067,10 +1061,10 @@ void resized( const QSize & size )
 */
 HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 {
+  QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "resized(QSize)" ) )
@@ -1109,8 +1103,6 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "resized(QSize)" );
@@ -1135,10 +1127,10 @@ void started()
 */
 HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 {
+  QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "started()" ) )
@@ -1175,8 +1167,6 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "started()" );
@@ -1201,10 +1191,10 @@ void stateChanged( QMovie::MovieState state )
 */
 HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 {
+  QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QMovie::MovieState)" ) )
@@ -1243,8 +1233,6 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QMovie::MovieState)" );
@@ -1269,10 +1257,10 @@ void updated( const QRect & rect )
 */
 HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 {
+  QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "updated(QRect)" ) )
@@ -1311,8 +1299,6 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QMovie * sender = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "updated(QRect)" );

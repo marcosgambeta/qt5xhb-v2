@@ -1633,10 +1633,10 @@ void itemChanged( QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
 {
+  QStandardItemModel * sender = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QStandardItemModel * sender = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemChanged(QStandardItem*)" ) )
@@ -1675,8 +1675,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QStandardItemModel * sender = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemChanged(QStandardItem*)" );

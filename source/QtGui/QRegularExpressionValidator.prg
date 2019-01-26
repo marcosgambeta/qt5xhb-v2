@@ -162,10 +162,10 @@ void regularExpressionChanged( const QRegularExpression & re )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {
+  QRegularExpressionValidator * sender = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QRegularExpressionValidator * sender = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "regularExpressionChanged(QRegularExpression)" ) )
@@ -204,8 +204,6 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QRegularExpressionValidator * sender = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "regularExpressionChanged(QRegularExpression)" );

@@ -448,10 +448,10 @@ void changed( QClipboard::Mode mode )
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
 {
+  QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "changed(QClipboard::Mode)" ) )
@@ -490,8 +490,6 @@ HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "changed(QClipboard::Mode)" );
@@ -516,10 +514,10 @@ void dataChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
 {
+  QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataChanged()" ) )
@@ -556,8 +554,6 @@ HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataChanged()" );
@@ -582,10 +578,10 @@ void findBufferChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
 {
+  QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "findBufferChanged()" ) )
@@ -622,8 +618,6 @@ HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "findBufferChanged()" );
@@ -648,10 +642,10 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
 {
+  QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
@@ -688,8 +682,6 @@ HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QClipboard * sender = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );

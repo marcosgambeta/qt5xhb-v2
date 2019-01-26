@@ -2015,10 +2015,10 @@ void contentsChange( int from, int charsRemoves, int charsAdded )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "contentsChange(int,int,int)" ) )
@@ -2061,8 +2061,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "contentsChange(int,int,int)" );
@@ -2087,10 +2085,10 @@ void contentsChanged()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "contentsChanged()" ) )
@@ -2127,8 +2125,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "contentsChanged()" );
@@ -2153,10 +2149,10 @@ void undoAvailable( bool b )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "undoAvailable(bool)" ) )
@@ -2195,8 +2191,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "undoAvailable(bool)" );
@@ -2221,10 +2215,10 @@ void redoAvailable( bool b )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "redoAvailable(bool)" ) )
@@ -2263,8 +2257,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "redoAvailable(bool)" );
@@ -2289,10 +2281,10 @@ void undoCommandAdded()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "undoCommandAdded()" ) )
@@ -2329,8 +2321,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "undoCommandAdded()" );
@@ -2355,10 +2345,10 @@ void modificationChanged( bool m )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modificationChanged(bool)" ) )
@@ -2397,8 +2387,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modificationChanged(bool)" );
@@ -2423,10 +2411,10 @@ void cursorPositionChanged( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorPositionChanged(QTextCursor)" ) )
@@ -2465,8 +2453,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorPositionChanged(QTextCursor)" );
@@ -2491,10 +2477,10 @@ void blockCountChanged( int newBlockCount )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "blockCountChanged(int)" ) )
@@ -2533,8 +2519,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "blockCountChanged(int)" );
@@ -2559,10 +2543,10 @@ void documentLayoutChanged()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
 {
+  QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "documentLayoutChanged()" ) )
@@ -2599,8 +2583,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QTextDocument * sender = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "documentLayoutChanged()" );

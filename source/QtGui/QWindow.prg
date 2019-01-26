@@ -3019,10 +3019,10 @@ void activeChanged()
 HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeChanged()" ) )
@@ -3059,8 +3059,6 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeChanged()" );
@@ -3086,10 +3084,10 @@ void contentOrientationChanged(Qt::ScreenOrientation orientation)
 */
 HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "contentOrientationChanged(Qt::ScreenOrientation)" ) )
@@ -3128,8 +3126,6 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "contentOrientationChanged(Qt::ScreenOrientation)" );
@@ -3154,10 +3150,10 @@ void focusObjectChanged(QObject *object)
 */
 HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "focusObjectChanged(QObject*)" ) )
@@ -3196,8 +3192,6 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "focusObjectChanged(QObject*)" );
@@ -3222,10 +3216,10 @@ void heightChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "heightChanged(int)" ) )
@@ -3264,8 +3258,6 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "heightChanged(int)" );
@@ -3290,10 +3282,10 @@ void maximumHeightChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maximumHeightChanged(int)" ) )
@@ -3332,8 +3324,6 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maximumHeightChanged(int)" );
@@ -3358,10 +3348,10 @@ void maximumWidthChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maximumWidthChanged(int)" ) )
@@ -3400,8 +3390,6 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maximumWidthChanged(int)" );
@@ -3426,10 +3414,10 @@ void minimumHeightChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minimumHeightChanged(int)" ) )
@@ -3468,8 +3456,6 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minimumHeightChanged(int)" );
@@ -3494,10 +3480,10 @@ void minimumWidthChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minimumWidthChanged(int)" ) )
@@ -3536,8 +3522,6 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minimumWidthChanged(int)" );
@@ -3562,10 +3546,10 @@ void modalityChanged(Qt::WindowModality modality)
 */
 HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "modalityChanged(Qt::WindowModality)" ) )
@@ -3604,8 +3588,6 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "modalityChanged(Qt::WindowModality)" );
@@ -3631,10 +3613,10 @@ void opacityChanged(qreal opacity)
 HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
@@ -3673,8 +3655,6 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "opacityChanged(qreal)" );
@@ -3700,10 +3680,10 @@ void screenChanged(QScreen *screen)
 */
 HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "screenChanged(QScreen*)" ) )
@@ -3742,8 +3722,6 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "screenChanged(QScreen*)" );
@@ -3769,10 +3747,10 @@ void visibilityChanged(QWindow::Visibility visibility)
 HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibilityChanged(QWindow::Visibility)" ) )
@@ -3811,8 +3789,6 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibilityChanged(QWindow::Visibility)" );
@@ -3838,10 +3814,10 @@ void visibleChanged(bool arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged(bool)" ) )
@@ -3880,8 +3856,6 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged(bool)" );
@@ -3906,10 +3880,10 @@ void widthChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "widthChanged(int)" ) )
@@ -3948,8 +3922,6 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "widthChanged(int)" );
@@ -3974,10 +3946,10 @@ void windowStateChanged(Qt::WindowState windowState)
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowStateChanged(Qt::WindowState)" ) )
@@ -4016,8 +3988,6 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowStateChanged(Qt::WindowState)" );
@@ -4042,10 +4012,10 @@ void windowTitleChanged(const QString &title)
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowTitleChanged(QString)" ) )
@@ -4084,8 +4054,6 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowTitleChanged(QString)" );
@@ -4110,10 +4078,10 @@ void xChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xChanged(int)" ) )
@@ -4152,8 +4120,6 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xChanged(int)" );
@@ -4178,10 +4144,10 @@ void yChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
 {
+  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yChanged(int)" ) )
@@ -4220,8 +4186,6 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yChanged(int)" );

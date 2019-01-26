@@ -459,10 +459,10 @@ void animatingChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 {
+  QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "animatingChanged()" ) )
@@ -499,8 +499,6 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "animatingChanged()" );
@@ -525,10 +523,10 @@ void cursorRectangleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 {
+  QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cursorRectangleChanged()" ) )
@@ -565,8 +563,6 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cursorRectangleChanged()" );
@@ -591,10 +587,10 @@ void inputDirectionChanged( Qt::LayoutDirection newDirection )
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 {
+  QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "inputDirectionChanged(Qt::LayoutDirection)" ) )
@@ -633,8 +629,6 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "inputDirectionChanged(Qt::LayoutDirection)" );
@@ -659,10 +653,10 @@ void keyboardRectangleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 {
+  QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "keyboardRectangleChanged()" ) )
@@ -699,8 +693,6 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "keyboardRectangleChanged()" );
@@ -725,10 +717,10 @@ void localeChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 {
+  QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "localeChanged()" ) )
@@ -765,8 +757,6 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "localeChanged()" );
@@ -791,10 +781,10 @@ void visibleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 {
+  QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
@@ -831,8 +821,6 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibleChanged()" );

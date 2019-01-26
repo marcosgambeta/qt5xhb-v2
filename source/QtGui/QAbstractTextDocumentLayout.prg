@@ -365,10 +365,10 @@ void documentSizeChanged( const QSizeF & newSize )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 {
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "documentSizeChanged(QSizeF)" ) )
@@ -407,8 +407,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "documentSizeChanged(QSizeF)" );
@@ -433,10 +431,10 @@ void pageCountChanged( int newPages )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 {
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pageCountChanged(int)" ) )
@@ -475,8 +473,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pageCountChanged(int)" );
@@ -501,10 +497,10 @@ void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 {
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "update(QRectF)" ) )
@@ -543,8 +539,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "update(QRectF)" );
@@ -569,10 +563,10 @@ void updateBlock( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 {
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "updateBlock(QTextBlock)" ) )
@@ -611,8 +605,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "updateBlock(QTextBlock)" );
