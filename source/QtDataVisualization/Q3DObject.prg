@@ -212,10 +212,10 @@ void positionChanged( const QVector3D & position )
 */
 HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
 {
+  Q3DObject * sender = (Q3DObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DObject * sender = (Q3DObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionChanged(QVector3D)" ) )
@@ -254,8 +254,6 @@ HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DObject * sender = (Q3DObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionChanged(QVector3D)" );

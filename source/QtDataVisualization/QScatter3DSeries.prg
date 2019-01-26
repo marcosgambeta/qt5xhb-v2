@@ -299,10 +299,10 @@ void dataProxyChanged( QScatterDataProxy * proxy )
 */
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 {
+  QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataProxyChanged(QScatterDataProxy*)" ) )
@@ -341,8 +341,6 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataProxyChanged(QScatterDataProxy*)" );
@@ -367,10 +365,10 @@ void itemSizeChanged( float size )
 */
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 {
+  QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemSizeChanged(float)" ) )
@@ -409,8 +407,6 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemSizeChanged(float)" );
@@ -435,10 +431,10 @@ void selectedItemChanged( int index )
 */
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 {
+  QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedItemChanged(int)" ) )
@@ -477,8 +473,6 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatter3DSeries * sender = (QScatter3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedItemChanged(int)" );

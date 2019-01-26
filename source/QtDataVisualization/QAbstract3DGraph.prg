@@ -1626,10 +1626,10 @@ void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" ) )
@@ -1668,8 +1668,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
@@ -1694,10 +1692,10 @@ void activeThemeChanged( Q3DTheme * theme )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeThemeChanged(Q3DTheme*)" ) )
@@ -1736,8 +1734,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeThemeChanged(Q3DTheme*)" );
@@ -1762,10 +1758,10 @@ void aspectRatioChanged( qreal ratio )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "aspectRatioChanged(qreal)" ) )
@@ -1804,8 +1800,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "aspectRatioChanged(qreal)" );
@@ -1830,10 +1824,10 @@ void currentFpsChanged( qreal fps )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "currentFpsChanged(qreal)" ) )
@@ -1872,8 +1866,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "currentFpsChanged(qreal)" );
@@ -1898,10 +1890,10 @@ void horizontalAspectRatioChanged( qreal ratio )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "horizontalAspectRatioChanged(qreal)" ) )
@@ -1940,8 +1932,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "horizontalAspectRatioChanged(qreal)" );
@@ -1966,10 +1956,10 @@ void localeChanged( const QLocale & locale )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
@@ -2008,8 +1998,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "localeChanged(QLocale)" );
@@ -2034,10 +2022,10 @@ void marginChanged( qreal margin )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "marginChanged(qreal)" ) )
@@ -2076,8 +2064,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "marginChanged(qreal)" );
@@ -2102,10 +2088,10 @@ void measureFpsChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "measureFpsChanged(bool)" ) )
@@ -2144,8 +2130,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "measureFpsChanged(bool)" );
@@ -2170,10 +2154,10 @@ void optimizationHintsChanged( QAbstract3DGraph::OptimizationHints hints )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" ) )
@@ -2212,8 +2196,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
@@ -2238,10 +2220,10 @@ void orthoProjectionChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orthoProjectionChanged(bool)" ) )
@@ -2280,8 +2262,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orthoProjectionChanged(bool)" );
@@ -2306,10 +2286,10 @@ void polarChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "polarChanged(bool)" ) )
@@ -2348,8 +2328,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "polarChanged(bool)" );
@@ -2374,10 +2352,10 @@ void queriedGraphPositionChanged( const QVector3D & data )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "queriedGraphPositionChanged(QVector3D)" ) )
@@ -2416,8 +2394,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "queriedGraphPositionChanged(QVector3D)" );
@@ -2442,10 +2418,10 @@ void radialLabelOffsetChanged( float offset )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "radialLabelOffsetChanged(float)" ) )
@@ -2484,8 +2460,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "radialLabelOffsetChanged(float)" );
@@ -2510,10 +2484,10 @@ void reflectionChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "reflectionChanged(bool)" ) )
@@ -2552,8 +2526,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "reflectionChanged(bool)" );
@@ -2578,10 +2550,10 @@ void reflectivityChanged( qreal reflectivity )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "reflectivityChanged(qreal)" ) )
@@ -2620,8 +2592,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "reflectivityChanged(qreal)" );
@@ -2646,10 +2616,10 @@ void selectedElementChanged( QAbstract3DGraph::ElementType type )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" ) )
@@ -2688,8 +2658,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
@@ -2714,10 +2682,10 @@ void selectionModeChanged( QAbstract3DGraph::SelectionFlags mode )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" ) )
@@ -2756,8 +2724,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
@@ -2782,10 +2748,10 @@ void shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
 {
+  QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" ) )
@@ -2824,8 +2790,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );

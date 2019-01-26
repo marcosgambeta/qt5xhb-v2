@@ -545,10 +545,10 @@ void axisXChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 {
+  Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
@@ -587,8 +587,6 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisXChanged(QValue3DAxis*)" );
@@ -613,10 +611,10 @@ void axisYChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 {
+  Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
@@ -655,8 +653,6 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisYChanged(QValue3DAxis*)" );
@@ -681,10 +677,10 @@ void axisZChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 {
+  Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
@@ -723,8 +719,6 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisZChanged(QValue3DAxis*)" );
@@ -749,10 +743,10 @@ void flipHorizontalGridChanged( bool flip )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 {
+  Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flipHorizontalGridChanged(bool)" ) )
@@ -791,8 +785,6 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flipHorizontalGridChanged(bool)" );
@@ -817,10 +809,10 @@ void selectedSeriesChanged( QSurface3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 {
+  Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedSeriesChanged(QSurface3DSeries*)" ) )
@@ -859,8 +851,6 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedSeriesChanged(QSurface3DSeries*)" );

@@ -298,10 +298,10 @@ void dataProxyChanged( QBarDataProxy * proxy )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 {
+  QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataProxyChanged(QBarDataProxy*)" ) )
@@ -340,8 +340,6 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataProxyChanged(QBarDataProxy*)" );
@@ -366,10 +364,10 @@ void selectedBarChanged( const QPoint & position )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 {
+  QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedBarChanged(QPoint)" ) )
@@ -408,8 +406,6 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedBarChanged(QPoint)" );
@@ -434,10 +430,10 @@ void meshAngleChanged( float angle )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 {
+  QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "meshAngleChanged(float)" ) )
@@ -476,8 +472,6 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "meshAngleChanged(float)" );

@@ -1373,10 +1373,10 @@ void ambientLightStrengthChanged( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "ambientLightStrengthChanged(float)" ) )
@@ -1415,8 +1415,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "ambientLightStrengthChanged(float)" );
@@ -1441,10 +1439,10 @@ void backgroundColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backgroundColorChanged(QColor)" ) )
@@ -1483,8 +1481,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backgroundColorChanged(QColor)" );
@@ -1509,10 +1505,10 @@ void backgroundEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "backgroundEnabledChanged(bool)" ) )
@@ -1551,8 +1547,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "backgroundEnabledChanged(bool)" );
@@ -1577,10 +1571,10 @@ void baseColorsChanged( const QList<QColor> & colors )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseColorsChanged(QList<QColor>)" ) )
@@ -1642,8 +1636,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseColorsChanged(QList<QColor>)" );
@@ -1668,10 +1660,10 @@ void baseGradientsChanged( const QList<QLinearGradient> & gradients )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseGradientsChanged(QList<QLinearGradient>)" ) )
@@ -1733,8 +1725,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseGradientsChanged(QList<QLinearGradient>)" );
@@ -1759,10 +1749,10 @@ void colorStyleChanged( Q3DTheme::ColorStyle style )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" ) )
@@ -1801,8 +1791,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" );
@@ -1827,10 +1815,10 @@ void fontChanged( const QFont & font )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "fontChanged(QFont)" ) )
@@ -1869,8 +1857,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "fontChanged(QFont)" );
@@ -1895,10 +1881,10 @@ void gridEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gridEnabledChanged(bool)" ) )
@@ -1937,8 +1923,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gridEnabledChanged(bool)" );
@@ -1963,10 +1947,10 @@ void gridLineColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gridLineColorChanged(QColor)" ) )
@@ -2005,8 +1989,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gridLineColorChanged(QColor)" );
@@ -2031,10 +2013,10 @@ void highlightLightStrengthChanged( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "highlightLightStrengthChanged(float)" ) )
@@ -2073,8 +2055,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "highlightLightStrengthChanged(float)" );
@@ -2099,10 +2079,10 @@ void labelBackgroundColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBackgroundColorChanged(QColor)" ) )
@@ -2141,8 +2121,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBackgroundColorChanged(QColor)" );
@@ -2167,10 +2145,10 @@ void labelBackgroundEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBackgroundEnabledChanged(bool)" ) )
@@ -2209,8 +2187,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBackgroundEnabledChanged(bool)" );
@@ -2235,10 +2211,10 @@ void labelBorderEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelBorderEnabledChanged(bool)" ) )
@@ -2277,8 +2253,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelBorderEnabledChanged(bool)" );
@@ -2303,10 +2277,10 @@ void labelTextColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelTextColorChanged(QColor)" ) )
@@ -2345,8 +2319,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelTextColorChanged(QColor)" );
@@ -2371,10 +2343,10 @@ void lightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lightColorChanged(QColor)" ) )
@@ -2413,8 +2385,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lightColorChanged(QColor)" );
@@ -2439,10 +2409,10 @@ void lightStrengthChanged( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "lightStrengthChanged(float)" ) )
@@ -2481,8 +2451,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "lightStrengthChanged(float)" );
@@ -2507,10 +2475,10 @@ void multiHighlightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiHighlightColorChanged(QColor)" ) )
@@ -2549,8 +2517,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiHighlightColorChanged(QColor)" );
@@ -2575,10 +2541,10 @@ void multiHighlightGradientChanged( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiHighlightGradientChanged(QLinearGradient)" ) )
@@ -2617,8 +2583,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiHighlightGradientChanged(QLinearGradient)" );
@@ -2643,10 +2607,10 @@ void singleHighlightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "singleHighlightColorChanged(QColor)" ) )
@@ -2685,8 +2649,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "singleHighlightColorChanged(QColor)" );
@@ -2711,10 +2673,10 @@ void singleHighlightGradientChanged( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "singleHighlightGradientChanged(QLinearGradient)" ) )
@@ -2753,8 +2715,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "singleHighlightGradientChanged(QLinearGradient)" );
@@ -2779,10 +2739,10 @@ void typeChanged( Q3DTheme::Theme themeType )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "typeChanged(Q3DTheme::Theme)" ) )
@@ -2821,8 +2781,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "typeChanged(Q3DTheme::Theme)" );
@@ -2847,10 +2805,10 @@ void windowColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
 {
+  Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowColorChanged(QColor)" ) )
@@ -2889,8 +2847,6 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowColorChanged(QColor)" );

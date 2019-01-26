@@ -583,10 +583,10 @@ void titleChanged( const QString & newTitle )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
@@ -625,8 +625,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
@@ -651,10 +649,10 @@ void labelsChanged()
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsChanged()" ) )
@@ -691,8 +689,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsChanged()" );
@@ -717,10 +713,10 @@ void orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" ) )
@@ -759,8 +755,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
@@ -785,10 +779,10 @@ void minChanged( float value )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minChanged(float)" ) )
@@ -827,8 +821,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minChanged(float)" );
@@ -853,10 +845,10 @@ void maxChanged( float value )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxChanged(float)" ) )
@@ -895,8 +887,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxChanged(float)" );
@@ -921,10 +911,10 @@ void rangeChanged( float min, float max )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rangeChanged(float,float)" ) )
@@ -965,8 +955,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rangeChanged(float,float)" );
@@ -991,10 +979,10 @@ void autoAdjustRangeChanged( bool autoAdjust )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "autoAdjustRangeChanged(bool)" ) )
@@ -1033,8 +1021,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "autoAdjustRangeChanged(bool)" );
@@ -1059,10 +1045,10 @@ void labelAutoRotationChanged( float angle )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelAutoRotationChanged(float)" ) )
@@ -1101,8 +1087,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelAutoRotationChanged(float)" );
@@ -1127,10 +1111,10 @@ void titleVisibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleVisibilityChanged(bool)" ) )
@@ -1169,8 +1153,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleVisibilityChanged(bool)" );
@@ -1195,10 +1177,10 @@ void titleFixedChanged( bool fixed )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
 {
+  QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleFixedChanged(bool)" ) )
@@ -1237,8 +1219,6 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DAxis * sender = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleFixedChanged(bool)" );

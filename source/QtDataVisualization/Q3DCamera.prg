@@ -626,10 +626,10 @@ void cameraPresetChanged( Q3DCamera::CameraPreset preset )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" ) )
@@ -668,8 +668,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
@@ -694,10 +692,10 @@ void maxZoomLevelChanged( float zoomLevel )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "maxZoomLevelChanged(float)" ) )
@@ -736,8 +734,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "maxZoomLevelChanged(float)" );
@@ -762,10 +758,10 @@ void minZoomLevelChanged( float zoomLevel )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "minZoomLevelChanged(float)" ) )
@@ -804,8 +800,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "minZoomLevelChanged(float)" );
@@ -830,10 +824,10 @@ void targetChanged( const QVector3D & target )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "targetChanged(QVector3D)" ) )
@@ -872,8 +866,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "targetChanged(QVector3D)" );
@@ -898,10 +890,10 @@ void wrapXRotationChanged( bool isEnabled )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "wrapXRotationChanged(bool)" ) )
@@ -940,8 +932,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "wrapXRotationChanged(bool)" );
@@ -966,10 +956,10 @@ void wrapYRotationChanged( bool isEnabled )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "wrapYRotationChanged(bool)" ) )
@@ -1008,8 +998,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "wrapYRotationChanged(bool)" );
@@ -1034,10 +1022,10 @@ void xRotationChanged( float rotation )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "xRotationChanged(float)" ) )
@@ -1076,8 +1064,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "xRotationChanged(float)" );
@@ -1102,10 +1088,10 @@ void yRotationChanged( float rotation )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "yRotationChanged(float)" ) )
@@ -1144,8 +1130,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "yRotationChanged(float)" );
@@ -1170,10 +1154,10 @@ void zoomLevelChanged( float zoomLevel )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 {
+  Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "zoomLevelChanged(float)" ) )
@@ -1212,8 +1196,6 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "zoomLevelChanged(float)" );

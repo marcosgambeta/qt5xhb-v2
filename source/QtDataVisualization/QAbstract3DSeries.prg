@@ -963,10 +963,10 @@ void baseColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseColorChanged(QColor)" ) )
@@ -1005,8 +1005,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseColorChanged(QColor)" );
@@ -1031,10 +1029,10 @@ void baseGradientChanged( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "baseGradientChanged(QLinearGradient)" ) )
@@ -1073,8 +1071,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "baseGradientChanged(QLinearGradient)" );
@@ -1099,10 +1095,10 @@ void colorStyleChanged( Q3DTheme::ColorStyle style )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" ) )
@@ -1141,8 +1137,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorStyleChanged(Q3DTheme::ColorStyle)" );
@@ -1167,10 +1161,10 @@ void itemLabelChanged( const QString & label )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemLabelChanged(QString)" ) )
@@ -1209,8 +1203,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemLabelChanged(QString)" );
@@ -1235,10 +1227,10 @@ void itemLabelFormatChanged( const QString & format )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemLabelFormatChanged(QString)" ) )
@@ -1277,8 +1269,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemLabelFormatChanged(QString)" );
@@ -1303,10 +1293,10 @@ void itemLabelVisibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemLabelVisibilityChanged(bool)" ) )
@@ -1345,8 +1335,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemLabelVisibilityChanged(bool)" );
@@ -1371,10 +1359,10 @@ void meshChanged( QAbstract3DSeries::Mesh mesh )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "meshChanged(QAbstract3DSeries::Mesh)" ) )
@@ -1413,8 +1401,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "meshChanged(QAbstract3DSeries::Mesh)" );
@@ -1439,10 +1425,10 @@ void meshRotationChanged( const QQuaternion & rotation )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "meshRotationChanged(QQuaternion)" ) )
@@ -1481,8 +1467,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "meshRotationChanged(QQuaternion)" );
@@ -1507,10 +1491,10 @@ void meshSmoothChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "meshSmoothChanged(bool)" ) )
@@ -1549,8 +1533,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "meshSmoothChanged(bool)" );
@@ -1575,10 +1557,10 @@ void multiHighlightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiHighlightColorChanged(QColor)" ) )
@@ -1617,8 +1599,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiHighlightColorChanged(QColor)" );
@@ -1643,10 +1623,10 @@ void multiHighlightGradientChanged( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiHighlightGradientChanged(QLinearGradient)" ) )
@@ -1685,8 +1665,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiHighlightGradientChanged(QLinearGradient)" );
@@ -1711,10 +1689,10 @@ void nameChanged( const QString & name )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
@@ -1753,8 +1731,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "nameChanged(QString)" );
@@ -1779,10 +1755,10 @@ void singleHighlightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "singleHighlightColorChanged(QColor)" ) )
@@ -1821,8 +1797,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "singleHighlightColorChanged(QColor)" );
@@ -1847,10 +1821,10 @@ void singleHighlightGradientChanged( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "singleHighlightGradientChanged(QLinearGradient)" ) )
@@ -1889,8 +1863,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "singleHighlightGradientChanged(QLinearGradient)" );
@@ -1915,10 +1887,10 @@ void userDefinedMeshChanged( const QString & fileName )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "userDefinedMeshChanged(QString)" ) )
@@ -1957,8 +1929,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "userDefinedMeshChanged(QString)" );
@@ -1983,10 +1953,10 @@ void visibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
 {
+  QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
@@ -2025,8 +1995,6 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DSeries * sender = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "visibilityChanged(bool)" );

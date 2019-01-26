@@ -489,10 +489,10 @@ void dataProxyChanged( QSurfaceDataProxy * proxy )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
 {
+  QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "dataProxyChanged(QSurfaceDataProxy*)" ) )
@@ -531,8 +531,6 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "dataProxyChanged(QSurfaceDataProxy*)" );
@@ -557,10 +555,10 @@ void drawModeChanged( QSurface3DSeries::DrawFlags mode )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
 {
+  QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" ) )
@@ -599,8 +597,6 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
@@ -625,10 +621,10 @@ void flatShadingEnabledChanged( bool enable )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
 {
+  QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flatShadingEnabledChanged(bool)" ) )
@@ -667,8 +663,6 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flatShadingEnabledChanged(bool)" );
@@ -693,10 +687,10 @@ void flatShadingSupportedChanged( bool enable )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
 {
+  QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "flatShadingSupportedChanged(bool)" ) )
@@ -735,8 +729,6 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "flatShadingSupportedChanged(bool)" );
@@ -761,10 +753,10 @@ void selectedPointChanged( const QPoint & position )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
 {
+  QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedPointChanged(QPoint)" ) )
@@ -803,8 +795,6 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedPointChanged(QPoint)" );
@@ -829,10 +819,10 @@ void textureChanged( const QImage & image )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
 {
+  QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureChanged(QImage)" ) )
@@ -871,8 +861,6 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureChanged(QImage)" );
@@ -897,10 +885,10 @@ void textureFileChanged( const QString & filename )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
 {
+  QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "textureFileChanged(QString)" ) )
@@ -939,8 +927,6 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "textureFileChanged(QString)" );

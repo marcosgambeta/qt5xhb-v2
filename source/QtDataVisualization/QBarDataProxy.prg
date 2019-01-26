@@ -516,10 +516,10 @@ void arrayReset()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "arrayReset()" ) )
@@ -556,8 +556,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "arrayReset()" );
@@ -582,10 +580,10 @@ void columnLabelsChanged()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnLabelsChanged()" ) )
@@ -622,8 +620,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnLabelsChanged()" );
@@ -648,10 +644,10 @@ void itemChanged( int rowIndex, int columnIndex )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemChanged(int,int)" ) )
@@ -692,8 +688,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemChanged(int,int)" );
@@ -718,10 +712,10 @@ void rowCountChanged( int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowCountChanged(int)" ) )
@@ -760,8 +754,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowCountChanged(int)" );
@@ -786,10 +778,10 @@ void rowLabelsChanged()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowLabelsChanged()" ) )
@@ -826,8 +818,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowLabelsChanged()" );
@@ -852,10 +842,10 @@ void rowsAdded( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
@@ -896,8 +886,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsAdded(int,int)" );
@@ -922,10 +910,10 @@ void rowsChanged( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
@@ -966,8 +954,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsChanged(int,int)" );
@@ -992,10 +978,10 @@ void rowsInserted( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
@@ -1036,8 +1022,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsInserted(int,int)" );
@@ -1062,10 +1046,10 @@ void rowsRemoved( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
@@ -1106,8 +1090,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowsRemoved(int,int)" );
@@ -1132,10 +1114,10 @@ void seriesChanged( QBar3DSeries * series )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
 {
+  QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seriesChanged(QBar3DSeries*)" ) )
@@ -1174,8 +1156,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seriesChanged(QBar3DSeries*)" );

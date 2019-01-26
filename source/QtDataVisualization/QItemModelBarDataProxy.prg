@@ -1275,10 +1275,10 @@ void autoColumnCategoriesChanged( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "autoColumnCategoriesChanged(bool)" ) )
@@ -1317,8 +1317,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "autoColumnCategoriesChanged(bool)" );
@@ -1343,10 +1341,10 @@ void autoRowCategoriesChanged( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "autoRowCategoriesChanged(bool)" ) )
@@ -1385,8 +1383,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "autoRowCategoriesChanged(bool)" );
@@ -1411,10 +1407,10 @@ void columnCategoriesChanged()
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnCategoriesChanged()" ) )
@@ -1451,8 +1447,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnCategoriesChanged()" );
@@ -1477,10 +1471,10 @@ void columnRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnRoleChanged(QString)" ) )
@@ -1519,8 +1513,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnRoleChanged(QString)" );
@@ -1545,10 +1537,10 @@ void columnRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnRolePatternChanged(QRegExp)" ) )
@@ -1587,8 +1579,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnRolePatternChanged(QRegExp)" );
@@ -1613,10 +1603,10 @@ void columnRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnRoleReplaceChanged(QString)" ) )
@@ -1655,8 +1645,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnRoleReplaceChanged(QString)" );
@@ -1681,10 +1669,10 @@ void itemModelChanged( const QAbstractItemModel * itemModel )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemModelChanged(QAbstractItemModel*)" ) )
@@ -1723,8 +1711,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemModelChanged(QAbstractItemModel*)" );
@@ -1749,10 +1735,10 @@ void multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behav
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" ) )
@@ -1791,8 +1777,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
@@ -1817,10 +1801,10 @@ void rotationRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRoleChanged(QString)" ) )
@@ -1859,8 +1843,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRoleChanged(QString)" );
@@ -1885,10 +1867,10 @@ void rotationRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRolePatternChanged(QRegExp)" ) )
@@ -1927,8 +1909,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRolePatternChanged(QRegExp)" );
@@ -1953,10 +1933,10 @@ void rotationRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rotationRoleReplaceChanged(QString)" ) )
@@ -1995,8 +1975,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rotationRoleReplaceChanged(QString)" );
@@ -2021,10 +1999,10 @@ void rowCategoriesChanged()
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowCategoriesChanged()" ) )
@@ -2061,8 +2039,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowCategoriesChanged()" );
@@ -2087,10 +2063,10 @@ void rowRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowRoleChanged(QString)" ) )
@@ -2129,8 +2105,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowRoleChanged(QString)" );
@@ -2155,10 +2129,10 @@ void rowRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowRolePatternChanged(QRegExp)" ) )
@@ -2197,8 +2171,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowRolePatternChanged(QRegExp)" );
@@ -2223,10 +2195,10 @@ void rowRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowRoleReplaceChanged(QString)" ) )
@@ -2265,8 +2237,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowRoleReplaceChanged(QString)" );
@@ -2291,10 +2261,10 @@ void useModelCategoriesChanged( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "useModelCategoriesChanged(bool)" ) )
@@ -2333,8 +2303,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "useModelCategoriesChanged(bool)" );
@@ -2359,10 +2327,10 @@ void valueRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueRoleChanged(QString)" ) )
@@ -2401,8 +2369,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueRoleChanged(QString)" );
@@ -2427,10 +2393,10 @@ void valueRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueRolePatternChanged(QRegExp)" ) )
@@ -2469,8 +2435,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueRolePatternChanged(QRegExp)" );
@@ -2495,10 +2459,10 @@ void valueRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
 {
+  QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueRoleReplaceChanged(QString)" ) )
@@ -2537,8 +2501,6 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueRoleReplaceChanged(QString)" );

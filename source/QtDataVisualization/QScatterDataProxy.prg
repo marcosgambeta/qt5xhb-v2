@@ -311,10 +311,10 @@ void arrayReset()
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 {
+  QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "arrayReset()" ) )
@@ -351,8 +351,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "arrayReset()" );
@@ -377,10 +375,10 @@ void itemCountChanged( int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 {
+  QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemCountChanged(int)" ) )
@@ -419,8 +417,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemCountChanged(int)" );
@@ -445,10 +441,10 @@ void itemsAdded( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 {
+  QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsAdded(int,int)" ) )
@@ -489,8 +485,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsAdded(int,int)" );
@@ -515,10 +509,10 @@ void itemsChanged( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 {
+  QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsChanged(int,int)" ) )
@@ -559,8 +553,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsChanged(int,int)" );
@@ -585,10 +577,10 @@ void itemsInserted( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 {
+  QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsInserted(int,int)" ) )
@@ -629,8 +621,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsInserted(int,int)" );
@@ -655,10 +645,10 @@ void itemsRemoved( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 {
+  QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemsRemoved(int,int)" ) )
@@ -699,8 +689,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemsRemoved(int,int)" );
@@ -725,10 +713,10 @@ void seriesChanged( QScatter3DSeries * series )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 {
+  QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "seriesChanged(QScatter3DSeries*)" ) )
@@ -767,8 +755,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "seriesChanged(QScatter3DSeries*)" );

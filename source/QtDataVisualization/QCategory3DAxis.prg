@@ -146,10 +146,10 @@ void labelsChanged()
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 {
+  QCategory3DAxis * sender = (QCategory3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QCategory3DAxis * sender = (QCategory3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "labelsChanged()" ) )
@@ -186,8 +186,6 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QCategory3DAxis * sender = (QCategory3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "labelsChanged()" );

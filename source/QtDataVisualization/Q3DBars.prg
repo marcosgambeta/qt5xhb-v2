@@ -842,10 +842,10 @@ void multiSeriesUniformChanged( bool uniform )
 */
 HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "multiSeriesUniformChanged(bool)" ) )
@@ -884,8 +884,6 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "multiSeriesUniformChanged(bool)" );
@@ -910,10 +908,10 @@ void barThicknessChanged( float thicknessRatio )
 */
 HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "barThicknessChanged(float)" ) )
@@ -952,8 +950,6 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "barThicknessChanged(float)" );
@@ -978,10 +974,10 @@ void barSpacingChanged( const QSizeF & spacing )
 */
 HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "barSpacingChanged(QSizeF)" ) )
@@ -1020,8 +1016,6 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "barSpacingChanged(QSizeF)" );
@@ -1046,10 +1040,10 @@ void barSpacingRelativeChanged( bool relative )
 */
 HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "barSpacingRelativeChanged(bool)" ) )
@@ -1088,8 +1082,6 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "barSpacingRelativeChanged(bool)" );
@@ -1114,10 +1106,10 @@ void rowAxisChanged( QCategory3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "rowAxisChanged(QCategory3DAxis*)" ) )
@@ -1156,8 +1148,6 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "rowAxisChanged(QCategory3DAxis*)" );
@@ -1182,10 +1172,10 @@ void columnAxisChanged( QCategory3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "columnAxisChanged(QCategory3DAxis*)" ) )
@@ -1224,8 +1214,6 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "columnAxisChanged(QCategory3DAxis*)" );
@@ -1250,10 +1238,10 @@ void valueAxisChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueAxisChanged(QValue3DAxis*)" ) )
@@ -1292,8 +1280,6 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueAxisChanged(QValue3DAxis*)" );
@@ -1318,10 +1304,10 @@ void primarySeriesChanged( QBar3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "primarySeriesChanged(QBar3DSeries*)" ) )
@@ -1360,8 +1346,6 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "primarySeriesChanged(QBar3DSeries*)" );
@@ -1386,10 +1370,10 @@ void selectedSeriesChanged( QBar3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedSeriesChanged(QBar3DSeries*)" ) )
@@ -1428,8 +1412,6 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedSeriesChanged(QBar3DSeries*)" );
@@ -1454,10 +1436,10 @@ void floorLevelChanged( float level )
 */
 HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
 {
+  Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "floorLevelChanged(float)" ) )
@@ -1496,8 +1478,6 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DBars * sender = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "floorLevelChanged(float)" );

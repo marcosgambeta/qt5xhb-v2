@@ -283,10 +283,10 @@ void inputViewChanged( QAbstract3DInputHandler::InputView view )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 {
+  QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" ) )
@@ -325,8 +325,6 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
@@ -351,10 +349,10 @@ void positionChanged( const QPoint & position )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 {
+  QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "positionChanged(QPoint)" ) )
@@ -393,8 +391,6 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "positionChanged(QPoint)" );
@@ -419,10 +415,10 @@ void sceneChanged( Q3DScene * scene )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 {
+  QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sceneChanged(Q3DScene*)" ) )
@@ -461,8 +457,6 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sceneChanged(Q3DScene*)" );

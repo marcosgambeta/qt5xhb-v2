@@ -492,10 +492,10 @@ void axisXChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 {
+  Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
@@ -534,8 +534,6 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisXChanged(QValue3DAxis*)" );
@@ -560,10 +558,10 @@ void axisYChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 {
+  Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
@@ -602,8 +600,6 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisYChanged(QValue3DAxis*)" );
@@ -628,10 +624,10 @@ void axisZChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 {
+  Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
@@ -670,8 +666,6 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisZChanged(QValue3DAxis*)" );
@@ -696,10 +690,10 @@ void selectedSeriesChanged( QScatter3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 {
+  Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)" ) )
@@ -738,8 +732,6 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    Q3DScatter * sender = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectedSeriesChanged(QScatter3DSeries*)" );
