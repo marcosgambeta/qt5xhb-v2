@@ -998,10 +998,10 @@ void iconChanged()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "iconChanged()" ) )
@@ -1038,8 +1038,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "iconChanged()" );
@@ -1064,10 +1062,10 @@ void linkClicked( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
@@ -1106,8 +1104,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkClicked(QUrl)" );
@@ -1132,10 +1128,10 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
@@ -1174,8 +1170,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadFinished(bool)" );
@@ -1200,10 +1194,10 @@ void loadProgress( int progress )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadProgress(int)" ) )
@@ -1242,8 +1236,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadProgress(int)" );
@@ -1268,10 +1260,10 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadStarted()" ) )
@@ -1308,8 +1300,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadStarted()" );
@@ -1334,10 +1324,10 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
@@ -1374,8 +1364,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
@@ -1400,10 +1388,10 @@ void statusBarMessage( const QString & text )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
@@ -1442,8 +1430,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusBarMessage(QString)" );
@@ -1468,10 +1454,10 @@ void titleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
@@ -1510,8 +1496,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
@@ -1536,10 +1520,10 @@ void urlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 {
+  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
@@ -1578,8 +1562,6 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "urlChanged(QUrl)" );

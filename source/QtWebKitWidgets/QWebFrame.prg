@@ -1340,10 +1340,10 @@ void contentsSizeChanged( const QSize & size )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "contentsSizeChanged(QSize)" ) )
@@ -1382,8 +1382,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "contentsSizeChanged(QSize)" );
@@ -1408,10 +1406,10 @@ void iconChanged()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "iconChanged()" ) )
@@ -1448,8 +1446,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "iconChanged()" );
@@ -1474,10 +1470,10 @@ void initialLayoutCompleted()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "initialLayoutCompleted()" ) )
@@ -1514,8 +1510,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "initialLayoutCompleted()" );
@@ -1540,10 +1534,10 @@ void javaScriptWindowObjectCleared()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "javaScriptWindowObjectCleared()" ) )
@@ -1580,8 +1574,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "javaScriptWindowObjectCleared()" );
@@ -1606,10 +1598,10 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
@@ -1648,8 +1640,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadFinished(bool)" );
@@ -1674,10 +1664,10 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadStarted()" ) )
@@ -1714,8 +1704,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadStarted()" );
@@ -1740,10 +1728,10 @@ void pageChanged()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "pageChanged()" ) )
@@ -1780,8 +1768,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "pageChanged()" );
@@ -1806,10 +1792,10 @@ void titleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
@@ -1848,8 +1834,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
@@ -1874,10 +1858,10 @@ void urlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
 {
+  QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
@@ -1916,8 +1900,6 @@ HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebFrame * sender = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "urlChanged(QUrl)" );
