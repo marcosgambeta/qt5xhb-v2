@@ -176,10 +176,10 @@ void newConnection( const QDBusConnection & connection )
 */
 HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 {
+  QDBusServer * sender = (QDBusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDBusServer * sender = (QDBusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConnection(QDBusConnection)" ) )
@@ -218,8 +218,6 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
   }
   else if( hb_pcount() == 0 )
   {
-    QDBusServer * sender = (QDBusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConnection(QDBusConnection)" );

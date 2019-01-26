@@ -139,10 +139,10 @@ void finished( QDBusPendingCallWatcher * self )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 {
+  QDBusPendingCallWatcher * sender = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDBusPendingCallWatcher * sender = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QDBusPendingCallWatcher*)" ) )
@@ -181,8 +181,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDBusPendingCallWatcher * sender = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QDBusPendingCallWatcher*)" );

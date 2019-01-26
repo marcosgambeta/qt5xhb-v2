@@ -90,10 +90,10 @@ void serviceRegistered( const QString & service )
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 {
+  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "serviceRegistered(QString)" ) )
@@ -132,8 +132,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "serviceRegistered(QString)" );
@@ -158,10 +156,10 @@ void serviceUnregistered( const QString & service )
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
 {
+  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "serviceUnregistered(QString)" ) )
@@ -200,8 +198,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "serviceUnregistered(QString)" );
@@ -226,10 +222,10 @@ void serviceOwnerChanged( const QString & name, const QString & oldOwner, const 
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
 {
+  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "serviceOwnerChanged(QString,QString,QString)" ) )
@@ -272,8 +268,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "serviceOwnerChanged(QString,QString,QString)" );
@@ -298,10 +292,10 @@ void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
 {
+  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" ) )
@@ -342,8 +336,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDBusConnectionInterface * sender = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
