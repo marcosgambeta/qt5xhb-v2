@@ -112,10 +112,10 @@ void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport 
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebChannelAbstractTransport * sender = (QWebChannelAbstractTransport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebChannelAbstractTransport * sender = (QWebChannelAbstractTransport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "messageReceived(QJsonObject,QWebChannelAbstractTransport*)" ) )
@@ -156,8 +156,6 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebChannelAbstractTransport * sender = (QWebChannelAbstractTransport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "messageReceived(QJsonObject,QWebChannelAbstractTransport*)" );
