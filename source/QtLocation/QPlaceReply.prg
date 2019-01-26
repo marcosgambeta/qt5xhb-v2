@@ -234,10 +234,10 @@ void finished()
 HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished()" ) )
@@ -274,8 +274,6 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished()" );
@@ -302,10 +300,10 @@ void error( QPlaceReply::Error error, const QString & errorString = QString() )
 HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QPlaceReply::Error,QString)" ) )
@@ -346,8 +344,6 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QPlaceReply * sender = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QPlaceReply::Error,QString)" );

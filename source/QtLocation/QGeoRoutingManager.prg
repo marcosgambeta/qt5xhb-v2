@@ -465,10 +465,10 @@ void finished( QGeoRouteReply * reply )
 HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "finished(QGeoRouteReply*)" ) )
@@ -507,8 +507,6 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "finished(QGeoRouteReply*)" );
@@ -535,10 +533,10 @@ void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorSt
 HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) )
@@ -581,8 +579,6 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QGeoRoutingManager * sender = (QGeoRoutingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
