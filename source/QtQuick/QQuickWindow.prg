@@ -755,10 +755,10 @@ void afterRendering()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 {
+  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "afterRendering()" ) )
@@ -795,8 +795,6 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "afterRendering()" );
@@ -821,10 +819,10 @@ void beforeRendering()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 {
+  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeRendering()" ) )
@@ -861,8 +859,6 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeRendering()" );
@@ -887,10 +883,10 @@ void beforeSynchronizing()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 {
+  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "beforeSynchronizing()" ) )
@@ -927,8 +923,6 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "beforeSynchronizing()" );
@@ -953,10 +947,10 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 {
+  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
@@ -995,8 +989,6 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
@@ -1021,10 +1013,10 @@ void frameSwapped()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 {
+  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "frameSwapped()" ) )
@@ -1061,8 +1053,6 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "frameSwapped()" );
@@ -1087,10 +1077,10 @@ void sceneGraphInitialized()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 {
+  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sceneGraphInitialized()" ) )
@@ -1127,8 +1117,6 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sceneGraphInitialized()" );
@@ -1153,10 +1141,10 @@ void sceneGraphInvalidated()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 {
+  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sceneGraphInvalidated()" ) )
@@ -1193,8 +1181,6 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sceneGraphInvalidated()" );
