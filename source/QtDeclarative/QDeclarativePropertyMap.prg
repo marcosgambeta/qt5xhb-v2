@@ -293,10 +293,10 @@ void valueChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
 {
+  QDeclarativePropertyMap * sender = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDeclarativePropertyMap * sender = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(QString,QVariant)" ) )
@@ -337,8 +337,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDeclarativePropertyMap * sender = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(QString,QVariant)" );
