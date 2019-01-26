@@ -132,10 +132,10 @@ void errorOccurred( QModbusDevice::Error error )
 HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "errorOccurred(QModbusDevice::Error)" ) )
@@ -174,8 +174,6 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
   }
   else if( hb_pcount() == 0 )
   {
-    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "errorOccurred(QModbusDevice::Error)" );
@@ -202,10 +200,10 @@ void stateChanged( QModbusDevice::State state )
 HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "stateChanged(QModbusDevice::State)" ) )
@@ -244,8 +242,6 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QModbusDevice * sender = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "stateChanged(QModbusDevice::State)" );
