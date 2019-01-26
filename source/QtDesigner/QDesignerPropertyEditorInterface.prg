@@ -258,10 +258,10 @@ void propertyChanged( const QString & name, const QVariant & value )
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 {
+  QDesignerPropertyEditorInterface * sender = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QDesignerPropertyEditorInterface * sender = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "propertyChanged(QString,QVariant)" ) )
@@ -302,8 +302,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QDesignerPropertyEditorInterface * sender = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "propertyChanged(QString,QVariant)" );
