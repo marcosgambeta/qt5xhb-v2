@@ -758,10 +758,10 @@ void acceptError( QAbstractSocket::SocketError socketError )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
@@ -800,8 +800,6 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "acceptError(QAbstractSocket::SocketError)" );
@@ -828,10 +826,10 @@ void serverError( QWebSocketProtocol::CloseCode closeCode )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "serverError(QWebSocketProtocol::CloseCode)" ) )
@@ -870,8 +868,6 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "serverError(QWebSocketProtocol::CloseCode)" );
@@ -898,10 +894,10 @@ void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" ) )
@@ -940,8 +936,6 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
@@ -968,10 +962,10 @@ void newConnection()
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "newConnection()" ) )
@@ -1008,8 +1002,6 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "newConnection()" );
@@ -1036,10 +1028,10 @@ void peerVerifyError( const QSslError & error )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
@@ -1078,8 +1070,6 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "peerVerifyError(QSslError)" );
@@ -1106,10 +1096,10 @@ void sslErrors( const QList<QSslError> & errors )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
@@ -1171,8 +1161,6 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
@@ -1199,10 +1187,10 @@ void closed()
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "closed()" ) )
@@ -1239,8 +1227,6 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebSocketServer * sender = (QWebSocketServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "closed()" );
