@@ -818,10 +818,10 @@ void quit()
 */
 HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
 {
+  QQmlEngine * sender = (QQmlEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQmlEngine * sender = (QQmlEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "quit()" ) )
@@ -858,8 +858,6 @@ HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
   }
   else if( hb_pcount() == 0 )
   {
-    QQmlEngine * sender = (QQmlEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "quit()" );

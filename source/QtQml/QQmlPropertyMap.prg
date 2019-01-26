@@ -293,10 +293,10 @@ void valueChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
 {
+  QQmlPropertyMap * sender = (QQmlPropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQmlPropertyMap * sender = (QQmlPropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "valueChanged(QString,QVariant)" ) )
@@ -337,8 +337,6 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QQmlPropertyMap * sender = (QQmlPropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "valueChanged(QString,QVariant)" );
