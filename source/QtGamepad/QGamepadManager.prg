@@ -293,10 +293,10 @@ void connectedGamepadsChanged()
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "connectedGamepadsChanged()" ) )
@@ -333,8 +333,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "connectedGamepadsChanged()" );
@@ -361,10 +359,10 @@ void gamepadConnected( int deviceId )
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gamepadConnected(int)" ) )
@@ -403,8 +401,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gamepadConnected(int)" );
@@ -431,10 +427,10 @@ void gamepadDisconnected( int deviceId )
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gamepadDisconnected(int)" ) )
@@ -473,8 +469,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gamepadDisconnected(int)" );
@@ -501,10 +495,10 @@ void gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double v
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" ) )
@@ -547,8 +541,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
@@ -575,10 +567,10 @@ void gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton butto
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" ) )
@@ -621,8 +613,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
@@ -649,10 +639,10 @@ void gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton but
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" ) )
@@ -693,8 +683,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
@@ -721,10 +709,10 @@ void buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" ) )
@@ -765,8 +753,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
@@ -793,10 +779,10 @@ void axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" ) )
@@ -837,8 +823,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
@@ -865,10 +849,10 @@ void configurationCanceled( int deviceId )
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "configurationCanceled(int)" ) )
@@ -907,8 +891,6 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
   }
   else if( hb_pcount() == 0 )
   {
-    QGamepadManager * sender = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "configurationCanceled(int)" );
