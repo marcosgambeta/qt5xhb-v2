@@ -214,10 +214,10 @@ void productRegistered( QInAppProduct * product )
 */
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {
+  QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "productRegistered(QInAppProduct*)" ) )
@@ -256,8 +256,6 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "productRegistered(QInAppProduct*)" );
@@ -282,10 +280,10 @@ void productUnknown( QInAppProduct::ProductType productType, const QString & ide
 */
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 {
+  QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)" ) )
@@ -326,8 +324,6 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
   }
   else if( hb_pcount() == 0 )
   {
-    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "productUnknown(QInAppProduct::ProductType,QString)" );
@@ -352,10 +348,10 @@ void transactionReady( QInAppTransaction * transaction )
 */
 HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 {
+  QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "transactionReady(QInAppTransaction*)" ) )
@@ -394,8 +390,6 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
   }
   else if( hb_pcount() == 0 )
   {
-    QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "transactionReady(QInAppTransaction*)" );
