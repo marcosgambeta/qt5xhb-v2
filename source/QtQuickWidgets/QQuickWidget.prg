@@ -572,10 +572,10 @@ void statusChanged( QQuickWidget::Status status )
 HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "statusChanged(QQuickWidget::Status)" ) )
@@ -614,8 +614,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "statusChanged(QQuickWidget::Status)" );
@@ -642,10 +640,10 @@ void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & messa
 HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" ) )
@@ -686,8 +684,6 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
   }
   else if( hb_pcount() == 0 )
   {
-    QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
