@@ -758,10 +758,10 @@ void loadStarted()
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadStarted()" ) )
@@ -798,8 +798,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadStarted()" );
@@ -826,10 +824,10 @@ void loadProgress( int progress )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadProgress(int)" ) )
@@ -868,8 +866,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadProgress(int)" );
@@ -896,10 +892,10 @@ void loadFinished( bool ok )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
@@ -938,8 +934,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "loadFinished(bool)" );
@@ -966,10 +960,10 @@ void linkHovered( const QString & url )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "linkHovered(QString)" ) )
@@ -1008,8 +1002,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "linkHovered(QString)" );
@@ -1036,10 +1028,10 @@ void selectionChanged()
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
@@ -1076,8 +1068,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
@@ -1104,10 +1094,10 @@ void geometryChangeRequested( const QRect & geom )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "geometryChangeRequested(QRect)" ) )
@@ -1146,8 +1136,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "geometryChangeRequested(QRect)" );
@@ -1174,10 +1162,10 @@ void windowCloseRequested()
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "windowCloseRequested()" ) )
@@ -1214,8 +1202,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "windowCloseRequested()" );
@@ -1242,10 +1228,10 @@ void featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Fe
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" ) )
@@ -1286,8 +1272,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
@@ -1314,10 +1298,10 @@ void featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePa
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" ) )
@@ -1358,8 +1342,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
@@ -1386,10 +1368,10 @@ void authenticationRequired( const QUrl & requestUrl, QAuthenticator * authentic
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "authenticationRequired(QUrl,QAuthenticator*)" ) )
@@ -1430,8 +1412,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "authenticationRequired(QUrl,QAuthenticator*)" );
@@ -1458,10 +1438,10 @@ void proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * auth
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" ) )
@@ -1504,8 +1484,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
@@ -1532,10 +1510,10 @@ void titleChanged( const QString & title )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
@@ -1574,8 +1552,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
@@ -1602,10 +1578,10 @@ void urlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
@@ -1644,8 +1620,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "urlChanged(QUrl)" );
@@ -1672,10 +1646,10 @@ void iconUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "iconUrlChanged(QUrl)" ) )
@@ -1714,8 +1688,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "iconUrlChanged(QUrl)" );
