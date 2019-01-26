@@ -293,10 +293,10 @@ void countChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
 {
+  QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "countChanged()" ) )
@@ -333,8 +333,6 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "countChanged()" );
@@ -359,10 +357,10 @@ void activeItemChanged( int index )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
 {
+  QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "activeItemChanged(int)" ) )
@@ -401,8 +399,6 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
   }
   else if( hb_pcount() == 0 )
   {
-    QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "activeItemChanged(int)" );
@@ -427,10 +423,10 @@ void itemSelected( int index )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
 {
+  QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( hb_pcount() == 1 )
   {
-    QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       if( Signals2_connection( sender, "itemSelected(int)" ) )
@@ -469,8 +465,6 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
   }
   else if( hb_pcount() == 0 )
   {
-    QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
     if( sender != nullptr )
     {
       Signals2_disconnection( sender, "itemSelected(int)" );
