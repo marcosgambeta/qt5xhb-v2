@@ -1081,9 +1081,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOAVAILABLECHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "audioAvailableChanged(bool)" ) )
       {
@@ -1114,14 +1114,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOAVAILABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "audioAvailableChanged(bool)" );
 
@@ -1148,9 +1141,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "audioRoleChanged(QAudio::Role)" ) )
       {
@@ -1181,14 +1174,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "audioRoleChanged(QAudio::Role)" );
 
@@ -1215,9 +1201,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONBUFFERSTATUSCHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "bufferStatusChanged(int)" ) )
       {
@@ -1248,14 +1234,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONBUFFERSTATUSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "bufferStatusChanged(int)" );
 
@@ -1281,9 +1260,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONCURRENTMEDIACHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentMediaChanged(QMediaContent)" ) )
       {
@@ -1314,14 +1293,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONCURRENTMEDIACHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentMediaChanged(QMediaContent)" );
 
@@ -1347,9 +1319,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONDURATIONCHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
       {
@@ -1380,14 +1352,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONDURATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "durationChanged(qint64)" );
 
@@ -1413,9 +1378,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONERROR )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QMediaPlayer::Error)" ) )
       {
@@ -1446,14 +1411,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QMediaPlayer::Error)" );
 
@@ -1479,9 +1437,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIACHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "mediaChanged(QMediaContent)" ) )
       {
@@ -1512,14 +1470,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIACHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "mediaChanged(QMediaContent)" );
 
@@ -1545,9 +1496,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIASTATUSCHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" ) )
       {
@@ -1578,14 +1529,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIASTATUSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
 
@@ -1611,9 +1555,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMUTEDCHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
       {
@@ -1644,14 +1588,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONMUTEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "mutedChanged(bool)" );
 
@@ -1677,9 +1614,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONNETWORKCONFIGURATIONCHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "networkConfigurationChanged(QNetworkConfiguration)" ) )
       {
@@ -1710,14 +1647,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONNETWORKCONFIGURATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "networkConfigurationChanged(QNetworkConfiguration)" );
 
@@ -1743,9 +1673,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONPLAYBACKRATECHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "playbackRateChanged(qreal)" ) )
       {
@@ -1776,14 +1706,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONPLAYBACKRATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "playbackRateChanged(qreal)" );
 
@@ -1809,9 +1732,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONPOSITIONCHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "positionChanged(qint64)" ) )
       {
@@ -1842,14 +1765,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONPOSITIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "positionChanged(qint64)" );
 
@@ -1875,9 +1791,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONSEEKABLECHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "seekableChanged(bool)" ) )
       {
@@ -1908,14 +1824,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONSEEKABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "seekableChanged(bool)" );
 
@@ -1941,9 +1850,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONSTATECHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QMediaPlayer::State)" ) )
       {
@@ -1974,14 +1883,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QMediaPlayer::State)" );
 
@@ -2007,9 +1909,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONVIDEOAVAILABLECHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "videoAvailableChanged(bool)" ) )
       {
@@ -2040,14 +1942,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONVIDEOAVAILABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "videoAvailableChanged(bool)" );
 
@@ -2073,9 +1968,9 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONVOLUMECHANGED )
 {
   QMediaPlayer * sender = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
@@ -2106,14 +2001,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONVOLUMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "volumeChanged(int)" );
 

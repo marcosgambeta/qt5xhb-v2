@@ -740,9 +740,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QRadioTuner::State)" ) )
       {
@@ -773,14 +773,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QRadioTuner::State)" );
 
@@ -806,9 +799,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "bandChanged(QRadioTuner::Band)" ) )
       {
@@ -839,14 +832,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "bandChanged(QRadioTuner::Band)" );
 
@@ -872,9 +858,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "frequencyChanged(int)" ) )
       {
@@ -905,14 +891,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "frequencyChanged(int)" );
 
@@ -938,9 +917,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stereoStatusChanged(bool)" ) )
       {
@@ -971,14 +950,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stereoStatusChanged(bool)" );
 
@@ -1004,9 +976,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "searchingChanged(bool)" ) )
       {
@@ -1037,14 +1009,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "searchingChanged(bool)" );
 
@@ -1070,9 +1035,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "signalStrengthChanged(int)" ) )
       {
@@ -1103,14 +1068,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "signalStrengthChanged(int)" );
 
@@ -1136,9 +1094,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
@@ -1169,14 +1127,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "volumeChanged(int)" );
 
@@ -1202,9 +1153,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
       {
@@ -1235,14 +1186,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "mutedChanged(bool)" );
 
@@ -1268,9 +1212,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QRadioTuner::Error)" ) )
       {
@@ -1301,14 +1245,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QRadioTuner::Error)" );
 
@@ -1334,9 +1271,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stationFound(int,QString)" ) )
       {
@@ -1369,14 +1306,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stationFound(int,QString)" );
 
@@ -1402,9 +1332,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
 {
   QRadioTunerControl * sender = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "antennaConnectedChanged(bool)" ) )
       {
@@ -1435,14 +1365,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "antennaConnectedChanged(bool)" );
 

@@ -211,9 +211,9 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
 {
   QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "metaDataChanged()" ) )
       {
@@ -242,14 +242,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "metaDataChanged()" );
 
@@ -275,9 +268,9 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
 {
   QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
       {
@@ -310,14 +303,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "metaDataChanged(QString,QVariant)" );
 
@@ -343,9 +329,9 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
 {
   QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "writableChanged(bool)" ) )
       {
@@ -376,14 +362,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "writableChanged(bool)" );
 
@@ -409,9 +388,9 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
 {
   QMetaDataWriterControl * sender = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
       {
@@ -442,14 +421,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "metaDataAvailableChanged(bool)" );
 

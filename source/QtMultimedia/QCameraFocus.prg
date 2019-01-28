@@ -481,9 +481,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 {
   QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "digitalZoomChanged(qreal)" ) )
       {
@@ -514,14 +514,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "digitalZoomChanged(qreal)" );
 
@@ -547,9 +540,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 {
   QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "focusZonesChanged()" ) )
       {
@@ -578,14 +571,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "focusZonesChanged()" );
 
@@ -611,9 +597,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 {
   QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "maximumDigitalZoomChanged(qreal)" ) )
       {
@@ -644,14 +630,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "maximumDigitalZoomChanged(qreal)" );
 
@@ -677,9 +656,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 {
   QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "maximumOpticalZoomChanged(qreal)" ) )
       {
@@ -710,14 +689,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "maximumOpticalZoomChanged(qreal)" );
 
@@ -743,9 +715,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 {
   QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "opticalZoomChanged(qreal)" ) )
       {
@@ -776,14 +748,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "opticalZoomChanged(qreal)" );
 

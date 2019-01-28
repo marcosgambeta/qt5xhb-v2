@@ -220,9 +220,9 @@ HB_FUNC_STATIC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
 {
   QAudioRecorder * sender = (QAudioRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "audioInputChanged(QString)" ) )
       {
@@ -253,14 +253,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "audioInputChanged(QString)" );
 
@@ -286,9 +279,9 @@ HB_FUNC_STATIC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
 {
   QAudioRecorder * sender = (QAudioRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "availableAudioInputsChanged()" ) )
       {
@@ -317,14 +310,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "availableAudioInputsChanged()" );
 

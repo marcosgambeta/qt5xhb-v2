@@ -646,9 +646,9 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
 {
   QAbstractAudioOutput * sender = (QAbstractAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "errorChanged(QAudio::Error)" ) )
       {
@@ -679,14 +679,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "errorChanged(QAudio::Error)" );
 
@@ -712,9 +705,9 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
 {
   QAbstractAudioOutput * sender = (QAbstractAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QAudio::State)" ) )
       {
@@ -745,14 +738,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QAudio::State)" );
 
@@ -778,9 +764,9 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
 {
   QAbstractAudioOutput * sender = (QAbstractAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "notify()" ) )
       {
@@ -809,14 +795,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "notify()" );
 

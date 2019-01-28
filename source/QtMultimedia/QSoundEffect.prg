@@ -536,9 +536,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "sourceChanged()" ) )
       {
@@ -567,14 +567,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "sourceChanged()" );
 
@@ -600,9 +593,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loopCountChanged()" ) )
       {
@@ -631,14 +624,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loopCountChanged()" );
 
@@ -664,9 +650,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loopsRemainingChanged()" ) )
       {
@@ -695,14 +681,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loopsRemainingChanged()" );
 
@@ -728,9 +707,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "volumeChanged()" ) )
       {
@@ -759,14 +738,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "volumeChanged()" );
 
@@ -792,9 +764,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "mutedChanged()" ) )
       {
@@ -823,14 +795,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "mutedChanged()" );
 
@@ -856,9 +821,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loadedChanged()" ) )
       {
@@ -887,14 +852,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loadedChanged()" );
 
@@ -920,9 +878,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "playingChanged()" ) )
       {
@@ -951,14 +909,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "playingChanged()" );
 
@@ -984,9 +935,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "statusChanged()" ) )
       {
@@ -1015,14 +966,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "statusChanged()" );
 
@@ -1048,9 +992,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 {
   QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "categoryChanged()" ) )
       {
@@ -1079,14 +1023,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "categoryChanged()" );
 

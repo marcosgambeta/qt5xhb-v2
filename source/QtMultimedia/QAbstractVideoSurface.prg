@@ -328,9 +328,9 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
 {
   QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activeChanged(bool)" ) )
       {
@@ -361,14 +361,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activeChanged(bool)" );
 
@@ -394,9 +387,9 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
 {
   QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" ) )
       {
@@ -427,14 +420,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "surfaceFormatChanged(QVideoSurfaceFormat)" );
 
@@ -460,9 +446,9 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
 {
   QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "supportedFormatsChanged()" ) )
       {
@@ -491,14 +477,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "supportedFormatsChanged()" );
 
@@ -524,9 +503,9 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
 {
   QAbstractVideoSurface * sender = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "nativeResolutionChanged(QSize)" ) )
       {
@@ -557,14 +536,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "nativeResolutionChanged(QSize)" );
 

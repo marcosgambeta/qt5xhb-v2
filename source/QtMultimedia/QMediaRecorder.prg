@@ -1158,9 +1158,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "actualLocationChanged(QUrl)" ) )
       {
@@ -1191,14 +1191,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "actualLocationChanged(QUrl)" );
 
@@ -1224,9 +1217,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "availabilityChanged(bool)" ) )
       {
@@ -1257,14 +1250,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "availabilityChanged(bool)" );
 
@@ -1290,9 +1276,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" ) )
       {
@@ -1323,14 +1309,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
@@ -1356,9 +1335,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
       {
@@ -1389,14 +1368,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "durationChanged(qint64)" );
 
@@ -1422,9 +1394,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QMediaRecorder::Error)" ) )
       {
@@ -1455,14 +1427,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QMediaRecorder::Error)" );
 
@@ -1488,9 +1453,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "metaDataAvailableChanged(bool)" ) )
       {
@@ -1521,14 +1486,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "metaDataAvailableChanged(bool)" );
 
@@ -1554,9 +1512,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "metaDataChanged()" ) )
       {
@@ -1585,14 +1543,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "metaDataChanged()" );
 
@@ -1618,9 +1569,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "metaDataChanged(QString,QVariant)" ) )
       {
@@ -1653,14 +1604,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "metaDataChanged(QString,QVariant)" );
 
@@ -1686,9 +1630,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "metaDataWritableChanged(bool)" ) )
       {
@@ -1719,14 +1663,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "metaDataWritableChanged(bool)" );
 
@@ -1752,9 +1689,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "mutedChanged(bool)" ) )
       {
@@ -1785,14 +1722,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "mutedChanged(bool)" );
 
@@ -1818,9 +1748,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QMediaRecorder::State)" ) )
       {
@@ -1851,14 +1781,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QMediaRecorder::State)" );
 
@@ -1884,9 +1807,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "statusChanged(QMediaRecorder::Status)" ) )
       {
@@ -1917,14 +1840,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "statusChanged(QMediaRecorder::Status)" );
 
@@ -1950,9 +1866,9 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
 {
   QMediaRecorder * sender = (QMediaRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "volumeChanged(qreal)" ) )
       {
@@ -1983,14 +1899,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "volumeChanged(qreal)" );
 

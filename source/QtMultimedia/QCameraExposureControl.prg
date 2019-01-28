@@ -240,9 +240,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
 {
   QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "actualValueChanged(int)" ) )
       {
@@ -273,14 +273,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "actualValueChanged(int)" );
 
@@ -306,9 +299,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
 {
   QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "parameterRangeChanged(int)" ) )
       {
@@ -339,14 +332,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "parameterRangeChanged(int)" );
 
@@ -372,9 +358,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 {
   QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "requestedValueChanged(int)" ) )
       {
@@ -405,14 +391,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "requestedValueChanged(int)" );
 

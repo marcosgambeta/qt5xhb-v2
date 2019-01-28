@@ -381,9 +381,9 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 {
   QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stationIdChanged(QString)" ) )
       {
@@ -414,14 +414,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stationIdChanged(QString)" );
 
@@ -447,9 +440,9 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 {
   QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "programTypeChanged(QRadioData::ProgramType)" ) )
       {
@@ -480,14 +473,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "programTypeChanged(QRadioData::ProgramType)" );
 
@@ -513,9 +499,9 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 {
   QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "programTypeNameChanged(QString)" ) )
       {
@@ -546,14 +532,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "programTypeNameChanged(QString)" );
 
@@ -579,9 +558,9 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 {
   QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stationNameChanged(QString)" ) )
       {
@@ -612,14 +591,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stationNameChanged(QString)" );
 
@@ -645,9 +617,9 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 {
   QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "radioTextChanged(QString)" ) )
       {
@@ -678,14 +650,7 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "radioTextChanged(QString)" );
 
@@ -711,9 +676,9 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
   QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "alternativeFrequenciesEnabledChanged(bool)" ) )
       {
@@ -744,14 +709,7 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "alternativeFrequenciesEnabledChanged(bool)" );
 
@@ -777,9 +735,9 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
 {
   QRadioData * sender = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QRadioData::Error)" ) )
       {
@@ -810,14 +768,7 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QRadioData::Error)" );
 

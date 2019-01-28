@@ -261,9 +261,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 {
   QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "captureModeChanged(QCamera::CaptureModes)" ) )
       {
@@ -294,14 +294,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "captureModeChanged(QCamera::CaptureModes)" );
 
@@ -327,9 +320,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
 {
   QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(int,QString)" ) )
       {
@@ -362,14 +355,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(int,QString)" );
 
@@ -395,9 +381,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
 {
   QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QCamera::State)" ) )
       {
@@ -428,14 +414,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QCamera::State)" );
 
@@ -461,9 +440,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
 {
   QCameraControl * sender = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "statusChanged(QCamera::Status)" ) )
       {
@@ -494,14 +473,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "statusChanged(QCamera::Status)" );
 

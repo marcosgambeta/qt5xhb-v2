@@ -519,9 +519,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "bufferAvailableChanged(bool)" ) )
       {
@@ -552,14 +552,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "bufferAvailableChanged(bool)" );
 
@@ -585,9 +578,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "bufferReady()" ) )
       {
@@ -616,14 +609,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "bufferReady()" );
 
@@ -649,9 +635,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "durationChanged(qint64)" ) )
       {
@@ -682,14 +668,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "durationChanged(qint64)" );
 
@@ -715,9 +694,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QAudioDecoder::Error)" ) )
       {
@@ -748,14 +727,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QAudioDecoder::Error)" );
 
@@ -781,9 +753,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -812,14 +784,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -845,9 +810,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "formatChanged(QAudioFormat)" ) )
       {
@@ -878,14 +843,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "formatChanged(QAudioFormat)" );
 
@@ -911,9 +869,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "positionChanged(qint64)" ) )
       {
@@ -944,14 +902,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "positionChanged(qint64)" );
 
@@ -977,9 +928,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "sourceChanged()" ) )
       {
@@ -1008,14 +959,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "sourceChanged()" );
 
@@ -1041,9 +985,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 {
   QAudioDecoder * sender = (QAudioDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QAudioDecoder::State)" ) )
       {
@@ -1074,14 +1018,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QAudioDecoder::State)" );
 
