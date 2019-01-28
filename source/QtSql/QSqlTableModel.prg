@@ -939,9 +939,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
   QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "beforeDelete(int)" ) )
       {
@@ -972,14 +972,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "beforeDelete(int)" );
 
@@ -1005,9 +998,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
   QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "beforeInsert(QSqlRecord)" ) )
       {
@@ -1038,14 +1031,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "beforeInsert(QSqlRecord)" );
 
@@ -1071,9 +1057,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
   QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "beforeUpdate(int,QSqlRecord)" ) )
       {
@@ -1106,14 +1092,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "beforeUpdate(int,QSqlRecord)" );
 
@@ -1139,9 +1118,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
   QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "primeInsert(int,QSqlRecord)" ) )
       {
@@ -1174,14 +1153,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "primeInsert(int,QSqlRecord)" );
 
