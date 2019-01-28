@@ -718,9 +718,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
   QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentFilterChanged(QString)" ) )
       {
@@ -751,14 +751,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentFilterChanged(QString)" );
 
@@ -784,9 +777,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 {
   QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "setupFinished()" ) )
       {
@@ -815,14 +808,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "setupFinished()" );
 
@@ -848,9 +834,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 {
   QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "setupStarted()" ) )
       {
@@ -879,14 +865,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "setupStarted()" );
 
@@ -912,9 +891,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 {
   QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "warning(QString)" ) )
       {
@@ -945,14 +924,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "warning(QString)" );
 
