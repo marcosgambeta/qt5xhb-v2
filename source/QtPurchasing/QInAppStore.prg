@@ -216,9 +216,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {
   QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "productRegistered(QInAppProduct*)" ) )
       {
@@ -249,14 +249,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "productRegistered(QInAppProduct*)" );
 
@@ -282,9 +275,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 {
   QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)" ) )
       {
@@ -317,14 +310,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "productUnknown(QInAppProduct::ProductType,QString)" );
 
@@ -350,9 +336,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 {
   QInAppStore * sender = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "transactionReady(QInAppTransaction*)" ) )
       {
@@ -383,14 +369,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "transactionReady(QInAppTransaction*)" );
 
