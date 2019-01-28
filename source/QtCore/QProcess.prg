@@ -1518,9 +1518,9 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
   QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QProcess::ProcessError)" ) )
       {
@@ -1551,14 +1551,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QProcess::ProcessError)" );
 
@@ -1584,9 +1577,9 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
   QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished(int,QProcess::ExitStatus)" ) )
       {
@@ -1619,14 +1612,7 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished(int,QProcess::ExitStatus)" );
 
@@ -1652,9 +1638,9 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
   QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "readyReadStandardError()" ) )
       {
@@ -1683,14 +1669,7 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "readyReadStandardError()" );
 
@@ -1716,9 +1695,9 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
   QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "readyReadStandardOutput()" ) )
       {
@@ -1747,14 +1726,7 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "readyReadStandardOutput()" );
 
@@ -1780,9 +1752,9 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
   QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "started()" ) )
       {
@@ -1811,14 +1783,7 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "started()" );
 
@@ -1844,9 +1809,9 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
   QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QProcess::ProcessState)" ) )
       {
@@ -1877,14 +1842,7 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QProcess::ProcessState)" );
 
@@ -1911,9 +1869,9 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "errorOccurred(QProcess::ProcessError)" ) )
       {
@@ -1944,14 +1902,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "errorOccurred(QProcess::ProcessError)" );
 

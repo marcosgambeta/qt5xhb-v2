@@ -691,9 +691,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
   QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "selectionChanged(QItemSelection,QItemSelection)" ) )
       {
@@ -726,14 +726,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "selectionChanged(QItemSelection,QItemSelection)" );
 
@@ -759,9 +752,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
   QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentChanged(QModelIndex,QModelIndex)" ) )
       {
@@ -794,14 +787,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentChanged(QModelIndex,QModelIndex)" );
 
@@ -827,9 +813,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
   QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)" ) )
       {
@@ -862,14 +848,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentRowChanged(QModelIndex,QModelIndex)" );
 
@@ -895,9 +874,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
   QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" ) )
       {
@@ -930,14 +909,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" );
 

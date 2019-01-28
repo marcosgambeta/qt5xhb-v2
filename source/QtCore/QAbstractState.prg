@@ -130,9 +130,9 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 {
   QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "entered()" ) )
       {
@@ -161,14 +161,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "entered()" );
 
@@ -194,9 +187,9 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 {
   QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "exited()" ) )
       {
@@ -225,14 +218,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "exited()" );
 

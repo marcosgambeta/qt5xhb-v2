@@ -937,9 +937,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "columnsAboutToBeInserted(QModelIndex,int,int)" ) )
       {
@@ -974,14 +974,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "columnsAboutToBeInserted(QModelIndex,int,int)" );
 
@@ -1007,9 +1000,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
@@ -1048,14 +1041,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
 
@@ -1081,9 +1067,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "columnsAboutToBeRemoved(QModelIndex,int,int)" ) )
       {
@@ -1118,14 +1104,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
 
@@ -1151,9 +1130,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "columnsInserted(QModelIndex,int,int)" ) )
       {
@@ -1188,14 +1167,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "columnsInserted(QModelIndex,int,int)" );
 
@@ -1221,9 +1193,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
@@ -1262,14 +1234,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
 
@@ -1295,9 +1260,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "columnsRemoved(QModelIndex,int,int)" ) )
       {
@@ -1332,14 +1297,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "columnsRemoved(QModelIndex,int,int)" );
 
@@ -1365,9 +1323,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "dataChanged(QModelIndex,QModelIndex)" ) )
       {
@@ -1400,14 +1358,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "dataChanged(QModelIndex,QModelIndex)" );
 
@@ -1433,9 +1384,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "headerDataChanged(Qt::Orientation,int,int)" ) )
       {
@@ -1470,14 +1421,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "headerDataChanged(Qt::Orientation,int,int)" );
 
@@ -1503,9 +1447,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "layoutAboutToBeChanged()" ) )
       {
@@ -1534,14 +1478,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "layoutAboutToBeChanged()" );
 
@@ -1567,9 +1504,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "layoutChanged()" ) )
       {
@@ -1598,14 +1535,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "layoutChanged()" );
 
@@ -1631,9 +1561,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "modelAboutToBeReset()" ) )
       {
@@ -1662,14 +1592,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "modelAboutToBeReset()" );
 
@@ -1695,9 +1618,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "modelReset()" ) )
       {
@@ -1726,14 +1649,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "modelReset()" );
 
@@ -1759,9 +1675,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsAboutToBeInserted(QModelIndex,int,int)" ) )
       {
@@ -1796,14 +1712,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsAboutToBeInserted(QModelIndex,int,int)" );
 
@@ -1829,9 +1738,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
@@ -1870,14 +1779,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
 
@@ -1903,9 +1805,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsAboutToBeRemoved(QModelIndex,int,int)" ) )
       {
@@ -1940,14 +1842,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
 
@@ -1973,9 +1868,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsInserted(QModelIndex,int,int)" ) )
       {
@@ -2010,14 +1905,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsInserted(QModelIndex,int,int)" );
 
@@ -2043,9 +1931,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" ) )
       {
@@ -2084,14 +1972,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
 
@@ -2117,9 +1998,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 {
   QAbstractItemModel * sender = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsRemoved(QModelIndex,int,int)" ) )
       {
@@ -2154,14 +2035,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsRemoved(QModelIndex,int,int)" );
 

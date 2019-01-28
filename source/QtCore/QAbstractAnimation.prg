@@ -520,9 +520,9 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 {
   QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentLoopChanged(int)" ) )
       {
@@ -553,14 +553,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentLoopChanged(int)" );
 
@@ -586,9 +579,9 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 {
   QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "directionChanged(QAbstractAnimation::Direction)" ) )
       {
@@ -619,14 +612,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "directionChanged(QAbstractAnimation::Direction)" );
 
@@ -652,9 +638,9 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
 {
   QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -683,14 +669,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -716,9 +695,9 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
 {
   QAbstractAnimation * sender = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" ) )
       {
@@ -751,14 +730,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
 

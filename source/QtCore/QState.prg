@@ -446,9 +446,9 @@ HB_FUNC_STATIC( QSTATE_ONFINISHED )
 {
   QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -477,14 +477,7 @@ HB_FUNC_STATIC( QSTATE_ONFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -510,9 +503,9 @@ HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
 {
   QState * sender = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "propertiesAssigned()" ) )
       {
@@ -541,14 +534,7 @@ HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "propertiesAssigned()" );
 

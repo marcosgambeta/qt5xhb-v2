@@ -37,7 +37,6 @@ CLASS QObject
    METHOD event
    METHOD eventFilter
    METHOD findChild
-   METHOD findChildren<QObject *>
    METHOD findChildren
    METHOD inherits
    METHOD installEventFilter
@@ -2245,15 +2244,15 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {
   QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "destroyed(QObject*)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QObject::destroyed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QObject::destroyed,
                                                               [sender]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "destroyed(QObject*)" );
@@ -2279,14 +2278,7 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "destroyed(QObject*)" );
 
@@ -2312,15 +2304,15 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 {
   QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "objectNameChanged(QString)" ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QObject::objectNameChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QObject::objectNameChanged,
                                                               [sender]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals2_return_codeblock( sender, "objectNameChanged(QString)" );
@@ -2345,14 +2337,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "objectNameChanged(QString)" );
 
