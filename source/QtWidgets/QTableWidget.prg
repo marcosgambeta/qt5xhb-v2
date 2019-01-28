@@ -1303,9 +1303,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cellActivated(int,int)" ) )
       {
@@ -1338,14 +1338,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cellActivated(int,int)" );
 
@@ -1371,9 +1364,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cellChanged(int,int)" ) )
       {
@@ -1406,14 +1399,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cellChanged(int,int)" );
 
@@ -1439,9 +1425,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cellClicked(int,int)" ) )
       {
@@ -1474,14 +1460,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cellClicked(int,int)" );
 
@@ -1507,9 +1486,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cellDoubleClicked(int,int)" ) )
       {
@@ -1542,14 +1521,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cellDoubleClicked(int,int)" );
 
@@ -1575,9 +1547,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cellEntered(int,int)" ) )
       {
@@ -1610,14 +1582,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cellEntered(int,int)" );
 
@@ -1643,9 +1608,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cellPressed(int,int)" ) )
       {
@@ -1678,14 +1643,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cellPressed(int,int)" );
 
@@ -1711,9 +1669,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentCellChanged(int,int,int,int)" ) )
       {
@@ -1750,14 +1708,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentCellChanged(int,int,int,int)" );
 
@@ -1783,9 +1734,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) )
       {
@@ -1818,14 +1769,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
 
@@ -1851,9 +1795,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemActivated(QTableWidgetItem*)" ) )
       {
@@ -1884,14 +1828,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemActivated(QTableWidgetItem*)" );
 
@@ -1917,9 +1854,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemChanged(QTableWidgetItem*)" ) )
       {
@@ -1950,14 +1887,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemChanged(QTableWidgetItem*)" );
 
@@ -1983,9 +1913,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemClicked(QTableWidgetItem*)" ) )
       {
@@ -2016,14 +1946,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemClicked(QTableWidgetItem*)" );
 
@@ -2049,9 +1972,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemDoubleClicked(QTableWidgetItem*)" ) )
       {
@@ -2082,14 +2005,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemDoubleClicked(QTableWidgetItem*)" );
 
@@ -2115,9 +2031,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemEntered(QTableWidgetItem*)" ) )
       {
@@ -2148,14 +2064,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemEntered(QTableWidgetItem*)" );
 
@@ -2181,9 +2090,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemPressed(QTableWidgetItem*)" ) )
       {
@@ -2214,14 +2123,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemPressed(QTableWidgetItem*)" );
 
@@ -2247,9 +2149,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
   QTableWidget * sender = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemSelectionChanged()" ) )
       {
@@ -2278,14 +2180,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemSelectionChanged()" );
 

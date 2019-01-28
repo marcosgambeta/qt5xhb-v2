@@ -1323,9 +1323,9 @@ HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 {
   QMainWindow * sender = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
       {
@@ -1356,14 +1356,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "iconSizeChanged(QSize)" );
 
@@ -1389,9 +1382,9 @@ HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
   QMainWindow * sender = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
       {
@@ -1422,14 +1415,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 

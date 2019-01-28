@@ -488,9 +488,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 {
   QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activeStackChanged(QUndoStack*)" ) )
       {
@@ -521,14 +521,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activeStackChanged(QUndoStack*)" );
 
@@ -554,9 +547,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 {
   QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "canRedoChanged(bool)" ) )
       {
@@ -587,14 +580,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "canRedoChanged(bool)" );
 
@@ -620,9 +606,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 {
   QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "canUndoChanged(bool)" ) )
       {
@@ -653,14 +639,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "canUndoChanged(bool)" );
 
@@ -686,9 +665,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 {
   QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cleanChanged(bool)" ) )
       {
@@ -719,14 +698,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cleanChanged(bool)" );
 
@@ -752,9 +724,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 {
   QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "indexChanged(int)" ) )
       {
@@ -785,14 +757,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "indexChanged(int)" );
 
@@ -818,9 +783,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 {
   QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "redoTextChanged(QString)" ) )
       {
@@ -851,14 +816,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "redoTextChanged(QString)" );
 
@@ -884,9 +842,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 {
   QUndoGroup * sender = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "undoTextChanged(QString)" ) )
       {
@@ -917,14 +875,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "undoTextChanged(QString)" );
 

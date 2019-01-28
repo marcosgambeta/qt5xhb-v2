@@ -1925,9 +1925,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
   QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activated(QModelIndex)" ) )
       {
@@ -1958,14 +1958,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activated(QModelIndex)" );
 
@@ -1991,9 +1984,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
   QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "clicked(QModelIndex)" ) )
       {
@@ -2024,14 +2017,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "clicked(QModelIndex)" );
 
@@ -2057,9 +2043,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
   QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "doubleClicked(QModelIndex)" ) )
       {
@@ -2090,14 +2076,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "doubleClicked(QModelIndex)" );
 
@@ -2123,9 +2102,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
   QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "entered(QModelIndex)" ) )
       {
@@ -2156,14 +2135,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "entered(QModelIndex)" );
 
@@ -2189,9 +2161,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
   QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "pressed(QModelIndex)" ) )
       {
@@ -2222,14 +2194,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "pressed(QModelIndex)" );
 
@@ -2255,9 +2220,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
   QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "viewportEntered()" ) )
       {
@@ -2286,14 +2251,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "viewportEntered()" );
 

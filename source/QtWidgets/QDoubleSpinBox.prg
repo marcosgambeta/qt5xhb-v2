@@ -614,9 +614,9 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
   QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "valueChanged(double)" ) )
       {
@@ -647,14 +647,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "valueChanged(double)" );
 
@@ -680,9 +673,9 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
   QDoubleSpinBox * sender = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "valueChanged(QString)" ) )
       {
@@ -713,14 +706,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "valueChanged(QString)" );
 

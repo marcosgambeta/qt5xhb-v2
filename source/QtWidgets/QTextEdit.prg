@@ -2246,9 +2246,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
   QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "copyAvailable(bool)" ) )
       {
@@ -2279,14 +2279,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "copyAvailable(bool)" );
 
@@ -2312,9 +2305,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
   QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentCharFormatChanged(QTextCharFormat)" ) )
       {
@@ -2345,14 +2338,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentCharFormatChanged(QTextCharFormat)" );
 
@@ -2378,9 +2364,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
   QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cursorPositionChanged()" ) )
       {
@@ -2409,14 +2395,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cursorPositionChanged()" );
 
@@ -2442,9 +2421,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 {
   QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "redoAvailable(bool)" ) )
       {
@@ -2475,14 +2454,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "redoAvailable(bool)" );
 
@@ -2508,9 +2480,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
   QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
@@ -2539,14 +2511,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
 
@@ -2572,9 +2537,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 {
   QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "textChanged()" ) )
       {
@@ -2603,14 +2568,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "textChanged()" );
 
@@ -2636,9 +2594,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
   QTextEdit * sender = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "undoAvailable(bool)" ) )
       {
@@ -2669,14 +2627,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "undoAvailable(bool)" );
 

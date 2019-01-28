@@ -1348,9 +1348,9 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
 {
   QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentChanged(int)" ) )
       {
@@ -1381,14 +1381,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentChanged(int)" );
 
@@ -1414,9 +1407,9 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
 {
   QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "tabCloseRequested(int)" ) )
       {
@@ -1447,14 +1440,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "tabCloseRequested(int)" );
 
@@ -1481,9 +1467,9 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "tabBarClicked(int)" ) )
       {
@@ -1514,14 +1500,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "tabBarClicked(int)" );
 
@@ -1549,9 +1528,9 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTabWidget * sender = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "tabBarDoubleClicked(int)" ) )
       {
@@ -1582,14 +1561,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "tabBarDoubleClicked(int)" );
 

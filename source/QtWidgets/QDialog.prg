@@ -568,9 +568,9 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
   QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "accepted()" ) )
       {
@@ -599,14 +599,7 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "accepted()" );
 
@@ -632,9 +625,9 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
   QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished(int)" ) )
       {
@@ -665,14 +658,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished(int)" );
 
@@ -698,9 +684,9 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
   QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rejected()" ) )
       {
@@ -729,14 +715,7 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rejected()" );
 

@@ -1593,9 +1593,9 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 {
   QTreeView * sender = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "collapsed(QModelIndex)" ) )
       {
@@ -1626,14 +1626,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "collapsed(QModelIndex)" );
 
@@ -1659,9 +1652,9 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 {
   QTreeView * sender = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "expanded(QModelIndex)" ) )
       {
@@ -1692,14 +1685,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "expanded(QModelIndex)" );
 

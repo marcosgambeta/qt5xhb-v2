@@ -1092,9 +1092,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" ) )
       {
@@ -1127,14 +1127,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
 
@@ -1160,9 +1153,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemActivated(QTreeWidgetItem*,int)" ) )
       {
@@ -1195,14 +1188,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemActivated(QTreeWidgetItem*,int)" );
 
@@ -1228,9 +1214,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemChanged(QTreeWidgetItem*,int)" ) )
       {
@@ -1263,14 +1249,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemChanged(QTreeWidgetItem*,int)" );
 
@@ -1296,9 +1275,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemClicked(QTreeWidgetItem*,int)" ) )
       {
@@ -1331,14 +1310,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemClicked(QTreeWidgetItem*,int)" );
 
@@ -1364,9 +1336,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemCollapsed(QTreeWidgetItem*)" ) )
       {
@@ -1397,14 +1369,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemCollapsed(QTreeWidgetItem*)" );
 
@@ -1430,9 +1395,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" ) )
       {
@@ -1465,14 +1430,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemDoubleClicked(QTreeWidgetItem*,int)" );
 
@@ -1498,9 +1456,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemEntered(QTreeWidgetItem*,int)" ) )
       {
@@ -1533,14 +1491,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemEntered(QTreeWidgetItem*,int)" );
 
@@ -1566,9 +1517,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemExpanded(QTreeWidgetItem*)" ) )
       {
@@ -1599,14 +1550,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemExpanded(QTreeWidgetItem*)" );
 
@@ -1632,9 +1576,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemPressed(QTreeWidgetItem*,int)" ) )
       {
@@ -1667,14 +1611,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemPressed(QTreeWidgetItem*,int)" );
 
@@ -1700,9 +1637,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
   QTreeWidget * sender = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemSelectionChanged()" ) )
       {
@@ -1731,14 +1668,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemSelectionChanged()" );
 

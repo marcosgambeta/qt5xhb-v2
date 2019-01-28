@@ -300,9 +300,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
   QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "angleChanged()" ) )
       {
@@ -331,14 +331,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "angleChanged()" );
 
@@ -364,9 +357,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
   QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "axisChanged()" ) )
       {
@@ -395,14 +388,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "axisChanged()" );
 
@@ -428,9 +414,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
   QGraphicsRotation * sender = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "originChanged()" ) )
       {
@@ -459,14 +445,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "originChanged()" );
 

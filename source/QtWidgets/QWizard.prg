@@ -1157,9 +1157,9 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 {
   QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "currentIdChanged(int)" ) )
       {
@@ -1190,14 +1190,7 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "currentIdChanged(int)" );
 
@@ -1223,9 +1216,9 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
   QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "customButtonClicked(int)" ) )
       {
@@ -1256,14 +1249,7 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "customButtonClicked(int)" );
 
@@ -1289,9 +1275,9 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 {
   QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "helpRequested()" ) )
       {
@@ -1320,14 +1306,7 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "helpRequested()" );
 
@@ -1353,9 +1332,9 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 {
   QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "pageAdded(int)" ) )
       {
@@ -1386,14 +1365,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "pageAdded(int)" );
 
@@ -1419,9 +1391,9 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 {
   QWizard * sender = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "pageRemoved(int)" ) )
       {
@@ -1452,14 +1424,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "pageRemoved(int)" );
 

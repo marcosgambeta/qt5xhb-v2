@@ -484,9 +484,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
   QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "accepted()" ) )
       {
@@ -515,14 +515,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "accepted()" );
 
@@ -548,9 +541,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 {
   QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "clicked(QAbstractButton*)" ) )
       {
@@ -581,14 +574,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "clicked(QAbstractButton*)" );
 
@@ -614,9 +600,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
   QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "helpRequested()" ) )
       {
@@ -645,14 +631,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "helpRequested()" );
 
@@ -678,9 +657,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 {
   QDialogButtonBox * sender = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rejected()" ) )
       {
@@ -709,14 +688,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rejected()" );
 

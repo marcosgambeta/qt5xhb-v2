@@ -1001,9 +1001,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
   QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activated(QString)" ) )
       {
@@ -1034,14 +1034,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activated(QString)" );
 
@@ -1067,9 +1060,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
   QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activated(QModelIndex)" ) )
       {
@@ -1100,14 +1093,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activated(QModelIndex)" );
 
@@ -1133,9 +1119,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
   QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "highlighted(QString)" ) )
       {
@@ -1166,14 +1152,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "highlighted(QString)" );
 
@@ -1199,9 +1178,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
   QCompleter * sender = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "highlighted(QModelIndex)" ) )
       {
@@ -1232,14 +1211,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "highlighted(QModelIndex)" );
 

@@ -823,9 +823,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "actionTriggered(QAction*)" ) )
       {
@@ -856,14 +856,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "actionTriggered(QAction*)" );
 
@@ -889,9 +882,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) )
       {
@@ -922,14 +915,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
 
@@ -955,9 +941,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
       {
@@ -988,14 +974,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "iconSizeChanged(QSize)" );
 
@@ -1021,9 +1000,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "movableChanged(bool)" ) )
       {
@@ -1054,14 +1033,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "movableChanged(bool)" );
 
@@ -1087,9 +1059,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "orientationChanged(Qt::Orientation)" ) )
       {
@@ -1120,14 +1092,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "orientationChanged(Qt::Orientation)" );
 
@@ -1153,9 +1118,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
       {
@@ -1186,14 +1151,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
@@ -1219,9 +1177,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
       {
@@ -1252,14 +1210,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "topLevelChanged(bool)" );
 
@@ -1285,9 +1236,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 {
   QToolBar * sender = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
       {
@@ -1318,14 +1269,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "visibilityChanged(bool)" );
 

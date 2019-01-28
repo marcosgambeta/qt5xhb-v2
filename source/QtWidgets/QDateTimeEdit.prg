@@ -1412,9 +1412,9 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
   QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "dateChanged(QDate)" ) )
       {
@@ -1445,14 +1445,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "dateChanged(QDate)" );
 
@@ -1478,9 +1471,9 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
   QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "dateTimeChanged(QDateTime)" ) )
       {
@@ -1511,14 +1504,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "dateTimeChanged(QDateTime)" );
 
@@ -1544,9 +1530,9 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
   QDateTimeEdit * sender = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "timeChanged(QTime)" ) )
       {
@@ -1577,14 +1563,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "timeChanged(QTime)" );
 

@@ -6752,9 +6752,9 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "windowTitleChanged(QString)" ) )
       {
@@ -6785,14 +6785,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "windowTitleChanged(QString)" );
 
@@ -6820,9 +6813,9 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "windowIconChanged(QIcon)" ) )
       {
@@ -6853,14 +6846,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "windowIconChanged(QIcon)" );
 
@@ -6887,9 +6873,9 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 {
   QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "windowIconTextChanged(QString)" ) )
       {
@@ -6920,14 +6906,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "windowIconTextChanged(QString)" );
 
@@ -6953,9 +6932,9 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
   QWidget * sender = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "customContextMenuRequested(QPoint)" ) )
       {
@@ -6986,14 +6965,7 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "customContextMenuRequested(QPoint)" );
 
