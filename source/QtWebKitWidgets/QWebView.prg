@@ -1000,9 +1000,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "iconChanged()" ) )
       {
@@ -1031,14 +1031,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "iconChanged()" );
 
@@ -1064,9 +1057,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
       {
@@ -1097,14 +1090,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "linkClicked(QUrl)" );
 
@@ -1130,9 +1116,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
@@ -1163,14 +1149,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loadFinished(bool)" );
 
@@ -1196,9 +1175,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loadProgress(int)" ) )
       {
@@ -1229,14 +1208,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loadProgress(int)" );
 
@@ -1262,9 +1234,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
@@ -1293,14 +1265,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loadStarted()" );
 
@@ -1326,9 +1291,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
@@ -1357,14 +1322,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
 
@@ -1390,9 +1348,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
       {
@@ -1423,14 +1381,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "statusBarMessage(QString)" );
 
@@ -1456,9 +1407,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
@@ -1489,14 +1440,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
 
@@ -1522,9 +1466,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 {
   QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
       {
@@ -1555,14 +1499,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "urlChanged(QUrl)" );
 
