@@ -600,9 +600,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)" ) )
       {
@@ -639,14 +639,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)" );
 
@@ -672,9 +665,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activeKeyChanged(Qt::Key)" ) )
       {
@@ -705,14 +698,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activeKeyChanged(Qt::Key)" );
 
@@ -738,9 +724,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "previousKeyChanged(Qt::Key)" ) )
       {
@@ -771,14 +757,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "previousKeyChanged(Qt::Key)" );
 
@@ -804,9 +783,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "inputMethodChanged()" ) )
       {
@@ -835,14 +814,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "inputMethodChanged()" );
 
@@ -868,9 +840,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "inputMethodReset()" ) )
       {
@@ -899,14 +871,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "inputMethodReset()" );
 
@@ -932,9 +897,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "inputMethodUpdate()" ) )
       {
@@ -963,14 +928,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "inputMethodUpdate()" );
 
@@ -996,9 +954,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "inputModesChanged()" ) )
       {
@@ -1027,14 +985,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "inputModesChanged()" );
 
@@ -1060,9 +1011,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "inputModeChanged()" ) )
       {
@@ -1091,14 +1042,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "inputModeChanged()" );
 
@@ -1124,9 +1068,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "patternRecognitionModesChanged()" ) )
       {
@@ -1155,14 +1099,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "patternRecognitionModesChanged()" );
 
@@ -1188,9 +1125,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "wordCandidateListModelChanged()" ) )
       {
@@ -1219,14 +1156,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "wordCandidateListModelChanged()" );
 
@@ -1252,9 +1182,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGE
 {
   QVirtualKeyboardInputEngine * sender = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "wordCandidateListVisibleHintChanged()" ) )
       {
@@ -1283,14 +1213,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGE
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "wordCandidateListVisibleHintChanged()" );
 

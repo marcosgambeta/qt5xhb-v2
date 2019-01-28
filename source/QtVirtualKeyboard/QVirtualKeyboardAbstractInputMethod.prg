@@ -545,9 +545,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 {
   QVirtualKeyboardAbstractInputMethod * sender = (QVirtualKeyboardAbstractInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" ) )
       {
@@ -578,14 +578,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" );
 
@@ -611,9 +604,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
 {
   QVirtualKeyboardAbstractInputMethod * sender = (QVirtualKeyboardAbstractInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" ) )
       {
@@ -646,14 +639,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" );
 
@@ -679,9 +665,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
 {
   QVirtualKeyboardAbstractInputMethod * sender = (QVirtualKeyboardAbstractInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "selectionListsChanged()" ) )
       {
@@ -710,14 +696,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "selectionListsChanged()" );
 

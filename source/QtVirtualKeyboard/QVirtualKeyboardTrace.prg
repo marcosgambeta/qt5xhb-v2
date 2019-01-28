@@ -543,9 +543,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 {
   QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "traceIdChanged(int)" ) )
       {
@@ -576,14 +576,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "traceIdChanged(int)" );
 
@@ -609,9 +602,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
 {
   QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "channelsChanged()" ) )
       {
@@ -640,14 +633,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "channelsChanged()" );
 
@@ -673,9 +659,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
 {
   QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "lengthChanged(int)" ) )
       {
@@ -706,14 +692,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "lengthChanged(int)" );
 
@@ -739,9 +718,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
 {
   QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finalChanged(bool)" ) )
       {
@@ -772,14 +751,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finalChanged(bool)" );
 
@@ -805,9 +777,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
 {
   QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "canceledChanged(bool)" ) )
       {
@@ -838,14 +810,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "canceledChanged(bool)" );
 
@@ -871,9 +836,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
 {
   QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
       {
@@ -904,14 +869,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "opacityChanged(qreal)" );
 

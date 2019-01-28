@@ -295,9 +295,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
 {
   QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "countChanged()" ) )
       {
@@ -326,14 +326,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "countChanged()" );
 
@@ -359,9 +352,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
 {
   QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activeItemChanged(int)" ) )
       {
@@ -392,14 +385,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activeItemChanged(int)" );
 
@@ -425,9 +411,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
 {
   QVirtualKeyboardSelectionListModel * sender = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemSelected(int)" ) )
       {
@@ -458,14 +444,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemSelected(int)" );
 
