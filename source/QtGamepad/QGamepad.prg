@@ -829,9 +829,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "axisLeftXChanged(double)" ) )
       {
@@ -862,14 +862,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "axisLeftXChanged(double)" );
 
@@ -897,9 +890,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "axisLeftYChanged(double)" ) )
       {
@@ -930,14 +923,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "axisLeftYChanged(double)" );
 
@@ -965,9 +951,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "axisRightXChanged(double)" ) )
       {
@@ -998,14 +984,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "axisRightXChanged(double)" );
 
@@ -1033,9 +1012,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "axisRightYChanged(double)" ) )
       {
@@ -1066,14 +1045,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "axisRightYChanged(double)" );
 
@@ -1101,9 +1073,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonAChanged(bool)" ) )
       {
@@ -1134,14 +1106,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonAChanged(bool)" );
 
@@ -1169,9 +1134,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonBChanged(bool)" ) )
       {
@@ -1202,14 +1167,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonBChanged(bool)" );
 
@@ -1237,9 +1195,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonCenterChanged(bool)" ) )
       {
@@ -1270,14 +1228,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonCenterChanged(bool)" );
 
@@ -1305,9 +1256,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonDownChanged(bool)" ) )
       {
@@ -1338,14 +1289,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonDownChanged(bool)" );
 
@@ -1373,9 +1317,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonGuideChanged(bool)" ) )
       {
@@ -1406,14 +1350,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonGuideChanged(bool)" );
 
@@ -1441,9 +1378,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonL1Changed(bool)" ) )
       {
@@ -1474,14 +1411,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonL1Changed(bool)" );
 
@@ -1509,9 +1439,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonL2Changed(double)" ) )
       {
@@ -1542,14 +1472,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonL2Changed(double)" );
 
@@ -1577,9 +1500,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonL3Changed(bool)" ) )
       {
@@ -1610,14 +1533,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonL3Changed(bool)" );
 
@@ -1645,9 +1561,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonLeftChanged(bool)" ) )
       {
@@ -1678,14 +1594,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonLeftChanged(bool)" );
 
@@ -1713,9 +1622,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonR1Changed(bool)" ) )
       {
@@ -1746,14 +1655,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonR1Changed(bool)" );
 
@@ -1781,9 +1683,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonR2Changed(double)" ) )
       {
@@ -1814,14 +1716,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonR2Changed(double)" );
 
@@ -1849,9 +1744,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonR3Changed(bool)" ) )
       {
@@ -1882,14 +1777,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonR3Changed(bool)" );
 
@@ -1917,9 +1805,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonRightChanged(bool)" ) )
       {
@@ -1950,14 +1838,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonRightChanged(bool)" );
 
@@ -1985,9 +1866,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonSelectChanged(bool)" ) )
       {
@@ -2018,14 +1899,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonSelectChanged(bool)" );
 
@@ -2053,9 +1927,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonStartChanged(bool)" ) )
       {
@@ -2086,14 +1960,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonStartChanged(bool)" );
 
@@ -2121,9 +1988,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonUpChanged(bool)" ) )
       {
@@ -2154,14 +2021,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonUpChanged(bool)" );
 
@@ -2189,9 +2049,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonXChanged(bool)" ) )
       {
@@ -2222,14 +2082,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonXChanged(bool)" );
 
@@ -2257,9 +2110,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "buttonYChanged(bool)" ) )
       {
@@ -2290,14 +2143,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "buttonYChanged(bool)" );
 
@@ -2325,9 +2171,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "connectedChanged(bool)" ) )
       {
@@ -2358,14 +2204,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "connectedChanged(bool)" );
 
@@ -2393,9 +2232,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "deviceIdChanged(int)" ) )
       {
@@ -2426,14 +2265,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "deviceIdChanged(int)" );
 
@@ -2461,9 +2293,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * sender = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
       {
@@ -2494,14 +2326,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "nameChanged(QString)" );
 
