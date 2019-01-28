@@ -540,9 +540,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "nameChanged()" ) )
       {
@@ -571,14 +571,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "nameChanged()" );
 
@@ -606,9 +599,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "opacityChanged()" ) )
       {
@@ -637,14 +630,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "opacityChanged()" );
 
@@ -672,9 +658,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "useOpenGLChanged()" ) )
       {
@@ -703,14 +689,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "useOpenGLChanged()" );
 
@@ -738,9 +717,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * sender = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
@@ -769,14 +748,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "visibleChanged()" );
 

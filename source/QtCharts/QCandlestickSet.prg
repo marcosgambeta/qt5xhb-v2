@@ -539,9 +539,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "brushChanged()" ) )
       {
@@ -570,14 +570,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "brushChanged()" );
 
@@ -605,9 +598,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "clicked()" ) )
       {
@@ -636,14 +629,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "clicked()" );
 
@@ -671,9 +657,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "closeChanged()" ) )
       {
@@ -702,14 +688,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "closeChanged()" );
 
@@ -737,9 +716,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "doubleClicked()" ) )
       {
@@ -768,14 +747,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "doubleClicked()" );
 
@@ -803,9 +775,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "highChanged()" ) )
       {
@@ -834,14 +806,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "highChanged()" );
 
@@ -869,9 +834,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "hovered(bool)" ) )
       {
@@ -902,14 +867,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "hovered(bool)" );
 
@@ -937,9 +895,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "lowChanged()" ) )
       {
@@ -968,14 +926,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "lowChanged()" );
 
@@ -1003,9 +954,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "openChanged()" ) )
       {
@@ -1034,14 +985,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "openChanged()" );
 
@@ -1069,9 +1013,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "penChanged()" ) )
       {
@@ -1100,14 +1044,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "penChanged()" );
 
@@ -1135,9 +1072,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "pressed()" ) )
       {
@@ -1166,14 +1103,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "pressed()" );
 
@@ -1201,9 +1131,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "released()" ) )
       {
@@ -1232,14 +1162,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "released()" );
 
@@ -1267,9 +1190,9 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * sender = (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "timestampChanged()" ) )
       {
@@ -1298,14 +1221,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "timestampChanged()" );
 
