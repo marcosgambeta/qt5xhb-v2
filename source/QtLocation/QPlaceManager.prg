@@ -721,9 +721,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished(QPlaceReply*)" ) )
       {
@@ -754,14 +754,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished(QPlaceReply*)" );
 
@@ -789,9 +782,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" ) )
       {
@@ -826,14 +819,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
 
@@ -861,9 +847,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "placeAdded(QString)" ) )
       {
@@ -894,14 +880,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "placeAdded(QString)" );
 
@@ -929,9 +908,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "placeUpdated(QString)" ) )
       {
@@ -962,14 +941,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "placeUpdated(QString)" );
 
@@ -997,9 +969,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "placeRemoved(QString)" ) )
       {
@@ -1030,14 +1002,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "placeRemoved(QString)" );
 
@@ -1065,9 +1030,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "categoryAdded(QPlaceCategory,QString)" ) )
       {
@@ -1100,14 +1065,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "categoryAdded(QPlaceCategory,QString)" );
 
@@ -1135,9 +1093,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "categoryUpdated(QPlaceCategory,QString)" ) )
       {
@@ -1170,14 +1128,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "categoryUpdated(QPlaceCategory,QString)" );
 
@@ -1205,9 +1156,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "categoryRemoved(QString,QString)" ) )
       {
@@ -1240,14 +1191,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "categoryRemoved(QString,QString)" );
 
@@ -1275,9 +1219,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManager * sender = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "dataChanged()" ) )
       {
@@ -1306,14 +1250,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "dataChanged()" );
 
