@@ -459,9 +459,9 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
 {
   QVideoWidget * sender = (QVideoWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "fullScreenChanged(bool)" ) )
       {
@@ -492,14 +492,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "fullScreenChanged(bool)" );
 
@@ -525,9 +518,9 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
 {
   QVideoWidget * sender = (QVideoWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "brightnessChanged(int)" ) )
       {
@@ -558,14 +551,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "brightnessChanged(int)" );
 
@@ -591,9 +577,9 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
 {
   QVideoWidget * sender = (QVideoWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "contrastChanged(int)" ) )
       {
@@ -624,14 +610,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "contrastChanged(int)" );
 
@@ -657,9 +636,9 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
 {
   QVideoWidget * sender = (QVideoWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "hueChanged(int)" ) )
       {
@@ -690,14 +669,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "hueChanged(int)" );
 
@@ -723,9 +695,9 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
 {
   QVideoWidget * sender = (QVideoWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "saturationChanged(int)" ) )
       {
@@ -756,14 +728,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "saturationChanged(int)" );
 
