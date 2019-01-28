@@ -145,9 +145,9 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusServer * sender = (QModbusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" ) )
       {
@@ -182,14 +182,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
 

@@ -588,9 +588,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)" ) )
       {
@@ -621,14 +621,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "errorOccurred(QCanBusDevice::CanBusError)" );
 
@@ -656,9 +649,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "framesReceived()" ) )
       {
@@ -687,14 +680,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "framesReceived()" );
 
@@ -722,9 +708,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "framesWritten(qint64)" ) )
       {
@@ -755,14 +741,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "framesWritten(qint64)" );
 
@@ -790,9 +769,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusDevice * sender = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" ) )
       {
@@ -823,14 +802,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
 
