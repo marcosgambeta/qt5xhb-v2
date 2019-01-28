@@ -722,9 +722,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "connected()" ) )
       {
@@ -753,14 +753,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "connected()" );
 
@@ -788,9 +781,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "disconnected()" ) )
       {
@@ -819,14 +812,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "disconnected()" );
 
@@ -854,9 +840,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QBluetoothSocket::SocketError)" ) )
       {
@@ -887,14 +873,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QBluetoothSocket::SocketError)" );
 
@@ -922,9 +901,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothSocket * sender = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QBluetoothSocket::SocketState)" ) )
       {
@@ -955,14 +934,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QBluetoothSocket::SocketState)" );
 
