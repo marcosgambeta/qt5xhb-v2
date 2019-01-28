@@ -518,9 +518,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "arrayReset()" ) )
       {
@@ -549,14 +549,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "arrayReset()" );
 
@@ -582,9 +575,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "columnLabelsChanged()" ) )
       {
@@ -613,14 +606,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "columnLabelsChanged()" );
 
@@ -646,9 +632,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "itemChanged(int,int)" ) )
       {
@@ -681,14 +667,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "itemChanged(int,int)" );
 
@@ -714,9 +693,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowCountChanged(int)" ) )
       {
@@ -747,14 +726,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowCountChanged(int)" );
 
@@ -780,9 +752,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowLabelsChanged()" ) )
       {
@@ -811,14 +783,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowLabelsChanged()" );
 
@@ -844,9 +809,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsAdded(int,int)" ) )
       {
@@ -879,14 +844,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsAdded(int,int)" );
 
@@ -912,9 +870,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsChanged(int,int)" ) )
       {
@@ -947,14 +905,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsChanged(int,int)" );
 
@@ -980,9 +931,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsInserted(int,int)" ) )
       {
@@ -1015,14 +966,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsInserted(int,int)" );
 
@@ -1048,9 +992,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rowsRemoved(int,int)" ) )
       {
@@ -1083,14 +1027,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rowsRemoved(int,int)" );
 
@@ -1116,9 +1053,9 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
 {
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "seriesChanged(QBar3DSeries*)" ) )
       {
@@ -1149,14 +1086,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "seriesChanged(QBar3DSeries*)" );
 
