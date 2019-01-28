@@ -247,9 +247,9 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ONDETECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorGestureRecognizer * sender = (QSensorGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "detected(QString)" ) )
       {
@@ -280,14 +280,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ONDETECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "detected(QString)" );
 
