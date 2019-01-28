@@ -470,9 +470,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 {
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" ) )
       {
@@ -503,14 +503,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" );
 
@@ -536,9 +529,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
 {
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "nameChanged(QString)" ) )
       {
@@ -569,14 +562,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "nameChanged(QString)" );
 
@@ -602,9 +588,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
 {
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "runOnSubframesChanged(bool)" ) )
       {
@@ -635,14 +621,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "runOnSubframesChanged(bool)" );
 
@@ -668,9 +647,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
 {
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "sourceCodeChanged(QString)" ) )
       {
@@ -701,14 +680,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "sourceCodeChanged(QString)" );
 
@@ -734,9 +706,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
 {
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "sourceUrlChanged(QUrl)" ) )
       {
@@ -767,14 +739,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "sourceUrlChanged(QUrl)" );
 
@@ -800,9 +765,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
 {
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" ) )
       {
@@ -833,14 +798,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" );
 

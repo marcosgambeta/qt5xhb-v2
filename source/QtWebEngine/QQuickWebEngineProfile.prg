@@ -1004,9 +1004,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cachePathChanged()" ) )
       {
@@ -1035,14 +1035,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cachePathChanged()" );
 
@@ -1076,9 +1069,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "httpAcceptLanguageChanged()" ) )
       {
@@ -1107,14 +1100,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "httpAcceptLanguageChanged()" );
 
@@ -1140,9 +1126,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "httpCacheMaximumSizeChanged()" ) )
       {
@@ -1171,14 +1157,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "httpCacheMaximumSizeChanged()" );
 
@@ -1204,9 +1183,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "httpCacheTypeChanged()" ) )
       {
@@ -1235,14 +1214,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "httpCacheTypeChanged()" );
 
@@ -1268,9 +1240,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "httpUserAgentChanged()" ) )
       {
@@ -1299,14 +1271,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "httpUserAgentChanged()" );
 
@@ -1332,9 +1297,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "offTheRecordChanged()" ) )
       {
@@ -1363,14 +1328,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "offTheRecordChanged()" );
 
@@ -1396,9 +1354,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "persistentCookiesPolicyChanged()" ) )
       {
@@ -1427,14 +1385,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "persistentCookiesPolicyChanged()" );
 
@@ -1460,9 +1411,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "persistentStoragePathChanged()" ) )
       {
@@ -1491,14 +1442,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "persistentStoragePathChanged()" );
 
@@ -1524,9 +1468,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "spellCheckEnabledChanged()" ) )
       {
@@ -1555,14 +1499,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "spellCheckEnabledChanged()" );
 
@@ -1588,9 +1525,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "spellCheckLanguagesChanged()" ) )
       {
@@ -1619,14 +1556,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "spellCheckLanguagesChanged()" );
 
@@ -1652,9 +1582,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
 {
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "storageNameChanged()" ) )
       {
@@ -1683,14 +1613,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "storageNameChanged()" );
 
