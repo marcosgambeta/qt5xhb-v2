@@ -468,9 +468,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * sender = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "clientIdentifierSharedKeyChanged(QString)" ) )
       {
@@ -501,14 +501,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "clientIdentifierSharedKeyChanged(QString)" );
 
@@ -536,9 +529,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * sender = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QString,QString,QUrl)" ) )
       {
@@ -573,14 +566,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QString,QString,QUrl)" );
 
@@ -608,9 +594,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * sender = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "expirationAtChanged(QDateTime)" ) )
       {
@@ -641,14 +627,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "expirationAtChanged(QDateTime)" );
 
@@ -676,9 +655,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * sender = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "responseTypeChanged(QString)" ) )
       {
@@ -709,14 +688,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "responseTypeChanged(QString)" );
 
@@ -744,9 +716,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * sender = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "scopeChanged(QString)" ) )
       {
@@ -777,14 +749,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "scopeChanged(QString)" );
 
@@ -812,9 +777,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * sender = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QString)" ) )
       {
@@ -845,14 +810,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QString)" );
 
@@ -880,9 +838,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * sender = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "userAgentChanged(QString)" ) )
       {
@@ -913,14 +871,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "userAgentChanged(QString)" );
 
