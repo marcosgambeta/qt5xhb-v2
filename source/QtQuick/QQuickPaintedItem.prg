@@ -630,9 +630,9 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
 {
   QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "contentsScaleChanged()" ) )
       {
@@ -661,14 +661,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "contentsScaleChanged()" );
 
@@ -694,9 +687,9 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
 {
   QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "contentsSizeChanged()" ) )
       {
@@ -725,14 +718,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "contentsSizeChanged()" );
 
@@ -758,9 +744,9 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
 {
   QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "fillColorChanged()" ) )
       {
@@ -789,14 +775,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "fillColorChanged()" );
 
@@ -822,9 +801,9 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 {
   QQuickPaintedItem * sender = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "renderTargetChanged()" ) )
       {
@@ -853,14 +832,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "renderTargetChanged()" );
 

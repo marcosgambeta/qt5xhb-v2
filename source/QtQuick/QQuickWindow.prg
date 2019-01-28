@@ -757,9 +757,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 {
   QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "afterRendering()" ) )
       {
@@ -788,14 +788,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "afterRendering()" );
 
@@ -821,9 +814,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 {
   QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "beforeRendering()" ) )
       {
@@ -852,14 +845,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "beforeRendering()" );
 
@@ -885,9 +871,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 {
   QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "beforeSynchronizing()" ) )
       {
@@ -916,14 +902,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "beforeSynchronizing()" );
 
@@ -949,9 +928,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 {
   QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "colorChanged(QColor)" ) )
       {
@@ -982,14 +961,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "colorChanged(QColor)" );
 
@@ -1015,9 +987,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 {
   QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "frameSwapped()" ) )
       {
@@ -1046,14 +1018,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "frameSwapped()" );
 
@@ -1079,9 +1044,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 {
   QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "sceneGraphInitialized()" ) )
       {
@@ -1110,14 +1075,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "sceneGraphInitialized()" );
 
@@ -1143,9 +1101,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 {
   QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "sceneGraphInvalidated()" ) )
       {
@@ -1174,14 +1132,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "sceneGraphInvalidated()" );
 
