@@ -760,9 +760,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loadStarted()" ) )
       {
@@ -791,14 +791,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loadStarted()" );
 
@@ -826,9 +819,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loadProgress(int)" ) )
       {
@@ -859,14 +852,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loadProgress(int)" );
 
@@ -894,9 +880,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "loadFinished(bool)" ) )
       {
@@ -927,14 +913,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "loadFinished(bool)" );
 
@@ -962,9 +941,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "linkHovered(QString)" ) )
       {
@@ -995,14 +974,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "linkHovered(QString)" );
 
@@ -1030,9 +1002,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "selectionChanged()" ) )
       {
@@ -1061,14 +1033,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "selectionChanged()" );
 
@@ -1096,9 +1061,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "geometryChangeRequested(QRect)" ) )
       {
@@ -1129,14 +1094,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "geometryChangeRequested(QRect)" );
 
@@ -1164,9 +1122,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "windowCloseRequested()" ) )
       {
@@ -1195,14 +1153,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "windowCloseRequested()" );
 
@@ -1230,9 +1181,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" ) )
       {
@@ -1265,14 +1216,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
 
@@ -1300,9 +1244,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" ) )
       {
@@ -1335,14 +1279,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
 
@@ -1370,9 +1307,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "authenticationRequired(QUrl,QAuthenticator*)" ) )
       {
@@ -1405,14 +1342,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "authenticationRequired(QUrl,QAuthenticator*)" );
 
@@ -1440,9 +1370,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" ) )
       {
@@ -1477,14 +1407,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
 
@@ -1512,9 +1435,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "titleChanged(QString)" ) )
       {
@@ -1545,14 +1468,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "titleChanged(QString)" );
 
@@ -1580,9 +1496,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "urlChanged(QUrl)" ) )
       {
@@ -1613,14 +1529,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "urlChanged(QUrl)" );
 
@@ -1648,9 +1557,9 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * sender = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "iconUrlChanged(QUrl)" ) )
       {
@@ -1681,14 +1590,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "iconUrlChanged(QUrl)" );
 
