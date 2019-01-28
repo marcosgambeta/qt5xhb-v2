@@ -272,9 +272,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 {
   QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "entered()" ) )
       {
@@ -303,14 +303,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "entered()" );
 
@@ -336,9 +329,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 {
   QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(int,QString,int,QString)" ) )
       {
@@ -375,14 +368,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(int,QString,int,QString)" );
 
@@ -408,9 +394,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 {
   QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished()" ) )
       {
@@ -439,14 +425,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished()" );
 
@@ -472,9 +451,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 {
   QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished(QVariant)" ) )
       {
@@ -505,14 +484,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished(QVariant)" );
 
@@ -538,9 +510,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 {
   QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "finished(int,QString,QString,QString)" ) )
       {
@@ -577,14 +549,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "finished(int,QString,QString,QString)" );
 
@@ -610,9 +575,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 {
   QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(int)" ) )
       {
@@ -643,14 +608,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(int)" );
 
