@@ -667,9 +667,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
       {
@@ -700,14 +700,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "localeChanged(QLocale)" );
 
@@ -735,9 +728,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "pitchChanged(double)" ) )
       {
@@ -768,14 +761,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "pitchChanged(double)" );
 
@@ -803,9 +789,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "rateChanged(double)" ) )
       {
@@ -836,14 +822,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "rateChanged(double)" );
 
@@ -871,9 +850,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QTextToSpeech::State)" ) )
       {
@@ -904,14 +883,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QTextToSpeech::State)" );
 
@@ -939,9 +911,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "voiceChanged(QVoice)" ) )
       {
@@ -972,14 +944,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "voiceChanged(QVoice)" );
 
@@ -1007,9 +972,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "volumeChanged(int)" ) )
       {
@@ -1040,14 +1005,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "volumeChanged(int)" );
 
