@@ -367,9 +367,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 {
   QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "documentSizeChanged(QSizeF)" ) )
       {
@@ -400,14 +400,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "documentSizeChanged(QSizeF)" );
 
@@ -433,9 +426,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 {
   QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "pageCountChanged(int)" ) )
       {
@@ -466,14 +459,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "pageCountChanged(int)" );
 
@@ -499,9 +485,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 {
   QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "update(QRectF)" ) )
       {
@@ -532,14 +518,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "update(QRectF)" );
 
@@ -565,9 +544,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 {
   QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "updateBlock(QTextBlock)" ) )
       {
@@ -598,14 +577,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "updateBlock(QTextBlock)" );
 

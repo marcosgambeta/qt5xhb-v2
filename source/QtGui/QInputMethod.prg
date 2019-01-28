@@ -461,9 +461,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 {
   QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "animatingChanged()" ) )
       {
@@ -492,14 +492,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "animatingChanged()" );
 
@@ -525,9 +518,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 {
   QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "cursorRectangleChanged()" ) )
       {
@@ -556,14 +549,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "cursorRectangleChanged()" );
 
@@ -589,9 +575,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 {
   QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "inputDirectionChanged(Qt::LayoutDirection)" ) )
       {
@@ -622,14 +608,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "inputDirectionChanged(Qt::LayoutDirection)" );
 
@@ -655,9 +634,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 {
   QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "keyboardRectangleChanged()" ) )
       {
@@ -686,14 +665,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "keyboardRectangleChanged()" );
 
@@ -719,9 +691,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 {
   QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "localeChanged()" ) )
       {
@@ -750,14 +722,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "localeChanged()" );
 
@@ -783,9 +748,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 {
   QInputMethod * sender = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "visibleChanged()" ) )
       {
@@ -814,14 +779,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "visibleChanged()" );
 

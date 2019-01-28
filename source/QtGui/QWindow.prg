@@ -3021,9 +3021,9 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "activeChanged()" ) )
       {
@@ -3052,14 +3052,7 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "activeChanged()" );
 
@@ -3086,9 +3079,9 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "contentOrientationChanged(Qt::ScreenOrientation)" ) )
       {
@@ -3119,14 +3112,7 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "contentOrientationChanged(Qt::ScreenOrientation)" );
 
@@ -3152,9 +3138,9 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "focusObjectChanged(QObject*)" ) )
       {
@@ -3185,14 +3171,7 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "focusObjectChanged(QObject*)" );
 
@@ -3218,9 +3197,9 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "heightChanged(int)" ) )
       {
@@ -3251,14 +3230,7 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "heightChanged(int)" );
 
@@ -3284,9 +3256,9 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "maximumHeightChanged(int)" ) )
       {
@@ -3317,14 +3289,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "maximumHeightChanged(int)" );
 
@@ -3350,9 +3315,9 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "maximumWidthChanged(int)" ) )
       {
@@ -3383,14 +3348,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "maximumWidthChanged(int)" );
 
@@ -3416,9 +3374,9 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "minimumHeightChanged(int)" ) )
       {
@@ -3449,14 +3407,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "minimumHeightChanged(int)" );
 
@@ -3482,9 +3433,9 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "minimumWidthChanged(int)" ) )
       {
@@ -3515,14 +3466,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "minimumWidthChanged(int)" );
 
@@ -3548,9 +3492,9 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "modalityChanged(Qt::WindowModality)" ) )
       {
@@ -3581,14 +3525,7 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "modalityChanged(Qt::WindowModality)" );
 
@@ -3615,9 +3552,9 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
       {
@@ -3648,14 +3585,7 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "opacityChanged(qreal)" );
 
@@ -3682,9 +3612,9 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "screenChanged(QScreen*)" ) )
       {
@@ -3715,14 +3645,7 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "screenChanged(QScreen*)" );
 
@@ -3749,9 +3672,9 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "visibilityChanged(QWindow::Visibility)" ) )
       {
@@ -3782,14 +3705,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "visibilityChanged(QWindow::Visibility)" );
 
@@ -3816,9 +3732,9 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "visibleChanged(bool)" ) )
       {
@@ -3849,14 +3765,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "visibleChanged(bool)" );
 
@@ -3882,9 +3791,9 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "widthChanged(int)" ) )
       {
@@ -3915,14 +3824,7 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "widthChanged(int)" );
 
@@ -3948,9 +3850,9 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "windowStateChanged(Qt::WindowState)" ) )
       {
@@ -3981,14 +3883,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "windowStateChanged(Qt::WindowState)" );
 
@@ -4014,9 +3909,9 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "windowTitleChanged(QString)" ) )
       {
@@ -4047,14 +3942,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "windowTitleChanged(QString)" );
 
@@ -4080,9 +3968,9 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "xChanged(int)" ) )
       {
@@ -4113,14 +4001,7 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "xChanged(int)" );
 
@@ -4146,9 +4027,9 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
 {
   QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "yChanged(int)" ) )
       {
@@ -4179,14 +4060,7 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "yChanged(int)" );
 

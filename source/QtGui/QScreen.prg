@@ -879,9 +879,9 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "geometryChanged(QRect)" ) )
       {
@@ -912,14 +912,7 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "geometryChanged(QRect)" );
 
@@ -945,9 +938,9 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "physicalSizeChanged(QSizeF)" ) )
       {
@@ -978,14 +971,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "physicalSizeChanged(QSizeF)" );
 
@@ -1011,9 +997,9 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "physicalDotsPerInchChanged(qreal)" ) )
       {
@@ -1044,14 +1030,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "physicalDotsPerInchChanged(qreal)" );
 
@@ -1077,9 +1056,9 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "logicalDotsPerInchChanged(qreal)" ) )
       {
@@ -1110,14 +1089,7 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "logicalDotsPerInchChanged(qreal)" );
 
@@ -1143,9 +1115,9 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "virtualGeometryChanged(QRect)" ) )
       {
@@ -1176,14 +1148,7 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "virtualGeometryChanged(QRect)" );
 
@@ -1209,9 +1174,9 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) )
       {
@@ -1242,14 +1207,7 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
 
@@ -1275,9 +1233,9 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) )
       {
@@ -1308,14 +1266,7 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "orientationChanged(Qt::ScreenOrientation)" );
 
@@ -1341,9 +1292,9 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 {
   QScreen * sender = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "refreshRateChanged(qreal)" ) )
       {
@@ -1374,14 +1325,7 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "refreshRateChanged(qreal)" );
 
