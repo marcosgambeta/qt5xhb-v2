@@ -1098,9 +1098,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "aboutToClose()" ) )
       {
@@ -1129,14 +1129,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "aboutToClose()" );
 
@@ -1164,9 +1157,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "connected()" ) )
       {
@@ -1195,14 +1188,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "connected()" );
 
@@ -1230,9 +1216,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "disconnected()" ) )
       {
@@ -1261,14 +1247,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "disconnected()" );
 
@@ -1296,9 +1275,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) )
       {
@@ -1329,14 +1308,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "stateChanged(QAbstractSocket::SocketState)" );
 
@@ -1364,9 +1336,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
       {
@@ -1399,14 +1371,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
@@ -1434,9 +1399,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "readChannelFinished()" ) )
       {
@@ -1465,14 +1430,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "readChannelFinished()" );
 
@@ -1500,9 +1458,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "textFrameReceived(QString,bool)" ) )
       {
@@ -1535,14 +1493,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "textFrameReceived(QString,bool)" );
 
@@ -1570,9 +1521,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "binaryFrameReceived(QByteArray,bool)" ) )
       {
@@ -1605,14 +1556,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "binaryFrameReceived(QByteArray,bool)" );
 
@@ -1640,9 +1584,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "textMessageReceived(QString)" ) )
       {
@@ -1673,14 +1617,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "textMessageReceived(QString)" );
 
@@ -1708,9 +1645,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "binaryMessageReceived(QByteArray)" ) )
       {
@@ -1741,14 +1678,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "binaryMessageReceived(QByteArray)" );
 
@@ -1776,9 +1706,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "error(QAbstractSocket::SocketError)" ) )
       {
@@ -1809,14 +1739,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "error(QAbstractSocket::SocketError)" );
 
@@ -1844,9 +1767,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "pong(quint64,QByteArray)" ) )
       {
@@ -1879,14 +1802,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "pong(quint64,QByteArray)" );
 
@@ -1914,9 +1830,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
       {
@@ -1947,14 +1863,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "bytesWritten(qint64)" );
 
@@ -1982,9 +1891,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocket * sender = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  if( hb_pcount() == 1 )
+  if( sender != nullptr )
   {
-    if( sender != nullptr )
+    if( hb_pcount() == 1 )
     {
       if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
       {
@@ -2038,14 +1947,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
         hb_retl( false );
       }
     }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    if( sender != nullptr )
+    else if( hb_pcount() == 0 )
     {
       Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
 
