@@ -67,7 +67,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QTextToSpeech>
@@ -669,21 +669,23 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("localeChanged(QLocale)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "localeChanged(QLocale)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::localeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QLocale & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "localeChanged(QLocale)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QLOCALE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QLOCALE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -691,7 +693,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "localeChanged(QLocale)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -702,9 +704,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "localeChanged(QLocale)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "localeChanged(QLocale)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -730,20 +732,22 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pitchChanged(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pitchChanged(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::pitchChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pitchChanged(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -752,7 +756,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "pitchChanged(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -763,9 +767,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pitchChanged(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pitchChanged(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -791,20 +795,22 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("rateChanged(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "rateChanged(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::rateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "rateChanged(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -813,7 +819,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "rateChanged(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -824,9 +830,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "rateChanged(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "rateChanged(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -852,20 +858,22 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QTextToSpeech::State)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QTextToSpeech::State)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTextToSpeech::State arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QTextToSpeech::State)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -874,7 +882,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QTextToSpeech::State)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -885,9 +893,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QTextToSpeech::State)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QTextToSpeech::State)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -913,21 +921,23 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("voiceChanged(QVoice)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "voiceChanged(QVoice)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::voiceChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QVoice & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "voiceChanged(QVoice)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVOICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QVOICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -935,7 +945,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "voiceChanged(QVoice)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -946,9 +956,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "voiceChanged(QVoice)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "voiceChanged(QVoice)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -974,20 +984,22 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("volumeChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "volumeChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::volumeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "volumeChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -996,7 +1008,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "volumeChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1007,9 +1019,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "volumeChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "volumeChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
