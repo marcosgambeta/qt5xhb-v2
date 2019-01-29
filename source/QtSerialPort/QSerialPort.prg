@@ -93,7 +93,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -1215,20 +1215,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("baudRateChanged(qint32,QSerialPort::Directions)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "baudRateChanged(qint32,QSerialPort::Directions)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::baudRateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint32 arg1, QSerialPort::Directions arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "baudRateChanged(qint32,QSerialPort::Directions)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1239,7 +1241,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "baudRateChanged(qint32,QSerialPort::Directions)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1250,9 +1252,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "baudRateChanged(qint32,QSerialPort::Directions)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "baudRateChanged(qint32,QSerialPort::Directions)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1278,20 +1280,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dataBitsChanged(QSerialPort::DataBits)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dataBitsChanged(QSerialPort::DataBits)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::dataBitsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSerialPort::DataBits arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataBitsChanged(QSerialPort::DataBits)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1300,7 +1304,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "dataBitsChanged(QSerialPort::DataBits)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1311,9 +1315,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dataBitsChanged(QSerialPort::DataBits)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dataBitsChanged(QSerialPort::DataBits)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1339,20 +1343,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("parityChanged(QSerialPort::Parity)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "parityChanged(QSerialPort::Parity)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::parityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSerialPort::Parity arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "parityChanged(QSerialPort::Parity)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1361,7 +1367,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "parityChanged(QSerialPort::Parity)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1372,9 +1378,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "parityChanged(QSerialPort::Parity)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "parityChanged(QSerialPort::Parity)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1400,20 +1406,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stopBitsChanged(QSerialPort::StopBits)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stopBitsChanged(QSerialPort::StopBits)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::stopBitsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSerialPort::StopBits arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stopBitsChanged(QSerialPort::StopBits)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1422,7 +1430,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stopBitsChanged(QSerialPort::StopBits)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1433,9 +1441,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stopBitsChanged(QSerialPort::StopBits)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stopBitsChanged(QSerialPort::StopBits)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1461,20 +1469,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("flowControlChanged(QSerialPort::FlowControl)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "flowControlChanged(QSerialPort::FlowControl)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::flowControlChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSerialPort::FlowControl arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "flowControlChanged(QSerialPort::FlowControl)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1483,7 +1493,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "flowControlChanged(QSerialPort::FlowControl)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1494,9 +1504,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "flowControlChanged(QSerialPort::FlowControl)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "flowControlChanged(QSerialPort::FlowControl)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1522,20 +1532,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::dataErrorPolicyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSerialPort::DataErrorPolicy arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1544,7 +1556,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1555,9 +1567,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1583,20 +1595,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dataTerminalReadyChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dataTerminalReadyChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::dataTerminalReadyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataTerminalReadyChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1605,7 +1619,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "dataTerminalReadyChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1616,9 +1630,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dataTerminalReadyChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dataTerminalReadyChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1644,20 +1658,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("requestToSendChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "requestToSendChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::requestToSendChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "requestToSendChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1666,7 +1682,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "requestToSendChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1677,9 +1693,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "requestToSendChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "requestToSendChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1705,20 +1721,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QSerialPort::SerialPortError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QSerialPort::SerialPortError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSerialPort::SerialPortError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QSerialPort::SerialPortError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1727,7 +1745,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QSerialPort::SerialPortError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1738,9 +1756,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QSerialPort::SerialPortError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QSerialPort::SerialPortError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1766,20 +1784,22 @@ HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("settingsRestoredOnCloseChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "settingsRestoredOnCloseChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::settingsRestoredOnCloseChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "settingsRestoredOnCloseChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSERIALPORT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSERIALPORT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1788,7 +1808,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "settingsRestoredOnCloseChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1799,9 +1819,9 @@ HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "settingsRestoredOnCloseChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "settingsRestoredOnCloseChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
