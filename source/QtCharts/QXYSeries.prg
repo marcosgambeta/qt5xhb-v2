@@ -93,7 +93,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -1194,21 +1194,23 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(QPointF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(QPointF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPointF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPointF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1216,7 +1218,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(QPointF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1227,9 +1229,9 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(QPointF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(QPointF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1255,21 +1257,23 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "colorChanged(QColor)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::colorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QColor arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1277,7 +1281,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "colorChanged(QColor)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1288,9 +1292,9 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "colorChanged(QColor)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "colorChanged(QColor)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1316,21 +1320,23 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleClicked(QPointF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleClicked(QPointF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::doubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPointF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPointF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1338,7 +1344,7 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "doubleClicked(QPointF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1349,9 +1355,9 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleClicked(QPointF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QPointF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1377,21 +1383,23 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("hovered(QPointF,bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "hovered(QPointF,bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::hovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPointF & arg1, bool arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPointF,bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINTF" );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1401,7 +1409,7 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
 
         });
 
-        Signals2_store_connection( sender, "hovered(QPointF,bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1412,9 +1420,9 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "hovered(QPointF,bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "hovered(QPointF,bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1440,21 +1448,23 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("penChanged(QPen)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "penChanged(QPen)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::penChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPen & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged(QPen)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPEN" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPEN" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1462,7 +1472,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "penChanged(QPen)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1473,9 +1483,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "penChanged(QPen)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "penChanged(QPen)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1501,20 +1511,22 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointAdded(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointAdded(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointAdded(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1523,7 +1535,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
 
         });
 
-        Signals2_store_connection( sender, "pointAdded(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1534,9 +1546,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointAdded(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointAdded(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1562,20 +1574,22 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointLabelsClippingChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointLabelsClippingChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointLabelsClippingChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsClippingChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1584,7 +1598,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "pointLabelsClippingChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1595,9 +1609,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointLabelsClippingChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsClippingChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1623,21 +1637,23 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointLabelsColorChanged(QColor)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointLabelsColorChanged(QColor)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointLabelsColorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsColorChanged(QColor)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1645,7 +1661,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "pointLabelsColorChanged(QColor)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1656,9 +1672,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointLabelsColorChanged(QColor)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsColorChanged(QColor)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1684,21 +1700,23 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointLabelsFontChanged(QFont)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointLabelsFontChanged(QFont)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointLabelsFontChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QFont & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFontChanged(QFont)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1706,7 +1724,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "pointLabelsFontChanged(QFont)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1717,9 +1735,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointLabelsFontChanged(QFont)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsFontChanged(QFont)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1745,20 +1763,22 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointLabelsFormatChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointLabelsFormatChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointLabelsFormatChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsFormatChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1767,7 +1787,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "pointLabelsFormatChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1778,9 +1798,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointLabelsFormatChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsFormatChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1806,20 +1826,22 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointLabelsVisibilityChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointLabelsVisibilityChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointLabelsVisibilityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointLabelsVisibilityChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1828,7 +1850,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "pointLabelsVisibilityChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1839,9 +1861,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointLabelsVisibilityChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointLabelsVisibilityChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1867,20 +1889,22 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointRemoved(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointRemoved(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointRemoved(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1889,7 +1913,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "pointRemoved(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1900,9 +1924,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointRemoved(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointRemoved(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1928,20 +1952,22 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointReplaced(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointReplaced(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointReplaced, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointReplaced(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1950,7 +1976,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
 
         });
 
-        Signals2_store_connection( sender, "pointReplaced(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1961,9 +1987,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointReplaced(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointReplaced(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1989,20 +2015,22 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointsRemoved(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointsRemoved(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointsRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsRemoved(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -2013,7 +2041,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "pointsRemoved(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2024,9 +2052,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointsRemoved(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointsRemoved(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2052,27 +2080,29 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pointsReplaced()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pointsReplaced()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pointsReplaced, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pointsReplaced()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "pointsReplaced()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2083,9 +2113,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pointsReplaced()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pointsReplaced()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2111,21 +2141,23 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pressed(QPointF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pressed(QPointF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::pressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPointF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPointF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2133,7 +2165,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "pressed(QPointF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2144,9 +2176,9 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pressed(QPointF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pressed(QPointF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2172,21 +2204,23 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("released(QPointF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "released(QPointF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QXYSeries::released, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPointF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPointF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QXYSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINTF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QXYSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2194,7 +2228,7 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
 
         });
 
-        Signals2_store_connection( sender, "released(QPointF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2205,9 +2239,9 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "released(QPointF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "released(QPointF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

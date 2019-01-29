@@ -78,7 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -859,20 +859,22 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("added(QList<QPieSlice*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "added(QList<QPieSlice*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::added, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QList<QPieSlice*> arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "added(QList<QPieSlice*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -904,7 +906,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
 
         });
 
-        Signals2_store_connection( sender, "added(QList<QPieSlice*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -915,9 +917,9 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "added(QList<QPieSlice*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "added(QList<QPieSlice*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -943,21 +945,23 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(QPieSlice*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(QPieSlice*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QPieSlice*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QPIESLICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -965,7 +969,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(QPieSlice*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -976,9 +980,9 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(QPieSlice*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(QPieSlice*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1004,27 +1008,29 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("countChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "countChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::countChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "countChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1035,9 +1041,9 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "countChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "countChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1063,21 +1069,23 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleClicked(QPieSlice*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleClicked(QPieSlice*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::doubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QPieSlice*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QPIESLICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1085,7 +1093,7 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "doubleClicked(QPieSlice*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1096,9 +1104,9 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleClicked(QPieSlice*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QPieSlice*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1124,21 +1132,23 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("hovered(QPieSlice*,bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "hovered(QPieSlice*,bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::hovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QPieSlice * arg1, bool arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QPieSlice*,bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QPIESLICE" );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1148,7 +1158,7 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
 
         });
 
-        Signals2_store_connection( sender, "hovered(QPieSlice*,bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1159,9 +1169,9 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "hovered(QPieSlice*,bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "hovered(QPieSlice*,bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1187,21 +1197,23 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pressed(QPieSlice*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pressed(QPieSlice*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::pressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QPieSlice*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QPIESLICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1209,7 +1221,7 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "pressed(QPieSlice*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1220,9 +1232,9 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pressed(QPieSlice*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pressed(QPieSlice*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1248,21 +1260,23 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("released(QPieSlice*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "released(QPieSlice*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::released, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QPieSlice*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPIESLICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QPIESLICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1270,7 +1284,7 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
 
         });
 
-        Signals2_store_connection( sender, "released(QPieSlice*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1281,9 +1295,9 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "released(QPieSlice*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "released(QPieSlice*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1309,20 +1323,22 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("removed(QList<QPieSlice*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "removed(QList<QPieSlice*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::removed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QList<QPieSlice*> arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "removed(QList<QPieSlice*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -1354,7 +1370,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "removed(QList<QPieSlice*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1365,9 +1381,9 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "removed(QList<QPieSlice*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "removed(QList<QPieSlice*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1393,27 +1409,29 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sumChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sumChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSeries::sumChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sumChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPIESERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPIESERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "sumChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1424,9 +1442,9 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sumChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sumChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -73,7 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -633,20 +633,22 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("barsetsAdded(QList<QBarSet*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "barsetsAdded(QList<QBarSet*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::barsetsAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QList<QBarSet*> arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "barsetsAdded(QList<QBarSet*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -678,7 +680,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 
         });
 
-        Signals2_store_connection( sender, "barsetsAdded(QList<QBarSet*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -689,9 +691,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "barsetsAdded(QList<QBarSet*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "barsetsAdded(QList<QBarSet*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -717,20 +719,22 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("barsetsRemoved(QList<QBarSet*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "barsetsRemoved(QList<QBarSet*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::barsetsRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QList<QBarSet*> arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "barsetsRemoved(QList<QBarSet*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -762,7 +766,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "barsetsRemoved(QList<QBarSet*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -773,9 +777,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "barsetsRemoved(QList<QBarSet*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "barsetsRemoved(QList<QBarSet*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -801,22 +805,24 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(int,QBarSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(int,QBarSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(int,QBarSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QBARSET" );
+            PHB_ITEM pArg2 = Signals3_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -825,7 +831,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(int,QBarSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -836,9 +842,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(int,QBarSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(int,QBarSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -864,27 +870,29 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("countChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "countChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::countChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "countChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -895,9 +903,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "countChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "countChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -923,22 +931,24 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleClicked(int,QBarSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleClicked(int,QBarSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::doubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(int,QBarSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QBARSET" );
+            PHB_ITEM pArg2 = Signals3_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -947,7 +957,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "doubleClicked(int,QBarSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -958,9 +968,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleClicked(int,QBarSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(int,QBarSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -986,23 +996,25 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("hovered(bool,int,QBarSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "hovered(bool,int,QBarSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::hovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1, int arg2, QBarSet * arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,int,QBarSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = Signals2_return_qobject( (QObject *) arg3, "QBARSET" );
+            PHB_ITEM pArg3 = Signals3_return_qobject( (QObject *) arg3, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1012,7 +1024,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
 
         });
 
-        Signals2_store_connection( sender, "hovered(bool,int,QBarSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1023,9 +1035,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "hovered(bool,int,QBarSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "hovered(bool,int,QBarSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1051,20 +1063,22 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("labelsAngleChanged(qreal)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "labelsAngleChanged(qreal)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::labelsAngleChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsAngleChanged(qreal)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1073,7 +1087,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "labelsAngleChanged(qreal)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1084,9 +1098,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "labelsAngleChanged(qreal)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "labelsAngleChanged(qreal)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1112,20 +1126,22 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("labelsFormatChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "labelsFormatChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::labelsFormatChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsFormatChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1134,7 +1150,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "labelsFormatChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1145,9 +1161,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "labelsFormatChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "labelsFormatChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1173,20 +1189,22 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("labelsPositionChanged(QAbstractBarSeries::LabelsPosition)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::labelsPositionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractBarSeries::LabelsPosition arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1195,7 +1213,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1206,9 +1224,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1234,27 +1252,29 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("labelsVisibleChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "labelsVisibleChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::labelsVisibleChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelsVisibleChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "labelsVisibleChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1265,9 +1285,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "labelsVisibleChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "labelsVisibleChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1293,22 +1313,24 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pressed(int,QBarSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pressed(int,QBarSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::pressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(int,QBarSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QBARSET" );
+            PHB_ITEM pArg2 = Signals3_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1317,7 +1339,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "pressed(int,QBarSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1328,9 +1350,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pressed(int,QBarSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pressed(int,QBarSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1356,22 +1378,24 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("released(int,QBarSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "released(int,QBarSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::released, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(int,QBarSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QBARSET" );
+            PHB_ITEM pArg2 = Signals3_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1380,7 +1404,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
 
         });
 
-        Signals2_store_connection( sender, "released(int,QBarSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1391,9 +1415,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "released(int,QBarSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "released(int,QBarSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

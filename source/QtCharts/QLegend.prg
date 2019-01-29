@@ -85,7 +85,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -957,20 +957,22 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("backgroundVisibleChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "backgroundVisibleChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::backgroundVisibleChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "backgroundVisibleChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -979,7 +981,7 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "backgroundVisibleChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -990,9 +992,9 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "backgroundVisibleChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "backgroundVisibleChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1018,21 +1020,23 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::borderColorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QColor arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1040,7 +1044,7 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "borderColorChanged(QColor)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1051,9 +1055,9 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "borderColorChanged(QColor)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "borderColorChanged(QColor)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1079,21 +1083,23 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "colorChanged(QColor)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::colorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QColor arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1101,7 +1107,7 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "colorChanged(QColor)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1112,9 +1118,9 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "colorChanged(QColor)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "colorChanged(QColor)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1140,21 +1146,23 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("fontChanged(QFont)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "fontChanged(QFont)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::fontChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QFont arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "fontChanged(QFont)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QFONT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1162,7 +1170,7 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "fontChanged(QFont)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1173,9 +1181,9 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "fontChanged(QFont)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "fontChanged(QFont)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1201,21 +1209,23 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("labelColorChanged(QColor)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "labelColorChanged(QColor)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::labelColorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QColor arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "labelColorChanged(QColor)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1223,7 +1233,7 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "labelColorChanged(QColor)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1234,9 +1244,9 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "labelColorChanged(QColor)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "labelColorChanged(QColor)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1262,20 +1272,22 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("markerShapeChanged(QLegend::MarkerShape)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "markerShapeChanged(QLegend::MarkerShape)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::markerShapeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QLegend::MarkerShape arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "markerShapeChanged(QLegend::MarkerShape)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1284,7 +1296,7 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "markerShapeChanged(QLegend::MarkerShape)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1295,9 +1307,9 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "markerShapeChanged(QLegend::MarkerShape)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "markerShapeChanged(QLegend::MarkerShape)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1323,20 +1335,22 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("reverseMarkersChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "reverseMarkersChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::reverseMarkersChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "reverseMarkersChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1345,7 +1359,7 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "reverseMarkersChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1356,9 +1370,9 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "reverseMarkersChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "reverseMarkersChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1384,20 +1398,22 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("showToolTipsChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "showToolTipsChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegend::showToolTipsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "showToolTipsChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1406,7 +1422,7 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "showToolTipsChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1417,9 +1433,9 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "showToolTipsChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "showToolTipsChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -62,7 +62,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -451,21 +451,23 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "borderColorChanged(QColor)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterSeries::borderColorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QColor arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "borderColorChanged(QColor)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -473,7 +475,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "borderColorChanged(QColor)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -484,9 +486,9 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "borderColorChanged(QColor)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "borderColorChanged(QColor)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -512,21 +514,23 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "colorChanged(QColor)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterSeries::colorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QColor arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "colorChanged(QColor)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -534,7 +538,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "colorChanged(QColor)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -545,9 +549,9 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "colorChanged(QColor)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "colorChanged(QColor)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -573,20 +577,22 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("markerShapeChanged(QScatterSeries::MarkerShape)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterSeries::markerShapeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QScatterSeries::MarkerShape arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -595,7 +601,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "markerShapeChanged(QScatterSeries::MarkerShape)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -606,9 +612,9 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "markerShapeChanged(QScatterSeries::MarkerShape)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -634,20 +640,22 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("markerSizeChanged(qreal)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "markerSizeChanged(qreal)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterSeries::markerSizeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "markerSizeChanged(qreal)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCATTERSERIES" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -656,7 +664,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "markerSizeChanged(qreal)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -667,9 +675,9 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "markerSizeChanged(qreal)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "markerSizeChanged(qreal)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -60,7 +60,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -400,20 +400,22 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("formatChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "formatChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::formatChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QString arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -422,7 +424,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "formatChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -433,9 +435,9 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "formatChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "formatChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -461,21 +463,23 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("maxChanged(QDateTime)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "maxChanged(QDateTime)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::maxChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDateTime arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxChanged(QDateTime)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QDATETIME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -483,7 +487,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "maxChanged(QDateTime)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -494,9 +498,9 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "maxChanged(QDateTime)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "maxChanged(QDateTime)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -522,21 +526,23 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("minChanged(QDateTime)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "minChanged(QDateTime)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::minChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDateTime arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "minChanged(QDateTime)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QDATETIME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -544,7 +550,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "minChanged(QDateTime)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -555,9 +561,9 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "minChanged(QDateTime)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "minChanged(QDateTime)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -583,22 +589,24 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("rangeChanged(QDateTime,QDateTime)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "rangeChanged(QDateTime,QDateTime)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::rangeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDateTime arg1, QDateTime arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(QDateTime,QDateTime)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATETIME" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QDATETIME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QDATETIME" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QDATETIME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -607,7 +615,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "rangeChanged(QDateTime,QDateTime)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -618,9 +626,9 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "rangeChanged(QDateTime,QDateTime)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "rangeChanged(QDateTime,QDateTime)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -646,20 +654,22 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("tickCountChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "tickCountChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::tickCountChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "tickCountChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -668,7 +678,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "tickCountChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -679,9 +689,9 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "tickCountChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "tickCountChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

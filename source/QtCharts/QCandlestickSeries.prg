@@ -94,7 +94,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -1009,27 +1009,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bodyOutlineVisibilityChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bodyOutlineVisibilityChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::bodyOutlineVisibilityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bodyOutlineVisibilityChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "bodyOutlineVisibilityChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1040,9 +1042,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bodyOutlineVisibilityChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bodyOutlineVisibilityChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1068,27 +1070,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYWIDTHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bodyWidthChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bodyWidthChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::bodyWidthChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bodyWidthChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "bodyWidthChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1099,9 +1103,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYWIDTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bodyWidthChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bodyWidthChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1127,27 +1131,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBRUSHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("brushChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "brushChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::brushChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "brushChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1158,9 +1164,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBRUSHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "brushChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "brushChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1186,20 +1192,22 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("candlestickSetsAdded(QList<QCandlestickSet*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "candlestickSetsAdded(QList<QCandlestickSet*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::candlestickSetsAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QCandlestickSet*> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "candlestickSetsAdded(QList<QCandlestickSet*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -1231,7 +1239,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
 
         });
 
-        Signals2_store_connection( sender, "candlestickSetsAdded(QList<QCandlestickSet*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1242,9 +1250,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "candlestickSetsAdded(QList<QCandlestickSet*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "candlestickSetsAdded(QList<QCandlestickSet*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1270,20 +1278,22 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("candlestickSetsRemoved(QList<QCandlestickSet*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "candlestickSetsRemoved(QList<QCandlestickSet*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::candlestickSetsRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QCandlestickSet*> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "candlestickSetsRemoved(QList<QCandlestickSet*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -1315,7 +1325,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "candlestickSetsRemoved(QList<QCandlestickSet*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1326,9 +1336,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "candlestickSetsRemoved(QList<QCandlestickSet*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "candlestickSetsRemoved(QList<QCandlestickSet*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1354,27 +1364,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("capsVisibilityChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "capsVisibilityChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::capsVisibilityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "capsVisibilityChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "capsVisibilityChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1385,9 +1397,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "capsVisibilityChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "capsVisibilityChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1413,27 +1425,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("capsWidthChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "capsWidthChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::capsWidthChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "capsWidthChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "capsWidthChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1444,9 +1458,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "capsWidthChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "capsWidthChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1472,21 +1486,23 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(QCandlestickSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(QCandlestickSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCandlestickSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QCandlestickSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1494,7 +1510,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(QCandlestickSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1505,9 +1521,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(QCandlestickSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(QCandlestickSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1533,27 +1549,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCOUNTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("countChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "countChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::countChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "countChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1564,9 +1582,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "countChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "countChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1592,27 +1610,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("decreasingColorChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "decreasingColorChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::decreasingColorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "decreasingColorChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "decreasingColorChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1623,9 +1643,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "decreasingColorChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "decreasingColorChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1651,21 +1671,23 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleClicked(QCandlestickSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleClicked(QCandlestickSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::doubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCandlestickSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QCandlestickSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1673,7 +1695,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "doubleClicked(QCandlestickSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1684,9 +1706,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleClicked(QCandlestickSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QCandlestickSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1712,22 +1734,24 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("hovered(bool,QCandlestickSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "hovered(bool,QCandlestickSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::hovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1, QCandlestickSet * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,QCandlestickSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QCANDLESTICKSET" );
+            PHB_ITEM pArg2 = Signals3_return_qobject( (QObject *) arg2, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1736,7 +1760,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
 
         });
 
-        Signals2_store_connection( sender, "hovered(bool,QCandlestickSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1747,9 +1771,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "hovered(bool,QCandlestickSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "hovered(bool,QCandlestickSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1775,27 +1799,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("increasingColorChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "increasingColorChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::increasingColorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "increasingColorChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "increasingColorChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1806,9 +1832,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "increasingColorChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "increasingColorChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1834,27 +1860,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("maximumColumnWidthChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "maximumColumnWidthChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::maximumColumnWidthChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "maximumColumnWidthChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "maximumColumnWidthChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1865,9 +1893,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "maximumColumnWidthChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "maximumColumnWidthChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1893,27 +1921,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("minimumColumnWidthChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "minimumColumnWidthChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::minimumColumnWidthChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "minimumColumnWidthChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "minimumColumnWidthChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1924,9 +1954,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "minimumColumnWidthChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "minimumColumnWidthChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1952,27 +1982,29 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPENCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("penChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "penChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::penChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "penChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1983,9 +2015,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPENCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "penChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "penChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2011,21 +2043,23 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pressed(QCandlestickSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pressed(QCandlestickSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::pressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCandlestickSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QCandlestickSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2033,7 +2067,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "pressed(QCandlestickSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2044,9 +2078,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pressed(QCandlestickSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pressed(QCandlestickSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2072,21 +2106,23 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("released(QCandlestickSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "released(QCandlestickSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::released, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCandlestickSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QCandlestickSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2094,7 +2130,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
 
         });
 
-        Signals2_store_connection( sender, "released(QCandlestickSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2105,9 +2141,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "released(QCandlestickSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "released(QCandlestickSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

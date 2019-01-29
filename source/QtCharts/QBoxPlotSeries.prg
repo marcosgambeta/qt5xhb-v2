@@ -75,7 +75,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -621,27 +621,29 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("boxOutlineVisibilityChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "boxOutlineVisibilityChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::boxOutlineVisibilityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxOutlineVisibilityChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "boxOutlineVisibilityChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -652,9 +654,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "boxOutlineVisibilityChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "boxOutlineVisibilityChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -680,20 +682,22 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("boxsetsAdded(QList<QBoxSet*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "boxsetsAdded(QList<QBoxSet*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::boxsetsAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QList<QBoxSet*> arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxsetsAdded(QList<QBoxSet*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -725,7 +729,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
 
         });
 
-        Signals2_store_connection( sender, "boxsetsAdded(QList<QBoxSet*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -736,9 +740,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "boxsetsAdded(QList<QBoxSet*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "boxsetsAdded(QList<QBoxSet*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -764,20 +768,22 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("boxsetsRemoved(QList<QBoxSet*>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "boxsetsRemoved(QList<QBoxSet*>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::boxsetsRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QList<QBoxSet*> arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxsetsRemoved(QList<QBoxSet*>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -809,7 +815,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "boxsetsRemoved(QList<QBoxSet*>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -820,9 +826,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "boxsetsRemoved(QList<QBoxSet*>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "boxsetsRemoved(QList<QBoxSet*>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -848,27 +854,29 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("boxWidthChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "boxWidthChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::boxWidthChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "boxWidthChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "boxWidthChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -879,9 +887,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "boxWidthChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "boxWidthChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -907,27 +915,29 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("brushChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "brushChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::brushChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "brushChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "brushChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -938,9 +948,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "brushChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "brushChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -966,21 +976,23 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(QBoxSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(QBoxSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QBoxSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QBoxSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QBOXSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -988,7 +1000,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(QBoxSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -999,9 +1011,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(QBoxSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(QBoxSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1027,27 +1039,29 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("countChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "countChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::countChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "countChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "countChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1058,9 +1072,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "countChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "countChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1086,21 +1100,23 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleClicked(QBoxSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleClicked(QBoxSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::doubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QBoxSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QBoxSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QBOXSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1108,7 +1124,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "doubleClicked(QBoxSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1119,9 +1135,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleClicked(QBoxSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QBoxSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1147,22 +1163,24 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("hovered(bool,QBoxSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "hovered(bool,QBoxSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::hovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1, QBoxSet * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(bool,QBoxSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QBOXSET" );
+            PHB_ITEM pArg2 = Signals3_return_qobject( (QObject *) arg2, "QBOXSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1171,7 +1189,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
 
         });
 
-        Signals2_store_connection( sender, "hovered(bool,QBoxSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1182,9 +1200,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "hovered(bool,QBoxSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "hovered(bool,QBoxSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1210,27 +1228,29 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("penChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "penChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::penChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "penChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "penChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1241,9 +1261,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "penChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "penChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1269,21 +1289,23 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pressed(QBoxSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pressed(QBoxSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::pressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QBoxSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QBoxSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QBOXSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1291,7 +1313,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "pressed(QBoxSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1302,9 +1324,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pressed(QBoxSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pressed(QBoxSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1330,21 +1352,23 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("released(QBoxSet*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "released(QBoxSet*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxPlotSeries::released, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QBoxSet * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "released(QBoxSet*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBOXSET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QBOXSET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1352,7 +1376,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
 
         });
 
-        Signals2_store_connection( sender, "released(QBoxSet*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1363,9 +1387,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "released(QBoxSet*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "released(QBoxSet*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
