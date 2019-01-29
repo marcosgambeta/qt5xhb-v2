@@ -64,7 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QVirtualKeyboardAbstractInputMethod>
@@ -547,20 +547,22 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionListChanged(QVirtualKeyboardSelectionListModel::Type)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVirtualKeyboardAbstractInputMethod::selectionListChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QVirtualKeyboardSelectionListModel::Type arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -569,7 +571,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -580,9 +582,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -606,20 +608,22 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QVirtualKeyboardSelectionListModel::Type arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -630,7 +634,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
 
         });
 
-        Signals2_store_connection( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -641,9 +645,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -667,27 +671,29 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionListsChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionListsChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVirtualKeyboardAbstractInputMethod::selectionListsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionListsChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "selectionListsChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -698,9 +704,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionListsChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionListsChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
