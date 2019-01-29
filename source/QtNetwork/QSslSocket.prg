@@ -121,7 +121,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QSslSocket>
@@ -2277,27 +2277,29 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("encrypted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "encrypted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::encrypted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "encrypted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2308,9 +2310,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "encrypted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "encrypted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2334,20 +2336,22 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("encryptedBytesWritten(qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "encryptedBytesWritten(qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::encryptedBytesWritten, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "encryptedBytesWritten(qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2356,7 +2360,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 
         });
 
-        Signals2_store_connection( sender, "encryptedBytesWritten(qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2367,9 +2371,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "encryptedBytesWritten(qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "encryptedBytesWritten(qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2393,20 +2397,22 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("modeChanged(QSslSocket::SslMode)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "modeChanged(QSslSocket::SslMode)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::modeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSslSocket::SslMode arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "modeChanged(QSslSocket::SslMode)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2415,7 +2421,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "modeChanged(QSslSocket::SslMode)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2426,9 +2432,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "modeChanged(QSslSocket::SslMode)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "modeChanged(QSslSocket::SslMode)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2452,21 +2458,23 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("peerVerifyError(QSslError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "peerVerifyError(QSslError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::peerVerifyError, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QSslError & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "peerVerifyError(QSslError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSSLERROR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QSSLERROR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2474,7 +2482,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 
         });
 
-        Signals2_store_connection( sender, "peerVerifyError(QSslError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2485,9 +2493,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "peerVerifyError(QSslError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "peerVerifyError(QSslError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2512,21 +2520,23 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::preSharedKeyAuthenticationRequired, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2534,7 +2544,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
         });
 
-        Signals2_store_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2545,9 +2555,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2572,20 +2582,22 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QSslError> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -2617,7 +2629,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 
         });
 
-        Signals2_store_connection( sender, "sslErrors(QList<QSslError>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2628,9 +2640,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sslErrors(QList<QSslError>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

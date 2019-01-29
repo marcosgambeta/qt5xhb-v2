@@ -72,7 +72,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QNetworkSession>
@@ -630,27 +630,29 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("closed()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "closed()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::closed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "closed()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "closed()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -661,9 +663,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "closed()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "closed()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -687,20 +689,22 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QNetworkSession::SessionError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QNetworkSession::SessionError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QNetworkSession::SessionError>::of(&QNetworkSession::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QNetworkSession::SessionError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QNetworkSession::SessionError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -709,7 +713,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QNetworkSession::SessionError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -720,9 +724,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QNetworkSession::SessionError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QNetworkSession::SessionError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -746,27 +750,29 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("newConfigurationActivated()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "newConfigurationActivated()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::newConfigurationActivated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "newConfigurationActivated()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "newConfigurationActivated()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -777,9 +783,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "newConfigurationActivated()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "newConfigurationActivated()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -803,27 +809,29 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("opened()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "opened()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::opened, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "opened()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "opened()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -834,9 +842,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "opened()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "opened()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -860,21 +868,23 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("preferredConfigurationChanged(QNetworkConfiguration,bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::preferredConfigurationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QNetworkConfiguration & arg1, bool arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -884,7 +894,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -895,9 +905,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -921,20 +931,22 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QNetworkSession::State)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QNetworkSession::State)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QNetworkSession::State arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QNetworkSession::State)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -943,7 +955,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QNetworkSession::State)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -954,9 +966,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QNetworkSession::State)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QNetworkSession::State)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -980,20 +992,22 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("usagePoliciesChanged(QNetworkSession::UsagePolicies)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::usagePoliciesChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QNetworkSession::UsagePolicies arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKSESSION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1002,7 +1016,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1013,9 +1027,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

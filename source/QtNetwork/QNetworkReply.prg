@@ -77,7 +77,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QNetworkReply>
@@ -731,20 +731,22 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("downloadProgress(qint64,qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "downloadProgress(qint64,qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::downloadProgress, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1, qint64 arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "downloadProgress(qint64,qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -755,7 +757,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 
         });
 
-        Signals2_store_connection( sender, "downloadProgress(qint64,qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -766,9 +768,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "downloadProgress(qint64,qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "downloadProgress(qint64,qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -792,20 +794,22 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QNetworkReply::NetworkError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QNetworkReply::NetworkError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QNetworkReply::NetworkError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QNetworkReply::NetworkError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -814,7 +818,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QNetworkReply::NetworkError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -825,9 +829,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QNetworkReply::NetworkError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QNetworkReply::NetworkError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -851,27 +855,29 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::finished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "finished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -882,9 +888,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -908,27 +914,29 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("metaDataChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "metaDataChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::metaDataChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "metaDataChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "metaDataChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -939,9 +947,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "metaDataChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "metaDataChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -965,20 +973,22 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("uploadProgress(qint64,qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "uploadProgress(qint64,qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::uploadProgress, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1, qint64 arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "uploadProgress(qint64,qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -989,7 +999,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 
         });
 
-        Signals2_store_connection( sender, "uploadProgress(qint64,qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1000,9 +1010,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "uploadProgress(qint64,qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "uploadProgress(qint64,qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1027,27 +1037,29 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("encrypted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "encrypted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::encrypted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "encrypted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "encrypted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1058,9 +1070,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "encrypted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "encrypted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1085,20 +1097,22 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::sslErrors, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QSslError> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -1130,7 +1144,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 
         });
 
-        Signals2_store_connection( sender, "sslErrors(QList<QSslError>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1141,9 +1155,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sslErrors(QList<QSslError>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1168,21 +1182,23 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::preSharedKeyAuthenticationRequired, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1190,7 +1206,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
         });
 
-        Signals2_store_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1201,9 +1217,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1229,21 +1245,23 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("redirected(QUrl)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "redirected(QUrl)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::redirected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "redirected(QUrl)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1251,7 +1269,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
 
         });
 
-        Signals2_store_connection( sender, "redirected(QUrl)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1262,9 +1280,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "redirected(QUrl)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "redirected(QUrl)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1290,27 +1308,29 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("redirectAllowed()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "redirectAllowed()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::redirectAllowed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "redirectAllowed()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "redirectAllowed()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1321,9 +1341,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "redirectAllowed()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "redirectAllowed()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

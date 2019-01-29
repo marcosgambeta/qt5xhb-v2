@@ -54,7 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QNetworkConfigurationManager>
@@ -282,21 +282,23 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("configurationAdded(QNetworkConfiguration)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "configurationAdded(QNetworkConfiguration)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkConfigurationManager::configurationAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QNetworkConfiguration & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationAdded(QNetworkConfiguration)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -304,7 +306,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 
         });
 
-        Signals2_store_connection( sender, "configurationAdded(QNetworkConfiguration)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -315,9 +317,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "configurationAdded(QNetworkConfiguration)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "configurationAdded(QNetworkConfiguration)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -341,21 +343,23 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("configurationChanged(QNetworkConfiguration)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "configurationChanged(QNetworkConfiguration)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkConfigurationManager::configurationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QNetworkConfiguration & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationChanged(QNetworkConfiguration)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -363,7 +367,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "configurationChanged(QNetworkConfiguration)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -374,9 +378,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "configurationChanged(QNetworkConfiguration)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "configurationChanged(QNetworkConfiguration)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -400,21 +404,23 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("configurationRemoved(QNetworkConfiguration)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "configurationRemoved(QNetworkConfiguration)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkConfigurationManager::configurationRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QNetworkConfiguration & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationRemoved(QNetworkConfiguration)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -422,7 +428,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "configurationRemoved(QNetworkConfiguration)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -433,9 +439,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "configurationRemoved(QNetworkConfiguration)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "configurationRemoved(QNetworkConfiguration)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -459,20 +465,22 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("onlineStateChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "onlineStateChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkConfigurationManager::onlineStateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "onlineStateChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -481,7 +489,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "onlineStateChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -492,9 +500,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "onlineStateChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "onlineStateChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -518,27 +526,29 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("updateCompleted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "updateCompleted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkConfigurationManager::updateCompleted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "updateCompleted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "updateCompleted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -549,9 +559,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "updateCompleted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "updateCompleted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

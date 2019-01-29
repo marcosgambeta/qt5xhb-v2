@@ -65,7 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QTcpServer>
@@ -578,20 +578,22 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("acceptError(QAbstractSocket::SocketError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTcpServer::acceptError, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractSocket::SocketError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "acceptError(QAbstractSocket::SocketError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTCPSERVER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTCPSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -600,7 +602,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 
         });
 
-        Signals2_store_connection( sender, "acceptError(QAbstractSocket::SocketError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -611,9 +613,9 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "acceptError(QAbstractSocket::SocketError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "acceptError(QAbstractSocket::SocketError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -637,27 +639,29 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("newConnection()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "newConnection()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTcpServer::newConnection, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "newConnection()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTCPSERVER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTCPSERVER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "newConnection()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -668,9 +672,9 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "newConnection()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "newConnection()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

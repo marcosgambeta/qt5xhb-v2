@@ -70,7 +70,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QDnsLookup>
@@ -810,27 +810,29 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDnsLookup::finished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "finished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -841,9 +843,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -867,20 +869,22 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("nameChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "nameChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDnsLookup::nameChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -889,7 +893,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "nameChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -900,9 +904,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "nameChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "nameChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -926,21 +930,23 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("nameserverChanged(QHostAddress)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "nameserverChanged(QHostAddress)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDnsLookup::nameserverChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QHostAddress & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "nameserverChanged(QHostAddress)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QHOSTADDRESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QHOSTADDRESS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -948,7 +954,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "nameserverChanged(QHostAddress)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -959,9 +965,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "nameserverChanged(QHostAddress)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "nameserverChanged(QHostAddress)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -985,20 +991,22 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("typeChanged(QDnsLookup::Type)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "typeChanged(QDnsLookup::Type)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDnsLookup::typeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDnsLookup::Type arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "typeChanged(QDnsLookup::Type)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1007,7 +1015,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "typeChanged(QDnsLookup::Type)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1018,9 +1026,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "typeChanged(QDnsLookup::Type)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "typeChanged(QDnsLookup::Type)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
