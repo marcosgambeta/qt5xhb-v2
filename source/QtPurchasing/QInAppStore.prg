@@ -50,7 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QInAppStore>
@@ -218,21 +218,23 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("productRegistered(QInAppProduct*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "productRegistered(QInAppProduct*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInAppStore::productRegistered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QInAppProduct * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "productRegistered(QInAppProduct*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QINAPPPRODUCT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QINAPPPRODUCT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -240,7 +242,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 
         });
 
-        Signals2_store_connection( sender, "productRegistered(QInAppProduct*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -251,9 +253,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "productRegistered(QInAppProduct*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "productRegistered(QInAppProduct*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -277,20 +279,22 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("productUnknown(QInAppProduct::ProductType,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInAppStore::productUnknown, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QInAppProduct::ProductType arg1, const QString & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "productUnknown(QInAppProduct::ProductType,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -301,7 +305,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 
         });
 
-        Signals2_store_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -312,9 +316,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "productUnknown(QInAppProduct::ProductType,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "productUnknown(QInAppProduct::ProductType,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -338,21 +342,23 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("transactionReady(QInAppTransaction*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "transactionReady(QInAppTransaction*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInAppStore::transactionReady, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QInAppTransaction * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "transactionReady(QInAppTransaction*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QINAPPTRANSACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QINAPPTRANSACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -360,7 +366,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 
         });
 
-        Signals2_store_connection( sender, "transactionReady(QInAppTransaction*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -371,9 +377,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "transactionReady(QInAppTransaction*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "transactionReady(QInAppTransaction*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
