@@ -66,7 +66,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -590,20 +590,22 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("errorOccurred(QCanBusDevice::CanBusError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::errorOccurred, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCanBusDevice::CanBusError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QCanBusDevice::CanBusError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -612,7 +614,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
 
         });
 
-        Signals2_store_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -623,9 +625,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "errorOccurred(QCanBusDevice::CanBusError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "errorOccurred(QCanBusDevice::CanBusError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -651,27 +653,29 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("framesReceived()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "framesReceived()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::framesReceived, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "framesReceived()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "framesReceived()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -682,9 +686,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "framesReceived()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "framesReceived()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -710,20 +714,22 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("framesWritten(qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "framesWritten(qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::framesWritten, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "framesWritten(qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -732,7 +738,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
 
         });
 
-        Signals2_store_connection( sender, "framesWritten(qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -743,9 +749,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "framesWritten(qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "framesWritten(qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -771,20 +777,22 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QCanBusDevice::CanBusDeviceState)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCanBusDevice::CanBusDeviceState arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCANBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -793,7 +801,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -804,9 +812,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QCanBusDevice::CanBusDeviceState)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

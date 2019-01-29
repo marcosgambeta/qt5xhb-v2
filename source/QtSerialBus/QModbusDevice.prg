@@ -45,7 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -136,20 +136,22 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("errorOccurred(QModbusDevice::Error)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "errorOccurred(QModbusDevice::Error)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QModbusDevice::errorOccurred, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QModbusDevice::Error arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QModbusDevice::Error)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -158,7 +160,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 
         });
 
-        Signals2_store_connection( sender, "errorOccurred(QModbusDevice::Error)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -169,9 +171,9 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "errorOccurred(QModbusDevice::Error)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "errorOccurred(QModbusDevice::Error)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -197,20 +199,22 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QModbusDevice::State)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QModbusDevice::State)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QModbusDevice::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QModbusDevice::State arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QModbusDevice::State)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -219,7 +223,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QModbusDevice::State)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -230,9 +234,9 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QModbusDevice::State)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QModbusDevice::State)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

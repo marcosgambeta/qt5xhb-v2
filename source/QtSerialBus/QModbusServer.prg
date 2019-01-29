@@ -44,7 +44,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -147,20 +147,22 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dataWritten(QModbusDataUnit::RegisterType,int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QModbusServer::dataWritten, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMODBUSSERVER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMODBUSSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
@@ -173,7 +175,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 
         });
 
-        Signals2_store_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -184,9 +186,9 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dataWritten(QModbusDataUnit::RegisterType,int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
