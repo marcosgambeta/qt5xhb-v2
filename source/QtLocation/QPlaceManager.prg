@@ -82,7 +82,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -723,21 +723,23 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished(QPlaceReply*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished(QPlaceReply*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::finished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QPlaceReply * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QPlaceReply*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -745,7 +747,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 
         });
 
-        Signals2_store_connection( sender, "finished(QPlaceReply*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -756,9 +758,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished(QPlaceReply*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished(QPlaceReply*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -784,21 +786,23 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QPlaceReply*,QPlaceReply::Error,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::error, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QPlaceReply * arg1, QPlaceReply::Error arg2, const QString & arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QPLACEREPLY" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
@@ -810,7 +814,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -821,9 +825,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QPlaceReply*,QPlaceReply::Error,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -849,20 +853,22 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("placeAdded(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "placeAdded(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::placeAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "placeAdded(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -871,7 +877,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 
         });
 
-        Signals2_store_connection( sender, "placeAdded(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -882,9 +888,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "placeAdded(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "placeAdded(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -910,20 +916,22 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("placeUpdated(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "placeUpdated(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::placeUpdated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "placeUpdated(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -932,7 +940,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 
         });
 
-        Signals2_store_connection( sender, "placeUpdated(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -943,9 +951,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "placeUpdated(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "placeUpdated(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -971,20 +979,22 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("placeRemoved(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "placeRemoved(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::placeRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "placeRemoved(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -993,7 +1003,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "placeRemoved(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1004,9 +1014,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "placeRemoved(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "placeRemoved(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1032,21 +1042,23 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("categoryAdded(QPlaceCategory,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "categoryAdded(QPlaceCategory,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::categoryAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryAdded(QPlaceCategory,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPLACECATEGORY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPLACECATEGORY" );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1056,7 +1068,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 
         });
 
-        Signals2_store_connection( sender, "categoryAdded(QPlaceCategory,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1067,9 +1079,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "categoryAdded(QPlaceCategory,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "categoryAdded(QPlaceCategory,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1095,21 +1107,23 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("categoryUpdated(QPlaceCategory,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "categoryUpdated(QPlaceCategory,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::categoryUpdated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryUpdated(QPlaceCategory,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPLACECATEGORY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPLACECATEGORY" );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1119,7 +1133,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 
         });
 
-        Signals2_store_connection( sender, "categoryUpdated(QPlaceCategory,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1130,9 +1144,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "categoryUpdated(QPlaceCategory,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "categoryUpdated(QPlaceCategory,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1158,20 +1172,22 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("categoryRemoved(QString,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "categoryRemoved(QString,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::categoryRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1, const QString & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "categoryRemoved(QString,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1182,7 +1198,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "categoryRemoved(QString,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1193,9 +1209,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "categoryRemoved(QString,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "categoryRemoved(QString,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1221,27 +1237,29 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dataChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dataChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::dataChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPLACEMANAGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "dataChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1252,9 +1270,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dataChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dataChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

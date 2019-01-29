@@ -53,7 +53,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -277,21 +277,23 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished(QGeoCodeReply*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished(QGeoCodeReply*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoCodingManager::finished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QGeoCodeReply * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QGeoCodeReply*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -299,7 +301,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
 
         });
 
-        Signals2_store_connection( sender, "finished(QGeoCodeReply*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -310,9 +312,9 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished(QGeoCodeReply*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished(QGeoCodeReply*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -338,21 +340,23 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QGeoCodeReply*,QGeoCodeReply::Error,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoCodingManager::error, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QGeoCodeReply * arg1, QGeoCodeReply::Error arg2, QString arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
@@ -364,7 +368,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -375,9 +379,9 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
