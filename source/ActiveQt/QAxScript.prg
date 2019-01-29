@@ -56,7 +56,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAxScript>
@@ -274,27 +274,29 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("entered()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "entered()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAxScript::entered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "entered()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "entered()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -305,9 +307,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "entered()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "entered()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -331,20 +333,22 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(int,QString,int,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(int,QString,int,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAxScript::error, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, const QString & arg2, int arg3, const QString & arg4) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString,int,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
@@ -359,7 +363,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(int,QString,int,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -370,9 +374,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(int,QString,int,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(int,QString,int,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -396,27 +400,29 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<>::of(&QAxScript::finished), 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "finished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -427,9 +433,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -453,21 +459,23 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished(QVariant)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished(QVariant)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QVariant &>::of(&QAxScript::finished), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QVariant & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(QVariant)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVARIANT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QVARIANT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -475,7 +483,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 
         });
 
-        Signals2_store_connection( sender, "finished(QVariant)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -486,9 +494,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished(QVariant)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished(QVariant)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -512,20 +520,22 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished(int,QString,QString,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished(int,QString,QString,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int,const QString &,const QString &,const QString &>::of(&QAxScript::finished), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, const QString & arg2, const QString & arg3, const QString & arg4) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int,QString,QString,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
@@ -540,7 +550,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 
         });
 
-        Signals2_store_connection( sender, "finished(int,QString,QString,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -551,9 +561,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished(int,QString,QString,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished(int,QString,QString,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -577,20 +587,22 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAxScript::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAXSCRIPT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -599,7 +611,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -610,9 +622,9 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
