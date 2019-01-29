@@ -101,7 +101,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
@@ -1166,20 +1166,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activeChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activeChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::activeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1188,7 +1190,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "activeChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1199,9 +1201,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activeChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activeChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1227,21 +1229,23 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("gamepadChanged(QGamepad*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "gamepadChanged(QGamepad*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::gamepadChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QGamepad * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadChanged(QGamepad*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QGAMEPAD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1249,7 +1253,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "gamepadChanged(QGamepad*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1260,9 +1264,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "gamepadChanged(QGamepad*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "gamepadChanged(QGamepad*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1288,20 +1292,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("upKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "upKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::upKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "upKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1310,7 +1316,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "upKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1321,9 +1327,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "upKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "upKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1349,20 +1355,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("downKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "downKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::downKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "downKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1371,7 +1379,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "downKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1382,9 +1390,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "downKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "downKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1410,20 +1418,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("leftKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "leftKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::leftKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "leftKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1432,7 +1442,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "leftKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1443,9 +1453,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "leftKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "leftKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1471,20 +1481,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("rightKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "rightKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::rightKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "rightKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1493,7 +1505,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "rightKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1504,9 +1516,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "rightKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "rightKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1532,20 +1544,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonAKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonAKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonAKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonAKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1554,7 +1568,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonAKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1565,9 +1579,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonAKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonAKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1593,20 +1607,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonBKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonBKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonBKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonBKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1615,7 +1631,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonBKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1626,9 +1642,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonBKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonBKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1654,20 +1670,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonXKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonXKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonXKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonXKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1676,7 +1694,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonXKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1687,9 +1705,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonXKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonXKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1715,20 +1733,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonYKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonYKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonYKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonYKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1737,7 +1757,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonYKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1748,9 +1768,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonYKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonYKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1776,20 +1796,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonSelectKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonSelectKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonSelectKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonSelectKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1798,7 +1820,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonSelectKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1809,9 +1831,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonSelectKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonSelectKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1837,20 +1859,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonStartKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonStartKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonStartKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonStartKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1859,7 +1883,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonStartKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1870,9 +1894,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonStartKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonStartKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1898,20 +1922,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonGuideKeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonGuideKeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonGuideKeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonGuideKeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1920,7 +1946,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonGuideKeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1931,9 +1957,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonGuideKeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonGuideKeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1959,20 +1985,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonL1KeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonL1KeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonL1KeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL1KeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1981,7 +2009,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonL1KeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1992,9 +2020,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonL1KeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonL1KeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2020,20 +2048,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonR1KeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonR1KeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonR1KeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR1KeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2042,7 +2072,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonR1KeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2053,9 +2083,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonR1KeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonR1KeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2081,20 +2111,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonL2KeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonL2KeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonL2KeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL2KeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2103,7 +2135,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonL2KeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2114,9 +2146,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonL2KeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonL2KeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2142,20 +2174,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonR2KeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonR2KeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonR2KeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR2KeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2164,7 +2198,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonR2KeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2175,9 +2209,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonR2KeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonR2KeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2203,20 +2237,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonL3KeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonL3KeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonL3KeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL3KeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2225,7 +2261,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonL3KeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2236,9 +2272,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonL3KeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonL3KeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2264,20 +2300,22 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonR3KeyChanged(Qt::Key)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonR3KeyChanged(Qt::Key)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadKeyNavigation::buttonR3KeyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR3KeyChanged(Qt::Key)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2286,7 +2324,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonR3KeyChanged(Qt::Key)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2297,9 +2335,9 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonR3KeyChanged(Qt::Key)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonR3KeyChanged(Qt::Key)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

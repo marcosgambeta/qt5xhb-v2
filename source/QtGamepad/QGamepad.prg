@@ -95,7 +95,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
@@ -831,20 +831,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisLeftXChanged(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisLeftXChanged(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisLeftXChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisLeftXChanged(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -853,7 +855,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisLeftXChanged(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -864,9 +866,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisLeftXChanged(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisLeftXChanged(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -892,20 +894,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisLeftYChanged(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisLeftYChanged(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisLeftYChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisLeftYChanged(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -914,7 +918,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisLeftYChanged(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -925,9 +929,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisLeftYChanged(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisLeftYChanged(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -953,20 +957,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisRightXChanged(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisRightXChanged(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisRightXChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisRightXChanged(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -975,7 +981,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisRightXChanged(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -986,9 +992,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisRightXChanged(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisRightXChanged(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1014,20 +1020,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisRightYChanged(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisRightYChanged(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisRightYChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisRightYChanged(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1036,7 +1044,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisRightYChanged(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1047,9 +1055,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisRightYChanged(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisRightYChanged(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1075,20 +1083,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonAChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonAChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonAChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonAChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1097,7 +1107,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonAChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1108,9 +1118,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonAChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonAChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1136,20 +1146,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonBChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonBChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonBChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonBChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1158,7 +1170,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonBChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1169,9 +1181,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonBChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonBChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1197,20 +1209,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonCenterChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonCenterChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonCenterChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonCenterChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1219,7 +1233,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonCenterChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1230,9 +1244,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonCenterChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonCenterChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1258,20 +1272,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonDownChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonDownChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonDownChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonDownChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1280,7 +1296,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonDownChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1291,9 +1307,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonDownChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonDownChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1319,20 +1335,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonGuideChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonGuideChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonGuideChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonGuideChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1341,7 +1359,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonGuideChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1352,9 +1370,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonGuideChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonGuideChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1380,20 +1398,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonL1Changed(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonL1Changed(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL1Changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL1Changed(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1402,7 +1422,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonL1Changed(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1413,9 +1433,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonL1Changed(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonL1Changed(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1441,20 +1461,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonL2Changed(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonL2Changed(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL2Changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL2Changed(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1463,7 +1485,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonL2Changed(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1474,9 +1496,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonL2Changed(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonL2Changed(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1502,20 +1524,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonL3Changed(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonL3Changed(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL3Changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonL3Changed(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1524,7 +1548,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonL3Changed(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1535,9 +1559,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonL3Changed(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonL3Changed(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1563,20 +1587,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonLeftChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonLeftChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonLeftChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonLeftChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1585,7 +1611,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonLeftChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1596,9 +1622,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonLeftChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonLeftChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1624,20 +1650,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonR1Changed(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonR1Changed(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR1Changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR1Changed(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1646,7 +1674,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonR1Changed(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1657,9 +1685,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonR1Changed(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonR1Changed(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1685,20 +1713,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonR2Changed(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonR2Changed(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR2Changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR2Changed(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1707,7 +1737,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonR2Changed(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1718,9 +1748,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonR2Changed(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonR2Changed(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1746,20 +1776,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonR3Changed(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonR3Changed(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR3Changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonR3Changed(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1768,7 +1800,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonR3Changed(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1779,9 +1811,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonR3Changed(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonR3Changed(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1807,20 +1839,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonRightChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonRightChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonRightChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonRightChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1829,7 +1863,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonRightChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1840,9 +1874,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonRightChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonRightChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1868,20 +1902,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonSelectChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonSelectChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonSelectChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonSelectChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1890,7 +1926,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonSelectChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1901,9 +1937,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonSelectChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonSelectChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1929,20 +1965,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonStartChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonStartChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonStartChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonStartChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1951,7 +1989,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonStartChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1962,9 +2000,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonStartChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonStartChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1990,20 +2028,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonUpChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonUpChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonUpChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonUpChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2012,7 +2052,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonUpChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2023,9 +2063,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonUpChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonUpChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2051,20 +2091,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonXChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonXChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonXChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonXChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2073,7 +2115,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonXChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2084,9 +2126,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonXChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonXChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2112,20 +2154,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonYChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonYChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonYChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonYChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2134,7 +2178,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "buttonYChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2145,9 +2189,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonYChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonYChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2173,20 +2217,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("connectedChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "connectedChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::connectedChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "connectedChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2195,7 +2241,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "connectedChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2206,9 +2252,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "connectedChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "connectedChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2234,20 +2280,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("deviceIdChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "deviceIdChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::deviceIdChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "deviceIdChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2256,7 +2304,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "deviceIdChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2267,9 +2315,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "deviceIdChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "deviceIdChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2295,20 +2343,22 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("nameChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "nameChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::nameChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QString arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "nameChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPAD" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2317,7 +2367,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "nameChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2328,9 +2378,9 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "nameChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "nameChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

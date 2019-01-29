@@ -59,7 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
@@ -297,27 +297,29 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("connectedGamepadsChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "connectedGamepadsChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::connectedGamepadsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "connectedGamepadsChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "connectedGamepadsChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -328,9 +330,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "connectedGamepadsChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "connectedGamepadsChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -356,20 +358,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("gamepadConnected(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "gamepadConnected(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::gamepadConnected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadConnected(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -378,7 +382,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
 
         });
 
-        Signals2_store_connection( sender, "gamepadConnected(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -389,9 +393,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "gamepadConnected(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "gamepadConnected(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -417,20 +421,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("gamepadDisconnected(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "gamepadDisconnected(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::gamepadDisconnected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadDisconnected(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -439,7 +445,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
 
         });
 
-        Signals2_store_connection( sender, "gamepadDisconnected(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -450,9 +456,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "gamepadDisconnected(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "gamepadDisconnected(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -478,20 +484,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::gamepadAxisEvent, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QGamepadManager::GamepadAxis arg2, double arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutND( NULL, arg3 );
@@ -504,7 +512,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
 
         });
 
-        Signals2_store_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -515,9 +523,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -543,20 +551,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::gamepadButtonPressEvent, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QGamepadManager::GamepadButton arg2, double arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutND( NULL, arg3 );
@@ -569,7 +579,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
 
         });
 
-        Signals2_store_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -580,9 +590,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -608,20 +618,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::gamepadButtonReleaseEvent, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QGamepadManager::GamepadButton arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -632,7 +644,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
 
         });
 
-        Signals2_store_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -643,9 +655,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -671,20 +683,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonConfigured(int,QGamepadManager::GamepadButton)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::buttonConfigured, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QGamepadManager::GamepadButton arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -695,7 +709,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
 
         });
 
-        Signals2_store_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -706,9 +720,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonConfigured(int,QGamepadManager::GamepadButton)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -734,20 +748,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisConfigured(int,QGamepadManager::GamepadAxis)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::axisConfigured, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QGamepadManager::GamepadAxis arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -758,7 +774,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
 
         });
 
-        Signals2_store_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -769,9 +785,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisConfigured(int,QGamepadManager::GamepadAxis)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -797,20 +813,22 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("configurationCanceled(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "configurationCanceled(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepadManager::configurationCanceled, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "configurationCanceled(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -819,7 +837,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
 
         });
 
-        Signals2_store_connection( sender, "configurationCanceled(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -830,9 +848,9 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "configurationCanceled(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "configurationCanceled(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
