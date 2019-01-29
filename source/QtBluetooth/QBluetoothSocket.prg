@@ -69,7 +69,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -724,27 +724,29 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("connected()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "connected()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothSocket::connected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "connected()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -755,9 +757,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "connected()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "connected()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -783,27 +785,29 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("disconnected()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "disconnected()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothSocket::disconnected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "disconnected()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -814,9 +818,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "disconnected()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "disconnected()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -842,20 +846,22 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QBluetoothSocket::SocketError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QBluetoothSocket::SocketError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QBluetoothSocket::SocketError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QBluetoothSocket::SocketError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -864,7 +870,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QBluetoothSocket::SocketError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -875,9 +881,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QBluetoothSocket::SocketError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QBluetoothSocket::SocketError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -903,20 +909,22 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QBluetoothSocket::SocketState)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QBluetoothSocket::SocketState)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothSocket::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QBluetoothSocket::SocketState arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QBluetoothSocket::SocketState)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBLUETOOTHSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -925,7 +933,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QBluetoothSocket::SocketState)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -936,9 +944,9 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QBluetoothSocket::SocketState)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QBluetoothSocket::SocketState)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
