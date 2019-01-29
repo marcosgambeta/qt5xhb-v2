@@ -78,7 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DScene>
@@ -682,21 +682,23 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activeCameraChanged(Q3DCamera*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activeCameraChanged(Q3DCamera*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::activeCameraChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Q3DCamera * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeCameraChanged(Q3DCamera*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "Q3DCAMERA" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -704,7 +706,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 
         });
 
-        Signals2_store_connection( sender, "activeCameraChanged(Q3DCamera*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -715,9 +717,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activeCameraChanged(Q3DCamera*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activeCameraChanged(Q3DCamera*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -741,21 +743,23 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activeLightChanged(Q3DLight*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activeLightChanged(Q3DLight*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::activeLightChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Q3DLight * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeLightChanged(Q3DLight*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DLIGHT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "Q3DLIGHT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -763,7 +767,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "activeLightChanged(Q3DLight*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -774,9 +778,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activeLightChanged(Q3DLight*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activeLightChanged(Q3DLight*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -800,20 +804,22 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("devicePixelRatioChanged(float)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "devicePixelRatioChanged(float)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::devicePixelRatioChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "devicePixelRatioChanged(float)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -822,7 +828,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "devicePixelRatioChanged(float)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -833,9 +839,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "devicePixelRatioChanged(float)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "devicePixelRatioChanged(float)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -859,21 +865,23 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("graphPositionQueryChanged(QPoint)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "graphPositionQueryChanged(QPoint)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::graphPositionQueryChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPoint & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "graphPositionQueryChanged(QPoint)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -881,7 +889,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "graphPositionQueryChanged(QPoint)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -892,9 +900,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "graphPositionQueryChanged(QPoint)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "graphPositionQueryChanged(QPoint)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -918,21 +926,23 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("primarySubViewportChanged(QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "primarySubViewportChanged(QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::primarySubViewportChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRect & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "primarySubViewportChanged(QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -940,7 +950,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "primarySubViewportChanged(QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -951,9 +961,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "primarySubViewportChanged(QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "primarySubViewportChanged(QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -977,20 +987,22 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("secondarySubviewOnTopChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "secondarySubviewOnTopChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::secondarySubviewOnTopChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubviewOnTopChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -999,7 +1011,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "secondarySubviewOnTopChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1010,9 +1022,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "secondarySubviewOnTopChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "secondarySubviewOnTopChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1036,21 +1048,23 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("secondarySubViewportChanged(QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "secondarySubViewportChanged(QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::secondarySubViewportChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRect & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "secondarySubViewportChanged(QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1058,7 +1072,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "secondarySubViewportChanged(QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1069,9 +1083,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "secondarySubViewportChanged(QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "secondarySubViewportChanged(QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1095,21 +1109,23 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionQueryPositionChanged(QPoint)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionQueryPositionChanged(QPoint)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::selectionQueryPositionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPoint & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionQueryPositionChanged(QPoint)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1117,7 +1133,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "selectionQueryPositionChanged(QPoint)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1128,9 +1144,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionQueryPositionChanged(QPoint)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionQueryPositionChanged(QPoint)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1154,20 +1170,22 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("slicingActiveChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "slicingActiveChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::slicingActiveChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "slicingActiveChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1176,7 +1194,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "slicingActiveChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1187,9 +1205,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "slicingActiveChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "slicingActiveChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1213,21 +1231,23 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("viewportChanged(QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "viewportChanged(QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::viewportChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRect & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportChanged(QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1235,7 +1255,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "viewportChanged(QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1246,9 +1266,9 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "viewportChanged(QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "viewportChanged(QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

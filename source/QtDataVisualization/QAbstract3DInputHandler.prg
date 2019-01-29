@@ -52,7 +52,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstract3DInputHandler>
@@ -287,20 +287,22 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("inputViewChanged(QAbstract3DInputHandler::InputView)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DInputHandler::inputViewChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstract3DInputHandler::InputView arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -309,7 +311,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -320,9 +322,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "inputViewChanged(QAbstract3DInputHandler::InputView)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -346,21 +348,23 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("positionChanged(QPoint)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "positionChanged(QPoint)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DInputHandler::positionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPoint & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(QPoint)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -368,7 +372,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "positionChanged(QPoint)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -379,9 +383,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "positionChanged(QPoint)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "positionChanged(QPoint)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -405,21 +409,23 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sceneChanged(Q3DScene*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sceneChanged(Q3DScene*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DInputHandler::sceneChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Q3DScene * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneChanged(Q3DScene*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "Q3DSCENE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -427,7 +433,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "sceneChanged(Q3DScene*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -438,9 +444,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sceneChanged(Q3DScene*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sceneChanged(Q3DScene*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

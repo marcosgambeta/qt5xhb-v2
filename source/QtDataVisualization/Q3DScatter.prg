@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DScatter>
@@ -496,21 +496,23 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisXChanged(QValue3DAxis*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::axisXChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisXChanged(QValue3DAxis*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -518,7 +520,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisXChanged(QValue3DAxis*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -529,9 +531,9 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisXChanged(QValue3DAxis*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisXChanged(QValue3DAxis*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -555,21 +557,23 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisYChanged(QValue3DAxis*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::axisYChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisYChanged(QValue3DAxis*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -577,7 +581,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisYChanged(QValue3DAxis*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -588,9 +592,9 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisYChanged(QValue3DAxis*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisYChanged(QValue3DAxis*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -614,21 +618,23 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisZChanged(QValue3DAxis*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::axisZChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisZChanged(QValue3DAxis*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -636,7 +642,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisZChanged(QValue3DAxis*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -647,9 +653,9 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisZChanged(QValue3DAxis*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisZChanged(QValue3DAxis*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -673,21 +679,23 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectedSeriesChanged(QScatter3DSeries*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::selectedSeriesChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QScatter3DSeries * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QScatter3DSeries*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSCATTER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -695,7 +703,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -706,9 +714,9 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectedSeriesChanged(QScatter3DSeries*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectedSeriesChanged(QScatter3DSeries*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

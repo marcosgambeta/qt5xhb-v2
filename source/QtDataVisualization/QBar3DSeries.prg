@@ -54,7 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QBar3DSeries>
@@ -302,21 +302,23 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dataProxyChanged(QBarDataProxy*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dataProxyChanged(QBarDataProxy*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::dataProxyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QBarDataProxy * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataProxyChanged(QBarDataProxy*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QBARDATAPROXY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QBARDATAPROXY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -324,7 +326,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "dataProxyChanged(QBarDataProxy*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -335,9 +337,9 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dataProxyChanged(QBarDataProxy*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dataProxyChanged(QBarDataProxy*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -361,21 +363,23 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectedBarChanged(QPoint)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectedBarChanged(QPoint)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::selectedBarChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPoint & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedBarChanged(QPoint)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -383,7 +387,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "selectedBarChanged(QPoint)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -394,9 +398,9 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectedBarChanged(QPoint)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectedBarChanged(QPoint)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -420,20 +424,22 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("meshAngleChanged(float)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "meshAngleChanged(float)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::meshAngleChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "meshAngleChanged(float)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBAR3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -442,7 +448,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "meshAngleChanged(float)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -453,9 +459,9 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "meshAngleChanged(float)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "meshAngleChanged(float)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

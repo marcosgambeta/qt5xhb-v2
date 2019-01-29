@@ -72,7 +72,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DCamera>
@@ -630,20 +630,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cameraPresetChanged(Q3DCamera::CameraPreset)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::cameraPresetChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Q3DCamera::CameraPreset arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -652,7 +654,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -663,9 +665,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cameraPresetChanged(Q3DCamera::CameraPreset)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -689,20 +691,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("maxZoomLevelChanged(float)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "maxZoomLevelChanged(float)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::maxZoomLevelChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxZoomLevelChanged(float)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -711,7 +715,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "maxZoomLevelChanged(float)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -722,9 +726,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "maxZoomLevelChanged(float)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "maxZoomLevelChanged(float)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -748,20 +752,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("minZoomLevelChanged(float)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "minZoomLevelChanged(float)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::minZoomLevelChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "minZoomLevelChanged(float)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -770,7 +776,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "minZoomLevelChanged(float)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -781,9 +787,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "minZoomLevelChanged(float)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "minZoomLevelChanged(float)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -807,21 +813,23 @@ HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("targetChanged(QVector3D)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "targetChanged(QVector3D)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::targetChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QVector3D & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "targetChanged(QVector3D)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVECTOR3D" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QVECTOR3D" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -829,7 +837,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "targetChanged(QVector3D)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -840,9 +848,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "targetChanged(QVector3D)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "targetChanged(QVector3D)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -866,20 +874,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("wrapXRotationChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "wrapXRotationChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::wrapXRotationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "wrapXRotationChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -888,7 +898,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "wrapXRotationChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -899,9 +909,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "wrapXRotationChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "wrapXRotationChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -925,20 +935,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("wrapYRotationChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "wrapYRotationChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::wrapYRotationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "wrapYRotationChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -947,7 +959,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "wrapYRotationChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -958,9 +970,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "wrapYRotationChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "wrapYRotationChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -984,20 +996,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("xRotationChanged(float)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "xRotationChanged(float)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::xRotationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "xRotationChanged(float)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1006,7 +1020,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "xRotationChanged(float)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1017,9 +1031,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "xRotationChanged(float)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "xRotationChanged(float)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1043,20 +1057,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("yRotationChanged(float)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "yRotationChanged(float)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::yRotationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "yRotationChanged(float)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1065,7 +1081,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "yRotationChanged(float)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1076,9 +1092,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "yRotationChanged(float)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "yRotationChanged(float)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1102,20 +1118,22 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("zoomLevelChanged(float)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "zoomLevelChanged(float)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::zoomLevelChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "zoomLevelChanged(float)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DCAMERA" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1124,7 +1142,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "zoomLevelChanged(float)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1135,9 +1153,9 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "zoomLevelChanged(float)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "zoomLevelChanged(float)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

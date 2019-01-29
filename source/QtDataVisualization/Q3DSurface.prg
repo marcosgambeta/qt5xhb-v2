@@ -64,7 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <Q3DSurface>
@@ -549,21 +549,23 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisXChanged(QValue3DAxis*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisXChanged(QValue3DAxis*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::axisXChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisXChanged(QValue3DAxis*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -571,7 +573,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisXChanged(QValue3DAxis*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -582,9 +584,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisXChanged(QValue3DAxis*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisXChanged(QValue3DAxis*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -608,21 +610,23 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisYChanged(QValue3DAxis*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisYChanged(QValue3DAxis*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::axisYChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisYChanged(QValue3DAxis*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -630,7 +634,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisYChanged(QValue3DAxis*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -641,9 +645,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisYChanged(QValue3DAxis*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisYChanged(QValue3DAxis*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -667,21 +671,23 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axisZChanged(QValue3DAxis*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axisZChanged(QValue3DAxis*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::axisZChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axisZChanged(QValue3DAxis*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -689,7 +695,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axisZChanged(QValue3DAxis*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -700,9 +706,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axisZChanged(QValue3DAxis*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axisZChanged(QValue3DAxis*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -726,20 +732,22 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("flipHorizontalGridChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "flipHorizontalGridChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::flipHorizontalGridChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "flipHorizontalGridChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -748,7 +756,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "flipHorizontalGridChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -759,9 +767,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "flipHorizontalGridChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "flipHorizontalGridChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -785,21 +793,23 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectedSeriesChanged(QSurface3DSeries*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectedSeriesChanged(QSurface3DSeries*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::selectedSeriesChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSurface3DSeries * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectedSeriesChanged(QSurface3DSeries*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QSURFACE3DSERIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QSURFACE3DSERIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -807,7 +817,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "selectedSeriesChanged(QSurface3DSeries*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -818,9 +828,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectedSeriesChanged(QSurface3DSeries*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectedSeriesChanged(QSurface3DSeries*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
