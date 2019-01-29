@@ -51,7 +51,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QDesignerPropertyEditorInterface>
@@ -262,22 +262,24 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("propertyChanged(QString,QVariant)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "propertyChanged(QString,QVariant)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerPropertyEditorInterface::propertyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1, const QVariant & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "propertyChanged(QString,QVariant)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERPROPERTYEDITORINTERFACE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDESIGNERPROPERTYEDITORINTERFACE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QVARIANT" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QVARIANT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -286,7 +288,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "propertyChanged(QString,QVariant)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -297,9 +299,9 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "propertyChanged(QString,QVariant)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "propertyChanged(QString,QVariant)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

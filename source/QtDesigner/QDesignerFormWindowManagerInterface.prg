@@ -73,7 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QDesignerFormWindowManagerInterface>
@@ -760,21 +760,23 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activeFormWindowChanged(QDesignerFormWindowInterface*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::activeFormWindowChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDesignerFormWindowInterface * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -782,7 +784,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -793,9 +795,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activeFormWindowChanged(QDesignerFormWindowInterface*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -819,21 +821,23 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("formWindowAdded(QDesignerFormWindowInterface*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "formWindowAdded(QDesignerFormWindowInterface*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::formWindowAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDesignerFormWindowInterface * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "formWindowAdded(QDesignerFormWindowInterface*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -841,7 +845,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 
         });
 
-        Signals2_store_connection( sender, "formWindowAdded(QDesignerFormWindowInterface*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -852,9 +856,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "formWindowAdded(QDesignerFormWindowInterface*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "formWindowAdded(QDesignerFormWindowInterface*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -878,21 +882,23 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("formWindowRemoved(QDesignerFormWindowInterface*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::formWindowRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDesignerFormWindowInterface * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -900,7 +906,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -911,9 +917,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "formWindowRemoved(QDesignerFormWindowInterface*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
