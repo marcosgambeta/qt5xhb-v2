@@ -73,7 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QHelpEngineCore>
@@ -720,20 +720,22 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentFilterChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentFilterChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::currentFilterChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentFilterChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -742,7 +744,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentFilterChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -753,9 +755,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentFilterChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentFilterChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -779,27 +781,29 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("setupFinished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "setupFinished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::setupFinished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "setupFinished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "setupFinished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -810,9 +814,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "setupFinished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "setupFinished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -836,27 +840,29 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("setupStarted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "setupStarted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::setupStarted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "setupStarted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "setupStarted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -867,9 +873,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "setupStarted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "setupStarted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -893,20 +899,22 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("warning(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "warning(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::warning, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "warning(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -915,7 +923,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 
         });
 
-        Signals2_store_connection( sender, "warning(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -926,9 +934,9 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "warning(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "warning(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -45,7 +45,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QHelpSearchQueryWidget>
@@ -146,27 +146,29 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("search()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "search()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpSearchQueryWidget::search, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "search()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHQUERYWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPSEARCHQUERYWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "search()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -177,9 +179,9 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "search()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "search()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

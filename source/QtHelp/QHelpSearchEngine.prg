@@ -57,7 +57,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QHelpSearchEngine>
@@ -347,27 +347,29 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("indexingFinished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "indexingFinished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpSearchEngine::indexingFinished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "indexingFinished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "indexingFinished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -378,9 +380,9 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "indexingFinished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "indexingFinished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -404,27 +406,29 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("indexingStarted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "indexingStarted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpSearchEngine::indexingStarted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "indexingStarted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "indexingStarted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -435,9 +439,9 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "indexingStarted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "indexingStarted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -461,20 +465,22 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("searchingFinished(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "searchingFinished(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpSearchEngine::searchingFinished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingFinished(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -483,7 +489,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 
         });
 
-        Signals2_store_connection( sender, "searchingFinished(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -494,9 +500,9 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "searchingFinished(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "searchingFinished(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -520,27 +526,29 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("searchingStarted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "searchingStarted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpSearchEngine::searchingStarted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "searchingStarted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPSEARCHENGINE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "searchingStarted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -551,9 +559,9 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "searchingStarted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "searchingStarted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

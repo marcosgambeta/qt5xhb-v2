@@ -54,7 +54,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QHelpContentModel>
@@ -284,27 +284,29 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("contentsCreated()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "contentsCreated()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpContentModel::contentsCreated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsCreated()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPCONTENTMODEL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPCONTENTMODEL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "contentsCreated()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -315,9 +317,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "contentsCreated()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "contentsCreated()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -341,27 +343,29 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("contentsCreationStarted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "contentsCreationStarted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpContentModel::contentsCreationStarted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsCreationStarted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHELPCONTENTMODEL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHELPCONTENTMODEL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "contentsCreationStarted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -372,9 +376,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "contentsCreationStarted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "contentsCreationStarted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
