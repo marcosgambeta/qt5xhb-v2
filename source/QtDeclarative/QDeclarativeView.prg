@@ -60,7 +60,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QDeclarativeView>
@@ -412,21 +412,23 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sceneResized(QSize)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sceneResized(QSize)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDeclarativeView::sceneResized, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSize arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneResized(QSize)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QSIZE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -434,7 +436,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 
         });
 
-        Signals2_store_connection( sender, "sceneResized(QSize)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -445,9 +447,9 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sceneResized(QSize)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sceneResized(QSize)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -471,20 +473,22 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("statusChanged(QDeclarativeView::Status)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "statusChanged(QDeclarativeView::Status)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDeclarativeView::statusChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDeclarativeView::Status arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QDeclarativeView::Status)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -493,7 +497,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "statusChanged(QDeclarativeView::Status)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -504,9 +508,9 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "statusChanged(QDeclarativeView::Status)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QDeclarativeView::Status)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
