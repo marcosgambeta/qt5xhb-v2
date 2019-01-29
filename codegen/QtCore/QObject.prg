@@ -344,12 +344,12 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
     if( hb_pcount() == 0 )
     {
       Events_disconnect_all_events (obj, false);
-      Signals2_disconnect_all_signals (obj, false);
+      Signals3_disconnect_all_signals (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
       Events_disconnect_all_events (obj, PBOOL(1) );
-      Signals2_disconnect_all_signals (obj, PBOOL(1) );
+      Signals3_disconnect_all_signals (obj, PBOOL(1) );
     }
     else
     {
@@ -391,11 +391,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
   {
     if( hb_pcount() == 0 )
     {
-      Signals2_disconnect_all_signals (obj, false);
+      Signals3_disconnect_all_signals (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Signals2_disconnect_all_signals (obj, PBOOL(1) );
+      Signals3_disconnect_all_signals (obj, PBOOL(1) );
     }
     else
     {
