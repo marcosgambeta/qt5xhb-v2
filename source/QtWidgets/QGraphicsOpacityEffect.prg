@@ -49,7 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsOpacityEffect>
@@ -198,20 +198,22 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("opacityChanged(qreal)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "opacityChanged(qreal)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsOpacityEffect::opacityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityChanged(qreal)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -220,7 +222,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "opacityChanged(qreal)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -231,9 +233,9 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "opacityChanged(qreal)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "opacityChanged(qreal)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -257,21 +259,23 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("opacityMaskChanged(QBrush)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "opacityMaskChanged(QBrush)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsOpacityEffect::opacityMaskChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QBrush & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "opacityMaskChanged(QBrush)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBRUSH" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QBRUSH" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -279,7 +283,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "opacityMaskChanged(QBrush)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -290,9 +294,9 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "opacityMaskChanged(QBrush)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "opacityMaskChanged(QBrush)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -116,7 +116,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QHeaderView>
@@ -1772,27 +1772,29 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("geometriesChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "geometriesChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::geometriesChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometriesChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "geometriesChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1803,9 +1805,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "geometriesChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "geometriesChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1833,20 +1835,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionClicked(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionClicked(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionClicked(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1855,7 +1859,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "sectionClicked(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1866,9 +1870,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionClicked(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionClicked(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1892,20 +1896,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionCountChanged(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionCountChanged(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionCountChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionCountChanged(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1916,7 +1922,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "sectionCountChanged(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1927,9 +1933,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionCountChanged(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionCountChanged(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1953,20 +1959,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionDoubleClicked(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionDoubleClicked(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionDoubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionDoubleClicked(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1975,7 +1983,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "sectionDoubleClicked(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1986,9 +1994,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionDoubleClicked(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionDoubleClicked(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2012,20 +2020,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionEntered(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionEntered(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionEntered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionEntered(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2034,7 +2044,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 
         });
 
-        Signals2_store_connection( sender, "sectionEntered(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2045,9 +2055,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionEntered(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionEntered(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2071,20 +2081,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionHandleDoubleClicked(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionHandleDoubleClicked(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionHandleDoubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionHandleDoubleClicked(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2093,7 +2105,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "sectionHandleDoubleClicked(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2104,9 +2116,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionHandleDoubleClicked(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionHandleDoubleClicked(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2130,20 +2142,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionMoved(int,int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionMoved(int,int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionMoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2, int arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionMoved(int,int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
@@ -2156,7 +2170,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 
         });
 
-        Signals2_store_connection( sender, "sectionMoved(int,int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2167,9 +2181,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionMoved(int,int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionMoved(int,int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2193,20 +2207,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionPressed(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionPressed(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionPressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionPressed(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2215,7 +2231,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "sectionPressed(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2226,9 +2242,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionPressed(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionPressed(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2252,20 +2268,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sectionResized(int,int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sectionResized(int,int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionResized, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2, int arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sectionResized(int,int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
@@ -2278,7 +2296,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 
         });
 
-        Signals2_store_connection( sender, "sectionResized(int,int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2289,9 +2307,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sectionResized(int,int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sectionResized(int,int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2315,20 +2333,22 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sortIndicatorChanged(int,Qt::SortOrder)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sortIndicatorChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, Qt::SortOrder arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QHEADERVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -2339,7 +2359,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2350,9 +2370,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sortIndicatorChanged(int,Qt::SortOrder)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

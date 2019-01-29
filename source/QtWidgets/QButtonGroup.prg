@@ -59,7 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QButtonGroup>
@@ -407,21 +407,23 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonClicked(QAbstractButton*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonClicked(QAbstractButton*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(QAbstractButton*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -429,7 +431,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 
         });
 
-        Signals2_store_connection( sender, "buttonClicked(QAbstractButton*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -440,9 +442,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonClicked(QAbstractButton*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonClicked(QAbstractButton*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -466,20 +468,22 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonClicked(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonClicked(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QButtonGroup::buttonClicked), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonClicked(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -488,7 +492,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 
         });
 
-        Signals2_store_connection( sender, "buttonClicked(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -499,9 +503,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonClicked(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonClicked(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -525,21 +529,23 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonPressed(QAbstractButton*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonPressed(QAbstractButton*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(QAbstractButton*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -547,7 +553,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 
         });
 
-        Signals2_store_connection( sender, "buttonPressed(QAbstractButton*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -558,9 +564,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonPressed(QAbstractButton*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonPressed(QAbstractButton*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -584,20 +590,22 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonPressed(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonPressed(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QButtonGroup::buttonPressed), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonPressed(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -606,7 +614,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 
         });
 
-        Signals2_store_connection( sender, "buttonPressed(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -617,9 +625,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonPressed(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonPressed(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -643,21 +651,23 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonReleased(QAbstractButton*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonReleased(QAbstractButton*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(QAbstractButton*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -665,7 +675,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 
         });
 
-        Signals2_store_connection( sender, "buttonReleased(QAbstractButton*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -676,9 +686,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonReleased(QAbstractButton*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonReleased(QAbstractButton*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -702,20 +712,22 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("buttonReleased(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "buttonReleased(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QButtonGroup::buttonReleased), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "buttonReleased(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QBUTTONGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -724,7 +736,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 
         });
 
-        Signals2_store_connection( sender, "buttonReleased(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -735,9 +747,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "buttonReleased(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "buttonReleased(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -71,7 +71,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QTextBrowser>
@@ -620,21 +620,23 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("anchorClicked(QUrl)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "anchorClicked(QUrl)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::anchorClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "anchorClicked(QUrl)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -642,7 +644,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "anchorClicked(QUrl)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -653,9 +655,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "anchorClicked(QUrl)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "anchorClicked(QUrl)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -679,20 +681,22 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("backwardAvailable(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "backwardAvailable(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::backwardAvailable, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "backwardAvailable(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -701,7 +705,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 
         });
 
-        Signals2_store_connection( sender, "backwardAvailable(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -712,9 +716,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "backwardAvailable(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "backwardAvailable(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -738,20 +742,22 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("forwardAvailable(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "forwardAvailable(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::forwardAvailable, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "forwardAvailable(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -760,7 +766,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 
         });
 
-        Signals2_store_connection( sender, "forwardAvailable(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -771,9 +777,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "forwardAvailable(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "forwardAvailable(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -797,21 +803,23 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("highlighted(QUrl)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "highlighted(QUrl)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QUrl &>::of(&QTextBrowser::highlighted), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QUrl)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -819,7 +827,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 
         });
 
-        Signals2_store_connection( sender, "highlighted(QUrl)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -830,9 +838,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "highlighted(QUrl)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QUrl)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -856,20 +864,22 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("highlighted(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "highlighted(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QTextBrowser::highlighted), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -878,7 +888,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 
         });
 
-        Signals2_store_connection( sender, "highlighted(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -889,9 +899,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "highlighted(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -915,27 +925,29 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("historyChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "historyChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::historyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "historyChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "historyChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -946,9 +958,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "historyChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "historyChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -972,21 +984,23 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sourceChanged(QUrl)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sourceChanged(QUrl)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::sourceChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged(QUrl)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTBROWSER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -994,7 +1008,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "sourceChanged(QUrl)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1005,9 +1019,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sourceChanged(QUrl)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sourceChanged(QUrl)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

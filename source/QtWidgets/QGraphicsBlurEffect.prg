@@ -50,7 +50,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsBlurEffect>
@@ -223,20 +223,22 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsBlurEffect::blurHintsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QGraphicsBlurEffect::BlurHints arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -245,7 +247,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -256,9 +258,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -282,20 +284,22 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("blurRadiusChanged(qreal)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "blurRadiusChanged(qreal)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsBlurEffect::blurRadiusChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "blurRadiusChanged(qreal)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -304,7 +308,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "blurRadiusChanged(qreal)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -315,9 +319,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "blurRadiusChanged(qreal)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "blurRadiusChanged(qreal)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

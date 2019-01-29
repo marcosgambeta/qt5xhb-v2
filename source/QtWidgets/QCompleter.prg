@@ -83,7 +83,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QCompleter>
@@ -1003,20 +1003,22 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activated(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activated(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QCompleter::activated), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMPLETER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1025,7 +1027,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 
         });
 
-        Signals2_store_connection( sender, "activated(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1036,9 +1038,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activated(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activated(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1062,21 +1064,23 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activated(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QModelIndex &>::of(&QCompleter::activated), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1084,7 +1088,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 
         });
 
-        Signals2_store_connection( sender, "activated(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1095,9 +1099,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activated(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activated(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1121,20 +1125,22 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("highlighted(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "highlighted(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QCompleter::highlighted), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMPLETER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1143,7 +1149,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 
         });
 
-        Signals2_store_connection( sender, "highlighted(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1154,9 +1160,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "highlighted(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1180,21 +1186,23 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("highlighted(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "highlighted(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QModelIndex &>::of(&QCompleter::highlighted), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMPLETER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMPLETER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1202,7 +1210,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 
         });
 
-        Signals2_store_connection( sender, "highlighted(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1213,9 +1221,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "highlighted(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

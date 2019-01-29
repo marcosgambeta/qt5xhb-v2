@@ -97,7 +97,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QFileSystemModel>
@@ -1263,20 +1263,22 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("directoryLoaded(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "directoryLoaded(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileSystemModel::directoryLoaded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "directoryLoaded(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILESYSTEMMODEL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILESYSTEMMODEL" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1285,7 +1287,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 
         });
 
-        Signals2_store_connection( sender, "directoryLoaded(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1296,9 +1298,9 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "directoryLoaded(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "directoryLoaded(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1322,20 +1324,22 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("fileRenamed(QString,QString,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "fileRenamed(QString,QString,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileSystemModel::fileRenamed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1, const QString & arg2, const QString & arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "fileRenamed(QString,QString,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILESYSTEMMODEL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILESYSTEMMODEL" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
@@ -1348,7 +1352,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 
         });
 
-        Signals2_store_connection( sender, "fileRenamed(QString,QString,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1359,9 +1363,9 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "fileRenamed(QString,QString,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "fileRenamed(QString,QString,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1385,20 +1389,22 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("rootPathChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "rootPathChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileSystemModel::rootPathChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "rootPathChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QFILESYSTEMMODEL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILESYSTEMMODEL" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1407,7 +1413,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "rootPathChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1418,9 +1424,9 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "rootPathChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "rootPathChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

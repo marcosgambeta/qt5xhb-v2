@@ -75,7 +75,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractButton>
@@ -838,20 +838,22 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractButton::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -860,7 +862,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -871,9 +873,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -897,27 +899,29 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pressed()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pressed()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractButton::pressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "pressed()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -928,9 +932,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pressed()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pressed()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -954,27 +958,29 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("released()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "released()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractButton::released, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "released()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "released()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -985,9 +991,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "released()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "released()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1011,20 +1017,22 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("toggled(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "toggled(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractButton::toggled, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTBUTTON" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1033,7 +1041,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 
         });
 
-        Signals2_store_connection( sender, "toggled(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1044,9 +1052,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "toggled(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "toggled(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

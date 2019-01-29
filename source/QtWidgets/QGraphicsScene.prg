@@ -131,7 +131,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QGraphicsScene>
@@ -1874,20 +1874,22 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("changed(QList<QRectF>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "changed(QList<QRectF>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsScene::changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QRectF> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "changed(QList<QRectF>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -1919,7 +1921,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "changed(QList<QRectF>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1930,9 +1932,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "changed(QList<QRectF>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "changed(QList<QRectF>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1956,21 +1958,23 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sceneRectChanged(QRectF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sceneRectChanged(QRectF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsScene::sceneRectChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRectF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sceneRectChanged(QRectF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECTF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECTF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1978,7 +1982,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "sceneRectChanged(QRectF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1989,9 +1993,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sceneRectChanged(QRectF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sceneRectChanged(QRectF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2015,27 +2019,29 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsScene::selectionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGRAPHICSSCENE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "selectionChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2046,9 +2052,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

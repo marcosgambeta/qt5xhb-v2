@@ -71,7 +71,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractSlider>
@@ -705,20 +705,22 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("actionTriggered(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "actionTriggered(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::actionTriggered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "actionTriggered(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -727,7 +729,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 
         });
 
-        Signals2_store_connection( sender, "actionTriggered(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -738,9 +740,9 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "actionTriggered(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "actionTriggered(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -764,20 +766,22 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("rangeChanged(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "rangeChanged(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::rangeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "rangeChanged(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -788,7 +792,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "rangeChanged(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -799,9 +803,9 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "rangeChanged(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "rangeChanged(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -825,20 +829,22 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sliderMoved(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sliderMoved(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::sliderMoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderMoved(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -847,7 +853,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 
         });
 
-        Signals2_store_connection( sender, "sliderMoved(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -858,9 +864,9 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sliderMoved(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sliderMoved(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -884,27 +890,29 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sliderPressed()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sliderPressed()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::sliderPressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderPressed()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "sliderPressed()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -915,9 +923,9 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sliderPressed()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sliderPressed()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -941,27 +949,29 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sliderReleased()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sliderReleased()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::sliderReleased, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sliderReleased()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "sliderReleased()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -972,9 +982,9 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sliderReleased()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sliderReleased()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -998,20 +1008,22 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("valueChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "valueChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::valueChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "valueChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTSLIDER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1020,7 +1032,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "valueChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1031,9 +1043,9 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "valueChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "valueChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

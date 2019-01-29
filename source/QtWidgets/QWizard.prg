@@ -93,7 +93,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QWizard>
@@ -1159,20 +1159,22 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentIdChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentIdChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::currentIdChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIdChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1181,7 +1183,7 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentIdChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1192,9 +1194,9 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentIdChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentIdChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1218,20 +1220,22 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("customButtonClicked(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "customButtonClicked(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::customButtonClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "customButtonClicked(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1240,7 +1244,7 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "customButtonClicked(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1251,9 +1255,9 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "customButtonClicked(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "customButtonClicked(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1277,27 +1281,29 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("helpRequested()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "helpRequested()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::helpRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIZARD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "helpRequested()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1308,9 +1314,9 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "helpRequested()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "helpRequested()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1334,20 +1340,22 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pageAdded(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pageAdded(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::pageAdded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pageAdded(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1356,7 +1364,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 
         });
 
-        Signals2_store_connection( sender, "pageAdded(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1367,9 +1375,9 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pageAdded(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pageAdded(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1393,20 +1401,22 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pageRemoved(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pageRemoved(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::pageRemoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pageRemoved(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIZARD" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIZARD" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1415,7 +1425,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 
         });
 
-        Signals2_store_connection( sender, "pageRemoved(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1426,9 +1436,9 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pageRemoved(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pageRemoved(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -90,7 +90,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QCalendarWidget>
@@ -1175,21 +1175,23 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activated(QDate)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activated(QDate)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCalendarWidget::activated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QDate & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QDate)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QDATE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1197,7 +1199,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 
         });
 
-        Signals2_store_connection( sender, "activated(QDate)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1208,9 +1210,9 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activated(QDate)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activated(QDate)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1234,21 +1236,23 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(QDate)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(QDate)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCalendarWidget::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QDate & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QDate)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QDATE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QDATE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1256,7 +1260,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(QDate)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1267,9 +1271,9 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(QDate)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(QDate)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1293,20 +1297,22 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentPageChanged(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentPageChanged(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCalendarWidget::currentPageChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentPageChanged(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1317,7 +1323,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentPageChanged(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1328,9 +1334,9 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentPageChanged(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentPageChanged(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1354,27 +1360,29 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCalendarWidget::selectionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCALENDARWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "selectionChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1385,9 +1393,9 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

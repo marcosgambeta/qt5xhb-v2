@@ -102,7 +102,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QTableWidget>
@@ -1305,20 +1305,22 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cellActivated(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cellActivated(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellActivated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellActivated(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1329,7 +1331,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 
         });
 
-        Signals2_store_connection( sender, "cellActivated(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1340,9 +1342,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cellActivated(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cellActivated(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1366,20 +1368,22 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cellChanged(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cellChanged(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellChanged(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1390,7 +1394,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "cellChanged(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1401,9 +1405,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cellChanged(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cellChanged(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1427,20 +1431,22 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cellClicked(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cellClicked(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellClicked(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1451,7 +1457,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "cellClicked(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1462,9 +1468,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cellClicked(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cellClicked(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1488,20 +1494,22 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cellDoubleClicked(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cellDoubleClicked(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellDoubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellDoubleClicked(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1512,7 +1520,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "cellDoubleClicked(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1523,9 +1531,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cellDoubleClicked(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cellDoubleClicked(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1549,20 +1557,22 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cellEntered(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cellEntered(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellEntered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellEntered(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1573,7 +1583,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 
         });
 
-        Signals2_store_connection( sender, "cellEntered(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1584,9 +1594,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cellEntered(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cellEntered(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1610,20 +1620,22 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cellPressed(int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cellPressed(int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellPressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cellPressed(int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1634,7 +1646,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "cellPressed(int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1645,9 +1657,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cellPressed(int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cellPressed(int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1671,20 +1683,22 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentCellChanged(int,int,int,int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentCellChanged(int,int,int,int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::currentCellChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2, int arg3, int arg4) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentCellChanged(int,int,int,int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
@@ -1699,7 +1713,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentCellChanged(int,int,int,int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1710,9 +1724,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentCellChanged(int,int,int,int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentCellChanged(int,int,int,int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1736,22 +1750,24 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::currentItemChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTableWidgetItem * arg1, QTableWidgetItem * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QTABLEWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QTABLEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1760,7 +1776,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1771,9 +1787,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1797,21 +1813,23 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemActivated(QTableWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemActivated(QTableWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemActivated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemActivated(QTableWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1819,7 +1837,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 
         });
 
-        Signals2_store_connection( sender, "itemActivated(QTableWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1830,9 +1848,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemActivated(QTableWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemActivated(QTableWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1856,21 +1874,23 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemChanged(QTableWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemChanged(QTableWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QTableWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1878,7 +1898,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "itemChanged(QTableWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1889,9 +1909,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemChanged(QTableWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemChanged(QTableWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1915,21 +1935,23 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemClicked(QTableWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemClicked(QTableWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemClicked(QTableWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1937,7 +1959,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "itemClicked(QTableWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1948,9 +1970,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemClicked(QTableWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemClicked(QTableWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1974,21 +1996,23 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemDoubleClicked(QTableWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemDoubleClicked(QTableWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemDoubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemDoubleClicked(QTableWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1996,7 +2020,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "itemDoubleClicked(QTableWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2007,9 +2031,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemDoubleClicked(QTableWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemDoubleClicked(QTableWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2033,21 +2057,23 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemEntered(QTableWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemEntered(QTableWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemEntered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemEntered(QTableWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2055,7 +2081,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 
         });
 
-        Signals2_store_connection( sender, "itemEntered(QTableWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2066,9 +2092,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemEntered(QTableWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemEntered(QTableWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2092,21 +2118,23 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemPressed(QTableWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemPressed(QTableWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemPressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemPressed(QTableWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2114,7 +2142,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "itemPressed(QTableWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2125,9 +2153,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemPressed(QTableWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemPressed(QTableWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2151,27 +2179,29 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemSelectionChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemSelectionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelectionChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "itemSelectionChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2182,9 +2212,9 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemSelectionChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemSelectionChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

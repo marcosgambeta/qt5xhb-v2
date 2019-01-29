@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QToolButton>
@@ -500,21 +500,23 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("triggered(QAction*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "triggered(QAction*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolButton::triggered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAction * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(QAction*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBUTTON" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBUTTON" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -522,7 +524,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 
         });
 
-        Signals2_store_connection( sender, "triggered(QAction*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -533,9 +535,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "triggered(QAction*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "triggered(QAction*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

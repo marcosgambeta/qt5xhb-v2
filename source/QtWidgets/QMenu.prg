@@ -85,7 +85,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QMenu>
@@ -1268,27 +1268,29 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("aboutToHide()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "aboutToHide()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::aboutToHide, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToHide()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMENU" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMENU" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "aboutToHide()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1299,9 +1301,9 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "aboutToHide()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "aboutToHide()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1325,27 +1327,29 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("aboutToShow()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "aboutToShow()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::aboutToShow, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToShow()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMENU" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMENU" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "aboutToShow()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1356,9 +1360,9 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "aboutToShow()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "aboutToShow()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1382,21 +1386,23 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("hovered(QAction*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "hovered(QAction*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::hovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAction * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered(QAction*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMENU" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMENU" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1404,7 +1410,7 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
 
         });
 
-        Signals2_store_connection( sender, "hovered(QAction*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1415,9 +1421,9 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "hovered(QAction*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "hovered(QAction*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1441,21 +1447,23 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("triggered(QAction*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "triggered(QAction*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::triggered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAction * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(QAction*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMENU" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMENU" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1463,7 +1471,7 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 
         });
 
-        Signals2_store_connection( sender, "triggered(QAction*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1474,9 +1482,9 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "triggered(QAction*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "triggered(QAction*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

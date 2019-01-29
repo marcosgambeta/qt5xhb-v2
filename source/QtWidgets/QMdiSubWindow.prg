@@ -64,7 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QMdiSubWindow>
@@ -518,27 +518,29 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("aboutToActivate()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "aboutToActivate()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMdiSubWindow::aboutToActivate, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToActivate()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "aboutToActivate()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -549,9 +551,9 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "aboutToActivate()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "aboutToActivate()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -575,20 +577,22 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMdiSubWindow::windowStateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::WindowStates arg1, Qt::WindowStates arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -599,7 +603,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -610,9 +614,9 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -59,7 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QDialogButtonBox>
@@ -486,27 +486,29 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("accepted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "accepted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDialogButtonBox::accepted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "accepted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "accepted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -517,9 +519,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "accepted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "accepted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -543,21 +545,23 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(QAbstractButton*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(QAbstractButton*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDialogButtonBox::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QAbstractButton*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -565,7 +569,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(QAbstractButton*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -576,9 +580,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(QAbstractButton*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(QAbstractButton*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -602,27 +606,29 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("helpRequested()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "helpRequested()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDialogButtonBox::helpRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "helpRequested()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "helpRequested()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -633,9 +639,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "helpRequested()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "helpRequested()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -659,27 +665,29 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("rejected()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "rejected()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDialogButtonBox::rejected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "rejected()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDIALOGBUTTONBOX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "rejected()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -690,9 +698,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "rejected()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "rejected()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

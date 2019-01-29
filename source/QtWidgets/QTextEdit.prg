@@ -136,7 +136,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QTextEdit>
@@ -2248,20 +2248,22 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("copyAvailable(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "copyAvailable(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextEdit::copyAvailable, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "copyAvailable(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2270,7 +2272,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 
         });
 
-        Signals2_store_connection( sender, "copyAvailable(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2281,9 +2283,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "copyAvailable(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "copyAvailable(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2307,21 +2309,23 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentCharFormatChanged(QTextCharFormat)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentCharFormatChanged(QTextCharFormat)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextEdit::currentCharFormatChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QTextCharFormat & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentCharFormatChanged(QTextCharFormat)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QTEXTCHARFORMAT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QTEXTCHARFORMAT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2329,7 +2333,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentCharFormatChanged(QTextCharFormat)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2340,9 +2344,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentCharFormatChanged(QTextCharFormat)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentCharFormatChanged(QTextCharFormat)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2366,27 +2370,29 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cursorPositionChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cursorPositionChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextEdit::cursorPositionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cursorPositionChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "cursorPositionChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2397,9 +2403,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cursorPositionChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cursorPositionChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2423,20 +2429,22 @@ HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("redoAvailable(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "redoAvailable(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextEdit::redoAvailable, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "redoAvailable(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2445,7 +2453,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 
         });
 
-        Signals2_store_connection( sender, "redoAvailable(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2456,9 +2464,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "redoAvailable(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "redoAvailable(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2482,27 +2490,29 @@ HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextEdit::selectionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "selectionChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2513,9 +2523,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2539,27 +2549,29 @@ HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("textChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "textChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextEdit::textChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "textChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "textChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2570,9 +2582,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "textChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "textChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2596,20 +2608,22 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("undoAvailable(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "undoAvailable(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextEdit::undoAvailable, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "undoAvailable(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTEDIT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2618,7 +2632,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 
         });
 
-        Signals2_store_connection( sender, "undoAvailable(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2629,9 +2643,9 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "undoAvailable(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "undoAvailable(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

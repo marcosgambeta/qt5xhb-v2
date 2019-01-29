@@ -65,7 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QUndoGroup>
@@ -490,21 +490,23 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activeStackChanged(QUndoStack*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activeStackChanged(QUndoStack*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::activeStackChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QUndoStack * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeStackChanged(QUndoStack*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QUNDOSTACK" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QUNDOSTACK" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -512,7 +514,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "activeStackChanged(QUndoStack*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -523,9 +525,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activeStackChanged(QUndoStack*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activeStackChanged(QUndoStack*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -549,20 +551,22 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("canRedoChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "canRedoChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::canRedoChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "canRedoChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -571,7 +575,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "canRedoChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -582,9 +586,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "canRedoChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "canRedoChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -608,20 +612,22 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("canUndoChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "canUndoChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::canUndoChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "canUndoChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -630,7 +636,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "canUndoChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -641,9 +647,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "canUndoChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "canUndoChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -667,20 +673,22 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("cleanChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "cleanChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::cleanChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "cleanChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -689,7 +697,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "cleanChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -700,9 +708,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "cleanChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "cleanChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -726,20 +734,22 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("indexChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "indexChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::indexChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "indexChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -748,7 +758,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "indexChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -759,9 +769,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "indexChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "indexChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -785,20 +795,22 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("redoTextChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "redoTextChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::redoTextChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "redoTextChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -807,7 +819,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "redoTextChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -818,9 +830,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "redoTextChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "redoTextChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -844,20 +856,22 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("undoTextChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "undoTextChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::undoTextChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "undoTextChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -866,7 +880,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "undoTextChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -877,9 +891,9 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "undoTextChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "undoTextChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

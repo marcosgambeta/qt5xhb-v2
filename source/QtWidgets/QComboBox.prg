@@ -128,7 +128,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QComboBox>
@@ -1742,20 +1742,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activated(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activated(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QComboBox::activated), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1764,7 +1766,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 
         });
 
-        Signals2_store_connection( sender, "activated(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1775,9 +1777,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activated(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activated(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1801,20 +1803,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activated(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activated(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QComboBox::activated), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1823,7 +1827,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 
         });
 
-        Signals2_store_connection( sender, "activated(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1834,9 +1838,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activated(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activated(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1860,20 +1864,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentIndexChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QComboBox::currentIndexChanged), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1882,7 +1888,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 
         });
 
-        Signals2_store_connection( sender, "currentIndexChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1893,9 +1899,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentIndexChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentIndexChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1919,20 +1925,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentIndexChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentIndexChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QComboBox::currentIndexChanged), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentIndexChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1941,7 +1949,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 
         });
 
-        Signals2_store_connection( sender, "currentIndexChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1952,9 +1960,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentIndexChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentIndexChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1978,20 +1986,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QComboBox::currentTextChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentTextChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2000,7 +2010,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentTextChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2011,9 +2021,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentTextChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentTextChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2037,20 +2047,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("editTextChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "editTextChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QComboBox::editTextChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "editTextChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2059,7 +2071,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "editTextChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2070,9 +2082,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "editTextChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "editTextChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2096,20 +2108,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("highlighted(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "highlighted(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QComboBox::highlighted), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2118,7 +2132,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 
         });
 
-        Signals2_store_connection( sender, "highlighted(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2129,9 +2143,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "highlighted(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "highlighted(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2155,20 +2169,22 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("highlighted(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "highlighted(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QComboBox::highlighted), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "highlighted(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCOMBOBOX" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2177,7 +2193,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 
         });
 
-        Signals2_store_connection( sender, "highlighted(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2188,9 +2204,9 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "highlighted(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "highlighted(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

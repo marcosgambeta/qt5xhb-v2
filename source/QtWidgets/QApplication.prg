@@ -119,7 +119,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QApplication>
@@ -1690,22 +1690,24 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("focusChanged(QWidget*,QWidget*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "focusChanged(QWidget*,QWidget*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QApplication::focusChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWidget * arg1, QWidget * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "focusChanged(QWidget*,QWidget*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAPPLICATION" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
-            PHB_ITEM pArg2 = Signals2_return_qobject( (QObject *) arg2, "QWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAPPLICATION" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWIDGET" );
+            PHB_ITEM pArg2 = Signals3_return_qobject( (QObject *) arg2, "QWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1714,7 +1716,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "focusChanged(QWidget*,QWidget*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1725,9 +1727,9 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "focusChanged(QWidget*,QWidget*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "focusChanged(QWidget*,QWidget*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1751,27 +1753,29 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("fontDatabaseChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "fontDatabaseChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QApplication::fontDatabaseChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "fontDatabaseChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAPPLICATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAPPLICATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "fontDatabaseChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1782,9 +1786,9 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "fontDatabaseChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "fontDatabaseChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1808,27 +1812,29 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("lastWindowClosed()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "lastWindowClosed()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QApplication::lastWindowClosed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "lastWindowClosed()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAPPLICATION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAPPLICATION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "lastWindowClosed()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1839,9 +1845,9 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "lastWindowClosed()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "lastWindowClosed()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

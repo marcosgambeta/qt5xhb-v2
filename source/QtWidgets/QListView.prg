@@ -78,7 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QListView>
@@ -929,20 +929,22 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("indexesMoved(QModelIndexList)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "indexesMoved(QModelIndexList)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListView::indexesMoved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndexList & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "indexesMoved(QModelIndexList)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTVIEW" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -974,7 +976,7 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 
         });
 
-        Signals2_store_connection( sender, "indexesMoved(QModelIndexList)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -985,9 +987,9 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "indexesMoved(QModelIndexList)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "indexesMoved(QModelIndexList)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

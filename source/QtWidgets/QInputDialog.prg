@@ -97,7 +97,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QInputDialog>
@@ -1330,20 +1330,22 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleValueChanged(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleValueChanged(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::doubleValueChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleValueChanged(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1352,7 +1354,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "doubleValueChanged(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1363,9 +1365,9 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleValueChanged(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleValueChanged(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1389,20 +1391,22 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleValueSelected(double)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleValueSelected(double)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::doubleValueSelected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (double arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleValueSelected(double)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1411,7 +1415,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 
         });
 
-        Signals2_store_connection( sender, "doubleValueSelected(double)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1422,9 +1426,9 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleValueSelected(double)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleValueSelected(double)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1448,20 +1452,22 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("intValueChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "intValueChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::intValueChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "intValueChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1470,7 +1476,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "intValueChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1481,9 +1487,9 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "intValueChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "intValueChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1507,20 +1513,22 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("intValueSelected(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "intValueSelected(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::intValueSelected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "intValueSelected(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1529,7 +1537,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
 
         });
 
-        Signals2_store_connection( sender, "intValueSelected(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1540,9 +1548,9 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "intValueSelected(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "intValueSelected(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1566,20 +1574,22 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("textValueChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "textValueChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::textValueChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "textValueChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1588,7 +1598,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "textValueChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1599,9 +1609,9 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "textValueChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "textValueChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1625,20 +1635,22 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("textValueSelected(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "textValueSelected(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::textValueSelected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "textValueSelected(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QINPUTDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1647,7 +1659,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 
         });
 
-        Signals2_store_connection( sender, "textValueSelected(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1658,9 +1670,9 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "textValueSelected(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "textValueSelected(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

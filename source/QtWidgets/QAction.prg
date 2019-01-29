@@ -107,7 +107,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAction>
@@ -1635,27 +1635,29 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("changed()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "changed()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::changed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "changed()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "changed()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1666,9 +1668,9 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "changed()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "changed()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1692,27 +1694,29 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("hovered()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "hovered()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::hovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "hovered()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "hovered()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1723,9 +1727,9 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "hovered()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "hovered()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1749,20 +1753,22 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("toggled(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "toggled(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::toggled, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "toggled(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QACTION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1771,7 +1777,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
 
         });
 
-        Signals2_store_connection( sender, "toggled(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1782,9 +1788,9 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "toggled(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "toggled(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1808,20 +1814,22 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("triggered(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "triggered(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::triggered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "triggered(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QACTION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1830,7 +1838,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 
         });
 
-        Signals2_store_connection( sender, "triggered(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1841,9 +1849,9 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "triggered(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "triggered(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

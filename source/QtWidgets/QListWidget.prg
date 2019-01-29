@@ -81,7 +81,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QListWidget>
@@ -905,22 +905,24 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::currentItemChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QListWidgetItem * arg1, QListWidgetItem * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QLISTWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QLISTWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -929,7 +931,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -940,9 +942,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -966,20 +968,22 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentRowChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentRowChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::currentRowChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentRowChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -988,7 +992,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentRowChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -999,9 +1003,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentRowChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentRowChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1025,20 +1029,22 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentTextChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::currentTextChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentTextChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1047,7 +1053,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentTextChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1058,9 +1064,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentTextChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentTextChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1084,21 +1090,23 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemActivated(QListWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemActivated(QListWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemActivated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QListWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemActivated(QListWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QLISTWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1106,7 +1114,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 
         });
 
-        Signals2_store_connection( sender, "itemActivated(QListWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1117,9 +1125,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemActivated(QListWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemActivated(QListWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1143,21 +1151,23 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemChanged(QListWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemChanged(QListWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QListWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemChanged(QListWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QLISTWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1165,7 +1175,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "itemChanged(QListWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1176,9 +1186,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemChanged(QListWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemChanged(QListWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1202,21 +1212,23 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemClicked(QListWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemClicked(QListWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QListWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemClicked(QListWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QLISTWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1224,7 +1236,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "itemClicked(QListWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1235,9 +1247,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemClicked(QListWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemClicked(QListWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1261,21 +1273,23 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemDoubleClicked(QListWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemDoubleClicked(QListWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemDoubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QListWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemDoubleClicked(QListWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QLISTWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1283,7 +1297,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "itemDoubleClicked(QListWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1294,9 +1308,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemDoubleClicked(QListWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemDoubleClicked(QListWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1320,21 +1334,23 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemEntered(QListWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemEntered(QListWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemEntered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QListWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemEntered(QListWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QLISTWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1342,7 +1358,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 
         });
 
-        Signals2_store_connection( sender, "itemEntered(QListWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1353,9 +1369,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemEntered(QListWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemEntered(QListWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1379,21 +1395,23 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemPressed(QListWidgetItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemPressed(QListWidgetItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemPressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QListWidgetItem * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemPressed(QListWidgetItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QLISTWIDGETITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QLISTWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1401,7 +1419,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "itemPressed(QListWidgetItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1412,9 +1430,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemPressed(QListWidgetItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemPressed(QListWidgetItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1438,27 +1456,29 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "itemSelectionChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemSelectionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "itemSelectionChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLISTWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "itemSelectionChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1469,9 +1489,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "itemSelectionChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "itemSelectionChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

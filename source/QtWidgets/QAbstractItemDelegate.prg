@@ -57,7 +57,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractItemDelegate>
@@ -369,21 +369,23 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemDelegate::closeEditor, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWidget * arg1, QAbstractItemDelegate::EndEditHint arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWIDGET" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -393,7 +395,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 
         });
 
-        Signals2_store_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -404,9 +406,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -430,21 +432,23 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("commitData(QWidget*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "commitData(QWidget*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemDelegate::commitData, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWidget * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "commitData(QWidget*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -452,7 +456,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 
         });
 
-        Signals2_store_connection( sender, "commitData(QWidget*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -463,9 +467,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "commitData(QWidget*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "commitData(QWidget*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -489,21 +493,23 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sizeHintChanged(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sizeHintChanged(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemDelegate::sizeHintChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sizeHintChanged(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMDELEGATE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -511,7 +517,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "sizeHintChanged(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -522,9 +528,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sizeHintChanged(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sizeHintChanged(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QDockWidget>
@@ -433,20 +433,22 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("allowedAreasChanged(Qt::DockWidgetAreas)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::allowedAreasChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::DockWidgetAreas arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -455,7 +457,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -466,9 +468,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "allowedAreasChanged(Qt::DockWidgetAreas)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -492,20 +494,22 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dockLocationChanged(Qt::DockWidgetArea)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::dockLocationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::DockWidgetArea arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -514,7 +518,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -525,9 +529,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dockLocationChanged(Qt::DockWidgetArea)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dockLocationChanged(Qt::DockWidgetArea)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -551,20 +555,22 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("featuresChanged(QDockWidget::DockWidgetFeatures)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::featuresChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QDockWidget::DockWidgetFeatures arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -573,7 +579,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -584,9 +590,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "featuresChanged(QDockWidget::DockWidgetFeatures)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -610,20 +616,22 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("topLevelChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::topLevelChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -632,7 +640,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "topLevelChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -643,9 +651,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "topLevelChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "topLevelChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -669,20 +677,22 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::visibilityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QDOCKWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -691,7 +701,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "visibilityChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -702,9 +712,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "visibilityChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "visibilityChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

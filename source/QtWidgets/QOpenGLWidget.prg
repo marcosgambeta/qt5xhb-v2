@@ -59,7 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -353,27 +353,29 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("aboutToCompose()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "aboutToCompose()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::aboutToCompose, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToCompose()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "aboutToCompose()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -384,9 +386,9 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "aboutToCompose()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "aboutToCompose()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -412,27 +414,29 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("frameSwapped()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "frameSwapped()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::frameSwapped, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "frameSwapped()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "frameSwapped()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -443,9 +447,9 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "frameSwapped()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "frameSwapped()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -471,27 +475,29 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("aboutToResize()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "aboutToResize()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::aboutToResize, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToResize()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "aboutToResize()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -502,9 +508,9 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "aboutToResize()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "aboutToResize()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -530,27 +536,29 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("resized()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "resized()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::resized, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "resized()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "resized()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -561,9 +569,9 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "resized()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "resized()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

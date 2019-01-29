@@ -76,7 +76,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QToolBar>
@@ -825,21 +825,23 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("actionTriggered(QAction*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "actionTriggered(QAction*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::actionTriggered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAction * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "actionTriggered(QAction*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QACTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QACTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -847,7 +849,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 
         });
 
-        Signals2_store_connection( sender, "actionTriggered(QAction*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -858,9 +860,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "actionTriggered(QAction*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "actionTriggered(QAction*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -884,20 +886,22 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("allowedAreasChanged(Qt::ToolBarAreas)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::allowedAreasChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::ToolBarAreas arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -906,7 +910,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -917,9 +921,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "allowedAreasChanged(Qt::ToolBarAreas)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -943,21 +947,23 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("iconSizeChanged(QSize)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "iconSizeChanged(QSize)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::iconSizeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QSize & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "iconSizeChanged(QSize)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QSIZE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -965,7 +971,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "iconSizeChanged(QSize)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -976,9 +982,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "iconSizeChanged(QSize)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "iconSizeChanged(QSize)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1002,20 +1008,22 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("movableChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "movableChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::movableChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "movableChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1024,7 +1032,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "movableChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1035,9 +1043,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "movableChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "movableChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1061,20 +1069,22 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("orientationChanged(Qt::Orientation)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "orientationChanged(Qt::Orientation)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::orientationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::Orientation arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::Orientation)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1083,7 +1093,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "orientationChanged(Qt::Orientation)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1094,9 +1104,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "orientationChanged(Qt::Orientation)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "orientationChanged(Qt::Orientation)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1120,20 +1130,22 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("toolButtonStyleChanged(Qt::ToolButtonStyle)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::toolButtonStyleChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::ToolButtonStyle arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1142,7 +1154,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1153,9 +1165,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1179,20 +1191,22 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("topLevelChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "topLevelChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::topLevelChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "topLevelChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1201,7 +1215,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "topLevelChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1212,9 +1226,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "topLevelChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "topLevelChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1238,20 +1252,22 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "visibilityChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::visibilityChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "visibilityChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QTOOLBAR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTOOLBAR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1260,7 +1276,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "visibilityChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1271,9 +1287,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "visibilityChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "visibilityChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

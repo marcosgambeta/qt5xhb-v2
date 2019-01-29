@@ -121,7 +121,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractItemView>
@@ -1927,21 +1927,23 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activated(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::activated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activated(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1949,7 +1951,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 
         });
 
-        Signals2_store_connection( sender, "activated(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1960,9 +1962,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activated(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activated(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1986,21 +1988,23 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("clicked(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "clicked(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::clicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "clicked(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2008,7 +2012,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "clicked(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2019,9 +2023,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "clicked(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "clicked(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2045,21 +2049,23 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("doubleClicked(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "doubleClicked(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::doubleClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "doubleClicked(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2067,7 +2073,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 
         });
 
-        Signals2_store_connection( sender, "doubleClicked(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2078,9 +2084,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "doubleClicked(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "doubleClicked(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2104,21 +2110,23 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("entered(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "entered(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::entered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "entered(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2126,7 +2134,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 
         });
 
-        Signals2_store_connection( sender, "entered(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2137,9 +2145,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "entered(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "entered(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2163,21 +2171,23 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pressed(QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pressed(QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::pressed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pressed(QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2185,7 +2195,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 
         });
 
-        Signals2_store_connection( sender, "pressed(QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2196,9 +2206,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pressed(QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pressed(QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2222,27 +2232,29 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("viewportEntered()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "viewportEntered()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::viewportEntered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportEntered()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTITEMVIEW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "viewportEntered()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2253,9 +2265,9 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "viewportEntered()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "viewportEntered()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

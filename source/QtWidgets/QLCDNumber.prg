@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QLCDNumber>
@@ -658,27 +658,29 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("overflow()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "overflow()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLCDNumber::overflow, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "overflow()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QLCDNUMBER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QLCDNUMBER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "overflow()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -689,9 +691,9 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "overflow()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "overflow()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

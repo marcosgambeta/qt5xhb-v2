@@ -300,7 +300,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QWidget>
@@ -6754,20 +6754,22 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("windowTitleChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "windowTitleChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::windowTitleChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowTitleChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -6776,7 +6778,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "windowTitleChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -6787,9 +6789,9 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "windowTitleChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "windowTitleChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -6815,21 +6817,23 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("windowIconChanged(QIcon)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "windowIconChanged(QIcon)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::windowIconChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QIcon & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowIconChanged(QIcon)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QICON" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QICON" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -6837,7 +6841,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "windowIconChanged(QIcon)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -6848,9 +6852,9 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "windowIconChanged(QIcon)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "windowIconChanged(QIcon)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -6875,20 +6879,22 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("windowIconTextChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "windowIconTextChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::windowIconTextChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowIconTextChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -6897,7 +6903,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "windowIconTextChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -6908,9 +6914,9 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "windowIconTextChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "windowIconTextChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -6934,21 +6940,23 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("customContextMenuRequested(QPoint)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "customContextMenuRequested(QPoint)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::customContextMenuRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QPoint & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "customContextMenuRequested(QPoint)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWIDGET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QPOINT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWIDGET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -6956,7 +6964,7 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "customContextMenuRequested(QPoint)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -6967,9 +6975,9 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "customContextMenuRequested(QPoint)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "customContextMenuRequested(QPoint)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

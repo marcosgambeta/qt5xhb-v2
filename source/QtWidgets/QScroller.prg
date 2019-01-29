@@ -65,7 +65,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QScroller>
@@ -702,21 +702,23 @@ HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("scrollerPropertiesChanged(QScrollerProperties)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "scrollerPropertiesChanged(QScrollerProperties)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScroller::scrollerPropertiesChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QScrollerProperties & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "scrollerPropertiesChanged(QScrollerProperties)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCROLLER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSCROLLERPROPERTIES" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCROLLER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QSCROLLERPROPERTIES" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -724,7 +726,7 @@ HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "scrollerPropertiesChanged(QScrollerProperties)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -735,9 +737,9 @@ HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "scrollerPropertiesChanged(QScrollerProperties)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "scrollerPropertiesChanged(QScrollerProperties)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -761,20 +763,22 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QScroller::State)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QScroller::State)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScroller::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QScroller::State arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QScroller::State)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCROLLER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCROLLER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -783,7 +787,7 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QScroller::State)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -794,9 +798,9 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QScroller::State)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QScroller::State)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
