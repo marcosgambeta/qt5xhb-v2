@@ -59,7 +59,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QScriptEngineDebugger>
@@ -363,27 +363,29 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("evaluationResumed()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "evaluationResumed()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScriptEngineDebugger::evaluationResumed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationResumed()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "evaluationResumed()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -394,9 +396,9 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "evaluationResumed()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "evaluationResumed()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -420,27 +422,29 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("evaluationSuspended()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "evaluationSuspended()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScriptEngineDebugger::evaluationSuspended, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "evaluationSuspended()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCRIPTENGINEDEBUGGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "evaluationSuspended()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -451,9 +455,9 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "evaluationSuspended()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "evaluationSuspended()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
