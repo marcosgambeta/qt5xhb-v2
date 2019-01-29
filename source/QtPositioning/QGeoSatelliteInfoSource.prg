@@ -58,7 +58,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -378,20 +378,22 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("satellitesInViewUpdated(QList<QGeoSatelliteInfo>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoSatelliteInfoSource::satellitesInViewUpdated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QGeoSatelliteInfo> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -423,7 +425,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
 
         });
 
-        Signals2_store_connection( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -434,9 +436,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -462,20 +464,22 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("satellitesInUseUpdated(QList<QGeoSatelliteInfo>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoSatelliteInfoSource::satellitesInUseUpdated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QGeoSatelliteInfo> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -507,7 +511,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
 
         });
 
-        Signals2_store_connection( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -518,9 +522,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -546,27 +550,29 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("requestTimeout()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "requestTimeout()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoSatelliteInfoSource::requestTimeout, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "requestTimeout()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "requestTimeout()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -577,9 +583,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "requestTimeout()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "requestTimeout()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -605,20 +611,22 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QGeoSatelliteInfoSource::Error)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QGeoSatelliteInfoSource::Error)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoSatelliteInfoSource::Error>::of(&QGeoSatelliteInfoSource::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QGeoSatelliteInfoSource::Error arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoSatelliteInfoSource::Error)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -627,7 +635,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QGeoSatelliteInfoSource::Error)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -638,9 +646,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QGeoSatelliteInfoSource::Error)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QGeoSatelliteInfoSource::Error)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

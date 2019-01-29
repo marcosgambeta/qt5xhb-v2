@@ -62,7 +62,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -489,21 +489,23 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("positionUpdated(QGeoPositionInfo)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "positionUpdated(QGeoPositionInfo)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoPositionInfoSource::positionUpdated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QGeoPositionInfo & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionUpdated(QGeoPositionInfo)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOPOSITIONINFOSOURCE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QGEOPOSITIONINFO" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOPOSITIONINFOSOURCE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QGEOPOSITIONINFO" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -511,7 +513,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
 
         });
 
-        Signals2_store_connection( sender, "positionUpdated(QGeoPositionInfo)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -522,9 +524,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "positionUpdated(QGeoPositionInfo)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "positionUpdated(QGeoPositionInfo)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -550,27 +552,29 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("updateTimeout()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "updateTimeout()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoPositionInfoSource::updateTimeout, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "updateTimeout()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOPOSITIONINFOSOURCE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOPOSITIONINFOSOURCE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "updateTimeout()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -581,9 +585,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "updateTimeout()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "updateTimeout()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -609,20 +613,22 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QGeoPositionInfoSource::Error)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QGeoPositionInfoSource::Error)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QGeoPositionInfoSource::Error arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoPositionInfoSource::Error)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOPOSITIONINFOSOURCE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOPOSITIONINFOSOURCE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -631,7 +637,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QGeoPositionInfoSource::Error)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -642,9 +648,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QGeoPositionInfoSource::Error)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QGeoPositionInfoSource::Error)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

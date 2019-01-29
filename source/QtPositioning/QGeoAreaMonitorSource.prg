@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -481,22 +481,24 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoAreaMonitorSource::areaEntered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -505,7 +507,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 
         });
 
-        Signals2_store_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -516,9 +518,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -544,22 +546,24 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoAreaMonitorSource::areaExited, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -568,7 +572,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 
         });
 
-        Signals2_store_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -579,9 +583,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -607,21 +611,23 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("monitorExpired(QGeoAreaMonitorInfo)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoAreaMonitorSource::monitorExpired, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QGeoAreaMonitorInfo & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "monitorExpired(QGeoAreaMonitorInfo)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -629,7 +635,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 
         });
 
-        Signals2_store_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -640,9 +646,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "monitorExpired(QGeoAreaMonitorInfo)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "monitorExpired(QGeoAreaMonitorInfo)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -668,20 +674,22 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QGeoAreaMonitorSource::Error)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QGeoAreaMonitorSource::Error)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QGeoAreaMonitorSource::Error arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QGeoAreaMonitorSource::Error)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -690,7 +698,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QGeoAreaMonitorSource::Error)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -701,9 +709,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QGeoAreaMonitorSource::Error)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QGeoAreaMonitorSource::Error)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
