@@ -260,7 +260,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QObject>
@@ -1187,12 +1187,12 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
     if( hb_pcount() == 0 )
     {
       Events_disconnect_all_events (obj, false);
-      Signals2_disconnect_all_signals (obj, false);
+      Signals3_disconnect_all_signals (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
       Events_disconnect_all_events (obj, PBOOL(1) );
-      Signals2_disconnect_all_signals (obj, PBOOL(1) );
+      Signals3_disconnect_all_signals (obj, PBOOL(1) );
     }
     else
     {
@@ -1234,11 +1234,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
   {
     if( hb_pcount() == 0 )
     {
-      Signals2_disconnect_all_signals (obj, false);
+      Signals3_disconnect_all_signals (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Signals2_disconnect_all_signals (obj, PBOOL(1) );
+      Signals3_disconnect_all_signals (obj, PBOOL(1) );
     }
     else
     {
@@ -2246,30 +2246,32 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("destroyed(QObject*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "destroyed(QObject*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QObject::destroyed,
-                                                              [sender]
+                                                              [sender,index]
                                                               (QObject * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "destroyed(QObject*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOBJECT" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QOBJECT" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
-            Signals2_disconnect_signal( sender, "destroyed(QObject*)" );
+            Signals3_disconnect_signal( sender, sender->metaObject()->indexOfSignal("destroyed(QObject*)") );
           }
 
         });
 
-        Signals2_store_connection( sender, "destroyed(QObject*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2280,9 +2282,9 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "destroyed(QObject*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "destroyed(QObject*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2306,20 +2308,22 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("objectNameChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "objectNameChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QObject::objectNameChanged,
-                                                              [sender]
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QObject::objectNameChanged, 
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "objectNameChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QOBJECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QOBJECT" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2328,7 +2332,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "objectNameChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2339,9 +2343,9 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "objectNameChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "objectNameChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

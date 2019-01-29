@@ -74,7 +74,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QIODevice>
@@ -890,27 +890,29 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("aboutToClose()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "aboutToClose()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::aboutToClose, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToClose()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QIODEVICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "aboutToClose()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -921,9 +923,9 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "aboutToClose()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "aboutToClose()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -947,20 +949,22 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::bytesWritten, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bytesWritten(qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QIODEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -969,7 +973,7 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 
         });
 
-        Signals2_store_connection( sender, "bytesWritten(qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -980,9 +984,9 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bytesWritten(qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bytesWritten(qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1006,27 +1010,29 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("readChannelFinished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "readChannelFinished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::readChannelFinished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "readChannelFinished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QIODEVICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "readChannelFinished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1037,9 +1043,9 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "readChannelFinished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "readChannelFinished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1063,27 +1069,29 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("readyRead()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "readyRead()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::readyRead, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyRead()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QIODEVICE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QIODEVICE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "readyRead()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1094,9 +1102,9 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "readyRead()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "readyRead()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

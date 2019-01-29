@@ -67,7 +67,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QItemSelectionModel>
@@ -693,22 +693,24 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionChanged(QItemSelection,QItemSelection)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionChanged(QItemSelection,QItemSelection)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::selectionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QItemSelection & arg1, const QItemSelection & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged(QItemSelection,QItemSelection)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QITEMSELECTION" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QITEMSELECTION" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QITEMSELECTION" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QITEMSELECTION" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -717,7 +719,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "selectionChanged(QItemSelection,QItemSelection)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -728,9 +730,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionChanged(QItemSelection,QItemSelection)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged(QItemSelection,QItemSelection)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -754,22 +756,24 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentChanged(QModelIndex,QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentChanged(QModelIndex,QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::currentChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentChanged(QModelIndex,QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -778,7 +782,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentChanged(QModelIndex,QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -789,9 +793,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentChanged(QModelIndex,QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentChanged(QModelIndex,QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -815,22 +819,24 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentRowChanged(QModelIndex,QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::currentRowChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentRowChanged(QModelIndex,QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -839,7 +845,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -850,9 +856,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentRowChanged(QModelIndex,QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentRowChanged(QModelIndex,QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -876,22 +882,24 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentColumnChanged(QModelIndex,QModelIndex)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::currentColumnChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentColumnChanged(QModelIndex,QModelIndex)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QMODELINDEX" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -900,7 +908,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -911,9 +919,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentColumnChanged(QModelIndex,QModelIndex)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

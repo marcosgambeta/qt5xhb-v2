@@ -64,7 +64,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QStateMachine>
@@ -634,27 +634,29 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("started()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "started()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QStateMachine::started, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSTATEMACHINE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSTATEMACHINE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "started()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -665,9 +667,9 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "started()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "started()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -691,27 +693,29 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stopped()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stopped()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QStateMachine::stopped, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stopped()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSTATEMACHINE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSTATEMACHINE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "stopped()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -722,9 +726,9 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stopped()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stopped()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

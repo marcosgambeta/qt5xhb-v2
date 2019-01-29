@@ -51,7 +51,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QSignalMapper>
@@ -350,20 +350,22 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("mapped(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "mapped(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QSignalMapper::mapped), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -372,7 +374,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
 
         });
 
-        Signals2_store_connection( sender, "mapped(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -383,9 +385,9 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "mapped(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "mapped(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -409,20 +411,22 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("mapped(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "mapped(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QSignalMapper::mapped), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -431,7 +435,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
 
         });
 
-        Signals2_store_connection( sender, "mapped(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -442,9 +446,9 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "mapped(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "mapped(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -468,21 +472,23 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("mapped(QWidget*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "mapped(QWidget*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QWidget *>::of(&QSignalMapper::mapped), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWidget * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QWidget*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWIDGET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -490,7 +496,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
 
         });
 
-        Signals2_store_connection( sender, "mapped(QWidget*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -501,9 +507,9 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "mapped(QWidget*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "mapped(QWidget*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -527,21 +533,23 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("mapped(QObject*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "mapped(QObject*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QObject *>::of(&QSignalMapper::mapped), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QObject * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "mapped(QObject*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QOBJECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QOBJECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -549,7 +557,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
 
         });
 
-        Signals2_store_connection( sender, "mapped(QObject*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -560,9 +568,9 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "mapped(QObject*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "mapped(QObject*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -102,7 +102,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QProcess>
@@ -1520,20 +1520,22 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QProcess::ProcessError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QProcess::ProcessError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QProcess::ProcessError>::of(&QProcess::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QProcess::ProcessError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QProcess::ProcessError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPROCESS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1542,7 +1544,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QProcess::ProcessError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1553,9 +1555,9 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QProcess::ProcessError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QProcess::ProcessError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1579,20 +1581,22 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished(int,QProcess::ExitStatus)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished(int,QProcess::ExitStatus)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QProcess::ExitStatus arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished(int,QProcess::ExitStatus)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPROCESS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1603,7 +1607,7 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 
         });
 
-        Signals2_store_connection( sender, "finished(int,QProcess::ExitStatus)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1614,9 +1618,9 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished(int,QProcess::ExitStatus)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished(int,QProcess::ExitStatus)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1640,27 +1644,29 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("readyReadStandardError()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "readyReadStandardError()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::readyReadStandardError, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyReadStandardError()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPROCESS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "readyReadStandardError()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1671,9 +1677,9 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "readyReadStandardError()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "readyReadStandardError()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1697,27 +1703,29 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("readyReadStandardOutput()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "readyReadStandardOutput()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::readyReadStandardOutput, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyReadStandardOutput()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPROCESS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "readyReadStandardOutput()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1728,9 +1736,9 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "readyReadStandardOutput()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "readyReadStandardOutput()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1754,27 +1762,29 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("started()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "started()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::started, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "started()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPROCESS" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "started()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1785,9 +1795,9 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "started()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "started()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1811,20 +1821,22 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QProcess::ProcessState)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QProcess::ProcessState)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QProcess::ProcessState arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QProcess::ProcessState)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPROCESS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1833,7 +1845,7 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QProcess::ProcessState)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1844,9 +1856,9 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QProcess::ProcessState)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QProcess::ProcessState)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1871,20 +1883,22 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("errorOccurred(QProcess::ProcessError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "errorOccurred(QProcess::ProcessError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::errorOccurred, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QProcess::ProcessError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "errorOccurred(QProcess::ProcessError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QPROCESS" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QPROCESS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1893,7 +1907,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 
         });
 
-        Signals2_store_connection( sender, "errorOccurred(QProcess::ProcessError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1904,9 +1918,9 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "errorOccurred(QProcess::ProcessError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "errorOccurred(QProcess::ProcessError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
