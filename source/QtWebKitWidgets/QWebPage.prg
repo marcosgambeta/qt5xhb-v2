@@ -127,7 +127,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QWebPage>
@@ -1355,21 +1355,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::applicationCacheQuotaExceeded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebSecurityOrigin * arg1, quint64 arg2, quint64 arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) arg1, "QWEBSECURITYORIGIN" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QWEBSECURITYORIGIN" );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNLL( NULL, arg3 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
@@ -1381,7 +1383,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
 
         });
 
-        Signals2_store_connection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1392,9 +1394,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1418,27 +1420,29 @@ HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("contentsChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "contentsChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::contentsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "contentsChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "contentsChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1449,9 +1453,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "contentsChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "contentsChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1475,21 +1479,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("databaseQuotaExceeded(QWebFrame*,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "databaseQuotaExceeded(QWebFrame*,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::databaseQuotaExceeded, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebFrame * arg1, QString arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "databaseQuotaExceeded(QWebFrame*,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1499,7 +1505,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 
         });
 
-        Signals2_store_connection( sender, "databaseQuotaExceeded(QWebFrame*,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1510,9 +1516,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "databaseQuotaExceeded(QWebFrame*,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "databaseQuotaExceeded(QWebFrame*,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1536,21 +1542,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("downloadRequested(QNetworkRequest)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "downloadRequested(QNetworkRequest)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::downloadRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QNetworkRequest & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "downloadRequested(QNetworkRequest)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKREQUEST" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QNETWORKREQUEST" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1558,7 +1566,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "downloadRequested(QNetworkRequest)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1569,9 +1577,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "downloadRequested(QNetworkRequest)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "downloadRequested(QNetworkRequest)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1595,21 +1603,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::featurePermissionRequestCanceled, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebFrame * arg1, QWebPage::Feature arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1619,7 +1629,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 
         });
 
-        Signals2_store_connection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1630,9 +1640,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1656,21 +1666,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("featurePermissionRequested(QWebFrame*,QWebPage::Feature)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::featurePermissionRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebFrame * arg1, QWebPage::Feature arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1680,7 +1692,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1691,9 +1703,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1717,21 +1729,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("frameCreated(QWebFrame*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "frameCreated(QWebFrame*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::frameCreated, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebFrame * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "frameCreated(QWebFrame*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1739,7 +1753,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
 
         });
 
-        Signals2_store_connection( sender, "frameCreated(QWebFrame*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1750,9 +1764,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "frameCreated(QWebFrame*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "frameCreated(QWebFrame*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1776,21 +1790,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("geometryChangeRequested(QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "geometryChangeRequested(QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::geometryChangeRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRect & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChangeRequested(QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1798,7 +1814,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "geometryChangeRequested(QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1809,9 +1825,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "geometryChangeRequested(QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "geometryChangeRequested(QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1835,21 +1851,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("linkClicked(QUrl)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "linkClicked(QUrl)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::linkClicked, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkClicked(QUrl)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1857,7 +1875,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
 
         });
 
-        Signals2_store_connection( sender, "linkClicked(QUrl)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1868,9 +1886,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "linkClicked(QUrl)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "linkClicked(QUrl)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1894,20 +1912,22 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("linkHovered(QString,QString,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "linkHovered(QString,QString,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::linkHovered, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1, const QString & arg2, const QString & arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "linkHovered(QString,QString,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
@@ -1920,7 +1940,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
 
         });
 
-        Signals2_store_connection( sender, "linkHovered(QString,QString,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1931,9 +1951,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "linkHovered(QString,QString,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "linkHovered(QString,QString,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1957,20 +1977,22 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("loadFinished(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "loadFinished(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::loadFinished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadFinished(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1979,7 +2001,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
 
         });
 
-        Signals2_store_connection( sender, "loadFinished(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1990,9 +2012,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "loadFinished(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "loadFinished(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2016,20 +2038,22 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("loadProgress(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "loadProgress(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::loadProgress, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadProgress(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2038,7 +2062,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
 
         });
 
-        Signals2_store_connection( sender, "loadProgress(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2049,9 +2073,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "loadProgress(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "loadProgress(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2075,27 +2099,29 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("loadStarted()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "loadStarted()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::loadStarted, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "loadStarted()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "loadStarted()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2106,9 +2132,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "loadStarted()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "loadStarted()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2132,20 +2158,22 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("menuBarVisibilityChangeRequested(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "menuBarVisibilityChangeRequested(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::menuBarVisibilityChangeRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "menuBarVisibilityChangeRequested(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2154,7 +2182,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "menuBarVisibilityChangeRequested(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2165,9 +2193,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "menuBarVisibilityChangeRequested(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "menuBarVisibilityChangeRequested(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2191,27 +2219,29 @@ HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("microFocusChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "microFocusChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::microFocusChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "microFocusChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "microFocusChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2222,9 +2252,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "microFocusChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "microFocusChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2248,21 +2278,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("printRequested(QWebFrame*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "printRequested(QWebFrame*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::printRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebFrame * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "printRequested(QWebFrame*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2270,7 +2302,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "printRequested(QWebFrame*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2281,9 +2313,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "printRequested(QWebFrame*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "printRequested(QWebFrame*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2307,21 +2339,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("repaintRequested(QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "repaintRequested(QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::repaintRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRect & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "repaintRequested(QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2329,7 +2363,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "repaintRequested(QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2340,9 +2374,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "repaintRequested(QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "repaintRequested(QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2366,21 +2400,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("restoreFrameStateRequested(QWebFrame*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "restoreFrameStateRequested(QWebFrame*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::restoreFrameStateRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebFrame * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "restoreFrameStateRequested(QWebFrame*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2388,7 +2424,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "restoreFrameStateRequested(QWebFrame*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2399,9 +2435,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "restoreFrameStateRequested(QWebFrame*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "restoreFrameStateRequested(QWebFrame*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2425,22 +2461,24 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::saveFrameStateRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QWebFrame * arg1, QWebHistoryItem * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QWEBFRAME" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QWEBHISTORYITEM" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QWEBFRAME" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QWEBHISTORYITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2449,7 +2487,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2460,9 +2498,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2486,23 +2524,25 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("scrollRequested(int,int,QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "scrollRequested(int,int,QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::scrollRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, int arg2, const QRect & arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "scrollRequested(int,int,QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = Signals2_return_object( (void *) &arg3, "QRECT" );
+            PHB_ITEM pArg3 = Signals3_return_object( (void *) &arg3, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2512,7 +2552,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "scrollRequested(int,int,QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2523,9 +2563,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "scrollRequested(int,int,QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "scrollRequested(int,int,QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2549,27 +2589,29 @@ HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("selectionChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "selectionChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::selectionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "selectionChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "selectionChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2580,9 +2622,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "selectionChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "selectionChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2606,20 +2648,22 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("statusBarMessage(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "statusBarMessage(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::statusBarMessage, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarMessage(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2628,7 +2672,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
 
         });
 
-        Signals2_store_connection( sender, "statusBarMessage(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2639,9 +2683,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "statusBarMessage(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "statusBarMessage(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2665,20 +2709,22 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("statusBarVisibilityChangeRequested(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "statusBarVisibilityChangeRequested(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::statusBarVisibilityChangeRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusBarVisibilityChangeRequested(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2687,7 +2733,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "statusBarVisibilityChangeRequested(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2698,9 +2744,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "statusBarVisibilityChangeRequested(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "statusBarVisibilityChangeRequested(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2724,20 +2770,22 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("toolBarVisibilityChangeRequested(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "toolBarVisibilityChangeRequested(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::toolBarVisibilityChangeRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "toolBarVisibilityChangeRequested(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2746,7 +2794,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 
         });
 
-        Signals2_store_connection( sender, "toolBarVisibilityChangeRequested(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2757,9 +2805,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "toolBarVisibilityChangeRequested(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "toolBarVisibilityChangeRequested(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2783,21 +2831,23 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("unsupportedContent(QNetworkReply*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "unsupportedContent(QNetworkReply*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::unsupportedContent, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QNetworkReply * arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "unsupportedContent(QNetworkReply*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            PHB_ITEM pArg1 = Signals2_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2805,7 +2855,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 
         });
 
-        Signals2_store_connection( sender, "unsupportedContent(QNetworkReply*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2816,9 +2866,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "unsupportedContent(QNetworkReply*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "unsupportedContent(QNetworkReply*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2842,27 +2892,29 @@ HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("viewportChangeRequested()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "viewportChangeRequested()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::viewportChangeRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "viewportChangeRequested()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "viewportChangeRequested()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2873,9 +2925,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "viewportChangeRequested()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "viewportChangeRequested()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2899,27 +2951,29 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("windowCloseRequested()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "windowCloseRequested()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::windowCloseRequested, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "windowCloseRequested()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBPAGE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "windowCloseRequested()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2930,9 +2984,9 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "windowCloseRequested()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "windowCloseRequested()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
