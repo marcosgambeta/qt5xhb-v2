@@ -49,7 +49,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -185,20 +185,22 @@ HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("returnGeoValuesChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "returnGeoValuesChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMagnetometer::returnGeoValuesChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "returnGeoValuesChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMAGNETOMETER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMAGNETOMETER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -207,7 +209,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "returnGeoValuesChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -218,9 +220,9 @@ HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "returnGeoValuesChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "returnGeoValuesChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -99,7 +99,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -1253,27 +1253,29 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("busyChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "busyChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::busyChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "busyChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "busyChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1284,9 +1286,9 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "busyChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "busyChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1312,27 +1314,29 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("activeChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "activeChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::activeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "activeChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "activeChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1343,9 +1347,9 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "activeChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "activeChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1371,27 +1375,29 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("readingChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "readingChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::readingChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "readingChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "readingChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1402,9 +1408,9 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "readingChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "readingChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1430,20 +1436,22 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sensorError(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sensorError(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::sensorError, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sensorError(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1452,7 +1460,7 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
 
         });
 
-        Signals2_store_connection( sender, "sensorError(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1463,9 +1471,9 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sensorError(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sensorError(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1491,27 +1499,29 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("availableSensorsChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "availableSensorsChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::availableSensorsChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "availableSensorsChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "availableSensorsChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1522,9 +1532,9 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "availableSensorsChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "availableSensorsChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1550,27 +1560,29 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("alwaysOnChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "alwaysOnChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::alwaysOnChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "alwaysOnChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "alwaysOnChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1581,9 +1593,9 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "alwaysOnChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "alwaysOnChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1609,27 +1621,29 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("dataRateChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "dataRateChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::dataRateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "dataRateChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "dataRateChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1640,9 +1654,9 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "dataRateChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "dataRateChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1668,20 +1682,22 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("skipDuplicatesChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "skipDuplicatesChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::skipDuplicatesChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "skipDuplicatesChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1690,7 +1706,7 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "skipDuplicatesChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1701,9 +1717,9 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "skipDuplicatesChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "skipDuplicatesChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1729,20 +1745,22 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("axesOrientationModeChanged(QSensor::AxesOrientationMode)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::axesOrientationModeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QSensor::AxesOrientationMode arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1751,7 +1769,7 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1762,9 +1780,9 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1790,20 +1808,22 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("currentOrientationChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "currentOrientationChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::currentOrientationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "currentOrientationChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1812,7 +1832,7 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "currentOrientationChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1823,9 +1843,9 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "currentOrientationChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "currentOrientationChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1851,20 +1871,22 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("userOrientationChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "userOrientationChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::userOrientationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "userOrientationChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1873,7 +1895,7 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "userOrientationChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1884,9 +1906,9 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "userOrientationChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "userOrientationChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1912,20 +1934,22 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("maxBufferSizeChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "maxBufferSizeChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::maxBufferSizeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "maxBufferSizeChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1934,7 +1958,7 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "maxBufferSizeChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1945,9 +1969,9 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "maxBufferSizeChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "maxBufferSizeChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1973,20 +1997,22 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("efficientBufferSizeChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "efficientBufferSizeChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::efficientBufferSizeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "efficientBufferSizeChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1995,7 +2021,7 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "efficientBufferSizeChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2006,9 +2032,9 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "efficientBufferSizeChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "efficientBufferSizeChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -2034,20 +2060,22 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bufferSizeChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bufferSizeChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSensor::bufferSizeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferSizeChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSENSOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2056,7 +2084,7 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "bufferSizeChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -2067,9 +2095,9 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bufferSizeChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bufferSizeChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
