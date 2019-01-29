@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAbstractTextDocumentLayout>
@@ -369,21 +369,23 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("documentSizeChanged(QSizeF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "documentSizeChanged(QSizeF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::documentSizeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QSizeF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "documentSizeChanged(QSizeF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZEF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QSIZEF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -391,7 +393,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "documentSizeChanged(QSizeF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -402,9 +404,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "documentSizeChanged(QSizeF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "documentSizeChanged(QSizeF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -428,20 +430,22 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pageCountChanged(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pageCountChanged(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::pageCountChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pageCountChanged(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -450,7 +454,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "pageCountChanged(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -461,9 +465,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pageCountChanged(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pageCountChanged(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -487,21 +491,23 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("update(QRectF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "update(QRectF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::update, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRectF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "update(QRectF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECTF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECTF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -509,7 +515,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 
         });
 
-        Signals2_store_connection( sender, "update(QRectF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -520,9 +526,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "update(QRectF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "update(QRectF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -546,21 +552,23 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("updateBlock(QTextBlock)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "updateBlock(QTextBlock)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::updateBlock, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QTextBlock & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "updateBlock(QTextBlock)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QTEXTBLOCK" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QTEXTBLOCK" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -568,7 +576,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 
         });
 
-        Signals2_store_connection( sender, "updateBlock(QTextBlock)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -579,9 +587,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "updateBlock(QTextBlock)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "updateBlock(QTextBlock)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

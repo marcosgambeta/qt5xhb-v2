@@ -84,7 +84,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QScreen>
@@ -881,21 +881,23 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("geometryChanged(QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "geometryChanged(QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::geometryChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRect & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "geometryChanged(QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -903,7 +905,7 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "geometryChanged(QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -914,9 +916,9 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "geometryChanged(QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "geometryChanged(QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -940,21 +942,23 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("physicalSizeChanged(QSizeF)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "physicalSizeChanged(QSizeF)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::physicalSizeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QSizeF & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalSizeChanged(QSizeF)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QSIZEF" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QSIZEF" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -962,7 +966,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "physicalSizeChanged(QSizeF)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -973,9 +977,9 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "physicalSizeChanged(QSizeF)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "physicalSizeChanged(QSizeF)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -999,20 +1003,22 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("physicalDotsPerInchChanged(qreal)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "physicalDotsPerInchChanged(qreal)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::physicalDotsPerInchChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "physicalDotsPerInchChanged(qreal)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1021,7 +1027,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "physicalDotsPerInchChanged(qreal)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1032,9 +1038,9 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "physicalDotsPerInchChanged(qreal)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "physicalDotsPerInchChanged(qreal)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1058,20 +1064,22 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("logicalDotsPerInchChanged(qreal)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "logicalDotsPerInchChanged(qreal)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::logicalDotsPerInchChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "logicalDotsPerInchChanged(qreal)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1080,7 +1088,7 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "logicalDotsPerInchChanged(qreal)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1091,9 +1099,9 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "logicalDotsPerInchChanged(qreal)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "logicalDotsPerInchChanged(qreal)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1117,21 +1125,23 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("virtualGeometryChanged(QRect)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "virtualGeometryChanged(QRect)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::virtualGeometryChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QRect & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "virtualGeometryChanged(QRect)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QRECT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1139,7 +1149,7 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "virtualGeometryChanged(QRect)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1150,9 +1160,9 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "virtualGeometryChanged(QRect)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "virtualGeometryChanged(QRect)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1176,20 +1186,22 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("primaryOrientationChanged(Qt::ScreenOrientation)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::primaryOrientationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::ScreenOrientation arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1198,7 +1210,7 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1209,9 +1221,9 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "primaryOrientationChanged(Qt::ScreenOrientation)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1235,20 +1247,22 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("orientationChanged(Qt::ScreenOrientation)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::orientationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (Qt::ScreenOrientation arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "orientationChanged(Qt::ScreenOrientation)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1257,7 +1271,7 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "orientationChanged(Qt::ScreenOrientation)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1268,9 +1282,9 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "orientationChanged(Qt::ScreenOrientation)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "orientationChanged(Qt::ScreenOrientation)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1294,20 +1308,22 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("refreshRateChanged(qreal)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "refreshRateChanged(qreal)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::refreshRateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "refreshRateChanged(qreal)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QSCREEN" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSCREEN" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1316,7 +1332,7 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "refreshRateChanged(qreal)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1327,9 +1343,9 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "refreshRateChanged(qreal)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "refreshRateChanged(qreal)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
