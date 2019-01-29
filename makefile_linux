@@ -1,7 +1,7 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+# Copyright (C) 2019 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 # Makefile for Linux/GCC
 #
@@ -96,6 +96,7 @@ include mak/modules7.mak
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals2$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals3$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/dummy$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
