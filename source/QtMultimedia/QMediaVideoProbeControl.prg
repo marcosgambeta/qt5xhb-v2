@@ -43,7 +43,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaVideoProbeControl>
@@ -84,27 +84,29 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("flush()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "flush()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaVideoProbeControl::flush, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "flush()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAVIDEOPROBECONTROL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMEDIAVIDEOPROBECONTROL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "flush()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -115,9 +117,9 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "flush()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "flush()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -141,21 +143,23 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("videoFrameProbed(QVideoFrame)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "videoFrameProbed(QVideoFrame)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaVideoProbeControl::videoFrameProbed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QVideoFrame & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "videoFrameProbed(QVideoFrame)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAVIDEOPROBECONTROL" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QVIDEOFRAME" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMEDIAVIDEOPROBECONTROL" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QVIDEOFRAME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -163,7 +167,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 
         });
 
-        Signals2_store_connection( sender, "videoFrameProbed(QVideoFrame)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -174,9 +178,9 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "videoFrameProbed(QVideoFrame)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "videoFrameProbed(QVideoFrame)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

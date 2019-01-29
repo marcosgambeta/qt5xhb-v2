@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QRadioData>
@@ -383,20 +383,22 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stationIdChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stationIdChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioData::stationIdChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QString arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stationIdChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -405,7 +407,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stationIdChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -416,9 +418,9 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stationIdChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stationIdChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -442,20 +444,22 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("programTypeChanged(QRadioData::ProgramType)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "programTypeChanged(QRadioData::ProgramType)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioData::programTypeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QRadioData::ProgramType arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "programTypeChanged(QRadioData::ProgramType)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -464,7 +468,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "programTypeChanged(QRadioData::ProgramType)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -475,9 +479,9 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "programTypeChanged(QRadioData::ProgramType)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "programTypeChanged(QRadioData::ProgramType)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -501,20 +505,22 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("programTypeNameChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "programTypeNameChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioData::programTypeNameChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QString arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "programTypeNameChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -523,7 +529,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "programTypeNameChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -534,9 +540,9 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "programTypeNameChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "programTypeNameChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -560,20 +566,22 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stationNameChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stationNameChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioData::stationNameChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QString arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stationNameChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -582,7 +590,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stationNameChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -593,9 +601,9 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stationNameChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stationNameChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -619,20 +627,22 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("radioTextChanged(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "radioTextChanged(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioData::radioTextChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QString arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "radioTextChanged(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -641,7 +651,7 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "radioTextChanged(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -652,9 +662,9 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "radioTextChanged(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "radioTextChanged(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -678,20 +688,22 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("alternativeFrequenciesEnabledChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "alternativeFrequenciesEnabledChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioData::alternativeFrequenciesEnabledChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "alternativeFrequenciesEnabledChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -700,7 +712,7 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "alternativeFrequenciesEnabledChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -711,9 +723,9 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "alternativeFrequenciesEnabledChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "alternativeFrequenciesEnabledChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -737,20 +749,22 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QRadioData::Error)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QRadioData::Error)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QRadioData::Error>::of(&QRadioData::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QRadioData::Error arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QRadioData::Error)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -759,7 +773,7 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QRadioData::Error)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -770,9 +784,9 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QRadioData::Error)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QRadioData::Error)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -52,7 +52,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraControl>
@@ -263,20 +263,22 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("captureModeChanged(QCamera::CaptureModes)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "captureModeChanged(QCamera::CaptureModes)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraControl::captureModeChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCamera::CaptureModes arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "captureModeChanged(QCamera::CaptureModes)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -285,7 +287,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "captureModeChanged(QCamera::CaptureModes)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -296,9 +298,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "captureModeChanged(QCamera::CaptureModes)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "captureModeChanged(QCamera::CaptureModes)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -322,20 +324,22 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(int,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(int,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraControl::error, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, const QString & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -346,7 +350,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(int,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -357,9 +361,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(int,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(int,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -383,20 +387,22 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QCamera::State)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QCamera::State)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraControl::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCamera::State arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QCamera::State)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -405,7 +411,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QCamera::State)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -416,9 +422,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QCamera::State)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QCamera::State)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -442,20 +448,22 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("statusChanged(QCamera::Status)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "statusChanged(QCamera::Status)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraControl::statusChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCamera::Status arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "statusChanged(QCamera::Status)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERACONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -464,7 +472,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "statusChanged(QCamera::Status)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -475,9 +483,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "statusChanged(QCamera::Status)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "statusChanged(QCamera::Status)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -70,7 +70,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QAudioDecoder>
@@ -521,20 +521,22 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bufferAvailableChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bufferAvailableChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::bufferAvailableChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferAvailableChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -543,7 +545,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "bufferAvailableChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -554,9 +556,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bufferAvailableChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bufferAvailableChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -580,27 +582,29 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bufferReady()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bufferReady()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::bufferReady, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferReady()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "bufferReady()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -611,9 +615,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bufferReady()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bufferReady()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -637,20 +641,22 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("durationChanged(qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "durationChanged(qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::durationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "durationChanged(qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -659,7 +665,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "durationChanged(qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -670,9 +676,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "durationChanged(qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "durationChanged(qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -696,20 +702,22 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QAudioDecoder::Error)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QAudioDecoder::Error)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAudioDecoder::Error>::of(&QAudioDecoder::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAudioDecoder::Error arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAudioDecoder::Error)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -718,7 +726,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QAudioDecoder::Error)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -729,9 +737,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QAudioDecoder::Error)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QAudioDecoder::Error)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -755,27 +763,29 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("finished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "finished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::finished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "finished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "finished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -786,9 +796,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "finished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "finished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -812,21 +822,23 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("formatChanged(QAudioFormat)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "formatChanged(QAudioFormat)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::formatChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QAudioFormat & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "formatChanged(QAudioFormat)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QAUDIOFORMAT" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QAUDIOFORMAT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -834,7 +846,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "formatChanged(QAudioFormat)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -845,9 +857,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "formatChanged(QAudioFormat)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "formatChanged(QAudioFormat)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -871,20 +883,22 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("positionChanged(qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "positionChanged(qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::positionChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "positionChanged(qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -893,7 +907,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "positionChanged(qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -904,9 +918,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "positionChanged(qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "positionChanged(qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -930,27 +944,29 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sourceChanged()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sourceChanged()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::sourceChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sourceChanged()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "sourceChanged()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -961,9 +977,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sourceChanged()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sourceChanged()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -987,20 +1003,22 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QAudioDecoder::State)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QAudioDecoder::State)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioDecoder::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAudioDecoder::State arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAudioDecoder::State)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QAUDIODECODER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1009,7 +1027,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QAudioDecoder::State)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1020,9 +1038,9 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QAudioDecoder::State)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QAudioDecoder::State)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

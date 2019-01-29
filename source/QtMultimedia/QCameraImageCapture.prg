@@ -73,7 +73,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QCameraImageCapture>
@@ -634,20 +634,22 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bufferFormatChanged(QVideoFrame::PixelFormat)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::bufferFormatChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QVideoFrame::PixelFormat arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -656,7 +658,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -667,9 +669,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bufferFormatChanged(QVideoFrame::PixelFormat)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -693,20 +695,22 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("captureDestinationChanged(QCameraImageCapture::CaptureDestinations)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::captureDestinationChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QCameraImageCapture::CaptureDestinations arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -715,7 +719,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
 
         });
 
-        Signals2_store_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -726,9 +730,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -752,20 +756,22 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(int,QCameraImageCapture::Error,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(int,QCameraImageCapture::Error,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int,QCameraImageCapture::Error,const QString &>::of(&QCameraImageCapture::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, QCameraImageCapture::Error arg2, const QString & arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(int,QCameraImageCapture::Error,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
@@ -778,7 +784,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(int,QCameraImageCapture::Error,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -789,9 +795,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(int,QCameraImageCapture::Error,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(int,QCameraImageCapture::Error,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -815,22 +821,24 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("imageAvailable(int,QVideoFrame)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "imageAvailable(int,QVideoFrame)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::imageAvailable, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, const QVideoFrame & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageAvailable(int,QVideoFrame)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QVIDEOFRAME" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QVIDEOFRAME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -839,7 +847,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
 
         });
 
-        Signals2_store_connection( sender, "imageAvailable(int,QVideoFrame)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -850,9 +858,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "imageAvailable(int,QVideoFrame)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "imageAvailable(int,QVideoFrame)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -876,22 +884,24 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("imageCaptured(int,QImage)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "imageCaptured(int,QImage)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::imageCaptured, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, const QImage & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageCaptured(int,QImage)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QIMAGE" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QIMAGE" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -900,7 +910,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
 
         });
 
-        Signals2_store_connection( sender, "imageCaptured(int,QImage)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -911,9 +921,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "imageCaptured(int,QImage)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "imageCaptured(int,QImage)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -937,20 +947,22 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("imageExposed(int)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "imageExposed(int)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::imageExposed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageExposed(int)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -959,7 +971,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
 
         });
 
-        Signals2_store_connection( sender, "imageExposed(int)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -970,9 +982,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "imageExposed(int)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "imageExposed(int)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -996,23 +1008,25 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("imageMetadataAvailable(int,QString,QVariant)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "imageMetadataAvailable(int,QString,QVariant)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::imageMetadataAvailable, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, const QString & arg2, const QVariant & arg3) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageMetadataAvailable(int,QString,QVariant)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
-            PHB_ITEM pArg3 = Signals2_return_object( (void *) &arg3, "QVARIANT" );
+            PHB_ITEM pArg3 = Signals3_return_object( (void *) &arg3, "QVARIANT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1022,7 +1036,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
 
         });
 
-        Signals2_store_connection( sender, "imageMetadataAvailable(int,QString,QVariant)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1033,9 +1047,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "imageMetadataAvailable(int,QString,QVariant)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "imageMetadataAvailable(int,QString,QVariant)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1059,20 +1073,22 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("imageSaved(int,QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "imageSaved(int,QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::imageSaved, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (int arg1, const QString & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "imageSaved(int,QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1083,7 +1099,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
 
         });
 
-        Signals2_store_connection( sender, "imageSaved(int,QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1094,9 +1110,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "imageSaved(int,QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "imageSaved(int,QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1120,20 +1136,22 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("readyForCaptureChanged(bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "readyForCaptureChanged(bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraImageCapture::readyForCaptureChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "readyForCaptureChanged(bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QCAMERAIMAGECAPTURE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1142,7 +1160,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "readyForCaptureChanged(bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1153,9 +1171,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "readyForCaptureChanged(bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "readyForCaptureChanged(bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }

@@ -43,7 +43,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #include <QMediaAudioProbeControl>
@@ -84,21 +84,23 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("audioBufferProbed(QAudioBuffer)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "audioBufferProbed(QAudioBuffer)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaAudioProbeControl::audioBufferProbed, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QAudioBuffer & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "audioBufferProbed(QAudioBuffer)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QAUDIOBUFFER" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QAUDIOBUFFER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -106,7 +108,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
 
         });
 
-        Signals2_store_connection( sender, "audioBufferProbed(QAudioBuffer)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -117,9 +119,9 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "audioBufferProbed(QAudioBuffer)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "audioBufferProbed(QAudioBuffer)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -143,27 +145,29 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("flush()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "flush()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaAudioProbeControl::flush, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "flush()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "flush()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -174,9 +178,9 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "flush()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "flush()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
