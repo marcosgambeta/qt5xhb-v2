@@ -97,7 +97,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals2.h"
+#include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
@@ -1100,27 +1100,29 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("aboutToClose()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "aboutToClose()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::aboutToClose, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "aboutToClose()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "aboutToClose()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1131,9 +1133,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "aboutToClose()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "aboutToClose()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1159,27 +1161,29 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("connected()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "connected()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::connected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "connected()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "connected()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1190,9 +1194,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "connected()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "connected()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1218,27 +1222,29 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("disconnected()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "disconnected()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::disconnected, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "disconnected()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "disconnected()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1249,9 +1255,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "disconnected()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "disconnected()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1277,20 +1283,22 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("stateChanged(QAbstractSocket::SocketState)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::stateChanged, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractSocket::SocketState arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "stateChanged(QAbstractSocket::SocketState)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1299,7 +1307,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
 
         });
 
-        Signals2_store_connection( sender, "stateChanged(QAbstractSocket::SocketState)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1310,9 +1318,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "stateChanged(QAbstractSocket::SocketState)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "stateChanged(QAbstractSocket::SocketState)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1338,22 +1346,24 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::proxyAuthenticationRequired, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QNETWORKPROXY" );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) arg2, "QAUTHENTICATOR" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QNETWORKPROXY" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QAUTHENTICATOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1362,7 +1372,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 
         });
 
-        Signals2_store_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1373,9 +1383,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1401,27 +1411,29 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("readChannelFinished()");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "readChannelFinished()" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::readChannelFinished, 
-                                                              [sender]
+                                                              [sender,index]
                                                               () {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "readChannelFinished()" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals2_store_connection( sender, "readChannelFinished()", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1432,9 +1444,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "readChannelFinished()" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "readChannelFinished()" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1460,20 +1472,22 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("textFrameReceived(QString,bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "textFrameReceived(QString,bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::textFrameReceived, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1, bool arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "textFrameReceived(QString,bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
@@ -1484,7 +1498,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
 
         });
 
-        Signals2_store_connection( sender, "textFrameReceived(QString,bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1495,9 +1509,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "textFrameReceived(QString,bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "textFrameReceived(QString,bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1523,21 +1537,23 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("binaryFrameReceived(QByteArray,bool)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "binaryFrameReceived(QByteArray,bool)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::binaryFrameReceived, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QByteArray & arg1, bool arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "binaryFrameReceived(QByteArray,bool)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QBYTEARRAY" );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1547,7 +1563,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
 
         });
 
-        Signals2_store_connection( sender, "binaryFrameReceived(QByteArray,bool)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1558,9 +1574,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "binaryFrameReceived(QByteArray,bool)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "binaryFrameReceived(QByteArray,bool)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1586,20 +1602,22 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("textMessageReceived(QString)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "textMessageReceived(QString)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::textMessageReceived, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "textMessageReceived(QString)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1608,7 +1626,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
 
         });
 
-        Signals2_store_connection( sender, "textMessageReceived(QString)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1619,9 +1637,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "textMessageReceived(QString)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "textMessageReceived(QString)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1647,21 +1665,23 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("binaryMessageReceived(QByteArray)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "binaryMessageReceived(QByteArray)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::binaryMessageReceived, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QByteArray & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "binaryMessageReceived(QByteArray)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
-            PHB_ITEM pArg1 = Signals2_return_object( (void *) &arg1, "QBYTEARRAY" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QBYTEARRAY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1669,7 +1689,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
 
         });
 
-        Signals2_store_connection( sender, "binaryMessageReceived(QByteArray)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1680,9 +1700,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "binaryMessageReceived(QByteArray)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "binaryMessageReceived(QByteArray)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1708,20 +1728,22 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("error(QAbstractSocket::SocketError)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "error(QAbstractSocket::SocketError)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractSocket::SocketError>::of(&QWebSocket::error), 
-                                                              [sender]
+                                                              [sender,index]
                                                               (QAbstractSocket::SocketError arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "error(QAbstractSocket::SocketError)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1730,7 +1752,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
 
         });
 
-        Signals2_store_connection( sender, "error(QAbstractSocket::SocketError)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1741,9 +1763,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "error(QAbstractSocket::SocketError)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "error(QAbstractSocket::SocketError)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1769,22 +1791,24 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("pong(quint64,QByteArray)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "pong(quint64,QByteArray)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::pong, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (quint64 arg1, const QByteArray & arg2) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "pong(quint64,QByteArray)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals2_return_object( (void *) &arg2, "QBYTEARRAY" );
+            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QBYTEARRAY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1793,7 +1817,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
 
         });
 
-        Signals2_store_connection( sender, "pong(quint64,QByteArray)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1804,9 +1828,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "pong(quint64,QByteArray)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "pong(quint64,QByteArray)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1832,20 +1856,22 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "bytesWritten(qint64)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::bytesWritten, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "bytesWritten(qint64)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1854,7 +1880,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
 
         });
 
-        Signals2_store_connection( sender, "bytesWritten(qint64)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1865,9 +1891,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "bytesWritten(qint64)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "bytesWritten(qint64)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
@@ -1893,20 +1919,22 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
 
   if( sender != nullptr )
   {
+    int index = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
+
     if( hb_pcount() == 1 )
     {
-      if( Signals2_connection( sender, "sslErrors(QList<QSslError>)" ) )
+      if( Signals3_connection( sender, index ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::sslErrors, 
-                                                              [sender]
+                                                              [sender,index]
                                                               (const QList<QSslError> & arg1) {
-          PHB_ITEM cb = Signals2_return_codeblock( sender, "sslErrors(QList<QSslError>)" );
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals2_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -1938,7 +1966,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
 
         });
 
-        Signals2_store_connection( sender, "sslErrors(QList<QSslError>)", connection );
+        Signals3_store_connection( sender, index, connection );
 
         hb_retl( true );
       }
@@ -1949,9 +1977,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals2_disconnection( sender, "sslErrors(QList<QSslError>)" );
+      Signals3_disconnection( sender, index );
 
-      QObject::disconnect( Signals2_get_connection( sender, "sslErrors(QList<QSslError>)" ) );
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
 
       hb_retl( true );
     }
