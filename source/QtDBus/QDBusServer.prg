@@ -38,10 +38,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDBusServer>
+#include <QtDBus/QDBusServer>
 #endif
 
 #include "qt5xhb_common.h"
@@ -50,10 +50,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QDBusServer>
+#include <QtDBus/QDBusServer>
 #endif
 
-#include <QDBusError>
+#include <QtDBus/QDBusError>
 
 /*
 QDBusServer(const QString &address, QObject *parent = nullptr)
