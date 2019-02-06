@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QExtensionManager>
+#include <QtDesigner/QExtensionManager>
 
 $prototype=QExtensionFactory ( QExtensionManager * parent = nullptr )
 $constructor=|new|QExtensionManager *=nullptr

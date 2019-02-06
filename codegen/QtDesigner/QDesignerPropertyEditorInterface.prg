@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QDesignerFormEditorInterface>
-#include <QVariant>
+#include <QtDesigner/QDesignerFormEditorInterface>
+#include <QtCore/QVariant>
 
 $deleteMethod
 
