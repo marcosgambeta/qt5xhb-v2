@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QUrl>
+#include <QtCore/QUrl>
 
 $deleteMethod
 
