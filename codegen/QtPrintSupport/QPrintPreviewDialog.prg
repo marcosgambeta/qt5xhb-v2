@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QPrinter>
+#include <QtPrintSupport/QPrinter>
 
 $prototype=explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=nullptr,Qt::WindowFlags=0
