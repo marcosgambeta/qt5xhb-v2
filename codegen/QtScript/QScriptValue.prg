@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
-#include <QDateTime>
-#include <QRegExp>
-#include <QVariant>
-#include <QScriptEngine>
+#include <QtCore/QDateTime>
+#include <QtCore/QRegExp>
+#include <QtCore/QVariant>
+#include <QtScript/QScriptEngine>
 
 $prototype=QScriptValue()
 $constructor=|new1|

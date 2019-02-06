@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QScriptEngine>
+#include <QtScript/QScriptEngine>
 
 $prototype=QScriptClass(QScriptEngine * engine)
 $constructor=|new|QScriptEngine *
