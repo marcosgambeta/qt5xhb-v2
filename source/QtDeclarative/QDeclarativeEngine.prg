@@ -64,10 +64,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeEngine>
 #endif
 
 #include "qt5xhb_common.h"
@@ -76,12 +76,12 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeEngine>
 #endif
 
-#include <QStringList>
-#include <QNetworkAccessManager>
-#include <QDeclarativeContext>
+#include <QtCore/QStringList>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtDeclarative/QDeclarativeContext>
 
 /*
 QDeclarativeEngine ( QObject * parent = nullptr )
