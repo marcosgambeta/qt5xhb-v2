@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=QFileSystemWatcher(QObject * parent = nullptr)
 $internalConstructor=|new1|QObject *=nullptr

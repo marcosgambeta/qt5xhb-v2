@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QItemSelection>
+#include <QtCore/QItemSelection>
 
 $prototype=QIdentityProxyModel(QObject* parent = nullptr)
 $constructor=|new|QObject *=nullptr

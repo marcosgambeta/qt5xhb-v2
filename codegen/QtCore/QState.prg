@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QAbstractTransition>
+#include <QtCore/QAbstractTransition>
 
 $prototype=QState ( QState * parent = nullptr )
 $internalConstructor=|new1|QState *=nullptr

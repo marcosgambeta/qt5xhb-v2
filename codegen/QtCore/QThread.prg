@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QAbstractEventDispatcher>
+#include <QtCore/QAbstractEventDispatcher>
 
 $prototype=QThread(QObject * parent = nullptr)
 $constructor=|new|QObject *=nullptr

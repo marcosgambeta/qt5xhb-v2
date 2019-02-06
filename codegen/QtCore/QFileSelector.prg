@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QUrl>
+#include <QtCore/QUrl>
 
 $prototype=QFileSelector(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
