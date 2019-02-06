@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 $prototype=explicit QWebEngineView(QWidget* parent = nullptr)
 $constructor=5,4,0|new|QWidget *=nullptr
