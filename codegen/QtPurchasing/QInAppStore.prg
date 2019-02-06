@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QInAppTransaction>
+#include <QtPurchasing/QInAppTransaction>
 
 $prototype=explicit QInAppStore(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
