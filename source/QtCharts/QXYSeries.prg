@@ -82,11 +82,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QXYSeries>
+#include <QtCharts/QXYSeries>
 #endif
 #endif
 
@@ -97,7 +97,7 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QXYSeries>
+#include <QtCharts/QXYSeries>
 #endif
 #endif
 
