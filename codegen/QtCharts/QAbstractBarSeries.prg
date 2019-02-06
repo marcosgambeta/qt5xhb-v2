@@ -29,7 +29,7 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-#include <QBarSet>
+#include <QtCharts/QBarSet>
 
 $prototype=explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = nullptr) [protected]
 
