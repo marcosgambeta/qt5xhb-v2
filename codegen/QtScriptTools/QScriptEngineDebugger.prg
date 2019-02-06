@@ -27,10 +27,10 @@ $destructor
 
 $includes
 
-#include <QAction>
-#include <QMenu>
-#include <QToolBar>
-#include <QMainWindow>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QMainWindow>
 
 $prototype=QScriptEngineDebugger(QObject * parent = nullptr)
 $constructor=|new|QObject *=nullptr
