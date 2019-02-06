@@ -37,9 +37,9 @@ $destructor
 
 $includes
 
-#include <QHostAddress>
-#include <QNetworkProxy>
-#include <QAuthenticator>
+#include <QtNetwork/QHostAddress>
+#include <QtNetwork/QNetworkProxy>
+#include <QtNetwork/QAuthenticator>
 
 $prototype=QAbstractSocket ( SocketType socketType, QObject * parent )
 $constructor=|new|QAbstractSocket::SocketType,QObject *

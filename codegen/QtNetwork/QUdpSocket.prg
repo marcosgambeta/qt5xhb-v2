@@ -37,7 +37,7 @@ $includes
 
 #include <QNetworkInterface>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QNetworkDatagram>
+#include <QtNetwork/QNetworkDatagram>
 #endif
 
 $prototype=explicit QUdpSocket(QObject *parent = nullptr)

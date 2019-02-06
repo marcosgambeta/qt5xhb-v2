@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QNetworkCookie>
+#include <QtNetwork/QNetworkCookie>
 
 $prototype=explicit QNetworkCookieJar(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

@@ -47,10 +47,10 @@ $destructor
 
 $includes
 
-#include <QSslKey>
-#include <QSslCipher>
-#include <QSslConfiguration>
-#include <QSslPreSharedKeyAuthenticator>
+#include <QtNetwork/QSslKey>
+#include <QtNetwork/QSslCipher>
+#include <QtNetwork/QSslConfiguration>
+#include <QtNetwork/QSslPreSharedKeyAuthenticator>
 
 $prototype=explicit QSslSocket(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
