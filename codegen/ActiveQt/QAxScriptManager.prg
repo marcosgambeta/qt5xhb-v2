@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=QAxScriptManager ( QObject * parent = nullptr )
 $constructor=|new|QObject *=nullptr

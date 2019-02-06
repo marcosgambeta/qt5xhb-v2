@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QAxObject>
+#include <QtCore/QStringList>
+#include <ActiveQt/QAxObject>
 
 $prototype=QAxWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|QWidget *=nullptr,Qt::WindowFlags=0
