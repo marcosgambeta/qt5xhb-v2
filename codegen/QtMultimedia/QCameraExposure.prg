@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QPointF>
+#include <QtCore/QPointF>
 
 $prototype=explicit QCameraExposure(QCamera *parent = nullptr) [private]
 

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QVideoFrame>
+#include <QtMultimedia/QVideoFrame>
 
 $prototype=explicit QMediaVideoProbeControl(QObject *parent = nullptr) [protected]
 

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QUrl>
+#include <QtCore/QUrl>
 
 $prototype=explicit QMediaRecorder(QMediaObject * mediaObject, QObject * parent = nullptr)
 $constructor=|new|QMediaObject *,QObject *=nullptr

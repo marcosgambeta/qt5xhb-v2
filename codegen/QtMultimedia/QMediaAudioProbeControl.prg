@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QAudioBuffer>
+#include <QtMultimedia/QAudioBuffer>
 
 $prototype=explicit QMediaAudioProbeControl(QObject *parent = nullptr) [protected]
 

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMediaPlaylist>
+#include <QtMultimedia/QMediaPlaylist>
 
 $prototype=explicit QMediaPlayer(QObject *parent = nullptr, Flags flags = Flags())
 %% TODO: 'Flags flags = Flags()'
