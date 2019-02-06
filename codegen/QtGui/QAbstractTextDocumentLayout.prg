@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QTextBlock>
+#include <QtGui/QTextBlock>
 
 $deleteMethod
 

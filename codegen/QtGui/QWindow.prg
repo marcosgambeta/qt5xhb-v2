@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QScreen>
+#include <QtGui/QScreen>
 
 $prototype=QWindow(QScreen * screen = nullptr)
 $internalConstructor=|new1|QScreen *=nullptr

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QScreen>
+#include <QtGui/QScreen>
 
 $prototype=QOffscreenSurface(QScreen *screen = nullptr)
 $constructor=|new|QScreen *=nullptr

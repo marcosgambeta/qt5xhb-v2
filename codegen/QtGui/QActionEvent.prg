@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 $prototype=QActionEvent ( int type, QAction * action, QAction * before = nullptr )
 $constructor=|new|int,QAction *,QAction *=nullptr

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 $prototype=QStandardItemModel(QObject *parent = nullptr)
 $internalConstructor=|new1|QObject *=nullptr
