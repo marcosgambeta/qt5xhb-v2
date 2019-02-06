@@ -27,10 +27,10 @@ $destructor
 
 $includes
 
-#include <QList>
-#include <QQmlEngine>
-#include <QQmlContext>
-#include <QQuickItem>
+#include <QtCore/QList>
+#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlContext>
+#include <QtQuick/QQuickItem>
 
 $prototype=QQuickView(QWindow * parent = nullptr)
 $internalConstructor=|new1|QWindow *=nullptr
