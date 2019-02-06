@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QDBusError>
+#include <QtDBus/QDBusError>
 
 $prototype=QDBusServer(const QString &address, QObject *parent = nullptr)
 $internalConstructor=|new1|const QString &,QObject *=nullptr
