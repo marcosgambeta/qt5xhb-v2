@@ -50,10 +50,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDesignerFormEditorInterface>
+#include <QtDesigner/QDesignerFormEditorInterface>
 #endif
 
 #include "qt5xhb_common.h"
@@ -62,15 +62,15 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QDesignerFormEditorInterface>
+#include <QtDesigner/QDesignerFormEditorInterface>
 #endif
 
-#include <QExtensionManager>
-#include <QDesignerFormWindowManagerInterface>
-#include <QDesignerActionEditorInterface>
-#include <QDesignerObjectInspectorInterface>
-#include <QDesignerPropertyEditorInterface>
-#include <QDesignerWidgetBoxInterface>
+#include <QtDesigner/QExtensionManager>
+#include <QtDesigner/QDesignerFormWindowManagerInterface>
+#include <QtDesigner/QDesignerActionEditorInterface>
+#include <QtDesigner/QDesignerObjectInspectorInterface>
+#include <QtDesigner/QDesignerPropertyEditorInterface>
+#include <QtDesigner/QDesignerWidgetBoxInterface>
 
 /*
 QDesignerFormEditorInterface ( QObject * parent = nullptr )

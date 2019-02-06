@@ -55,10 +55,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDesignerMemberSheetExtension>
+#include <QtDesigner/QDesignerMemberSheetExtension>
 #endif
 
 #include "qt5xhb_common.h"
@@ -67,7 +67,7 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QDesignerMemberSheetExtension>
+#include <QtDesigner/QDesignerMemberSheetExtension>
 #endif
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
