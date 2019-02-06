@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,3,0
 
-#include <QMaskGenerator>
-#include <QAuthenticator>
+#include <QtWebSockets/QMaskGenerator>
+#include <QtNetwork/QAuthenticator>
 
 $prototype=explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,QObject *parent = nullptr)
 $constructor=5,3,0|new|const QString &=QString(),QWebSocketProtocol::Version=QWebSocketProtocol::VersionLatest,QObject *=nullptr

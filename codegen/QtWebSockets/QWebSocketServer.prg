@@ -27,9 +27,9 @@ $destructor
 
 $includes=5,3,0
 
-#include <QNetworkProxy>
-#include <QWebSocket>
-#include <QWebSocketCorsAuthenticator>
+#include <QtNetwork/QNetworkProxy>
+#include <QtWebSockets/QWebSocket>
+#include <QtWebSockets/QWebSocketCorsAuthenticator>
 
 $prototype=explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = nullptr)
 $constructor=5,3,0|new|const QString &,QWebSocketServer::SslMode,QObject *=nullptr
