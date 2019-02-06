@@ -63,10 +63,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <Q3DCamera>
+#include <QtDataVisualization/Q3DCamera>
 #endif
 
 #include "qt5xhb_common.h"
@@ -75,7 +75,7 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <Q3DCamera>
+#include <QtDataVisualization/Q3DCamera>
 #endif
 
 using namespace QtDataVisualization;

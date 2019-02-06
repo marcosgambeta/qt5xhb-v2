@@ -32,10 +32,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QValue3DAxisFormatter>
+#include <QtDataVisualization/QValue3DAxisFormatter>
 #endif
 
 #include "qt5xhb_common.h"
@@ -44,7 +44,7 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QValue3DAxisFormatter>
+#include <QtDataVisualization/QValue3DAxisFormatter>
 #endif
 
 using namespace QtDataVisualization;

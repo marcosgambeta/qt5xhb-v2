@@ -55,10 +55,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <Q3DSurface>
+#include <QtDataVisualization/Q3DSurface>
 #endif
 
 #include "qt5xhb_common.h"
@@ -67,7 +67,7 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <Q3DSurface>
+#include <QtDataVisualization/Q3DSurface>
 #endif
 
 using namespace QtDataVisualization;
