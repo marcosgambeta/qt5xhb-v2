@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMovie>
+#include <QtGui/QMovie>
 
 $prototype=QLabel ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|QWidget *=nullptr,Qt::WindowFlags=0

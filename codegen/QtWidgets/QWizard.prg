@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QVariant>
-#include <QAbstractButton>
+#include <QtCore/QVariant>
+#include <QtWidgets/QAbstractButton>
 
 $prototype=explicit QWizard ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0

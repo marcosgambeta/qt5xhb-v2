@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QPainterPath>
+#include <QtGui/QPainterPath>
 
 $prototype=QMouseEventTransition ( QState * sourceState = nullptr )
 $internalConstructor=|new1|QState *=nullptr

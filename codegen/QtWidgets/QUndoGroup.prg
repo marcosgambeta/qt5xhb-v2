@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QUndoStack>
-#include <QAction>
+#include <QtWidgets/QUndoStack>
+#include <QtWidgets/QAction>
 
 $prototype=QUndoGroup(QObject * parent = nullptr)
 $constructor=|new|QObject *=nullptr

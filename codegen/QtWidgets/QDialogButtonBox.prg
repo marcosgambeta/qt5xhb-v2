@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QPushButton>
+#include <QtWidgets/QPushButton>
 
 $prototype=QDialogButtonBox ( QWidget * parent = nullptr )
 $internalConstructor=|new1|QWidget *=nullptr

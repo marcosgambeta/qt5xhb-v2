@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QVariant>
-#include <QIcon>
+#include <QtCore/QVariant>
+#include <QtGui/QIcon>
 
 $prototype=QTabBar ( QWidget * parent = nullptr )
 $constructor=|new|QWidget *=nullptr

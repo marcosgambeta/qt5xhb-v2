@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMenu>
+#include <QtWidgets/QMenu>
 
 %% NOTE: the parent argument is optional since Qt 5.7
 

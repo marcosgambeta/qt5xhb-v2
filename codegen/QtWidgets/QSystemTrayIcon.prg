@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMenu>
+#include <QtWidgets/QMenu>
 
 $prototype=QSystemTrayIcon(QObject * parent = nullptr)
 $internalConstructor=|new1|QObject *=nullptr

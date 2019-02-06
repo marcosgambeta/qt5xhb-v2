@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 $prototype=QUndoStack(QObject * parent = nullptr)
 $constructor=|new|QObject *=nullptr

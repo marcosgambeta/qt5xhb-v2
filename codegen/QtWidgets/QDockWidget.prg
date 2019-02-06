@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 $prototype=QDockWidget ( const QString & title, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|const QString &,QWidget *=nullptr,Qt::WindowFlags=0
