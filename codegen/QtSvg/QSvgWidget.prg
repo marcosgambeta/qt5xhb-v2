@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QSvgRenderer>
+#include <QtSvg/QSvgRenderer>
 
 $prototype=QSvgWidget ( QWidget * parent = nullptr )
 $internalConstructor=|new1|QWidget *=nullptr
