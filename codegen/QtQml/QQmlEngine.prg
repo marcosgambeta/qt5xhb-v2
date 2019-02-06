@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QNetworkAccessManager>
-#include <QQmlContext>
+#include <QtCore/QStringList>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtQml/QQmlContext>
 
 $prototype=QQmlEngine(QObject * parent = nullptr)
 $constructor=|new|QObject *=nullptr
