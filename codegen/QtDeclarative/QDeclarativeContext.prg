@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeEngine>
 
 $prototype=QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
 $internalConstructor=|new1|QDeclarativeEngine *,QObject *=nullptr

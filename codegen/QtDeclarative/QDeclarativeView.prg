@@ -27,10 +27,10 @@ $destructor
 
 $includes
 
-#include <QDeclarativeError>
-#include <QDeclarativeEngine>
-#include <QDeclarativeContext>
-#include <QGraphicsObject>
+#include <QtDeclarative/QDeclarativeError>
+#include <QtDeclarative/QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeContext>
+#include <QtWidgets/QGraphicsObject>
 
 $prototype=QDeclarativeView ( QWidget * parent = nullptr )
 $internalConstructor=|new1|QWidget *=nullptr
