@@ -69,10 +69,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QXmlStreamWriter>
+#include <QtCore/QXmlStreamWriter>
 #endif
 
 #include "qt5xhb_common.h"
@@ -81,7 +81,7 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QXmlStreamWriter>
+#include <QtCore/QXmlStreamWriter>
 #endif
 
 /*

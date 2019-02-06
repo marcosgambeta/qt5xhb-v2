@@ -74,10 +74,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMetaObject>
+#include <QtCore/QMetaObject>
 #endif
 
 #include "qt5xhb_common.h"
@@ -86,14 +86,14 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QMetaObject>
+#include <QtCore/QMetaObject>
 #endif
 
-#include <QMetaClassInfo>
-#include <QMetaMethod>
-#include <QMetaEnum>
-#include <QMetaProperty>
-#include <QByteArray>
+#include <QtCore/QMetaClassInfo>
+#include <QtCore/QMetaMethod>
+#include <QtCore/QMetaEnum>
+#include <QtCore/QMetaProperty>
+#include <QtCore/QByteArray>
 
 HB_FUNC_STATIC( QMETAOBJECT_DELETE )
 {

@@ -57,10 +57,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QJsonValueRef>
+#include <QtCore/QJsonValueRef>
 #endif
 
 #include "qt5xhb_common.h"
@@ -69,11 +69,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QJsonValueRef>
+#include <QtCore/QJsonValueRef>
 #endif
 
-#include <QJsonArray>
-#include <QJsonObject>
+#include <QtCore/QJsonArray>
+#include <QtCore/QJsonObject>
 
 /*
 QJsonValueRef(QJsonArray *array, int idx)

@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QIdentityProxyModel>
+#include <QtCore/QIdentityProxyModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -64,10 +64,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QIdentityProxyModel>
+#include <QtCore/QIdentityProxyModel>
 #endif
 
-#include <QItemSelection>
+#include <QtCore/QItemSelection>
 
 /*
 QIdentityProxyModel(QObject* parent = nullptr)

@@ -85,10 +85,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstractItemModel>
+#include <QtCore/QAbstractItemModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -97,11 +97,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstractItemModel>
+#include <QtCore/QAbstractItemModel>
 #endif
 
-#include <QStringList>
-#include <QSize>
+#include <QtCore/QStringList>
+#include <QtCore/QSize>
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 {

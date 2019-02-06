@@ -251,10 +251,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QObject>
+#include <QtCore/QObject>
 #endif
 
 #include "qt5xhb_common.h"
@@ -263,13 +263,13 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QObject>
+#include <QtCore/QObject>
 #endif
 
-#include <QWidget>
-#include <QVariant>
-#include <QEvent>
-#include <QThread>
+#include <QtWidgets/QWidget>
+#include <QtCore/QVariant>
+#include <QtCore/QEvent>
+#include <QtCore/QThread>
 
 bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
 bool Events_disconnect_event ( QObject * object, int type );
@@ -2253,8 +2253,8 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
       if( Signals3_connection( sender, index ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QObject::destroyed,
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QObject::destroyed, 
                                                               [sender,index]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals3_return_codeblock( sender, index );

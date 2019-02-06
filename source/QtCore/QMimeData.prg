@@ -56,10 +56,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMimeData>
+#include <QtCore/QMimeData>
 #endif
 
 #include "qt5xhb_common.h"
@@ -68,11 +68,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QMimeData>
+#include <QtCore/QMimeData>
 #endif
 
-#include <QStringList>
-#include <QUrl>
+#include <QtCore/QStringList>
+#include <QtCore/QUrl>
 
 /*
 QMimeData ()

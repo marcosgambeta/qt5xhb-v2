@@ -150,10 +150,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QByteArray>
+#include <QtCore/QByteArray>
 #endif
 
 #include "qt5xhb_common.h"
@@ -162,11 +162,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QByteArray>
+#include <QtCore/QByteArray>
 #endif
 
-#include <QString>
-#include <QList>
+#include <QtCore/QString>
+#include <QtCore/QList>
 
 /*
 QByteArray ()
