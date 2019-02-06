@@ -56,10 +56,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAxBase>
+#include <ActiveQt/QAxBase>
 #endif
 
 #include "qt5xhb_common.h"
@@ -68,11 +68,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QAxBase>
+#include <ActiveQt/QAxBase>
 #endif
 
-#include <QStringList>
-#include <QAxObject>
+#include <QtCore/QStringList>
+#include <ActiveQt/QAxObject>
 
 HB_FUNC_STATIC( QAXBASE_DELETE )
 {
