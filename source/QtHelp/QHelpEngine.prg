@@ -42,10 +42,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QHelpEngine>
+#include <QtHelp/QHelpEngine>
 #endif
 
 #include "qt5xhb_common.h"
@@ -54,12 +54,12 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QHelpEngine>
+#include <QtHelp/QHelpEngine>
 #endif
 
-#include <QHelpContentModel>
-#include <QHelpIndexModel>
-#include <QHelpSearchEngine>
+#include <QtHelp/QHelpContentModel>
+#include <QtHelp/QHelpIndexModel>
+#include <QtHelp/QHelpSearchEngine>
 
 /*
 QHelpEngine ( const QString & collectionFile, QObject * parent = nullptr )
