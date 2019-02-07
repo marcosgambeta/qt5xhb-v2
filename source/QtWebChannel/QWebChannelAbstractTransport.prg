@@ -34,11 +34,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QWebChannelAbstractTransport>
+#include <QtWebChannel/QWebChannelAbstractTransport>
 #endif
 #endif
 
@@ -49,11 +49,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QWebChannelAbstractTransport>
+#include <QtWebChannel/QWebChannelAbstractTransport>
 #endif
 #endif
 
-#include <QJsonObject>
+#include <QtCore/QJsonObject>
 
 /*
 explicit QWebChannelAbstractTransport(QObject *parent = nullptr) (abstract)
