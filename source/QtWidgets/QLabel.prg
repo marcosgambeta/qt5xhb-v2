@@ -74,10 +74,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QLabel>
+#include <QtWidgets/QLabel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -86,10 +86,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QLabel>
+#include <QtWidgets/QLabel>
 #endif
 
-#include <QMovie>
+#include <QtGui/QMovie>
 
 /*
 QLabel ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )

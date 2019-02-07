@@ -43,10 +43,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QStyleFactory>
+#include <QtWidgets/QStyleFactory>
 #endif
 
 #include "qt5xhb_common.h"
@@ -55,10 +55,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QStyleFactory>
+#include <QtWidgets/QStyleFactory>
 #endif
 
-#include <QStyle>
+#include <QtWidgets/QStyle>
 
 HB_FUNC_STATIC( QSTYLEFACTORY_DELETE )
 {

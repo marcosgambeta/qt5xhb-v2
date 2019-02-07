@@ -84,10 +84,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWizard>
+#include <QtWidgets/QWizard>
 #endif
 
 #include "qt5xhb_common.h"
@@ -96,11 +96,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QWizard>
+#include <QtWidgets/QWizard>
 #endif
 
-#include <QVariant>
-#include <QAbstractButton>
+#include <QtCore/QVariant>
+#include <QtWidgets/QAbstractButton>
 
 /*
 explicit QWizard ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )

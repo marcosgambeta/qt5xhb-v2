@@ -110,10 +110,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QFileDialog>
+#include <QtWidgets/QFileDialog>
 #endif
 
 #include "qt5xhb_common.h"
@@ -122,12 +122,12 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QFileDialog>
+#include <QtWidgets/QFileDialog>
 #endif
 
-#include <QUrl>
-#include <QAbstractItemDelegate>
-#include <QAbstractProxyModel>
+#include <QtCore/QUrl>
+#include <QtWidgets/QAbstractItemDelegate>
+#include <QtCore/QAbstractProxyModel>
 
 /*
 QFileDialog ( QWidget * parent, Qt::WindowFlags flags )

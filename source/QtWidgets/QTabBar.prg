@@ -93,10 +93,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTabBar>
+#include <QtWidgets/QTabBar>
 #endif
 
 #include "qt5xhb_common.h"
@@ -105,11 +105,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QTabBar>
+#include <QtWidgets/QTabBar>
 #endif
 
-#include <QVariant>
-#include <QIcon>
+#include <QtCore/QVariant>
+#include <QtGui/QIcon>
 
 /*
 QTabBar ( QWidget * parent = nullptr )

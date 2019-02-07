@@ -47,10 +47,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QGraphicsSceneDragDropEvent>
+#include <QtWidgets/QGraphicsSceneDragDropEvent>
 #endif
 
 #include "qt5xhb_common.h"
@@ -59,10 +59,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QGraphicsSceneDragDropEvent>
+#include <QtWidgets/QGraphicsSceneDragDropEvent>
 #endif
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
 {

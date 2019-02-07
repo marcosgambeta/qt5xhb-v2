@@ -65,10 +65,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QUndoStack>
+#include <QtWidgets/QUndoStack>
 #endif
 
 #include "qt5xhb_common.h"
@@ -77,10 +77,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QUndoStack>
+#include <QtWidgets/QUndoStack>
 #endif
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 /*
 QUndoStack(QObject * parent = nullptr)

@@ -51,10 +51,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAccessibleWidget>
+#include <QtWidgets/QAccessibleWidget>
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,10 +63,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QAccessibleWidget>
+#include <QtWidgets/QAccessibleWidget>
 #endif
 
-#include <QWindow>
+#include <QtGui/QWindow>
 
 /*
 QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
