@@ -48,10 +48,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstractXmlNodeModel>
+#include <QtXmlPatterns/QAbstractXmlNodeModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -60,13 +60,13 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstractXmlNodeModel>
+#include <QtXmlPatterns/QAbstractXmlNodeModel>
 #endif
 
-#include <QVariant>
-#include <QUrl>
-#include <QVector>
-#include <QSourceLocation>
+#include <QtCore/QVariant>
+#include <QtCore/QUrl>
+#include <QtCore/QVector>
+#include <QtXmlPatterns/QSourceLocation>
 
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DELETE )
 {

@@ -56,10 +56,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QXmlSchemaValidator>
+#include <QtXmlPatterns/QXmlSchemaValidator>
 #endif
 
 #include "qt5xhb_common.h"
@@ -68,13 +68,13 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QXmlSchemaValidator>
+#include <QtXmlPatterns/QXmlSchemaValidator>
 #endif
 
-#include <QXmlSchema>
-#include <QAbstractMessageHandler>
-#include <QNetworkAccessManager>
-#include <QAbstractUriResolver>
+#include <QtXmlPatterns/QXmlSchema>
+#include <QtXmlPatterns/QAbstractMessageHandler>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtXmlPatterns/QAbstractUriResolver>
 
 /*
 QXmlSchemaValidator ()
