@@ -73,10 +73,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QVirtualKeyboardInputContext>
+#include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
 #endif
 
 #include "qt5xhb_common.h"
@@ -85,7 +85,7 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QVirtualKeyboardInputContext>
+#include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
 #endif
 
 /*
