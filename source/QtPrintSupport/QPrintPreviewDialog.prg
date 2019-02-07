@@ -39,10 +39,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QPrintPreviewDialog>
+#include <QtPrintSupport/QPrintPreviewDialog>
 #endif
 
 #include "qt5xhb_common.h"
@@ -51,10 +51,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QPrintPreviewDialog>
+#include <QtPrintSupport/QPrintPreviewDialog>
 #endif
 
-#include <QPrinter>
+#include <QtPrintSupport/QPrinter>
 
 /*
 explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
