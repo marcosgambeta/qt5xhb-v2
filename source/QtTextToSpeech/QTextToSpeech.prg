@@ -58,10 +58,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTextToSpeech>
+#include <QtTextToSpeech/QTextToSpeech>
 #endif
 
 #include "qt5xhb_common.h"
@@ -70,12 +70,12 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QTextToSpeech>
+#include <QtTextToSpeech/QTextToSpeech>
 #endif
 
-#include <QVector>
-#include <QLocale>
-#include <QVoice>
+#include <QtCore/QVector>
+#include <QtCore/QLocale>
+#include <QtTextToSpeech/QVoice>
 
 /*
 explicit QTextToSpeech(QObject *parent = nullptr)
