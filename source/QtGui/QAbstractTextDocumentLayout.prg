@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstractTextDocumentLayout>
+#include <QtGui/QAbstractTextDocumentLayout>
 #endif
 
 #include "qt5xhb_common.h"
@@ -64,10 +64,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstractTextDocumentLayout>
+#include <QtGui/QAbstractTextDocumentLayout>
 #endif
 
-#include <QTextBlock>
+#include <QtGui/QTextBlock>
 
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DELETE )
 {

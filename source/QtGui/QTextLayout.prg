@@ -80,10 +80,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTextLayout>
+#include <QtGui/QTextLayout>
 #endif
 
 #include "qt5xhb_common.h"
@@ -92,11 +92,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QTextLayout>
+#include <QtGui/QTextLayout>
 #endif
 
-#include <QTextCursor>
-#include <QTextBlock>
+#include <QtGui/QTextCursor>
+#include <QtGui/QTextBlock>
 
 /*
 QTextLayout()

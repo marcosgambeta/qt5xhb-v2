@@ -69,10 +69,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QOpenGLFramebufferObject>
+#include <QtGui/QOpenGLFramebufferObject>
 #endif
 
 #include "qt5xhb_common.h"
@@ -81,10 +81,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QOpenGLFramebufferObject>
+#include <QtGui/QOpenGLFramebufferObject>
 #endif
 
-#include <QImage>
+#include <QtGui/QImage>
 
 /*
 QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)

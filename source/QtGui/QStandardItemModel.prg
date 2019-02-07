@@ -88,10 +88,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QStandardItemModel>
+#include <QtGui/QStandardItemModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -100,10 +100,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QStandardItemModel>
+#include <QtGui/QStandardItemModel>
 #endif
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 /*
 QStandardItemModel(QObject *parent = nullptr)

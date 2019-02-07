@@ -120,10 +120,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 #endif
 
 #include "qt5xhb_common.h"
@@ -132,13 +132,13 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 #endif
 
-#include <QTextOption>
-#include <QTextCursor>
-#include <QTextBlock>
-#include <QAbstractTextDocumentLayout>
+#include <QtGui/QTextOption>
+#include <QtGui/QTextCursor>
+#include <QtGui/QTextBlock>
+#include <QtGui/QAbstractTextDocumentLayout>
 
 /*
 QTextDocument(QObject *parent = nullptr)

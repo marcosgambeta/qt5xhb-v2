@@ -60,10 +60,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAccessibleTableInterface>
+#include <QtGui/QAccessibleTableInterface>
 #endif
 
 #include "qt5xhb_common.h"
@@ -72,7 +72,7 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QAccessibleTableInterface>
+#include <QtGui/QAccessibleTableInterface>
 #endif
 
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_DELETE )
