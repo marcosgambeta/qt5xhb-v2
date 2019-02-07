@@ -45,11 +45,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceUser>
+#include <QtLocation/QPlaceUser>
 #endif
 #endif
 
@@ -60,7 +60,7 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceUser>
+#include <QtLocation/QPlaceUser>
 #endif
 #endif
 

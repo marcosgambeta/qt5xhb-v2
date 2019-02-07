@@ -51,11 +51,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceContentRequest>
+#include <QtLocation/QPlaceContentRequest>
 #endif
 #endif
 
@@ -66,11 +66,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceContentRequest>
+#include <QtLocation/QPlaceContentRequest>
 #endif
 #endif
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 /*
 QPlaceContentRequest()
