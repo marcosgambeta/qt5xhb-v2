@@ -83,10 +83,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWebView>
+#include <QtWebKitWidgets/QWebView>
 #endif
 
 #include "qt5xhb_common.h"
@@ -95,12 +95,12 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QWebView>
+#include <QtWebKitWidgets/QWebView>
 #endif
 
-#include <QAction>
-#include <QUrl>
-#include <QWidget>
+#include <QtWidgets/QAction>
+#include <QtCore/QUrl>
+#include <QtWidgets/QWidget>
 
 /*
 explicit QWebView ( QWidget * parent = nullptr )
