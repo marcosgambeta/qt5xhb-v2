@@ -98,10 +98,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QScriptValue>
+#include <QtScript/QScriptValue>
 #endif
 
 #include "qt5xhb_common.h"
@@ -110,13 +110,13 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QScriptValue>
+#include <QtScript/QScriptValue>
 #endif
 
-#include <QDateTime>
-#include <QRegExp>
-#include <QVariant>
-#include <QScriptEngine>
+#include <QtCore/QDateTime>
+#include <QtCore/QRegExp>
+#include <QtCore/QVariant>
+#include <QtScript/QScriptEngine>
 
 /*
 QScriptValue()

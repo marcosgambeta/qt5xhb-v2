@@ -48,10 +48,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QScriptable>
+#include <QtScript/QScriptable>
 #endif
 
 #include "qt5xhb_common.h"
@@ -60,11 +60,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QScriptable>
+#include <QtScript/QScriptable>
 #endif
 
-#include <QScriptValue>
-#include <QScriptEngine>
+#include <QtScript/QScriptValue>
+#include <QtScript/QScriptEngine>
 
 HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
 {
