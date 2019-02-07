@@ -42,10 +42,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QUdpSocket>
+#include <QtNetwork/QUdpSocket>
 #endif
 
 #include "qt5xhb_common.h"
@@ -54,12 +54,12 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QUdpSocket>
+#include <QtNetwork/QUdpSocket>
 #endif
 
 #include <QNetworkInterface>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QNetworkDatagram>
+#include <QtNetwork/QNetworkDatagram>
 #endif
 
 /*

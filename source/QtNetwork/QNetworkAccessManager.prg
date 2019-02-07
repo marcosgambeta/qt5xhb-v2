@@ -80,10 +80,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QNetworkAccessManager>
+#include <QtNetwork/QNetworkAccessManager>
 #endif
 
 #include "qt5xhb_common.h"
@@ -92,20 +92,20 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QNetworkAccessManager>
+#include <QtNetwork/QNetworkAccessManager>
 #endif
 
-#include <QNetworkConfiguration>
-#include <QNetworkProxy>
-#include <QSslError>
-#include <QList>
-#include <QAbstractNetworkCache>
-#include <QNetworkCookieJar>
-#include <QNetworkReply>
-#include <QAuthenticator>
+#include <QtNetwork/QNetworkConfiguration>
+#include <QtNetwork/QNetworkProxy>
+#include <QtNetwork/QSslError>
+#include <QtCore/QList>
+#include <QtNetwork/QAbstractNetworkCache>
+#include <QtNetwork/QNetworkCookieJar>
+#include <QtNetwork/QNetworkReply>
+#include <QtNetwork/QAuthenticator>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-#include <QHstsPolicy>
+#include <QtNetwork/QHstsPolicy>
 #endif
 
 /*
