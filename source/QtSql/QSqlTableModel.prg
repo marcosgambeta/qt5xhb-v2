@@ -72,10 +72,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSqlTableModel>
+#include <QtSql/QSqlTableModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -84,10 +84,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QSqlTableModel>
+#include <QtSql/QSqlTableModel>
 #endif
 
-#include <QSqlIndex>
+#include <QtSql/QSqlIndex>
 
 /*
 explicit QSqlTableModel ( QObject * parent = nullptr, QSqlDatabase db = QSqlDatabase() )

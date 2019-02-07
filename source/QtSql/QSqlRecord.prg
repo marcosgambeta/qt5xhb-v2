@@ -62,10 +62,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSqlRecord>
+#include <QtSql/QSqlRecord>
 #endif
 
 #include "qt5xhb_common.h"
@@ -74,11 +74,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QSqlRecord>
+#include <QtSql/QSqlRecord>
 #endif
 
-#include <QSqlField>
-#include <QVariant>
+#include <QtSql/QSqlField>
+#include <QtCore/QVariant>
 
 /*
 QSqlRecord ()
