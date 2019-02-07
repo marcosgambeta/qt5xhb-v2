@@ -53,10 +53,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWebHistoryItem>
+#include <QtWebKit/QWebHistoryItem>
 #endif
 
 #include "qt5xhb_common.h"
@@ -65,10 +65,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QWebHistoryItem>
+#include <QtWebKit/QWebHistoryItem>
 #endif
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 /*
 QWebHistoryItem ( const QWebHistoryItem & other )

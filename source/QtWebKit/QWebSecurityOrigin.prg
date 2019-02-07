@@ -53,10 +53,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWebSecurityOrigin>
+#include <QtWebKit/QWebSecurityOrigin>
 #endif
 
 #include "qt5xhb_common.h"
@@ -65,11 +65,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QWebSecurityOrigin>
+#include <QtWebKit/QWebSecurityOrigin>
 #endif
 
-#include <QStringList>
-#include <QWebDatabase>
+#include <QtCore/QStringList>
+#include <QtWebKit/QWebDatabase>
 
 /*
 QWebSecurityOrigin ( const QWebSecurityOrigin & other )
