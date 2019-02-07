@@ -58,10 +58,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstractAudioOutput>
+#include <QtMultimedia/QAbstractAudioOutput>
 #endif
 
 #include "qt5xhb_common.h"
@@ -70,10 +70,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstractAudioOutput>
+#include <QtMultimedia/QAbstractAudioOutput>
 #endif
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_DELETE )
 {

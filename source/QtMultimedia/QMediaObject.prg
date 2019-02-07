@@ -50,10 +50,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMediaObject>
+#include <QtMultimedia/QMediaObject>
 #endif
 
 #include "qt5xhb_common.h"
@@ -62,11 +62,11 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QMediaObject>
+#include <QtMultimedia/QMediaObject>
 #endif
 
-#include <QVariant>
-#include <QMediaService>
+#include <QtCore/QVariant>
+#include <QtMultimedia/QMediaService>
 
 /*
 QMediaObject(QObject *parent, QMediaService *service) [protected]

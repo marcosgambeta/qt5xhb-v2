@@ -88,10 +88,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMediaPlayer>
+#include <QtMultimedia/QMediaPlayer>
 #endif
 
 #include "qt5xhb_common.h"
@@ -100,10 +100,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QMediaPlayer>
+#include <QtMultimedia/QMediaPlayer>
 #endif
 
-#include <QMediaPlaylist>
+#include <QtMultimedia/QMediaPlaylist>
 
 /*
 explicit QMediaPlayer(QObject *parent = nullptr, Flags flags = Flags())

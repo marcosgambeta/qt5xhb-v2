@@ -34,10 +34,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QVideoRendererControl>
+#include <QtMultimedia/QVideoRendererControl>
 #endif
 
 #include "qt5xhb_common.h"
@@ -46,10 +46,10 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
-#include <QVideoRendererControl>
+#include <QtMultimedia/QVideoRendererControl>
 #endif
 
-#include <QAbstractVideoSurface>
+#include <QtMultimedia/QAbstractVideoSurface>
 
 /*
 explicit QVideoRendererControl(QObject *parent = nullptr) [protected]
