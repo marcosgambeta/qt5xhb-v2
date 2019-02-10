@@ -31,6 +31,8 @@ $includes=5,8,0
 using namespace QtCharts;
 #endif
 
+#include <QtCharts/QCandlestickSet>
+
 $prototype=explicit QCandlestickSeries(QObject *parent = nullptr)
 $constructor=5,8,0|new|QObject *=nullptr
 
