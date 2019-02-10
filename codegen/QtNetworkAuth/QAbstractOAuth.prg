@@ -31,6 +31,7 @@ $destructor
 $includes=5,10,0
 
 #include <QtNetwork/QNetworkAccessManager>
+#include <QtNetwork/QNetworkReply>
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 
 $prototype=explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) [protected]
