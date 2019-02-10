@@ -27,8 +27,11 @@ $destructor
 
 $includes=5,8,0
 
-$prototype=explicit QCanBusDevice(QObject *parent = nullptr)
-$constructor=5,8,0|new|QObject *=nullptr
+#include <QtCore/QVariant>
+#include <QtCore/QVector>
+
+$prototype=explicit QCanBusDevice(QObject *parent = nullptr) [abstract]
+%% $constructor=5,8,0|new|QObject *=nullptr
 
 %% $deleteMethod
 

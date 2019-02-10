@@ -28,7 +28,8 @@ $destructor
 $includes=5,9,0
 
 $prototype=QCanBusDeviceInfo() = delete
-$internalConstructor=5,9,0|new1|
+%% TODO: deleted ?
+%% $internalConstructor=5,9,0|new1|
 
 $prototype=QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
 $internalConstructor=5,9,0|new2|const QCanBusDeviceInfo &
@@ -40,11 +41,12 @@ $prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) [private]
 
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
-  if( ISNUMPAR(0) )
-  {
-    QCanBusDeviceInfo_new1();
-  }
-  else if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
+%%  if( ISNUMPAR(0) )
+%%  {
+%%    QCanBusDeviceInfo_new1();
+%%  }
+%%  else if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
+  if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
   {
     QCanBusDeviceInfo_new2();
   }
