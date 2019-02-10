@@ -27,8 +27,12 @@ $destructor
 
 $includes
 
-$prototype=explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = nullptr)
-$constructor=|new|QVirtualKeyboardInputContext *=nullptr
+#include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
+#include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
+#include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
+
+$prototype=explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = nullptr) [private]
+%% $constructor=|new|QVirtualKeyboardInputContext *=nullptr
 
 $prototype=~QVirtualKeyboardInputEngine()
 $deleteMethod
@@ -69,7 +73,8 @@ $method=|QList<int>|inputModes|
 %%
 
 $prototype=InputMode inputMode() const
-$method=|QVirtualKeyboardInputEngine::InputMode|inputMode|
+%% TODO: fix
+%% $method=|QVirtualKeyboardInputEngine::InputMode|inputMode|
 
 $prototype=void setInputMode(InputMode inputMode)
 $method=|void|setInputMode|QVirtualKeyboardInputEngine::InputMode
@@ -99,8 +104,8 @@ $method=|bool|wordCandidateListVisibleHint|
 %%
 %%
 
-$prototype=void init()
-$method=|void|init|
+$prototype=void init() [private]
+%% $method=|void|init|
 
 $prototype=Q_INVOKABLE bool virtualKeyPress(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers, bool repeat)
 $method=|bool|virtualKeyPress|Qt::Key,const QString &,Qt::KeyboardModifiers,bool

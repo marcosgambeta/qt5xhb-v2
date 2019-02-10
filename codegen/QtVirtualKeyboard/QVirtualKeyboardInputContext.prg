@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+#include <QtVirtualKeyboard/QVirtualKeyboardInputEngine>
+
 $prototype=explicit QVirtualKeyboardInputContext(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
 
@@ -182,10 +184,30 @@ $prototype=Q_INVOKABLE void sendKeyClick(int key, const QString &text, int modif
 $method=|void|sendKeyClick|int,const QString &,int=0
 
 $prototype=Q_INVOKABLE void commit()
-$method=|void|commit|
+$internalMethod=|void|commit,commit1|
 
 $prototype=Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
-$method=|void|commit|const QString &,int=0,int=0
+$internalMethod=|void|commit,commit2|const QString &,int=0,int=0
+
+//[1]Q_INVOKABLE void commit()
+//[2]Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
+
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QVirtualKeyboardInputContext_commit1();
+  }
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  {
+    QVirtualKeyboardInputContext_commit2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+$addMethod=commit
 
 $prototype=Q_INVOKABLE void clear()
 $method=|void|clear|

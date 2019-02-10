@@ -27,8 +27,10 @@ $destructor
 
 $includes
 
-$prototype=explicit QVirtualKeyboardAbstractInputMethod(QObject *parent = nullptr)
-$constructor=|new|QObject *=nullptr
+#include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
+
+$prototype=explicit QVirtualKeyboardAbstractInputMethod(QObject *parent = nullptr) [abstract]
+%% $constructor=|new|QObject *=nullptr
 
 $prototype=~QVirtualKeyboardAbstractInputMethod()
 $deleteMethod
