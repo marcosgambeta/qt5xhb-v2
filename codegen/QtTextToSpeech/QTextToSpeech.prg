@@ -160,6 +160,9 @@ $prototype=void voiceChanged( const QVoice & voice )
 $signalMethod=5,10,0|void|voiceChanged|const QVoice &
 
 $prototype=void volumeChanged( int volume )
-$signalMethod=5,10,0|void|volumeChanged|int
+$signalMethod=5,10,0|void|volumeChanged,volumeChanged1,QOverload<int>|int
+
+$prototype=void volumeChanged( double volume )
+$signalMethod=5,10,0|void|volumeChanged,volumeChanged2,QOverload<double>|double
 
 #pragma ENDDUMP
