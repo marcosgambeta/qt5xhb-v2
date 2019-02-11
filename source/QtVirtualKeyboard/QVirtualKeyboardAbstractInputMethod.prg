@@ -20,7 +20,6 @@ REQUEST QVIRTUALKEYBOARDINPUTENGINE
 
 CLASS QVirtualKeyboardAbstractInputMethod INHERIT QObject
 
-   METHOD new
    METHOD delete
    METHOD inputContext
    METHOD inputEngine
@@ -70,21 +69,11 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
 #endif
 
+#include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
+
 /*
-explicit QVirtualKeyboardAbstractInputMethod(QObject *parent = nullptr)
+explicit QVirtualKeyboardAbstractInputMethod(QObject *parent = nullptr) [abstract]
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_NEW )
-{
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
-  {
-    QVirtualKeyboardAbstractInputMethod * o = new QVirtualKeyboardAbstractInputMethod ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
 
 /*
 ~QVirtualKeyboardAbstractInputMethod()

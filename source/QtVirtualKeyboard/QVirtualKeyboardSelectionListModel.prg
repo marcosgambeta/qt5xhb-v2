@@ -19,7 +19,6 @@ REQUEST QVIRTUALKEYBOARDABSTRACTINPUTMETHOD
 
 CLASS QVirtualKeyboardSelectionListModel INHERIT QAbstractListModel
 
-   METHOD new
    METHOD delete
    METHOD count
    METHOD setDataSource
@@ -60,21 +59,11 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
 #endif
 
+#include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
+
 /*
-explicit QVirtualKeyboardSelectionListModel(QObject *parent = nullptr)
+explicit QVirtualKeyboardSelectionListModel(QObject *parent = nullptr) [private]
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_NEW )
-{
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
-  {
-    QVirtualKeyboardSelectionListModel * o = new QVirtualKeyboardSelectionListModel ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
 
 /*
 ~QVirtualKeyboardSelectionListModel()

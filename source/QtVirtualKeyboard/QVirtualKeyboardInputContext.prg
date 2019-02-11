@@ -88,6 +88,8 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
 #endif
 
+#include <QtVirtualKeyboard/QVirtualKeyboardInputEngine>
+
 /*
 explicit QVirtualKeyboardInputContext(QObject *parent = nullptr)
 */
@@ -602,24 +604,13 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
 /*
 Q_INVOKABLE void commit()
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
+void QVirtualKeyboardInputContext_commit1 ()
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
-    {
-#endif
       obj->commit ();
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -628,27 +619,35 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 /*
 Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
+void QVirtualKeyboardInputContext_commit2 ()
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
-    {
-#endif
       obj->commit ( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+//[1]Q_INVOKABLE void commit()
+//[2]Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
+
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QVirtualKeyboardInputContext_commit1();
+  }
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  {
+    QVirtualKeyboardInputContext_commit2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
