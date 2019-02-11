@@ -70,13 +70,6 @@ RETURN
 /*
 QCanBusDeviceInfo() = delete
 */
-void QCanBusDeviceInfo_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBusDeviceInfo * o = new QCanBusDeviceInfo ();
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
 
 /*
 QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
@@ -98,11 +91,7 @@ explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) [private]
 
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
-  if( ISNUMPAR(0) )
-  {
-    QCanBusDeviceInfo_new1();
-  }
-  else if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
+  if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
   {
     QCanBusDeviceInfo_new2();
   }
