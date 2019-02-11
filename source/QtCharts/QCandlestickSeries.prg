@@ -106,6 +106,8 @@ RETURN
 using namespace QtCharts;
 #endif
 
+#include <QtCharts/QCandlestickSet>
+
 /*
 explicit QCandlestickSeries(QObject *parent = nullptr)
 */
