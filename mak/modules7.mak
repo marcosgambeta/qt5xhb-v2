@@ -107,6 +107,9 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    include mak/QtUiTools.mak
 endif   
+ifeq ($(MODULE_QTVIRTUALKEYBOARD),yes)
+   include mak/QtVirtualKeyboard.mak
+endif   
 ifeq ($(MODULE_QTWEBCHANNEL),yes)
    include mak/QtWebChannel.mak
 endif   

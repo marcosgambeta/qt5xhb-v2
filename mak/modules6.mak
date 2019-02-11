@@ -107,6 +107,9 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtUiTools
 endif
+ifeq ($(MODULE_QTVIRTUALKEYBOARD),yes)
+   MOCINCLUDES += -I$(QT_INC_DIR)/QtVirtualKeyboard
+endif
 ifeq ($(MODULE_QTWEBCHANNEL),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtWebChannel
 endif

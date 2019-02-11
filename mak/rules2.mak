@@ -168,6 +168,11 @@ $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtUiTools/%.prg
 	$(HB_CMD)
 $(QT5XHB_OBJ_DIR)/%$(OBJEXT) : $(QT5XHB_SRC_DIR)/QtUiTools/%.cpp
 	$(CC_CMD)
+# QtVirtualKeyboard
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtVirtualKeyboard/%.prg
+	$(HB_CMD)
+$(QT5XHB_OBJ_DIR)/%$(OBJEXT) : $(QT5XHB_SRC_DIR)/QtVirtualKeyboard/%.cpp
+	$(CC_CMD)
 # QtWebChannel
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebChannel/%.prg
 	$(HB_CMD)

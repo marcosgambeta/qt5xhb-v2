@@ -107,6 +107,9 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtUiTools
 endif
+ifeq ($(MODULE_QTVIRTUALKEYBOARD),yes)
+   CINCLUDES += -I$(QT_INC_DIR)/QtVirtualKeyboard
+endif
 ifeq ($(MODULE_QTWEBCHANNEL),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtWebChannel
 endif
@@ -248,6 +251,9 @@ ifeq ($(MODULE_QTTEXTTOSPEECH),yes)
 endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtUiTools
+endif
+ifeq ($(MODULE_QTVIRTUALKEYBOARD),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtVirtualKeyboard
 endif
 ifeq ($(MODULE_QTWEBCHANNEL),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebChannel

@@ -107,6 +107,9 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtuitools5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTVIRTUALKEYBOARD),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtvirtualkeyboard5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTWEBCHANNEL),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebchannel5$(LIBEXT)
 endif

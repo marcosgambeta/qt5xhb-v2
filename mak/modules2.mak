@@ -107,6 +107,9 @@ endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtUiTools/.*),)
    MODULE_QTUITOOLS = yes
 endif
+ifneq ($(wildcard $(QT_INC_DIR)/QtVirtualKeyboard/.*),)
+   MODULE_QTVIRTUALKEYBOARD = yes
+endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtWebChannel/.*),)
    MODULE_QTWEBCHANNEL = yes
 endif
