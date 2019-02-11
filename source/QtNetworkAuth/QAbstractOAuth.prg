@@ -77,6 +77,7 @@ RETURN
 #endif
 
 #include <QtNetwork/QNetworkAccessManager>
+#include <QtNetwork/QNetworkReply>
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 
 /*
