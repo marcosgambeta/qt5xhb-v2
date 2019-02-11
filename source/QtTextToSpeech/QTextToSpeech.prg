@@ -44,7 +44,8 @@ CLASS QTextToSpeech INHERIT QObject
    METHOD onRateChanged
    METHOD onStateChanged
    METHOD onVoiceChanged
-   METHOD onVolumeChanged
+   METHOD onVolumeChanged1
+   METHOD onVolumeChanged2
 
    DESTRUCTOR destroyObject
 
@@ -977,7 +978,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 /*
 void volumeChanged( int volume )
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -992,7 +993,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextToSpeech::volumeChanged, 
+                                                              QOverload<int>::of(&QTextToSpeech::volumeChanged), 
                                                               [sender,index]
                                                               (int arg1) {
           PHB_ITEM cb = Signals3_return_codeblock( sender, index );
@@ -1001,6 +1002,69 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
           {
             PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals3_store_connection( sender, index, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Signals3_disconnection( sender, index );
+
+      QObject::disconnect( Signals3_get_connection( sender, index ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#endif
+}
+
+/*
+void volumeChanged( double volume )
+*/
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( sender != nullptr )
+  {
+    int index = sender->metaObject()->indexOfSignal("volumeChanged(double)");
+
+    if( hb_pcount() == 1 )
+    {
+      if( Signals3_connection( sender, index ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<double>::of(&QTextToSpeech::volumeChanged), 
+                                                              [sender,index]
+                                                              (double arg1) {
+          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTTOSPEECH" );
+            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
