@@ -673,6 +673,9 @@ HB_FUNC_STATIC( QIMAGE_SETPIXELCOLOR )
 }
 $addMethod=setPixelColor
 
+$prototype=void QImage::convertTo(QImage::Format format, Qt::ImageConversionFlags flags = Qt::AutoColor)
+$method=5,13,0|void|convertTo|QImage::Format,Qt::ImageConversionFlags=Qt::AutoColor
+
 $variantMethods
 
 #pragma ENDDUMP
