@@ -106,7 +106,9 @@ RETURN
 using namespace QtCharts;
 #endif
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QtCharts/QCandlestickSet>
+#endif
 
 /*
 explicit QCandlestickSeries(QObject *parent = nullptr)
@@ -1434,7 +1436,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
       if( Signals3_connection( sender, index ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
+        QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QCandlestickSeries::capsWidthChanged, 
                                                               [sender,index]
                                                               () {
