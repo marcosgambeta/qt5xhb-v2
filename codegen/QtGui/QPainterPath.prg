@@ -58,6 +58,7 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW )
   }
 }
 
+$prototype=~QPainterPath()
 $deleteMethod
 
 $prototype=void addEllipse ( const QRectF & boundingRectangle )
@@ -85,7 +86,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
   }
   else if( ISNUMPAR(3) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) )
   {
-    QPainterPath_addEllipse2();
+    QPainterPath_addEllipse3();
   }
   else
   {
@@ -537,6 +538,15 @@ $addMethod=translated
 
 $prototype=QPainterPath united ( const QPainterPath & p ) const
 $method=|QPainterPath|united|const QPainterPath &
+
+$prototype=int QPainterPath::capacity() const
+$method=5,13,0|int|capacity|
+
+$prototype=void QPainterPath::clear()
+$method=5,13,0|void|clear|
+
+$prototype=void QPainterPath::reserve(int size)
+$method=5,13,0|void|reserve|int
 
 $extraMethods
 

@@ -64,6 +64,9 @@ CLASS QPainterPath
    METHOD translate
    METHOD translated
    METHOD united
+   METHOD capacity
+   METHOD clear
+   METHOD reserve
 
    METHOD newFrom
    METHOD newFromObject
@@ -149,6 +152,9 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW )
   }
 }
 
+/*
+~QPainterPath()
+*/
 HB_FUNC_STATIC( QPAINTERPATH_DELETE )
 {
   QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -1526,6 +1532,88 @@ HB_FUNC_STATIC( QPAINTERPATH_UNITED )
     }
 #endif
   }
+}
+
+/*
+int QPainterPath::capacity() const
+*/
+HB_FUNC_STATIC( QPAINTERPATH_CAPACITY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RINT( obj->capacity () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+void QPainterPath::clear()
+*/
+HB_FUNC_STATIC( QPAINTERPATH_CLEAR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      obj->clear ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+void QPainterPath::reserve(int size)
+*/
+HB_FUNC_STATIC( QPAINTERPATH_RESERVE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+  QPainterPath * obj = (QPainterPath *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+#endif
+      obj->reserve ( PINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 HB_FUNC_STATIC( QPAINTERPATH_NEWFROM )
