@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
   }
   else if( ISNUMPAR(3) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) )
   {
-    QPainterPath_addEllipse2();
+    QPainterPath_addEllipse3();
   }
   else
   {
