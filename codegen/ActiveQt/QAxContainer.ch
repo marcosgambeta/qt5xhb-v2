@@ -11,3 +11,4 @@ $header
 
 #include "QAxScript.ch"
 #include "QAxScriptEngine.ch"
+#include "QAxSelect.ch"

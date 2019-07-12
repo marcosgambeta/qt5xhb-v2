@@ -15,5 +15,6 @@
 
 #include "QAxScript.ch"
 #include "QAxScriptEngine.ch"
+#include "QAxSelect.ch"
 
 #endif /* QAXCONTAINER_CH */

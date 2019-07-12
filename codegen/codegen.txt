@@ -151,6 +151,8 @@ QAxScript::FunctionFlags                             |enum           |ActiveQt
 QAxScriptEngine                                      |QObject        |ActiveQt
 QAxScriptEngine::State                               |enum           |ActiveQt
 QAxScriptManager                                     |QObject        |ActiveQt
+QAxSelect                                            |QWidget        |ActiveQt
+QAxSelect::SandboxingLevel                           |enum           |ActiveQt
 QBackingStore                                        |object         |QtGui
 QBar3DSeries                                         |QObject        |QtDataVisualization
 QBarDataItem                                         |object         |QtDataVisualization
