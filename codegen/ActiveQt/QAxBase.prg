@@ -120,6 +120,12 @@ $virtualMethod=|void|setPropertyWritable|const char *,bool
 $prototype=QStringList verbs () const
 $method=|QStringList|verbs|
 
+$prototype=unsigned long QAxBase::classContext() const
+$method=5,13,0|unsigned long|classContext|
+
+$prototype=void QAxBase::setClassContext(unsigned long classContext)
+$method=5,13,0|void|setClassContext|unsigned long
+
 $extraMethods
 
 %%

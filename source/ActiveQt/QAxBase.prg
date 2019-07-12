@@ -37,6 +37,8 @@ CLASS QAxBase
    METHOD setControl
    METHOD setPropertyWritable
    METHOD verbs
+   METHOD classContext
+   METHOD setClassContext
 
    METHOD newFrom
    METHOD newFromObject
@@ -482,6 +484,60 @@ HB_FUNC_STATIC( QAXBASE_VERBS )
     }
 #endif
   }
+}
+
+/*
+unsigned long QAxBase::classContext() const
+*/
+HB_FUNC_STATIC( QAXBASE_CLASSCONTEXT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RUNSIGNEDLONG( obj->classContext () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+void QAxBase::setClassContext(unsigned long classContext)
+*/
+HB_FUNC_STATIC( QAXBASE_SETCLASSCONTEXT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+#endif
+      obj->setClassContext ( PUNSIGNEDLONG(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 HB_FUNC_STATIC( QAXBASE_NEWFROM )
