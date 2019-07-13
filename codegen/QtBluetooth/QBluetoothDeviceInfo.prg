@@ -106,7 +106,30 @@ $prototype=void setRssi(qint16 signal)
 $method=5,2,0|void|setRssi|qint16
 
 $prototype=void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
-$method=5,2,0|void|setServiceUuids|const QList<QBluetoothUuid> &,QBluetoothDeviceInfo::DataCompleteness
+%% TODO: ausente na documentacao - verificar
+$internalMethod=5,2,0|void|setServiceUuids,setServiceUuids1|const QList<QBluetoothUuid> &,QBluetoothDeviceInfo::DataCompleteness
+
+$prototype=void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+$internalMethod=5,13,0|void|setServiceUuids,setServiceUuids2|const QVector<QBluetoothUuid> &
+
+//[1]void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
+//[2]void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
+{
+  if( ISNUMPAR(2) && ISARRAY(1) && ISNUM(2) )
+  {
+    QBluetoothDeviceInfo_setServiceUuids1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QBluetoothDeviceInfo_setServiceUuids2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 $prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = nullptr) const
 %% TODO: implementar

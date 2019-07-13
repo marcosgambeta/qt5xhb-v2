@@ -447,18 +447,14 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETRSSI )
 /*
 void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
 */
-HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
+void QBluetoothDeviceInfo_setServiceUuids1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISARRAY(1) && ISNUM(2) )
-    {
-#endif
-      QList<QBluetoothUuid> par1;
+       QList<QBluetoothUuid> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
 int nLen1 = hb_arrayLen(aList1);
@@ -467,17 +463,54 @@ for (i1=0;i1<nLen1;i1++)
   par1 << *(QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
       obj->setServiceUuids ( par1, (QBluetoothDeviceInfo::DataCompleteness) hb_parni(2) );
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 #endif
+}
+
+/*
+void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+*/
+void QBluetoothDeviceInfo_setServiceUuids2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+       QVector<QBluetoothUuid> par1;
+PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+int i1;
+int nLen1 = hb_arrayLen(aList1);
+for (i1=0;i1<nLen1;i1++)
+{
+  par1 << *(QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+}
+      obj->setServiceUuids ( par1 );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+//[1]void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
+//[2]void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
+{
+  if( ISNUMPAR(2) && ISARRAY(1) && ISNUM(2) )
+  {
+    QBluetoothDeviceInfo_setServiceUuids1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QBluetoothDeviceInfo_setServiceUuids2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
