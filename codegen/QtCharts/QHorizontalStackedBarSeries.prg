@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -23,17 +24,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QHorizontalStackedBarSeries(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QHorizontalStackedBarSeries()
-$deleteMethod=5,7,0
+$deleteMethod
 
 $prototype=QAbstractSeries::SeriesType type() const
-$method=5,7,0|QAbstractSeries::SeriesType|type|
+$method=|QAbstractSeries::SeriesType|type|
 
 #pragma ENDDUMP

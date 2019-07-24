@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,15 +26,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
-$internalConstructor=5,7,0|new1|const QString &=QString(),QObject *=nullptr
+$internalConstructor=|new1|const QString &=QString(),QObject *=nullptr
 
 $prototype=explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
-$internalConstructor=5,7,0|new2|const qreal,const qreal,const qreal,const qreal,const qreal,const QString &=QString(),QObject *=nullptr
+$internalConstructor=|new2|const qreal,const qreal,const qreal,const qreal,const qreal,const QString &=QString(),QObject *=nullptr
 
 //[1]explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
 //[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
@@ -55,37 +56,37 @@ HB_FUNC_STATIC( QBOXSET_NEW )
 }
 
 $prototype=virtual ~QBoxSet()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=5,7,0|QPen|pen|
+$method=|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,7,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=5,7,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,7,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 %%
 %%
 %%
 
 $prototype=void append(const qreal value)
-$internalMethod=5,7,0|void|append,append1|const qreal
+$internalMethod=|void|append,append1|const qreal
 
 $prototype=void append(const QList<qreal> &values)
-$internalMethod=5,7,0|void|append,append2|const QList<qreal> &
+$internalMethod=|void|append,append2|const QList<qreal> &
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
@@ -108,57 +109,57 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
 $addMethod=append
 
 $prototype=void clear()
-$method=5,7,0|void|clear|
+$method=|void|clear|
 
 $prototype=void setLabel(const QString label)
-$method=5,7,0|void|setLabel|const QString &
+$method=|void|setLabel|const QString &
 
 $prototype=QString label() const
-$method=5,7,0|QString|label|
+$method=|QString|label|
 
 $prototype=void setValue(const int index, const qreal value)
-$method=5,7,0|void|setValue|const int,const qreal
+$method=|void|setValue|const int,const qreal
 
 $prototype=qreal at(const int index) const
-$method=5,7,0|qreal|at|const int
+$method=|qreal|at|const int
 
 $prototype=int count() const
-$method=5,7,0|int|count|
+$method=|int|count|
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void brushChanged()
-$signalMethod=5,7,0|void|brushChanged|
+$signalMethod=|void|brushChanged|
 
 $prototype=void cleared()
-$signalMethod=5,7,0|void|cleared|
+$signalMethod=|void|cleared|
 
 $prototype=void clicked()
-$signalMethod=5,7,0|void|clicked|
+$signalMethod=|void|clicked|
 
 $prototype=void doubleClicked()
-$signalMethod=5,7,0|void|doubleClicked|
+$signalMethod=|void|doubleClicked|
 
 $prototype=void hovered( bool status )
-$signalMethod=5,7,0|void|hovered|bool
+$signalMethod=|void|hovered|bool
 
 $prototype=void penChanged()
-$signalMethod=5,7,0|void|penChanged|
+$signalMethod=|void|penChanged|
 
 $prototype=void pressed()
-$signalMethod=5,7,0|void|pressed|
+$signalMethod=|void|pressed|
 
 $prototype=void released()
-$signalMethod=5,7,0|void|released|
+$signalMethod=|void|released|
 
 $prototype=void valueChanged( int index )
-$signalMethod=5,7,0|void|valueChanged|int
+$signalMethod=|void|valueChanged|int
 
 $prototype=void valuesChanged()
-$signalMethod=5,7,0|void|valuesChanged|
+$signalMethod=|void|valuesChanged|
 
 #pragma ENDDUMP

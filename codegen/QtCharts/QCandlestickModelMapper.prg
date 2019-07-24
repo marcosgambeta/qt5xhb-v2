@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,8,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 #include <QAbstractItemModel>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -37,7 +38,7 @@ using namespace QtCharts;
 #endif
 
 $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
-%% $constructor=5,8,0|new|QObject *=nullptr
+%% $constructor=|new|QObject *=nullptr
 
 %% $deleteMethod
 
@@ -46,27 +47,27 @@ $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract
 %%
 
 $prototype=QAbstractItemModel *model() const
-$method=5,8,0|QAbstractItemModel *|model|
+$method=|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model)
-$method=5,8,0|void|setModel|QAbstractItemModel *
+$method=|void|setModel|QAbstractItemModel *
 
 %%
 %% Q_PROPERTY(QCandlestickSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
 $prototype=QCandlestickSeries *series() const
-$method=5,8,0|QCandlestickSeries *|series|
+$method=|QCandlestickSeries *|series|
 
 $prototype=void setSeries(QCandlestickSeries *series)
-$method=5,8,0|void|setSeries|QCandlestickSeries *
+$method=|void|setSeries|QCandlestickSeries *
 
 %%
 %%
 %%
 
 $prototype=virtual Qt::Orientation orientation() const = 0
-$virtualMethod=5,8,0|Qt::Orientation|orientation|
+$virtualMethod=|Qt::Orientation|orientation|
 
 $prototype=void setTimestamp(int timestamp) [protected]
 
@@ -100,14 +101,14 @@ $prototype=int lastSetSection() const [protected]
 %% SIGNALS
 %%
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
+%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+%% using namespace QtCharts;
+%% #endif
 
 $prototype=void modelReplaced()
-$signalMethod=5,8,0|void|modelReplaced|
+$signalMethod=|void|modelReplaced|
 
 $prototype=void seriesReplaced()
-$signalMethod=5,8,0|void|seriesReplaced|
+$signalMethod=|void|seriesReplaced|
 
 #pragma ENDDUMP

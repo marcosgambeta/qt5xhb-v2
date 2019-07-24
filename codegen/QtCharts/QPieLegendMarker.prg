@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -23,25 +24,25 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = nullptr)
-$constructor=5,7,0|new|QPieSeries *,QPieSlice *,QLegend *,QObject *=nullptr
+$constructor=|new|QPieSeries *,QPieSlice *,QLegend *,QObject *=nullptr
 
 $prototype=QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QPieLegendMarker()
-$deleteMethod=5,7,0
+$deleteMethod
 
 $prototype=virtual LegendMarkerType type()
-$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QPieSeries* series()
-$virtualMethod=5,7,0|QPieSeries *|series|
+$virtualMethod=|QPieSeries *|series|
 
 $prototype=QPieSlice* slice()
-$method=5,7,0|QPieSlice *|slice|
+$method=|QPieSlice *|slice|
 
 #pragma ENDDUMP

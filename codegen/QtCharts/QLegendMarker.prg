@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 #include <QtCharts/QAbstractSeries>
 
@@ -34,7 +35,7 @@ using namespace QtCharts;
 $prototype=explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QLegendMarker()
-$deleteMethod=5,7,0
+$deleteMethod
 
 
 %%
@@ -42,60 +43,60 @@ $deleteMethod=5,7,0
 %%
 
 $prototype=QString label() const
-$method=5,7,0|QString|label|
+$method=|QString|label|
 
 $prototype=void setLabel(const QString &label)
-$method=5,7,0|void|setLabel|const QString &
+$method=|void|setLabel|const QString &
 
 %%
 %% Q_PROPERTY(QBrush labelBrush READ labelBrush WRITE setLabelBrush NOTIFY labelBrushChanged)
 %%
 
 $prototype=QBrush labelBrush() const
-$method=5,7,0|QBrush|labelBrush|
+$method=|QBrush|labelBrush|
 
 $prototype=void setLabelBrush(const QBrush &brush)
-$method=5,7,0|void|setLabelBrush|const QBrush &
+$method=|void|setLabelBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
 $prototype=QFont font() const
-$method=5,7,0|QFont|font|
+$method=|QFont|font|
 
 $prototype=void setFont(const QFont &font)
-$method=5,7,0|void|setFont|const QFont &
+$method=|void|setFont|const QFont &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=5,7,0|QPen|pen|
+$method=|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,7,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=5,7,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,7,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
 %%
 
 $prototype=bool isVisible() const
-$method=5,7,0|bool|isVisible|
+$method=|bool|isVisible|
 
 $prototype=void setVisible(bool visible)
-$method=5,7,0|void|setVisible|bool
+$method=|void|setVisible|bool
 
 %%
 %% Q_PROPERTY(QLegend::MarkerShape shape READ shape WRITE setShape NOTIFY shapeChanged)
@@ -112,42 +113,42 @@ $method=5,9,0|void|setShape|QLegend::MarkerShape
 %%
 
 $prototype=virtual LegendMarkerType type() = 0
-$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QAbstractSeries* series() = 0
-$virtualMethod=5,7,0|QAbstractSeries *|series|
+$virtualMethod=|QAbstractSeries *|series|
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void brushChanged()
-$signalMethod=5,7,0|void|brushChanged|
+$signalMethod=|void|brushChanged|
 
 $prototype=void clicked()
-$signalMethod=5,7,0|void|clicked|
+$signalMethod=|void|clicked|
 
 $prototype=void fontChanged()
-$signalMethod=5,7,0|void|fontChanged|
+$signalMethod=|void|fontChanged|
 
 $prototype=void hovered( bool status )
-$signalMethod=5,7,0|void|hovered|bool
+$signalMethod=|void|hovered|bool
 
 $prototype=void labelBrushChanged()
-$signalMethod=5,7,0|void|labelBrushChanged|
+$signalMethod=|void|labelBrushChanged|
 
 $prototype=void labelChanged()
-$signalMethod=5,7,0|void|labelChanged|
+$signalMethod=|void|labelChanged|
 
 $prototype=void penChanged()
-$signalMethod=5,7,0|void|penChanged|
+$signalMethod=|void|penChanged|
 
 $prototype=void shapeChanged()
 $signalMethod=5,9,0|void|shapeChanged|
 
 $prototype=void visibleChanged()
-$signalMethod=5,7,0|void|visibleChanged|
+$signalMethod=|void|visibleChanged|
 
 #pragma ENDDUMP

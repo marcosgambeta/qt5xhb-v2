@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,105 +26,105 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QBarSet(const QString label, QObject *parent = nullptr)
-$constructor=5,7,0|new|const QString &,QObject *=nullptr
+$constructor=|new|const QString &,QObject *=nullptr
 
 $prototype=virtual ~QBarSet()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
 %%
 
 $prototype=QString label() const
-$method=5,7,0|QString|label|
+$method=|QString|label|
 
 $prototype=void setLabel(const QString label)
-$method=5,7,0|void|setLabel|const QString &
+$method=|void|setLabel|const QString &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=5,7,0|QPen|pen|
+$method=|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,7,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=5,7,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,7,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QBrush labelBrush READ labelBrush WRITE setLabelBrush NOTIFY labelBrushChanged)
 %%
 
 $prototype=QBrush labelBrush() const
-$method=5,7,0|QBrush|labelBrush|
+$method=|QBrush|labelBrush|
 
 $prototype=void setLabelBrush(const QBrush &brush)
-$method=5,7,0|void|setLabelBrush|const QBrush &
+$method=|void|setLabelBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QFont labelFont READ labelFont WRITE setLabelFont NOTIFY labelFontChanged)
 %%
 
 $prototype=QFont labelFont() const
-$method=5,7,0|QFont|labelFont|
+$method=|QFont|labelFont|
 
 $prototype=void setLabelFont(const QFont &font)
-$method=5,7,0|void|setLabelFont|const QFont &
+$method=|void|setLabelFont|const QFont &
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
 $prototype=QColor color()
-$method=5,7,0|QColor|color|
+$method=|QColor|color|
 
 $prototype=void setColor(QColor color)
-$method=5,7,0|void|setColor|QColor
+$method=|void|setColor|QColor
 
 %%
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
 $prototype=QColor borderColor()
-$method=5,7,0|QColor|borderColor|
+$method=|QColor|borderColor|
 
 $prototype=void setBorderColor(QColor color)
-$method=5,7,0|void|setBorderColor|QColor
+$method=|void|setBorderColor|QColor
 
 %%
 %% Q_PROPERTY(QColor labelColor READ labelColor WRITE setLabelColor NOTIFY labelColorChanged)
 %%
 
 $prototype=QColor labelColor()
-$method=5,7,0|QColor|labelColor|
+$method=|QColor|labelColor|
 
 $prototype=void setLabelColor(QColor color)
-$method=5,7,0|void|setLabelColor|QColor
+$method=|void|setLabelColor|QColor
 
 %%
 %%
 %%
 
 $prototype=void append(const qreal value)
-$internalMethod=5,7,0|void|append,append1|const qreal
+$internalMethod=|void|append,append1|const qreal
 
 $prototype=void append(const QList<qreal> &values)
-$internalMethod=5,7,0|void|append,append2|const QList<qreal> &
+$internalMethod=|void|append,append2|const QList<qreal> &
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
@@ -146,75 +147,75 @@ HB_FUNC_STATIC( QBARSET_APPEND )
 $addMethod=append
 
 $prototype=void insert(const int index, const qreal value)
-$method=5,7,0|void|insert|const int,const qreal
+$method=|void|insert|const int,const qreal
 
 $prototype=void remove(const int index, const int count = 1)
-$method=5,7,0|void|remove|const int,const int=1
+$method=|void|remove|const int,const int=1
 
 $prototype=void replace(const int index, const qreal value)
-$method=5,7,0|void|replace|const int,const qreal
+$method=|void|replace|const int,const qreal
 
 $prototype=qreal at(const int index) const
-$method=5,7,0|qreal|at|const int
+$method=|qreal|at|const int
 
 $prototype=int count() const
-$method=5,7,0|int|count|
+$method=|int|count|
 
 $prototype=qreal sum() const
-$method=5,7,0|qreal|sum|
+$method=|qreal|sum|
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void borderColorChanged( QColor color )
-$signalMethod=5,7,0|void|borderColorChanged|QColor
+$signalMethod=|void|borderColorChanged|QColor
 
 $prototype=void brushChanged()
-$signalMethod=5,7,0|void|brushChanged|
+$signalMethod=|void|brushChanged|
 
 $prototype=void clicked( int index )
-$signalMethod=5,7,0|void|clicked|int
+$signalMethod=|void|clicked|int
 
 $prototype=void colorChanged( QColor color )
-$signalMethod=5,7,0|void|colorChanged|QColor
+$signalMethod=|void|colorChanged|QColor
 
 $prototype=void doubleClicked( int index )
-$signalMethod=5,7,0|void|doubleClicked|int
+$signalMethod=|void|doubleClicked|int
 
 $prototype=void hovered( bool status, int index )
-$signalMethod=5,7,0|void|hovered|bool,int
+$signalMethod=|void|hovered|bool,int
 
 $prototype=void labelBrushChanged()
-$signalMethod=5,7,0|void|labelBrushChanged|
+$signalMethod=|void|labelBrushChanged|
 
 $prototype=void labelChanged()
-$signalMethod=5,7,0|void|labelChanged|
+$signalMethod=|void|labelChanged|
 
 $prototype=void labelColorChanged( QColor color )
-$signalMethod=5,7,0|void|labelColorChanged|QColor
+$signalMethod=|void|labelColorChanged|QColor
 
 $prototype=void labelFontChanged()
-$signalMethod=5,7,0|void|labelFontChanged|
+$signalMethod=|void|labelFontChanged|
 
 $prototype=void penChanged()
-$signalMethod=5,7,0|void|penChanged|
+$signalMethod=|void|penChanged|
 
 $prototype=void pressed( int index )
-$signalMethod=5,7,0|void|pressed|int
+$signalMethod=|void|pressed|int
 
 $prototype=void released( int index )
-$signalMethod=5,7,0|void|released|int
+$signalMethod=|void|released|int
 
 $prototype=void valueChanged( int index )
-$signalMethod=5,7,0|void|valueChanged|int
+$signalMethod=|void|valueChanged|int
 
 $prototype=void valuesAdded( int index, int count )
-$signalMethod=5,7,0|void|valuesAdded|int,int
+$signalMethod=|void|valuesAdded|int,int
 
 $prototype=void valuesRemoved( int index, int count )
-$signalMethod=5,7,0|void|valuesRemoved|int,int
+$signalMethod=|void|valuesRemoved|int,int
 
 #pragma ENDDUMP

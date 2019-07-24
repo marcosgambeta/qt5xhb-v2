@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,8,0
 
 $header
 
@@ -25,14 +26,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
 $prototype=explicit QHCandlestickModelMapper(QObject *parent = nullptr)
-$constructor=5,8,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 %% $deleteMethod
 
@@ -41,105 +42,105 @@ $constructor=5,8,0|new|QObject *=nullptr
 %%
 
 $prototype=int timestampColumn() const
-$method=5,8,0|int|timestampColumn|
+$method=|int|timestampColumn|
 
 $prototype=void setTimestampColumn(int timestampColumn)
-$method=5,8,0|void|setTimestampColumn|int
+$method=|void|setTimestampColumn|int
 
 %%
 %% Q_PROPERTY(int openColumn READ openColumn WRITE setOpenColumn NOTIFY openColumnChanged)
 %%
 
 $prototype=int openColumn() const
-$method=5,8,0|int|openColumn|
+$method=|int|openColumn|
 
 $prototype=void setOpenColumn(int openColumn)
-$method=5,8,0|void|setOpenColumn|int
+$method=|void|setOpenColumn|int
 
 %%
 %% Q_PROPERTY(int highColumn READ highColumn WRITE setHighColumn NOTIFY highColumnChanged)
 %%
 
 $prototype=int highColumn() const
-$method=5,8,0|int|highColumn|
+$method=|int|highColumn|
 
 $prototype=void setHighColumn(int highColumn)
-$method=5,8,0|void|setHighColumn|int
+$method=|void|setHighColumn|int
 
 %%
 %% Q_PROPERTY(int lowColumn READ lowColumn WRITE setLowColumn NOTIFY lowColumnChanged)
 %%
 
 $prototype=int lowColumn() const
-$method=5,8,0|int|lowColumn|
+$method=|int|lowColumn|
 
 $prototype=void setLowColumn(int lowColumn)
-$method=5,8,0|void|setLowColumn|int
+$method=|void|setLowColumn|int
 
 %%
 %% Q_PROPERTY(int closeColumn READ closeColumn WRITE setCloseColumn NOTIFY closeColumnChanged)
 %%
 
 $prototype=int closeColumn() const
-$method=5,8,0|int|closeColumn|
+$method=|int|closeColumn|
 
 $prototype=void setCloseColumn(int closeColumn)
-$method=5,8,0|void|setCloseColumn|int
+$method=|void|setCloseColumn|int
 
 %%
 %% Q_PROPERTY(int firstSetRow READ firstSetRow WRITE setFirstSetRow NOTIFY firstSetRowChanged)
 %%
 
 $prototype=int firstSetRow() const
-$method=5,8,0|int|firstSetRow|
+$method=|int|firstSetRow|
 
 $prototype=void setFirstSetRow(int firstSetRow)
-$method=5,8,0|void|setFirstSetRow|int
+$method=|void|setFirstSetRow|int
 
 %%
 %% Q_PROPERTY(int lastSetRow READ lastSetRow WRITE setLastSetRow NOTIFY lastSetRowChanged)
 %%
 
 $prototype=int lastSetRow() const
-$method=5,8,0|int|lastSetRow|
+$method=|int|lastSetRow|
 
 $prototype=void setLastSetRow(int lastSetRow)
-$method=5,8,0|void|setLastSetRow|int
+$method=|void|setLastSetRow|int
 
 %%
 %%
 %%
 
 $prototype=Qt::Orientation orientation() const
-$method=5,8,0|Qt::Orientation|orientation|
+$method=|Qt::Orientation|orientation|
 
 %%
 %% SIGNALS
 %%
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
+%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+%% using namespace QtCharts;
+%% #endif
 
 $prototype=void closeColumnChanged()
-$signalMethod=5,8,0|void|closeColumnChanged|
+$signalMethod=|void|closeColumnChanged|
 
 $prototype=void firstSetRowChanged()
-$signalMethod=5,8,0|void|firstSetRowChanged|
+$signalMethod=|void|firstSetRowChanged|
 
 $prototype=void highColumnChanged()
-$signalMethod=5,8,0|void|highColumnChanged|
+$signalMethod=|void|highColumnChanged|
 
 $prototype=void lastSetRowChanged()
-$signalMethod=5,8,0|void|lastSetRowChanged|
+$signalMethod=|void|lastSetRowChanged|
 
 $prototype=void lowColumnChanged()
-$signalMethod=5,8,0|void|lowColumnChanged|
+$signalMethod=|void|lowColumnChanged|
 
 $prototype=void openColumnChanged()
-$signalMethod=5,8,0|void|openColumnChanged|
+$signalMethod=|void|openColumnChanged|
 
 $prototype=void timestampColumnChanged()
-$signalMethod=5,8,0|void|timestampColumnChanged|
+$signalMethod=|void|timestampColumnChanged|
 
 #pragma ENDDUMP

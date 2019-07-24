@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,8,0
 
 $header
 
@@ -25,17 +26,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
 $prototype=explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
-$internalConstructor=5,8,0|new1|qreal=0.0,QObject *=nullptr
+$internalConstructor=|new1|qreal=0.0,QObject *=nullptr
 
 $prototype=explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
-$internalConstructor=5,8,0|new2|qreal,qreal,qreal,qreal,qreal=0.0,QObject *=nullptr
+$internalConstructor=|new2|qreal,qreal,qreal,qreal,qreal=0.0,QObject *=nullptr
 
 //[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 //[2]explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
@@ -57,120 +58,120 @@ HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 }
 
 $prototype=virtual ~QCandlestickSet()
-$deleteMethod=5,8,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(qreal timestamp READ timestamp WRITE setTimestamp NOTIFY timestampChanged)
 %%
 
 $prototype=qreal timestamp() const
-$method=5,8,0|qreal|timestamp|
+$method=|qreal|timestamp|
 
 $prototype=void setTimestamp(qreal timestamp)
-$method=5,8,0|void|setTimestamp|qreal
+$method=|void|setTimestamp|qreal
 
 %%
 %% Q_PROPERTY(qreal open READ open WRITE setOpen NOTIFY openChanged)
 %%
 
 $prototype=qreal open() const
-$method=5,8,0|qreal|open|
+$method=|qreal|open|
 
 $prototype=void setOpen(qreal open)
-$method=5,8,0|void|setOpen|qreal
+$method=|void|setOpen|qreal
 
 %%
 %% Q_PROPERTY(qreal high READ high WRITE setHigh NOTIFY highChanged)
 %%
 
 $prototype=qreal high() const
-$method=5,8,0|qreal|high|
+$method=|qreal|high|
 
 $prototype=void setHigh(qreal high)
-$method=5,8,0|void|setHigh|qreal
+$method=|void|setHigh|qreal
 
 %%
 %% Q_PROPERTY(qreal low READ low WRITE setLow NOTIFY lowChanged)
 %%
 
 $prototype=qreal low() const
-$method=5,8,0|qreal|low|
+$method=|qreal|low|
 
 $prototype=void setLow(qreal low)
-$method=5,8,0|void|setLow|qreal
+$method=|void|setLow|qreal
 
 %%
 %% Q_PROPERTY(qreal close READ close WRITE setClose NOTIFY closeChanged)
 %%
 
 $prototype=qreal close() const
-$method=5,8,0|qreal|close|
+$method=|qreal|close|
 
 $prototype=void setClose(qreal close)
-$method=5,8,0|void|setClose|qreal
+$method=|void|setClose|qreal
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=5,8,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,8,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=5,8,0|QPen|pen|
+$method=|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,8,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 %%
 %% SIGNALS
 %%
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
+%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+%% using namespace QtCharts;
+%% #endif
 
 $prototype=void brushChanged()
-$signalMethod=5,8,0|void|brushChanged|
+$signalMethod=|void|brushChanged|
 
 $prototype=void clicked()
-$signalMethod=5,8,0|void|clicked|
+$signalMethod=|void|clicked|
 
 $prototype=void closeChanged()
-$signalMethod=5,8,0|void|closeChanged|
+$signalMethod=|void|closeChanged|
 
 $prototype=void doubleClicked()
-$signalMethod=5,8,0|void|doubleClicked|
+$signalMethod=|void|doubleClicked|
 
 $prototype=void highChanged()
-$signalMethod=5,8,0|void|highChanged|
+$signalMethod=|void|highChanged|
 
 $prototype=void hovered( bool status )
-$signalMethod=5,8,0|void|hovered|bool
+$signalMethod=|void|hovered|bool
 
 $prototype=void lowChanged()
-$signalMethod=5,8,0|void|lowChanged|
+$signalMethod=|void|lowChanged|
 
 $prototype=void openChanged()
-$signalMethod=5,8,0|void|openChanged|
+$signalMethod=|void|openChanged|
 
 $prototype=void penChanged()
-$signalMethod=5,8,0|void|penChanged|
+$signalMethod=|void|penChanged|
 
 $prototype=void pressed()
-$signalMethod=5,8,0|void|pressed|
+$signalMethod=|void|pressed|
 
 $prototype=void released()
-$signalMethod=5,8,0|void|released|
+$signalMethod=|void|released|
 
 $prototype=void timestampChanged()
-$signalMethod=5,8,0|void|timestampChanged|
+$signalMethod=|void|timestampChanged|
 
 #pragma ENDDUMP

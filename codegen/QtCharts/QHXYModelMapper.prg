@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 #include <QtCharts/QXYSeries>
 #include <QtCore/QAbstractItemModel>
@@ -33,69 +34,69 @@ $includes=5,7,0
 using namespace QtCharts;
 
 $prototype=explicit QHXYModelMapper(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-%% $deleteMethod=5,7,0
+%% $deleteMethod
 
 %%
 %% Q_PROPERTY(QXYSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
 $prototype=QXYSeries *series() const
-$method=5,7,0|QXYSeries *|series|
+$method=|QXYSeries *|series|
 
 $prototype=void setSeries(QXYSeries *series)
-$method=5,7,0|void|setSeries|QXYSeries *
+$method=|void|setSeries|QXYSeries *
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
 $prototype=QAbstractItemModel *model() const
-$method=5,7,0|QAbstractItemModel *|model|
+$method=|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model)
-$method=5,7,0|void|setModel|QAbstractItemModel *
+$method=|void|setModel|QAbstractItemModel *
 
 %%
 %% Q_PROPERTY(int xRow READ xRow WRITE setXRow NOTIFY xRowChanged)
 %%
 
 $prototype=int xRow() const
-$method=5,7,0|int|xRow|
+$method=|int|xRow|
 
 $prototype=void setXRow(int xRow)
-$method=5,7,0|void|setXRow|int
+$method=|void|setXRow|int
 
 %%
 %% Q_PROPERTY(int yRow READ yRow WRITE setYRow NOTIFY yRowChanged)
 %%
 
 $prototype=int yRow() const
-$method=5,7,0|int|yRow|
+$method=|int|yRow|
 
 $prototype=void setYRow(int yRow)
-$method=5,7,0|void|setYRow|int
+$method=|void|setYRow|int
 
 %%
 %% Q_PROPERTY(int firstColumn READ firstColumn WRITE setFirstColumn NOTIFY firstColumnChanged)
 %%
 
 $prototype=int firstColumn() const
-$method=5,7,0|int|firstColumn|
+$method=|int|firstColumn|
 
 $prototype=void setFirstColumn(int firstColumn)
-$method=5,7,0|void|setFirstColumn|int
+$method=|void|setFirstColumn|int
 
 %%
 %% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
 %%
 
 $prototype=int columnCount() const
-$method=5,7,0|int|columnCount|
+$method=|int|columnCount|
 
 $prototype=void setColumnCount(int columnCount)
-$method=5,7,0|void|setColumnCount|int
+$method=|void|setColumnCount|int
 
 %%
 %%
@@ -105,24 +106,24 @@ $method=5,7,0|void|setColumnCount|int
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void columnCountChanged()
-$signalMethod=5,7,0|void|columnCountChanged|
+$signalMethod=|void|columnCountChanged|
 
 $prototype=void firstColumnChanged()
-$signalMethod=5,7,0|void|firstColumnChanged|
+$signalMethod=|void|firstColumnChanged|
 
 $prototype=void modelReplaced()
-$signalMethod=5,7,0|void|modelReplaced|
+$signalMethod=|void|modelReplaced|
 
 $prototype=void seriesReplaced()
-$signalMethod=5,7,0|void|seriesReplaced|
+$signalMethod=|void|seriesReplaced|
 
 $prototype=void xRowChanged()
-$signalMethod=5,7,0|void|xRowChanged|
+$signalMethod=|void|xRowChanged|
 
 $prototype=void yRowChanged()
-$signalMethod=5,7,0|void|yRowChanged|
+$signalMethod=|void|yRowChanged|
 
 #pragma ENDDUMP

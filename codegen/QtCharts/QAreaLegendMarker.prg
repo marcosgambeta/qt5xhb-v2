@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -23,22 +24,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent = nullptr)
-$constructor=5,7,0|new|QAreaSeries *,QLegend *,QObject *=nullptr
+$constructor=|new|QAreaSeries *,QLegend *,QObject *=nullptr
 
 $prototype=QAreaLegendMarker(QAreaLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAreaLegendMarker()
-$deleteMethod=5,7,0
+$deleteMethod
 
 $prototype=virtual LegendMarkerType type()
-$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QAreaSeries* series()
-$virtualMethod=5,7,0|QAreaSeries *|series|
+$virtualMethod=|QAreaSeries *|series|
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,77 +26,77 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QValueAxis(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=QValueAxis(QValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=~QValueAxis()
-$deleteMethod=5,7,0
+$deleteMethod=
 
 %%
 %% Q_PROPERTY(int tickCount READ tickCount WRITE setTickCount NOTIFY tickCountChanged)
 %%
 
 $prototype=int tickCount() const
-$method=5,7,0|int|tickCount|
+$method=|int|tickCount|
 
 $prototype=void setTickCount(int count)
-$method=5,7,0|void|setTickCount|int
+$method=|void|setTickCount|int
 
 %%
 %% Q_PROPERTY(qreal min READ min WRITE setMin NOTIFY minChanged)
 %%
 
 $prototype=qreal min() const
-$method=5,7,0|qreal|min|
+$method=|qreal|min|
 
 $prototype=void setMin(qreal min)
-$method=5,7,0|void|setMin|qreal
+$method=|void|setMin|qreal
 
 %%
 %% Q_PROPERTY(qreal max READ max WRITE setMax NOTIFY maxChanged)
 %%
 
 $prototype=qreal max() const
-$method=5,7,0|qreal|max|
+$method=|qreal|max|
 
 $prototype=void setMax(qreal max)
-$method=5,7,0|void|setMax|qreal
+$method=|void|setMax|qreal
 
 %%
 %% Q_PROPERTY(QString labelFormat READ labelFormat WRITE setLabelFormat NOTIFY labelFormatChanged)
 %%
 
 $prototype=QString labelFormat() const
-$method=5,7,0|QString|labelFormat|
+$method=|QString|labelFormat|
 
 $prototype=void setLabelFormat(const QString &format)
-$method=5,7,0|void|setLabelFormat|const QString &
+$method=|void|setLabelFormat|const QString &
 
 %%
 %% Q_PROPERTY(int minorTickCount READ minorTickCount WRITE setMinorTickCount NOTIFY minorTickCountChanged)
 %%
 
 $prototype=int minorTickCount() const
-$method=5,7,0|int|minorTickCount|
+$method=|int|minorTickCount|
 
 $prototype=void setMinorTickCount(int count)
-$method=5,7,0|void|setMinorTickCount|int
+$method=|void|setMinorTickCount|int
 
 %%
 %%
 %%
 
 $prototype=AxisType type() const
-$method=5,7,0|QAbstractAxis::AxisType|type|
+$method=|QAbstractAxis::AxisType|type|
 
 $prototype=void setRange(qreal min, qreal max)
-$method=5,7,0|void|setRange|qreal,qreal
+$method=|void|setRange|qreal,qreal
 
 $prototype=void applyNiceNumbers()
 $slotMethod=|void|applyNiceNumbers|
@@ -104,24 +105,24 @@ $slotMethod=|void|applyNiceNumbers|
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void labelFormatChanged( const QString & format )
-$signalMethod=5,7,0|void|labelFormatChanged|const QString &
+$signalMethod=|void|labelFormatChanged|const QString &
 
 $prototype=void maxChanged( qreal max )
-$signalMethod=5,7,0|void|maxChanged|qreal
+$signalMethod=|void|maxChanged|qreal
 
 $prototype=void minChanged( qreal min )
-$signalMethod=5,7,0|void|minChanged|qreal
+$signalMethod=|void|minChanged|qreal
 
 $prototype=void minorTickCountChanged( int tickCount )
-$signalMethod=5,7,0|void|minorTickCountChanged|int
+$signalMethod=|void|minorTickCountChanged|int
 
 $prototype=void rangeChanged( qreal min, qreal max )
-$signalMethod=5,7,0|void|rangeChanged|qreal,qreal
+$signalMethod=|void|rangeChanged|qreal,qreal
 
 $prototype=void tickCountChanged( int tickCount )
-$signalMethod=5,7,0|void|tickCountChanged|int
+$signalMethod=|void|tickCountChanged|int
 
 #pragma ENDDUMP

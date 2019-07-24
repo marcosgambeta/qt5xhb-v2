@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
@@ -34,74 +35,74 @@ using namespace QtCharts;
 $prototype=explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstractBarSeries()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(qreal barWidth READ barWidth WRITE setBarWidth)
 %%
 
 $prototype=qreal barWidth() const
-$method=5,7,0|qreal|barWidth|
+$method=|qreal|barWidth|
 
 $prototype=void setBarWidth(qreal width)
-$method=5,7,0|void|setBarWidth|qreal
+$method=|void|setBarWidth|qreal
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
 $prototype=int count() const
-$method=5,7,0|int|count|
+$method=|int|count|
 
 %%
 %% Q_PROPERTY(bool labelsVisible READ isLabelsVisible WRITE setLabelsVisible NOTIFY labelsVisibleChanged)
 %%
 
 $prototype=bool isLabelsVisible() const
-$method=5,7,0|bool|isLabelsVisible|
+$method=|bool|isLabelsVisible|
 
 $prototype=void setLabelsVisible(bool visible = true)
-$method=5,7,0|void|setLabelsVisible|bool=true
+$method=|void|setLabelsVisible|bool=true
 
 %%
 %% Q_PROPERTY(QString labelsFormat READ labelsFormat WRITE setLabelsFormat NOTIFY labelsFormatChanged)
 %%
 
 $prototype=QString labelsFormat() const
-$method=5,7,0|QString|labelsFormat|
+$method=|QString|labelsFormat|
 
 $prototype=void setLabelsFormat(const QString &format)
-$method=5,7,0|void|setLabelsFormat|const QString &
+$method=|void|setLabelsFormat|const QString &
 
 %%
 %% Q_PROPERTY(qreal labelsAngle READ labelsAngle WRITE setLabelsAngle NOTIFY labelsAngleChanged)
 %%
 
 $prototype=qreal labelsAngle() const
-$method=5,7,0|qreal|labelsAngle|
+$method=|qreal|labelsAngle|
 
 $prototype=void setLabelsAngle(qreal angle)
-$method=5,7,0|void|setLabelsAngle|qreal
+$method=|void|setLabelsAngle|qreal
 
 %%
 %% Q_PROPERTY(LabelsPosition labelsPosition READ labelsPosition WRITE setLabelsPosition NOTIFY labelsPositionChanged)
 %%
 
 $prototype=QAbstractBarSeries::LabelsPosition labelsPosition() const
-$method=5,7,0|QAbstractBarSeries::LabelsPosition|labelsPosition|
+$method=|QAbstractBarSeries::LabelsPosition|labelsPosition|
 
 $prototype=void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
-$method=5,7,0|void|setLabelsPosition|QAbstractBarSeries::LabelsPosition
+$method=|void|setLabelsPosition|QAbstractBarSeries::LabelsPosition
 
 %%
 %%
 %%
 
 $prototype=bool append(QBarSet *set)
-$internalMethod=5,7,0|bool|append,append1|QBarSet *
+$internalMethod=|bool|append,append1|QBarSet *
 
 $prototype=bool append(QList<QBarSet *> sets)
-$internalMethod=5,7,0|bool|append,append2|QList<QBarSet *>
+$internalMethod=|bool|append,append2|QList<QBarSet *>
 
 //[1]bool append(QBarSet *set)
 //[2]bool append(QList<QBarSet *> sets)
@@ -124,60 +125,60 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 $addMethod=append
 
 $prototype=bool remove(QBarSet *set)
-$method=5,7,0|bool|remove|QBarSet *
+$method=|bool|remove|QBarSet *
 
 $prototype=bool take(QBarSet *set)
-$method=5,7,0|bool|take|QBarSet *
+$method=|bool|take|QBarSet *
 
 $prototype=bool insert(int index, QBarSet *set)
-$method=5,7,0|bool|insert|int,QBarSet *
+$method=|bool|insert|int,QBarSet *
 
 $prototype=QList<QBarSet *> barSets() const
-$method=5,7,0|QList<QBarSet *>|barSets|
+$method=|QList<QBarSet *>|barSets|
 
 $prototype=void clear()
-$method=5,7,0|void|clear|
+$method=|void|clear|
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void barsetsAdded( QList<QBarSet*> sets )
-$signalMethod=5,7,0|void|barsetsAdded|QList<QBarSet*>
+$signalMethod=|void|barsetsAdded|QList<QBarSet*>
 
 $prototype=void barsetsRemoved( QList<QBarSet*> sets )
-$signalMethod=5,7,0|void|barsetsRemoved|QList<QBarSet*>
+$signalMethod=|void|barsetsRemoved|QList<QBarSet*>
 
 $prototype=void clicked( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|clicked|int,QBarSet *
+$signalMethod=|void|clicked|int,QBarSet *
 
 $prototype=void countChanged()
-$signalMethod=5,7,0|void|countChanged|
+$signalMethod=|void|countChanged|
 
 $prototype=void doubleClicked( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|doubleClicked|int,QBarSet *
+$signalMethod=|void|doubleClicked|int,QBarSet *
 
 $prototype=void hovered( bool status, int index, QBarSet * barset )
-$signalMethod=5,7,0|void|hovered|bool,int,QBarSet *
+$signalMethod=|void|hovered|bool,int,QBarSet *
 
 $prototype=void labelsAngleChanged( qreal angle )
-$signalMethod=5,7,0|void|labelsAngleChanged|qreal
+$signalMethod=|void|labelsAngleChanged|qreal
 
 $prototype=void labelsFormatChanged( const QString & format )
-$signalMethod=5,7,0|void|labelsFormatChanged|const QString &
+$signalMethod=|void|labelsFormatChanged|const QString &
 
 $prototype=void labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
-$signalMethod=5,7,0|void|labelsPositionChanged|QAbstractBarSeries::LabelsPosition
+$signalMethod=|void|labelsPositionChanged|QAbstractBarSeries::LabelsPosition
 
 $prototype=void labelsVisibleChanged()
-$signalMethod=5,7,0|void|labelsVisibleChanged|
+$signalMethod=|void|labelsVisibleChanged|
 
 $prototype=void pressed( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|pressed|int,QBarSet *
+$signalMethod=|void|pressed|int,QBarSet *
 
 $prototype=void released( int index, QBarSet * barset )
-$signalMethod=5,7,0|void|released|int,QBarSet *
+$signalMethod=|void|released|int,QBarSet *
 
 #pragma ENDDUMP

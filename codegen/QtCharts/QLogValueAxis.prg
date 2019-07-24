@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,57 +26,57 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QLogValueAxis(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=~QLogValueAxis()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(qreal min READ min WRITE setMin NOTIFY minChanged)
 %%
 
 $prototype=qreal min() const
-$method=5,7,0|qreal|min|
+$method=|qreal|min|
 
 $prototype=void setMin(qreal min)
-$method=5,7,0|void|setMin|qreal
+$method=|void|setMin|qreal
 
 %%
 %% Q_PROPERTY(qreal max READ max WRITE setMax NOTIFY maxChanged)
 %%
 
 $prototype=qreal max() const
-$method=5,7,0|qreal|max|
+$method=|qreal|max|
 
 $prototype=void setMax(qreal max)
-$method=5,7,0|void|setMax|qreal
+$method=|void|setMax|qreal
 
 %%
 %% Q_PROPERTY(QString labelFormat READ labelFormat WRITE setLabelFormat NOTIFY labelFormatChanged)
 %%
 
 $prototype=QString labelFormat() const
-$method=5,7,0|QString|labelFormat|
+$method=|QString|labelFormat|
 
 $prototype=void setLabelFormat(const QString &format)
-$method=5,7,0|void|setLabelFormat|const QString &
+$method=|void|setLabelFormat|const QString &
 
 %%
 %% Q_PROPERTY(qreal base READ base WRITE setBase NOTIFY baseChanged)
 %%
 
 $prototype=qreal base() const
-$method=5,7,0|qreal|base|
+$method=|qreal|base|
 
 $prototype=void setBase(qreal base)
-$method=5,7,0|void|setBase|qreal
+$method=|void|setBase|qreal
 
 %%
 %% Q_PROPERTY(int tickCount READ tickCount NOTIFY tickCountChanged)
@@ -99,34 +100,34 @@ $method=5,9,0|void|setMinorTickCount|int
 %%
 
 $prototype=AxisType type() const
-$method=5,7,0|QAbstractAxis::AxisType|type|
+$method=|QAbstractAxis::AxisType|type|
 
 $prototype=void setRange(qreal min, qreal max)
-$method=5,7,0|void|setRange|qreal,qreal
+$method=|void|setRange|qreal,qreal
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void baseChanged( qreal base )
-$signalMethod=5,7,0|void|baseChanged|qreal
+$signalMethod=|void|baseChanged|qreal
 
 $prototype=void labelFormatChanged( const QString & format )
-$signalMethod=5,7,0|void|labelFormatChanged|const QString &
+$signalMethod=|void|labelFormatChanged|const QString &
 
 $prototype=void maxChanged( qreal max )
-$signalMethod=5,7,0|void|maxChanged|qreal
+$signalMethod=|void|maxChanged|qreal
 
 $prototype=void minChanged( qreal min )
-$signalMethod=5,7,0|void|minChanged|qreal
+$signalMethod=|void|minChanged|qreal
 
 $prototype=void minorTickCountChanged( int minorTickCount )
 $signalMethod=5,9,0|void|minorTickCountChanged|int
 
 $prototype=void rangeChanged( qreal min, qreal max )
-$signalMethod=5,7,0|void|rangeChanged|qreal,qreal
+$signalMethod=|void|rangeChanged|qreal,qreal
 
 $prototype=void tickCountChanged( int tickCount )
 $signalMethod=5,9,0|void|tickCountChanged|int

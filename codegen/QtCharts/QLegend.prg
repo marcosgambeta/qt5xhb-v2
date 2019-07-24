@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,91 +26,91 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QLegend(QChart *chart) [private]
 
 $prototype=~QLegend()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment)
 %%
 
 $prototype=Qt::Alignment alignment() const
-$method=5,7,0|Qt::Alignment|alignment|
+$method=|Qt::Alignment|alignment|
 
 %%
 %% Q_PROPERTY(bool backgroundVisible READ isBackgroundVisible WRITE setBackgroundVisible NOTIFY backgroundVisibleChanged)
 %%
 
 $prototype=bool isBackgroundVisible() const
-$method=5,7,0|bool|isBackgroundVisible|
+$method=|bool|isBackgroundVisible|
 
 $prototype=void setBackgroundVisible(bool visible = true)
-$method=5,7,0|void|setBackgroundVisible|bool=true
+$method=|void|setBackgroundVisible|bool=true
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
 $prototype=QColor color()
-$method=5,7,0|QColor|color|
+$method=|QColor|color|
 
 $prototype=void setColor(QColor color)
-$method=5,7,0|void|setColor|QColor
+$method=|void|setColor|QColor
 
 %%
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
 $prototype=QColor borderColor()
-$method=5,7,0|QColor|borderColor|
+$method=|QColor|borderColor|
 
 $prototype=void setBorderColor(QColor color)
-$method=5,7,0|void|setBorderColor|QColor
+$method=|void|setBorderColor|QColor
 
 %%
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
 $prototype=QFont font() const
-$method=5,7,0|QFont|font|
+$method=|QFont|font|
 
 $prototype=void setFont(const QFont &font)
-$method=5,7,0|void|setFont|const QFont &
+$method=|void|setFont|const QFont &
 
 %%
 %% Q_PROPERTY(QColor labelColor READ labelColor WRITE setLabelColor NOTIFY labelColorChanged)
 %%
 
 $prototype=QColor labelColor() const
-$method=5,7,0|QColor|labelColor|
+$method=|QColor|labelColor|
 
 $prototype=void setLabelColor(QColor color)
-$method=5,7,0|void|setLabelColor|QColor
+$method=|void|setLabelColor|QColor
 
 %%
 %% Q_PROPERTY(bool reverseMarkers READ reverseMarkers WRITE setReverseMarkers NOTIFY reverseMarkersChanged)
 %%
 
 $prototype=bool reverseMarkers()
-$method=5,7,0|bool|reverseMarkers|
+$method=|bool|reverseMarkers|
 
 $prototype=void setReverseMarkers(bool reverseMarkers = true)
-$method=5,7,0|void|setReverseMarkers|bool=true
+$method=|void|setReverseMarkers|bool=true
 
 %%
 %% Q_PROPERTY(bool showToolTips READ showToolTips WRITE setShowToolTips NOTIFY showToolTipsChanged)
 %%
 
 $prototype=bool showToolTips() const
-$method=5,7,0|bool|showToolTips|
+$method=|bool|showToolTips|
 
 $prototype=void setShowToolTips(bool show)
-$method=5,7,0|void|setShowToolTips|bool
+$method=|void|setShowToolTips|bool
 
 %%
 %% Q_PROPERTY(MarkerShape markerShape READ markerShape WRITE setMarkerShape NOTIFY markerShapeChanged)
@@ -126,40 +127,40 @@ $method=5,9,0|void|setMarkerShape|QLegend::MarkerShape
 %%
 
 $prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
-$method=5,7,0|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
+$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,7,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 $prototype=QBrush brush() const
-$method=5,7,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,7,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 $prototype=QPen pen() const
-$method=5,7,0|QPen|pen|
+$method=|QPen|pen|
 
 $prototype=void setLabelBrush(const QBrush &brush)
-$method=5,7,0|void|setLabelBrush|const QBrush &
+$method=|void|setLabelBrush|const QBrush &
 
 $prototype=QBrush labelBrush() const
-$method=5,7,0|QBrush|labelBrush|
+$method=|QBrush|labelBrush|
 
 $prototype=void setAlignment(Qt::Alignment alignment)
-$method=5,7,0|void|setAlignment|Qt::Alignment
+$method=|void|setAlignment|Qt::Alignment
 
 $prototype=void detachFromChart()
-$method=5,7,0|void|detachFromChart|
+$method=|void|detachFromChart|
 
 $prototype=void attachToChart()
-$method=5,7,0|void|attachToChart|
+$method=|void|attachToChart|
 
 $prototype=bool isAttachedToChart()
-$method=5,7,0|bool|isAttachedToChart|
+$method=|bool|isAttachedToChart|
 
 $prototype=QList <QLegendMarker*> markers(QAbstractSeries *series = nullptr) const
-$method=5,7,0|QList<QLegendMarker *>|markers|QAbstractSeries *=nullptr
+$method=|QList<QLegendMarker *>|markers|QAbstractSeries *=nullptr
 
 $prototype=void hideEvent(QHideEvent *event) [protected]
 
@@ -169,30 +170,30 @@ $prototype=void showEvent(QShowEvent *event) [protected]
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void backgroundVisibleChanged( bool visible )
-$signalMethod=5,7,0|void|backgroundVisibleChanged|bool
+$signalMethod=|void|backgroundVisibleChanged|bool
 
 $prototype=void borderColorChanged( QColor color )
-$signalMethod=5,7,0|void|borderColorChanged|QColor
+$signalMethod=|void|borderColorChanged|QColor
 
 $prototype=void colorChanged( QColor color )
-$signalMethod=5,7,0|void|colorChanged|QColor
+$signalMethod=|void|colorChanged|QColor
 
 $prototype=void fontChanged( QFont font )
-$signalMethod=5,7,0|void|fontChanged|QFont
+$signalMethod=|void|fontChanged|QFont
 
 $prototype=void labelColorChanged( QColor color )
-$signalMethod=5,7,0|void|labelColorChanged|QColor
+$signalMethod=|void|labelColorChanged|QColor
 
 $prototype=void markerShapeChanged( QLegend::MarkerShape shape )
 $signalMethod=5,9,0|void|markerShapeChanged|QLegend::MarkerShape
 
 $prototype=void reverseMarkersChanged( bool reverseMarkers )
-$signalMethod=5,7,0|void|reverseMarkersChanged|bool
+$signalMethod=|void|reverseMarkersChanged|bool
 
 $prototype=void showToolTipsChanged( bool showToolTips )
-$signalMethod=5,7,0|void|showToolTipsChanged|bool
+$signalMethod=|void|showToolTipsChanged|bool
 
 #pragma ENDDUMP

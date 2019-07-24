@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,89 +26,89 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 #include <QtCore/QDateTime>
 
 using namespace QtCharts;
 
 $prototype=explicit QDateTimeAxis(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=QDateTimeAxis(QDateTimeAxisPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=~QDateTimeAxis()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(QDateTime min READ min WRITE setMin NOTIFY minChanged)
 %%
 
 $prototype=QDateTime min() const
-$method=5,7,0|QDateTime|min|
+$method=|QDateTime|min|
 
 $prototype=void setMin(QDateTime min)
-$method=5,7,0|void|setMin|QDateTime
+$method=|void|setMin|QDateTime
 
 %%
 %% Q_PROPERTY(QDateTime max READ max WRITE setMax NOTIFY maxChanged)
 %%
 
 $prototype=QDateTime max() const
-$method=5,7,0|QDateTime|max|
+$method=|QDateTime|max|
 
 $prototype=void setMax(QDateTime max)
-$method=5,7,0|void|setMax|QDateTime
+$method=|void|setMax|QDateTime
 
 %%
 %% Q_PROPERTY(QString format READ format WRITE setFormat NOTIFY formatChanged)
 %%
 
 $prototype=QString format() const
-$method=5,7,0|QString|format|
+$method=|QString|format|
 
 $prototype=void setFormat(QString format)
-$method=5,7,0|void|setFormat|QString
+$method=|void|setFormat|QString
 
 %%
 %% Q_PROPERTY(int tickCount READ tickCount WRITE setTickCount NOTIFY tickCountChanged)
 %%
 
 $prototype=int tickCount() const
-$method=5,7,0|int|tickCount|
+$method=|int|tickCount|
 
 $prototype=void setTickCount(int count)
-$method=5,7,0|void|setTickCount|int
+$method=|void|setTickCount|int
 
 %%
 %%
 %%
 
 $prototype=AxisType type() const
-$method=5,7,0|QAbstractAxis::AxisType|type|
+$method=|QAbstractAxis::AxisType|type|
 
 $prototype=void setRange(QDateTime min, QDateTime max)
-$method=5,7,0|void|setRange|QDateTime,QDateTime
+$method=|void|setRange|QDateTime,QDateTime
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void formatChanged( QString format )
-$signalMethod=5,7,0|void|formatChanged|QString
+$signalMethod=|void|formatChanged|QString
 
 $prototype=void maxChanged( QDateTime max )
-$signalMethod=5,7,0|void|maxChanged|QDateTime
+$signalMethod=|void|maxChanged|QDateTime
 
 $prototype=void minChanged( QDateTime min )
-$signalMethod=5,7,0|void|minChanged|QDateTime
+$signalMethod=|void|minChanged|QDateTime
 
 $prototype=void rangeChanged( QDateTime min, QDateTime max )
-$signalMethod=5,7,0|void|rangeChanged|QDateTime,QDateTime
+$signalMethod=|void|rangeChanged|QDateTime,QDateTime
 
 $prototype=void tickCountChanged( int tick )
-$signalMethod=5,7,0|void|tickCountChanged|int
+$signalMethod=|void|tickCountChanged|int
 
 #pragma ENDDUMP

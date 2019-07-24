@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -23,7 +24,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 #include <QtCore/QAbstractItemModel>
 #include <QtCharts/QXYSeries>
@@ -31,50 +32,50 @@ $includes=5,7,0
 using namespace QtCharts;
 
 $prototype=explicit QXYModelMapper(QObject *parent = nullptr) [protected]
-%% $constructor=5,7,0|new|QObject *=nullptr
+%% $constructor=|new|QObject *=nullptr
 
-%% $deleteMethod=5,7,0
+%% $deleteMethod
 
 $prototype=QAbstractItemModel *model() const [protected]
-%% $method=5,7,0|QAbstractItemModel *|model|
+%% $method=|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model) [protected]
-%% $method=5,7,0|void|setModel|QAbstractItemModel *
+%% $method=|void|setModel|QAbstractItemModel *
 
 $prototype=QXYSeries *series() const [protected]
-%% $method=5,7,0|QXYSeries *|series|
+%% $method=|QXYSeries *|series|
 
 $prototype=void setSeries(QXYSeries *series) [protected]
-%% $method=5,7,0|void|setSeries|QXYSeries *
+%% $method=|void|setSeries|QXYSeries *
 
 $prototype=int first() const [protected]
-%% $method=5,7,0|int|first|
+%% $method=|int|first|
 
 $prototype=void setFirst(int first) [protected]
-%% $method=5,7,0|void|setFirst|int
+%% $method=|void|setFirst|int
 
 $prototype=int count() const [protected]
-%% $method=5,7,0|int|count|
+%% $method=|int|count|
 
 $prototype=void setCount(int count) [protected]
-%% $method=5,7,0|void|setCount|int
+%% $method=|void|setCount|int
 
 $prototype=Qt::Orientation orientation() const [protected]
-%% $method=5,7,0|Qt::Orientation|orientation|
+%% $method=|Qt::Orientation|orientation|
 
 $prototype=void setOrientation(Qt::Orientation orientation) [protected]
-%% $method=5,7,0|void|setOrientation|Qt::Orientation
+%% $method=|void|setOrientation|Qt::Orientation
 
 $prototype=int xSection() const [protected]
-%% $method=5,7,0|int|xSection|
+%% $method=|int|xSection|
 
 $prototype=void setXSection(int xSection) [protected]
-%% $method=5,7,0|void|setXSection|int
+%% $method=|void|setXSection|int
 
 $prototype=int ySection() const [protected]
-%% $method=5,7,0|int|ySection|
+%% $method=|int|ySection|
 
 $prototype=void setYSection(int ySection) [protected]
-%% $method=5,7,0|void|setYSection|int
+%% $method=|void|setYSection|int
 
 #pragma ENDDUMP

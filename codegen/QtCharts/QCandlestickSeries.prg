@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,8,0
 
 $header
 
@@ -25,136 +26,138 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QtCharts/QCandlestickSet>
+#endif
 
 $prototype=explicit QCandlestickSeries(QObject *parent = nullptr)
-$constructor=5,8,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QCandlestickSeries()
-$deleteMethod=5,8,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
 $prototype=int count() const
-$method=5,8,0|int|count|
+$method=|int|count|
 
 %%
 %% Q_PROPERTY(qreal maximumColumnWidth READ maximumColumnWidth WRITE setMaximumColumnWidth NOTIFY maximumColumnWidthChanged)
 %%
 
 $prototype=qreal maximumColumnWidth() const
-$method=5,8,0|qreal|maximumColumnWidth|
+$method=|qreal|maximumColumnWidth|
 
 $prototype=void setMaximumColumnWidth(qreal maximumColumnWidth)
-$method=5,8,0|void|setMaximumColumnWidth|qreal
+$method=|void|setMaximumColumnWidth|qreal
 
 %%
 %% Q_PROPERTY(qreal minimumColumnWidth READ minimumColumnWidth WRITE setMinimumColumnWidth NOTIFY minimumColumnWidthChanged)
 %%
 
 $prototype=qreal minimumColumnWidth() const
-$method=5,8,0|qreal|minimumColumnWidth|
+$method=|qreal|minimumColumnWidth|
 
 $prototype=void setMinimumColumnWidth(qreal minimumColumnWidth)
-$method=5,8,0|void|setMinimumColumnWidth|qreal
+$method=|void|setMinimumColumnWidth|qreal
 
 %%
 %% Q_PROPERTY(qreal bodyWidth READ bodyWidth WRITE setBodyWidth NOTIFY bodyWidthChanged)
 %%
 
 $prototype=qreal bodyWidth() const
-$method=5,8,0|qreal|bodyWidth|
+$method=|qreal|bodyWidth|
 
 $prototype=void setBodyWidth(qreal bodyWidth)
-$method=5,8,0|void|setBodyWidth|qreal
+$method=|void|setBodyWidth|qreal
 
 %%
 %% Q_PROPERTY(bool bodyOutlineVisible READ bodyOutlineVisible WRITE setBodyOutlineVisible NOTIFY bodyOutlineVisibilityChanged)
 %%
 
 $prototype=bool bodyOutlineVisible() const
-$method=5,8,0|bool|bodyOutlineVisible|
+$method=|bool|bodyOutlineVisible|
 
 $prototype=void setBodyOutlineVisible(bool bodyOutlineVisible)
-$method=5,8,0|void|setBodyOutlineVisible|bool
+$method=|void|setBodyOutlineVisible|bool
 
 %%
 %% Q_PROPERTY(qreal capsWidth READ capsWidth WRITE setCapsWidth NOTIFY capsWidthChanged)
 %%
 
 $prototype=qreal capsWidth() const
-$method=5,8,0|qreal|capsWidth|
+$method=|qreal|capsWidth|
 
 $prototype=void setCapsWidth(qreal capsWidth)
-$method=5,8,0|void|setCapsWidth|qreal
+$method=|void|setCapsWidth|qreal
 
 %%
 %% Q_PROPERTY(bool capsVisible READ capsVisible WRITE setCapsVisible NOTIFY capsVisibilityChanged)
 %%
 
 $prototype=bool capsVisible() const
-$method=5,8,0|bool|capsVisible|
+$method=|bool|capsVisible|
 
 $prototype=void setCapsVisible(bool capsVisible)
-$method=5,8,0|void|setCapsVisible|bool
+$method=|void|setCapsVisible|bool
 
 %%
 %% Q_PROPERTY(QColor increasingColor READ increasingColor WRITE setIncreasingColor NOTIFY increasingColorChanged)
 %%
 
 $prototype=QColor increasingColor() const
-$method=5,8,0|QColor|increasingColor|
+$method=|QColor|increasingColor|
 
 $prototype=void setIncreasingColor(const QColor &increasingColor)
-$method=5,8,0|void|setIncreasingColor|const QColor &
+$method=|void|setIncreasingColor|const QColor &
 
 %%
 %% Q_PROPERTY(QColor decreasingColor READ decreasingColor WRITE setDecreasingColor NOTIFY decreasingColorChanged)
 %%
 
 $prototype=QColor decreasingColor() const
-$method=5,8,0|QColor|decreasingColor|
+$method=|QColor|decreasingColor|
 
 $prototype=void setDecreasingColor(const QColor &decreasingColor)
-$method=5,8,0|void|setDecreasingColor|const QColor &
+$method=|void|setDecreasingColor|const QColor &
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=5,8,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,8,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=5,8,0|QPen|pen|
+$method=|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,8,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 %%
 %%
 %%
 
 $prototype=bool append(QCandlestickSet *set)
-$internalMethod=5,8,0|bool|append,append1|const QList<QCandlestickSet *> &
+$internalMethod=|bool|append,append1|const QList<QCandlestickSet *> &
 
 $prototype=bool append(const QList<QCandlestickSet *> &sets)
-$internalMethod=5,8,0|bool|append,append2|const QList<QCandlestickSet *> &
+$internalMethod=|bool|append,append2|const QList<QCandlestickSet *> &
 
 //[1]bool append(QCandlestickSet *set)
 //[2]bool append(const QList<QCandlestickSet *> &sets)
@@ -177,10 +180,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 $addMethod=append
 
 $prototype=bool remove(QCandlestickSet *set)
-$internalMethod=5,8,0|bool|remove,remove1|QCandlestickSet *
+$internalMethod=|bool|remove,remove1|QCandlestickSet *
 
 $prototype=bool remove(const QList<QCandlestickSet *> &sets)
-$internalMethod=5,8,0|bool|remove,remove2|const QList<QCandlestickSet *> &
+$internalMethod=|bool|remove,remove2|const QList<QCandlestickSet *> &
 
 //[1]bool remove(QCandlestickSet *set)
 //[2]bool remove(const QList<QCandlestickSet *> &sets)
@@ -203,80 +206,80 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 $addMethod=remove
 
 $prototype=bool insert(int index, QCandlestickSet *set)
-$method=5,8,0|bool|insert|int,QCandlestickSet *
+$method=|bool|insert|int,QCandlestickSet *
 
 $prototype=bool take(QCandlestickSet *set)
-$method=5,8,0|bool|take|QCandlestickSet *
+$method=|bool|take|QCandlestickSet *
 
 $prototype=void clear()
-$method=5,8,0|void|clear|
+$method=|void|clear|
 
 $prototype=QList<QCandlestickSet *> sets() const
-$method=5,8,0|QList<QCandlestickSet *>|sets|
+$method=|QList<QCandlestickSet *>|sets|
 
 $prototype=QAbstractSeries::SeriesType type() const
-$method=5,8,0|QAbstractSeries::SeriesType|type|
+$method=|QAbstractSeries::SeriesType|type|
 
 %%
 %% SIGNALS
 %%
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
+%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+%% using namespace QtCharts;
+%% #endif
 
 $prototype=void bodyOutlineVisibilityChanged()
-$signalMethod=5,8,0|void|bodyOutlineVisibilityChanged|
+$signalMethod=|void|bodyOutlineVisibilityChanged|
 
 $prototype=void bodyWidthChanged()
-$signalMethod=5,8,0|void|bodyWidthChanged|
+$signalMethod=|void|bodyWidthChanged|
 
 $prototype=void brushChanged()
-$signalMethod=5,8,0|void|brushChanged|
+$signalMethod=|void|brushChanged|
 
 $prototype=void candlestickSetsAdded( const QList<QCandlestickSet*> & sets )
-$signalMethod=5,8,0|void|candlestickSetsAdded|const QList<QCandlestickSet*> &
+$signalMethod=|void|candlestickSetsAdded|const QList<QCandlestickSet*> &
 
 $prototype=void candlestickSetsRemoved( const QList<QCandlestickSet*> & sets )
-$signalMethod=5,8,0|void|candlestickSetsRemoved|const QList<QCandlestickSet*> &
+$signalMethod=|void|candlestickSetsRemoved|const QList<QCandlestickSet*> &
 
 $prototype=void capsVisibilityChanged()
-$signalMethod=5,8,0|void|capsVisibilityChanged|
+$signalMethod=|void|capsVisibilityChanged|
 
 $prototype=void capsWidthChanged()
-$signalMethod=5,8,0|void|capsWidthChanged|
+$signalMethod=|void|capsWidthChanged|
 
 $prototype=void clicked( QCandlestickSet * set )
-$signalMethod=5,8,0|void|clicked|QCandlestickSet *
+$signalMethod=|void|clicked|QCandlestickSet *
 
 $prototype=void countChanged()
-$signalMethod=5,8,0|void|countChanged|
+$signalMethod=|void|countChanged|
 
 $prototype=void decreasingColorChanged()
-$signalMethod=5,8,0|void|decreasingColorChanged|
+$signalMethod=|void|decreasingColorChanged|
 
 $prototype=void doubleClicked( QCandlestickSet * set )
-$signalMethod=5,8,0|void|doubleClicked|QCandlestickSet *
+$signalMethod=|void|doubleClicked|QCandlestickSet *
 
 $prototype=void hovered( bool status, QCandlestickSet * set )
-$signalMethod=5,8,0|void|hovered|bool,QCandlestickSet *
+$signalMethod=|void|hovered|bool,QCandlestickSet *
 
 $prototype=void increasingColorChanged()
-$signalMethod=5,8,0|void|increasingColorChanged|
+$signalMethod=|void|increasingColorChanged|
 
 $prototype=void maximumColumnWidthChanged()
-$signalMethod=5,8,0|void|maximumColumnWidthChanged|
+$signalMethod=|void|maximumColumnWidthChanged|
 
 $prototype=void minimumColumnWidthChanged()
-$signalMethod=5,8,0|void|minimumColumnWidthChanged|
+$signalMethod=|void|minimumColumnWidthChanged|
 
 $prototype=void penChanged()
-$signalMethod=5,8,0|void|penChanged|
+$signalMethod=|void|penChanged|
 
 $prototype=void pressed( QCandlestickSet * set )
-$signalMethod=5,8,0|void|pressed|QCandlestickSet *
+$signalMethod=|void|pressed|QCandlestickSet *
 
 $prototype=void released( QCandlestickSet * set )
-$signalMethod=5,8,0|void|released|QCandlestickSet *
+$signalMethod=|void|released|QCandlestickSet *
 
 #pragma ENDDUMP

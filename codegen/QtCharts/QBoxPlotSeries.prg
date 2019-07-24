@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,72 +26,72 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QBoxPlotSeries(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QBoxPlotSeries()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged REVISION 1)
 %%
 
 $prototype=int count() const
-$method=5,7,0|int|count|
+$method=|int|count|
 
 %%
 %% Q_PROPERTY(bool boxOutlineVisible READ boxOutlineVisible WRITE setBoxOutlineVisible NOTIFY boxOutlineVisibilityChanged)
 %%
 
 $prototype=bool boxOutlineVisible()
-$method=5,7,0|bool|boxOutlineVisible|
+$method=|bool|boxOutlineVisible|
 
 $prototype=void setBoxOutlineVisible(bool visible)
-$method=5,7,0|void|setBoxOutlineVisible|bool
+$method=|void|setBoxOutlineVisible|bool
 
 %%
 %% Q_PROPERTY(qreal boxWidth READ boxWidth WRITE setBoxWidth NOTIFY boxWidthChanged)
 %%
 
 $prototype=qreal boxWidth()
-$method=5,7,0|qreal|boxWidth|
+$method=|qreal|boxWidth|
 
 $prototype=void setBoxWidth(qreal width)
-$method=5,7,0|void|setBoxWidth|qreal
+$method=|void|setBoxWidth|qreal
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=5,7,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,7,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=5,7,0|QPen|pen|
+$method=|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,7,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 %%
 %%
 %%
 
 $prototype=bool append(QBoxSet *box)
-$internalMethod=5,7,0|bool|append,append1|QBoxSet *
+$internalMethod=|bool|append,append1|QBoxSet *
 
 $prototype=bool append(QList<QBoxSet *> boxes)
-$internalMethod=5,7,0|bool|append,append2|QList<QBoxSet *>
+$internalMethod=|bool|append,append2|QList<QBoxSet *>
 
 //[1]bool append(QBoxSet *box)
 //[2]bool append(QList<QBoxSet *> boxes)
@@ -113,63 +114,63 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 $addMethod=append
 
 $prototype=bool remove(QBoxSet *box)
-$method=5,7,0|bool|remove|QBoxSet *
+$method=|bool|remove|QBoxSet *
 
 $prototype=bool take(QBoxSet *box)
-$method=5,7,0|bool|take|QBoxSet *
+$method=|bool|take|QBoxSet *
 
 $prototype=bool insert(int index, QBoxSet *box)
-$method=5,7,0|bool|insert|int,QBoxSet *
+$method=|bool|insert|int,QBoxSet *
 
 $prototype=QList<QBoxSet *> boxSets() const
-$method=5,7,0|QList<QBoxSet *>|boxSets|
+$method=|QList<QBoxSet *>|boxSets|
 
 $prototype=void clear()
-$method=5,7,0|void|clear|
+$method=|void|clear|
 
 $prototype=QAbstractSeries::SeriesType type() const
-$method=5,7,0|QAbstractSeries::SeriesType|type|
+$method=|QAbstractSeries::SeriesType|type|
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void boxOutlineVisibilityChanged()
-$signalMethod=5,7,0|void|boxOutlineVisibilityChanged|
+$signalMethod=|void|boxOutlineVisibilityChanged|
 
 $prototype=void boxsetsAdded( QList<QBoxSet*> sets )
-$signalMethod=5,7,0|void|boxsetsAdded|QList<QBoxSet*>
+$signalMethod=|void|boxsetsAdded|QList<QBoxSet*>
 
 $prototype=void boxsetsRemoved( QList<QBoxSet*> sets )
-$signalMethod=5,7,0|void|boxsetsRemoved|QList<QBoxSet*>
+$signalMethod=|void|boxsetsRemoved|QList<QBoxSet*>
 
 $prototype=void boxWidthChanged()
-$signalMethod=5,7,0|void|boxWidthChanged|
+$signalMethod=|void|boxWidthChanged|
 
 $prototype=void brushChanged()
-$signalMethod=5,7,0|void|brushChanged|
+$signalMethod=|void|brushChanged|
 
 $prototype=void clicked( QBoxSet * boxset )
-$signalMethod=5,7,0|void|clicked|QBoxSet *
+$signalMethod=|void|clicked|QBoxSet *
 
 $prototype=void countChanged()
-$signalMethod=5,7,0|void|countChanged|
+$signalMethod=|void|countChanged|
 
 $prototype=void doubleClicked( QBoxSet * boxset )
-$signalMethod=5,7,0|void|doubleClicked|QBoxSet *
+$signalMethod=|void|doubleClicked|QBoxSet *
 
 $prototype=void hovered( bool status, QBoxSet * boxset )
-$signalMethod=5,7,0|void|hovered|bool,QBoxSet *
+$signalMethod=|void|hovered|bool,QBoxSet *
 
 $prototype=void penChanged()
-$signalMethod=5,7,0|void|penChanged|
+$signalMethod=|void|penChanged|
 
 $prototype=void pressed( QBoxSet * boxset )
-$signalMethod=5,7,0|void|pressed|QBoxSet *
+$signalMethod=|void|pressed|QBoxSet *
 
 $prototype=void released( QBoxSet * boxset )
-$signalMethod=5,7,0|void|released|QBoxSet *
+$signalMethod=|void|released|QBoxSet *
 
 #pragma ENDDUMP

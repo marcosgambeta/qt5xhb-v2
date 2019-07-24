@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,105 +26,105 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QPieSeries(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=virtual ~QPieSeries()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(qreal horizontalPosition READ horizontalPosition WRITE setHorizontalPosition)
 %%
 
 $prototype=qreal horizontalPosition() const
-$method=5,7,0|qreal|horizontalPosition|
+$method=|qreal|horizontalPosition|
 
 $prototype=void setHorizontalPosition(qreal relativePosition)
-$method=5,7,0|void|setHorizontalPosition|qreal
+$method=|void|setHorizontalPosition|qreal
 
 %%
 %% Q_PROPERTY(qreal verticalPosition READ verticalPosition WRITE setVerticalPosition)
 %%
 
 $prototype=qreal verticalPosition() const
-$method=5,7,0|qreal|verticalPosition|
+$method=|qreal|verticalPosition|
 
 $prototype=void setVerticalPosition(qreal relativePosition)
-$method=5,7,0|void|setVerticalPosition|qreal
+$method=|void|setVerticalPosition|qreal
 
 %%
 %% Q_PROPERTY(qreal size READ pieSize WRITE setPieSize)
 %%
 
 $prototype=qreal pieSize() const
-$method=5,7,0|qreal|pieSize|
+$method=|qreal|pieSize|
 
 $prototype=void setPieSize(qreal relativeSize)
-$method=5,7,0|void|setPieSize|qreal
+$method=|void|setPieSize|qreal
 
 %%
 %% Q_PROPERTY(qreal startAngle READ pieStartAngle WRITE setPieStartAngle)
 %%
 
 $prototype=qreal pieStartAngle() const
-$method=5,7,0|qreal|pieStartAngle|
+$method=|qreal|pieStartAngle|
 
 $prototype=void setPieStartAngle(qreal startAngle)
-$method=5,7,0|void|setPieStartAngle|qreal
+$method=|void|setPieStartAngle|qreal
 
 %%
 %% Q_PROPERTY(qreal endAngle READ pieEndAngle WRITE setPieEndAngle)
 %%
 
 $prototype=qreal pieEndAngle() const
-$method=5,7,0|qreal|pieEndAngle|
+$method=|qreal|pieEndAngle|
 
 $prototype=void setPieEndAngle(qreal endAngle)
-$method=5,7,0|void|setPieEndAngle|qreal
+$method=|void|setPieEndAngle|qreal
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
 $prototype=int count() const
-$method=5,7,0|int|count|
+$method=|int|count|
 
 %%
 %% Q_PROPERTY(qreal sum READ sum NOTIFY sumChanged)
 %%
 
 $prototype=qreal sum() const
-$method=5,7,0|qreal|sum|
+$method=|qreal|sum|
 
 %%
 %% Q_PROPERTY(qreal holeSize READ holeSize WRITE setHoleSize)
 %%
 
 $prototype=qreal holeSize() const
-$method=5,7,0|qreal|holeSize|
+$method=|qreal|holeSize|
 
 $prototype=void setHoleSize(qreal holeSize)
-$method=5,7,0|void|setHoleSize|qreal
+$method=|void|setHoleSize|qreal
 
 %%
 %%
 %%
 
 $prototype=QAbstractSeries::SeriesType type() const
-$method=5,7,0|QAbstractSeries::SeriesType|type|
+$method=|QAbstractSeries::SeriesType|type|
 
 $prototype=bool append(QPieSlice *slice)
-$internalMethod=5,7,0|bool|append,append1|QPieSlice *
+$internalMethod=|bool|append,append1|QPieSlice *
 
 $prototype=bool append(QList<QPieSlice *> slices)
-$internalMethod=5,7,0|bool|append,append2|QList<QPieSlice *>
+$internalMethod=|bool|append,append2|QList<QPieSlice *>
 
 $prototype=QPieSlice *append(QString label, qreal value)
-$internalMethod=5,7,0|QPieSlice *|append,append3|QString,qreal
+$internalMethod=|QPieSlice *|append,append3|QString,qreal
 
 //[1]bool append(QPieSlice *slice)
 //[2]bool append(QList<QPieSlice *> slices)
@@ -151,60 +152,60 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
 $addMethod=append
 
 $prototype=bool insert(int index, QPieSlice *slice)
-$method=5,7,0|bool|insert|int,QPieSlice *
+$method=|bool|insert|int,QPieSlice *
 
 $prototype=bool remove(QPieSlice *slice)
-$method=5,7,0|bool|remove|QPieSlice *
+$method=|bool|remove|QPieSlice *
 
 $prototype=bool take(QPieSlice *slice)
-$method=5,7,0|bool|take|QPieSlice *
+$method=|bool|take|QPieSlice *
 
 $prototype=void clear()
-$method=5,7,0|void|clear|
+$method=|void|clear|
 
 $prototype=QList<QPieSlice *> slices() const
-$method=5,7,0|QList<QPieSlice *>|slices|
+$method=|QList<QPieSlice *>|slices|
 
 $prototype=bool isEmpty() const
-$method=5,7,0|bool|isEmpty|
+$method=|bool|isEmpty|
 
 $prototype=void setLabelsVisible(bool visible = true)
-$method=5,7,0|void|setLabelsVisible|bool=true
+$method=|void|setLabelsVisible|bool=true
 
 $prototype=void setLabelsPosition(QPieSlice::LabelPosition position)
-$method=5,7,0|void|setLabelsPosition|QPieSlice::LabelPosition
+$method=|void|setLabelsPosition|QPieSlice::LabelPosition
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void added( QList<QPieSlice*> slices )
-$signalMethod=5,7,0|void|added|QList<QPieSlice*>
+$signalMethod=|void|added|QList<QPieSlice*>
 
 $prototype=void clicked( QPieSlice * slice )
-$signalMethod=5,7,0|void|clicked|QPieSlice *
+$signalMethod=|void|clicked|QPieSlice *
 
 $prototype=void countChanged()
-$signalMethod=5,7,0|void|countChanged|
+$signalMethod=|void|countChanged|
 
 $prototype=void doubleClicked( QPieSlice * slice )
-$signalMethod=5,7,0|void|doubleClicked|QPieSlice *
+$signalMethod=|void|doubleClicked|QPieSlice *
 
 $prototype=void hovered( QPieSlice * slice, bool state )
-$signalMethod=5,7,0|void|hovered|QPieSlice *,bool
+$signalMethod=|void|hovered|QPieSlice *,bool
 
 $prototype=void pressed( QPieSlice * slice )
-$signalMethod=5,7,0|void|pressed|QPieSlice *
+$signalMethod=|void|pressed|QPieSlice *
 
 $prototype=void released( QPieSlice * slice )
-$signalMethod=5,7,0|void|released|QPieSlice *
+$signalMethod=|void|released|QPieSlice *
 
 $prototype=void removed( QList<QPieSlice*> slices )
-$signalMethod=5,7,0|void|removed|QList<QPieSlice*>
+$signalMethod=|void|removed|QList<QPieSlice*>
 
 $prototype=void sumChanged()
-$signalMethod=5,7,0|void|sumChanged|
+$signalMethod=|void|sumChanged|
 
 #pragma ENDDUMP

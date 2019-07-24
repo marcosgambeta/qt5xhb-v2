@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,81 +26,81 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QCategoryAxis(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=~QCategoryAxis()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(qreal startValue READ startValue WRITE setStartValue)
 %%
 
 $prototype=qreal startValue(const QString &categoryLabel = QString()) const
-$method=5,7,0|qreal|startValue|const QString &=QString()
+$method=|qreal|startValue|const QString &=QString()
 
 $prototype=void setStartValue(qreal min)
-$method=5,7,0|void|setStartValue|qreal
+$method=|void|setStartValue|qreal
 
 %%
 %% Q_PROPERTY(QStringList categoriesLabels READ categoriesLabels)
 %%
 
 $prototype=QStringList categoriesLabels()
-$method=5,7,0|QStringList|categoriesLabels|
+$method=|QStringList|categoriesLabels|
 
 %%
 %% Q_PROPERTY(int count READ count)
 %%
 
 $prototype=int count() const
-$method=5,7,0|int|count|
+$method=|int|count|
 
 %%
 %% Q_PROPERTY(AxisLabelsPosition labelsPosition READ labelsPosition WRITE setLabelsPosition NOTIFY labelsPositionChanged)
 %%
 
 $prototype=QCategoryAxis::AxisLabelsPosition labelsPosition() const
-$method=5,7,0|QCategoryAxis::AxisLabelsPosition|labelsPosition|
+$method=|QCategoryAxis::AxisLabelsPosition|labelsPosition|
 
 $prototype=void setLabelsPosition(QCategoryAxis::AxisLabelsPosition position)
-$method=5,7,0|void|setLabelsPosition|QCategoryAxis::AxisLabelsPosition
+$method=|void|setLabelsPosition|QCategoryAxis::AxisLabelsPosition
 
 %%
 %%
 %%
 
 $prototype=AxisType type() const
-$method=5,7,0|QAbstractAxis::AxisType|type|
+$method=|QAbstractAxis::AxisType|type|
 
 $prototype=void append(const QString &label, qreal categoryEndValue)
-$method=5,7,0|void|append|const QString &,qreal
+$method=|void|append|const QString &,qreal
 
 $prototype=void remove(const QString &label)
-$method=5,7,0|void|remove|const QString &
+$method=|void|remove|const QString &
 
 $prototype=void replaceLabel(const QString &oldLabel, const QString &newLabel)
-$method=5,7,0|void|replaceLabel|const QString &,const QString &
+$method=|void|replaceLabel|const QString &,const QString &
 
 $prototype=qreal endValue(const QString &categoryLabel) const
-$method=5,7,0|qreal|endValue|const QString &
+$method=|qreal|endValue|const QString &
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void categoriesChanged()
-$signalMethod=5,7,0|void|categoriesChanged|
+$signalMethod=|void|categoriesChanged|
 
 $prototype=void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
-$signalMethod=5,7,0|void|labelsPositionChanged|QCategoryAxis::AxisLabelsPosition
+$signalMethod=|void|labelsPositionChanged|QCategoryAxis::AxisLabelsPosition
 
 #pragma ENDDUMP

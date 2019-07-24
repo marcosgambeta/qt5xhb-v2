@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -25,92 +26,92 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QScatterSeries(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
 $prototype=~QScatterSeries()
-$deleteMethod=5,7,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
 $prototype=QColor color() const
-$method=5,7,0|QColor|color|
+$method=|QColor|color|
 
 $prototype=void setColor(const QColor &color)
-$method=5,7,0|void|setColor|const QColor &
+$method=|void|setColor|const QColor &
 
 %%
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
 $prototype=QColor borderColor() const
-$method=5,7,0|QColor|borderColor|
+$method=|QColor|borderColor|
 
 $prototype=void setBorderColor(const QColor &color)
-$method=5,7,0|void|setBorderColor|const QColor &
+$method=|void|setBorderColor|const QColor &
 
 %%
 %% Q_PROPERTY(MarkerShape markerShape READ markerShape WRITE setMarkerShape NOTIFY markerShapeChanged)
 %%
 
 $prototype=MarkerShape markerShape() const
-$method=5,7,0|QScatterSeries::MarkerShape|markerShape|
+$method=|QScatterSeries::MarkerShape|markerShape|
 
 $prototype=void setMarkerShape(MarkerShape shape)
-$method=5,7,0|void|setMarkerShape|QScatterSeries::MarkerShape
+$method=|void|setMarkerShape|QScatterSeries::MarkerShape
 
 %%
 %% Q_PROPERTY(qreal markerSize READ markerSize WRITE setMarkerSize NOTIFY markerSizeChanged)
 %%
 
 $prototype=qreal markerSize() const
-$method=5,7,0|qreal|markerSize|
+$method=|qreal|markerSize|
 
 $prototype=void setMarkerSize(qreal size)
-$method=5,7,0|void|setMarkerSize|qreal
+$method=|void|setMarkerSize|qreal
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush)
 %%
 
 $prototype=QBrush brush() const
-$method=5,7,0|QBrush|brush|
+$method=|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,7,0|void|setBrush|const QBrush &
+$method=|void|setBrush|const QBrush &
 
 %%
 %%
 %%
 
 $prototype=QAbstractSeries::SeriesType type() const
-$method=5,7,0|QAbstractSeries::SeriesType|type|
+$method=|QAbstractSeries::SeriesType|type|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,7,0|void|setPen|const QPen &
+$method=|void|setPen|const QPen &
 
 %%
 %% SIGNALS
 %%
 
-using namespace QtCharts;
+%% using namespace QtCharts;
 
 $prototype=void borderColorChanged( QColor color )
-$signalMethod=5,7,0|void|borderColorChanged|QColor
+$signalMethod=|void|borderColorChanged|QColor
 
 $prototype=void colorChanged( QColor color )
-$signalMethod=5,7,0|void|colorChanged|QColor
+$signalMethod=|void|colorChanged|QColor
 
 $prototype=void markerShapeChanged( QScatterSeries::MarkerShape shape )
-$signalMethod=5,7,0|void|markerShapeChanged|QScatterSeries::MarkerShape
+$signalMethod=|void|markerShapeChanged|QScatterSeries::MarkerShape
 
 $prototype=void markerSizeChanged( qreal size )
-$signalMethod=5,7,0|void|markerSizeChanged|qreal
+$signalMethod=|void|markerSizeChanged|qreal
 
 #pragma ENDDUMP

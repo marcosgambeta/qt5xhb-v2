@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,7,0
 
 $header
 
@@ -23,22 +24,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes
 
 using namespace QtCharts;
 
 $prototype=explicit QPolarChart(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
-$constructor=5,7,0|new|QGraphicsItem *=nullptr,Qt::WindowFlags=Qt::WindowFlags()
+$constructor=|new|QGraphicsItem *=nullptr,Qt::WindowFlags=Qt::WindowFlags()
 
 $prototype=~QPolarChart()
-$deleteMethod=5,7,0
+$deleteMethod
 
 $prototype=void addAxis(QAbstractAxis *axis, PolarOrientation polarOrientation)
-$method=5,7,0|void|addAxis|QAbstractAxis *,QPolarChart::PolarOrientation
+$method=|void|addAxis|QAbstractAxis *,QPolarChart::PolarOrientation
 
 $prototype=QList<QAbstractAxis*> axes(PolarOrientations polarOrientation = PolarOrientations(PolarOrientationRadial | PolarOrientationAngular), QAbstractSeries *series = nullptr) const
 %% TODO: implementar
-%% $method=5,7,0|QList<QAbstractAxis *>|axes|QPolarChart::PolarOrientations=QPolarChart::PolarOrientations( QPolarChart::PolarOrientationRadial OR QPolarChart::PolarOrientationAngular ),QAbstractSeries *=nullptr
+%% $method=|QList<QAbstractAxis *>|axes|QPolarChart::PolarOrientations=QPolarChart::PolarOrientations( QPolarChart::PolarOrientationRadial OR QPolarChart::PolarOrientationAngular ),QAbstractSeries *=nullptr
 
 $prototype=static PolarOrientation axisPolarOrientation(QAbstractAxis *axis)
 $staticMethod=|QPolarChart::PolarOrientation|axisPolarOrientation|QAbstractAxis *

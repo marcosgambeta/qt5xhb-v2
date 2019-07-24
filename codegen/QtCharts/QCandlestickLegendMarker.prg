@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCharts
+$added=5,8,0
 
 $header
 
@@ -23,22 +24,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
 
 $prototype=explicit QCandlestickLegendMarker(QCandlestickSeries *series, QLegend *legend, QObject *parent = nullptr)
-$constructor=5,8,0|new|QCandlestickSeries *,QLegend *,QObject *=nullptr
+$constructor=|new|QCandlestickSeries *,QLegend *,QObject *=nullptr
 
 $prototype=virtual ~QCandlestickLegendMarker()
-$deleteMethod=5,8,0
+$deleteMethod
 
 $prototype=virtual LegendMarkerType type()
-$virtualMethod=5,8,0|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QCandlestickSeries* series()
-$virtualMethod=5,8,0|QCandlestickSeries *|series|
+$virtualMethod=|QCandlestickSeries *|series|
 
 #pragma ENDDUMP
