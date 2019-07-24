@@ -545,8 +545,6 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void brushChanged()
 */

@@ -446,6 +446,7 @@ void applyNiceNumbers()
 */
 HB_FUNC_STATIC( QVALUEAXIS_APPLYNICENUMBERS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -465,9 +466,8 @@ HB_FUNC_STATIC( QVALUEAXIS_APPLYNICENUMBERS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtCharts;
 
 /*
 void labelFormatChanged( const QString & format )

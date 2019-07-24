@@ -468,8 +468,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void baseChanged( qreal base )
 */

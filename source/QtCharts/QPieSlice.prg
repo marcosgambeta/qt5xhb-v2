@@ -1099,8 +1099,6 @@ HB_FUNC_STATIC( QPIESLICE_SERIES )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void angleSpanChanged()
 */

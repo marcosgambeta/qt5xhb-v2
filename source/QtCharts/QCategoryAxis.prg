@@ -407,8 +407,6 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void categoriesChanged()
 */

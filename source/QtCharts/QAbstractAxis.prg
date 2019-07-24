@@ -1749,8 +1749,6 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETRANGE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void colorChanged( QColor color )
 */

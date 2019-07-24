@@ -551,8 +551,6 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETRANGE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void categoriesChanged()
 */

@@ -621,8 +621,6 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void barsetsAdded( QList<QBarSet*> sets )
 */

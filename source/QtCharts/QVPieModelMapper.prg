@@ -420,8 +420,6 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void firstRowChanged()
 */

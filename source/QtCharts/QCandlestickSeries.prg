@@ -999,10 +999,6 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_TYPE )
 #endif
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
-
 /*
 void bodyOutlineVisibilityChanged()
 */
@@ -1436,7 +1432,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
       if( Signals3_connection( sender, index ) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender,
+        QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSeries::capsWidthChanged, 
                                                               [sender,index]
                                                               () {

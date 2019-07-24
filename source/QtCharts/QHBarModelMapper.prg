@@ -420,8 +420,6 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETCOLUMNCOUNT )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void columnCountChanged()
 */

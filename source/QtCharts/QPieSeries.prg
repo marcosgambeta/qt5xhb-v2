@@ -847,8 +847,6 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void added( QList<QPieSlice*> slices )
 */

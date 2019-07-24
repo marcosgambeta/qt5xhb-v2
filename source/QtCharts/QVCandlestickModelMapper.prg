@@ -499,10 +499,6 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ORIENTATION )
 #endif
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
-
 /*
 void closeRowChanged()
 */

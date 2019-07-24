@@ -530,8 +530,6 @@ HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void nameChanged()
 */

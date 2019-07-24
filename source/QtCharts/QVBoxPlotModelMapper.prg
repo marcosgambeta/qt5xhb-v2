@@ -420,8 +420,6 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void firstBoxSetColumnChanged()
 */

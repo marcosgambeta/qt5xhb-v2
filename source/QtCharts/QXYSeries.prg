@@ -1182,8 +1182,6 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void clicked( const QPointF & point )
 */

@@ -945,8 +945,6 @@ void hideEvent(QHideEvent *event) [protected]
 void showEvent(QShowEvent *event) [protected]
 */
 
-using namespace QtCharts;
-
 /*
 void backgroundVisibleChanged( bool visible )
 */

@@ -1858,8 +1858,6 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void plotAreaChanged( const QRectF & plotArea )
 */

@@ -439,8 +439,6 @@ HB_FUNC_STATIC( QSCATTERSERIES_SETPEN )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void borderColorChanged( QColor color )
 */

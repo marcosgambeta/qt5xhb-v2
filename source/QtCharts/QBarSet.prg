@@ -801,8 +801,6 @@ HB_FUNC_STATIC( QBARSET_SUM )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void borderColorChanged( QColor color )
 */

@@ -527,10 +527,6 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
 #endif
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
-
 /*
 void brushChanged()
 */

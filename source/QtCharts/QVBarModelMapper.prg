@@ -420,8 +420,6 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void firstBarSetColumnChanged()
 */

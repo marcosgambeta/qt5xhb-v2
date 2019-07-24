@@ -844,8 +844,6 @@ HB_FUNC_STATIC( QAREASERIES_POINTSVISIBLE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void borderColorChanged( QColor color )
 */

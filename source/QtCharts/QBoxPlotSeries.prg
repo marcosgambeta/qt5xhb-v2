@@ -609,8 +609,6 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void boxOutlineVisibilityChanged()
 */

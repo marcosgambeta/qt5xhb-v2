@@ -388,8 +388,6 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void formatChanged( QString format )
 */

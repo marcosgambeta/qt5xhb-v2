@@ -475,8 +475,6 @@ HB_FUNC_STATIC( QBOXSET_COUNT )
 #endif
 }
 
-using namespace QtCharts;
-
 /*
 void brushChanged()
 */

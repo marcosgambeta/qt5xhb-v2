@@ -264,10 +264,6 @@ void setLastSetSection(int lastSetSection) [protected]
 int lastSetSection() const [protected]
 */
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
-#endif
-
 /*
 void modelReplaced()
 */
