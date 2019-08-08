@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtGui
+$added=5,3,0
 
 $header
 
@@ -23,25 +24,25 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 #include <QtCore/QSize>
 #include <QtCore/QRectF>
 
 $prototype=QPageSize()
-$internalConstructor=5,3,0|new1|
+$internalConstructor=|new1|
 
 $prototype=explicit QPageSize(PageSizeId pageSizeId)
-$internalConstructor=5,3,0|new2|QPageSize::PageSizeId
+$internalConstructor=|new2|QPageSize::PageSizeId
 
 $prototype=explicit QPageSize(const QSize &pointSize, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-$internalConstructor=5,3,0|new3|const QSize &,const QString &=QString(),QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
+$internalConstructor=|new3|const QSize &,const QString &=QString(),QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
 
 $prototype=explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-$internalConstructor=5,3,0|new4|const QSizeF &,QPageSize::Unit,const QString &=QString(),QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
+$internalConstructor=|new4|const QSizeF &,QPageSize::Unit,const QString &=QString(),QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
 
 $prototype=QPageSize(const QPageSize &other)
-$internalConstructor=5,3,0|new5|const QPageSize &
+$internalConstructor=|new5|const QPageSize &
 
 //[1]QPageSize()
 //[2]explicit QPageSize(PageSizeId pageSizeId)
@@ -77,22 +78,22 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
   }
 }
 
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=void swap(QPageSize &other)
-$method=5,3,0|void|swap|QPageSize &
+$method=|void|swap|QPageSize &
 
 $prototype=bool isEquivalentTo(const QPageSize &other) const
-$method=5,3,0|bool|isEquivalentTo|const QPageSize &
+$method=|bool|isEquivalentTo|const QPageSize &
 
 $prototype=bool isValid() const
-$method=5,3,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=QString key() const
-$internalMethod=5,3,0|QString|key,key1|
+$internalMethod=|QString|key,key1|
 
 $prototype=static QString key(PageSizeId pageSizeId)
-$internalStaticMethod=5,3,0|QString|key,key2|QPageSize::PageSizeId
+$internalStaticMethod=|QString|key,key2|QPageSize::PageSizeId
 
 //[1]QString key() const
 //[2]static QString key(PageSizeId pageSizeId)
@@ -115,10 +116,10 @@ HB_FUNC_STATIC( QPAGESIZE_KEY )
 $addMethod=key
 
 $prototype=QString name() const
-$internalMethod=5,3,0|QString|name,name1|
+$internalMethod=|QString|name,name1|
 
 $prototype=static QString name(PageSizeId pageSizeId)
-$internalStaticMethod=5,3,0|QString|name,name2|QPageSize::PageSizeId
+$internalStaticMethod=|QString|name,name2|QPageSize::PageSizeId
 
 //[1]QString name() const
 //[2]static QString name(PageSizeId pageSizeId)
@@ -141,16 +142,16 @@ HB_FUNC_STATIC( QPAGESIZE_NAME )
 $addMethod=name
 
 $prototype=PageSizeId id() const
-$internalMethod=5,3,0|QPageSize::PageSizeId|id,id1|
+$internalMethod=|QPageSize::PageSizeId|id,id1|
 
 $prototype=static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
-$internalStaticMethod=5,3,0|QPageSize::PageSizeId|id,id2|const QSize &,QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
+$internalStaticMethod=|QPageSize::PageSizeId|id,id2|const QSize &,QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
 
 $prototype=static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy = FuzzyMatch)
-$internalStaticMethod=5,3,0|QPageSize::PageSizeId|id,id3|const QSizeF &,QPageSize::Unit,QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
+$internalStaticMethod=|QPageSize::PageSizeId|id,id3|const QSizeF &,QPageSize::Unit,QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
 
 $prototype=static PageSizeId id(int windowsId)
-$internalStaticMethod=5,3,0|QPageSize::PageSizeId|id,id4|int
+$internalStaticMethod=|QPageSize::PageSizeId|id,id4|int
 
 //[1]PageSizeId id() const
 //[2]static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
@@ -183,10 +184,10 @@ HB_FUNC_STATIC( QPAGESIZE_ID )
 $addMethod=id
 
 $prototype=int windowsId() const
-$internalMethod=5,3,0|int|windowsId,windowsId1|
+$internalMethod=|int|windowsId,windowsId1|
 
 $prototype=static int windowsId(PageSizeId pageSizeId)
-$internalStaticMethod=5,3,0|int|windowsId,windowsId2|QPageSize::PageSizeId
+$internalStaticMethod=|int|windowsId,windowsId2|QPageSize::PageSizeId
 
 //[1]int windowsId() const
 //[2]static int windowsId(PageSizeId pageSizeId)
@@ -209,10 +210,10 @@ HB_FUNC_STATIC( QPAGESIZE_WINDOWSID )
 $addMethod=windowsId
 
 $prototype=QSizeF definitionSize() const
-$internalMethod=5,3,0|QSizeF|definitionSize,definitionSize1|
+$internalMethod=|QSizeF|definitionSize,definitionSize1|
 
 $prototype=static QSizeF definitionSize(PageSizeId pageSizeId)
-$internalStaticMethod=5,3,0|QSizeF|definitionSize,definitionSize2|QPageSize::PageSizeId
+$internalStaticMethod=|QSizeF|definitionSize,definitionSize2|QPageSize::PageSizeId
 
 //[1]QSizeF definitionSize() const
 //[2]static QSizeF definitionSize(PageSizeId pageSizeId)
@@ -235,10 +236,10 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE )
 $addMethod=definitionSize
 
 $prototype=Unit definitionUnits() const
-$internalMethod=5,3,0|QPageSize::Unit|definitionUnits,definitionUnits1|
+$internalMethod=|QPageSize::Unit|definitionUnits,definitionUnits1|
 
 $prototype=static Unit definitionUnits(PageSizeId pageSizeId)
-$internalStaticMethod=5,3,0|QPageSize::Unit|definitionUnits,definitionUnits2|QPageSize::PageSizeId
+$internalStaticMethod=|QPageSize::Unit|definitionUnits,definitionUnits2|QPageSize::PageSizeId
 
 //[1]Unit definitionUnits() const
 //[2]static Unit definitionUnits(PageSizeId pageSizeId)
@@ -261,10 +262,10 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS )
 $addMethod=definitionUnits
 
 $prototype=QSizeF size(Unit units) const
-$internalMethod=5,3,0|QSizeF|size,size1|QPageSize::Unit
+$internalMethod=|QSizeF|size,size1|QPageSize::Unit
 
 $prototype=static QSizeF size(PageSizeId pageSizeId, Unit units)
-$internalStaticMethod=5,3,0|QSizeF|size,size2|QPageSize::PageSizeId,QPageSize::Unit
+$internalStaticMethod=|QSizeF|size,size2|QPageSize::PageSizeId,QPageSize::Unit
 
 //[1]QSizeF size(Unit units) const
 //[2]static QSizeF size(PageSizeId pageSizeId, Unit units)
@@ -287,10 +288,10 @@ HB_FUNC_STATIC( QPAGESIZE_SIZE )
 $addMethod=size
 
 $prototype=QSize sizePoints() const
-$internalMethod=5,3,0|QSize|sizePoints,sizePoints1|
+$internalMethod=|QSize|sizePoints,sizePoints1|
 
 $prototype=static QSize sizePoints(PageSizeId pageSizeId)
-$internalStaticMethod=5,3,0|QSize|sizePoints,sizePoints2|QPageSize::PageSizeId
+$internalStaticMethod=|QSize|sizePoints,sizePoints2|QPageSize::PageSizeId
 
 //[1]QSize sizePoints() const
 //[2]static QSize sizePoints(PageSizeId pageSizeId)
@@ -313,10 +314,10 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS )
 $addMethod=sizePoints
 
 $prototype=QSize sizePixels(int resolution) const
-$internalMethod=5,3,0|QSize|sizePixels,sizePixels1|int
+$internalMethod=|QSize|sizePixels,sizePixels1|int
 
 $prototype=static QSize sizePixels(PageSizeId pageSizeId, int resolution)
-$internalStaticMethod=5,3,0|QSize|sizePixels,sizePixels2|QPageSize::PageSizeId,int
+$internalStaticMethod=|QSize|sizePixels,sizePixels2|QPageSize::PageSizeId,int
 
 //[1]QSize sizePixels(int resolution) const
 //[2]static QSize sizePixels(PageSizeId pageSizeId, int resolution)
@@ -339,13 +340,13 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
 $addMethod=sizePixels
 
 $prototype=QRectF rect(Unit units) const
-$method=5,3,0|QRectF|rect|QPageSize::Unit
+$method=|QRectF|rect|QPageSize::Unit
 
 $prototype=QRect rectPoints() const
-$method=5,3,0|QRect|rectPoints|
+$method=|QRect|rectPoints|
 
 $prototype=QRect rectPixels(int resolution) const
-$method=5,3,0|QRect|rectPixels|int
+$method=|QRect|rectPixels|int
 
 $extraMethods
 

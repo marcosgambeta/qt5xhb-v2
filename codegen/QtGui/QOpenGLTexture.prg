@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtGui
+$added=5,2,0
 
 $header
 
@@ -23,15 +24,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtGui/QColor>
 
 $prototype=QOpenGLTexture(Target target)
-$internalConstructor=5,2,0|new1|QOpenGLTexture::Target
+$internalConstructor=|new1|QOpenGLTexture::Target
 
 $prototype=QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-$internalConstructor=5,2,0|new2|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
+$internalConstructor=|new2|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
 
 //[1]QOpenGLTexture(Target target)
 //[2]QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
@@ -52,25 +53,25 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=bool create()
-$method=5,2,0|bool|create|
+$method=|bool|create|
 
 $prototype=void destroy()
-$method=5,2,0|void|destroy|
+$method=|void|destroy|
 
 $prototype=bool isCreated() const
-$method=5,2,0|bool|isCreated|
+$method=|bool|isCreated|
 
 $prototype=GLuint textureId() const
-$method=5,2,0|GLuint|textureId|
+$method=|GLuint|textureId|
 
 $prototype=void bind()
-$internalMethod=5,2,0|void|bind,bind1|
+$internalMethod=|void|bind,bind1|
 
 $prototype=void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
-$internalMethod=5,2,0|void|bind,bind2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
+$internalMethod=|void|bind,bind2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
 
 //[1]void bind()
 //[2]void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
@@ -93,10 +94,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 $addMethod=bind
 
 $prototype=void release()
-$internalMethod=5,2,0|void|release,release1|
+$internalMethod=|void|release,release1|
 
 $prototype=void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
-$internalMethod=5,2,0|void|release,release2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
+$internalMethod=|void|release,release2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
 
 //[1]void release()
 //[2]void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
@@ -119,10 +120,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 $addMethod=release
 
 $prototype=bool isBound() const
-$internalMethod=5,2,0|bool|isBound,isBound1|
+$internalMethod=|bool|isBound,isBound1|
 
 $prototype=bool isBound(uint unit)
-$internalMethod=5,2,0|bool|isBound,isBound2|uint
+$internalMethod=|bool|isBound,isBound2|uint
 
 //[1]bool isBound() const
 //[2]bool isBound(uint unit)
@@ -145,67 +146,67 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 $addMethod=isBound
 
 $prototype=void setFormat(TextureFormat format)
-$method=5,2,0|void|setFormat|QOpenGLTexture::TextureFormat
+$method=|void|setFormat|QOpenGLTexture::TextureFormat
 
 $prototype=TextureFormat format() const
-$method=5,2,0|QOpenGLTexture::TextureFormat|format|
+$method=|QOpenGLTexture::TextureFormat|format|
 
 $prototype=void setSize(int width, int height = 1, int depth = 1)
-$method=5,2,0|void|setSize|int,int=1,int=1
+$method=|void|setSize|int,int=1,int=1
 
 $prototype=int width() const
-$method=5,2,0|int|width|
+$method=|int|width|
 
 $prototype=int height() const
-$method=5,2,0|int|height|
+$method=|int|height|
 
 $prototype=int depth() const
-$method=5,2,0|int|depth|
+$method=|int|depth|
 
 $prototype=void setMipLevels(int levels)
-$method=5,2,0|void|setMipLevels|int
+$method=|void|setMipLevels|int
 
 $prototype=int mipLevels() const
-$method=5,2,0|int|mipLevels|
+$method=|int|mipLevels|
 
 $prototype=int maximumMipLevels() const
-$method=5,2,0|int|maximumMipLevels|
+$method=|int|maximumMipLevels|
 
 $prototype=void setLayers(int layers)
-$method=5,2,0|void|setLayers|int
+$method=|void|setLayers|int
 
 $prototype=int layers() const
-$method=5,2,0|int|layers|
+$method=|int|layers|
 
 $prototype=int faces() const
-$method=5,2,0|int|faces|
+$method=|int|faces|
 
 $prototype=void allocateStorage()
-$method=5,2,0|void|allocateStorage|
+$method=|void|allocateStorage|
 
 $prototype=bool isStorageAllocated() const
-$method=5,2,0|bool|isStorageAllocated|
+$method=|bool|isStorageAllocated|
 
 $prototype=QOpenGLTexture *createTextureView(Target target,TextureFormat viewFormat,int minimumMipmapLevel, int maximumMipmapLevel,int minimumLayer, int maximumLayer) const
-$method=5,2,0|QOpenGLTexture *|createTextureView|QOpenGLTexture::Target,QOpenGLTexture::TextureFormat,int,int,int,int
+$method=|QOpenGLTexture *|createTextureView|QOpenGLTexture::Target,QOpenGLTexture::TextureFormat,int,int,int,int
 
 $prototype=bool isTextureView() const
-$method=5,2,0|bool|isTextureView|
+$method=|bool|isTextureView|
 
 $prototype=void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = nullptr)
-%% TODO: $internalMethod=5,2,0|void|setData,setData1|int,int,QOpenGLTexture::CubeMapFace,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions *=nullptr
+%% TODO: $internalMethod=|void|setData,setData1|int,int,QOpenGLTexture::CubeMapFace,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions *=nullptr
 
 $prototype=void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = nullptr)
-%% TODO: $internalMethod=5,2,0|void|setData,setData2|int,int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=nullptr
+%% TODO: $internalMethod=|void|setData,setData2|int,int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=nullptr
 
 $prototype=void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = nullptr)
-%% TODO: $internalMethod=5,2,0|void|setData,setData3|int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=nullptr
+%% TODO: $internalMethod=|void|setData,setData3|int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=nullptr
 
 $prototype=void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = nullptr)
-%% TODO: $internalMethod=5,2,0|void|setData,setData4|QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=nullptr
+%% TODO: $internalMethod=|void|setData,setData4|QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=nullptr
 
 $prototype=void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-%% TODO: $internalMethod=5,2,0|void|setData,setData5|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
+%% TODO: $internalMethod=|void|setData,setData5|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
 
 //[1]void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = nullptr)
 //[2]void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = nullptr)
@@ -232,16 +233,16 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA )
 $addMethod=setData
 
 $prototype=void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData1|int,int,QOpenGLTexture::CubeMapFace,int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=|void|setCompressedData,setCompressedData1|int,int,QOpenGLTexture::CubeMapFace,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData2|int,int,int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=|void|setCompressedData,setCompressedData2|int,int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData3|int,int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=|void|setCompressedData,setCompressedData3|int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 $prototype=void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-%% TODO: $method=5,2,0|void|setCompressedData,setCompressedData4|int,void *,const QOpenGLPixelTransferOptions * const=0
+%% TODO: $method=|void|setCompressedData,setCompressedData4|int,void *,const QOpenGLPixelTransferOptions * const=0
 
 //[1]void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 //[2]void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
@@ -267,31 +268,31 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA )
 $addMethod=setCompressedData
 
 $prototype=void setMipBaseLevel(int baseLevel)
-$method=5,2,0|void|setMipBaseLevel|int
+$method=|void|setMipBaseLevel|int
 
 $prototype=int mipBaseLevel() const
-$method=5,2,0|int|mipBaseLevel|
+$method=|int|mipBaseLevel|
 
 $prototype=void setMipMaxLevel(int maxLevel)
-$method=5,2,0|void|setMipMaxLevel|int
+$method=|void|setMipMaxLevel|int
 
 $prototype=int mipMaxLevel() const
-$method=5,2,0|int|mipMaxLevel|
+$method=|int|mipMaxLevel|
 
 $prototype=void setMipLevelRange(int baseLevel, int maxLevel)
-$method=5,2,0|void|setMipLevelRange|int,int
+$method=|void|setMipLevelRange|int,int
 
 $prototype=void setAutoMipMapGenerationEnabled(bool enabled)
-$method=5,2,0|void|setAutoMipMapGenerationEnabled|bool
+$method=|void|setAutoMipMapGenerationEnabled|bool
 
 $prototype=bool isAutoMipMapGenerationEnabled() const
-$method=5,2,0|bool|isAutoMipMapGenerationEnabled|
+$method=|bool|isAutoMipMapGenerationEnabled|
 
 $prototype=void generateMipMaps()
-$internalMethod=5,2,0|void|generateMipMaps,generateMipMaps1|
+$internalMethod=|void|generateMipMaps,generateMipMaps1|
 
 $prototype=void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
-$internalMethod=5,2,0|void|generateMipMaps,generateMipMaps2|int,bool=true
+$internalMethod=|void|generateMipMaps,generateMipMaps2|int,bool=true
 
 //[1]void generateMipMaps()
 //[2]void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
@@ -314,10 +315,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 $addMethod=generateMipMaps
 
 $prototype=void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
-$internalMethod=5,2,0|void|setSwizzleMask,setSwizzleMask1|QOpenGLTexture::SwizzleComponent,QOpenGLTexture::SwizzleValue
+$internalMethod=|void|setSwizzleMask,setSwizzleMask1|QOpenGLTexture::SwizzleComponent,QOpenGLTexture::SwizzleValue
 
 $prototype=void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
-$internalMethod=5,2,0|void|setSwizzleMask,setSwizzleMask2|QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue
+$internalMethod=|void|setSwizzleMask,setSwizzleMask2|QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue
 
 //[1]void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
 //[2]void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
@@ -340,40 +341,40 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 $addMethod=setSwizzleMask
 
 $prototype=SwizzleValue swizzleMask(SwizzleComponent component) const
-$method=5,2,0|QOpenGLTexture::SwizzleValue|swizzleMask|QOpenGLTexture::SwizzleComponent
+$method=|QOpenGLTexture::SwizzleValue|swizzleMask|QOpenGLTexture::SwizzleComponent
 
 $prototype=void setDepthStencilMode(DepthStencilMode mode)
-$method=5,2,0|void|setDepthStencilMode|QOpenGLTexture::DepthStencilMode
+$method=|void|setDepthStencilMode|QOpenGLTexture::DepthStencilMode
 
 $prototype=DepthStencilMode depthStencilMode() const
-$method=5,2,0|QOpenGLTexture::DepthStencilMode|depthStencilMode|
+$method=|QOpenGLTexture::DepthStencilMode|depthStencilMode|
 
 $prototype=void setMinificationFilter(Filter filter)
-$method=5,2,0|void|setMinificationFilter|QOpenGLTexture::Filter
+$method=|void|setMinificationFilter|QOpenGLTexture::Filter
 
 $prototype=Filter minificationFilter() const
-$method=5,2,0|QOpenGLTexture::Filter|minificationFilter|
+$method=|QOpenGLTexture::Filter|minificationFilter|
 
 $prototype=void setMagnificationFilter(Filter filter)
-$method=5,2,0|void|setMagnificationFilter|QOpenGLTexture::Filter
+$method=|void|setMagnificationFilter|QOpenGLTexture::Filter
 
 $prototype=Filter magnificationFilter() const
-$method=5,2,0|QOpenGLTexture::Filter|magnificationFilter|
+$method=|QOpenGLTexture::Filter|magnificationFilter|
 
 $prototype=void setMinMagFilters(Filter minificationFilter,Filter magnificationFilter)
-$method=5,2,0|void|setMinMagFilters|QOpenGLTexture::Filter,QOpenGLTexture::Filter
+$method=|void|setMinMagFilters|QOpenGLTexture::Filter,QOpenGLTexture::Filter
 
 $prototype=void setMaximumAnisotropy(float anisotropy)
-$method=5,2,0|void|setMaximumAnisotropy|float
+$method=|void|setMaximumAnisotropy|float
 
 $prototype=float maximumAnisotropy() const
-$method=5,2,0|float|maximumAnisotropy|
+$method=|float|maximumAnisotropy|
 
 $prototype=void setWrapMode(WrapMode mode)
-$internalMethod=5,2,0|void|setWrapMode,setWrapMode1|QOpenGLTexture::WrapMode
+$internalMethod=|void|setWrapMode,setWrapMode1|QOpenGLTexture::WrapMode
 
 $prototype=void setWrapMode(CoordinateDirection direction, WrapMode mode)
-$internalMethod=5,2,0|void|setWrapMode,setWrapMode2|QOpenGLTexture::CoordinateDirection,QOpenGLTexture::WrapMode
+$internalMethod=|void|setWrapMode,setWrapMode2|QOpenGLTexture::CoordinateDirection,QOpenGLTexture::WrapMode
 
 //[1]void setWrapMode(WrapMode mode)
 //[2]void setWrapMode(CoordinateDirection direction, WrapMode mode)
@@ -396,19 +397,19 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 $addMethod=setWrapMode
 
 $prototype=WrapMode wrapMode(CoordinateDirection direction) const
-$method=5,2,0|QOpenGLTexture::WrapMode|wrapMode|QOpenGLTexture::CoordinateDirection
+$method=|QOpenGLTexture::WrapMode|wrapMode|QOpenGLTexture::CoordinateDirection
 
 $prototype=void setBorderColor(QColor color)
-$method=5,2,0|void|setBorderColor,setBorderColor1|QColor
+$method=|void|setBorderColor,setBorderColor1|QColor
 
 $prototype=void setBorderColor(float r, float g, float b, float a)
-$method=5,2,0|void|setBorderColor,setBorderColor2|float,float,float,float
+$method=|void|setBorderColor,setBorderColor2|float,float,float,float
 
 $prototype=void setBorderColor(int r, int g, int b, int a)
-$method=5,2,0|void|setBorderColor,setBorderColor3|int,int,int,int
+$method=|void|setBorderColor,setBorderColor3|int,int,int,int
 
 $prototype=void setBorderColor(uint r, uint g, uint b, uint a)
-$method=5,2,0|void|setBorderColor,setBorderColor4|uint,uint,uint,uint
+$method=|void|setBorderColor,setBorderColor4|uint,uint,uint,uint
 
 //[1]void setBorderColor(QColor color)
 //[2]void setBorderColor(float r, float g, float b, float a)
@@ -442,16 +443,16 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR )
 $addMethod=setBorderColor
 
 $prototype=QColor borderColor() const
-$method=5,2,0|QColor|borderColor,borderColor1|
+$method=|QColor|borderColor,borderColor1|
 
 $prototype=void borderColor(float *border) const
-%% TODO: $method=5,2,0|void|borderColor,borderColor2|float *
+%% TODO: $method=|void|borderColor,borderColor2|float *
 
 $prototype=void borderColor(int *border) const
-$method=5,2,0|void|borderColor,borderColor3|int *
+$method=|void|borderColor,borderColor3|int *
 
 $prototype=void borderColor(unsigned int *border) const
-%% TODO: $method=5,2,0|void|borderColor,borderColor4|unsigned int *
+%% TODO: $method=|void|borderColor,borderColor4|unsigned int *
 
 //[1]QColor borderColor() const
 //[2]void borderColor(float *border) const
@@ -485,31 +486,31 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR )
 $addMethod=borderColor
 
 $prototype=void setMinimumLevelOfDetail(float value)
-$method=5,2,0|void|setMinimumLevelOfDetail|float
+$method=|void|setMinimumLevelOfDetail|float
 
 $prototype=float minimumLevelOfDetail() const
-$method=5,2,0|float|minimumLevelOfDetail|
+$method=|float|minimumLevelOfDetail|
 
 $prototype=void setMaximumLevelOfDetail(float value)
-$method=5,2,0|void|setMaximumLevelOfDetail|float
+$method=|void|setMaximumLevelOfDetail|float
 
 $prototype=float maximumLevelOfDetail() const
-$method=5,2,0|float|maximumLevelOfDetail|
+$method=|float|maximumLevelOfDetail|
 
 $prototype=void setLevelOfDetailRange(float min, float max)
-$method=5,2,0|void|setLevelOfDetailRange|float,float
+$method=|void|setLevelOfDetailRange|float,float
 
 $prototype=void setLevelofDetailBias(float bias)
-$method=5,2,0|void|setLevelofDetailBias|float
+$method=|void|setLevelofDetailBias|float
 
 $prototype=float levelofDetailBias() const
-$method=5,2,0|float|levelofDetailBias|
+$method=|float|levelofDetailBias|
 
 $prototype=static GLuint boundTextureId(BindingTarget target)
-$internalStaticMethod=5,2,0|GLuint|boundTextureId,boundTextureId1|QOpenGLTexture::BindingTarget
+$internalStaticMethod=|GLuint|boundTextureId,boundTextureId1|QOpenGLTexture::BindingTarget
 
 $prototype=static GLuint boundTextureId(uint unit, BindingTarget target)
-$internalStaticMethod=5,2,0|GLuint|boundTextureId,boundTextureId2|uint,QOpenGLTexture::BindingTarget
+$internalStaticMethod=|GLuint|boundTextureId,boundTextureId2|uint,QOpenGLTexture::BindingTarget
 
 //[1]static GLuint boundTextureId(BindingTarget target)
 //[2]static GLuint boundTextureId(uint unit, BindingTarget target)
@@ -532,7 +533,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 $addMethod=boundTextureId
 
 $prototype=static bool hasFeature(Feature feature)
-$staticMethod=5,2,0|bool|hasFeature|QOpenGLTexture::Feature
+$staticMethod=|bool|hasFeature|QOpenGLTexture::Feature
 
 $extraMethods
 

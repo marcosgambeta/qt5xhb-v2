@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtGui
+$added=5,1,0
 
 $header
 
@@ -23,46 +24,46 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 #include <QtCore/QVector>
 
 $prototype=explicit QOpenGLTimeMonitor(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$constructor=|new|QObject *=nullptr|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-$deleteMethod=5,1,0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$deleteMethod=|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=int sampleCount() const
-$method=5,1,0|int|sampleCount||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|int|sampleCount||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=void setSampleCount(int sampleCount)
-$method=5,1,0|void|setSampleCount|int|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|void|setSampleCount|int|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=bool create()
-$method=5,1,0|bool|create||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|bool|create||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=void destroy()
-$method=5,1,0|void|destroy||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|void|destroy||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=bool isCreated() const
-$method=5,1,0|bool|isCreated||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|bool|isCreated||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=QVector<GLuint> objectIds() const
-%% TODO: $method=5,1,0|QVector<GLuint>|objectIds||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+%% TODO: $method=|QVector<GLuint>|objectIds||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=int recordSample()
-$method=5,1,0|int|recordSample||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|int|recordSample||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=bool isResultAvailable() const
-$method=5,1,0|bool|isResultAvailable||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|bool|isResultAvailable||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=QVector<GLuint64> waitForSamples() const
-%% TODO: $method=5,1,0|QVector<GLuint64>|waitForSamples||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+%% TODO: $method=|QVector<GLuint64>|waitForSamples||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=QVector<GLuint64> waitForIntervals() const
-%% TODO: $method=5,1,0|QVector<GLuint64>|waitForIntervals||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+%% TODO: $method=|QVector<GLuint64>|waitForIntervals||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=void reset()
-$method=5,1,0|void|reset||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|void|reset||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 #pragma ENDDUMP

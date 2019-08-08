@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtGui
+$added=5,1,0
 
 $header
 
@@ -23,41 +24,41 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=explicit QOpenGLTimerQuery(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$constructor=|new|QObject *=nullptr|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-$deleteMethod=5,1,0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$deleteMethod=|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=bool create()
-$method=5,1,0|bool|create||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|bool|create||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=void destroy()
-$method=5,1,0|void|destroy||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|void|destroy||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=bool isCreated() const
-$method=5,1,0|bool|isCreated||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|bool|isCreated||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=GLuint objectId() const
-$method=5,1,0|GLuint|objectId||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|GLuint|objectId||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=void begin()
-$method=5,1,0|void|begin||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|void|begin||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=void end()
-$method=5,1,0|void|end||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|void|end||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=GLuint64 waitForTimestamp() const
-$method=5,1,0|GLuint64|waitForTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|GLuint64|waitForTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=void recordTimestamp()
-$method=5,1,0|void|recordTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|void|recordTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=bool isResultAvailable() const
-$method=5,1,0|bool|isResultAvailable||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|bool|isResultAvailable||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $prototype=GLuint64 waitForResult() const
-$method=5,1,0|GLuint64|waitForResult||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
+$method=|GLuint64|waitForResult||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 #pragma ENDDUMP
