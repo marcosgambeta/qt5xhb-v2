@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -288,7 +289,7 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void ambientLightStrengthChanged( float strength )
 $signalMethod=|void|ambientLightStrengthChanged|float

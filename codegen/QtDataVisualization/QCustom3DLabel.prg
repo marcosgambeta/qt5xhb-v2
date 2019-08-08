@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -135,7 +136,7 @@ $method=|void|setFacingCamera|bool
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void backgroundColorChanged( const QColor & color )
 $signalMethod=|void|backgroundColorChanged|const QColor &

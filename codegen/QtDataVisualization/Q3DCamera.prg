@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -139,7 +140,7 @@ $method=|void|setCameraPosition|float,float,float=100.0f
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void cameraPresetChanged( Q3DCamera::CameraPreset preset )
 $signalMethod=|void|cameraPresetChanged|Q3DCamera::CameraPreset

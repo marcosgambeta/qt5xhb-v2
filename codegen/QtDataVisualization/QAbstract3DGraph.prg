@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -304,7 +305,7 @@ $prototype=void wheelEvent(QWheelEvent *event) [protected]
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
 $signalMethod=|void|activeInputHandlerChanged|QAbstract3DInputHandler *

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -163,7 +164,7 @@ $method=|void|setTextureImage|const QImage &
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void meshFileChanged( const QString & meshFile )
 $signalMethod=|void|meshFileChanged|const QString &

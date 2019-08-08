@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -53,7 +54,7 @@ $method=|void|setLabels|const QStringList &
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void labelsChanged()
 $signalMethod=|void|labelsChanged|

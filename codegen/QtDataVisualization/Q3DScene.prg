@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -149,7 +150,7 @@ $staticMethod=|QPoint|invalidSelectionPoint|
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void activeCameraChanged( Q3DCamera * camera )
 $signalMethod=|void|activeCameraChanged|Q3DCamera *

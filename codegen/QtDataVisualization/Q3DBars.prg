@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -161,7 +162,7 @@ $method=|QList<QAbstract3DAxis *>|axes|
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void multiSeriesUniformChanged( bool uniform )
 $signalMethod=|void|multiSeriesUniformChanged|bool

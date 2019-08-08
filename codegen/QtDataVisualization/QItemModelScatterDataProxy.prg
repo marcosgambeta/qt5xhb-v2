@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -214,7 +215,7 @@ $method=|void|remap|const QString &,const QString &,const QString &,const QStrin
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void itemModelChanged( const QAbstractItemModel * itemModel )
 $signalMethod=|void|itemModelChanged|const QAbstractItemModel *

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -138,7 +139,7 @@ $method=|void|setValueRanges|float,float,float,float
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void heightMapChanged( const QImage & image )
 $signalMethod=|void|heightMapChanged|const QImage &

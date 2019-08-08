@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -53,7 +54,7 @@ $method=5,9,0|bool|isAutoPosition|
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void autoPositionChanged( bool autoPosition )
 $signalMethod=5,9,0|void|autoPositionChanged|bool

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -69,7 +70,7 @@ $prototype=bool isDirty() const [protected]
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void positionChanged( const QVector3D & position )
 $signalMethod=|void|positionChanged|const QVector3D &

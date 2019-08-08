@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -209,7 +210,7 @@ $method=|void|setMeshAxisAndAngle|const QVector3D &,float
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void baseColorChanged( const QColor & color )
 $signalMethod=|void|baseColorChanged|const QColor &

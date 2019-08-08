@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -108,7 +109,7 @@ $method=|QList<QValue3DAxis *>|axes|
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void axisXChanged( QValue3DAxis * axis )
 $signalMethod=|void|axisXChanged|QValue3DAxis *

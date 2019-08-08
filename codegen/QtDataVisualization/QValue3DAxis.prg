@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -97,7 +98,7 @@ $method=|void|setReversed|bool
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void formatterChanged( QValue3DAxisFormatter * formatter )
 %% TODO: $signalMethod=|void|formatterChanged|QValue3DAxisFormatter *

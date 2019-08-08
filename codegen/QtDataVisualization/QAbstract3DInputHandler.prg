@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -94,7 +95,7 @@ $prototype=QPoint previousInputPos() const [protected]
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void inputViewChanged( QAbstract3DInputHandler::InputView view )
 $signalMethod=|void|inputViewChanged|QAbstract3DInputHandler::InputView

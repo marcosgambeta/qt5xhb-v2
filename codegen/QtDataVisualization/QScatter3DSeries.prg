@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -100,7 +101,7 @@ $staticMethod=|int|invalidSelectionIndex|
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void dataProxyChanged( QScatterDataProxy * proxy )
 $signalMethod=|void|dataProxyChanged|QScatterDataProxy *

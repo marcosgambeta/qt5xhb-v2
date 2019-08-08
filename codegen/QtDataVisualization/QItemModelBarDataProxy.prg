@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtDataVisualization
+$added=5,7,0
 
 $header
 
@@ -304,7 +305,7 @@ $method=|int|columnCategoryIndex|const QString &
 %% SIGNALS
 %%
 
-using namespace QtDataVisualization;
+%% using namespace QtDataVisualization;
 
 $prototype=void autoColumnCategoriesChanged( bool enable )
 $signalMethod=|void|autoColumnCategoriesChanged|bool
