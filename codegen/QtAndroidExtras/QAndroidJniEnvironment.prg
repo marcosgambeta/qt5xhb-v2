@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,2,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QAndroidJniEnvironment()
-$constructor=5,2,0|new|
+$constructor=|new|
 
 $prototype=~QAndroidJniEnvironment()
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=static JavaVM *javaVM()
-$staticMethod=5,2,0|JavaVM *|javaVM|
+$staticMethod=|JavaVM *|javaVM|
 
 $prototype=jclass findClass(const char *className)
 %% TODO: implementar

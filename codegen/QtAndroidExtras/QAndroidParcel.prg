@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,10,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=QAndroidParcel()
-$internalConstructor=5,10,0|new1|
+$internalConstructor=|new1|
 
 $prototype=explicit QAndroidParcel(const QAndroidJniObject& parcel)
-$internalConstructor=5,10,0|new2|const QAndroidJniObject &
+$internalConstructor=|new2|const QAndroidJniObject &
 
 //[1]QAndroidParcel()
 //[2]explicit QAndroidParcel(const QAndroidJniObject& parcel)
@@ -53,34 +54,34 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
 }
 
 $prototype=virtual ~QAndroidParcel()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=void writeData(const QByteArray &data) const
-$method=5,10,0|void|writeData|const QByteArray &
+$method=|void|writeData|const QByteArray &
 
 $prototype=void writeVariant(const QVariant &value) const
-$method=5,10,0|void|writeVariant|const QVariant &
+$method=|void|writeVariant|const QVariant &
 
 $prototype=void writeBinder(const QAndroidBinder &binder) const
-$method=5,10,0|void|writeBinder|const QAndroidBinder &
+$method=|void|writeBinder|const QAndroidBinder &
 
 $prototype=void writeFileDescriptor(int fd) const
-$method=5,10,0|void|writeFileDescriptor|int
+$method=|void|writeFileDescriptor|int
 
 $prototype=QByteArray readData() const
-$method=5,10,0|QByteArray|readData|
+$method=|QByteArray|readData|
 
 $prototype=QVariant readVariant() const
-$method=5,10,0|QVariant|readVariant|
+$method=|QVariant|readVariant|
 
 $prototype=QAndroidBinder readBinder() const
-$method=5,10,0|QAndroidBinder|readBinder|
+$method=|QAndroidBinder|readBinder|
 
 $prototype=int readFileDescriptor() const
-$method=5,10,0|int|readFileDescriptor|
+$method=|int|readFileDescriptor|
 
 $prototype=QAndroidJniObject handle() const
-$method=5,10,0|QAndroidJniObject|handle|
+$method=|QAndroidJniObject|handle|
 
 $extraMethods
 

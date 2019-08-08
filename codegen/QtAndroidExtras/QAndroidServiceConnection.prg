@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,10,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=QAndroidServiceConnection()
-$internalConstructor=5,10,0|new1|
+$internalConstructor=|new1|
 
 $prototype=explicit QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
-$internalConstructor=5,10,0|new2|const QAndroidJniObject &
+$internalConstructor=|new2|const QAndroidJniObject &
 
 //[1]QAndroidServiceConnection()
 //[2]explicit QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
@@ -53,7 +54,7 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEW )
 }
 
 $prototype=virtual ~QAndroidServiceConnection()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=virtual void onServiceConnected(const QString &name, const QAndroidBinder &serviceBinder) = 0
 %% TODO: implementar
@@ -62,7 +63,7 @@ $prototype=virtual void onServiceDisconnected(const QString &name) = 0
 %% TODO: implementar
 
 $prototype=QAndroidJniObject handle() const
-$method=5,10,0|QAndroidJniObject|handle|
+$method=|QAndroidJniObject|handle|
 
 $extraMethods
 

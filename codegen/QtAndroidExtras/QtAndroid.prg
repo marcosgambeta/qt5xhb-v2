@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,3,0
 
 $header
 
@@ -23,19 +24,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 $prototype=static QAndroidJniObject androidActivity()
-$staticMethod=5,3,0|QAndroidJniObject|androidActivity|
+$staticMethod=|QAndroidJniObject|androidActivity|
 
 $prototype=static int androidSdkVersion()
-$staticMethod=5,3,0|int|androidSdkVersion|
+$staticMethod=|int|androidSdkVersion|
 
 $prototype=static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = nullptr)
-$staticMethod=5,3,0|void|startIntentSender|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=nullptr
+$staticMethod=|void|startIntentSender|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=nullptr
 
 $prototype=static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = nullptr)
-$staticMethod=5,3,0|void|startActivity|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=nullptr
+$staticMethod=|void|startActivity|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=nullptr
 
 $prototype=static QAndroidJniObject androidService()
 $staticMethod=5,7,0|QAndroidJniObject|androidService|

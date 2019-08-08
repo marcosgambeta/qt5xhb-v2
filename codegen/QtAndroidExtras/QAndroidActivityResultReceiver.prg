@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,3,0
 
 $header
 
@@ -23,15 +24,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 $prototype=QAndroidActivityResultReceiver()
 
 $prototype=virtual ~QAndroidActivityResultReceiver()
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
-$virtualMethod=5,3,0|void|handleActivityResult|int,int,const QAndroidJniObject &
+$virtualMethod=|void|handleActivityResult|int,int,const QAndroidJniObject &
 
 $extraMethods
 

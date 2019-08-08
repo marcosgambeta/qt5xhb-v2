@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,10,0
 
 $header
 
@@ -23,19 +24,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=QAndroidIntent()
-$internalConstructor=5,10,0|new1|
+$internalConstructor=|new1|
 
 $prototype=explicit QAndroidIntent(const QAndroidJniObject &intent)
-$internalConstructor=5,10,0|new2|const QAndroidJniObject &
+$internalConstructor=|new2|const QAndroidJniObject &
 
 $prototype=explicit QAndroidIntent(const QString &action)
-$internalConstructor=5,10,0|new3|const QString &
+$internalConstructor=|new3|const QString &
 
 $prototype=explicit QAndroidIntent(const QAndroidJniObject &packageContext, const char *className)
-$internalConstructor=5,10,0|new4|const QAndroidJniObject &,const char *
+$internalConstructor=|new4|const QAndroidJniObject &,const char *
 
 //[1]QAndroidIntent()
 //[2]explicit QAndroidIntent(const QAndroidJniObject &intent)
@@ -67,21 +68,21 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 }
 
 $prototype=virtual ~QAndroidIntent();
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=void putExtra(const QString &key, const QByteArray &data)
-$method=5,10,0|void|putExtra|const QString &,const QByteArray &
+$method=|void|putExtra|const QString &,const QByteArray &
 
 $prototype=QByteArray extraBytes(const QString &key)
-$method=5,10,0|QByteArray|extraBytes|const QString &
+$method=|QByteArray|extraBytes|const QString &
 
 $prototype=void putExtra(const QString &key, const QVariant &value)
-$method=5,10,0|void|putExtra|const QString &,const QVariant &
+$method=|void|putExtra|const QString &,const QVariant &
 
 $prototype=QVariant extraVariant(const QString &key)
-$method=5,10,0|QVariant|extraVariant|const QString &
+$method=|QVariant|extraVariant|const QString &
 
 $prototype=QAndroidJniObject handle() const
-$method=5,10,0|QAndroidJniObject|handle|
+$method=|QAndroidJniObject|handle|
 
 #pragma ENDDUMP

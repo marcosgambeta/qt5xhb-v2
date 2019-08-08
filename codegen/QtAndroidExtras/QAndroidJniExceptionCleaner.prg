@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,10,0
 
 $header
 
@@ -25,16 +26,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QAndroidJniExceptionCleaner(OutputMode outputMode = OutputMode::Silent)
-$constructor=5,10,0|new|QAndroidJniExceptionCleaner::OutputMode=QAndroidJniExceptionCleaner::Silent
+$constructor=|new|QAndroidJniExceptionCleaner::OutputMode=QAndroidJniExceptionCleaner::Silent
 
 $prototype=~QAndroidJniExceptionCleaner()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=void clean()
-$method=5,10,0|void|clean|
+$method=|void|clean|
 
 $extraMethods
 

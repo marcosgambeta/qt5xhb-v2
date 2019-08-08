@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,10,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QAndroidBinder()
-$internalConstructor=5,10,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QAndroidBinder(const QAndroidJniObject &binder)
-$internalConstructor=5,10,0|new2|const QAndroidJniObject &
+$internalConstructor=|new2|const QAndroidJniObject &
 
 //[1]explicit QAndroidBinder()
 //[2]QAndroidBinder(const QAndroidJniObject &binder)
@@ -51,15 +52,15 @@ HB_FUNC_STATIC( QANDROIDBINDER_NEW )
 }
 
 $prototype=virtual ~QAndroidBinder()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=virtual bool onTransact(int code, const QAndroidParcel &data, const QAndroidParcel &reply, CallType flags)
-$virtualMethod=5,10,0|bool|onTransact|int,const QAndroidParcel &,const QAndroidParcel &,QAndroidBinder::CallType
+$virtualMethod=|bool|onTransact|int,const QAndroidParcel &,const QAndroidParcel &,QAndroidBinder::CallType
 
 $prototype=bool transact(int code, const QAndroidParcel &data, QAndroidParcel *reply = nullptr, CallType flags = CallType::Normal) const
-$method=5,10,0|bool|transact|int,const QAndroidParcel &,QAndroidParcel *=nullptr,QAndroidBinder::CallType=CallType::Normal
+$method=|bool|transact|int,const QAndroidParcel &,QAndroidParcel *=nullptr,QAndroidBinder::CallType=CallType::Normal
 
 $prototype=QAndroidJniObject handle() const
-$method=5,10,0|QAndroidJniObject|handle|
+$method=|QAndroidJniObject|handle|
 
 #pragma ENDDUMP

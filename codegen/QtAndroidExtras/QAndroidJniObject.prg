@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,2,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QAndroidJniObject()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QAndroidJniObject(const char *className)
-$internalConstructor=5,2,0|new2|const char *
+$internalConstructor=|new2|const char *
 
 %% TODO: revisar e implementar(?) construtores
 //[1]QAndroidJniObject()
@@ -57,14 +58,14 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=T callMethod(const char *methodName) const
 
 $prototype=T callMethod(const char *methodName, const char *sig, ...) const
 
 $prototype=QAndroidJniObject callObjectMethod(const char *methodName) const
-$internalMethod=5,2,0|QAndroidJniObject|callObjectMethod,callObjectMethod1|const char *
+$internalMethod=|QAndroidJniObject|callObjectMethod,callObjectMethod1|const char *
 
 %% TODO: revisar e implementar(?) caso [2]
 //[1]QAndroidJniObject callObjectMethod(const char *methodName) const
@@ -86,7 +87,7 @@ $addMethod=callObjectMethod
 $prototype=T getField(const char *fieldName) const
 
 $prototype=QAndroidJniObject getObjectField(const char *fieldName) const
-$method=5,2,0|QAndroidJniObject|getObjectField,getObjectField1|const char *
+$method=|QAndroidJniObject|getObjectField,getObjectField1|const char *
 
 $prototype=QAndroidJniObject getObjectField(const char *fieldName, const char *signature) const
 $method=5,3,0|QAndroidJniObject|getObjectField,getObjectField2|const char *,const char *
@@ -112,10 +113,10 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 $addMethod=getObjectField
 
 $prototype=QString toString() const
-$method=5,2,0|QString|toString|
+$method=|QString|toString|
 
 $prototype=bool isValid() const
-$method=5,2,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=T object() const
 
@@ -132,7 +133,7 @@ $prototype=static T callStaticMethod(jclass clazz, const char *methodName)
 $prototype=static T callStaticMethod(jclass clazz, const char *methodName, const char *signature, ...)
 
 $prototype=static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName)
-$staticMethod=5,2,0|QAndroidJniObject|callStaticObjectMethod,callStaticObjectMethod1|const char *,const char *
+$staticMethod=|QAndroidJniObject|callStaticObjectMethod,callStaticObjectMethod1|const char *,const char *
 
 %% TODO: revisar e implementar(?) metodos
 //[1]static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName)
@@ -157,17 +158,17 @@ $prototype=static QAndroidJniObject fromLocalRef(int localRef)
 $staticMethod=5,7,0|QAndroidJniObject|fromLocalRef|int
 
 $prototype=static QAndroidJniObject fromString(const QString &string)
-$staticMethod=5,2,0|QAndroidJniObject|fromString|const QString &
+$staticMethod=|QAndroidJniObject|fromString|const QString &
 
 $prototype=static T getStaticField(const char *className, const char *fieldName)
 
 $prototype=static T getStaticField(jclass clazz, const char *fieldName)
 
 $prototype=static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName)
-$staticMethod=5,2,0|QAndroidJniObject|getStaticObjectField,getStaticObjectField1|const char *,const char *
+$staticMethod=|QAndroidJniObject|getStaticObjectField,getStaticObjectField1|const char *,const char *
 
 $prototype=static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName, const char *sig)
-$staticMethod=5,2,0|QAndroidJniObject|getStaticObjectField,getStaticObjectField2|const char *,const char *,const char *
+$staticMethod=|QAndroidJniObject|getStaticObjectField,getStaticObjectField2|const char *,const char *,const char *
 
 %% TODO: revisar e implementar(?) metodos [3] e [4]
 //[1]static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName)
@@ -193,7 +194,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD )
 $addMethod=getStaticObjectField
 
 $prototype=static bool isClassAvailable(const char *className)
-$staticMethod=5,2,0|bool|isClassAvailable|const char *
+$staticMethod=|bool|isClassAvailable|const char *
 
 $prototype=static void setStaticField(const char *className, const char *fieldName, const char *signature, T value)
 

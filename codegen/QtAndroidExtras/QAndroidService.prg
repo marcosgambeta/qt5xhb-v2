@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtAndroidExtras
+$added=5,10,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=QAndroidService(int &argc, char **argv)
 HB_FUNC_STATIC( QANDROIDSERVICE_NEW )
@@ -44,9 +45,9 @@ $prototype=QAndroidService(int &argc, char **argv, const std::function<QAndroidB
 %% TODO: implementar
 
 $prototype=virtual ~QAndroidService()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=virtual QAndroidBinder* onBind(const QAndroidIntent &intent)
-$virtualMethod=5,10,0|QAndroidBinder *|onBind|const QAndroidIntent &
+$virtualMethod=|QAndroidBinder *|onBind|const QAndroidIntent &
 
 #pragma ENDDUMP
