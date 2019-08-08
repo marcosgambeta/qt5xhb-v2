@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -25,21 +26,21 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = nullptr)
-$constructor=5,2,0|new|QBluetoothServiceInfo::Protocol,QObject *=nullptr
+$constructor=|new|QBluetoothServiceInfo::Protocol,QObject *=nullptr
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=void close()
-$method=5,2,0|void|close|
+$method=|void|close|
 
 $prototype=bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
-$internalMethod=5,2,0|bool|listen,listen1|const QBluetoothAddress &=QBluetoothAddress(),quint16=0
+$internalMethod=|bool|listen,listen1|const QBluetoothAddress &=QBluetoothAddress(),quint16=0
 
 $prototype=QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
-$internalMethod=5,2,0|QBluetoothServiceInfo|listen,listen2|const QBluetoothUuid &,const QString &=QString()
+$internalMethod=|QBluetoothServiceInfo|listen,listen2|const QBluetoothUuid &,const QString &=QString()
 
 //[1]bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
 //[2]QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
@@ -62,46 +63,46 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
 $addMethod=listen
 
 $prototype=bool isListening() const
-$method=5,2,0|bool|isListening|
+$method=|bool|isListening|
 
 $prototype=void setMaxPendingConnections(int numConnections)
-$method=5,2,0|void|setMaxPendingConnections|int
+$method=|void|setMaxPendingConnections|int
 
 $prototype=int maxPendingConnections() const
-$method=5,2,0|int|maxPendingConnections|
+$method=|int|maxPendingConnections|
 
 $prototype=bool hasPendingConnections() const
-$method=5,2,0|bool|hasPendingConnections|
+$method=|bool|hasPendingConnections|
 
 $prototype=QBluetoothSocket *nextPendingConnection()
-$method=5,2,0|QBluetoothSocket *|nextPendingConnection|
+$method=|QBluetoothSocket *|nextPendingConnection|
 
 $prototype=QBluetoothAddress serverAddress() const
-$method=5,2,0|QBluetoothAddress|serverAddress|
+$method=|QBluetoothAddress|serverAddress|
 
 $prototype=quint16 serverPort() const
-$method=5,2,0|quint16|serverPort|
+$method=|quint16|serverPort|
 
 $prototype=void setSecurityFlags(QBluetooth::SecurityFlags security)
-$method=5,2,0|void|setSecurityFlags|QBluetooth::SecurityFlags
+$method=|void|setSecurityFlags|QBluetooth::SecurityFlags
 
 $prototype=QBluetooth::SecurityFlags securityFlags() const
-$method=5,2,0|QBluetooth::SecurityFlags|securityFlags|
+$method=|QBluetooth::SecurityFlags|securityFlags|
 
 $prototype=QBluetoothServiceInfo::Protocol serverType() const
-$method=5,2,0|QBluetoothServiceInfo::Protocol|serverType|
+$method=|QBluetoothServiceInfo::Protocol|serverType|
 
 $prototype=Error error() const
-$method=5,2,0|QBluetoothServer::Error|error|
+$method=|QBluetoothServer::Error|error|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void newConnection()
-$signalMethod=5,2,0|void|newConnection|
+$signalMethod=|void|newConnection|
 
 $prototype=void error( QBluetoothServer::Error error )
-$signalMethod=5,2,0|void|error,error,QOverload<QBluetoothServer::Error>|QBluetoothServer::Error
+$signalMethod=|void|error,error,QOverload<QBluetoothServer::Error>|QBluetoothServer::Error
 
 #pragma ENDDUMP

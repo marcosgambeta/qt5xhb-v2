@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -23,19 +24,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QBluetoothAddress()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QBluetoothAddress(quint64 address)
-$internalConstructor=5,2,0|new2|quint64
+$internalConstructor=|new2|quint64
 
 $prototype=QBluetoothAddress(const QString &address)
-$internalConstructor=5,2,0|new3|const QString &
+$internalConstructor=|new3|const QString &
 
 $prototype=QBluetoothAddress(const QBluetoothAddress &other)
-$internalConstructor=5,2,0|new4|const QBluetoothAddress &
+$internalConstructor=|new4|const QBluetoothAddress &
 
 //[1]QBluetoothAddress()
 //[2]QBluetoothAddress(quint64 address)
@@ -66,19 +67,19 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=bool isNull() const
-$method=5,2,0|bool|isNull|
+$method=|bool|isNull|
 
 $prototype=void clear()
-$method=5,2,0|void|clear|
+$method=|void|clear|
 
 $prototype=quint64 toUInt64() const
-$method=5,2,0|quint64|toUInt64|
+$method=|quint64|toUInt64|
 
 $prototype=QString toString() const
-$method=5,2,0|QString|toString|
+$method=|QString|toString|
 
 $extraMethods
 

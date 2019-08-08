@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -25,39 +26,39 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=virtual bool isFinished() const = 0
-$virtualMethod=5,2,0|bool|isFinished|
+$virtualMethod=|bool|isFinished|
 
 $prototype=virtual bool isRunning() const = 0
-$virtualMethod=5,2,0|bool|isRunning|
+$virtualMethod=|bool|isRunning|
 
 $prototype=QBluetoothTransferManager *manager() const
-$method=5,2,0|QBluetoothTransferManager *|manager|
+$method=|QBluetoothTransferManager *|manager|
 
 $prototype=virtual TransferError error() const = 0
-$virtualMethod=5,2,0|QBluetoothTransferReply::TransferError|error|
+$virtualMethod=|QBluetoothTransferReply::TransferError|error|
 
 $prototype=virtual QString errorString() const = 0
-$virtualMethod=5,2,0|QString|errorString|
+$virtualMethod=|QString|errorString|
 
 $prototype=QBluetoothTransferRequest request() const
-$method=5,2,0|QBluetoothTransferRequest|request|
+$method=|QBluetoothTransferRequest|request|
 
 $prototype=void abort()
-$method=5,2,0|void|abort|
+$method=|void|abort|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void finished( QBluetoothTransferReply * r )
-$signalMethod=5,2,0|void|finished|QBluetoothTransferReply *
+$signalMethod=|void|finished|QBluetoothTransferReply *
 
 $prototype=void transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
-$signalMethod=5,2,0|void|transferProgress|qint64,qint64
+$signalMethod=|void|transferProgress|qint64,qint64
 
 #pragma ENDDUMP

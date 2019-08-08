@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QBluetoothDeviceDiscoveryAgent(QObject *parent = nullptr)
-$internalConstructor=5,2,0|new1|QObject *=nullptr
+$internalConstructor=|new1|QObject *=nullptr
 
 $prototype=QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
-$internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=nullptr
+$internalConstructor=|new2|const QBluetoothAddress &,QObject *=nullptr
 
 //[1]QBluetoothDeviceDiscoveryAgent(QObject *parent = nullptr)
 //[2]QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
@@ -52,49 +53,49 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
-$method=5,2,0|QBluetoothDeviceDiscoveryAgent::InquiryType|inquiryType|
+$method=|QBluetoothDeviceDiscoveryAgent::InquiryType|inquiryType|
 
 $prototype=void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
-$method=5,2,0|void|setInquiryType|QBluetoothDeviceDiscoveryAgent::InquiryType
+$method=|void|setInquiryType|QBluetoothDeviceDiscoveryAgent::InquiryType
 
 $prototype=bool isActive() const
-$method=5,2,0|bool|isActive|
+$method=|bool|isActive|
 
 $prototype=Error error() const
-$method=5,2,0|QBluetoothDeviceDiscoveryAgent::Error|error|
+$method=|QBluetoothDeviceDiscoveryAgent::Error|error|
 
 $prototype=QString errorString() const
-$method=5,2,0|QString|errorString|
+$method=|QString|errorString|
 
 $prototype=QList<QBluetoothDeviceInfo> discoveredDevices() const
-$method=5,2,0|QList<QBluetoothDeviceInfo>|discoveredDevices|
+$method=|QList<QBluetoothDeviceInfo>|discoveredDevices|
 
 $prototype=void start()
-$method=5,2,0|void|start|
+$method=|void|start|
 
 $prototype=void stop()
-$method=5,2,0|void|stop|
+$method=|void|stop|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void deviceDiscovered( const QBluetoothDeviceInfo & info )
-$signalMethod=5,2,0|void|deviceDiscovered|const QBluetoothDeviceInfo &
+$signalMethod=|void|deviceDiscovered|const QBluetoothDeviceInfo &
 
 $prototype=void finished()
-$signalMethod=5,2,0|void|finished|
+$signalMethod=|void|finished|
 
 $prototype=void error( QBluetoothDeviceDiscoveryAgent::Error error )
-$signalMethod=5,2,0|void|error,error,QOverload<QBluetoothDeviceDiscoveryAgent::Error>|QBluetoothDeviceDiscoveryAgent::Error
+$signalMethod=|void|error,error,QOverload<QBluetoothDeviceDiscoveryAgent::Error>|QBluetoothDeviceDiscoveryAgent::Error
 
 $prototype=void canceled()
-$signalMethod=5,2,0|void|canceled|
+$signalMethod=|void|canceled|
 
 $prototype=void deviceUpdated(const QBluetoothDeviceInfo &info, QBluetoothDeviceInfo::Fields updatedFields)
-$signalMethod=5,2,0|void|deviceUpdated|const QBluetoothDeviceInfo &,QBluetoothDeviceInfo::Fields|#ifdef Q_OS_ANDROID
+$signalMethod=|void|deviceUpdated|const QBluetoothDeviceInfo &,QBluetoothDeviceInfo::Fields|#ifdef Q_OS_ANDROID
 
 #pragma ENDDUMP

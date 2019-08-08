@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QBluetoothLocalDevice(QObject *parent = nullptr)
-$internalConstructor=5,2,0|new1|QObject *=nullptr
+$internalConstructor=|new1|QObject *=nullptr
 
 $prototype=QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
-$internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=nullptr
+$internalConstructor=|new2|const QBluetoothAddress &,QObject *=nullptr
 
 //[1]QBluetoothLocalDevice(QObject *parent = nullptr)
 //[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
@@ -52,55 +53,55 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=bool isValid() const
-$method=5,2,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=void requestPairing(const QBluetoothAddress &address, Pairing pairing)
-$method=5,2,0|void|requestPairing|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
+$method=|void|requestPairing|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
 
 $prototype=Pairing pairingStatus(const QBluetoothAddress &address) const
-$method=5,2,0|QBluetoothLocalDevice::Pairing|pairingStatus|const QBluetoothAddress &
+$method=|QBluetoothLocalDevice::Pairing|pairingStatus|const QBluetoothAddress &
 
 $prototype=void setHostMode(QBluetoothLocalDevice::HostMode mode)
-$method=5,2,0|void|setHostMode|QBluetoothLocalDevice::HostMode
+$method=|void|setHostMode|QBluetoothLocalDevice::HostMode
 
 $prototype=HostMode hostMode() const
-$method=5,2,0|QBluetoothLocalDevice::HostMode|hostMode|
+$method=|QBluetoothLocalDevice::HostMode|hostMode|
 
 $prototype=void powerOn()
-$method=5,2,0|void|powerOn|
+$method=|void|powerOn|
 
 $prototype=QString name() const
-$method=5,2,0|QString|name|
+$method=|QString|name|
 
 $prototype=QBluetoothAddress address() const
-$method=5,2,0|QBluetoothAddress|address|
+$method=|QBluetoothAddress|address|
 
 $prototype=void pairingConfirmation(bool confirmation)
-$method=5,2,0|void|pairingConfirmation|bool
+$method=|void|pairingConfirmation|bool
 
 $prototype=static QList<QBluetoothHostInfo> allDevices()
-$staticMethod=5,2,0|QList<QBluetoothHostInfo>|allDevices|
+$staticMethod=|QList<QBluetoothHostInfo>|allDevices|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void hostModeStateChanged( QBluetoothLocalDevice::HostMode state )
-$signalMethod=5,2,0|void|hostModeStateChanged|QBluetoothLocalDevice::HostMode
+$signalMethod=|void|hostModeStateChanged|QBluetoothLocalDevice::HostMode
 
 $prototype=void pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
-$signalMethod=5,2,0|void|pairingFinished|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
+$signalMethod=|void|pairingFinished|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
 
 $prototype=void pairingDisplayPinCode( const QBluetoothAddress & address, QString pin )
-$signalMethod=5,2,0|void|pairingDisplayPinCode|const QBluetoothAddress &,QString
+$signalMethod=|void|pairingDisplayPinCode|const QBluetoothAddress &,QString
 
 $prototype=void pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
-$signalMethod=5,2,0|void|pairingDisplayConfirmation|const QBluetoothAddress &,QString
+$signalMethod=|void|pairingDisplayConfirmation|const QBluetoothAddress &,QString
 
 $prototype=void error( QBluetoothLocalDevice::Error error )
-$signalMethod=5,2,0|void|error|QBluetoothLocalDevice::Error
+$signalMethod=|void|error|QBluetoothLocalDevice::Error
 
 #pragma ENDDUMP

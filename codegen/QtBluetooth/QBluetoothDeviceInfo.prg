@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -23,7 +24,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtBluetooth/QBluetoothAddress>
 #include <QtBluetooth/QBluetoothUuid>
@@ -31,16 +32,16 @@ $includes=5,2,0
 %% void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
 
 $prototype=QBluetoothDeviceInfo()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-$internalConstructor=5,2,0|new2|const QBluetoothAddress &,const QString &,quint32
+$internalConstructor=|new2|const QBluetoothAddress &,const QString &,quint32
 
 $prototype=QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
 $internalConstructor=5,5,0|new3|const QBluetoothUuid &,const QString &,quint32
 
 $prototype=QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
-$internalConstructor=5,2,0|new4|const QBluetoothDeviceInfo &
+$internalConstructor=|new4|const QBluetoothDeviceInfo &
 
 //[1]QBluetoothDeviceInfo()
 //[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
@@ -73,41 +74,41 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=bool isValid() const
-$method=5,2,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=bool isCached() const
-$method=5,2,0|bool|isCached|
+$method=|bool|isCached|
 
 $prototype=void setCached(bool cached)
-$method=5,2,0|void|setCached|bool
+$method=|void|setCached|bool
 
 $prototype=QBluetoothAddress address() const
-$method=5,2,0|QBluetoothAddress|address|
+$method=|QBluetoothAddress|address|
 
 $prototype=QString name() const
-$method=5,2,0|QString|name|
+$method=|QString|name|
 
 $prototype=ServiceClasses serviceClasses() const
-$method=5,2,0|QBluetoothDeviceInfo::ServiceClasses|serviceClasses|
+$method=|QBluetoothDeviceInfo::ServiceClasses|serviceClasses|
 
 $prototype=MajorDeviceClass majorDeviceClass() const
-$method=5,2,0|QBluetoothDeviceInfo::MajorDeviceClass|majorDeviceClass|
+$method=|QBluetoothDeviceInfo::MajorDeviceClass|majorDeviceClass|
 
 $prototype=quint8 minorDeviceClass() const
-$method=5,2,0|quint8|minorDeviceClass|
+$method=|quint8|minorDeviceClass|
 
 $prototype=qint16 rssi() const
-$method=5,2,0|qint16|rssi|
+$method=|qint16|rssi|
 
 $prototype=void setRssi(qint16 signal)
-$method=5,2,0|void|setRssi|qint16
+$method=|void|setRssi|qint16
 
 $prototype=void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
 %% TODO: ausente na documentacao - verificar
-$internalMethod=5,2,0|void|setServiceUuids,setServiceUuids1|const QList<QBluetoothUuid> &,QBluetoothDeviceInfo::DataCompleteness
+$internalMethod=|void|setServiceUuids,setServiceUuids1|const QList<QBluetoothUuid> &,QBluetoothDeviceInfo::DataCompleteness
 
 $prototype=void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
 $internalMethod=5,13,0|void|setServiceUuids,setServiceUuids2|const QVector<QBluetoothUuid> &
@@ -133,10 +134,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
 
 $prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = nullptr) const
 %% TODO: implementar
-%% $method=5,2,0|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=nullptr
+%% $method=|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=nullptr
 
 $prototype=DataCompleteness serviceUuidsCompleteness() const
-$method=5,2,0|QBluetoothDeviceInfo::DataCompleteness|serviceUuidsCompleteness|
+$method=|QBluetoothDeviceInfo::DataCompleteness|serviceUuidsCompleteness|
 
 $prototype=QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const
 $method=5,4,0|QBluetoothDeviceInfo::CoreConfigurations|coreConfigurations|

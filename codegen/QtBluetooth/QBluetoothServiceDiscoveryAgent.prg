@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QBluetoothServiceDiscoveryAgent(QObject *parent = nullptr)
-$internalConstructor=5,2,0|new1|QObject *=nullptr
+$internalConstructor=|new1|QObject *=nullptr
 
 $prototype=QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
-$internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=nullptr
+$internalConstructor=|new2|const QBluetoothAddress &,QObject *=nullptr
 
 //[1]QBluetoothServiceDiscoveryAgent(QObject *parent = nullptr)
 //[2]QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
@@ -52,25 +53,25 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=bool isActive() const
-$method=5,2,0|bool|isActive|
+$method=|bool|isActive|
 
 $prototype=Error error() const
-$method=5,2,0|QBluetoothDeviceDiscoveryAgent::Error|error|
+$method=|QBluetoothDeviceDiscoveryAgent::Error|error|
 
 $prototype=QString errorString() const
-$method=5,2,0|QString|errorString|
+$method=|QString|errorString|
 
 $prototype=QList<QBluetoothServiceInfo> discoveredServices() const
-$method=5,2,0|QList<QBluetoothServiceInfo>|discoveredServices|
+$method=|QList<QBluetoothServiceInfo>|discoveredServices|
 
 $prototype=void setUuidFilter(const QList<QBluetoothUuid> &uuids)
-$internalMethod=5,2,0|void|setUuidFilter,setUuidFilter1|const QList<QBluetoothUuid> &
+$internalMethod=|void|setUuidFilter,setUuidFilter1|const QList<QBluetoothUuid> &
 
 $prototype=void setUuidFilter(const QBluetoothUuid &uuid)
-$internalMethod=5,2,0|void|setUuidFilter,setUuidFilter2|const QBluetoothUuid &
+$internalMethod=|void|setUuidFilter,setUuidFilter2|const QBluetoothUuid &
 
 //[1]void setUuidFilter(const QList<QBluetoothUuid> &uuids)
 //[2]void setUuidFilter(const QBluetoothUuid &uuid)
@@ -93,37 +94,37 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER )
 $addMethod=setUuidFilter
 
 $prototype=QList<QBluetoothUuid> uuidFilter() const
-$method=5,2,0|QList<QBluetoothUuid>|uuidFilter|
+$method=|QList<QBluetoothUuid>|uuidFilter|
 
 $prototype=bool setRemoteAddress(const QBluetoothAddress &address)
-$method=5,2,0|bool|setRemoteAddress|const QBluetoothAddress &
+$method=|bool|setRemoteAddress|const QBluetoothAddress &
 
 $prototype=QBluetoothAddress remoteAddress() const
-$method=5,2,0|QBluetoothAddress|remoteAddress|
+$method=|QBluetoothAddress|remoteAddress|
 
 $prototype=void start(DiscoveryMode mode = MinimalDiscovery)
-$method=5,2,0|void|start|QBluetoothServiceDiscoveryAgent::DiscoveryMode=QBluetoothServiceDiscoveryAgent::MinimalDiscovery
+$method=|void|start|QBluetoothServiceDiscoveryAgent::DiscoveryMode=QBluetoothServiceDiscoveryAgent::MinimalDiscovery
 
 $prototype=void stop()
-$method=5,2,0|void|stop|
+$method=|void|stop|
 
 $prototype=void clear()
-$method=5,2,0|void|clear|
+$method=|void|clear|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void serviceDiscovered( const QBluetoothServiceInfo & info )
-$signalMethod=5,2,0|void|serviceDiscovered|const QBluetoothServiceInfo &
+$signalMethod=|void|serviceDiscovered|const QBluetoothServiceInfo &
 
 $prototype=void finished()
-$signalMethod=5,2,0|void|finished|
+$signalMethod=|void|finished|
 
 $prototype=void canceled()
-$signalMethod=5,2,0|void|canceled|
+$signalMethod=|void|canceled|
 
 $prototype=void error( QBluetoothServiceDiscoveryAgent::Error error )
-$signalMethod=5,2,0|void|error,error,QOverload<QBluetoothServiceDiscoveryAgent::Error>|QBluetoothServiceDiscoveryAgent::Error
+$signalMethod=|void|error,error,QOverload<QBluetoothServiceDiscoveryAgent::Error>|QBluetoothServiceDiscoveryAgent::Error
 
 #pragma ENDDUMP

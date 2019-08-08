@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -25,23 +26,23 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtBluetooth/QBluetoothTransferReply>
 
 $prototype=QBluetoothTransferManager(QObject *parent = nullptr)
-$constructor=5,2,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data)
-$method=5,2,0|QBluetoothTransferReply *|put|const QBluetoothTransferRequest &,QIODevice *
+$method=|QBluetoothTransferReply *|put|const QBluetoothTransferRequest &,QIODevice *
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void finished( QBluetoothTransferReply * reply )
-$signalMethod=5,2,0|void|finished|QBluetoothTransferReply *
+$signalMethod=|void|finished|QBluetoothTransferReply *
 
 #pragma ENDDUMP

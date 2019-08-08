@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -23,35 +24,35 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QBluetoothUuid()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QBluetoothUuid(ProtocolUuid uuid)
-$constructor=5,2,0|new2|QBluetoothUuid::ProtocolUuid
+$constructor=|new2|QBluetoothUuid::ProtocolUuid
 
 $prototype=QBluetoothUuid(ServiceClassUuid uuid)
-$constructor=5,2,0|new3|QBluetoothUuid::ServiceClassUuid
+$constructor=|new3|QBluetoothUuid::ServiceClassUuid
 
 $prototype=QBluetoothUuid(quint16 uuid)
-$constructor=5,2,0|new4|quint16
+$constructor=|new4|quint16
 
 $prototype=QBluetoothUuid(quint32 uuid)
-$constructor=5,2,0|new5|quint32
+$constructor=|new5|quint32
 
 $prototype=QBluetoothUuid(quint128 uuid)
 %% TODO: implementar
-%% $constructor=5,2,0|new6|quint128
+%% $constructor=|new6|quint128
 
 $prototype=QBluetoothUuid(const QString &uuid)
-$internalConstructor=5,2,0|new7|const QString &
+$internalConstructor=|new7|const QString &
 
 $prototype=QBluetoothUuid(const QBluetoothUuid &uuid)
-$internalConstructor=5,2,0|new8|const QBluetoothUuid &
+$internalConstructor=|new8|const QBluetoothUuid &
 
 $prototype=QBluetoothUuid(const QUuid &uuid)
-$internalConstructor=5,2,0|new9|const QUuid &
+$internalConstructor=|new9|const QUuid &
 
 //[1]QBluetoothUuid()
 //[2]QBluetoothUuid(ProtocolUuid uuid)
@@ -107,18 +108,18 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=int minimumSize() const
-$method=5,2,0|int|minimumSize|
+$method=|int|minimumSize|
 
 $prototype=quint16 toUInt16(bool *ok = nullptr) const
 %% TODO: revisar e implementar parametro opcional
-$method=5,2,0|quint16|toUInt16|bool *=nullptr
+$method=|quint16|toUInt16|bool *=nullptr
 
 $prototype=quint32 toUInt32(bool *ok = nullptr) const
 %% TODO: revisar e implementar parametro opcional
-$method=5,2,0|quint32|toUInt32|bool *=nullptr
+$method=|quint32|toUInt32|bool *=nullptr
 
 %% /*
 %%   convert QList<QBluetoothUuid> to array

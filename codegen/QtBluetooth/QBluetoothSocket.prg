@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtBluetooth
+$added=5,2,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = nullptr)
-$internalConstructor=5,2,0|new1|QBluetoothServiceInfo::Protocol,QObject *=nullptr
+$internalConstructor=|new1|QBluetoothServiceInfo::Protocol,QObject *=nullptr
 
 $prototype=QBluetoothSocket(QObject *parent = nullptr)
-$internalConstructor=5,2,0|new2|QObject *=nullptr
+$internalConstructor=|new2|QObject *=nullptr
 
 //[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = nullptr)
 //[2]QBluetoothSocket(QObject *parent = nullptr)
@@ -52,34 +53,34 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=void abort()
-$method=5,2,0|void|abort|
+$method=|void|abort|
 
 $prototype=virtual void close()
-$virtualMethod=5,2,0|void|close|
+$virtualMethod=|void|close|
 
 $prototype=bool isSequential() const
-$method=5,2,0|bool|isSequential|
+$method=|bool|isSequential|
 
 $prototype=virtual qint64 bytesAvailable() const
-$virtualMethod=5,2,0|qint64|bytesAvailable|
+$virtualMethod=|qint64|bytesAvailable|
 
 $prototype=virtual qint64 bytesToWrite() const
-$virtualMethod=5,2,0|qint64|bytesToWrite|
+$virtualMethod=|qint64|bytesToWrite|
 
 $prototype=virtual bool canReadLine() const
-$virtualMethod=5,2,0|bool|canReadLine|
+$virtualMethod=|bool|canReadLine|
 
 $prototype=void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
-$internalMethod=5,2,0|void|connectToService,connectToService1|const QBluetoothServiceInfo &,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=|void|connectToService,connectToService1|const QBluetoothServiceInfo &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
-$internalMethod=5,2,0|void|connectToService,connectToService2|const QBluetoothAddress &,const QBluetoothUuid &,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=|void|connectToService,connectToService2|const QBluetoothAddress &,const QBluetoothUuid &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
-$internalMethod=5,2,0|void|connectToService,connectToService3|const QBluetoothAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=|void|connectToService,connectToService3|const QBluetoothAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
 //[2]void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
@@ -107,58 +108,58 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 $addMethod=connectToService
 
 $prototype=void disconnectFromService()
-$method=5,2,0|void|disconnectFromService|
+$method=|void|disconnectFromService|
 
 $prototype=QString localName() const
-$method=5,2,0|QString|localName|
+$method=|QString|localName|
 
 $prototype=QBluetoothAddress localAddress() const
-$method=5,2,0|QBluetoothAddress|localAddress|
+$method=|QBluetoothAddress|localAddress|
 
 $prototype=quint16 localPort() const
-$method=5,2,0|quint16|localPort|
+$method=|quint16|localPort|
 
 $prototype=QString peerName() const
-$method=5,2,0|QString|peerName|
+$method=|QString|peerName|
 
 $prototype=QBluetoothAddress peerAddress() const
-$method=5,2,0|QBluetoothAddress|peerAddress|
+$method=|QBluetoothAddress|peerAddress|
 
 $prototype=quint16 peerPort() const
-$method=5,2,0|quint16|peerPort|
+$method=|quint16|peerPort|
 
 $prototype=bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol socketType,SocketState socketState = ConnectedState,OpenMode openMode = ReadWrite)
-$method=5,2,0|bool|setSocketDescriptor|int,QBluetoothServiceInfo::Protocol,QBluetoothSocket::SocketState=QBluetoothSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
+$method=|bool|setSocketDescriptor|int,QBluetoothServiceInfo::Protocol,QBluetoothSocket::SocketState=QBluetoothSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=int socketDescriptor() const
-$method=5,2,0|int|socketDescriptor|
+$method=|int|socketDescriptor|
 
 $prototype=QBluetoothServiceInfo::Protocol socketType() const
-$method=5,2,0|QBluetoothServiceInfo::Protocol|socketType|
+$method=|QBluetoothServiceInfo::Protocol|socketType|
 
 $prototype=SocketState state() const
-$method=5,2,0|QBluetoothSocket::SocketState|state|
+$method=|QBluetoothSocket::SocketState|state|
 
 $prototype=SocketError error() const
-$method=5,2,0|QBluetoothSocket::SocketError|error|
+$method=|QBluetoothSocket::SocketError|error|
 
 $prototype=QString errorString() const
-$method=5,2,0|QString|errorString|
+$method=|QString|errorString|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void connected()
-$signalMethod=5,2,0|void|connected|
+$signalMethod=|void|connected|
 
 $prototype=void disconnected()
-$signalMethod=5,2,0|void|disconnected|
+$signalMethod=|void|disconnected|
 
 $prototype=void error( QBluetoothSocket::SocketError error )
-$signalMethod=5,2,0|void|error,error,QOverload<QBluetoothSocket::SocketError>|QBluetoothSocket::SocketError
+$signalMethod=|void|error,error,QOverload<QBluetoothSocket::SocketError>|QBluetoothSocket::SocketError
 
 $prototype=void stateChanged( QBluetoothSocket::SocketState state )
-$signalMethod=5,2,0|void|stateChanged|QBluetoothSocket::SocketState
+$signalMethod=|void|stateChanged|QBluetoothSocket::SocketState
 
 #pragma ENDDUMP
