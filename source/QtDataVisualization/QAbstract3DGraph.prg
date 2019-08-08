@@ -115,7 +115,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QAbstract3DGraph>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -124,7 +126,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QAbstract3DGraph>
+#endif
 #endif
 
 #include <QtDataVisualization/QAbstract3DAxis>
@@ -141,6 +145,7 @@ virtual ~QAbstract3DGraph()
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -154,6 +159,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -161,6 +167,7 @@ QAbstract3DInputHandler *activeInputHandler() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -179,6 +186,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -186,6 +194,7 @@ void setActiveInputHandler(QAbstract3DInputHandler *inputHandler)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -205,6 +214,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -212,6 +222,7 @@ Q3DTheme *activeTheme() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVETHEME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -230,6 +241,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVETHEME )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -237,6 +249,7 @@ void setActiveTheme(Q3DTheme *theme)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVETHEME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -256,6 +269,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVETHEME )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -263,6 +277,7 @@ SelectionFlags selectionMode() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTIONMODE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -280,6 +295,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTIONMODE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -287,6 +303,7 @@ void setSelectionMode(SelectionFlags mode)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSELECTIONMODE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -306,6 +323,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSELECTIONMODE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -313,6 +331,7 @@ ShadowQuality shadowQuality() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWQUALITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -330,6 +349,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWQUALITY )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -337,6 +357,7 @@ void setShadowQuality(ShadowQuality quality)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSHADOWQUALITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -356,6 +377,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSHADOWQUALITY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -363,6 +385,7 @@ Q3DScene *scene() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SCENE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -381,6 +404,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SCENE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -388,6 +412,7 @@ bool measureFps() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_MEASUREFPS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -405,6 +430,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_MEASUREFPS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -412,6 +438,7 @@ void setMeasureFps(bool enable)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMEASUREFPS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -431,6 +458,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMEASUREFPS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -438,6 +466,7 @@ qreal currentFps() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_CURRENTFPS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -455,6 +484,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CURRENTFPS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -462,6 +492,7 @@ bool isOrthoProjection() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISORTHOPROJECTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -479,6 +510,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISORTHOPROJECTION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -486,6 +518,7 @@ void setOrthoProjection(bool enable)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETORTHOPROJECTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -505,6 +538,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETORTHOPROJECTION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -512,6 +546,7 @@ ElementType selectedElement() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDELEMENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -529,6 +564,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDELEMENT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -536,6 +572,7 @@ qreal aspectRatio() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ASPECTRATIO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -553,6 +590,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ASPECTRATIO )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -560,6 +598,7 @@ void setAspectRatio(qreal ratio)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETASPECTRATIO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -579,6 +618,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETASPECTRATIO )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -586,6 +626,7 @@ OptimizationHints optimizationHints() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_OPTIMIZATIONHINTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -603,6 +644,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_OPTIMIZATIONHINTS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -610,6 +652,7 @@ void setOptimizationHints(OptimizationHints hints)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -629,6 +672,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -636,6 +680,7 @@ bool isPolar() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISPOLAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -653,6 +698,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISPOLAR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -660,6 +706,7 @@ void setPolar(bool enable)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETPOLAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -679,6 +726,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETPOLAR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -686,6 +734,7 @@ float radialLabelOffset() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RADIALLABELOFFSET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -703,6 +752,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RADIALLABELOFFSET )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -710,6 +760,7 @@ void setRadialLabelOffset(float offset)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETRADIALLABELOFFSET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -729,6 +780,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETRADIALLABELOFFSET )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -736,6 +788,7 @@ qreal horizontalAspectRatio() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -753,6 +806,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -760,6 +814,7 @@ void setHorizontalAspectRatio(qreal ratio)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -779,6 +834,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -786,6 +842,7 @@ bool isReflection() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISREFLECTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -803,6 +860,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISREFLECTION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -810,6 +868,7 @@ void setReflection(bool enable)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -829,6 +888,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -836,6 +896,7 @@ qreal reflectivity() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_REFLECTIVITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -853,6 +914,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REFLECTIVITY )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -860,6 +922,7 @@ void setReflectivity(qreal reflectivity)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTIVITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -879,6 +942,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTIVITY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -886,6 +950,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_LOCALE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -904,6 +969,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_LOCALE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -911,6 +977,7 @@ void setLocale(const QLocale &locale)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETLOCALE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -930,6 +997,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETLOCALE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -937,6 +1005,7 @@ QVector3D queriedGraphPosition() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -955,6 +1024,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -962,6 +1032,7 @@ qreal margin() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_MARGIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -979,6 +1050,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_MARGIN )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -986,6 +1058,7 @@ void setMargin(qreal margin)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMARGIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1005,6 +1078,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMARGIN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1012,6 +1086,7 @@ void addInputHandler(QAbstract3DInputHandler *inputHandler)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDINPUTHANDLER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1031,6 +1106,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDINPUTHANDLER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1038,6 +1114,7 @@ void releaseInputHandler(QAbstract3DInputHandler *inputHandler)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASEINPUTHANDLER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1057,6 +1134,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASEINPUTHANDLER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1064,6 +1142,7 @@ QList<QAbstract3DInputHandler *> inputHandlers() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1106,6 +1185,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1113,6 +1193,7 @@ void addTheme(Q3DTheme *theme)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDTHEME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1132,6 +1213,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDTHEME )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1139,6 +1221,7 @@ void releaseTheme(Q3DTheme *theme)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASETHEME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1158,6 +1241,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASETHEME )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1165,6 +1249,7 @@ QList<Q3DTheme *> themes() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1207,6 +1292,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1214,6 +1300,7 @@ virtual bool shadowsSupported() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWSSUPPORTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1231,6 +1318,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWSSUPPORTED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1238,6 +1326,7 @@ void clearSelection()
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_CLEARSELECTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1257,6 +1346,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CLEARSELECTION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1264,6 +1354,7 @@ int addCustomItem(QCustom3DItem *item)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDCUSTOMITEM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1281,6 +1372,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDCUSTOMITEM )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1288,6 +1380,7 @@ void removeCustomItems()
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1307,6 +1400,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1314,6 +1408,7 @@ void removeCustomItem(QCustom3DItem *item)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1333,6 +1428,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1340,6 +1436,7 @@ void removeCustomItemAt(const QVector3D &position)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1359,6 +1456,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1366,6 +1464,7 @@ void releaseCustomItem(QCustom3DItem *item)
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASECUSTOMITEM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1385,6 +1484,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASECUSTOMITEM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1392,6 +1492,7 @@ QList<QCustom3DItem *> customItems() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1434,6 +1535,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1441,6 +1543,7 @@ QAbstract3DAxis *selectedAxis() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDAXIS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1459,6 +1562,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDAXIS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1466,6 +1570,7 @@ int selectedLabelIndex() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDLABELINDEX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1483,6 +1588,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDLABELINDEX )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1490,6 +1596,7 @@ int selectedCustomItemIndex() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1507,6 +1614,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1514,6 +1622,7 @@ QCustom3DItem *selectedCustomItem() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1532,6 +1641,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1539,6 +1649,7 @@ QImage renderToImage(int msaaSamples = 0, const QSize &imageSize = QSize())
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RENDERTOIMAGE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1557,6 +1668,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RENDERTOIMAGE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1564,6 +1676,7 @@ bool hasContext() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_HASCONTEXT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1581,6 +1694,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_HASCONTEXT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1619,13 +1733,12 @@ void mouseMoveEvent(QMouseEvent *event) [protected]
 void wheelEvent(QWheelEvent *event) [protected]
 */
 
-using namespace QtDataVisualization;
-
 /*
 void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1680,6 +1793,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1687,6 +1801,7 @@ void activeThemeChanged( Q3DTheme * theme )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1741,6 +1856,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1748,6 +1864,7 @@ void aspectRatioChanged( qreal ratio )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1802,6 +1919,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1809,6 +1927,7 @@ void currentFpsChanged( qreal fps )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1863,6 +1982,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1870,6 +1990,7 @@ void horizontalAspectRatioChanged( qreal ratio )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1924,6 +2045,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1931,6 +2053,7 @@ void localeChanged( const QLocale & locale )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1985,6 +2108,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1992,6 +2116,7 @@ void marginChanged( qreal margin )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2046,6 +2171,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2053,6 +2179,7 @@ void measureFpsChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2107,6 +2234,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2114,6 +2242,7 @@ void optimizationHintsChanged( QAbstract3DGraph::OptimizationHints hints )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2168,6 +2297,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2175,6 +2305,7 @@ void orthoProjectionChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2229,6 +2360,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2236,6 +2368,7 @@ void polarChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2290,6 +2423,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2297,6 +2431,7 @@ void queriedGraphPositionChanged( const QVector3D & data )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2351,6 +2486,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2358,6 +2494,7 @@ void radialLabelOffsetChanged( float offset )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2412,6 +2549,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2419,6 +2557,7 @@ void reflectionChanged( bool enabled )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2473,6 +2612,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2480,6 +2620,7 @@ void reflectivityChanged( qreal reflectivity )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2534,6 +2675,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2541,6 +2683,7 @@ void selectedElementChanged( QAbstract3DGraph::ElementType type )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2595,6 +2738,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2602,6 +2746,7 @@ void selectionModeChanged( QAbstract3DGraph::SelectionFlags mode )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2656,6 +2801,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2663,6 +2809,7 @@ void shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DGraph * sender = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2717,6 +2864,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

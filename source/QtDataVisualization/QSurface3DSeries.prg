@@ -60,7 +60,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QSurface3DSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -69,7 +71,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QSurface3DSeries>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -79,8 +83,10 @@ explicit QSurface3DSeries(QObject *parent = nullptr)
 */
 void QSurface3DSeries_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * o = new QSurface3DSeries ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -88,8 +94,10 @@ explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = nullpt
 */
 void QSurface3DSeries_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * o = new QSurface3DSeries ( PQSURFACEDATAPROXY(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -120,6 +128,7 @@ virtual ~QSurface3DSeries()
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -133,6 +142,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -140,6 +150,7 @@ QSurfaceDataProxy *dataProxy() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -158,6 +169,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -165,6 +177,7 @@ void setDataProxy(QSurfaceDataProxy *proxy)
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETDATAPROXY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -184,6 +197,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDATAPROXY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -191,6 +205,7 @@ QPoint selectedPoint() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -209,6 +224,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -216,6 +232,7 @@ void setSelectedPoint(const QPoint &position)
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -235,6 +252,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -242,6 +260,7 @@ bool isFlatShadingEnabled() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -259,6 +278,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -266,6 +286,7 @@ void setFlatShadingEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -285,6 +306,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -292,6 +314,7 @@ bool isFlatShadingSupported() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -309,6 +332,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -316,6 +340,7 @@ QSurface3DSeries::DrawFlags drawMode() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_DRAWMODE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -333,6 +358,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DRAWMODE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -340,6 +366,7 @@ void setDrawMode(DrawFlags mode)
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -359,6 +386,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -366,6 +394,7 @@ QImage texture() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -384,6 +413,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -391,6 +421,7 @@ void setTexture(const QImage &texture)
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -410,6 +441,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -417,6 +449,7 @@ QString textureFile() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTUREFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -434,6 +467,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTUREFILE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -441,6 +475,7 @@ void setTextureFile(const QString &filename)
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -460,6 +495,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -467,6 +503,7 @@ static QPoint invalidSelectionPosition()
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_INVALIDSELECTIONPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
@@ -480,15 +517,15 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_INVALIDSELECTIONPOSITION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void dataProxyChanged( QSurfaceDataProxy * proxy )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -543,6 +580,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -550,6 +588,7 @@ void drawModeChanged( QSurface3DSeries::DrawFlags mode )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -604,6 +643,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -611,6 +651,7 @@ void flatShadingEnabledChanged( bool enable )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -665,6 +706,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -672,6 +714,7 @@ void flatShadingSupportedChanged( bool enable )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -726,6 +769,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -733,6 +777,7 @@ void selectedPointChanged( const QPoint & position )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -787,6 +832,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -794,6 +840,7 @@ void textureChanged( const QImage & image )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -848,6 +895,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -855,6 +903,7 @@ void textureFileChanged( const QString & filename )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QSurface3DSeries * sender = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -909,6 +958,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

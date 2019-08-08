@@ -56,7 +56,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QScatterDataItem>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -65,7 +67,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QScatterDataItem>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -75,8 +79,10 @@ QScatterDataItem()
 */
 void QScatterDataItem_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * o = new QScatterDataItem ();
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -84,8 +90,10 @@ QScatterDataItem(const QVector3D &position)
 */
 void QScatterDataItem_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * o = new QScatterDataItem ( *PQVECTOR3D(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -93,8 +101,10 @@ QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
 */
 void QScatterDataItem_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * o = new QScatterDataItem ( *PQVECTOR3D(1), *PQQUATERNION(2) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -102,8 +112,10 @@ QScatterDataItem(const QScatterDataItem &other)
 */
 void QScatterDataItem_new4 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * o = new QScatterDataItem ( *PQSCATTERDATAITEM(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 //[1]QScatterDataItem()
@@ -140,6 +152,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -153,6 +166,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -160,6 +174,7 @@ void setPosition(const QVector3D &pos)
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -179,6 +194,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -186,6 +202,7 @@ QVector3D position() const
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_POSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -204,6 +221,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_POSITION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -211,6 +229,7 @@ void setRotation(const QQuaternion &rot)
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -230,6 +249,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -237,6 +257,7 @@ QQuaternion rotation() const
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_ROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -255,6 +276,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_ROTATION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -262,6 +284,7 @@ void setX(float value)
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -281,6 +304,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -288,6 +312,7 @@ void setY(float value)
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -307,6 +332,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -314,6 +340,7 @@ void setZ(float value)
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETZ )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -333,6 +360,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETZ )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -340,6 +368,7 @@ float x() const
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_X )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -357,6 +386,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_X )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -364,6 +394,7 @@ float y() const
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_Y )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -381,6 +412,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_Y )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -388,6 +420,7 @@ float z() const
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_Z )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -405,6 +438,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_Z )
     }
 #endif
   }
+#endif
 }
 
 /*

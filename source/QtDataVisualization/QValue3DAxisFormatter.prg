@@ -35,7 +35,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QValue3DAxisFormatter>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -44,7 +46,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QValue3DAxisFormatter>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -54,6 +58,7 @@ explicit QValue3DAxisFormatter(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QValue3DAxisFormatter * o = new QValue3DAxisFormatter ( OPQOBJECT(1,nullptr) );
@@ -63,6 +68,7 @@ HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -74,6 +80,7 @@ virtual ~QValue3DAxisFormatter()
 */
 HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxisFormatter * obj = (QValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -87,6 +94,7 @@ HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*

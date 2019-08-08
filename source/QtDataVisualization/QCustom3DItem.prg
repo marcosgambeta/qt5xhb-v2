@@ -67,7 +67,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCustom3DItem>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -76,7 +78,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCustom3DItem>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -86,8 +90,10 @@ explicit QCustom3DItem(QObject *parent = nullptr)
 */
 void QCustom3DItem_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * o = new QCustom3DItem ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -95,8 +101,10 @@ explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const
 */
 void QCustom3DItem_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * o = new QCustom3DItem ( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -127,6 +135,7 @@ virtual ~QCustom3DItem()
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -140,6 +149,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -147,6 +157,7 @@ QString meshFile() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_MESHFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -164,6 +175,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_MESHFILE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -171,6 +183,7 @@ void setMeshFile(const QString &meshFile)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETMESHFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -190,6 +203,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETMESHFILE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -197,6 +211,7 @@ QString textureFile() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_TEXTUREFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -214,6 +229,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_TEXTUREFILE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -221,6 +237,7 @@ void setTextureFile(const QString &textureFile)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -240,6 +257,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREFILE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -247,6 +265,7 @@ QVector3D position() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_POSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -265,6 +284,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_POSITION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -272,6 +292,7 @@ void setPosition(const QVector3D &position)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -291,6 +312,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -298,6 +320,7 @@ bool isPositionAbsolute() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISPOSITIONABSOLUTE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -315,6 +338,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISPOSITIONABSOLUTE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -322,6 +346,7 @@ void setPositionAbsolute(bool positionAbsolute)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITIONABSOLUTE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -341,6 +366,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITIONABSOLUTE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -348,6 +374,7 @@ QVector3D scaling() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SCALING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -366,6 +393,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SCALING )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -373,6 +401,7 @@ void setScaling(const QVector3D &scaling)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -392,6 +421,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALING )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -399,6 +429,7 @@ QQuaternion rotation()
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -417,6 +448,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ROTATION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -424,6 +456,7 @@ void setRotation(const QQuaternion &rotation)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -443,6 +476,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -450,6 +484,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -467,6 +502,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISVISIBLE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -474,6 +510,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -493,6 +530,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -500,6 +538,7 @@ bool isShadowCasting() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISSHADOWCASTING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -517,6 +556,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISSHADOWCASTING )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -524,6 +564,7 @@ void setShadowCasting(bool enabled)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETSHADOWCASTING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -543,6 +584,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSHADOWCASTING )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -550,6 +592,7 @@ bool isScalingAbsolute() const
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISSCALINGABSOLUTE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -567,6 +610,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISSCALINGABSOLUTE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -574,6 +618,7 @@ void setScalingAbsolute(bool scalingAbsolute)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALINGABSOLUTE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -593,6 +638,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALINGABSOLUTE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -600,6 +646,7 @@ Q_INVOKABLE void setRotationAxisAndAngle(const QVector3D &axis, float angle)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATIONAXISANDANGLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -619,6 +666,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATIONAXISANDANGLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -626,6 +674,7 @@ void setTextureImage(const QImage &textureImage)
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -645,15 +694,15 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void meshFileChanged( const QString & meshFile )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -708,6 +757,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -715,6 +765,7 @@ void positionAbsoluteChanged( bool positionAbsolute )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -769,6 +820,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -776,6 +828,7 @@ void positionChanged( const QVector3D & position )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -830,6 +883,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -837,6 +891,7 @@ void rotationChanged( const QQuaternion & rotation )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -891,6 +946,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -898,6 +954,7 @@ void scalingAbsoluteChanged( bool scalingAbsolute )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -952,6 +1009,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -959,6 +1017,7 @@ void scalingChanged( const QVector3D & scaling )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1013,6 +1072,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1020,6 +1080,7 @@ void shadowCastingChanged( bool shadowCasting )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1074,6 +1135,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1081,6 +1143,7 @@ void textureFileChanged( const QString & textureFile )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1135,6 +1198,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1142,6 +1206,7 @@ void visibleChanged( bool visible )
 */
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DItem * sender = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1196,6 +1261,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

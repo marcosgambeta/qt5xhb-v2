@@ -56,7 +56,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QHeightMapSurfaceDataProxy>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -65,7 +67,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QHeightMapSurfaceDataProxy>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -75,8 +79,10 @@ explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
 */
 void QHeightMapSurfaceDataProxy_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -84,8 +90,10 @@ explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullp
 */
 void QHeightMapSurfaceDataProxy_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -93,8 +101,10 @@ explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = n
 */
 void QHeightMapSurfaceDataProxy_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( PQSTRING(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -130,6 +140,7 @@ virtual ~QHeightMapSurfaceDataProxy()
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -143,6 +154,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -150,6 +162,7 @@ QImage heightMap() const
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -168,6 +181,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -175,6 +189,7 @@ void setHeightMap(const QImage &image)
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -194,6 +209,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -201,6 +217,7 @@ QString heightMapFile() const
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -218,6 +235,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -225,6 +243,7 @@ void setHeightMapFile(const QString &filename)
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -244,6 +263,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -251,6 +271,7 @@ float minXValue() const
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINXVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -268,6 +289,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINXVALUE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -275,6 +297,7 @@ void setMinXValue(float min)
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINXVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -294,6 +317,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINXVALUE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -301,6 +325,7 @@ float maxXValue() const
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXXVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -318,6 +343,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXXVALUE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -325,6 +351,7 @@ void setMaxXValue(float max)
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXXVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -344,6 +371,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXXVALUE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -351,6 +379,7 @@ float minZValue() const
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINZVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -368,6 +397,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINZVALUE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -375,6 +405,7 @@ void setMinZValue(float min)
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINZVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -394,6 +425,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINZVALUE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -401,6 +433,7 @@ float maxZValue() const
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXZVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -418,6 +451,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXZVALUE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -425,6 +459,7 @@ void setMaxZValue(float max)
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -444,6 +479,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -451,6 +487,7 @@ void setValueRanges(float minX, float maxX, float minZ, float maxZ)
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -470,15 +507,15 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void heightMapChanged( const QImage & image )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -533,6 +570,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -540,6 +578,7 @@ void heightMapFileChanged( const QString & filename )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -594,6 +633,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -601,6 +641,7 @@ void minXValueChanged( float value )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -655,6 +696,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -662,6 +704,7 @@ void maxXValueChanged( float value )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -716,6 +759,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -723,6 +767,7 @@ void minZValueChanged( float value )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -777,6 +822,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -784,6 +830,7 @@ void maxZValueChanged( float value )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHeightMapSurfaceDataProxy * sender = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -838,6 +885,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

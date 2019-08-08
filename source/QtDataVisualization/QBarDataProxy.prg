@@ -64,7 +64,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QBarDataProxy>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -73,7 +75,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QBarDataProxy>
+#endif
 #endif
 
 #include <QtDataVisualization/QBar3DSeries>
@@ -85,6 +89,7 @@ explicit QBarDataProxy(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QBarDataProxy * o = new QBarDataProxy ( OPQOBJECT(1,nullptr) );
@@ -94,6 +99,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -105,6 +111,7 @@ virtual ~QBarDataProxy()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -118,6 +125,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -125,6 +133,7 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -142,6 +151,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -149,6 +159,7 @@ QStringList rowLabels() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -166,6 +177,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -173,6 +185,7 @@ void setRowLabels(const QStringList &labels)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -192,6 +205,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -199,6 +213,7 @@ QStringList columnLabels() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -216,6 +231,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -223,6 +239,7 @@ void setColumnLabels(const QStringList &labels)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -242,6 +259,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -249,6 +267,7 @@ QBar3DSeries *series() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -267,6 +286,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -282,6 +302,7 @@ const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
 */
 void QBarDataProxy_itemAt1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -289,6 +310,7 @@ void QBarDataProxy_itemAt1 ()
       const QBarDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
       _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
   }
+#endif
 }
 
 /*
@@ -296,6 +318,7 @@ const QBarDataItem *itemAt(const QPoint &position) const
 */
 void QBarDataProxy_itemAt2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -303,6 +326,7 @@ void QBarDataProxy_itemAt2 ()
       const QBarDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
   }
+#endif
 }
 
 //[1]const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
@@ -379,6 +403,7 @@ void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
 */
 void QBarDataProxy_setItem1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -387,6 +412,7 @@ void QBarDataProxy_setItem1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -394,6 +420,7 @@ void setItem(const QPoint &position, const QBarDataItem &item)
 */
 void QBarDataProxy_setItem2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -402,6 +429,7 @@ void QBarDataProxy_setItem2 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
@@ -488,6 +516,7 @@ void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -507,15 +536,15 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void arrayReset()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -568,6 +597,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -575,6 +605,7 @@ void columnLabelsChanged()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -627,6 +658,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -634,6 +666,7 @@ void itemChanged( int rowIndex, int columnIndex )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -690,6 +723,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -697,6 +731,7 @@ void rowCountChanged( int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -751,6 +786,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -758,6 +794,7 @@ void rowLabelsChanged()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -810,6 +847,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -817,6 +855,7 @@ void rowsAdded( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -873,6 +912,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -880,6 +920,7 @@ void rowsChanged( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -936,6 +977,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -943,6 +985,7 @@ void rowsInserted( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -999,6 +1042,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1006,6 +1050,7 @@ void rowsRemoved( int startIndex, int count )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1062,6 +1107,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1069,6 +1115,7 @@ void seriesChanged( QBar3DSeries * series )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataProxy * sender = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1123,6 +1170,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

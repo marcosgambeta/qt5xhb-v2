@@ -72,7 +72,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DScene>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -81,7 +83,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DScene>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -91,6 +95,7 @@ explicit Q3DScene(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DSCENE_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DScene * o = new Q3DScene ( OPQOBJECT(1,nullptr) );
@@ -100,6 +105,7 @@ HB_FUNC_STATIC( Q3DSCENE_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -107,6 +113,7 @@ virtual ~Q3DScene()
 */
 HB_FUNC_STATIC( Q3DSCENE_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -120,6 +127,7 @@ HB_FUNC_STATIC( Q3DSCENE_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -127,6 +135,7 @@ QRect viewport() const
 */
 HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -145,6 +154,7 @@ HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -152,6 +162,7 @@ QRect primarySubViewport() const
 */
 HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -170,6 +181,7 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -177,6 +189,7 @@ void setPrimarySubViewport(const QRect &primarySubViewport)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -196,6 +209,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -203,6 +217,7 @@ QRect secondarySubViewport() const
 */
 HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -221,6 +236,7 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -228,6 +244,7 @@ void setSecondarySubViewport(const QRect &secondarySubViewport)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -247,6 +264,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -254,6 +272,7 @@ QPoint selectionQueryPosition() const
 */
 HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -272,6 +291,7 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -279,6 +299,7 @@ void setSelectionQueryPosition(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -298,6 +319,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -305,6 +327,7 @@ bool isSecondarySubviewOnTop() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -322,6 +345,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -329,6 +353,7 @@ void setSecondarySubviewOnTop(bool isSecondaryOnTop)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -348,6 +373,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -355,6 +381,7 @@ bool isSlicingActive() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -372,6 +399,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -379,6 +407,7 @@ void setSlicingActive(bool isSlicing)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -398,6 +427,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -405,6 +435,7 @@ Q3DCamera *activeCamera() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -423,6 +454,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -430,6 +462,7 @@ void setActiveCamera(Q3DCamera *camera)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -449,6 +482,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -456,6 +490,7 @@ Q3DLight *activeLight() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -474,6 +509,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -481,6 +517,7 @@ void setActiveLight(Q3DLight *light)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -500,6 +537,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -507,6 +545,7 @@ float devicePixelRatio() const
 */
 HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -524,6 +563,7 @@ HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -531,6 +571,7 @@ void setDevicePixelRatio(float pixelRatio)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -550,6 +591,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -557,6 +599,7 @@ QPoint graphPositionQuery() const
 */
 HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -575,6 +618,7 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -582,6 +626,7 @@ void setGraphPositionQuery(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -601,6 +646,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -608,6 +654,7 @@ bool isPointInPrimarySubView(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -625,6 +672,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -632,6 +680,7 @@ bool isPointInSecondarySubView(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -649,6 +698,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -656,6 +706,7 @@ static QPoint invalidSelectionPoint()
 */
 HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
@@ -669,15 +720,15 @@ HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void activeCameraChanged( Q3DCamera * camera )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -732,6 +783,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -739,6 +791,7 @@ void activeLightChanged( Q3DLight * light )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -793,6 +846,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -800,6 +854,7 @@ void devicePixelRatioChanged( float pixelRatio )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -854,6 +909,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -861,6 +917,7 @@ void graphPositionQueryChanged( const QPoint & position )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -915,6 +972,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -922,6 +980,7 @@ void primarySubViewportChanged( const QRect & subViewport )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -976,6 +1035,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -983,6 +1043,7 @@ void secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1037,6 +1098,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1044,6 +1106,7 @@ void secondarySubViewportChanged( const QRect & subViewport )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1098,6 +1161,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1105,6 +1169,7 @@ void selectionQueryPositionChanged( const QPoint & position )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1159,6 +1224,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1166,6 +1232,7 @@ void slicingActiveChanged( bool isSlicingActive )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1220,6 +1287,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1227,6 +1295,7 @@ void viewportChanged( const QRect & viewport )
 */
 HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DScene * sender = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1281,6 +1350,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

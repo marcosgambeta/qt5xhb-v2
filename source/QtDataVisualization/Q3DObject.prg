@@ -43,7 +43,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DObject>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -52,7 +54,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DObject>
+#endif
 #endif
 
 #include <QtDataVisualization/Q3DScene>
@@ -64,6 +68,7 @@ explicit Q3DObject(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DOBJECT_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DObject * o = new Q3DObject ( OPQOBJECT(1,nullptr) );
@@ -73,6 +78,7 @@ HB_FUNC_STATIC( Q3DOBJECT_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -80,6 +86,7 @@ virtual ~Q3DObject()
 */
 HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -93,6 +100,7 @@ HB_FUNC_STATIC( Q3DOBJECT_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -100,6 +108,7 @@ Q3DScene *parentScene()
 */
 HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -118,6 +127,7 @@ HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -125,6 +135,7 @@ QVector3D position() const
 */
 HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -143,6 +154,7 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -150,6 +162,7 @@ void setPosition(const QVector3D &position)
 */
 HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -169,6 +182,7 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -176,6 +190,7 @@ virtual void copyValuesFrom(const Q3DObject &source)
 */
 HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -195,6 +210,7 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -205,13 +221,12 @@ void setDirty(bool dirty) [protected]
 bool isDirty() const [protected]
 */
 
-using namespace QtDataVisualization;
-
 /*
 void positionChanged( const QVector3D & position )
 */
 HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DObject * sender = (Q3DObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -266,6 +281,7 @@ HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

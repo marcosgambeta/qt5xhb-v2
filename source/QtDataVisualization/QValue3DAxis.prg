@@ -46,7 +46,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QValue3DAxis>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -55,7 +57,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QValue3DAxis>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -65,6 +69,7 @@ explicit QValue3DAxis(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QValue3DAxis * o = new QValue3DAxis ( OPQOBJECT(1,nullptr) );
@@ -74,6 +79,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -81,6 +87,7 @@ virtual ~QValue3DAxis()
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -94,6 +101,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -101,6 +109,7 @@ int segmentCount() const
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SEGMENTCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -118,6 +127,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SEGMENTCOUNT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -125,6 +135,7 @@ void setSegmentCount(int count)
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSEGMENTCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -144,6 +155,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETSEGMENTCOUNT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -151,6 +163,7 @@ int subSegmentCount() const
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SUBSEGMENTCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -168,6 +181,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SUBSEGMENTCOUNT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -175,6 +189,7 @@ void setSubSegmentCount(int count)
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSUBSEGMENTCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -194,6 +209,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETSUBSEGMENTCOUNT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -201,6 +217,7 @@ QString labelFormat() const
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_LABELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -218,6 +235,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_LABELFORMAT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -225,6 +243,7 @@ void setLabelFormat(const QString &format)
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -244,6 +263,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -251,6 +271,7 @@ QValue3DAxisFormatter *formatter() const
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -269,6 +290,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -276,6 +298,7 @@ void setFormatter(QValue3DAxisFormatter *formatter)
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETFORMATTER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -295,6 +318,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETFORMATTER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -302,6 +326,7 @@ bool reversed() const
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_REVERSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -319,6 +344,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_REVERSED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -326,6 +352,7 @@ void setReversed(bool enable)
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -345,9 +372,8 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void formatterChanged( QValue3DAxisFormatter * formatter )

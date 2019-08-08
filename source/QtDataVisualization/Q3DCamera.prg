@@ -66,7 +66,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DCamera>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -75,7 +77,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DCamera>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -85,6 +89,7 @@ explicit Q3DCamera(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DCAMERA_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DCamera * o = new Q3DCamera ( OPQOBJECT(1,nullptr) );
@@ -94,6 +99,7 @@ HB_FUNC_STATIC( Q3DCAMERA_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -101,6 +107,7 @@ virtual ~Q3DCamera()
 */
 HB_FUNC_STATIC( Q3DCAMERA_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -114,6 +121,7 @@ HB_FUNC_STATIC( Q3DCAMERA_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -121,6 +129,7 @@ float xRotation() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_XROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -138,6 +147,7 @@ HB_FUNC_STATIC( Q3DCAMERA_XROTATION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -145,6 +155,7 @@ void setXRotation(float rotation)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETXROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -164,6 +175,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETXROTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -171,6 +183,7 @@ float yRotation() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_YROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -188,6 +201,7 @@ HB_FUNC_STATIC( Q3DCAMERA_YROTATION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -195,6 +209,7 @@ void setYRotation(float rotation)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETYROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -214,6 +229,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETYROTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -221,6 +237,7 @@ float zoomLevel() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_ZOOMLEVEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -238,6 +255,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ZOOMLEVEL )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -245,6 +263,7 @@ void setZoomLevel(float zoomLevel)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETZOOMLEVEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -264,6 +283,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETZOOMLEVEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -271,6 +291,7 @@ CameraPreset cameraPreset() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_CAMERAPRESET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -288,6 +309,7 @@ HB_FUNC_STATIC( Q3DCAMERA_CAMERAPRESET )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -295,6 +317,7 @@ void setCameraPreset(CameraPreset preset)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPRESET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -314,6 +337,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPRESET )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -321,6 +345,7 @@ bool wrapXRotation() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_WRAPXROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -338,6 +363,7 @@ HB_FUNC_STATIC( Q3DCAMERA_WRAPXROTATION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -345,6 +371,7 @@ void setWrapXRotation(bool isEnabled)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETWRAPXROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -364,6 +391,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETWRAPXROTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -371,6 +399,7 @@ bool wrapYRotation() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_WRAPYROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -388,6 +417,7 @@ HB_FUNC_STATIC( Q3DCAMERA_WRAPYROTATION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -395,6 +425,7 @@ void setWrapYRotation(bool isEnabled)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETWRAPYROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -414,6 +445,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETWRAPYROTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -421,6 +453,7 @@ QVector3D target() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_TARGET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -439,6 +472,7 @@ HB_FUNC_STATIC( Q3DCAMERA_TARGET )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -446,6 +480,7 @@ void setTarget(const QVector3D &target)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETTARGET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -465,6 +500,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETTARGET )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -472,6 +508,7 @@ float minZoomLevel() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_MINZOOMLEVEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -489,6 +526,7 @@ HB_FUNC_STATIC( Q3DCAMERA_MINZOOMLEVEL )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -496,6 +534,7 @@ void setMinZoomLevel(float zoomLevel)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETMINZOOMLEVEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -515,6 +554,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETMINZOOMLEVEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -522,6 +562,7 @@ float maxZoomLevel() const
 */
 HB_FUNC_STATIC( Q3DCAMERA_MAXZOOMLEVEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -539,6 +580,7 @@ HB_FUNC_STATIC( Q3DCAMERA_MAXZOOMLEVEL )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -546,6 +588,7 @@ void setMaxZoomLevel(float zoomLevel)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETMAXZOOMLEVEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -565,6 +608,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETMAXZOOMLEVEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -572,6 +616,7 @@ virtual void copyValuesFrom(const Q3DObject &source)
 */
 HB_FUNC_STATIC( Q3DCAMERA_COPYVALUESFROM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -591,6 +636,7 @@ HB_FUNC_STATIC( Q3DCAMERA_COPYVALUESFROM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -598,6 +644,7 @@ void setCameraPosition(float horizontal, float vertical, float zoom = 100.0f)
 */
 HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -617,15 +664,15 @@ HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void cameraPresetChanged( Q3DCamera::CameraPreset preset )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -680,6 +727,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -687,6 +735,7 @@ void maxZoomLevelChanged( float zoomLevel )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -741,6 +790,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -748,6 +798,7 @@ void minZoomLevelChanged( float zoomLevel )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -802,6 +853,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -809,6 +861,7 @@ void targetChanged( const QVector3D & target )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -863,6 +916,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -870,6 +924,7 @@ void wrapXRotationChanged( bool isEnabled )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -924,6 +979,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -931,6 +987,7 @@ void wrapYRotationChanged( bool isEnabled )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -985,6 +1042,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -992,6 +1050,7 @@ void xRotationChanged( float rotation )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1046,6 +1105,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1053,6 +1113,7 @@ void yRotationChanged( float rotation )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1107,6 +1168,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1114,6 +1176,7 @@ void zoomLevelChanged( float zoomLevel )
 */
 HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DCamera * sender = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1168,6 +1231,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

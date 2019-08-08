@@ -93,7 +93,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCustom3DVolume>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -102,7 +104,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCustom3DVolume>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -112,8 +116,10 @@ explicit QCustom3DVolume(QObject *parent = nullptr)
 */
 void QCustom3DVolume_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * o = new QCustom3DVolume ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -140,6 +146,7 @@ virtual ~QCustom3DVolume()
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -153,6 +160,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -160,6 +168,7 @@ int textureWidth() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -177,6 +186,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREWIDTH )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -184,6 +194,7 @@ void setTextureWidth(int value)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -203,6 +214,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREWIDTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -210,6 +222,7 @@ int textureHeight() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREHEIGHT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -227,6 +240,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREHEIGHT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -234,6 +248,7 @@ void setTextureHeight(int value)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREHEIGHT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -253,6 +268,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREHEIGHT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -260,6 +276,7 @@ int textureDepth() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDEPTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -277,6 +294,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDEPTH )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -284,6 +302,7 @@ void setTextureDepth(int value)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDEPTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -303,6 +322,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDEPTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -310,6 +330,7 @@ int sliceIndexX() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -327,6 +348,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXX )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -334,6 +356,7 @@ void setSliceIndexX(int value)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -353,6 +376,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXX )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -360,6 +384,7 @@ int sliceIndexY() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -377,6 +402,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXY )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -384,6 +410,7 @@ void setSliceIndexY(int value)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -403,6 +430,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -410,6 +438,7 @@ int sliceIndexZ() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXZ )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -427,6 +456,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXZ )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -434,6 +464,7 @@ void setSliceIndexZ(int value)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXZ )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -453,6 +484,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXZ )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -476,6 +508,7 @@ float alphaMultiplier() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ALPHAMULTIPLIER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -493,6 +526,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ALPHAMULTIPLIER )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -500,6 +534,7 @@ void setAlphaMultiplier(float mult)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETALPHAMULTIPLIER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -519,6 +554,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETALPHAMULTIPLIER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -526,6 +562,7 @@ bool preserveOpacity() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_PRESERVEOPACITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -543,6 +580,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_PRESERVEOPACITY )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -550,6 +588,7 @@ void setPreserveOpacity(bool enable)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETPRESERVEOPACITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -569,6 +608,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETPRESERVEOPACITY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -576,6 +616,7 @@ bool useHighDefShader() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_USEHIGHDEFSHADER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -593,6 +634,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_USEHIGHDEFSHADER )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -600,6 +642,7 @@ void setUseHighDefShader(bool enable)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -619,6 +662,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -626,6 +670,7 @@ bool drawSlices() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -643,6 +688,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -650,6 +696,7 @@ void setDrawSlices(bool enable)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -669,6 +716,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -676,6 +724,7 @@ bool drawSliceFrames() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICEFRAMES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -693,6 +742,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICEFRAMES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -700,6 +750,7 @@ void setDrawSliceFrames(bool enable)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -719,6 +770,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -726,6 +778,7 @@ QColor sliceFrameColor() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMECOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -744,6 +797,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMECOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -751,6 +805,7 @@ void setSliceFrameColor(const QColor &color)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -770,6 +825,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -777,6 +833,7 @@ QVector3D sliceFrameWidths() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -795,6 +852,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -802,6 +860,7 @@ void setSliceFrameWidths(const QVector3D &values)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -821,6 +880,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -828,6 +888,7 @@ QVector3D sliceFrameGaps() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEGAPS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -846,6 +907,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEGAPS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -853,6 +915,7 @@ void setSliceFrameGaps(const QVector3D &values)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -872,6 +935,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -879,6 +943,7 @@ QVector3D sliceFrameThicknesses() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -897,6 +962,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -904,6 +970,7 @@ void setSliceFrameThicknesses(const QVector3D &values)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -923,6 +990,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -930,6 +998,7 @@ void setTextureDimensions(int width, int height, int depth)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -949,6 +1018,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -956,6 +1026,7 @@ int textureDataWidth() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDATAWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -973,6 +1044,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDATAWIDTH )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -980,6 +1052,7 @@ void setSliceIndices(int x, int y, int z)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -999,6 +1072,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1010,6 +1084,7 @@ void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
 */
 void QCustom3DVolume_setSubTextureData1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1018,6 +1093,7 @@ void QCustom3DVolume_setSubTextureData1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1025,6 +1101,7 @@ void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
 */
 void QCustom3DVolume_setSubTextureData2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1033,6 +1110,7 @@ void QCustom3DVolume_setSubTextureData2 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
@@ -1059,6 +1137,7 @@ void setTextureFormat(QImage::Format format)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1078,6 +1157,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1085,6 +1165,7 @@ QImage::Format textureFormat() const
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1102,6 +1183,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREFORMAT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1109,6 +1191,7 @@ QImage renderSlice(Qt::Axis axis, int index)
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1127,15 +1210,15 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
     }
 #endif
   }
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void alphaMultiplierChanged( float mult )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1190,6 +1273,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1197,6 +1281,7 @@ void colorTableChanged()
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1249,6 +1334,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1256,6 +1342,7 @@ void drawSliceFramesChanged( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1310,6 +1397,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1317,6 +1405,7 @@ void drawSlicesChanged( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1371,6 +1460,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1378,6 +1468,7 @@ void preserveOpacityChanged( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1432,6 +1523,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1439,6 +1531,7 @@ void sliceFrameColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1493,6 +1586,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1500,6 +1594,7 @@ void sliceFrameGapsChanged( const QVector3D & values )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1554,6 +1649,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1561,6 +1657,7 @@ void sliceFrameThicknessesChanged( const QVector3D & values )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1615,6 +1712,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1622,6 +1720,7 @@ void sliceFrameWidthsChanged( const QVector3D & values )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1676,6 +1775,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1683,6 +1783,7 @@ void sliceIndexXChanged( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1737,6 +1838,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1744,6 +1846,7 @@ void sliceIndexYChanged( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1798,6 +1901,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1805,6 +1909,7 @@ void sliceIndexZChanged( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1859,6 +1964,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1866,6 +1972,7 @@ void textureDepthChanged( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1920,6 +2027,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1927,6 +2035,7 @@ void textureFormatChanged( QImage::Format format )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1981,6 +2090,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1988,6 +2098,7 @@ void textureHeightChanged( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2042,6 +2153,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2049,6 +2161,7 @@ void textureWidthChanged( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2103,6 +2216,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2110,6 +2224,7 @@ void useHighDefShaderChanged( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DVolume * sender = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2164,6 +2279,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

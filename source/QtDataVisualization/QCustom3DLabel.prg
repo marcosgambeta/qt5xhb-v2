@@ -59,7 +59,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCustom3DLabel>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -68,7 +70,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCustom3DLabel>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -78,8 +82,10 @@ explicit QCustom3DLabel(QObject *parent = nullptr)
 */
 void QCustom3DLabel_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * o = new QCustom3DLabel ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -87,8 +93,10 @@ explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D 
 */
 void QCustom3DLabel_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * o = new QCustom3DLabel ( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QCustom3DLabel(QObject *parent = nullptr)
@@ -115,6 +123,7 @@ virtual ~QCustom3DLabel()
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -128,6 +137,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -135,6 +145,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -152,6 +163,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -159,6 +171,7 @@ void setText(const QString &text)
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -178,6 +191,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -185,6 +199,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_FONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -203,6 +218,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_FONT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -210,6 +226,7 @@ void setFont(const QFont &font)
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -229,6 +246,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFONT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -236,6 +254,7 @@ QColor textColor() const
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -254,6 +273,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXTCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -261,6 +281,7 @@ void setTextColor(const QColor &color)
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -280,6 +301,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -287,6 +309,7 @@ QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_BACKGROUNDCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -305,6 +328,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_BACKGROUNDCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -312,6 +336,7 @@ void setBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -331,6 +356,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -338,6 +364,7 @@ bool isBorderEnabled() const
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBORDERENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -355,6 +382,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBORDERENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -362,6 +390,7 @@ void setBorderEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBORDERENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -381,6 +410,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBORDERENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -388,6 +418,7 @@ bool isBackgroundEnabled() const
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBACKGROUNDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -405,6 +436,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBACKGROUNDENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -412,6 +444,7 @@ void setBackgroundEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -431,6 +464,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -438,6 +472,7 @@ bool isFacingCamera() const
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ISFACINGCAMERA )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -455,6 +490,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISFACINGCAMERA )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -462,6 +498,7 @@ void setFacingCamera(bool enabled)
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -481,15 +518,15 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void backgroundColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -544,6 +581,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -551,6 +589,7 @@ void backgroundEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -605,6 +644,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -612,6 +652,7 @@ void borderEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -666,6 +707,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -673,6 +715,7 @@ void facingCameraChanged( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -727,6 +770,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -734,6 +778,7 @@ void fontChanged( const QFont & font )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -788,6 +833,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -795,6 +841,7 @@ void textChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -849,6 +896,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -856,6 +904,7 @@ void textColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCustom3DLabel * sender = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -910,6 +959,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

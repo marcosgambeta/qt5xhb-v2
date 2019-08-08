@@ -45,7 +45,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QLogValue3DAxisFormatter>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -54,7 +56,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QLogValue3DAxisFormatter>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -64,6 +68,7 @@ explicit QLogValue3DAxisFormatter(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QLogValue3DAxisFormatter * o = new QLogValue3DAxisFormatter ( OPQOBJECT(1,nullptr) );
@@ -73,6 +78,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -84,6 +90,7 @@ virtual ~QLogValue3DAxisFormatter()
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -97,6 +104,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -104,6 +112,7 @@ qreal base() const
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -121,6 +130,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -128,6 +138,7 @@ void setBase(qreal base)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -147,6 +158,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -154,6 +166,7 @@ bool autoSubGrid() const
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -171,6 +184,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -178,6 +192,7 @@ void setAutoSubGrid(bool enabled)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -197,6 +212,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -204,6 +220,7 @@ bool showEdgeLabels() const
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -221,6 +238,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -228,6 +246,7 @@ void setShowEdgeLabels(bool enabled)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -247,6 +266,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -269,13 +289,12 @@ virtual float valueAt(float position) const [protected]
 virtual void populateCopy(QValue3DAxisFormatter &copy) const [protected]
 */
 
-using namespace QtDataVisualization;
-
 /*
 void autoSubGridChanged( bool enabled )
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -330,6 +349,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -337,6 +357,7 @@ void baseChanged( qreal base )
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -391,6 +412,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -398,6 +420,7 @@ void showEdgeLabelsChanged( bool enabled )
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -452,6 +475,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

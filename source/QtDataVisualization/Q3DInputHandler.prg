@@ -48,7 +48,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DInputHandler>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -57,7 +59,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DInputHandler>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -67,6 +71,7 @@ explicit Q3DInputHandler(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DInputHandler * o = new Q3DInputHandler ( OPQOBJECT(1,nullptr) );
@@ -76,6 +81,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -83,6 +89,7 @@ virtual ~Q3DInputHandler()
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -96,6 +103,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -103,6 +111,7 @@ bool isRotationEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISROTATIONENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -120,6 +129,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISROTATIONENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -127,6 +137,7 @@ void setRotationEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -146,6 +157,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -153,6 +165,7 @@ bool isZoomEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -170,6 +183,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -177,6 +191,7 @@ void setZoomEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -196,6 +211,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -203,6 +219,7 @@ bool isSelectionEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISSELECTIONENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -220,6 +237,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISSELECTIONENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -227,6 +245,7 @@ void setSelectionEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -246,6 +265,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -253,6 +273,7 @@ bool isZoomAtTargetEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMATTARGETENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -270,6 +291,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMATTARGETENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -277,6 +299,7 @@ void setZoomAtTargetEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -296,6 +319,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -314,13 +338,12 @@ virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
 virtual void wheelEvent(QWheelEvent *event)
 */
 
-using namespace QtDataVisualization;
-
 /*
 void rotationEnabledChanged( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -375,6 +398,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -382,6 +406,7 @@ void selectionEnabledChanged( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -436,6 +461,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -443,6 +469,7 @@ void zoomAtTargetEnabledChanged( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -497,6 +524,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -504,6 +532,7 @@ void zoomEnabledChanged( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DInputHandler * sender = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -558,6 +587,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

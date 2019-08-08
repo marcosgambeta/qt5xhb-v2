@@ -52,7 +52,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QScatterDataProxy>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -61,7 +63,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QScatterDataProxy>
+#endif
 #endif
 
 #include <QtDataVisualization/QScatter3DSeries>
@@ -73,6 +77,7 @@ explicit QScatterDataProxy(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QScatterDataProxy * o = new QScatterDataProxy ( OPQOBJECT(1,nullptr) );
@@ -82,6 +87,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -93,6 +99,7 @@ virtual ~QScatterDataProxy()
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -106,6 +113,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -113,6 +121,7 @@ int itemCount() const
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -130,6 +139,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMCOUNT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -137,6 +147,7 @@ QScatter3DSeries *series() const
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -155,6 +166,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -166,6 +178,7 @@ const QScatterDataItem *itemAt(int index) const
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -184,6 +197,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -195,6 +209,7 @@ void setItem(int index, const QScatterDataItem &item)
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -214,6 +229,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -225,6 +241,7 @@ int addItem(const QScatterDataItem &item)
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ADDITEM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -242,6 +259,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ADDITEM )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -253,6 +271,7 @@ void insertItem(int index, const QScatterDataItem &item)
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -272,6 +291,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -283,6 +303,7 @@ void removeItems(int index, int removeCount)
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * obj = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -302,15 +323,15 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void arrayReset()
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -363,6 +384,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -370,6 +392,7 @@ void itemCountChanged( int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -424,6 +447,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -431,6 +455,7 @@ void itemsAdded( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -487,6 +512,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -494,6 +520,7 @@ void itemsChanged( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -550,6 +577,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -557,6 +585,7 @@ void itemsInserted( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -613,6 +642,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -620,6 +650,7 @@ void itemsRemoved( int startIndex, int count )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -676,6 +707,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -683,6 +715,7 @@ void seriesChanged( QScatter3DSeries * series )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterDataProxy * sender = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -737,6 +770,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

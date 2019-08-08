@@ -98,7 +98,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QItemModelBarDataProxy>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -107,7 +109,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QItemModelBarDataProxy>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -117,8 +121,10 @@ explicit QItemModelBarDataProxy(QObject *parent = nullptr)
 */
 void QItemModelBarDataProxy_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -126,8 +132,10 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, QObject *parent =
 */
 void QItemModelBarDataProxy_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -135,8 +143,10 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &va
 */
 void QItemModelBarDataProxy_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -144,8 +154,10 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new4 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -153,8 +165,10 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new5 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -162,8 +176,10 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new6 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -171,8 +187,10 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new7 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QItemModelBarDataProxy(QObject *parent = nullptr)
@@ -224,6 +242,7 @@ virtual ~QItemModelBarDataProxy()
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -237,6 +256,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -244,6 +264,7 @@ QAbstractItemModel *itemModel() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ITEMMODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -262,6 +283,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ITEMMODEL )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -269,6 +291,7 @@ void setItemModel(QAbstractItemModel *itemModel)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETITEMMODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -288,6 +311,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETITEMMODEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -295,6 +319,7 @@ QString rowRole() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -312,6 +337,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -319,6 +345,7 @@ void setRowRole(const QString &role)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -338,6 +365,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -345,6 +373,7 @@ QString columnRole() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -362,6 +391,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -369,6 +399,7 @@ void setColumnRole(const QString &role)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -388,6 +419,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -395,6 +427,7 @@ QString valueRole() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -412,6 +445,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -419,6 +453,7 @@ void setValueRole(const QString &role)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -438,6 +473,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -445,6 +481,7 @@ QString rotationRole() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -462,6 +499,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -469,6 +507,7 @@ void setRotationRole(const QString &role)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -488,6 +527,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -495,6 +535,7 @@ QStringList rowCategories() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -512,6 +553,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -519,6 +561,7 @@ void setRowCategories(const QStringList &categories)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -538,6 +581,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWCATEGORIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -545,6 +589,7 @@ QStringList columnCategories() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -562,6 +607,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -569,6 +615,7 @@ void setColumnCategories(const QStringList &categories)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -588,6 +635,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -595,6 +643,7 @@ bool useModelCategories() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_USEMODELCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -612,6 +661,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_USEMODELCATEGORIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -619,6 +669,7 @@ void setUseModelCategories(bool enable)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -638,6 +689,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -645,6 +697,7 @@ bool autoRowCategories() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -662,6 +715,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -669,6 +723,7 @@ void setAutoRowCategories(bool enable)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -688,6 +743,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -695,6 +751,7 @@ bool autoColumnCategories() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -712,6 +769,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -719,6 +777,7 @@ void setAutoColumnCategories(bool enable)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -738,6 +797,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -745,6 +805,7 @@ QRegExp rowRolePattern() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -763,6 +824,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEPATTERN )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -770,6 +832,7 @@ void setRowRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -789,6 +852,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEPATTERN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -796,6 +860,7 @@ QRegExp columnRolePattern() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -814,6 +879,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -821,6 +887,7 @@ void setColumnRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -840,6 +907,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -847,6 +915,7 @@ QRegExp valueRolePattern() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -865,6 +934,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEPATTERN )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -872,6 +942,7 @@ void setValueRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -891,6 +962,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -898,6 +970,7 @@ QRegExp rotationRolePattern() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -916,6 +989,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -923,6 +997,7 @@ void setRotationRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -942,6 +1017,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -949,6 +1025,7 @@ QString rowRoleReplace() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -966,6 +1043,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEREPLACE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -973,6 +1051,7 @@ void setRowRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -992,6 +1071,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEREPLACE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -999,6 +1079,7 @@ QString columnRoleReplace() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1016,6 +1097,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1023,6 +1105,7 @@ void setColumnRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1042,6 +1125,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1049,6 +1133,7 @@ QString valueRoleReplace() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1066,6 +1151,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEREPLACE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1073,6 +1159,7 @@ void setValueRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1092,6 +1179,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1099,6 +1187,7 @@ QString rotationRoleReplace() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1116,6 +1205,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1123,6 +1213,7 @@ void setRotationRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1142,6 +1233,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1149,6 +1241,7 @@ MultiMatchBehavior multiMatchBehavior() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1166,6 +1259,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1173,6 +1267,7 @@ void setMultiMatchBehavior(MultiMatchBehavior behavior)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1192,6 +1287,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1199,6 +1295,7 @@ void remap(const QString &rowRole, const QString &columnRole, const QString &val
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_REMAP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1218,6 +1315,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_REMAP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1225,6 +1323,7 @@ Q_INVOKABLE int rowCategoryIndex(const QString& category)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1242,6 +1341,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1249,6 +1349,7 @@ Q_INVOKABLE int columnCategoryIndex(const QString& category)
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1266,15 +1367,15 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX )
     }
 #endif
   }
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void autoColumnCategoriesChanged( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1329,6 +1430,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1336,6 +1438,7 @@ void autoRowCategoriesChanged( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1390,6 +1493,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1397,6 +1501,7 @@ void columnCategoriesChanged()
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1449,6 +1554,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1456,6 +1562,7 @@ void columnRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1510,6 +1617,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1517,6 +1625,7 @@ void columnRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1571,6 +1680,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1578,6 +1688,7 @@ void columnRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1632,6 +1743,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1639,6 +1751,7 @@ void itemModelChanged( const QAbstractItemModel * itemModel )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1693,6 +1806,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1700,6 +1814,7 @@ void multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behav
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1754,6 +1869,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1761,6 +1877,7 @@ void rotationRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1815,6 +1932,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1822,6 +1940,7 @@ void rotationRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1876,6 +1995,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1883,6 +2003,7 @@ void rotationRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1937,6 +2058,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1944,6 +2066,7 @@ void rowCategoriesChanged()
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1996,6 +2119,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2003,6 +2127,7 @@ void rowRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2057,6 +2182,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2064,6 +2190,7 @@ void rowRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2118,6 +2245,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2125,6 +2253,7 @@ void rowRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2179,6 +2308,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2186,6 +2316,7 @@ void useModelCategoriesChanged( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2240,6 +2371,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2247,6 +2379,7 @@ void valueRoleChanged( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2301,6 +2434,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2308,6 +2442,7 @@ void valueRolePatternChanged( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2362,6 +2497,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2369,6 +2505,7 @@ void valueRoleReplaceChanged( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QItemModelBarDataProxy * sender = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2423,6 +2560,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

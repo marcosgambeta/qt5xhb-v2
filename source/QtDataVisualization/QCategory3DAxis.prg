@@ -39,7 +39,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCategory3DAxis>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -48,7 +50,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QCategory3DAxis>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -58,6 +62,7 @@ explicit QCategory3DAxis(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QCategory3DAxis * o = new QCategory3DAxis ( OPQOBJECT(1,nullptr) );
@@ -67,6 +72,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -74,6 +80,7 @@ virtual ~QCategory3DAxis()
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -87,6 +94,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -94,6 +102,7 @@ QStringList labels() const
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -111,6 +120,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -118,6 +128,7 @@ void setLabels(const QStringList &labels)
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -137,15 +148,15 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void labelsChanged()
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategory3DAxis * sender = (QCategory3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -198,6 +209,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

@@ -58,7 +58,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DSurface>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -67,7 +69,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DSurface>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -77,6 +81,7 @@ explicit Q3DSurface(const QSurfaceFormat *format = nullptr, QWindow *parent = nu
 */
 HB_FUNC_STATIC( Q3DSURFACE_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
   {
     Q3DSurface * o = new Q3DSurface ( ISNIL(1)? nullptr : (QSurfaceFormat *) _qt5xhb_itemGetPtr(1), OPQWINDOW(2,nullptr) );
@@ -86,6 +91,7 @@ HB_FUNC_STATIC( Q3DSURFACE_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -93,6 +99,7 @@ virtual ~Q3DSurface()
 */
 HB_FUNC_STATIC( Q3DSURFACE_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -106,6 +113,7 @@ HB_FUNC_STATIC( Q3DSURFACE_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -113,6 +121,7 @@ QValue3DAxis *axisX() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_AXISX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -131,6 +140,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -138,6 +148,7 @@ void setAxisX(QValue3DAxis *axis)
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -157,6 +168,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -164,6 +176,7 @@ QValue3DAxis *axisY() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_AXISY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -182,6 +195,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -189,6 +203,7 @@ void setAxisY(QValue3DAxis *axis)
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -208,6 +223,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -215,6 +231,7 @@ QValue3DAxis *axisZ() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -233,6 +250,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -240,6 +258,7 @@ void setAxisZ(QValue3DAxis *axis)
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -259,6 +278,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -266,6 +286,7 @@ QSurface3DSeries *selectedSeries() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -284,6 +305,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -291,6 +313,7 @@ bool flipHorizontalGrid() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -308,6 +331,7 @@ HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -315,6 +339,7 @@ void setFlipHorizontalGrid(bool flip)
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -334,6 +359,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -341,6 +367,7 @@ void addSeries(QSurface3DSeries *series)
 */
 HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -360,6 +387,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -367,6 +395,7 @@ void removeSeries(QSurface3DSeries *series)
 */
 HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -386,6 +415,7 @@ HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -393,6 +423,7 @@ QList<QSurface3DSeries *> seriesList() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -435,6 +466,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -442,6 +474,7 @@ void addAxis(QValue3DAxis *axis)
 */
 HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -461,6 +494,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -468,6 +502,7 @@ void releaseAxis(QValue3DAxis *axis)
 */
 HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -487,6 +522,7 @@ HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -494,6 +530,7 @@ QList<QValue3DAxis *> axes() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_AXES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -536,15 +573,15 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
     }
 #endif
   }
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void axisXChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -599,6 +636,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -606,6 +644,7 @@ void axisYChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -660,6 +699,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -667,6 +707,7 @@ void axisZChanged( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -721,6 +762,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -728,6 +770,7 @@ void flipHorizontalGridChanged( bool flip )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -782,6 +825,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -789,6 +833,7 @@ void selectedSeriesChanged( QSurface3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DSurface * sender = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -843,6 +888,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

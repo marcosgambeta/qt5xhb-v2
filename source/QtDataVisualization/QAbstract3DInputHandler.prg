@@ -46,7 +46,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QAbstract3DInputHandler>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -55,7 +57,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QAbstract3DInputHandler>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -69,6 +73,7 @@ virtual ~QAbstract3DInputHandler()
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -82,6 +87,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -89,6 +95,7 @@ InputView inputView() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -106,6 +113,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -113,6 +121,7 @@ void setInputView(InputView inputView)
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -132,6 +141,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -139,6 +149,7 @@ QPoint inputPosition() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -157,6 +168,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -164,6 +176,7 @@ void setInputPosition(const QPoint &position)
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -183,6 +196,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -190,6 +204,7 @@ Q3DScene *scene() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -208,6 +223,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -215,6 +231,7 @@ void setScene(Q3DScene *scene)
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -234,6 +251,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -276,13 +294,12 @@ void setPreviousInputPos(const QPoint &position) [protected]
 QPoint previousInputPos() const [protected]
 */
 
-using namespace QtDataVisualization;
-
 /*
 void inputViewChanged( QAbstract3DInputHandler::InputView view )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -337,6 +354,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -344,6 +362,7 @@ void positionChanged( const QPoint & position )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -398,6 +417,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -405,6 +425,7 @@ void sceneChanged( Q3DScene * scene )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstract3DInputHandler * sender = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -459,6 +480,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

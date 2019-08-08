@@ -105,7 +105,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DTheme>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -114,7 +116,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DTheme>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -124,8 +128,10 @@ explicit Q3DTheme(QObject *parent = nullptr)
 */
 void Q3DTheme_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * o = new Q3DTheme ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -133,8 +139,10 @@ explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
 */
 void Q3DTheme_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * o = new Q3DTheme ( (Q3DTheme::Theme) hb_parni(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -166,6 +174,7 @@ virtual ~Q3DTheme()
 */
 HB_FUNC_STATIC( Q3DTHEME_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -179,6 +188,7 @@ HB_FUNC_STATIC( Q3DTHEME_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -186,6 +196,7 @@ Theme type() const
 */
 HB_FUNC_STATIC( Q3DTHEME_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -203,6 +214,7 @@ HB_FUNC_STATIC( Q3DTHEME_TYPE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -210,6 +222,7 @@ void setType(Theme themeType)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETTYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -229,6 +242,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETTYPE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -236,6 +250,7 @@ QList<QColor> baseColors() const
 */
 HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -282,6 +297,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -289,6 +305,7 @@ void setBaseColors(const QList<QColor> &colors)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBASECOLORS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -316,6 +333,7 @@ for (i1=0;i1<nLen1;i1++)
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -323,6 +341,7 @@ QColor backgroundColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_BACKGROUNDCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -341,6 +360,7 @@ HB_FUNC_STATIC( Q3DTHEME_BACKGROUNDCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -348,6 +368,7 @@ void setBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -367,6 +388,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -374,6 +396,7 @@ QColor windowColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_WINDOWCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -392,6 +415,7 @@ HB_FUNC_STATIC( Q3DTHEME_WINDOWCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -399,6 +423,7 @@ void setWindowColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETWINDOWCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -418,6 +443,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETWINDOWCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -425,6 +451,7 @@ QColor labelTextColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_LABELTEXTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -443,6 +470,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELTEXTCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -450,6 +478,7 @@ void setLabelTextColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELTEXTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -469,6 +498,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELTEXTCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -476,6 +506,7 @@ QColor labelBackgroundColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_LABELBACKGROUNDCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -494,6 +525,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELBACKGROUNDCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -501,6 +533,7 @@ void setLabelBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -520,6 +553,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -527,6 +561,7 @@ QColor gridLineColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_GRIDLINECOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -545,6 +580,7 @@ HB_FUNC_STATIC( Q3DTHEME_GRIDLINECOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -552,6 +588,7 @@ void setGridLineColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETGRIDLINECOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -571,6 +608,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETGRIDLINECOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -578,6 +616,7 @@ QColor singleHighlightColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -596,6 +635,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -603,6 +643,7 @@ void setSingleHighlightColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -622,6 +663,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -629,6 +671,7 @@ QColor multiHighlightColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -647,6 +690,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -654,6 +698,7 @@ void setMultiHighlightColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -673,6 +718,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -680,6 +726,7 @@ QColor lightColor() const
 */
 HB_FUNC_STATIC( Q3DTHEME_LIGHTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -698,6 +745,7 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTCOLOR )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -705,6 +753,7 @@ void setLightColor(const QColor &color)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLIGHTCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -724,6 +773,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLIGHTCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -731,6 +781,7 @@ QList<QLinearGradient> baseGradients() const
 */
 HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -777,6 +828,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -784,6 +836,7 @@ void setBaseGradients(const QList<QLinearGradient> &gradients)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBASEGRADIENTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -811,6 +864,7 @@ for (i1=0;i1<nLen1;i1++)
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -818,6 +872,7 @@ QLinearGradient singleHighlightGradient() const
 */
 HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTGRADIENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -836,6 +891,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTGRADIENT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -843,6 +899,7 @@ void setSingleHighlightGradient(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -862,6 +919,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -869,6 +927,7 @@ QLinearGradient multiHighlightGradient() const
 */
 HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTGRADIENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -887,6 +946,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTGRADIENT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -894,6 +954,7 @@ void setMultiHighlightGradient(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -913,6 +974,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -920,6 +982,7 @@ float lightStrength() const
 */
 HB_FUNC_STATIC( Q3DTHEME_LIGHTSTRENGTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -937,6 +1000,7 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTSTRENGTH )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -944,6 +1008,7 @@ void setLightStrength(float strength)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLIGHTSTRENGTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -963,6 +1028,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLIGHTSTRENGTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -970,6 +1036,7 @@ float ambientLightStrength() const
 */
 HB_FUNC_STATIC( Q3DTHEME_AMBIENTLIGHTSTRENGTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -987,6 +1054,7 @@ HB_FUNC_STATIC( Q3DTHEME_AMBIENTLIGHTSTRENGTH )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -994,6 +1062,7 @@ void setAmbientLightStrength(float strength)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETAMBIENTLIGHTSTRENGTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1013,6 +1082,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETAMBIENTLIGHTSTRENGTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1020,6 +1090,7 @@ float highlightLightStrength() const
 */
 HB_FUNC_STATIC( Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1037,6 +1108,7 @@ HB_FUNC_STATIC( Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1044,6 +1116,7 @@ void setHighlightLightStrength(float strength)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1063,6 +1136,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1070,6 +1144,7 @@ bool isLabelBorderEnabled() const
 */
 HB_FUNC_STATIC( Q3DTHEME_ISLABELBORDERENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1087,6 +1162,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBORDERENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1094,6 +1170,7 @@ void setLabelBorderEnabled(bool enabled)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELBORDERENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1113,6 +1190,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBORDERENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1120,6 +1198,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( Q3DTHEME_FONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1138,6 +1217,7 @@ HB_FUNC_STATIC( Q3DTHEME_FONT )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1145,6 +1225,7 @@ void setFont(const QFont &font)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETFONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1164,6 +1245,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETFONT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1171,6 +1253,7 @@ bool isBackgroundEnabled() const
 */
 HB_FUNC_STATIC( Q3DTHEME_ISBACKGROUNDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1188,6 +1271,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISBACKGROUNDENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1195,6 +1279,7 @@ void setBackgroundEnabled(bool enabled)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1214,6 +1299,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1221,6 +1307,7 @@ bool isGridEnabled() const
 */
 HB_FUNC_STATIC( Q3DTHEME_ISGRIDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1238,6 +1325,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISGRIDENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1245,6 +1333,7 @@ void setGridEnabled(bool enabled)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETGRIDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1264,6 +1353,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETGRIDENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1271,6 +1361,7 @@ bool isLabelBackgroundEnabled() const
 */
 HB_FUNC_STATIC( Q3DTHEME_ISLABELBACKGROUNDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1288,6 +1379,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBACKGROUNDENABLED )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1295,6 +1387,7 @@ void setLabelBackgroundEnabled(bool enabled)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDENABLED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1314,6 +1407,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDENABLED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1321,6 +1415,7 @@ ColorStyle colorStyle() const
 */
 HB_FUNC_STATIC( Q3DTHEME_COLORSTYLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1338,6 +1433,7 @@ HB_FUNC_STATIC( Q3DTHEME_COLORSTYLE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -1345,6 +1441,7 @@ void setColorStyle(ColorStyle style)
 */
 HB_FUNC_STATIC( Q3DTHEME_SETCOLORSTYLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -1364,15 +1461,15 @@ HB_FUNC_STATIC( Q3DTHEME_SETCOLORSTYLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void ambientLightStrengthChanged( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1427,6 +1524,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1434,6 +1532,7 @@ void backgroundColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1488,6 +1587,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1495,6 +1595,7 @@ void backgroundEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1549,6 +1650,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1556,6 +1658,7 @@ void baseColorsChanged( const QList<QColor> & colors )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1633,6 +1736,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1640,6 +1744,7 @@ void baseGradientsChanged( const QList<QLinearGradient> & gradients )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1717,6 +1822,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1724,6 +1830,7 @@ void colorStyleChanged( Q3DTheme::ColorStyle style )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1778,6 +1885,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1785,6 +1893,7 @@ void fontChanged( const QFont & font )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1839,6 +1948,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1846,6 +1956,7 @@ void gridEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1900,6 +2011,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1907,6 +2019,7 @@ void gridLineColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1961,6 +2074,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1968,6 +2082,7 @@ void highlightLightStrengthChanged( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2022,6 +2137,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2029,6 +2145,7 @@ void labelBackgroundColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2083,6 +2200,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2090,6 +2208,7 @@ void labelBackgroundEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2144,6 +2263,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2151,6 +2271,7 @@ void labelBorderEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2205,6 +2326,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2212,6 +2334,7 @@ void labelTextColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2266,6 +2389,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2273,6 +2397,7 @@ void lightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2327,6 +2452,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2334,6 +2460,7 @@ void lightStrengthChanged( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2388,6 +2515,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2395,6 +2523,7 @@ void multiHighlightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2449,6 +2578,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2456,6 +2586,7 @@ void multiHighlightGradientChanged( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2510,6 +2641,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2517,6 +2649,7 @@ void singleHighlightColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2571,6 +2704,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2578,6 +2712,7 @@ void singleHighlightGradientChanged( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2632,6 +2767,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2639,6 +2775,7 @@ void typeChanged( Q3DTheme::Theme themeType )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2693,6 +2830,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -2700,6 +2838,7 @@ void windowColorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DTheme * sender = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -2754,6 +2893,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

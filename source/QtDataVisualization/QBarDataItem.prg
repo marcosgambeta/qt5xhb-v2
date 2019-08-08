@@ -48,7 +48,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QBarDataItem>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -57,7 +59,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QBarDataItem>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -67,8 +71,10 @@ QBarDataItem()
 */
 void QBarDataItem_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * o = new QBarDataItem ();
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -76,8 +82,10 @@ QBarDataItem(float value)
 */
 void QBarDataItem_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * o = new QBarDataItem ( PFLOAT(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -85,8 +93,10 @@ QBarDataItem(float value, float angle)
 */
 void QBarDataItem_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * o = new QBarDataItem ( PFLOAT(1), PFLOAT(2) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -94,8 +104,10 @@ QBarDataItem(const QBarDataItem &other)
 */
 void QBarDataItem_new4 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * o = new QBarDataItem ( *PQBARDATAITEM(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 //[1]QBarDataItem()
@@ -132,6 +144,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
 */
 HB_FUNC_STATIC( QBARDATAITEM_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -145,6 +158,7 @@ HB_FUNC_STATIC( QBARDATAITEM_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -152,6 +166,7 @@ void setValue(float val)
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -171,6 +186,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -178,6 +194,7 @@ float value() const
 */
 HB_FUNC_STATIC( QBARDATAITEM_VALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -195,6 +212,7 @@ HB_FUNC_STATIC( QBARDATAITEM_VALUE )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -202,6 +220,7 @@ void setRotation(float angle)
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -221,6 +240,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -228,6 +248,7 @@ float rotation() const
 */
 HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -245,6 +266,7 @@ HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
     }
 #endif
   }
+#endif
 }
 
 /*

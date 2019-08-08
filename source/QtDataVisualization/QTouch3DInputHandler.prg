@@ -36,7 +36,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QTouch3DInputHandler>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -45,7 +47,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QTouch3DInputHandler>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -55,6 +59,7 @@ explicit QTouch3DInputHandler(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QTouch3DInputHandler * o = new QTouch3DInputHandler ( OPQOBJECT(1,nullptr) );
@@ -64,6 +69,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -71,6 +77,7 @@ virtual ~QTouch3DInputHandler()
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QTouch3DInputHandler * obj = (QTouch3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -84,6 +91,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -91,6 +99,7 @@ virtual void touchEvent(QTouchEvent *event)
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QTouch3DInputHandler * obj = (QTouch3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -110,6 +119,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

@@ -35,7 +35,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QAbstractDataProxy>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -44,7 +46,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/QAbstractDataProxy>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -58,6 +62,7 @@ virtual ~QAbstractDataProxy()
 */
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractDataProxy * obj = (QAbstractDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -71,6 +76,7 @@ HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -78,6 +84,7 @@ DataType type() const
 */
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractDataProxy * obj = (QAbstractDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -95,6 +102,7 @@ HB_FUNC_STATIC( QABSTRACTDATAPROXY_TYPE )
     }
 #endif
   }
+#endif
 }
 
 #pragma ENDDUMP

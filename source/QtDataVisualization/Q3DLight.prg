@@ -39,7 +39,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DLight>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -48,7 +50,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtDataVisualization/Q3DLight>
+#endif
 #endif
 
 using namespace QtDataVisualization;
@@ -58,6 +62,7 @@ explicit Q3DLight(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( Q3DLIGHT_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DLight * o = new Q3DLight ( OPQOBJECT(1,nullptr) );
@@ -67,6 +72,7 @@ HB_FUNC_STATIC( Q3DLIGHT_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -74,6 +80,7 @@ virtual ~Q3DLight()
 */
 HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -87,6 +94,7 @@ HB_FUNC_STATIC( Q3DLIGHT_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -142,8 +150,6 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
   }
 #endif
 }
-
-using namespace QtDataVisualization;
 
 /*
 void autoPositionChanged( bool autoPosition )
