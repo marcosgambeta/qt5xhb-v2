@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtGamepad
+$added=5,9,0
 
 $header
 
@@ -25,191 +26,191 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,9,0
+$includes
 
 $prototype=explicit QGamepad(int deviceId = 0, QObject *parent = nullptr)
-$constructor=5,9,0|new|int=0,QObject *=nullptr
+$constructor=|new|int=0,QObject *=nullptr
 
 $prototype=~QGamepad()
-$deleteMethod=5,9,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(int deviceId READ deviceId WRITE setDeviceId NOTIFY deviceIdChanged)
 %%
 
 $prototype=int deviceId() const
-$method=5,9,0|int|deviceId|
+$method=|int|deviceId|
 
 $prototype=void setDeviceId(int number) (slot)
-$slotMethod=5,9,0|void|setDeviceId|int
+$slotMethod=|void|setDeviceId|int
 
 %%
 %% Q_PROPERTY(bool connected READ isConnected NOTIFY connectedChanged)
 %%
 
 $prototype=bool isConnected() const
-$method=5,9,0|bool|isConnected|
+$method=|bool|isConnected|
 
 %%
 %% Q_PROPERTY(QString name READ name NOTIFY nameChanged)
 %%
 
 $prototype=QString name() const
-$method=5,9,0|QString|name|
+$method=|QString|name|
 
 %%
 %% Q_PROPERTY(double axisLeftX READ axisLeftX NOTIFY axisLeftXChanged)
 %%
 
 $prototype=double axisLeftX() const
-$method=5,9,0|double|axisLeftX|
+$method=|double|axisLeftX|
 
 %%
 %% Q_PROPERTY(double axisLeftY READ axisLeftY NOTIFY axisLeftYChanged)
 %%
 
 $prototype=double axisLeftY() const
-$method=5,9,0|double|axisLeftY|
+$method=|double|axisLeftY|
 
 %%
 %% Q_PROPERTY(double axisRightX READ axisRightX NOTIFY axisRightXChanged)
 %%
 
 $prototype=double axisRightX() const
-$method=5,9,0|double|axisRightX|
+$method=|double|axisRightX|
 
 %%
 %% Q_PROPERTY(double axisRightY READ axisRightY NOTIFY axisRightYChanged)
 %%
 
 $prototype=double axisRightY() const
-$method=5,9,0|double|axisRightY|
+$method=|double|axisRightY|
 
 %%
 %% Q_PROPERTY(bool buttonA READ buttonA NOTIFY buttonAChanged)
 %%
 
 $prototype=bool buttonA() const
-$method=5,9,0|bool|buttonA|
+$method=|bool|buttonA|
 
 %%
 %% Q_PROPERTY(bool buttonB READ buttonB NOTIFY buttonBChanged)
 %%
 
 $prototype=bool buttonB() const
-$method=5,9,0|bool|buttonB|
+$method=|bool|buttonB|
 
 %%
 %% Q_PROPERTY(bool buttonX READ buttonX NOTIFY buttonXChanged)
 %%
 
 $prototype=bool buttonX() const
-$method=5,9,0|bool|buttonX|
+$method=|bool|buttonX|
 
 %%
 %% Q_PROPERTY(bool buttonY READ buttonY NOTIFY buttonYChanged)
 %%
 
 $prototype=bool buttonY() const
-$method=5,9,0|bool|buttonY|
+$method=|bool|buttonY|
 
 %%
 %% Q_PROPERTY(bool buttonL1 READ buttonL1 NOTIFY buttonL1Changed)
 %%
 
 $prototype=bool buttonL1() const
-$method=5,9,0|bool|buttonL1|
+$method=|bool|buttonL1|
 
 %%
 %% Q_PROPERTY(bool buttonR1 READ buttonR1 NOTIFY buttonR1Changed)
 %%
 
 $prototype=bool buttonR1() const
-$method=5,9,0|bool|buttonR1|
+$method=|bool|buttonR1|
 
 %%
 %% Q_PROPERTY(double buttonL2 READ buttonL2 NOTIFY buttonL2Changed)
 %%
 
 $prototype=double buttonL2() const
-$method=5,9,0|double|buttonL2|
+$method=|double|buttonL2|
 
 %%
 %% Q_PROPERTY(double buttonR2 READ buttonR2 NOTIFY buttonR2Changed)
 %%
 
 $prototype=double buttonR2() const
-$method=5,9,0|double|buttonR2|
+$method=|double|buttonR2|
 
 %%
 %% Q_PROPERTY(bool buttonSelect READ buttonSelect NOTIFY buttonSelectChanged)
 %%
 
 $prototype=bool buttonSelect() const
-$method=5,9,0|bool|buttonSelect|
+$method=|bool|buttonSelect|
 
 %%
 %% Q_PROPERTY(bool buttonStart READ buttonStart NOTIFY buttonStartChanged)
 %%
 
 $prototype=bool buttonStart() const
-$method=5,9,0|bool|buttonStart|
+$method=|bool|buttonStart|
 
 %%
 %% Q_PROPERTY(bool buttonL3 READ buttonL3 NOTIFY buttonL3Changed)
 %%
 
 $prototype=bool buttonL3() const
-$method=5,9,0|bool|buttonL3|
+$method=|bool|buttonL3|
 
 %%
 %% Q_PROPERTY(bool buttonR3 READ buttonR3 NOTIFY buttonR3Changed)
 %%
 
 $prototype=bool buttonR3() const
-$method=5,9,0|bool|buttonR3|
+$method=|bool|buttonR3|
 
 %%
 %% Q_PROPERTY(bool buttonUp READ buttonUp NOTIFY buttonUpChanged)
 %%
 
 $prototype=bool buttonUp() const
-$method=5,9,0|bool|buttonUp|
+$method=|bool|buttonUp|
 
 %%
 %% Q_PROPERTY(bool buttonDown READ buttonDown NOTIFY buttonDownChanged)
 %%
 
 $prototype=bool buttonDown() const
-$method=5,9,0|bool|buttonDown|
+$method=|bool|buttonDown|
 
 %%
 %% Q_PROPERTY(bool buttonLeft READ buttonLeft NOTIFY buttonLeftChanged)
 %%
 
 $prototype=bool buttonLeft() const
-$method=5,9,0|bool|buttonLeft|
+$method=|bool|buttonLeft|
 
 %%
 %% Q_PROPERTY(bool buttonRight READ buttonRight NOTIFY buttonRightChanged)
 %%
 
 $prototype=bool buttonRight() const
-$method=5,9,0|bool|buttonRight|
+$method=|bool|buttonRight|
 
 %%
 %% Q_PROPERTY(bool buttonCenter READ buttonCenter NOTIFY buttonCenterChanged)
 %%
 
 $prototype=bool buttonCenter() const
-$method=5,9,0|bool|buttonCenter|
+$method=|bool|buttonCenter|
 
 %%
 %% Q_PROPERTY(bool buttonGuide READ buttonGuide NOTIFY buttonGuideChanged)
 %%
 
 $prototype=bool buttonGuide() const
-$method=5,9,0|bool|buttonGuide|
+$method=|bool|buttonGuide|
 
 %%
 %%
@@ -220,78 +221,78 @@ $method=5,9,0|bool|buttonGuide|
 %%
 
 $prototype=void axisLeftXChanged( double value )
-$signalMethod=5,9,0|void|axisLeftXChanged|double
+$signalMethod=|void|axisLeftXChanged|double
 
 $prototype=void axisLeftYChanged( double value )
-$signalMethod=5,9,0|void|axisLeftYChanged|double
+$signalMethod=|void|axisLeftYChanged|double
 
 $prototype=void axisRightXChanged( double value )
-$signalMethod=5,9,0|void|axisRightXChanged|double
+$signalMethod=|void|axisRightXChanged|double
 
 $prototype=void axisRightYChanged( double value )
-$signalMethod=5,9,0|void|axisRightYChanged|double
+$signalMethod=|void|axisRightYChanged|double
 
 $prototype=void buttonAChanged( bool value )
-$signalMethod=5,9,0|void|buttonAChanged|bool
+$signalMethod=|void|buttonAChanged|bool
 
 $prototype=void buttonBChanged( bool value )
-$signalMethod=5,9,0|void|buttonBChanged|bool
+$signalMethod=|void|buttonBChanged|bool
 
 $prototype=void buttonCenterChanged( bool value )
-$signalMethod=5,9,0|void|buttonCenterChanged|bool
+$signalMethod=|void|buttonCenterChanged|bool
 
 $prototype=void buttonDownChanged( bool value )
-$signalMethod=5,9,0|void|buttonDownChanged|bool
+$signalMethod=|void|buttonDownChanged|bool
 
 $prototype=void buttonGuideChanged( bool value )
-$signalMethod=5,9,0|void|buttonGuideChanged|bool
+$signalMethod=|void|buttonGuideChanged|bool
 
 $prototype=void buttonL1Changed( bool value )
-$signalMethod=5,9,0|void|buttonL1Changed|bool
+$signalMethod=|void|buttonL1Changed|bool
 
 $prototype=void buttonL2Changed( double value )
-$signalMethod=5,9,0|void|buttonL2Changed|double
+$signalMethod=|void|buttonL2Changed|double
 
 $prototype=void buttonL3Changed( bool value )
-$signalMethod=5,9,0|void|buttonL3Changed|bool
+$signalMethod=|void|buttonL3Changed|bool
 
 $prototype=void buttonLeftChanged( bool value )
-$signalMethod=5,9,0|void|buttonLeftChanged|bool
+$signalMethod=|void|buttonLeftChanged|bool
 
 $prototype=void buttonR1Changed( bool value )
-$signalMethod=5,9,0|void|buttonR1Changed|bool
+$signalMethod=|void|buttonR1Changed|bool
 
 $prototype=void buttonR2Changed( double value )
-$signalMethod=5,9,0|void|buttonR2Changed|double
+$signalMethod=|void|buttonR2Changed|double
 
 $prototype=void buttonR3Changed( bool value )
-$signalMethod=5,9,0|void|buttonR3Changed|bool
+$signalMethod=|void|buttonR3Changed|bool
 
 $prototype=void buttonRightChanged( bool value )
-$signalMethod=5,9,0|void|buttonRightChanged|bool
+$signalMethod=|void|buttonRightChanged|bool
 
 $prototype=void buttonSelectChanged( bool value )
-$signalMethod=5,9,0|void|buttonSelectChanged|bool
+$signalMethod=|void|buttonSelectChanged|bool
 
 $prototype=void buttonStartChanged( bool value )
-$signalMethod=5,9,0|void|buttonStartChanged|bool
+$signalMethod=|void|buttonStartChanged|bool
 
 $prototype=void buttonUpChanged( bool value )
-$signalMethod=5,9,0|void|buttonUpChanged|bool
+$signalMethod=|void|buttonUpChanged|bool
 
 $prototype=void buttonXChanged( bool value )
-$signalMethod=5,9,0|void|buttonXChanged|bool
+$signalMethod=|void|buttonXChanged|bool
 
 $prototype=void buttonYChanged( bool value )
-$signalMethod=5,9,0|void|buttonYChanged|bool
+$signalMethod=|void|buttonYChanged|bool
 
 $prototype=void connectedChanged( bool value )
-$signalMethod=5,9,0|void|connectedChanged|bool
+$signalMethod=|void|connectedChanged|bool
 
 $prototype=void deviceIdChanged( int value )
-$signalMethod=5,9,0|void|deviceIdChanged|int
+$signalMethod=|void|deviceIdChanged|int
 
 $prototype=void nameChanged( QString value )
-$signalMethod=5,9,0|void|nameChanged|QString
+$signalMethod=|void|nameChanged|QString
 
 #pragma ENDDUMP

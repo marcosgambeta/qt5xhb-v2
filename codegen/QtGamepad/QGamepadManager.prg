@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtGamepad
+$added=5,9,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,9,0
+$includes
 
 $prototype=QGamepadManager() [private]
 
@@ -38,65 +39,65 @@ $prototype=~QGamepadManager() [private]
 
 $prototype=const QList<int> connectedGamepads() const
 %% TODO: const QList<int>
-%% $method=5,9,0|const QList<int>|connectedGamepads|
+%% $method=|const QList<int>|connectedGamepads|
 
 %%
 %%
 %%
 
 $prototype=static QGamepadManager* instance()
-$staticMethod=5,9,0|QGamepadManager *|instance|
+$staticMethod=|QGamepadManager *|instance|
 
 $prototype=bool isGamepadConnected(int deviceId) const
-$method=5,9,0|bool|isGamepadConnected|int
+$method=|bool|isGamepadConnected|int
 
 $prototype=bool isConfigurationNeeded(int deviceId) const (slot)
-$slotMethod=5,9,0|bool|isConfigurationNeeded|int
+$slotMethod=|bool|isConfigurationNeeded|int
 
 $prototype=bool configureButton(int deviceId, GamepadButton button) (slot)
-$slotMethod=5,9,0|bool|configureButton|int,QGamepadManager::GamepadButton
+$slotMethod=|bool|configureButton|int,QGamepadManager::GamepadButton
 
 $prototype=bool configureAxis(int deviceId, GamepadAxis axis) (slot)
-$slotMethod=5,9,0|bool|configureAxis|int,QGamepadManager::GamepadAxis
+$slotMethod=|bool|configureAxis|int,QGamepadManager::GamepadAxis
 
 $prototype=bool setCancelConfigureButton(int deviceId, GamepadButton button) (slot)
-$slotMethod=5,9,0|bool|setCancelConfigureButton|int,QGamepadManager::GamepadButton
+$slotMethod=|bool|setCancelConfigureButton|int,QGamepadManager::GamepadButton
 
 $prototype=void resetConfiguration(int deviceId) (slot)
-$slotMethod=5,9,0|void|resetConfiguration|int
+$slotMethod=|void|resetConfiguration|int
 
 $prototype=void setSettingsFile(const QString &file) (slot)
-$slotMethod=5,9,0|void|setSettingsFile|const QString &
+$slotMethod=|void|setSettingsFile|const QString &
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void connectedGamepadsChanged()
-$signalMethod=5,9,0|void|connectedGamepadsChanged|
+$signalMethod=|void|connectedGamepadsChanged|
 
 $prototype=void gamepadConnected( int deviceId )
-$signalMethod=5,9,0|void|gamepadConnected|int
+$signalMethod=|void|gamepadConnected|int
 
 $prototype=void gamepadDisconnected( int deviceId )
-$signalMethod=5,9,0|void|gamepadDisconnected|int
+$signalMethod=|void|gamepadDisconnected|int
 
 $prototype=void gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
-$signalMethod=5,9,0|void|gamepadAxisEvent|int,QGamepadManager::GamepadAxis,double
+$signalMethod=|void|gamepadAxisEvent|int,QGamepadManager::GamepadAxis,double
 
 $prototype=void gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
-$signalMethod=5,9,0|void|gamepadButtonPressEvent|int,QGamepadManager::GamepadButton,double
+$signalMethod=|void|gamepadButtonPressEvent|int,QGamepadManager::GamepadButton,double
 
 $prototype=void gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
-$signalMethod=5,9,0|void|gamepadButtonReleaseEvent|int,QGamepadManager::GamepadButton
+$signalMethod=|void|gamepadButtonReleaseEvent|int,QGamepadManager::GamepadButton
 
 $prototype=void buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
-$signalMethod=5,9,0|void|buttonConfigured|int,QGamepadManager::GamepadButton
+$signalMethod=|void|buttonConfigured|int,QGamepadManager::GamepadButton
 
 $prototype=void axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
-$signalMethod=5,9,0|void|axisConfigured|int,QGamepadManager::GamepadAxis
+$signalMethod=|void|axisConfigured|int,QGamepadManager::GamepadAxis
 
 $prototype=void configurationCanceled( int deviceId )
-$signalMethod=5,9,0|void|configurationCanceled|int
+$signalMethod=|void|configurationCanceled|int
 
 #pragma ENDDUMP
