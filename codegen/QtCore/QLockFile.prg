@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCore
+$added=5,1,0
 
 $header
 
@@ -23,37 +24,37 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QLockFile(const QString &fileName)
-$constructor=5,1,0|new|const QString &
+$constructor=|new|const QString &
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=bool lock()
-$method=5,1,0|bool|lock|
+$method=|bool|lock|
 
 $prototype=bool tryLock(int timeout = 0)
-$method=5,1,0|bool|tryLock|int=0
+$method=|bool|tryLock|int=0
 
 $prototype=void unlock()
-$method=5,1,0|void|unlock|
+$method=|void|unlock|
 
 $prototype=void setStaleLockTime(int)
-$method=5,1,0|void|setStaleLockTime|int
+$method=|void|setStaleLockTime|int
 
 $prototype=int staleLockTime() const
-$method=5,1,0|int|staleLockTime|
+$method=|int|staleLockTime|
 
 $prototype=bool isLocked() const
-$method=5,1,0|bool|isLocked|
+$method=|bool|isLocked|
 
 $prototype=bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
 %% TODO: revisar implementacao do metodo e corrigir(?)
-%% $method=5,1,0|bool|getLockInfo|qint64 *,QString *,QString *
+%% $method=|bool|getLockInfo|qint64 *,QString *,QString *
 
 $prototype=bool removeStaleLockFile()
-$method=5,1,0|bool|removeStaleLockFile|
+$method=|bool|removeStaleLockFile|
 
 $extraMethods
 

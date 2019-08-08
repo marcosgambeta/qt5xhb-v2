@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCore
+$added=5,2,0
 
 $header
 
@@ -23,42 +24,42 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QCommandLineParser()
-$constructor=5,2,0|new|
+$constructor=|new|
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=void setSingleDashWordOptionMode(SingleDashWordOptionMode parsingMode)
-$method=5,2,0|void|setSingleDashWordOptionMode|QCommandLineParser::SingleDashWordOptionMode
+$method=|void|setSingleDashWordOptionMode|QCommandLineParser::SingleDashWordOptionMode
 
 $prototype=bool addOption(const QCommandLineOption &commandLineOption)
-$method=5,2,0|bool|addOption|const QCommandLineOption &
+$method=|bool|addOption|const QCommandLineOption &
 
 $prototype=QCommandLineOption addVersionOption()
-$method=5,2,0|QCommandLineOption|addVersionOption|
+$method=|QCommandLineOption|addVersionOption|
 
 $prototype=QCommandLineOption addHelpOption()
-$method=5,2,0|QCommandLineOption|addHelpOption|
+$method=|QCommandLineOption|addHelpOption|
 
 $prototype=void setApplicationDescription(const QString &description)
-$method=5,2,0|void|setApplicationDescription|const QString &
+$method=|void|setApplicationDescription|const QString &
 
 $prototype=QString applicationDescription() const
-$method=5,2,0|QString|applicationDescription|
+$method=|QString|applicationDescription|
 
 $prototype=void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
-$method=5,2,0|void|addPositionalArgument|const QString &,const QString &,const QString &=QString()
+$method=|void|addPositionalArgument|const QString &,const QString &,const QString &=QString()
 
 $prototype=void clearPositionalArguments()
-$method=5,2,0|void|clearPositionalArguments|
+$method=|void|clearPositionalArguments|
 
 $prototype=void process(const QStringList &arguments)
-$internalMethod=5,2,0|void|process,process1|const QStringList &
+$internalMethod=|void|process,process1|const QStringList &
 
 $prototype=void process(const QCoreApplication &app)
-$internalMethod=5,2,0|void|process,process2|const QCoreApplication &
+$internalMethod=|void|process,process2|const QCoreApplication &
 
 //[1]void process(const QStringList &arguments)
 //[2]void process(const QCoreApplication &app)
@@ -81,16 +82,16 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 $addMethod=process
 
 $prototype=bool parse(const QStringList &arguments)
-$method=5,2,0|bool|parse|const QStringList &
+$method=|bool|parse|const QStringList &
 
 $prototype=QString errorText() const
-$method=5,2,0|QString|errorText|
+$method=|QString|errorText|
 
 $prototype=bool isSet(const QString &name) const
-$internalMethod=5,2,0|bool|isSet,isSet1|const QString &
+$internalMethod=|bool|isSet,isSet1|const QString &
 
 $prototype=bool isSet(const QCommandLineOption &option) const
-$internalMethod=5,2,0|bool|isSet,isSet2|const QCommandLineOption &
+$internalMethod=|bool|isSet,isSet2|const QCommandLineOption &
 
 //[1]bool isSet(const QString &name) const
 //[2]bool isSet(const QCommandLineOption &option) const
@@ -113,10 +114,10 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
 $addMethod=isSet
 
 $prototype=QString value(const QString &name) const
-$internalMethod=5,2,0|QString|value,value1|const QString &
+$internalMethod=|QString|value,value1|const QString &
 
 $prototype=QString value(const QCommandLineOption &option) const
-$internalMethod=5,2,0|QString|value,value2|const QCommandLineOption &
+$internalMethod=|QString|value,value2|const QCommandLineOption &
 
 //[1]QString value(const QString &name) const
 //[2]QString value(const QCommandLineOption &option) const
@@ -139,10 +140,10 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
 $addMethod=value
 
 $prototype=QStringList values(const QString &name) const
-$internalMethod=5,2,0|QStringList|values,values1|const QString &
+$internalMethod=|QStringList|values,values1|const QString &
 
 $prototype=QStringList values(const QCommandLineOption &option) const
-$internalMethod=5,2,0|QStringList|values,values2|const QCommandLineOption &
+$internalMethod=|QStringList|values,values2|const QCommandLineOption &
 
 //[1]QStringList values(const QString &name) const
 //[2]QStringList values(const QCommandLineOption &option) const
@@ -165,19 +166,19 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
 $addMethod=values
 
 $prototype=QStringList positionalArguments() const
-$method=5,2,0|QStringList|positionalArguments|
+$method=|QStringList|positionalArguments|
 
 $prototype=QStringList optionNames() const
-$method=5,2,0|QStringList|optionNames|
+$method=|QStringList|optionNames|
 
 $prototype=QStringList unknownOptionNames() const
-$method=5,2,0|QStringList|unknownOptionNames|
+$method=|QStringList|unknownOptionNames|
 
 $prototype=Q_NORETURN void showHelp(int exitCode = 0)
-$method=5,2,0|void|showHelp|int=0
+$method=|void|showHelp|int=0
 
 $prototype=QString helpText() const
-$method=5,2,0|QString|helpText|
+$method=|QString|helpText|
 
 $extraMethods
 

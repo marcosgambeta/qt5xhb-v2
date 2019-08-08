@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCore
+$added=5,2,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QCollator(const QLocale &locale = QLocale())
-$internalConstructor=5,2,0|new1|const QLocale &=QLocale()
+$internalConstructor=|new1|const QLocale &=QLocale()
 
 $prototype=QCollator(const QCollator &)
-$internalConstructor=5,2,0|new2|const QCollator &
+$internalConstructor=|new2|const QCollator &
 
 //[1]QCollator(const QLocale &locale = QLocale())
 //[2]QCollator(const QCollator &)
@@ -50,37 +51,37 @@ HB_FUNC_STATIC( QCOLLATOR_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=void swap(QCollator &other)
-$method=5,2,0|void|swap|QCollator &
+$method=|void|swap|QCollator &
 
 $prototype=void setLocale(const QLocale &locale)
-$method=5,2,0|void|setLocale|const QLocale &
+$method=|void|setLocale|const QLocale &
 
 $prototype=QLocale locale() const
-$method=5,2,0|QLocale|locale|
+$method=|QLocale|locale|
 
 $prototype=Qt::CaseSensitivity caseSensitivity() const
-$method=5,2,0|Qt::CaseSensitivity|caseSensitivity|
+$method=|Qt::CaseSensitivity|caseSensitivity|
 
 $prototype=void setCaseSensitivity(Qt::CaseSensitivity cs)
-$method=5,2,0|void|setCaseSensitivity|Qt::CaseSensitivity
+$method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
 $prototype=void setNumericMode(bool on)
-$method=5,2,0|void|setNumericMode|bool
+$method=|void|setNumericMode|bool
 
 $prototype=bool numericMode() const
-$method=5,2,0|bool|numericMode|
+$method=|bool|numericMode|
 
 $prototype=void setIgnorePunctuation(bool on)
-$method=5,2,0|void|setIgnorePunctuation|bool
+$method=|void|setIgnorePunctuation|bool
 
 $prototype=bool ignorePunctuation() const
-$method=5,2,0|bool|ignorePunctuation|
+$method=|bool|ignorePunctuation|
 
 $prototype=QCollatorSortKey sortKey(const QString &string) const
-$method=5,2,0|QCollatorSortKey|sortKey|const QString &
+$method=|QCollatorSortKey|sortKey|const QString &
 
 $extraMethods
 

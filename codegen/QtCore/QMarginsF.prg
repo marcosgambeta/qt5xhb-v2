@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCore
+$added=5,3,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 $prototype=QMarginsF()
-$internalConstructor=5,3,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
-$internalConstructor=5,3,0|new2|qreal,qreal,qreal,qreal
+$internalConstructor=|new2|qreal,qreal,qreal,qreal
 
 $prototype=QMarginsF(const QMargins &margins)
-$internalConstructor=5,3,0|new3|const QMargins &
+$internalConstructor=|new3|const QMargins &
 
 //[1]QMarginsF()
 //[2]QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
@@ -58,37 +59,37 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
   }
 }
 
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=bool isNull() const
-$method=5,3,0|bool|isNull|
+$method=|bool|isNull|
 
 $prototype=qreal left() const
-$method=5,3,0|qreal|left|
+$method=|qreal|left|
 
 $prototype=qreal top() const
-$method=5,3,0|qreal|top|
+$method=|qreal|top|
 
 $prototype=qreal right() const
-$method=5,3,0|qreal|right|
+$method=|qreal|right|
 
 $prototype=qreal bottom() const
-$method=5,3,0|qreal|bottom|
+$method=|qreal|bottom|
 
 $prototype=void setLeft(qreal left)
-$method=5,3,0|void|setLeft|qreal
+$method=|void|setLeft|qreal
 
 $prototype=void setTop(qreal top)
-$method=5,3,0|void|setTop|qreal
+$method=|void|setTop|qreal
 
 $prototype=void setRight(qreal right)
-$method=5,3,0|void|setRight|qreal
+$method=|void|setRight|qreal
 
 $prototype=void setBottom(qreal bottom)
-$method=5,3,0|void|setBottom|qreal
+$method=|void|setBottom|qreal
 
 $prototype=QMargins toMargins() const
-$method=5,3,0|QMargins|toMargins|
+$method=|QMargins|toMargins|
 
 $extraMethods
 

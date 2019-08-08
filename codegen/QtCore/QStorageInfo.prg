@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCore
+$added=5,4,0
 
 $header
 
@@ -23,19 +24,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QStorageInfo()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=explicit QStorageInfo(const QString &path)
-$internalConstructor=5,4,0|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 $prototype=explicit QStorageInfo(const QDir &dir)
-$internalConstructor=5,4,0|new3|const QDir &
+$internalConstructor=|new3|const QDir &
 
 $prototype=QStorageInfo(const QStorageInfo &other)
-$internalConstructor=5,4,0|new4|const QStorageInfo &
+$internalConstructor=|new4|const QStorageInfo &
 
 //[1]QStorageInfo()
 //[2]explicit QStorageInfo(const QString &path)
@@ -66,58 +67,58 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=void swap(QStorageInfo &other)
-$method=5,4,0|void|swap|QStorageInfo &
+$method=|void|swap|QStorageInfo &
 
 $prototype=void setPath(const QString &path)
-$method=5,4,0|void|setPath|const QString &
+$method=|void|setPath|const QString &
 
 $prototype=QString rootPath() const
-$method=5,4,0|QString|rootPath|
+$method=|QString|rootPath|
 
 $prototype=QByteArray device() const
-$method=5,4,0|QByteArray|device|
+$method=|QByteArray|device|
 
 $prototype=QByteArray fileSystemType() const
-$method=5,4,0|QByteArray|fileSystemType|
+$method=|QByteArray|fileSystemType|
 
 $prototype=QString name() const
-$method=5,4,0|QString|name|
+$method=|QString|name|
 
 $prototype=QString displayName() const
-$method=5,4,0|QString|displayName|
+$method=|QString|displayName|
 
 $prototype=qint64 bytesTotal() const
-$method=5,4,0|qint64|bytesTotal|
+$method=|qint64|bytesTotal|
 
 $prototype=qint64 bytesFree() const
-$method=5,4,0|qint64|bytesFree|
+$method=|qint64|bytesFree|
 
 $prototype=qint64 bytesAvailable() const
-$method=5,4,0|qint64|bytesAvailable|
+$method=|qint64|bytesAvailable|
 
 $prototype=bool isRoot() const
-$method=5,4,0|bool|isRoot|
+$method=|bool|isRoot|
 
 $prototype=bool isReadOnly() const
-$method=5,4,0|bool|isReadOnly|
+$method=|bool|isReadOnly|
 
 $prototype=bool isReady() const
-$method=5,4,0|bool|isReady|
+$method=|bool|isReady|
 
 $prototype=bool isValid() const
-$method=5,4,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=void refresh()
-$method=5,4,0|void|refresh|
+$method=|void|refresh|
 
 $prototype=static QList<QStorageInfo> mountedVolumes()
-$staticMethod=5,4,0|QList<QStorageInfo>|mountedVolumes|
+$staticMethod=|QList<QStorageInfo>|mountedVolumes|
 
 $prototype=static QStorageInfo root()
-$staticMethod=5,4,0|QStorageInfo|root|
+$staticMethod=|QStorageInfo|root|
 
 $extraMethods
 

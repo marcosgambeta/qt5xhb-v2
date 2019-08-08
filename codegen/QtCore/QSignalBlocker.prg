@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtCore
+$added=5,3,0
 
 $header
 
@@ -23,10 +24,10 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 $prototype=explicit QSignalBlocker(QObject *o) Q_DECL_NOTHROW
-$constructor=5,3,0|new|QObject *
+$constructor=|new|QObject *
 
 $prototype=explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
 %% TODO: check
@@ -40,13 +41,13 @@ $prototype=explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
 //[2]explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
 
 $prototype=~QSignalBlocker()
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=void reblock() Q_DECL_NOTHROW
-$method=5,3,0|void|reblock|
+$method=|void|reblock|
 
 $prototype=void unblock() Q_DECL_NOTHROW
-$method=5,3,0|void|unblock|
+$method=|void|unblock|
 
 $extraMethods
 
