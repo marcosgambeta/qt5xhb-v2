@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMacExtras
+$added=5,2,0
 
 $header
 
@@ -23,33 +24,33 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QMacPasteboardMime(char)
-$constructor=5,2,0|new|char
+$constructor=|new|char
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=virtual QString convertorName() = 0
-$virtualMethod=5,2,0|QString|convertorName|
+$virtualMethod=|QString|convertorName|
 
 $prototype=virtual bool canConvert(const QString &mime, QString flav) = 0
-$virtualMethod=5,2,0|bool|canConvert|const QString &,QString
+$virtualMethod=|bool|canConvert|const QString &,QString
 
 $prototype=virtual QString mimeFor(QString flav) = 0
-$virtualMethod=5,2,0|QString|mimeFor|QString
+$virtualMethod=|QString|mimeFor|QString
 
 $prototype=virtual QString flavorFor(const QString &mime) = 0
-$virtualMethod=5,2,0|QString|flavorFor|const QString &
+$virtualMethod=|QString|flavorFor|const QString &
 
 $prototype=virtual QVariant convertToMime(const QString &mime, QList<QByteArray> data, QString flav) = 0
-$virtualMethod=5,2,0|QVariant|convertToMime|const QString &,QList<QByteArray>,QString
+$virtualMethod=|QVariant|convertToMime|const QString &,QList<QByteArray>,QString
 
 $prototype=virtual QList<QByteArray> convertFromMime(const QString &mime, QVariant data, QString flav) = 0
-$virtualMethod=5,2,0|QList<QByteArray>|convertFromMime|const QString &,QVariant,QString
+$virtualMethod=|QList<QByteArray>|convertFromMime|const QString &,QVariant,QString
 
 $prototype=virtual int count(QMimeData *mimeData)
-$virtualMethod=5,2,0|int|count|QMimeData *
+$virtualMethod=|int|count|QMimeData *
 
 $extraMethods
 
