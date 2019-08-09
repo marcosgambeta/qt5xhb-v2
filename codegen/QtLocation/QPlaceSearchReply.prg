@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,28 +24,28 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QPlaceSearchRequest>
 
 $prototype=explicit QPlaceSearchReply(QObject *parent = nullptr)
-$constructor=5,4,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QPlaceReply::Type type() const
-$method=5,4,0|QPlaceReply::Type|type|
+$method=|QPlaceReply::Type|type|
 
 $prototype=QList<QPlaceSearchResult> results() const
-$method=5,4,0|QList<QPlaceSearchResult>|results|
+$method=|QList<QPlaceSearchResult>|results|
 
 $prototype=QPlaceSearchRequest request() const
-$method=5,4,0|QPlaceSearchRequest|request|
+$method=|QPlaceSearchRequest|request|
 
 $prototype=QPlaceSearchRequest previousPageRequest() const
-$method=5,4,0|QPlaceSearchRequest|previousPageRequest|
+$method=|QPlaceSearchRequest|previousPageRequest|
 
 $prototype=QPlaceSearchRequest nextPageRequest() const
-$method=5,4,0|QPlaceSearchRequest|nextPageRequest|
+$method=|QPlaceSearchRequest|nextPageRequest|
 
 #pragma ENDDUMP

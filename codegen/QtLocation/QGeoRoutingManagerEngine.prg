@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -25,60 +26,60 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QString managerName() const
-$method=5,4,0|QString|managerName|
+$method=|QString|managerName|
 
 $prototype=int managerVersion() const
-$method=5,4,0|int|managerVersion|
+$method=|int|managerVersion|
 
 $prototype=virtual QGeoRouteReply *calculateRoute(const QGeoRouteRequest &request) = 0
-$virtualMethod=5,4,0|QGeoRouteReply *|calculateRoute|const QGeoRouteRequest &
+$virtualMethod=|QGeoRouteReply *|calculateRoute|const QGeoRouteRequest &
 
 $prototype=virtual QGeoRouteReply *updateRoute(const QGeoRoute &route, const QGeoCoordinate &position)
-$virtualMethod=5,4,0|QGeoRouteReply *|updateRoute|const QGeoRoute &,const QGeoCoordinate &
+$virtualMethod=|QGeoRouteReply *|updateRoute|const QGeoRoute &,const QGeoCoordinate &
 
 $prototype=QGeoRouteRequest::TravelModes supportedTravelModes() const
-$method=5,4,0|QGeoRouteRequest::TravelModes|supportedTravelModes|
+$method=|QGeoRouteRequest::TravelModes|supportedTravelModes|
 
 $prototype=QGeoRouteRequest::FeatureTypes supportedFeatureTypes() const
-$method=5,4,0|QGeoRouteRequest::FeatureTypes|supportedFeatureTypes|
+$method=|QGeoRouteRequest::FeatureTypes|supportedFeatureTypes|
 
 $prototype=QGeoRouteRequest::FeatureWeights supportedFeatureWeights() const
-$method=5,4,0|QGeoRouteRequest::FeatureWeights|supportedFeatureWeights|
+$method=|QGeoRouteRequest::FeatureWeights|supportedFeatureWeights|
 
 $prototype=QGeoRouteRequest::RouteOptimizations supportedRouteOptimizations() const
-$method=5,4,0|QGeoRouteRequest::RouteOptimizations|supportedRouteOptimizations|
+$method=|QGeoRouteRequest::RouteOptimizations|supportedRouteOptimizations|
 
 $prototype=QGeoRouteRequest::SegmentDetails supportedSegmentDetails() const
-$method=5,4,0|QGeoRouteRequest::SegmentDetails|supportedSegmentDetails|
+$method=|QGeoRouteRequest::SegmentDetails|supportedSegmentDetails|
 
 $prototype=QGeoRouteRequest::ManeuverDetails supportedManeuverDetails() const
-$method=5,4,0|QGeoRouteRequest::ManeuverDetails|supportedManeuverDetails|
+$method=|QGeoRouteRequest::ManeuverDetails|supportedManeuverDetails|
 
 $prototype=void setLocale(const QLocale &locale)
-$method=5,4,0|void|setLocale|const QLocale &
+$method=|void|setLocale|const QLocale &
 
 $prototype=QLocale locale() const
-$method=5,4,0|QLocale|locale|
+$method=|QLocale|locale|
 
 $prototype=void setMeasurementSystem(QLocale::MeasurementSystem system)
-$method=5,4,0|void|setMeasurementSystem|QLocale::MeasurementSystem
+$method=|void|setMeasurementSystem|QLocale::MeasurementSystem
 
 $prototype=QLocale::MeasurementSystem measurementSystem() const
-$method=5,4,0|QLocale::MeasurementSystem|measurementSystem|
+$method=|QLocale::MeasurementSystem|measurementSystem|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void finished( QGeoRouteReply * reply )
-$signalMethod=5,4,0|void|finished|QGeoRouteReply *
+$signalMethod=|void|finished|QGeoRouteReply *
 
 $prototype=void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
-$signalMethod=5,4,0|void|error|QGeoRouteReply *,QGeoRouteReply::Error,QString
+$signalMethod=|void|error|QGeoRouteReply *,QGeoRouteReply::Error,QString
 
 #pragma ENDDUMP

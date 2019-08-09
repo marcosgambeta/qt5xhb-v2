@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QPlaceSupplier>
 #include <QtLocation/QPlaceUser>
 
 $prototype=QPlaceContent()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceContent(const QPlaceContent &other)
-$internalConstructor=5,4,0|new2|const QPlaceContent &
+$internalConstructor=|new2|const QPlaceContent &
 
 //[1]QPlaceContent()
 //[2]QPlaceContent(const QPlaceContent &other)
@@ -53,28 +54,28 @@ HB_FUNC_STATIC( QPLACECONTENT_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QPlaceContent::Type type() const
-$method=5,4,0|QPlaceContent::Type|type|
+$method=|QPlaceContent::Type|type|
 
 $prototype=QPlaceSupplier supplier() const
-$method=5,4,0|QPlaceSupplier|supplier|
+$method=|QPlaceSupplier|supplier|
 
 $prototype=void setSupplier(const QPlaceSupplier &supplier)
-$method=5,4,0|void|setSupplier|const QPlaceSupplier &
+$method=|void|setSupplier|const QPlaceSupplier &
 
 $prototype=QPlaceUser user() const
-$method=5,4,0|QPlaceUser|user|
+$method=|QPlaceUser|user|
 
 $prototype=void setUser(const QPlaceUser &user)
-$method=5,4,0|void|setUser|const QPlaceUser &
+$method=|void|setUser|const QPlaceUser &
 
 $prototype=QString attribution() const
-$method=5,4,0|QString|attribution|
+$method=|QString|attribution|
 
 $prototype=void setAttribution(const QString &attribution)
-$method=5,4,0|void|setAttribution|const QString &
+$method=|void|setAttribution|const QString &
 
 $extraMethods
 

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QPlaceMatchRequest()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceMatchRequest(const QPlaceMatchRequest &other)
-$internalConstructor=5,4,0|new2|const QPlaceMatchRequest &
+$internalConstructor=|new2|const QPlaceMatchRequest &
 
 //[1]QPlaceMatchRequest()
 //[2]QPlaceMatchRequest(const QPlaceMatchRequest &other)
@@ -50,19 +51,19 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QList<QPlace> places() const
-$method=5,4,0|QList<QPlace>|places|
+$method=|QList<QPlace>|places|
 
 $prototype=void setPlaces(const QList<QPlace> places)
-$method=5,4,0|void|setPlaces|const QList<QPlace> &
+$method=|void|setPlaces|const QList<QPlace> &
 
 $prototype=void setResults(const QList<QPlaceSearchResult> &results)
-$method=5,4,0|void|setResults|const QList<QPlaceSearchResult> &
+$method=|void|setResults|const QList<QPlaceSearchResult> &
 
 $prototype=void clear()
-$method=5,4,0|void|clear|
+$method=|void|clear|
 
 $extraMethods
 

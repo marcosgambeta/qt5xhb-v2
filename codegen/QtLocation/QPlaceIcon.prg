@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,15 +24,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QPlaceManager>
 
 $prototype=QPlaceIcon()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceIcon(const QPlaceIcon &other)
-$internalConstructor=5,4,0|new2|const QPlaceIcon &
+$internalConstructor=|new2|const QPlaceIcon &
 
 //[1]QPlaceIcon()
 //[2]QPlaceIcon(const QPlaceIcon &other)
@@ -52,19 +53,19 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QUrl url(const QSize &size = QSize()) const
-$method=5,4,0|QUrl|url|const QSize &=QSize()
+$method=|QUrl|url|const QSize &=QSize()
 
 $prototype=QPlaceManager *manager() const
-$method=5,4,0|QPlaceManager *|manager|
+$method=|QPlaceManager *|manager|
 
 $prototype=void setManager(QPlaceManager *manager)
-$method=5,4,0|void|setManager|QPlaceManager *
+$method=|void|setManager|QPlaceManager *
 
 $prototype=bool isEmpty() const
-$method=5,4,0|bool|isEmpty|
+$method=|bool|isEmpty|
 
 $extraMethods
 

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,17 +24,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=explicit QPlaceDetailsReply(QObject *parent = nullptr)
-$constructor=5,4,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QPlaceReply::Type type() const
-$method=5,4,0|QPlaceReply::Type|type|
+$method=|QPlaceReply::Type|type|
 
 $prototype=QPlace place() const
-$method=5,4,0|QPlace|place|
+$method=|QPlace|place|
 
 #pragma ENDDUMP

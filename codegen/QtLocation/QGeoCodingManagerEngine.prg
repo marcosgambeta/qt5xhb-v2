@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -25,23 +26,23 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtCore/QLocale>
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QString managerName() const
-$method=5,4,0|QString|managerName|
+$method=|QString|managerName|
 
 $prototype=int managerVersion() const
-$method=5,4,0|int|managerVersion|
+$method=|int|managerVersion|
 
 $prototype=virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
-$internalVirtualMethod=5,4,0|QGeoCodeReply *|geocode,geocode1|const QGeoAddress &,const QGeoShape &
+$internalVirtualMethod=|QGeoCodeReply *|geocode,geocode1|const QGeoAddress &,const QGeoShape &
 
 $prototype=virtual QGeoCodeReply *geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
-$internalVirtualMethod=5,4,0|QGeoCodeReply *|geocode,geocode2|const QString &,int,int,const QGeoShape &
+$internalVirtualMethod=|QGeoCodeReply *|geocode,geocode2|const QString &,int,int,const QGeoShape &
 
 //[1]virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
 //[2]virtual QGeoCodeReply *geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
@@ -64,22 +65,22 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 $addMethod=geocode
 
 $prototype=virtual QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds)
-$virtualMethod=5,4,0|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeoShape &
+$virtualMethod=|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeoShape &
 
 $prototype=void setLocale(const QLocale &locale)
-$method=5,4,0|void|setLocale|const QLocale &
+$method=|void|setLocale|const QLocale &
 
 $prototype=QLocale locale() const
-$method=5,4,0|QLocale|locale|
+$method=|QLocale|locale|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void finished( QGeoCodeReply * reply )
-$signalMethod=5,4,0|void|finished|QGeoCodeReply *
+$signalMethod=|void|finished|QGeoCodeReply *
 
 $prototype=void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() )
-$signalMethod=5,4,0|void|error|QGeoCodeReply *,QGeoCodeReply::Error,QString
+$signalMethod=|void|error|QGeoCodeReply *,QGeoCodeReply::Error,QString
 
 #pragma ENDDUMP

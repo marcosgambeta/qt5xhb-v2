@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QPlaceSupplier()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceSupplier(const QPlaceSupplier &other)
-$internalConstructor=5,4,0|new2|const QPlaceSupplier &
+$internalConstructor=|new2|const QPlaceSupplier &
 
 //[1]QPlaceSupplier()
 //[2]QPlaceSupplier(const QPlaceSupplier &other)
@@ -50,34 +51,34 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QString name() const
-$method=5,4,0|QString|name|
+$method=|QString|name|
 
 $prototype=void setName(const QString &data)
-$method=5,4,0|void|setName|const QString &
+$method=|void|setName|const QString &
 
 $prototype=QString supplierId() const
-$method=5,4,0|QString|supplierId|
+$method=|QString|supplierId|
 
 $prototype=void setSupplierId(const QString &identifier)
-$method=5,4,0|void|setSupplierId|const QString &
+$method=|void|setSupplierId|const QString &
 
 $prototype=QUrl url() const
-$method=5,4,0|QUrl|url|
+$method=|QUrl|url|
 
 $prototype=void setUrl(const QUrl &data)
-$method=5,4,0|void|setUrl|const QUrl &
+$method=|void|setUrl|const QUrl &
 
 $prototype=QPlaceIcon icon() const
-$method=5,4,0|QPlaceIcon|icon|
+$method=|QPlaceIcon|icon|
 
 $prototype=void setIcon(const QPlaceIcon &icon)
-$method=5,4,0|void|setIcon|const QPlaceIcon &
+$method=|void|setIcon|const QPlaceIcon &
 
 $prototype=bool isEmpty() const
-$method=5,4,0|bool|isEmpty|
+$method=|bool|isEmpty|
 
 $extraMethods
 

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QPlaceEditorial()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
-$internalConstructor=5,4,0|new2|const QPlaceContent &
+$internalConstructor=|new2|const QPlaceContent &
 
 //[1]QPlaceEditorial()
 //[2]QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
@@ -50,24 +51,24 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QString text() const
-$method=5,4,0|QString|text|
+$method=|QString|text|
 
 $prototype=void setText(const QString &text)
-$method=5,4,0|void|setText|const QString &
+$method=|void|setText|const QString &
 
 $prototype=QString title() const
-$method=5,4,0|QString|title|
+$method=|QString|title|
 
 $prototype=void setTitle(const QString &data)
-$method=5,4,0|void|setTitle|const QString &
+$method=|void|setTitle|const QString &
 
 $prototype=QString language() const
-$method=5,4,0|QString|language|
+$method=|QString|language|
 
 $prototype=void setLanguage(const QString &data)
-$method=5,4,0|void|setLanguage|const QString &
+$method=|void|setLanguage|const QString &
 
 #pragma ENDDUMP

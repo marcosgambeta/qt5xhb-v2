@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QGeoManeuver>
 #include <QtPositioning/QGeoCoordinate>
 
 $prototype=QGeoRouteSegment()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QGeoRouteSegment(const QGeoRouteSegment &other)
-$internalConstructor=5,4,0|new2|const QGeoRouteSegment &
+$internalConstructor=|new2|const QGeoRouteSegment &
 
 //[1]QGeoRouteSegment()
 //[2]QGeoRouteSegment(const QGeoRouteSegment &other)
@@ -53,40 +54,40 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=bool isValid() const
-$method=5,4,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=void setNextRouteSegment(const QGeoRouteSegment &routeSegment)
-$method=5,4,0|void|setNextRouteSegment|const QGeoRouteSegment &
+$method=|void|setNextRouteSegment|const QGeoRouteSegment &
 
 $prototype=QGeoRouteSegment nextRouteSegment() const
-$method=5,4,0|QGeoRouteSegment|nextRouteSegment|
+$method=|QGeoRouteSegment|nextRouteSegment|
 
 $prototype=void setTravelTime(int secs)
-$method=5,4,0|void|setTravelTime|int
+$method=|void|setTravelTime|int
 
 $prototype=int travelTime() const
-$method=5,4,0|int|travelTime|
+$method=|int|travelTime|
 
 $prototype=void setDistance(qreal distance)
-$method=5,4,0|void|setDistance|qreal
+$method=|void|setDistance|qreal
 
 $prototype=qreal distance() const
-$method=5,4,0|qreal|distance|
+$method=|qreal|distance|
 
 $prototype=void setPath(const QList<QGeoCoordinate> &path)
-$method=5,4,0|void|setPath|const QList<QGeoCoordinate> &
+$method=|void|setPath|const QList<QGeoCoordinate> &
 
 $prototype=QList<QGeoCoordinate> path() const
-$method=5,4,0|QList<QGeoCoordinate>|path|
+$method=|QList<QGeoCoordinate>|path|
 
 $prototype=void setManeuver(const QGeoManeuver &maneuver)
-$method=5,4,0|void|setManeuver|const QGeoManeuver &
+$method=|void|setManeuver|const QGeoManeuver &
 
 $prototype=QGeoManeuver maneuver() const
-$method=5,4,0|QGeoManeuver|maneuver|
+$method=|QGeoManeuver|maneuver|
 
 $prototype=bool QGeoRouteSegment::isLegLastSegment() const
 $method=5,12,0|bool|isLegLastSegment|

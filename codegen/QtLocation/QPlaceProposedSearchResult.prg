@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,19 +24,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QPlaceSearchRequest>
 
 $prototype=QPlaceProposedSearchResult()
-$constructor=5,4,0|new|
+$constructor=|new|
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QPlaceSearchRequest searchRequest() const
-$method=5,4,0|QPlaceSearchRequest|searchRequest|
+$method=|QPlaceSearchRequest|searchRequest|
 
 $prototype=void setSearchRequest(const QPlaceSearchRequest &request)
-$method=5,4,0|void|setSearchRequest|const QPlaceSearchRequest &
+$method=|void|setSearchRequest|const QPlaceSearchRequest &
 
 #pragma ENDDUMP

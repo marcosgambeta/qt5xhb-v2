@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,17 +24,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=explicit QPlaceSearchSuggestionReply(QObject *parent = nullptr)
-$constructor=5,4,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QStringList suggestions() const
-$method=5,4,0|QStringList|suggestions|
+$method=|QStringList|suggestions|
 
 $prototype=Type type() const
-$method=5,4,0|QPlaceReply::Type|type|
+$method=|QPlaceReply::Type|type|
 
 #pragma ENDDUMP

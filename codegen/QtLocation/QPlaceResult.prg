@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,29 +24,29 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QPlaceResult()
-$constructor=5,4,0|new|
+$constructor=|new|
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=qreal distance() const
-$method=5,4,0|qreal|distance|
+$method=|qreal|distance|
 
 $prototype=void setDistance(qreal distance)
-$method=5,4,0|void|setDistance|qreal
+$method=|void|setDistance|qreal
 
 $prototype=QPlace place() const
-$method=5,4,0|QPlace|place|
+$method=|QPlace|place|
 
 $prototype=void setPlace(const QPlace &place)
-$method=5,4,0|void|setPlace|const QPlace &
+$method=|void|setPlace|const QPlace &
 
 $prototype=bool isSponsored() const
-$method=5,4,0|bool|isSponsored|
+$method=|bool|isSponsored|
 
 $prototype=void setSponsored(bool sponsored)
-$method=5,4,0|void|setSponsored|bool
+$method=|void|setSponsored|bool
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,15 +24,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QPlaceIcon>
 
 $prototype=QPlaceSearchResult()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceSearchResult(const QPlaceSearchResult &other)
-$internalConstructor=5,4,0|new2|const QPlaceSearchResult &
+$internalConstructor=|new2|const QPlaceSearchResult &
 
 //[1]QPlaceSearchResult()
 //[2]QPlaceSearchResult(const QPlaceSearchResult &other)
@@ -52,22 +53,22 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=SearchResultType type() const
-$method=5,4,0|QPlaceSearchResult::SearchResultType|type|
+$method=|QPlaceSearchResult::SearchResultType|type|
 
 $prototype=QString title() const
-$method=5,4,0|QString|title|
+$method=|QString|title|
 
 $prototype=void setTitle(const QString &title)
-$method=5,4,0|void|setTitle|const QString &
+$method=|void|setTitle|const QString &
 
 $prototype=QPlaceIcon icon() const
-$method=5,4,0|QPlaceIcon|icon|
+$method=|QPlaceIcon|icon|
 
 $prototype=void setIcon(const QPlaceIcon &icon)
-$method=5,4,0|void|setIcon|const QPlaceIcon &
+$method=|void|setIcon|const QPlaceIcon &
 
 $extraMethods
 

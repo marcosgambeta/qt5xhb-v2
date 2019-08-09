@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QPlaceUser()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceUser(const QPlaceUser &other)
-$internalConstructor=5,4,0|new2|const QPlaceUser &
+$internalConstructor=|new2|const QPlaceUser &
 
 //[1]QPlaceUser()
 //[2]QPlaceUser(const QPlaceUser &other)
@@ -50,19 +51,19 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QString userId() const
-$method=5,4,0|QString|userId|
+$method=|QString|userId|
 
 $prototype=void setUserId(const QString &identifier)
-$method=5,4,0|void|setUserId|const QString &
+$method=|void|setUserId|const QString &
 
 $prototype=QString name() const
-$method=5,4,0|QString|name|
+$method=|QString|name|
 
 $prototype=void setName(const QString &name)
-$method=5,4,0|void|setName|const QString &
+$method=|void|setName|const QString &
 
 $extraMethods
 

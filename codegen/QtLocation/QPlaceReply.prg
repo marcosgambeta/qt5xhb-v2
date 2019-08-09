@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -25,36 +26,36 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=explicit QPlaceReply(QObject *parent = nullptr)
-$constructor=5,4,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=bool isFinished() const
-$method=5,4,0|bool|isFinished|
+$method=|bool|isFinished|
 
 $prototype=virtual Type type() const
-$virtualMethod=5,4,0|QPlaceReply::Type|type|
+$virtualMethod=|QPlaceReply::Type|type|
 
 $prototype=QString errorString() const
-$method=5,4,0|QString|errorString|
+$method=|QString|errorString|
 
 $prototype=QPlaceReply::Error error() const
-$method=5,4,0|QPlaceReply::Error|error|
+$method=|QPlaceReply::Error|error|
 
 $prototype=virtual void abort()
-$virtualMethod=5,4,0|void|abort|
+$virtualMethod=|void|abort|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void finished()
-$signalMethod=5,4,0|void|finished|
+$signalMethod=|void|finished|
 
 $prototype=void error( QPlaceReply::Error error, const QString & errorString = QString() )
-$signalMethod=5,4,0|void|error,error,QOverload<QPlaceReply::Error COMMA const QString &>|QPlaceReply::Error,const QString &
+$signalMethod=|void|error,error,QOverload<QPlaceReply::Error COMMA const QString &>|QPlaceReply::Error,const QString &
 
 #pragma ENDDUMP

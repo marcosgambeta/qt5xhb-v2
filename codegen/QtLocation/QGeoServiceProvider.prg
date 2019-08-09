@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,52 +24,52 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QGeoCodingManager>
 #include <QtLocation/QGeoRoutingManager>
 #include <QtLocation/QPlaceManager>
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=static QStringList availableServiceProviders()
-$staticMethod=5,4,0|QStringList|availableServiceProviders|
+$staticMethod=|QStringList|availableServiceProviders|
 
 $prototype=RoutingFeatures routingFeatures() const
-$method=5,4,0|QGeoServiceProvider::RoutingFeatures|routingFeatures|
+$method=|QGeoServiceProvider::RoutingFeatures|routingFeatures|
 
 $prototype=GeocodingFeatures geocodingFeatures() const
-$method=5,4,0|QGeoServiceProvider::GeocodingFeatures|geocodingFeatures|
+$method=|QGeoServiceProvider::GeocodingFeatures|geocodingFeatures|
 
 $prototype=MappingFeatures mappingFeatures() const
-$method=5,4,0|QGeoServiceProvider::MappingFeatures|mappingFeatures|
+$method=|QGeoServiceProvider::MappingFeatures|mappingFeatures|
 
 $prototype=PlacesFeatures placesFeatures() const
-$method=5,4,0|QGeoServiceProvider::PlacesFeatures|placesFeatures|
+$method=|QGeoServiceProvider::PlacesFeatures|placesFeatures|
 
 $prototype=QGeoCodingManager *geocodingManager() const
-$method=5,4,0|QGeoCodingManager *|geocodingManager|
+$method=|QGeoCodingManager *|geocodingManager|
 
 $prototype=QGeoMappingManager *mappingManager() const
 %% TODO: classe inexistente na documentacao do Qt
-%% $method=5,4,0|QGeoMappingManager *|mappingManager|
+%% $method=|QGeoMappingManager *|mappingManager|
 
 $prototype=QGeoRoutingManager *routingManager() const
-$method=5,4,0|QGeoRoutingManager *|routingManager|
+$method=|QGeoRoutingManager *|routingManager|
 
 $prototype=QPlaceManager *placeManager() const
-$method=5,4,0|QPlaceManager *|placeManager|
+$method=|QPlaceManager *|placeManager|
 
 $prototype=Error error() const
-$method=5,4,0|QGeoServiceProvider::Error|error|
+$method=|QGeoServiceProvider::Error|error|
 
 $prototype=QString errorString() const
-$method=5,4,0|QString|errorString|
+$method=|QString|errorString|
 
 $prototype=void setLocale(const QLocale &locale)
-$method=5,4,0|void|setLocale|const QLocale &
+$method=|void|setLocale|const QLocale &
 
 $prototype=void setAllowExperimental(bool allow)
-$method=5,4,0|void|setAllowExperimental|bool
+$method=|void|setAllowExperimental|bool
 
 #pragma ENDDUMP

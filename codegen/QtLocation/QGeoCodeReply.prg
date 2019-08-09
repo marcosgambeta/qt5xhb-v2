@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -25,47 +26,47 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtPositioning/QGeoShape>
 
 $prototype=QGeoCodeReply(Error error, const QString &errorString, QObject *parent = nullptr)
-$constructor=5,4,0|new|QGeoCodeReply::Error,const QString &,QObject *=nullptr
+$constructor=|new|QGeoCodeReply::Error,const QString &,QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=bool isFinished() const
-$method=5,4,0|bool|isFinished|
+$method=|bool|isFinished|
 
 $prototype=Error error() const
-$method=5,4,0|QGeoCodeReply::Error|error|
+$method=|QGeoCodeReply::Error|error|
 
 $prototype=QString errorString() const
-$method=5,4,0|QString|errorString|
+$method=|QString|errorString|
 
 $prototype=QGeoShape viewport() const
-$method=5,4,0|QGeoShape|viewport|
+$method=|QGeoShape|viewport|
 
 $prototype=QList<QGeoLocation> locations() const
-$method=5,4,0|QList<QGeoLocation>|locations|
+$method=|QList<QGeoLocation>|locations|
 
 $prototype=int limit() const
-$method=5,4,0|int|limit|
+$method=|int|limit|
 
 $prototype=int offset() const
-$method=5,4,0|int|offset|
+$method=|int|offset|
 
 $prototype=virtual void abort()
-$virtualMethod=5,4,0|void|abort|
+$virtualMethod=|void|abort|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void finished()
-$signalMethod=5,4,0|void|finished|
+$signalMethod=|void|finished|
 
 $prototype=void error( QGeoCodeReply::Error error, const QString & errorString = QString() )
-$signalMethod=5,4,0|void|error,error,QOverload<QGeoCodeReply::Error COMMA const QString &>|QGeoCodeReply::Error,const QString &
+$signalMethod=|void|error,error,QOverload<QGeoCodeReply::Error COMMA const QString &>|QGeoCodeReply::Error,const QString &
 
 #pragma ENDDUMP

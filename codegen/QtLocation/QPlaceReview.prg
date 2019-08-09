@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,49 +24,49 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtCore/QDateTime>
 
 $prototype=QPlaceReview()
-$constructor=5,4,0|new|
+$constructor=|new|
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QDateTime dateTime() const
-$method=5,4,0|QDateTime|dateTime|
+$method=|QDateTime|dateTime|
 
 $prototype=void setDateTime(const QDateTime &dt)
-$method=5,4,0|void|setDateTime|const QDateTime &
+$method=|void|setDateTime|const QDateTime &
 
 $prototype=QString text() const
-$method=5,4,0|QString|text|
+$method=|QString|text|
 
 $prototype=void setText(const QString &text)
-$method=5,4,0|void|setText|const QString &
+$method=|void|setText|const QString &
 
 $prototype=QString language() const
-$method=5,4,0|QString|language|
+$method=|QString|language|
 
 $prototype=void setLanguage(const QString &data)
-$method=5,4,0|void|setLanguage|const QString &
+$method=|void|setLanguage|const QString &
 
 $prototype=qreal rating() const
-$method=5,4,0|qreal|rating|
+$method=|qreal|rating|
 
 $prototype=void setRating(qreal data)
-$method=5,4,0|void|setRating|qreal
+$method=|void|setRating|qreal
 
 $prototype=QString reviewId() const
-$method=5,4,0|QString|reviewId|
+$method=|QString|reviewId|
 
 $prototype=void setReviewId(const QString &identifier)
-$method=5,4,0|void|setReviewId|const QString &
+$method=|void|setReviewId|const QString &
 
 $prototype=QString title() const
-$method=5,4,0|QString|title|
+$method=|QString|title|
 
 $prototype=void setTitle(const QString &data)
-$method=5,4,0|void|setTitle|const QString &
+$method=|void|setTitle|const QString &
 
 #pragma ENDDUMP

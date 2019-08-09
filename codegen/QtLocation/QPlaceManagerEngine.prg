@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -25,101 +26,101 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtLocation/QPlaceSearchReply>
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QString managerName() const
-$method=5,4,0|QString|managerName|
+$method=|QString|managerName|
 
 $prototype=int managerVersion() const
-$method=5,4,0|int|managerVersion|
+$method=|int|managerVersion|
 
 $prototype=virtual QPlaceDetailsReply *getPlaceDetails(const QString &placeId)
-$virtualMethod=5,4,0|QPlaceDetailsReply *|getPlaceDetails|const QString &
+$virtualMethod=|QPlaceDetailsReply *|getPlaceDetails|const QString &
 
 $prototype=virtual QPlaceContentReply *getPlaceContent(const QPlaceContentRequest &request)
-$virtualMethod=5,4,0|QPlaceContentReply *|getPlaceContent|const QPlaceContentRequest &
+$virtualMethod=|QPlaceContentReply *|getPlaceContent|const QPlaceContentRequest &
 
 $prototype=virtual QPlaceSearchReply *search(const QPlaceSearchRequest &request)
-$virtualMethod=5,4,0|QPlaceSearchReply *|search|const QPlaceSearchRequest &
+$virtualMethod=|QPlaceSearchReply *|search|const QPlaceSearchRequest &
 
 $prototype=virtual QPlaceSearchSuggestionReply *searchSuggestions(const QPlaceSearchRequest &request)
-$virtualMethod=5,4,0|QPlaceSearchSuggestionReply *|searchSuggestions|const QPlaceSearchRequest &
+$virtualMethod=|QPlaceSearchSuggestionReply *|searchSuggestions|const QPlaceSearchRequest &
 
 $prototype=virtual QPlaceIdReply *savePlace(const QPlace &place)
-$virtualMethod=5,4,0|QPlaceIdReply *|savePlace|const QPlace &
+$virtualMethod=|QPlaceIdReply *|savePlace|const QPlace &
 
 $prototype=virtual QPlaceIdReply *removePlace(const QString &placeId)
-$virtualMethod=5,4,0|QPlaceIdReply *|removePlace|const QString &
+$virtualMethod=|QPlaceIdReply *|removePlace|const QString &
 
 $prototype=virtual QPlaceIdReply *saveCategory(const QPlaceCategory &category, const QString &parentId)
-$virtualMethod=5,4,0|QPlaceIdReply *|saveCategory|const QPlaceCategory &,const QString &
+$virtualMethod=|QPlaceIdReply *|saveCategory|const QPlaceCategory &,const QString &
 
 $prototype=virtual QPlaceIdReply *removeCategory(const QString &categoryId)
-$virtualMethod=5,4,0|QPlaceIdReply *|removeCategory|const QString &
+$virtualMethod=|QPlaceIdReply *|removeCategory|const QString &
 
 $prototype=virtual QPlaceReply *initializeCategories()
-$virtualMethod=5,4,0|QPlaceReply *|initializeCategories|
+$virtualMethod=|QPlaceReply *|initializeCategories|
 
 $prototype=virtual QString parentCategoryId(const QString &categoryId) const
-$virtualMethod=5,4,0|QString|parentCategoryId|const QString &
+$virtualMethod=|QString|parentCategoryId|const QString &
 
 $prototype=virtual QStringList childCategoryIds(const QString &categoryId) const
-$virtualMethod=5,4,0|QStringList|childCategoryIds|const QString &
+$virtualMethod=|QStringList|childCategoryIds|const QString &
 
 $prototype=virtual QPlaceCategory category(const QString &categoryId) const
-$virtualMethod=5,4,0|QPlaceCategory|category|const QString &
+$virtualMethod=|QPlaceCategory|category|const QString &
 
 $prototype=virtual QList<QPlaceCategory> childCategories(const QString &parentId) const
-$virtualMethod=5,4,0|QList<QPlaceCategory>|childCategories|const QString &
+$virtualMethod=|QList<QPlaceCategory>|childCategories|const QString &
 
 $prototype=virtual QList<QLocale> locales() const
-$virtualMethod=5,4,0|QList<QLocale>|locales|
+$virtualMethod=|QList<QLocale>|locales|
 
 $prototype=virtual void setLocales(const QList<QLocale> &locales)
-$virtualMethod=5,4,0|void|setLocales|const QList<QLocale> &
+$virtualMethod=|void|setLocales|const QList<QLocale> &
 
 $prototype=virtual QUrl constructIconUrl(const QPlaceIcon &icon, const QSize &size) const
-$virtualMethod=5,4,0|QUrl|constructIconUrl|const QPlaceIcon &,const QSize &
+$virtualMethod=|QUrl|constructIconUrl|const QPlaceIcon &,const QSize &
 
 $prototype=virtual QPlace compatiblePlace(const QPlace &original) const
-$virtualMethod=5,4,0|QPlace|compatiblePlace|const QPlace &
+$virtualMethod=|QPlace|compatiblePlace|const QPlace &
 
 $prototype=virtual QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request)
-$virtualMethod=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
+$virtualMethod=|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void finished( QPlaceReply * reply )
-$signalMethod=5,4,0|void|finished|QPlaceReply *
+$signalMethod=|void|finished|QPlaceReply *
 
 $prototype=void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() )
-$signalMethod=5,4,0|void|error|QPlaceReply *,QPlaceReply::Error,const QString &
+$signalMethod=|void|error|QPlaceReply *,QPlaceReply::Error,const QString &
 
 $prototype=void placeAdded( const QString & placeId )
-$signalMethod=5,4,0|void|placeAdded|const QString &
+$signalMethod=|void|placeAdded|const QString &
 
 $prototype=void placeUpdated( const QString & placeId )
-$signalMethod=5,4,0|void|placeUpdated|const QString &
+$signalMethod=|void|placeUpdated|const QString &
 
 $prototype=void placeRemoved( const QString & placeId )
-$signalMethod=5,4,0|void|placeRemoved|const QString &
+$signalMethod=|void|placeRemoved|const QString &
 
 $prototype=void categoryAdded( const QPlaceCategory & category, const QString & parentCategoryId )
-$signalMethod=5,4,0|void|categoryAdded|const QPlaceCategory &,const QString &
+$signalMethod=|void|categoryAdded|const QPlaceCategory &,const QString &
 
 $prototype=void categoryUpdated( const QPlaceCategory & category, const QString & parentCategoryId )
-$signalMethod=5,4,0|void|categoryUpdated|const QPlaceCategory &,const QString &
+$signalMethod=|void|categoryUpdated|const QPlaceCategory &,const QString &
 
 $prototype=void categoryRemoved( const QString & categoryId, const QString & parentCategoryId )
-$signalMethod=5,4,0|void|categoryRemoved|const QString &,const QString &
+$signalMethod=|void|categoryRemoved|const QString &,const QString &
 
 $prototype=void dataChanged()
-$signalMethod=5,4,0|void|dataChanged|
+$signalMethod=|void|dataChanged|
 
 #pragma ENDDUMP

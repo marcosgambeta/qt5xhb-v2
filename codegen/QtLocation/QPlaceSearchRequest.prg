@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtPositioning/QGeoShape>
 #include <QtCore/QVariant>
 
 $prototype=QPlaceSearchRequest()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceSearchRequest(const QPlaceSearchRequest &other)
-$internalConstructor=5,4,0|new2|const QPlaceSearchRequest &
+$internalConstructor=|new2|const QPlaceSearchRequest &
 
 //[1]QPlaceSearchRequest()
 //[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
@@ -53,61 +54,61 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QString searchTerm() const
-$method=5,4,0|QString|searchTerm|
+$method=|QString|searchTerm|
 
 $prototype=void setSearchTerm(const QString &term)
-$method=5,4,0|void|setSearchTerm|const QString &
+$method=|void|setSearchTerm|const QString &
 
 $prototype=QList<QPlaceCategory> categories() const
-$method=5,4,0|QList<QPlaceCategory>|categories|
+$method=|QList<QPlaceCategory>|categories|
 
 $prototype=void setCategory(const QPlaceCategory &category)
-$method=5,4,0|void|setCategory|const QPlaceCategory &
+$method=|void|setCategory|const QPlaceCategory &
 
 $prototype=void setCategories(const QList<QPlaceCategory> &categories)
-$method=5,4,0|void|setCategories|const QList<QPlaceCategory> &
+$method=|void|setCategories|const QList<QPlaceCategory> &
 
 $prototype=QGeoShape searchArea() const
-$method=5,4,0|QGeoShape|searchArea|
+$method=|QGeoShape|searchArea|
 
 $prototype=void setSearchArea(const QGeoShape &area)
-$method=5,4,0|void|setSearchArea|const QGeoShape &
+$method=|void|setSearchArea|const QGeoShape &
 
 $prototype=QString recommendationId() const
-$method=5,4,0|QString|recommendationId|
+$method=|QString|recommendationId|
 
 $prototype=void setRecommendationId(const QString &recommendationId)
-$method=5,4,0|void|setRecommendationId|const QString &
+$method=|void|setRecommendationId|const QString &
 
 $prototype=QVariant searchContext() const
-$method=5,4,0|QVariant|searchContext|
+$method=|QVariant|searchContext|
 
 $prototype=void setSearchContext(const QVariant &context)
-$method=5,4,0|void|setSearchContext|const QVariant &
+$method=|void|setSearchContext|const QVariant &
 
 $prototype=QLocation::VisibilityScope visibilityScope() const
-$method=5,4,0|QLocation::VisibilityScope|visibilityScope|
+$method=|QLocation::VisibilityScope|visibilityScope|
 
 $prototype=void setVisibilityScope(QLocation::VisibilityScope visibilityScopes)
-$method=5,4,0|void|setVisibilityScope|QLocation::VisibilityScope
+$method=|void|setVisibilityScope|QLocation::VisibilityScope
 
 $prototype=RelevanceHint relevanceHint() const
-$method=5,4,0|QPlaceSearchRequest::RelevanceHint|relevanceHint|
+$method=|QPlaceSearchRequest::RelevanceHint|relevanceHint|
 
 $prototype=void setRelevanceHint(RelevanceHint hint)
-$method=5,4,0|void|setRelevanceHint|QPlaceSearchRequest::RelevanceHint
+$method=|void|setRelevanceHint|QPlaceSearchRequest::RelevanceHint
 
 $prototype=int limit() const
-$method=5,4,0|int|limit|
+$method=|int|limit|
 
 $prototype=void setLimit(int limit)
-$method=5,4,0|void|setLimit|int
+$method=|void|setLimit|int
 
 $prototype=void clear()
-$method=5,4,0|void|clear|
+$method=|void|clear|
 
 $extraMethods
 

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,15 +24,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtCore/QVariant>
 
 $prototype=QPlaceContentRequest()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceContentRequest(const QPlaceContentRequest &other)
-$internalConstructor=5,4,0|new2|const QPlaceContentRequest &
+$internalConstructor=|new2|const QPlaceContentRequest &
 
 //[1]QPlaceContentRequest()
 //[2]QPlaceContentRequest(const QPlaceContentRequest &other)
@@ -52,34 +53,34 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QPlaceContent::Type contentType() const
-$method=5,4,0|QPlaceContent::Type|contentType|
+$method=|QPlaceContent::Type|contentType|
 
 $prototype=void setContentType(QPlaceContent::Type type)
-$method=5,4,0|void|setContentType|QPlaceContent::Type
+$method=|void|setContentType|QPlaceContent::Type
 
 $prototype=QString placeId() const
-$method=5,4,0|QString|placeId|
+$method=|QString|placeId|
 
 $prototype=void setPlaceId(const QString &identifier)
-$method=5,4,0|void|setPlaceId|const QString &
+$method=|void|setPlaceId|const QString &
 
 $prototype=QVariant contentContext() const
-$method=5,4,0|QVariant|contentContext|
+$method=|QVariant|contentContext|
 
 $prototype=void setContentContext(const QVariant &context)
-$method=5,4,0|void|setContentContext|const QVariant &
+$method=|void|setContentContext|const QVariant &
 
 $prototype=int limit() const
-$method=5,4,0|int|limit|
+$method=|int|limit|
 
 $prototype=void setLimit(int limit)
-$method=5,4,0|void|setLimit|int
+$method=|void|setLimit|int
 
 $prototype=void clear()
-$method=5,4,0|void|clear|
+$method=|void|clear|
 
 $extraMethods
 

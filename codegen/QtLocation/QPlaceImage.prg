@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtLocation
+$added=5,4,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QPlaceImage()
-$internalConstructor=5,4,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QPlaceImage(const QPlaceContent &other)
-$internalConstructor=5,4,0|new2|const QPlaceContent &
+$internalConstructor=|new2|const QPlaceContent &
 
 //[1]QPlaceImage()
 //[2]QPlaceImage(const QPlaceContent &other)
@@ -50,24 +51,24 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
   }
 }
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QUrl url() const
-$method=5,4,0|QUrl|url|
+$method=|QUrl|url|
 
 $prototype=void setUrl(const QUrl &url)
-$method=5,4,0|void|setUrl|const QUrl &
+$method=|void|setUrl|const QUrl &
 
 $prototype=QString imageId() const
-$method=5,4,0|QString|imageId|
+$method=|QString|imageId|
 
 $prototype=void setImageId(const QString &identifier)
-$method=5,4,0|void|setImageId|const QString &
+$method=|void|setImageId|const QString &
 
 $prototype=QString mimeType() const
-$method=5,4,0|QString|mimeType|
+$method=|QString|mimeType|
 
 $prototype=void setMimeType(const QString &data)
-$method=5,4,0|void|setMimeType|const QString &
+$method=|void|setMimeType|const QString &
 
 #pragma ENDDUMP
