@@ -168,6 +168,7 @@ void activeChanged()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QAbstractVideoFilter * sender = (QAbstractVideoFilter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -220,6 +221,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP
