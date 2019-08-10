@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMultimedia
+$added=5,5,0
 
 $header
 
@@ -25,30 +26,30 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,5,0
+$includes
 
 $prototype=explicit QAbstractVideoFilter(QObject *parent = nullptr) (abstract)
-%% $constructor=5,5,0|new|QObject *=nullptr
+%% $constructor=|new|QObject *=nullptr
 
 $prototype=~QAbstractVideoFilter()
-$deleteMethod=5,5,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(bool active READ isActive WRITE setActive NOTIFY activeChanged)
 %%
 
 $prototype=bool isActive() const
-$method=5,5,0|bool|isActive|
+$method=|bool|isActive|
 
 $prototype=void setActive(bool v)
-$method=5,5,0|void|setActive|bool
+$method=|void|setActive|bool
 
 %%
 %%
 %%
 
 $prototype=virtual QVideoFilterRunnable *createFilterRunnable() = 0
-$virtualMethod=5,5,0|QVideoFilterRunnable *|createFilterRunnable|
+$virtualMethod=|QVideoFilterRunnable *|createFilterRunnable|
 
 %%
 %% SIGNALS

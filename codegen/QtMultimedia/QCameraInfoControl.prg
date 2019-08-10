@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMultimedia
+$added=5,3,0
 
 $header
 
@@ -23,17 +24,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 $prototype=explicit QCameraInfoControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QCameraInfoControl()
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
-$virtualMethod=5,3,0|QCamera::Position|cameraPosition|const QString &
+$virtualMethod=|QCamera::Position|cameraPosition|const QString &
 
 $prototype=virtual int cameraOrientation(const QString &deviceName) const = 0
-$virtualMethod=5,3,0|int|cameraOrientation|const QString &
+$virtualMethod=|int|cameraOrientation|const QString &
 
 #pragma ENDDUMP

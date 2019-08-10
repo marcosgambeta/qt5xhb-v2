@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMultimedia
+$added=5,4,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QAbstractPlanarVideoBuffer(HandleType type) (abstract)
-%% $constructor=5,4,0|new|QAbstractVideoBuffer::HandleType
+%% $constructor=|new|QAbstractVideoBuffer::HandleType
 
 $prototype=virtual ~QAbstractPlanarVideoBuffer()
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=uchar *map(MapMode mode, int *numBytes, int *bytesPerLine) override;
 %% TODO: implementar

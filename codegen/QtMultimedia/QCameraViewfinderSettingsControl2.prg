@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMultimedia
+$added=5,5,0
 
 $header
 
@@ -23,20 +24,20 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,5,0
+$includes
 
 $prototype=explicit QCameraViewfinderSettingsControl2(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QCameraViewfinderSettingsControl2()
-$deleteMethod=5,5,0
+$deleteMethod
 
 $prototype=virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
-$virtualMethod=5,5,0|QList<QCameraViewfinderSettings>|supportedViewfinderSettings|
+$virtualMethod=|QList<QCameraViewfinderSettings>|supportedViewfinderSettings|
 
 $prototype=virtual QCameraViewfinderSettings viewfinderSettings() const = 0
-$virtualMethod=5,5,0|QCameraViewfinderSettings|viewfinderSettings|
+$virtualMethod=|QCameraViewfinderSettings|viewfinderSettings|
 
 $prototype=virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 0
-$virtualMethod=5,5,0|void|setViewfinderSettings|const QCameraViewfinderSettings &
+$virtualMethod=|void|setViewfinderSettings|const QCameraViewfinderSettings &
 
 #pragma ENDDUMP

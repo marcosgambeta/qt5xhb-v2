@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMultimedia
+$added=5,5,0
 
 $header
 
@@ -23,12 +24,12 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,5,0
+$includes
 
 $prototype=virtual ~QVideoFilterRunnable()
-$deleteMethod=5,5,0
+$deleteMethod
 
 $prototype=virtual QVideoFrame run(QVideoFrame *input, const QVideoSurfaceFormat &surfaceFormat, RunFlags flags) = 0
-$virtualMethod=5,5,0|QVideoFrame|run|QVideoFrame *,const QVideoSurfaceFormat &,QVideoFilterRunnable::RunFlags
+$virtualMethod=|QVideoFrame|run|QVideoFrame *,const QVideoSurfaceFormat &,QVideoFilterRunnable::RunFlags
 
 #pragma ENDDUMP

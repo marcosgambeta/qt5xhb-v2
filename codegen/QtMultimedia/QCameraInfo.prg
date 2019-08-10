@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMultimedia
+$added=5,3,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 $prototype=explicit QCameraInfo(const QByteArray &name = QByteArray())
-$internalConstructor=5,3,0|new1|const QByteArray &=QByteArray()
+$internalConstructor=|new1|const QByteArray &=QByteArray()
 
 $prototype=explicit QCameraInfo(const QCamera &camera)
-$internalConstructor=5,3,0|new2|const QCamera &
+$internalConstructor=|new2|const QCamera &
 
 $prototype=QCameraInfo(const QCameraInfo& other)
-$internalConstructor=5,3,0|new3|const QCameraInfo &
+$internalConstructor=|new3|const QCameraInfo &
 
 //[1]explicit QCameraInfo(const QByteArray &name = QByteArray())
 //[2]explicit QCameraInfo(const QCamera &camera)
@@ -59,27 +60,27 @@ HB_FUNC_STATIC( QCAMERAINFO_NEW )
 }
 
 $prototype=~QCameraInfo()
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=bool isNull() const
-$method=5,3,0|bool|isNull|
+$method=|bool|isNull|
 
 $prototype=QString deviceName() const
-$method=5,3,0|QString|deviceName|
+$method=|QString|deviceName|
 
 $prototype=QString description() const
-$method=5,3,0|QString|description|
+$method=|QString|description|
 
 $prototype=QCamera::Position position() const
-$method=5,3,0|QCamera::Position|position|
+$method=|QCamera::Position|position|
 
 $prototype=int orientation() const
-$method=5,3,0|int|orientation|
+$method=|int|orientation|
 
 $prototype=static QCameraInfo defaultCamera()
-$staticMethod=5,3,0|QCameraInfo|defaultCamera|
+$staticMethod=|QCameraInfo|defaultCamera|
 
 $prototype=static QList<QCameraInfo> availableCameras(QCamera::Position position = QCamera::UnspecifiedPosition)
-$staticMethod=5,3,0|QList<QCameraInfo>|availableCameras|QCamera::Position=QCamera::UnspecifiedPosition
+$staticMethod=|QList<QCameraInfo>|availableCameras|QCamera::Position=QCamera::UnspecifiedPosition
 
 #pragma ENDDUMP

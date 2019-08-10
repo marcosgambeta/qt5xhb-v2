@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtMultimedia
+$added=5,6,0
 
 $header
 
@@ -25,27 +26,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,6,0
+$includes
 
 $prototype=explicit QAudioRoleControl(QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAudioRoleControl()
-$deleteMethod=5,6,0
+$deleteMethod
 
 $prototype=virtual QAudio::Role audioRole() const = 0
-$virtualMethod=5,6,0|QAudio::Role|audioRole|
+$virtualMethod=|QAudio::Role|audioRole|
 
 $prototype=virtual void setAudioRole(QAudio::Role role) = 0
-$virtualMethod=5,6,0|void|setAudioRole|QAudio::Role
+$virtualMethod=|void|setAudioRole|QAudio::Role
 
 $prototype=virtual QList<QAudio::Role> supportedAudioRoles() const = 0
-$virtualMethod=5,6,0|QList<QAudio::Role>|supportedAudioRoles|
+$virtualMethod=|QList<QAudio::Role>|supportedAudioRoles|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void audioRoleChanged(QAudio::Role role)
-$signalMethod=5,6,0|void|audioRoleChanged|QAudio::Role
+$signalMethod=|void|audioRoleChanged|QAudio::Role
 
 #pragma ENDDUMP
