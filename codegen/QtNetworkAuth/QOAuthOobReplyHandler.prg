@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetworkAuth
+$added=5,10,0
 
 $header
 
@@ -26,15 +27,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QOAuthOobReplyHandler(QObject *parent = nullptr)
-$constructor=5,10,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=QString callback() const override
-$method=5,10,0|QString|callback|
+$method=|QString|callback|
 
 $prototype=void networkReplyFinished(QNetworkReply *reply) override [protected]
 

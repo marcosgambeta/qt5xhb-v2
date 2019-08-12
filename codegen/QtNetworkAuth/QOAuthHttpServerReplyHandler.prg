@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetworkAuth
+$added=5,10,0
 
 $header
 
@@ -26,16 +27,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
-$internalConstructor=5,10,0|new1|QObject *=nullptr
+$internalConstructor=|new1|QObject *=nullptr
 
 $prototype=explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
-$internalConstructor=5,10,0|new2|quint16,QObject *=nullptr
+$internalConstructor=|new2|quint16,QObject *=nullptr
 
 $prototype=explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject *parent = nullptr)
-$internalConstructor=5,10,0|new3|const QHostAddress &,quint16,QObject *=nullptr
+$internalConstructor=|new3|const QHostAddress &,quint16,QObject *=nullptr
 
 //[1]explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
 //[2]explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
@@ -62,33 +63,33 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_NEW )
 }
 
 $prototype=~QOAuthHttpServerReplyHandler()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=QString callback() const override
-$method=5,10,0|QString|callback|
+$method=|QString|callback|
 
 $prototype=QString callbackPath() const
-$method=5,10,0|QString|callbackPath|
+$method=|QString|callbackPath|
 
 $prototype=void setCallbackPath(const QString &path)
-$method=5,10,0|void|setCallbackPath|const QString &
+$method=|void|setCallbackPath|const QString &
 
 $prototype=QString callbackText() const
-$method=5,10,0|QString|callbackText|
+$method=|QString|callbackText|
 
 $prototype=void setCallbackText(const QString &text)
-$method=5,10,0|void|setCallbackText|const QString &
+$method=|void|setCallbackText|const QString &
 
 $prototype=quint16 port() const
-$method=5,10,0|quint16|port|
+$method=|quint16|port|
 
 $prototype=bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
-$method=5,10,0|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
+$method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
 $prototype=void close()
-$method=5,10,0|void|close|
+$method=|void|close|
 
 $prototype=bool isListening() const
-$method=5,10,0|bool|isListening|
+$method=|bool|isListening|
 
 #pragma ENDDUMP

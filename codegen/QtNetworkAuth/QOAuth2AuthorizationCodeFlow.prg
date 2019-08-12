@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetworkAuth
+$added=5,10,0
 
 $header
 
@@ -28,22 +29,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QOAuth2AuthorizationCodeFlow(QObject *parent = nullptr)
-$internalConstructor=5,10,0|new1|QObject *=nullptr
+$internalConstructor=|new1|QObject *=nullptr
 
 $prototype=explicit QOAuth2AuthorizationCodeFlow(QNetworkAccessManager *manager, QObject *parent = nullptr)
-$internalConstructor=5,10,0|new2|QNetworkAccessManager *,QObject *=nullptr
+$internalConstructor=|new2|QNetworkAccessManager *,QObject *=nullptr
 
 $prototype=QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, QNetworkAccessManager *manager, QObject *parent = nullptr)
-$internalConstructor=5,10,0|new3|const QString &,QNetworkAccessManager *,QObject *=nullptr
+$internalConstructor=|new3|const QString &,QNetworkAccessManager *,QObject *=nullptr
 
 $prototype=QOAuth2AuthorizationCodeFlow(const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
-$internalConstructor=5,10,0|new4|const QUrl &,const QUrl &,QNetworkAccessManager *,QObject *=nullptr
+$internalConstructor=|new4|const QUrl &,const QUrl &,QNetworkAccessManager *,QObject *=nullptr
 
 $prototype=QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
-$internalConstructor=5,10,0|new5|const QString &,const QUrl &,const QUrl &,QNetworkAccessManager *,QObject *=nullptr
+$internalConstructor=|new5|const QString &,const QUrl &,const QUrl &,QNetworkAccessManager *,QObject *=nullptr
 
 //[1]explicit QOAuth2AuthorizationCodeFlow(QObject *parent = nullptr)
 //[2]explicit QOAuth2AuthorizationCodeFlow(QNetworkAccessManager *manager, QObject *parent = nullptr)
@@ -80,27 +81,27 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_NEW )
 }
 
 $prototype=~QOAuth2AuthorizationCodeFlow()
-$deleteMethod=5,10,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(QUrl accessTokenUrl READ accessTokenUrl WRITE setAccessTokenUrl NOTIFY accessTokenUrlChanged)
 %%
 
 $prototype=QUrl accessTokenUrl() const
-$method=5,10,0|QUrl|accessTokenUrl|
+$method=|QUrl|accessTokenUrl|
 
 $prototype=void setAccessTokenUrl(const QUrl &accessTokenUrl)
-$method=5,10,0|void|setAccessTokenUrl|const QUrl &
+$method=|void|setAccessTokenUrl|const QUrl &
 
 %%
 %%
 %%
 
 $prototype=void grant() override (slot)
-$method=5,10,0|void|grant|
+$method=|void|grant|
 
 $prototype=void refreshAccessToken() (slot)
-$method=5,10,0|void|refreshAccessToken|
+$method=|void|refreshAccessToken|
 
 $prototype=QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) [protected]
 
@@ -113,6 +114,6 @@ $prototype=void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &p
 %%
 
 $prototype=void accessTokenUrlChanged( const QUrl & accessTokenUrl )
-$signalMethod=5,10,0|void|accessTokenUrlChanged|const QUrl &
+$signalMethod=|void|accessTokenUrlChanged|const QUrl &
 
 #pragma ENDDUMP

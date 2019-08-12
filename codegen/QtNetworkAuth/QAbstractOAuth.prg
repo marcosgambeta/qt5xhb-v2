@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetworkAuth
+$added=5,10,0
 
 $header
 
@@ -28,7 +29,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkReply>
@@ -37,27 +38,27 @@ $includes=5,10,0
 $prototype=explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstractOAuth()
-$deleteMethod=5,10,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(QString clientIdentifier READ clientIdentifier WRITE setClientIdentifier NOTIFY clientIdentifierChanged)
 %%
 
 $prototype=QString clientIdentifier() const
-$method=5,10,0|QString|clientIdentifier|
+$method=|QString|clientIdentifier|
 
 $prototype=void setClientIdentifier(const QString &clientIdentifier)
-$method=5,10,0|void|setClientIdentifier|const QString &
+$method=|void|setClientIdentifier|const QString &
 
 %%
 %% Q_PROPERTY(QString token READ token WRITE setToken NOTIFY tokenChanged)
 %%
 
 $prototype=QString token() const
-$method=5,10,0|QString|token|
+$method=|QString|token|
 
 $prototype=void setToken(const QString &token)
-$method=5,10,0|void|setToken|const QString &
+$method=|void|setToken|const QString &
 
 %%
 %% Q_PROPERTY(Status status  READ status NOTIFY statusChanged)
@@ -72,10 +73,10 @@ $prototype=Status status() const
 %%
 
 $prototype=QUrl authorizationUrl() const
-$method=5,10,0|QUrl|authorizationUrl|
+$method=|QUrl|authorizationUrl|
 
 $prototype=void setAuthorizationUrl(const QUrl &url)
-$method=5,10,0|void|setAuthorizationUrl|const QUrl &
+$method=|void|setAuthorizationUrl|const QUrl &
 
 %%
 %% Q_PROPERTY(QVariantMap extraTokens READ extraTokens NOTIFY extraTokensChanged)
@@ -93,23 +94,23 @@ $prototype=ContentType contentType() const
 %% $method=|QAbstractOAuth::ContentType|contentType|
 
 $prototype=void setContentType(ContentType contentType)
-$method=5,10,0|void|setContentType|QAbstractOAuth::ContentType
+$method=|void|setContentType|QAbstractOAuth::ContentType
 
 %%
 %%
 %%
 
 $prototype=QNetworkAccessManager *networkAccessManager() const
-$method=5,10,0|QNetworkAccessManager *|networkAccessManager|
+$method=|QNetworkAccessManager *|networkAccessManager|
 
 $prototype=void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
-$method=5,10,0|void|setNetworkAccessManager|QNetworkAccessManager *
+$method=|void|setNetworkAccessManager|QNetworkAccessManager *
 
 $prototype=QAbstractOAuthReplyHandler *replyHandler() const
-$method=5,10,0|QAbstractOAuthReplyHandler *|replyHandler|
+$method=|QAbstractOAuthReplyHandler *|replyHandler|
 
 $prototype=void setReplyHandler(QAbstractOAuthReplyHandler *handler)
-$method=5,10,0|void|setReplyHandler|QAbstractOAuthReplyHandler *
+$method=|void|setReplyHandler|QAbstractOAuthReplyHandler *
 
 $prototype=Q_INVOKABLE virtual QNetworkReply *head(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
 %% $virtualMethod=|QNetworkReply *|head|const QUrl &,const QVariantMap &=QVariantMap()
@@ -133,7 +134,7 @@ $prototype=void setModifyParametersFunction(const ModifyParametersFunction &modi
 %% TODO: implementar
 
 $prototype=virtual void grant() = 0 (slot)
-$virtualMethod=5,10,0|void|grant|
+$virtualMethod=|void|grant|
 
 $prototype=void setStatus(Status status) [protected]
 
@@ -148,36 +149,36 @@ $prototype=static QByteArray generateRandomString(quint8 length) [protected]
 %%
 
 $prototype=void clientIdentifierChanged( const QString & clientIdentifier )
-$signalMethod=5,10,0|void|clientIdentifierChanged|const QString &
+$signalMethod=|void|clientIdentifierChanged|const QString &
 
 $prototype=void tokenChanged( const QString & token )
-$signalMethod=5,10,0|void|tokenChanged|const QString &
+$signalMethod=|void|tokenChanged|const QString &
 
 $prototype=void statusChanged( QAbstractOAuth::Status status )
-$signalMethod=5,10,0|void|statusChanged|QAbstractOAuth::Status
+$signalMethod=|void|statusChanged|QAbstractOAuth::Status
 
 $prototype=void authorizationUrlChanged( const QUrl & url )
-$signalMethod=5,10,0|void|authorizationUrlChanged|const QUrl &
+$signalMethod=|void|authorizationUrlChanged|const QUrl &
 
 $prototype=void extraTokensChanged( const QVariantMap & tokens )
-%% TODO: $signalMethod=5,10,0|void|extraTokensChanged|const QVariantMap &
+%% TODO: $signalMethod=|void|extraTokensChanged|const QVariantMap &
 
 $prototype=void contentTypeChanged( QAbstractOAuth::ContentType contentType )
-$signalMethod=5,10,0|void|contentTypeChanged|QAbstractOAuth::ContentType
+$signalMethod=|void|contentTypeChanged|QAbstractOAuth::ContentType
 
 $prototype=void requestFailed( const QAbstractOAuth::Error error )
-$signalMethod=5,10,0|void|requestFailed|QAbstractOAuth::Error
+$signalMethod=|void|requestFailed|QAbstractOAuth::Error
 
 $prototype=void authorizeWithBrowser( const QUrl & url )
-$signalMethod=5,10,0|void|authorizeWithBrowser|const QUrl &
+$signalMethod=|void|authorizeWithBrowser|const QUrl &
 
 $prototype=void granted()
-$signalMethod=5,10,0|void|granted|
+$signalMethod=|void|granted|
 
 $prototype=void finished( QNetworkReply * reply )
-$signalMethod=5,10,0|void|finished|QNetworkReply *
+$signalMethod=|void|finished|QNetworkReply *
 
 $prototype=void replyDataReceived( const QByteArray & data )
-$signalMethod=5,10,0|void|replyDataReceived|const QByteArray &
+$signalMethod=|void|replyDataReceived|const QByteArray &
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetworkAuth
+$added=5,10,0
 
 $header
 
@@ -26,7 +27,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QOAuth1Signature(const QUrl &url = QUrl(), HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
 %% TODO: implementar QVariantMap
@@ -37,7 +38,7 @@ $prototype=QOAuth1Signature(const QUrl &url, const QString &clientSharedKey, con
 %% $internalConstructor=|new2|const QUrl &,const QString &,const QString &,QOAuth1Signature::HttpRequestMethod=HttpRequestMethod::Post,const QVariantMap &=QVariantMap()
 
 $prototype=QOAuth1Signature(const QOAuth1Signature &other)
-$internalConstructor=5,10,0|new3|const QOAuth1Signature &
+$internalConstructor=|new3|const QOAuth1Signature &
 
 $prototype=QOAuth1Signature(QOAuth1Signature &&other)
 
@@ -59,63 +60,63 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
 }
 
 $prototype=~QOAuth1Signature()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=HttpRequestMethod httpRequestMethod() const
 %% TODO: fix
 %% $method=|QOAuth1Signature::HttpRequestMethod|httpRequestMethod|
 
 $prototype=void setHttpRequestMethod(HttpRequestMethod method)
-$method=5,10,0|void|setHttpRequestMethod|QOAuth1Signature::HttpRequestMethod
+$method=|void|setHttpRequestMethod|QOAuth1Signature::HttpRequestMethod
 
 $prototype=QUrl url() const
-$method=5,10,0|QUrl|url|
+$method=|QUrl|url|
 
 $prototype=void setUrl(const QUrl &url)
-$method=5,10,0|void|setUrl|const QUrl &
+$method=|void|setUrl|const QUrl &
 
 $prototype=QVariantMap parameters() const
 
 $prototype=void setParameters(const QVariantMap &parameters)
 
 $prototype=void addRequestBody(const QUrlQuery &body)
-$method=5,10,0|void|addRequestBody|const QUrlQuery &
+$method=|void|addRequestBody|const QUrlQuery &
 
 $prototype=void insert(const QString &key, const QVariant &value)
-$method=5,10,0|void|insert|const QString &,const QVariant &
+$method=|void|insert|const QString &,const QVariant &
 
 $prototype=QList<QString> keys() const
-$method=5,10,0|QList<QString>|keys|
+$method=|QList<QString>|keys|
 
 $prototype=QVariant take(const QString &key)
-$method=5,10,0|QVariant|take|const QString &
+$method=|QVariant|take|const QString &
 
 $prototype=QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) const
-$method=5,10,0|QVariant|value|const QString &,const QVariant &=QVariant()
+$method=|QVariant|value|const QString &,const QVariant &=QVariant()
 
 $prototype=QString clientSharedKey() const
-$method=5,10,0|QString|clientSharedKey|
+$method=|QString|clientSharedKey|
 
 $prototype=void setClientSharedKey(const QString &secret)
-$method=5,10,0|void|setClientSharedKey|const QString &
+$method=|void|setClientSharedKey|const QString &
 
 $prototype=QString tokenSecret() const
-$method=5,10,0|QString|tokenSecret|
+$method=|QString|tokenSecret|
 
 $prototype=void setTokenSecret(const QString &secret)
-$method=5,10,0|void|setTokenSecret|const QString &
+$method=|void|setTokenSecret|const QString &
 
 $prototype=QByteArray hmacSha1() const
-$method=5,10,0|QByteArray|hmacSha1|
+$method=|QByteArray|hmacSha1|
 
 $prototype=QByteArray rsaSha1() const
-$method=5,10,0|QByteArray|rsaSha1|
+$method=|QByteArray|rsaSha1|
 
 $prototype=QByteArray plainText() const
-$internalMethod=5,10,0|QByteArray|plainText,plainText1|
+$internalMethod=|QByteArray|plainText,plainText1|
 
 $prototype=static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
-$internalStaticMethod=5,10,0|QByteArray|plainText,plainText2|const QString &,const QString &
+$internalStaticMethod=|QByteArray|plainText,plainText2|const QString &,const QString &
 
 //[1]QByteArray plainText() const
 //[2]static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
@@ -138,7 +139,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
 $addMethod=plainText
 
 $prototype=void swap(QOAuth1Signature &other)
-$method=5,10,0|void|swap|QOAuth1Signature &
+$method=|void|swap|QOAuth1Signature &
 
 $extraMethods
 

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetworkAuth
+$added=5,10,0
 
 $header
 
@@ -27,7 +28,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QAbstractOAuth2(QObject *parent = nullptr) (abstract)
 %% $internalConstructor=|new1|QObject *=nullptr
@@ -58,54 +59,54 @@ $prototype=explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = 
 %% }
 
 $prototype=~QAbstractOAuth2()
-$deleteMethod=5,10,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(QString scope READ scope WRITE setScope NOTIFY scopeChanged)
 %%
 
 $prototype=QString scope() const
-$method=5,10,0|QString|scope|
+$method=|QString|scope|
 
 $prototype=void setScope(const QString &scope)
-$method=5,10,0|void|setScope|const QString &
+$method=|void|setScope|const QString &
 
 %%
 %% Q_PROPERTY(QString userAgent READ userAgent WRITE setUserAgent NOTIFY userAgentChanged)
 %%
 
 $prototype=QString userAgent() const
-$method=5,10,0|QString|userAgent|
+$method=|QString|userAgent|
 
 $prototype=void setUserAgent(const QString &userAgent)
-$method=5,10,0|void|setUserAgent|const QString &
+$method=|void|setUserAgent|const QString &
 
 %%
 %% Q_PROPERTY(QString clientIdentifierSharedKey READ clientIdentifierSharedKey WRITE setClientIdentifierSharedKey NOTIFY clientIdentifierSharedKeyChanged)
 %%
 
 $prototype=QString clientIdentifierSharedKey() const
-$method=5,10,0|QString|clientIdentifierSharedKey|
+$method=|QString|clientIdentifierSharedKey|
 
 $prototype=void setClientIdentifierSharedKey(const QString &clientIdentifierSharedKey)
-$method=5,10,0|void|setClientIdentifierSharedKey|const QString &
+$method=|void|setClientIdentifierSharedKey|const QString &
 
 %%
 %% Q_PROPERTY(QString state READ state WRITE setState NOTIFY stateChanged)
 %%
 
 $prototype=QString state() const
-$method=5,10,0|QString|state|
+$method=|QString|state|
 
 $prototype=void setState(const QString &state)
-$method=5,10,0|void|setState|const QString &
+$method=|void|setState|const QString &
 
 %%
 %% Q_PROPERTY(QDateTime expiration READ expirationAt NOTIFY expirationAtChanged)
 %%
 
 $prototype=QDateTime expirationAt() const
-$method=5,10,0|QDateTime|expirationAt|
+$method=|QDateTime|expirationAt|
 
 %%
 %%
@@ -130,15 +131,15 @@ $prototype=Q_INVOKABLE QNetworkReply *deleteResource(const QUrl &url, const QVar
 %% TODO: implementar QVariantMap
 
 $prototype=QString responseType() const
-$method=5,10,0|QString|responseType|
+$method=|QString|responseType|
 
 $prototype=void setResponseType(const QString &responseType) [protected]
 
 $prototype=QString refreshToken() const
-$method=5,10,0|QString|refreshToken|
+$method=|QString|refreshToken|
 
 $prototype=void setRefreshToken(const QString &refreshToken)
-$method=5,10,0|void|setRefreshToken|const QString &
+$method=|void|setRefreshToken|const QString &
 
 %%
 %% SIGNALS
@@ -148,24 +149,24 @@ $prototype=void authorizationCallbackReceived( const QVariantMap & data )
 %% TODO: $signalMethod=|void|authorizationCallbackReceived|const QVariantMap &
 
 $prototype=void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
-$signalMethod=5,10,0|void|clientIdentifierSharedKeyChanged|const QString &
+$signalMethod=|void|clientIdentifierSharedKeyChanged|const QString &
 
 $prototype=void error( const QString & error, const QString & errorDescription, const QUrl & uri )
-$signalMethod=5,10,0|void|error|const QString &,const QString &,const QUrl &
+$signalMethod=|void|error|const QString &,const QString &,const QUrl &
 
 $prototype=void expirationAtChanged( const QDateTime & expiration )
-$signalMethod=5,10,0|void|expirationAtChanged|const QDateTime &
+$signalMethod=|void|expirationAtChanged|const QDateTime &
 
 $prototype=void responseTypeChanged( const QString & responseType )
-$signalMethod=5,10,0|void|responseTypeChanged|const QString &
+$signalMethod=|void|responseTypeChanged|const QString &
 
 $prototype=void scopeChanged( const QString & scope )
-$signalMethod=5,10,0|void|scopeChanged|const QString &
+$signalMethod=|void|scopeChanged|const QString &
 
 $prototype=void stateChanged( const QString & state )
-$signalMethod=5,10,0|void|stateChanged|const QString &
+$signalMethod=|void|stateChanged|const QString &
 
 $prototype=void userAgentChanged( const QString & userAgent )
-$signalMethod=5,10,0|void|userAgentChanged|const QString &
+$signalMethod=|void|userAgentChanged|const QString &
 
 #pragma ENDDUMP

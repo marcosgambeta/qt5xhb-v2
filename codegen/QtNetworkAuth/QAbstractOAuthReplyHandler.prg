@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetworkAuth
+$added=5,10,0
 
 $header
 
@@ -28,7 +29,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,10,0
+$includes
 
 $prototype=explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
 %% $constructor=|new|QObject *=nullptr
@@ -36,26 +37,26 @@ $prototype=explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstr
 $prototype=QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstractOAuthReplyHandler()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=virtual QString callback() const = 0
-$virtualMethod=5,10,0|QString|callback|
+$virtualMethod=|QString|callback|
 
 $prototype=virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
-$virtualMethod=5,10,0|void|networkReplyFinished|QNetworkReply *
+$virtualMethod=|void|networkReplyFinished|QNetworkReply *
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void callbackDataReceived( const QByteArray & data )
-$signalMethod=5,10,0|void|callbackDataReceived|const QByteArray &
+$signalMethod=|void|callbackDataReceived|const QByteArray &
 
 $prototype=void callbackReceived( const QVariantMap & values )
 %% TODO: $signalMethod=|void|callbackReceived|const QVariantMap &
 
 $prototype=void replyDataReceived( const QByteArray & data )
-$signalMethod=5,10,0|void|replyDataReceived|const QByteArray &
+$signalMethod=|void|replyDataReceived|const QByteArray &
 
 $prototype=void tokensReceived( const QVariantMap & tokens )
 %% TODO: $signalMethod=|void|tokensReceived|const QVariantMap &
