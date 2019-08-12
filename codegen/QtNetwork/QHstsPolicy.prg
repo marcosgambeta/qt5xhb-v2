@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetwork
+$added=5,9,0
 
 $header
 
@@ -23,18 +24,18 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,9,0
+$includes
 
 #include <QtCore/QDateTime>
 
 $prototype=QHstsPolicy()
-$internalConstructor=5,9,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
-$internalConstructor=5,9,0|new2|const QDateTime &,QHstsPolicy::PolicyFlags,const QString &,QUrl::ParsingMode=QUrl::DecodedMode
+$internalConstructor=|new2|const QDateTime &,QHstsPolicy::PolicyFlags,const QString &,QUrl::ParsingMode=QUrl::DecodedMode
 
 $prototype=QHstsPolicy(const QHstsPolicy &rhs)
-$internalConstructor=5,9,0|new3|const QHstsPolicy &
+$internalConstructor=|new3|const QHstsPolicy &
 
 //[1]QHstsPolicy()
 //[2]QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
@@ -61,31 +62,31 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 }
 
 $prototype=~QHstsPolicy()
-$deleteMethod=5,9,0
+$deleteMethod
 
 $prototype=void swap(QHstsPolicy &other) Q_DECL_NOTHROW
-$method=5,9,0|void|swap|QHstsPolicy &
+$method=|void|swap|QHstsPolicy &
 
 $prototype=void setHost(const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
-$method=5,9,0|void|setHost|const QString &,QUrl::ParsingMode=QUrl::DecodedMode
+$method=|void|setHost|const QString &,QUrl::ParsingMode=QUrl::DecodedMode
 
 $prototype=QString host(QUrl::ComponentFormattingOptions options = QUrl::FullyDecoded) const
-$method=5,9,0|QString|host|QUrl::ComponentFormattingOptions=QUrl::FullyDecoded
+$method=|QString|host|QUrl::ComponentFormattingOptions=QUrl::FullyDecoded
 
 $prototype=void setExpiry(const QDateTime &expiry)
-$method=5,9,0|void|setExpiry|const QDateTime &
+$method=|void|setExpiry|const QDateTime &
 
 $prototype=QDateTime expiry() const
-$method=5,9,0|QDateTime|expiry|
+$method=|QDateTime|expiry|
 
 $prototype=void setIncludesSubDomains(bool include)
-$method=5,9,0|void|setIncludesSubDomains|bool
+$method=|void|setIncludesSubDomains|bool
 
 $prototype=bool includesSubDomains() const
-$method=5,9,0|bool|includesSubDomains|
+$method=|bool|includesSubDomains|
 
 $prototype=bool isExpired() const
-$method=5,9,0|bool|isExpired|
+$method=|bool|isExpired|
 
 $extraMethods
 

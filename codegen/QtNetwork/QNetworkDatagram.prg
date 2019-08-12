@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetwork
+$added=5,8,0
 
 $header
 
@@ -27,16 +28,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=QNetworkDatagram()
-$internalConstructor=5,8,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port = 0) (implicit)
-$internalConstructor=5,8,0|new2|const QByteArray &,const QHostAddress &=QHostAddress(),quint16=0
+$internalConstructor=|new2|const QByteArray &,const QHostAddress &=QHostAddress(),quint16=0
 
 $prototype=QNetworkDatagram(const QNetworkDatagram &other)
-$internalConstructor=5,8,0|new3|const QNetworkDatagram &
+$internalConstructor=|new3|const QNetworkDatagram &
 
 $prototype=explicit QNetworkDatagram(QNetworkDatagramPrivate &dd) [private]
 
@@ -65,58 +66,58 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
 }
 
 $prototype=~QNetworkDatagram()
-$deleteMethod=5,8,0
+$deleteMethod
 
 $prototype=void swap(QNetworkDatagram &other) Q_DECL_NOTHROW
-$method=5,8,0|void|swap|QNetworkDatagram &
+$method=|void|swap|QNetworkDatagram &
 
 $prototype=void clear()
-$method=5,8,0|void|clear|
+$method=|void|clear|
 
 $prototype=bool isValid() const
-$method=5,8,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=bool isNull() const
-$method=5,8,0|bool|isNull|
+$method=|bool|isNull|
 
 $prototype=uint interfaceIndex() const
-$method=5,8,0|uint|interfaceIndex|
+$method=|uint|interfaceIndex|
 
 $prototype=void setInterfaceIndex(uint index)
-$method=5,8,0|void|setInterfaceIndex|uint
+$method=|void|setInterfaceIndex|uint
 
 $prototype=QHostAddress senderAddress() const
-$method=5,8,0|QHostAddress|senderAddress|
+$method=|QHostAddress|senderAddress|
 
 $prototype=QHostAddress destinationAddress() const
-$method=5,8,0|QHostAddress|destinationAddress|
+$method=|QHostAddress|destinationAddress|
 
 $prototype=int senderPort() const
-$method=5,8,0|int|senderPort|
+$method=|int|senderPort|
 
 $prototype=int destinationPort() const
-$method=5,8,0|int|destinationPort|
+$method=|int|destinationPort|
 
 $prototype=void setSender(const QHostAddress &address, quint16 port = 0)
-$method=5,8,0|void|setSender|const QHostAddress &,quint16=0
+$method=|void|setSender|const QHostAddress &,quint16=0
 
 $prototype=void setDestination(const QHostAddress &address, quint16 port)
-$method=5,8,0|void|setDestination|const QHostAddress &,quint16
+$method=|void|setDestination|const QHostAddress &,quint16
 
 $prototype=int hopLimit() const
-$method=5,8,0|int|hopLimit|
+$method=|int|hopLimit|
 
 $prototype=void setHopLimit(int count)
-$method=5,8,0|void|setHopLimit|int
+$method=|void|setHopLimit|int
 
 $prototype=QByteArray data() const
-$method=5,8,0|QByteArray|data|
+$method=|QByteArray|data|
 
 $prototype=void setData(const QByteArray &data)
-$method=5,8,0|void|setData|const QByteArray &
+$method=|void|setData|const QByteArray &
 
 $prototype=QNetworkDatagram makeReply(const QByteArray &paylaod) const
-$method=5,8,0|QNetworkDatagram|makeReply|const QByteArray &
+$method=|QNetworkDatagram|makeReply|const QByteArray &
 
 $prototype=QNetworkDatagram makeReply_helper(const QByteArray &data) const [private]
 

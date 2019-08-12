@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtNetwork
+$added=5,8,0
 
 %% TODO: class under condition
 %% #if !defined(QT_NO_SCTP) || defined(Q_CLANG_QDOC)
@@ -27,7 +28,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
@@ -36,19 +37,19 @@ $includes=5,8,0
 #endif
 
 $prototype=explicit QSctpServer(QObject *parent = nullptr)
-$constructor=5,8,0|new|QObject *=nullptr|#if !defined(QT_NO_SCTP)
+$constructor=|new|QObject *=nullptr|#if !defined(QT_NO_SCTP)
 
 $prototype=virtual ~QSctpServer()
-$deleteMethod=5,8,0|#if !defined(QT_NO_SCTP)
+$deleteMethod=|#if !defined(QT_NO_SCTP)
 
 $prototype=void setMaximumChannelCount(int count)
-$method=5,8,0|void|setMaximumChannelCount|int|#if !defined(QT_NO_SCTP)
+$method=|void|setMaximumChannelCount|int|#if !defined(QT_NO_SCTP)
 
 $prototype=int maximumChannelCount() const
-$method=5,8,0|int|maximumChannelCount||#if !defined(QT_NO_SCTP)
+$method=|int|maximumChannelCount||#if !defined(QT_NO_SCTP)
 
 $prototype=QSctpSocket *nextPendingDatagramConnection()
-$method=5,8,0|QSctpSocket *|nextPendingDatagramConnection||#if !defined(QT_NO_SCTP)
+$method=|QSctpSocket *|nextPendingDatagramConnection||#if !defined(QT_NO_SCTP)
 
 $prototype=void incomingConnection(qintptr handle) Q_DECL_OVERRIDE [protected]
 
