@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
-$virtualMethod=5,2,0|QGeoPositionInfoSource *|positionInfoSource|QObject *
+$virtualMethod=|QGeoPositionInfoSource *|positionInfoSource|QObject *
 
 $prototype=virtual QGeoSatelliteInfoSource *satelliteInfoSource(QObject *parent) = 0
-$virtualMethod=5,2,0|QGeoSatelliteInfoSource *|satelliteInfoSource|QObject *
+$virtualMethod=|QGeoSatelliteInfoSource *|satelliteInfoSource|QObject *
 
 $prototype=virtual QGeoAreaMonitorSource *areaMonitor(QObject *parent) = 0
-$virtualMethod=5,2,0|QGeoAreaMonitorSource *|areaMonitor|QObject *
+$virtualMethod=|QGeoAreaMonitorSource *|areaMonitor|QObject *
 
 $extraMethods
 

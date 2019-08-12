@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QGeoPositionInfo()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
-$internalConstructor=5,2,0|new2|const QGeoCoordinate &,const QDateTime &
+$internalConstructor=|new2|const QGeoCoordinate &,const QDateTime &
 
 $prototype=QGeoPositionInfo(const QGeoPositionInfo &other)
-$internalConstructor=5,2,0|new3|const QGeoPositionInfo &
+$internalConstructor=|new3|const QGeoPositionInfo &
 
 //[1]QGeoPositionInfo()
 //[2]QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
@@ -58,34 +59,34 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=bool isValid() const
-$method=5,2,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=void setTimestamp(const QDateTime &timestamp)
-$method=5,2,0|void|setTimestamp|const QDateTime &
+$method=|void|setTimestamp|const QDateTime &
 
 $prototype=QDateTime timestamp() const
-$method=5,2,0|QDateTime|timestamp|
+$method=|QDateTime|timestamp|
 
 $prototype=void setCoordinate(const QGeoCoordinate &coordinate)
-$method=5,2,0|void|setCoordinate|const QGeoCoordinate &
+$method=|void|setCoordinate|const QGeoCoordinate &
 
 $prototype=QGeoCoordinate coordinate() const
-$method=5,2,0|QGeoCoordinate|coordinate|
+$method=|QGeoCoordinate|coordinate|
 
 $prototype=void setAttribute(Attribute attribute, qreal value)
-$method=5,2,0|void|setAttribute|QGeoPositionInfo::Attribute,qreal
+$method=|void|setAttribute|QGeoPositionInfo::Attribute,qreal
 
 $prototype=qreal attribute(Attribute attribute) const
-$method=5,2,0|qreal|attribute|QGeoPositionInfo::Attribute
+$method=|qreal|attribute|QGeoPositionInfo::Attribute
 
 $prototype=void removeAttribute(Attribute attribute)
-$method=5,2,0|void|removeAttribute|QGeoPositionInfo::Attribute
+$method=|void|removeAttribute|QGeoPositionInfo::Attribute
 
 $prototype=bool hasAttribute(Attribute attribute) const
-$method=5,2,0|bool|hasAttribute|QGeoPositionInfo::Attribute
+$method=|bool|hasAttribute|QGeoPositionInfo::Attribute
 
 $extraMethods
 

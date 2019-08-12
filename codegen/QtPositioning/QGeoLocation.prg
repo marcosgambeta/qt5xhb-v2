@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -23,17 +24,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtPositioning/QGeoAddress>
 #include <QtPositioning/QGeoCoordinate>
 #include <QtPositioning/QGeoRectangle>
 
 $prototype=QGeoLocation()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QGeoLocation(const QGeoLocation &other)
-$internalConstructor=5,2,0|new2|const QGeoLocation &
+$internalConstructor=|new2|const QGeoLocation &
 
 //[1]QGeoLocation()
 //[2]QGeoLocation(const QGeoLocation &other)
@@ -54,28 +55,28 @@ HB_FUNC_STATIC( QGEOLOCATION_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QGeoAddress address() const
-$method=5,2,0|QGeoAddress|address|
+$method=|QGeoAddress|address|
 
 $prototype=void setAddress(const QGeoAddress &address)
-$method=5,2,0|void|setAddress|const QGeoAddress &
+$method=|void|setAddress|const QGeoAddress &
 
 $prototype=QGeoCoordinate coordinate() const
-$method=5,2,0|QGeoCoordinate|coordinate|
+$method=|QGeoCoordinate|coordinate|
 
 $prototype=void setCoordinate(const QGeoCoordinate &position)
-$method=5,2,0|void|setCoordinate|const QGeoCoordinate &
+$method=|void|setCoordinate|const QGeoCoordinate &
 
 $prototype=QGeoRectangle boundingBox() const
-$method=5,2,0|QGeoRectangle|boundingBox|
+$method=|QGeoRectangle|boundingBox|
 
 $prototype=void setBoundingBox(const QGeoRectangle &box)
-$method=5,2,0|void|setBoundingBox|const QGeoRectangle &
+$method=|void|setBoundingBox|const QGeoRectangle &
 
 $prototype=bool isEmpty() const
-$method=5,2,0|bool|isEmpty|
+$method=|bool|isEmpty|
 
 $extraMethods
 

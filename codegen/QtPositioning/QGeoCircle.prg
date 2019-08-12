@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -23,19 +24,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QGeoCircle()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
-$internalConstructor=5,2,0|new2|const QGeoCoordinate &,qreal=-1.0
+$internalConstructor=|new2|const QGeoCoordinate &,qreal=-1.0
 
 $prototype=QGeoCircle(const QGeoCircle &other)
-$internalConstructor=5,2,0|new3|const QGeoCircle &
+$internalConstructor=|new3|const QGeoCircle &
 
 $prototype=QGeoCircle(const QGeoShape &other)
-$internalConstructor=5,2,0|new4|const QGeoShape &
+$internalConstructor=|new4|const QGeoShape &
 
 //[1]QGeoCircle()
 //[2]QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
@@ -66,24 +67,24 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=void setCenter(const QGeoCoordinate &center)
-$method=5,2,0|void|setCenter|const QGeoCoordinate &
+$method=|void|setCenter|const QGeoCoordinate &
 
 $prototype=QGeoCoordinate center() const
-$method=5,2,0|QGeoCoordinate|center|
+$method=|QGeoCoordinate|center|
 
 $prototype=void setRadius(qreal radius)
-$method=5,2,0|void|setRadius|qreal
+$method=|void|setRadius|qreal
 
 $prototype=qreal radius() const
-$method=5,2,0|qreal|radius|
+$method=|qreal|radius|
 
 $prototype=void translate(double degreesLatitude, double degreesLongitude)
-$method=5,2,0|void|translate|double,double
+$method=|void|translate|double,double
 
 $prototype=QGeoCircle translated(double degreesLatitude, double degreesLongitude) const
-$method=5,2,0|QGeoCircle|translated|double,double
+$method=|QGeoCircle|translated|double,double
 
 #pragma ENDDUMP

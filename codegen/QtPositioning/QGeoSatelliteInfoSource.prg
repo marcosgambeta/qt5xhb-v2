@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -25,59 +26,59 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtCore/QStringList>
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QString sourceName() const
-$method=5,2,0|QString|sourceName|
+$method=|QString|sourceName|
 
 $prototype=virtual void setUpdateInterval(int msec)
-$virtualMethod=5,2,0|void|setUpdateInterval|int
+$virtualMethod=|void|setUpdateInterval|int
 
 $prototype=int updateInterval() const
-$method=5,2,0|int|updateInterval|
+$method=|int|updateInterval|
 
 $prototype=virtual int minimumUpdateInterval() const = 0
-$virtualMethod=5,2,0|int|minimumUpdateInterval|
+$virtualMethod=|int|minimumUpdateInterval|
 
 $prototype=virtual Error error() const = 0
-$virtualMethod=5,2,0|QGeoSatelliteInfoSource::Error|error|
+$virtualMethod=|QGeoSatelliteInfoSource::Error|error|
 
 $prototype=virtual void startUpdates() = 0
-$virtualMethod=5,2,0|void|startUpdates|
+$virtualMethod=|void|startUpdates|
 
 $prototype=virtual void stopUpdates() = 0
-$virtualMethod=5,2,0|void|stopUpdates|
+$virtualMethod=|void|stopUpdates|
 
 $prototype=virtual void requestUpdate(int timeout = 0) = 0
-$virtualMethod=5,2,0|void|requestUpdate|int=0
+$virtualMethod=|void|requestUpdate|int=0
 
 $prototype=static QGeoSatelliteInfoSource *createDefaultSource(QObject *parent)
-$staticMethod=5,2,0|QGeoSatelliteInfoSource *|createDefaultSource|QObject *
+$staticMethod=|QGeoSatelliteInfoSource *|createDefaultSource|QObject *
 
 $prototype=static QGeoSatelliteInfoSource *createSource(const QString &sourceName, QObject *parent)
-$staticMethod=5,2,0|QGeoSatelliteInfoSource *|createSource|const QString &,QObject *
+$staticMethod=|QGeoSatelliteInfoSource *|createSource|const QString &,QObject *
 
 $prototype=static QStringList availableSources()
-$staticMethod=5,2,0|QStringList|availableSources|
+$staticMethod=|QStringList|availableSources|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites )
-$signalMethod=5,2,0|void|satellitesInViewUpdated|const QList<QGeoSatelliteInfo> &
+$signalMethod=|void|satellitesInViewUpdated|const QList<QGeoSatelliteInfo> &
 
 $prototype=void satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites )
-$signalMethod=5,2,0|void|satellitesInUseUpdated|const QList<QGeoSatelliteInfo> &
+$signalMethod=|void|satellitesInUseUpdated|const QList<QGeoSatelliteInfo> &
 
 $prototype=void requestTimeout()
-$signalMethod=5,2,0|void|requestTimeout|
+$signalMethod=|void|requestTimeout|
 
 $prototype=void error( QGeoSatelliteInfoSource::Error error )
-$signalMethod=5,2,0|void|error,error,QOverload<QGeoSatelliteInfoSource::Error>|QGeoSatelliteInfoSource::Error
+$signalMethod=|void|error,error,QOverload<QGeoSatelliteInfoSource::Error>|QGeoSatelliteInfoSource::Error
 
 #pragma ENDDUMP

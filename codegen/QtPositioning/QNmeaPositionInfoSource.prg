@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -23,46 +24,46 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtCore/QIODevice>
 
 $prototype=QNmeaPositionInfoSource(UpdateMode updateMode, QObject *parent = nullptr)
-$constructor=5,2,0|new|QNmeaPositionInfoSource::UpdateMode,QObject *=nullptr
+$constructor=|new|QNmeaPositionInfoSource::UpdateMode,QObject *=nullptr
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=UpdateMode updateMode() const
-$method=5,2,0|QNmeaPositionInfoSource::UpdateMode|updateMode|
+$method=|QNmeaPositionInfoSource::UpdateMode|updateMode|
 
 $prototype=void setDevice(QIODevice *source)
-$method=5,2,0|void|setDevice|QIODevice *
+$method=|void|setDevice|QIODevice *
 
 $prototype=QIODevice *device() const
-$method=5,2,0|QIODevice *|device|
+$method=|QIODevice *|device|
 
 $prototype=void setUpdateInterval(int msec)
-$method=5,2,0|void|setUpdateInterval|int
+$method=|void|setUpdateInterval|int
 
 $prototype=QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const
-$method=5,2,0|QGeoPositionInfo|lastKnownPosition|bool=false
+$method=|QGeoPositionInfo|lastKnownPosition|bool=false
 
 $prototype=PositioningMethods supportedPositioningMethods() const
-$method=5,2,0|QGeoPositionInfoSource::PositioningMethods|supportedPositioningMethods|
+$method=|QGeoPositionInfoSource::PositioningMethods|supportedPositioningMethods|
 
 $prototype=int minimumUpdateInterval() const
-$method=5,2,0|int|minimumUpdateInterval|
+$method=|int|minimumUpdateInterval|
 
 $prototype=Error error() const
-$method=5,2,0|QGeoPositionInfoSource::Error|error|
+$method=|QGeoPositionInfoSource::Error|error|
 
 $prototype=void startUpdates()
-$method=5,2,0|void|startUpdates|
+$method=|void|startUpdates|
 
 $prototype=void stopUpdates()
-$method=5,2,0|void|stopUpdates|
+$method=|void|stopUpdates|
 
 $prototype=void requestUpdate(int timeout = 0)
-$method=5,2,0|void|requestUpdate|int=0
+$method=|void|requestUpdate|int=0
 
 #pragma ENDDUMP

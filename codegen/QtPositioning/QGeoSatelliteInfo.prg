@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QGeoSatelliteInfo()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
-$internalConstructor=5,2,0|new2|const QGeoSatelliteInfo &
+$internalConstructor=|new2|const QGeoSatelliteInfo &
 
 //[1]QGeoSatelliteInfo()
 //[2]QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
@@ -50,37 +51,37 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=void setSatelliteSystem(SatelliteSystem system)
-$method=5,2,0|void|setSatelliteSystem|QGeoSatelliteInfo::SatelliteSystem
+$method=|void|setSatelliteSystem|QGeoSatelliteInfo::SatelliteSystem
 
 $prototype=SatelliteSystem satelliteSystem() const
-$method=5,2,0|QGeoSatelliteInfo::SatelliteSystem|satelliteSystem|
+$method=|QGeoSatelliteInfo::SatelliteSystem|satelliteSystem|
 
 $prototype=void setSatelliteIdentifier(int satId)
-$method=5,2,0|void|setSatelliteIdentifier|int
+$method=|void|setSatelliteIdentifier|int
 
 $prototype=int satelliteIdentifier() const
-$method=5,2,0|int|satelliteIdentifier|
+$method=|int|satelliteIdentifier|
 
 $prototype=void setSignalStrength(int signalStrength)
-$method=5,2,0|void|setSignalStrength|int
+$method=|void|setSignalStrength|int
 
 $prototype=int signalStrength() const
-$method=5,2,0|int|signalStrength|
+$method=|int|signalStrength|
 
 $prototype=void setAttribute(Attribute attribute, qreal value)
-$method=5,2,0|void|setAttribute|QGeoSatelliteInfo::Attribute,qreal
+$method=|void|setAttribute|QGeoSatelliteInfo::Attribute,qreal
 
 $prototype=qreal attribute(Attribute attribute) const
-$method=5,2,0|qreal|attribute|QGeoSatelliteInfo::Attribute
+$method=|qreal|attribute|QGeoSatelliteInfo::Attribute
 
 $prototype=void removeAttribute(Attribute attribute)
-$method=5,2,0|void|removeAttribute|QGeoSatelliteInfo::Attribute
+$method=|void|removeAttribute|QGeoSatelliteInfo::Attribute
 
 $prototype=bool hasAttribute(Attribute attribute) const
-$method=5,2,0|bool|hasAttribute|QGeoSatelliteInfo::Attribute
+$method=|bool|hasAttribute|QGeoSatelliteInfo::Attribute
 
 $extraMethods
 

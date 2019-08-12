@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtPositioning
+$added=5,2,0
 
 $header
 
@@ -23,13 +24,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QGeoShape()
-$internalConstructor=5,2,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QGeoShape(const QGeoShape &other)
-$internalConstructor=5,2,0|new2|const QGeoShape &
+$internalConstructor=|new2|const QGeoShape &
 
 //[1]QGeoShape()
 //[2]QGeoShape(const QGeoShape &other)
@@ -50,19 +51,19 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
   }
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=ShapeType type() const
-$method=5,2,0|QGeoShape::ShapeType|type|
+$method=|QGeoShape::ShapeType|type|
 
 $prototype=bool isValid() const
-$method=5,2,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=bool isEmpty() const
-$method=5,2,0|bool|isEmpty|
+$method=|bool|isEmpty|
 
 $prototype=bool contains(const QGeoCoordinate &coordinate) const
-$method=5,2,0|bool|contains|const QGeoCoordinate &
+$method=|bool|contains|const QGeoCoordinate &
 
 $extraMethods
 
