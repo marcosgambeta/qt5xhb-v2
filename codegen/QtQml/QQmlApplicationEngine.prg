@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtQml
+$added=5,1,0
 
 $header
 
@@ -25,16 +26,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QQmlApplicationEngine(QObject *parent=nullptr)
-$internalConstructor=5,1,0|new1|QObject *=nullptr
+$internalConstructor=|new1|QObject *=nullptr
 
 $prototype=QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
-$internalConstructor=5,1,0|new2|const QUrl &,QObject *=nullptr
+$internalConstructor=|new2|const QUrl &,QObject *=nullptr
 
 $prototype=QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
-$internalConstructor=5,1,0|new3|const QString &,QObject *=nullptr
+$internalConstructor=|new3|const QString &,QObject *=nullptr
 
 //[1]QQmlApplicationEngine(QObject *parent=nullptr)
 //[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
@@ -60,16 +61,16 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
   }
 }
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=QList<QObject*> rootObjects()
-$method=5,1,0|QList<QObject *>|rootObjects|
+$method=|QList<QObject *>|rootObjects|
 
 $prototype=void load(const QUrl &url)
-$internalMethod=5,1,0|void|load,load1|const QUrl &
+$internalMethod=|void|load,load1|const QUrl &
 
 $prototype=void load(const QString &filePath)
-$internalMethod=5,1,0|void|load,load2|const QString &
+$internalMethod=|void|load,load2|const QString &
 
 //[1]void load(const QUrl &url)
 //[2]void load(const QString &filePath)
@@ -92,13 +93,13 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 $addMethod=load
 
 $prototype=void loadData(const QByteArray &data, const QUrl &url = QUrl())
-$method=5,1,0|void|loadData|const QByteArray &,const QUrl &=QUrl()
+$method=|void|loadData|const QByteArray &,const QUrl &=QUrl()
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void objectCreated( QObject * obj, const QUrl & url )
-$signalMethod=5,1,0|void|objectCreated|QObject *,const QUrl &
+$signalMethod=|void|objectCreated|QObject *,const QUrl &
 
 #pragma ENDDUMP
