@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtQuickWidgets
+$added=5,3,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 #include <QtQml/QQmlError>
 #include <QtQml/QQmlEngine>
@@ -33,13 +34,13 @@ $includes=5,3,0
 #include <QtQuick/QQuickItem>
 
 $prototype=explicit QQuickWidget(QWidget *parent = nullptr)
-$internalConstructor=5,3,0|new1|QWidget *=nullptr
+$internalConstructor=|new1|QWidget *=nullptr
 
 $prototype=QQuickWidget(QQmlEngine* engine, QWidget *parent)
-$internalConstructor=5,3,0|new2|QQmlEngine *,QWidget *
+$internalConstructor=|new2|QQmlEngine *,QWidget *
 
 $prototype=QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
-$internalConstructor=5,3,0|new3|const QUrl &,QWidget *=nullptr
+$internalConstructor=|new3|const QUrl &,QWidget *=nullptr
 
 //[1]explicit QQuickWidget(QWidget *parent = nullptr)
 //[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
@@ -67,58 +68,58 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 #endif
 }
 
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=QUrl source() const
-$method=5,3,0|QUrl|source|
+$method=|QUrl|source|
 
 $prototype=void setSource(const QUrl&)
-$method=5,3,0|void|setSource|const QUrl &
+$method=|void|setSource|const QUrl &
 
 $prototype=QQmlEngine* engine() const
-$method=5,3,0|QQmlEngine *|engine|
+$method=|QQmlEngine *|engine|
 
 $prototype=QQmlContext* rootContext() const
-$method=5,3,0|QQmlContext *|rootContext|
+$method=|QQmlContext *|rootContext|
 
 $prototype=QQuickItem *rootObject() const
-$method=5,3,0|QQuickItem *|rootObject|
+$method=|QQuickItem *|rootObject|
 
 $prototype=ResizeMode resizeMode() const
-$method=5,3,0|QQuickWidget::ResizeMode|resizeMode|
+$method=|QQuickWidget::ResizeMode|resizeMode|
 
 $prototype=void setResizeMode(ResizeMode)
-$method=5,3,0|void|setResizeMode|QQuickWidget::ResizeMode
+$method=|void|setResizeMode|QQuickWidget::ResizeMode
 
 $prototype=Status status() const
-$method=5,3,0|QQuickWidget::Status|status|
+$method=|QQuickWidget::Status|status|
 
 $prototype=QList<QQmlError> errors() const
-$method=5,3,0|QList<QQmlError>|errors|
+$method=|QList<QQmlError>|errors|
 
 $prototype=QSize sizeHint() const
-$method=5,3,0|QSize|sizeHint|
+$method=|QSize|sizeHint|
 
 $prototype=QSize initialSize() const
-$method=5,3,0|QSize|initialSize|
+$method=|QSize|initialSize|
 
 $prototype=void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
-$method=5,3,0|void|setContent|const QUrl &,QQmlComponent *,QObject *
+$method=|void|setContent|const QUrl &,QQmlComponent *,QObject *
 
 $prototype=QSurfaceFormat format() const
-$method=5,3,0|QSurfaceFormat|format|
+$method=|QSurfaceFormat|format|
 
 $prototype=void setFormat(const QSurfaceFormat &format)
-$method=5,3,0|void|setFormat|const QSurfaceFormat &
+$method=|void|setFormat|const QSurfaceFormat &
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void statusChanged( QQuickWidget::Status status )
-$signalMethod=5,3,0|void|statusChanged|QQuickWidget::Status
+$signalMethod=|void|statusChanged|QQuickWidget::Status
 
 $prototype=void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
-$signalMethod=5,3,0|void|sceneGraphError|QQuickWindow::SceneGraphError,const QString &
+$signalMethod=|void|sceneGraphError|QQuickWindow::SceneGraphError,const QString &
 
 #pragma ENDDUMP
