@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,60 +26,60 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 #include <QtCore/QVariant>
 #include <QtCore/QVector>
 
 $prototype=explicit QCanBusDevice(QObject *parent = nullptr) [abstract]
-%% $constructor=5,8,0|new|QObject *=nullptr
+%% $constructor=|new|QObject *=nullptr
 
 %% $deleteMethod
 
 $prototype=virtual void setConfigurationParameter(int key, const QVariant &value)
-$virtualMethod=5,8,0|void|setConfigurationParameter|int,const QVariant &
+$virtualMethod=|void|setConfigurationParameter|int,const QVariant &
 
 $prototype=QVariant configurationParameter(int key) const
-$method=5,8,0|QVariant|configurationParameter|int
+$method=|QVariant|configurationParameter|int
 
 $prototype=QVector<int> configurationKeys() const
-$method=5,8,0|QVector<int>|configurationKeys|
+$method=|QVector<int>|configurationKeys|
 
 $prototype=virtual bool writeFrame(const QCanBusFrame &frame) = 0
-$virtualMethod=5,8,0|bool|writeFrame|const QCanBusFrame &
+$virtualMethod=|bool|writeFrame|const QCanBusFrame &
 
 $prototype=QCanBusFrame readFrame()
-$method=5,8,0|QCanBusFrame|readFrame|
+$method=|QCanBusFrame|readFrame|
 
 $prototype=qint64 framesAvailable() const
-$method=5,8,0|qint64|framesAvailable|
+$method=|qint64|framesAvailable|
 
 $prototype=qint64 framesToWrite() const
-$method=5,8,0|qint64|framesToWrite|
+$method=|qint64|framesToWrite|
 
 $prototype=virtual bool waitForFramesWritten(int msecs)
-$virtualMethod=5,8,0|bool|waitForFramesWritten|int
+$virtualMethod=|bool|waitForFramesWritten|int
 
 $prototype=virtual bool waitForFramesReceived(int msecs)
-$virtualMethod=5,8,0|bool|waitForFramesReceived|int
+$virtualMethod=|bool|waitForFramesReceived|int
 
 $prototype=bool connectDevice()
-$method=5,8,0|bool|connectDevice|
+$method=|bool|connectDevice|
 
 $prototype=void disconnectDevice()
-$method=5,8,0|void|disconnectDevice|
+$method=|void|disconnectDevice|
 
 $prototype=CanBusDeviceState state() const
-$method=5,8,0|QCanBusDevice::CanBusDeviceState|state|
+$method=|QCanBusDevice::CanBusDeviceState|state|
 
 $prototype=CanBusError error() const
-$method=5,8,0|QCanBusDevice::CanBusError|error|
+$method=|QCanBusDevice::CanBusError|error|
 
 $prototype=QString errorString() const
-$method=5,8,0|QString|errorString|
+$method=|QString|errorString|
 
 $prototype=virtual QString interpretErrorFrame(const QCanBusFrame &errorFrame) = 0
-$virtualMethod=5,8,0|QString|interpretErrorFrame|const QCanBusFrame &
+$virtualMethod=|QString|interpretErrorFrame|const QCanBusFrame &
 
 $prototype=void QCanBusDevice::clear(QCanBusDevice::Directions direction)
 $method=5,12,0|void|clear|QCanBusDevice::Directions
@@ -91,15 +92,15 @@ $method=5,12,0|QVector<QCanBusFrame>|readAllFrames|
 %%
 
 $prototype=void errorOccurred( QCanBusDevice::CanBusError )
-$signalMethod=5,8,0|void|errorOccurred|QCanBusDevice::CanBusError
+$signalMethod=|void|errorOccurred|QCanBusDevice::CanBusError
 
 $prototype=void framesReceived()
-$signalMethod=5,8,0|void|framesReceived|
+$signalMethod=|void|framesReceived|
 
 $prototype=void framesWritten( qint64 framesCount )
-$signalMethod=5,8,0|void|framesWritten|qint64
+$signalMethod=|void|framesWritten|qint64
 
 $prototype=void stateChanged( QCanBusDevice::CanBusDeviceState state )
-$signalMethod=5,8,0|void|stateChanged|QCanBusDevice::CanBusDeviceState
+$signalMethod=|void|stateChanged|QCanBusDevice::CanBusDeviceState
 
 #pragma ENDDUMP

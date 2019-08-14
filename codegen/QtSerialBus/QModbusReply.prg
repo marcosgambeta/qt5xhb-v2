@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=QModbusReply(ReplyType type, int serverAddress, QObject *parent = nullptr)
 
@@ -58,9 +59,9 @@ $prototype=void setError(QModbusDevice::Error error, const QString &errorText)
 %%
 
 $prototype=void finished()
-$signalMethod=5,8,0|void|finished|
+$signalMethod=|void|finished|
 
 $prototype=void errorOccurred( QModbusDevice::Error error )
-$signalMethod=5,8,0|void|errorOccurred|QModbusDevice::Error
+$signalMethod=|void|errorOccurred|QModbusDevice::Error
 
 #pragma ENDDUMP

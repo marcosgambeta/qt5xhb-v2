@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=explicit QModbusServer(QObject *parent = nullptr)
 $prototype=QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusServer()
-$deleteMethod=5,8,0
+$deleteMethod
 
 $prototype=int serverAddress() const
 
@@ -66,6 +67,6 @@ $prototype=virtual QModbusResponse processPrivateRequest(const QModbusPdu &reque
 %%
 
 $prototype=void dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
-$signalMethod=5,8,0|void|dataWritten|QModbusDataUnit::RegisterType,int,int
+$signalMethod=|void|dataWritten|QModbusDataUnit::RegisterType,int,int
 
 #pragma ENDDUMP

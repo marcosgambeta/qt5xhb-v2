@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -42,13 +43,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
-$internalConstructor=5,8,0|new1|QCanBusFrame::FrameType=QCanBusFrame::DataFrame
+$internalConstructor=|new1|QCanBusFrame::FrameType=QCanBusFrame::DataFrame
 
 $prototype=explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
-$internalConstructor=5,8,0|new2|quint32,const QByteArray &
+$internalConstructor=|new2|quint32,const QByteArray &
 
 //[1]explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
 //[2]explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
@@ -69,57 +70,57 @@ HB_FUNC_STATIC( QCANBUSFRAME_NEW )
   }
 }
 
-$deleteMethod=5,8,0
+$deleteMethod
 
 $prototype=bool isValid() const Q_DECL_NOTHROW
-$method=5,8,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=FrameType frameType() const Q_DECL_NOTHROW
-$method=5,8,0|QCanBusFrame::FrameType|frameType|
+$method=|QCanBusFrame::FrameType|frameType|
 
 $prototype=void setFrameType(FrameType newFormat) Q_DECL_NOTHROW
-$method=5,8,0|void|setFrameType|QCanBusFrame::FrameType
+$method=|void|setFrameType|QCanBusFrame::FrameType
 
 $prototype=bool hasExtendedFrameFormat() const Q_DECL_NOTHROW
-$method=5,8,0|bool|hasExtendedFrameFormat|
+$method=|bool|hasExtendedFrameFormat|
 
 $prototype=void setExtendedFrameFormat(bool isExtended) Q_DECL_NOTHROW
-$method=5,8,0|void|setExtendedFrameFormat|bool
+$method=|void|setExtendedFrameFormat|bool
 
 $prototype=quint32 frameId() const Q_DECL_NOTHROW
-$method=5,8,0|quint32|frameId|
+$method=|quint32|frameId|
 
 $prototype=void setFrameId(quint32 newFrameId)
-$method=5,8,0|void|setFrameId|quint32
+$method=|void|setFrameId|quint32
 
 $prototype=void setPayload(const QByteArray &data)
-$method=5,8,0|void|setPayload|const QByteArray &
+$method=|void|setPayload|const QByteArray &
 
 $prototype=void setTimeStamp(TimeStamp ts) Q_DECL_NOTHROW
 %% TODO: implementar
-%% $method=5,8,0|void|setTimeStamp|TimeStamp
+%% $method=|void|setTimeStamp|TimeStamp
 
 $prototype=QByteArray payload() const
-$method=5,8,0|QByteArray|payload|
+$method=|QByteArray|payload|
 
 $prototype=TimeStamp timeStamp() const Q_DECL_NOTHROW
 %% TODO: implementar
-%% $method=5,8,0|TimeStamp|timeStamp|
+%% $method=|TimeStamp|timeStamp|
 
 $prototype=FrameErrors error() const Q_DECL_NOTHROW
-$method=5,8,0|QCanBusFrame::FrameErrors|error|
+$method=|QCanBusFrame::FrameErrors|error|
 
 $prototype=void setError(FrameErrors e)
-$method=5,8,0|void|setError|QCanBusFrame::FrameErrors
+$method=|void|setError|QCanBusFrame::FrameErrors
 
 $prototype=QString toString() const
-$method=5,8,0|QString|toString|
+$method=|QString|toString|
 
 $prototype=bool hasFlexibleDataRateFormat() const Q_DECL_NOTHROW
-$method=5,8,0|bool|hasFlexibleDataRateFormat|
+$method=|bool|hasFlexibleDataRateFormat|
 
 $prototype=void setFlexibleDataRateFormat(bool isFlexibleData) Q_DECL_NOTHROW
-$method=5,8,0|void|setFlexibleDataRateFormat|bool
+$method=|void|setFlexibleDataRateFormat|bool
 
 $prototype=bool hasBitrateSwitch() const Q_DECL_NOTHROW
 $method=5,9,0|bool|hasBitrateSwitch|

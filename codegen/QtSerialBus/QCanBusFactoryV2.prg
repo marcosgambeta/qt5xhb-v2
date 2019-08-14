@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,9,0
 
 $header
 
@@ -25,7 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,9,0
+$includes
 
 $prototype=virtual ~QCanBusFactoryV2() [protected]
 %% $deleteMethod

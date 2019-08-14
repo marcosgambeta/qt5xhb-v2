@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,22 +26,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=QCanBus(QObject *parent = nullptr) [private]
 
 %% $deleteMethod
 
 $prototype=static QCanBus *instance()
-$staticMethod=5,8,0|QCanBus *|instance|
+$staticMethod=|QCanBus *|instance|
 
 $prototype=QStringList plugins() const
-$method=5,8,0|QStringList|plugins|
+$method=|QStringList|plugins|
 
 $prototype=QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorMessage = nullptr) const
 $method=5,9,0|QList<QCanBusDeviceInfo>|availableDevices|const QString &,QString *=nullptr
 
 $prototype=QCanBusDevice *createDevice(const QString &plugin, const QString &interfaceName, QString *errorMessage = nullptr) const
-$method=5,8,0|QCanBusDevice *|createDevice|const QString &,const QString &,QString *=nullptr
+$method=|QCanBusDevice *|createDevice|const QString &,const QString &,QString *=nullptr
 
 #pragma ENDDUMP

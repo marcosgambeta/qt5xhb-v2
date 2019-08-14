@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=explicit QModbusDevice(QObject *parent = nullptr)
 $prototype=QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusDevice()
-$deleteMethod=5,8,0
+$deleteMethod
 
 $prototype=QVariant connectionParameter(int parameter) const
 
@@ -60,9 +61,9 @@ $prototype=virtual void close() = 0 [protected]
 %%
 
 $prototype=void errorOccurred( QModbusDevice::Error error )
-$signalMethod=5,8,0|void|errorOccurred|QModbusDevice::Error
+$signalMethod=|void|errorOccurred|QModbusDevice::Error
 
 $prototype=void stateChanged( QModbusDevice::State state )
-$signalMethod=5,8,0|void|stateChanged|QModbusDevice::State
+$signalMethod=|void|stateChanged|QModbusDevice::State
 
 #pragma ENDDUMP

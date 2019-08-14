@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=explicit QModbusRtuSerialMaster(QObject *parent = nullptr)
 $prototype=QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusRtuSerialMaster()
-$deleteMethod=5,8,0
+$deleteMethod
 
 $prototype=int interFrameDelay() const
 

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,9,0
 
 $header
 
@@ -25,14 +26,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,9,0
+$includes
 
 $prototype=QCanBusDeviceInfo() = delete
 %% TODO: deleted ?
-%% $internalConstructor=5,9,0|new1|
+%% $internalConstructor=|new1|
 
 $prototype=QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
-$internalConstructor=5,9,0|new2|const QCanBusDeviceInfo &
+$internalConstructor=|new2|const QCanBusDeviceInfo &
 
 $prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) [private]
 
@@ -57,19 +58,19 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 }
 
 $prototype=~QCanBusDeviceInfo()
-$deleteMethod=5,9,0
+$deleteMethod
 
 $prototype=void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
-$method=5,9,0|void|swap|QCanBusDeviceInfo &
+$method=|void|swap|QCanBusDeviceInfo &
 
 $prototype=QString name() const
-$method=5,9,0|QString|name|
+$method=|QString|name|
 
 $prototype=bool hasFlexibleDataRate() const
-$method=5,9,0|bool|hasFlexibleDataRate|
+$method=|bool|hasFlexibleDataRate|
 
 $prototype=bool isVirtual() const
-$method=5,9,0|bool|isVirtual|
+$method=|bool|isVirtual|
 
 $prototype=int QCanBusDeviceInfo::channel() const
 $method=5,11,0|int|channel|

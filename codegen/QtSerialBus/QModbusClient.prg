@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=explicit QModbusClient(QObject *parent = nullptr)
 $prototype=QModbusClient(QModbusClientPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusClient()
-$deleteMethod=5,8,0
+$deleteMethod
 
 %%
 %% Q_PROPERTY(int timeout READ timeout WRITE setTimeout NOTIFY timeoutChanged)
@@ -65,6 +66,6 @@ $prototype=virtual bool processPrivateResponse(const QModbusResponse &response, 
 %%
 
 $prototype=void timeoutChanged( int newTimeout )
-$signalMethod=5,8,0|void|timeoutChanged|int
+$signalMethod=|void|timeoutChanged|int
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -37,7 +38,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
 

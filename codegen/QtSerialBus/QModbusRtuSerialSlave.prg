@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialBus
+$added=5,8,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes
 
 $prototype=explicit QModbusRtuSerialSlave(QObject *parent = nullptr)
 $prototype=QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusRtuSerialSlave()
-$deleteMethod=5,8,0
+$deleteMethod
 
 $prototype=bool processesBroadcast() const override
 
