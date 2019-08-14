@@ -164,6 +164,7 @@ virtual QString name() const = 0
 */
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NAME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -181,6 +182,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NAME )
     }
 #endif
   }
+#endif
 }
 
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NEWFROM )
