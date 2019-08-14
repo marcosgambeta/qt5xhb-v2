@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -21,11 +22,11 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=virtual bool filter(QLightReading *reading) = 0
-$virtualMethod=5,1,0|bool|filter|QLightReading *
+$virtualMethod=|bool|filter|QLightReading *
 
 #pragma ENDDUMP

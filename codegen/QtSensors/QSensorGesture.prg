@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -25,36 +26,36 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QSensorGesture(const QStringList &ids, QObject *parent = nullptr)
-$constructor=5,1,0|new|const QStringList &,QObject *=nullptr
+$constructor=|new|const QStringList &,QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=bool isActive()
-$method=5,1,0|bool|isActive|
+$method=|bool|isActive|
 
 $prototype=QStringList validIds() const
-$method=5,1,0|QStringList|validIds|
+$method=|QStringList|validIds|
 
 $prototype=QStringList invalidIds() const
-$method=5,1,0|QStringList|invalidIds|
+$method=|QStringList|invalidIds|
 
 $prototype=QStringList gestureSignals() const
-$method=5,1,0|QStringList|gestureSignals|
+$method=|QStringList|gestureSignals|
 
 $prototype=void startDetection()
-$method=5,1,0|void|startDetection|
+$method=|void|startDetection|
 
 $prototype=void stopDetection()
-$method=5,1,0|void|stopDetection|
+$method=|void|stopDetection|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void detected( QString s )
-%% TODO: $signalMethod=5,1,0|void|detected|QString
+%% TODO: $signalMethod=|void|detected|QString
 
 #pragma ENDDUMP

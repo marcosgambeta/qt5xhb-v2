@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -27,27 +28,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QLightSensor(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=QLightReading *reading() const
-$method=5,1,0|QLightReading *|reading|
+$method=|QLightReading *|reading|
 
 $prototype=qreal fieldOfView() const
-$method=5,1,0|qreal|fieldOfView|
+$method=|qreal|fieldOfView|
 
 $prototype=void setFieldOfView(qreal fieldOfView)
-$method=5,1,0|void|setFieldOfView|qreal
+$method=|void|setFieldOfView|qreal
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void fieldOfViewChanged( qreal fieldOfView )
-$signalMethod=5,1,0|void|fieldOfViewChanged|qreal
+$signalMethod=|void|fieldOfViewChanged|qreal
 
 #pragma ENDDUMP

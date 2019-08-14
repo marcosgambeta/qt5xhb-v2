@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=qreal temperature() const
-$method=5,1,0|qreal|temperature|
+$method=|qreal|temperature|
 
 $prototype=void setTemperature(qreal temperature)
-$method=5,1,0|void|setTemperature|qreal
+$method=|void|setTemperature|qreal
 
 #pragma ENDDUMP

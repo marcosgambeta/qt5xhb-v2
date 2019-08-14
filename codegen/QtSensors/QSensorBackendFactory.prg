@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,12 +24,12 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 #include <QtSensors/QSensorBackend>
 
 $prototype=virtual QSensorBackend *createBackend(QSensor *sensor) = 0
-$virtualMethod=5,1,0|QSensorBackend *|createBackend|QSensor *
+$virtualMethod=|QSensorBackend *|createBackend|QSensor *
 
 $extraMethods
 

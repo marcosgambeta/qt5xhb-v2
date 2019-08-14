@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -25,27 +26,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QAccelerometer(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=AccelerationMode accelerationMode() const
-$method=5,1,0|QAccelerometer::AccelerationMode|accelerationMode|
+$method=|QAccelerometer::AccelerationMode|accelerationMode|
 
 $prototype=void setAccelerationMode(AccelerationMode accelerationMode)
-$method=5,1,0|void|setAccelerationMode|QAccelerometer::AccelerationMode
+$method=|void|setAccelerationMode|QAccelerometer::AccelerationMode
 
 $prototype=QAccelerometerReading *reading() const
-$method=5,1,0|QAccelerometerReading *|reading|
+$method=|QAccelerometerReading *|reading|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
-$signalMethod=5,1,0|void|accelerationModeChanged|QAccelerometer::AccelerationMode
+$signalMethod=|void|accelerationModeChanged|QAccelerometer::AccelerationMode
 
 #pragma ENDDUMP

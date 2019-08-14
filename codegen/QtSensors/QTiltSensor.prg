@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,17 +24,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QTiltSensor(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=QTiltReading *reading() const
-$method=5,1,0|QTiltReading *|reading|
+$method=|QTiltReading *|reading|
 
 $prototype=void calibrate()
-$method=5,1,0|void|calibrate|
+$method=|void|calibrate|
 
 #pragma ENDDUMP

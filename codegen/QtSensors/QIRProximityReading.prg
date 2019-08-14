@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=qreal reflectance() const
-$method=5,1,0|qreal|reflectance|
+$method=|qreal|reflectance|
 
 $prototype=void setReflectance(qreal reflectance)
-$method=5,1,0|void|setReflectance|qreal
+$method=|void|setReflectance|qreal
 
 #pragma ENDDUMP

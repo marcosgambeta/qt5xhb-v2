@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=bool holstered() const
-$method=5,1,0|bool|holstered|
+$method=|bool|holstered|
 
 $prototype=void setHolstered(bool holstered)
-$method=5,1,0|void|setHolstered|bool
+$method=|void|setHolstered|bool
 
 #pragma ENDDUMP

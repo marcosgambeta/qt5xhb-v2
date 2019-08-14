@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -25,30 +26,30 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QSensorGestureManager(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=bool registerSensorGestureRecognizer(QSensorGestureRecognizer *recognizer)
-$method=5,1,0|bool|registerSensorGestureRecognizer|QSensorGestureRecognizer *
+$method=|bool|registerSensorGestureRecognizer|QSensorGestureRecognizer *
 
 $prototype=QStringList gestureIds() const
-$method=5,1,0|QStringList|gestureIds|
+$method=|QStringList|gestureIds|
 
 $prototype=QStringList recognizerSignals(const QString &recognizerId) const
-$method=5,1,0|QStringList|recognizerSignals|const QString &
+$method=|QStringList|recognizerSignals|const QString &
 
 $prototype=static QSensorGestureRecognizer *sensorGestureRecognizer(const QString &id)
-$staticMethod=5,1,0|QSensorGestureRecognizer *|sensorGestureRecognizer|const QString &
+$staticMethod=|QSensorGestureRecognizer *|sensorGestureRecognizer|const QString &
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void newSensorGestureAvailable()
-$signalMethod=5,1,0|void|newSensorGestureAvailable|
+$signalMethod=|void|newSensorGestureAvailable|
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -25,27 +26,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QTapSensor(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=QTapReading *reading() const
-$method=5,1,0|QTapReading *|reading|
+$method=|QTapReading *|reading|
 
 $prototype=bool returnDoubleTapEvents() const
-$method=5,1,0|bool|returnDoubleTapEvents|
+$method=|bool|returnDoubleTapEvents|
 
 $prototype=void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
-$method=5,1,0|void|setReturnDoubleTapEvents|bool
+$method=|void|setReturnDoubleTapEvents|bool
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
-$signalMethod=5,1,0|void|returnDoubleTapEventsChanged|bool
+$signalMethod=|void|returnDoubleTapEventsChanged|bool
 
 #pragma ENDDUMP

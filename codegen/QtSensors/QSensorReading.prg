@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,20 +24,20 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=quint64 timestamp() const
-$method=5,1,0|quint64|timestamp|
+$method=|quint64|timestamp|
 
 $prototype=void setTimestamp(quint64 timestamp)
-$method=5,1,0|void|setTimestamp|quint64
+$method=|void|setTimestamp|quint64
 
 $prototype=int valueCount() const
-$method=5,1,0|int|valueCount|
+$method=|int|valueCount|
 
 $prototype=QVariant value(int index) const
-$method=5,1,0|QVariant|value|int
+$method=|QVariant|value|int
 
 #pragma ENDDUMP

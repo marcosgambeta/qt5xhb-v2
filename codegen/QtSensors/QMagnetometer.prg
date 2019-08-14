@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -27,27 +28,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 $prototype=QMagnetometer(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=QMagnetometerReading *reading() const
-$method=5,1,0|QMagnetometerReading *|reading|
+$method=|QMagnetometerReading *|reading|
 
 $prototype=bool returnGeoValues() const
-$method=5,1,0|bool|returnGeoValues|
+$method=|bool|returnGeoValues|
 
 $prototype=void setReturnGeoValues(bool returnGeoValues)
-$method=5,1,0|void|setReturnGeoValues|bool
+$method=|void|setReturnGeoValues|bool
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void returnGeoValuesChanged( bool returnGeoValues )
-$signalMethod=5,1,0|void|returnGeoValuesChanged|bool
+$signalMethod=|void|returnGeoValuesChanged|bool
 
 #pragma ENDDUMP

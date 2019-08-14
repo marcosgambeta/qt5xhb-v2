@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -25,27 +26,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes=
 
 $prototype=QRotationSensor(QObject *parent = nullptr)
-$constructor=5,1,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=QRotationReading *reading() const
-$method=5,1,0|QRotationReading *|reading|
+$method=|QRotationReading *|reading|
 
 $prototype=bool hasZ() const
-$method=5,1,0|bool|hasZ|
+$method=|bool|hasZ|
 
 $prototype=void setHasZ(bool hasZ)
-$method=5,1,0|void|setHasZ|bool
+$method=|void|setHasZ|bool
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void hasZChanged( bool hasZ )
-$signalMethod=5,1,0|void|hasZChanged|bool
+$signalMethod=|void|hasZChanged|bool
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,47 +24,47 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=virtual void start() = 0
-$virtualMethod=5,1,0|void|start|
+$virtualMethod=|void|start|
 
 $prototype=virtual void stop() = 0
-$virtualMethod=5,1,0|void|stop|
+$virtualMethod=|void|stop|
 
 $prototype=virtual bool isFeatureSupported(QSensor::Feature feature) const
-$virtualMethod=5,1,0|bool|isFeatureSupported|QSensor::Feature
+$virtualMethod=|bool|isFeatureSupported|QSensor::Feature
 
 $prototype=void addDataRate(qreal min, qreal max)
-$method=5,1,0|void|addDataRate|qreal,qreal
+$method=|void|addDataRate|qreal,qreal
 
 $prototype=void setDataRates(const QSensor *otherSensor)
-$method=5,1,0|void|setDataRates|const QSensor *
+$method=|void|setDataRates|const QSensor *
 
 $prototype=void addOutputRange(qreal min, qreal max, qreal accuracy)
-$method=5,1,0|void|addOutputRange|qreal,qreal,qreal
+$method=|void|addOutputRange|qreal,qreal,qreal
 
 $prototype=void setDescription(const QString &description)
-$method=5,1,0|void|setDescription|const QString &
+$method=|void|setDescription|const QString &
 
 $prototype=QSensorReading *reading() const
-$method=5,1,0|QSensorReading *|reading|
+$method=|QSensorReading *|reading|
 
 $prototype=QSensor *sensor() const
-$method=5,1,0|QSensor *|sensor|
+$method=|QSensor *|sensor|
 
 $prototype=void newReadingAvailable()
-$method=5,1,0|void|newReadingAvailable|
+$method=|void|newReadingAvailable|
 
 $prototype=void sensorStopped()
-$method=5,1,0|void|sensorStopped|
+$method=|void|sensorStopped|
 
 $prototype=void sensorBusy()
-$method=5,1,0|void|sensorBusy|
+$method=|void|sensorBusy|
 
 $prototype=void sensorError(int error)
-$method=5,1,0|void|sensorError|int
+$method=|void|sensorError|int
 
 #pragma ENDDUMP

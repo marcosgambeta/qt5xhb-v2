@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,20 +24,20 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=qreal azimuth() const
-$method=5,1,0|qreal|azimuth|
+$method=|qreal|azimuth|
 
 $prototype=void setAzimuth(qreal azimuth)
-$method=5,1,0|void|setAzimuth|qreal
+$method=|void|setAzimuth|qreal
 
 $prototype=qreal calibrationLevel() const
-$method=5,1,0|qreal|calibrationLevel|
+$method=|qreal|calibrationLevel|
 
 $prototype=void setCalibrationLevel(qreal calibrationLevel)
-$method=5,1,0|void|setCalibrationLevel|qreal
+$method=|void|setCalibrationLevel|qreal
 
 #pragma ENDDUMP

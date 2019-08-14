@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=Orientation orientation() const
-$method=5,1,0|QOrientationReading::Orientation|orientation|
+$method=|QOrientationReading::Orientation|orientation|
 
 $prototype=void setOrientation(Orientation orientation)
-$method=5,1,0|void|setOrientation|QOrientationReading::Orientation
+$method=|void|setOrientation|QOrientationReading::Orientation
 
 #pragma ENDDUMP

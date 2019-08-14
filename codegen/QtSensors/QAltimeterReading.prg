@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=qreal altitude() const
-$method=5,1,0|qreal|altitude|
+$method=|qreal|altitude|
 
 $prototype=void setAltitude(qreal altitude)
-$method=5,1,0|void|setAltitude|qreal
+$method=|void|setAltitude|qreal
 
 #pragma ENDDUMP

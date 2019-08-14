@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,15 +24,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=virtual QList <QSensorGestureRecognizer *> createRecognizers() = 0
-$virtualMethod=5,1,0|QList<QSensorGestureRecognizer *>|createRecognizers|
+$virtualMethod=|QList<QSensorGestureRecognizer *>|createRecognizers|
 
 $prototype=virtual QStringList supportedIds() const = 0
-$virtualMethod=5,1,0|QStringList|supportedIds|
+$virtualMethod=|QStringList|supportedIds|
 
 $prototype=virtual QString name() const = 0
 $virtualMethod=|QString|name|

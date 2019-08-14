@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,20 +24,20 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=qreal yRotation() const
-$method=5,1,0|qreal|yRotation|
+$method=|qreal|yRotation|
 
 $prototype=void setYRotation(qreal y)
-$method=5,1,0|void|setYRotation|qreal
+$method=|void|setYRotation|qreal
 
 $prototype=qreal xRotation() const
-$method=5,1,0|qreal|xRotation|
+$method=|qreal|xRotation|
 
 $prototype=void setXRotation(qreal x)
-$method=5,1,0|void|setXRotation|qreal
+$method=|void|setXRotation|qreal
 
 #pragma ENDDUMP

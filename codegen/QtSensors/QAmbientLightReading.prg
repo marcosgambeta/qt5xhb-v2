@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSensors
+$added=5,1,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=LightLevel lightLevel() const
-$method=5,1,0|QAmbientLightReading::LightLevel|lightLevel|
+$method=|QAmbientLightReading::LightLevel|lightLevel|
 
 $prototype=void setLightLevel(LightLevel lightLevel)
-$method=5,1,0|void|setLightLevel|QAmbientLightReading::LightLevel
+$method=|void|setLightLevel|QAmbientLightReading::LightLevel
 
 #pragma ENDDUMP
