@@ -1002,6 +1002,7 @@ void cachePathChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1054,6 +1055,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1069,6 +1071,7 @@ void httpAcceptLanguageChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1121,6 +1124,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1128,6 +1132,7 @@ void httpCacheMaximumSizeChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1180,6 +1185,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1187,6 +1193,7 @@ void httpCacheTypeChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1239,6 +1246,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1246,6 +1254,7 @@ void httpUserAgentChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1298,6 +1307,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1305,6 +1315,7 @@ void offTheRecordChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1357,6 +1368,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1364,6 +1376,7 @@ void persistentCookiesPolicyChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1416,6 +1429,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1423,6 +1437,7 @@ void persistentStoragePathChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1475,6 +1490,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1482,6 +1498,7 @@ void spellCheckEnabledChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1534,6 +1551,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1541,6 +1559,7 @@ void spellCheckLanguagesChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1593,6 +1612,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -1600,6 +1620,7 @@ void storageNameChanged()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   QQuickWebEngineProfile * sender = (QQuickWebEngineProfile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -1652,6 +1673,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP

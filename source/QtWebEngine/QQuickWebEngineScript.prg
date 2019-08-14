@@ -468,6 +468,7 @@ void injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -522,6 +523,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -529,6 +531,7 @@ void nameChanged( const QString & name )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -583,6 +586,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -590,6 +594,7 @@ void runOnSubframesChanged( bool on )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -644,6 +649,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -651,6 +657,7 @@ void sourceCodeChanged( const QString & code )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -705,6 +712,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -712,6 +720,7 @@ void sourceUrlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -766,6 +775,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 /*
@@ -773,6 +783,7 @@ void worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QQuickWebEngineScript * sender = (QQuickWebEngineScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( sender != nullptr )
@@ -827,6 +838,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
   {
     hb_retl( false );
   }
+#endif
 }
 
 #pragma ENDDUMP
