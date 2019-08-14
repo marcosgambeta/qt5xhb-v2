@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebChannel
+$added=5,4,0
 
 $header
 
@@ -25,36 +26,36 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=explicit QWebChannel(QObject *parent = nullptr)
-$constructor=5,4,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=Q_INVOKABLE void registerObject(const QString &id, QObject *object)
-$method=5,4,0|void|registerObject|const QString &,QObject *
+$method=|void|registerObject|const QString &,QObject *
 
 $prototype=Q_INVOKABLE void deregisterObject(QObject *object)
-$method=5,4,0|void|deregisterObject|QObject *
+$method=|void|deregisterObject|QObject *
 
 $prototype=bool blockUpdates() const
-$method=5,4,0|bool|blockUpdates|
+$method=|bool|blockUpdates|
 
 $prototype=void setBlockUpdates(bool block)
-$method=5,4,0|void|setBlockUpdates|bool
+$method=|void|setBlockUpdates|bool
 
 $prototype=void connectTo(QWebChannelAbstractTransport *transport)
-$method=5,4,0|void|connectTo|QWebChannelAbstractTransport *
+$method=|void|connectTo|QWebChannelAbstractTransport *
 
 $prototype=void disconnectFrom(QWebChannelAbstractTransport *transport)
-$method=5,4,0|void|disconnectFrom|QWebChannelAbstractTransport *
+$method=|void|disconnectFrom|QWebChannelAbstractTransport *
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void blockUpdatesChanged( bool block )
-$signalMethod=5,4,0|void|blockUpdatesChanged|bool
+$signalMethod=|void|blockUpdatesChanged|bool
 
 #pragma ENDDUMP

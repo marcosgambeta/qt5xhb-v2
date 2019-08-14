@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebChannel
+$added=5,4,0
 
 $header
 
@@ -25,23 +26,23 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtCore/QJsonObject>
 
 $prototype=explicit QWebChannelAbstractTransport(QObject *parent = nullptr) (abstract)
-%% $constructor=5,4,0|new|QObject *=nullptr
+%% $constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=virtual void sendMessage(const QJsonObject &message) = 0
-$virtualMethod=5,4,0|void|sendMessage|const QJsonObject &
+$virtualMethod=|void|sendMessage|const QJsonObject &
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport )
-$signalMethod=5,4,0|void|messageReceived|const QJsonObject &,QWebChannelAbstractTransport *
+$signalMethod=|void|messageReceived|const QJsonObject &,QWebChannelAbstractTransport *
 
 #pragma ENDDUMP

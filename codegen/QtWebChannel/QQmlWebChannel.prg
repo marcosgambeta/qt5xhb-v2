@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebChannel
+$added=5,4,0
 
 $header
 
@@ -23,33 +24,33 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=explicit QQmlWebChannel(QObject *parent = nullptr)
-$constructor=5,4,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=Q_INVOKABLE void registerObjects(const QVariantMap &objects)
 %% TODO: implementar
-%% $method=5,4,0|void|registerObjects|const QVariantMap &
+%% $method=|void|registerObjects|const QVariantMap &
 
 $prototype=QQmlListProperty<QObject> registeredObjects()
 %% TODO: implementar
-%% $method=5,4,0|QQmlListProperty<QObject>|registeredObjects|
+%% $method=|QQmlListProperty<QObject>|registeredObjects|
 
 $prototype=QQmlListProperty<QObject> transports()
 %% TODO: implementar
-%% $method=5,4,0|QQmlListProperty<QObject>|transports|
+%% $method=|QQmlListProperty<QObject>|transports|
 
 $prototype=static QQmlWebChannelAttached *qmlAttachedProperties(QObject *obj)
 %% TODO: implementar
-%% $staticMethod=5,4,0|QQmlWebChannelAttached *|qmlAttachedProperties|QObject *
+%% $staticMethod=|QQmlWebChannelAttached *|qmlAttachedProperties|QObject *
 
 $prototype=Q_INVOKABLE void connectTo(QObject *transport)
-$method=5,4,0|void|connectTo|QObject *
+$method=|void|connectTo|QObject *
 
 $prototype=Q_INVOKABLE void disconnectFrom(QObject *transport)
-$method=5,4,0|void|disconnectFrom|QObject *
+$method=|void|disconnectFrom|QObject *
 
 #pragma ENDDUMP
