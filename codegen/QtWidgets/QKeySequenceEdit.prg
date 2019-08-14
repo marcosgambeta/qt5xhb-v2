@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWidgets
+$added=5,2,0
 
 $header
 
@@ -25,13 +26,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QKeySequenceEdit(QWidget *parent = nullptr)
-$internalConstructor=5,2,0|new1|QWidget *=nullptr
+$internalConstructor=|new1|QWidget *=nullptr
 
 $prototype=QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
-$internalConstructor=5,2,0|new2|const QKeySequence &,QWidget *=nullptr
+$internalConstructor=|new2|const QKeySequence &,QWidget *=nullptr
 
 //[1]QKeySequenceEdit(QWidget *parent = nullptr)
 //[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
@@ -54,25 +55,25 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 #endif
 }
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QKeySequence keySequence() const
-$method=5,2,0|QKeySequence|keySequence|
+$method=|QKeySequence|keySequence|
 
 $prototype=void setKeySequence(const QKeySequence &keySequence)
-$method=5,2,0|void|setKeySequence|const QKeySequence &
+$method=|void|setKeySequence|const QKeySequence &
 
 $prototype=void clear()
-$method=5,2,0|void|clear|
+$method=|void|clear|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void editingFinished()
-$signalMethod=5,2,0|void|editingFinished|
+$signalMethod=|void|editingFinished|
 
 $prototype=void keySequenceChanged( const QKeySequence & keySequence )
-$signalMethod=5,2,0|void|keySequenceChanged|const QKeySequence &
+$signalMethod=|void|keySequenceChanged|const QKeySequence &
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWidgets
+$added=5,4,0
 
 $header
 
@@ -25,53 +26,53 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtGui/QOpenGLContext>
 
 $prototype=explicit QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = 0)
-$constructor=5,4,0|new|QWidget *=nullptr,Qt::WindowFlags=0|#ifndef QT_NO_OPENGL
+$constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0|#ifndef QT_NO_OPENGL
 
-$deleteMethod=5,4,0|#ifndef QT_NO_OPENGL
+$deleteMethod=|#ifndef QT_NO_OPENGL
 
 $prototype=QSurfaceFormat format() const
-$method=5,4,0|QSurfaceFormat|format||#ifndef QT_NO_OPENGL
+$method=|QSurfaceFormat|format||#ifndef QT_NO_OPENGL
 
 $prototype=void setFormat(const QSurfaceFormat &format)
-$method=5,4,0|void|setFormat|const QSurfaceFormat &|#ifndef QT_NO_OPENGL
+$method=|void|setFormat|const QSurfaceFormat &|#ifndef QT_NO_OPENGL
 
 $prototype=bool isValid() const
-$method=5,4,0|bool|isValid||#ifndef QT_NO_OPENGL
+$method=|bool|isValid||#ifndef QT_NO_OPENGL
 
 $prototype=void makeCurrent()
-$method=5,4,0|void|makeCurrent||#ifndef QT_NO_OPENGL
+$method=|void|makeCurrent||#ifndef QT_NO_OPENGL
 
 $prototype=void doneCurrent()
-$method=5,4,0|void|doneCurrent||#ifndef QT_NO_OPENGL
+$method=|void|doneCurrent||#ifndef QT_NO_OPENGL
 
 $prototype=QOpenGLContext *context() const
-$method=5,4,0|QOpenGLContext *|context||#ifndef QT_NO_OPENGL
+$method=|QOpenGLContext *|context||#ifndef QT_NO_OPENGL
 
 $prototype=GLuint defaultFramebufferObject() const
-$method=5,4,0|GLuint|defaultFramebufferObject||#ifndef QT_NO_OPENGL
+$method=|GLuint|defaultFramebufferObject||#ifndef QT_NO_OPENGL
 
 $prototype=QImage grabFramebuffer()
-$method=5,4,0|QImage|grabFramebuffer||#ifndef QT_NO_OPENGL
+$method=|QImage|grabFramebuffer||#ifndef QT_NO_OPENGL
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void aboutToCompose()
-$signalMethod=5,4,0|void|aboutToCompose|
+$signalMethod=|void|aboutToCompose|
 
 $prototype=void frameSwapped()
-$signalMethod=5,4,0|void|frameSwapped|
+$signalMethod=|void|frameSwapped|
 
 $prototype=void aboutToResize()
-$signalMethod=5,4,0|void|aboutToResize|
+$signalMethod=|void|aboutToResize|
 
 $prototype=void resized()
-$signalMethod=5,4,0|void|resized|
+$signalMethod=|void|resized|
 
 #pragma ENDDUMP
