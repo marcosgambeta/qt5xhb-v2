@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtTextToSpeech
+$added=5,10,0
 
 $header
 
@@ -26,10 +27,10 @@ $destructor
 $includes
 
 $prototype=QVoice()
-$internalConstructor=5,10,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QVoice(const QVoice &other)
-$internalConstructor=5,10,0|new2|const QVoice &
+$internalConstructor=|new2|const QVoice &
 
 $prototype=QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
 
@@ -54,22 +55,22 @@ HB_FUNC_STATIC( QVOICE_NEW )
 }
 
 $prototype=~QVoice()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=QString name() const
-$method=5,10,0|QString|name|
+$method=|QString|name|
 
 $prototype=Gender gender() const
-$method=5,10,0|QVoice::Gender|gender|
+$method=|QVoice::Gender|gender|
 
 $prototype=Age age() const
-$method=5,10,0|QVoice::Age|age|
+$method=|QVoice::Age|age|
 
 $prototype=static QString genderName(QVoice::Gender gender)
-$staticMethod=5,10,0|QString|genderName|QVoice::Gender
+$staticMethod=|QString|genderName|QVoice::Gender
 
 $prototype=static QString ageName(QVoice::Age age)
-$staticMethod=5,10,0|QString|ageName|QVoice::Age
+$staticMethod=|QString|ageName|QVoice::Age
 
 $prototype=void setName(const QString &name) [private]
 

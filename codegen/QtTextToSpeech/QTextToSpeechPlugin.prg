@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtTextToSpeech
+$added=5,10,0
 
 $header
 
@@ -26,11 +27,11 @@ $destructor
 $includes
 
 $prototype=virtual ~QTextToSpeechPlugin()
-$deleteMethod=5,10,0
+$deleteMethod
 
 $prototype=virtual QTextToSpeechEngine *createTextToSpeechEngine(const QVariantMap &parameters, QObject *parent, QString *errorString) const
 %% TODO: QVariantMap
-%% $virtualMethod=5,10,0|QTextToSpeechEngine *|createTextToSpeechEngine|const QVariantMap &,QObject *,QString *
+%% $virtualMethod=|QTextToSpeechEngine *|createTextToSpeechEngine|const QVariantMap &,QObject *,QString *
 
 $extraMethods
 
