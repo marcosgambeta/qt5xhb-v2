@@ -62,7 +62,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QtTextToSpeech/QTextToSpeech>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -71,7 +73,9 @@ RETURN
 #include "qt5xhb_signals3.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QtTextToSpeech/QTextToSpeech>
+#endif
 #endif
 
 #include <QtCore/QVector>
