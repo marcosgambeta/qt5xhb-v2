@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebEngineWidgets
+$added=5,4,0
 
 $header
 
@@ -25,105 +26,105 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtWidgets/QAction>
 
 $prototype=explicit QWebEngineView(QWidget* parent = nullptr)
-$constructor=5,4,0|new|QWidget *=nullptr
+$constructor=|new|QWidget *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QWebEnginePage* page() const
-$method=5,4,0|QWebEnginePage *|page|
+$method=|QWebEnginePage *|page|
 
 $prototype=void setPage(QWebEnginePage* page)
-$method=5,4,0|void|setPage|QWebEnginePage *
+$method=|void|setPage|QWebEnginePage *
 
 $prototype=void load(const QUrl& url)
-$method=5,4,0|void|load|const QUrl &
+$method=|void|load|const QUrl &
 
 $prototype=void setHtml(const QString& html, const QUrl& baseUrl = QUrl())
-$method=5,4,0|void|setHtml|const QString &,const QUrl &=QUrl()
+$method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
 $prototype=void setContent(const QByteArray& data, const QString& mimeType = QString(), const QUrl& baseUrl = QUrl())
-$method=5,4,0|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
+$method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
 $prototype=QWebEngineHistory* history() const
-$method=5,4,0|QWebEngineHistory *|history|
+$method=|QWebEngineHistory *|history|
 
 $prototype=QString title() const
-$method=5,4,0|QString|title|
+$method=|QString|title|
 
 $prototype=QUrl url() const
-$method=5,4,0|QUrl|url|
+$method=|QUrl|url|
 
 $prototype=void setUrl(const QUrl &url)
-$method=5,4,0|void|setUrl|const QUrl &
+$method=|void|setUrl|const QUrl &
 
 $prototype=QUrl iconUrl() const
-$method=5,4,0|QUrl|iconUrl|
+$method=|QUrl|iconUrl|
 
 $prototype=bool hasSelection() const
-$method=5,4,0|bool|hasSelection|
+$method=|bool|hasSelection|
 
 $prototype=QString selectedText() const
-$method=5,4,0|QString|selectedText|
+$method=|QString|selectedText|
 
 $prototype=QAction* pageAction(QWebEnginePage::WebAction action) const
-$method=5,4,0|QAction *|pageAction|QWebEnginePage::WebAction|#ifndef QT_NO_ACTION
+$method=|QAction *|pageAction|QWebEnginePage::WebAction|#ifndef QT_NO_ACTION
 
 $prototype=void triggerPageAction(QWebEnginePage::WebAction action, bool checked = false)
-$method=5,4,0|void|triggerPageAction|QWebEnginePage::WebAction,bool=false
+$method=|void|triggerPageAction|QWebEnginePage::WebAction,bool=false
 
 $prototype=qreal zoomFactor() const
-$method=5,4,0|qreal|zoomFactor|
+$method=|qreal|zoomFactor|
 
 $prototype=void setZoomFactor(qreal factor)
-$method=5,4,0|void|setZoomFactor|qreal
+$method=|void|setZoomFactor|qreal
 
 $prototype=void findText(const QString &subString, QWebEnginePage::FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
 %% TODO: implementar
-%% $method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
+%% $method=|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
 $prototype=virtual QSize sizeHint() const
-$virtualMethod=5,4,0|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void stop()
-$method=5,4,0|void|stop|
+$method=|void|stop|
 
 $prototype=void back()
-$method=5,4,0|void|back|
+$method=|void|back|
 
 $prototype=void forward()
-$method=5,4,0|void|forward|
+$method=|void|forward|
 
 $prototype=void reload()
-$method=5,4,0|void|reload|
+$method=|void|reload|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void loadStarted()
-$signalMethod=5,4,0|void|loadStarted|
+$signalMethod=|void|loadStarted|
 
 $prototype=void loadProgress( int progress )
-$signalMethod=5,4,0|void|loadProgress|int
+$signalMethod=|void|loadProgress|int
 
 $prototype=void loadFinished( bool b )
-$signalMethod=5,4,0|void|loadFinished|bool
+$signalMethod=|void|loadFinished|bool
 
 $prototype=void titleChanged( const QString & title )
-$signalMethod=5,4,0|void|titleChanged|const QString &
+$signalMethod=|void|titleChanged|const QString &
 
 $prototype=void selectionChanged()
-$signalMethod=5,4,0|void|selectionChanged|
+$signalMethod=|void|selectionChanged|
 
 $prototype=void urlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|urlChanged|const QUrl &
+$signalMethod=|void|urlChanged|const QUrl &
 
 $prototype=void iconUrlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|iconUrlChanged|const QUrl &
+$signalMethod=|void|iconUrlChanged|const QUrl &
 
 #pragma ENDDUMP

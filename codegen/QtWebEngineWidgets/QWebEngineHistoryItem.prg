@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebEngineWidgets
+$added=5,4,0
 
 $header
 
@@ -23,30 +24,30 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
-$constructor=5,4,0|new|const QWebEngineHistoryItem &
+$constructor=|new|const QWebEngineHistoryItem &
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QUrl originalUrl() const
-$method=5,4,0|QUrl|originalUrl|
+$method=|QUrl|originalUrl|
 
 $prototype=QUrl url() const
-$method=5,4,0|QUrl|url|
+$method=|QUrl|url|
 
 $prototype=QString title() const
-$method=5,4,0|QString|title|
+$method=|QString|title|
 
 $prototype=QDateTime lastVisited() const
-$method=5,4,0|QDateTime|lastVisited|
+$method=|QDateTime|lastVisited|
 
 $prototype=QUrl iconUrl() const
-$method=5,4,0|QUrl|iconUrl|
+$method=|QUrl|iconUrl|
 
 $prototype=bool isValid() const
-$method=5,4,0|bool|isValid|
+$method=|bool|isValid|
 
 $extraMethods
 

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebEngineWidgets
+$added=5,4,0
 
 $header
 
@@ -23,24 +24,24 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 $prototype=QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
-$constructor=5,4,0|new|int,QUrl,bool,QString
+$constructor=|new|int,QUrl,bool,QString
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=Error error() const
-$method=5,4,0|QWebEngineCertificateError::Error|error|
+$method=|QWebEngineCertificateError::Error|error|
 
 $prototype=QUrl url() const
-$method=5,4,0|QUrl|url|
+$method=|QUrl|url|
 
 $prototype=bool isOverridable() const
-$method=5,4,0|bool|isOverridable|
+$method=|bool|isOverridable|
 
 $prototype=QString errorDescription() const
-$method=5,4,0|QString|errorDescription|
+$method=|QString|errorDescription|
 
 $extraMethods
 

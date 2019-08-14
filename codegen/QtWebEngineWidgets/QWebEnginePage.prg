@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebEngineWidgets
+$added=5,4,0
 
 $header
 
@@ -25,94 +26,94 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,4,0
+$includes
 
 #include <QtWidgets/QAction>
 #include <QtWidgets/QMenu>
 
 $prototype=explicit QWebEnginePage(QObject *parent = nullptr)
-$constructor=5,4,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,4,0
+$deleteMethod
 
 $prototype=QWebEngineHistory *history() const
-$method=5,4,0|QWebEngineHistory *|history|
+$method=|QWebEngineHistory *|history|
 
 $prototype=QWidget *view() const
-$method=5,4,0|QWidget *|view|
+$method=|QWidget *|view|
 
 $prototype=void setView(QWidget *view)
-$method=5,4,0|void|setView|QWidget *
+$method=|void|setView|QWidget *
 
 $prototype=bool hasSelection() const
-$method=5,4,0|bool|hasSelection|
+$method=|bool|hasSelection|
 
 $prototype=QString selectedText() const
-$method=5,4,0|QString|selectedText|
+$method=|QString|selectedText|
 
 $prototype=QAction *action(WebAction action) const
-$method=5,4,0|QAction *|action|QWebEnginePage::WebAction
+$method=|QAction *|action|QWebEnginePage::WebAction
 
 $prototype=virtual void triggerAction(WebAction action, bool checked = false)
-$virtualMethod=5,4,0|void|triggerAction|QWebEnginePage::WebAction,bool=false
+$virtualMethod=|void|triggerAction|QWebEnginePage::WebAction,bool=false
 
 $prototype=virtual bool event(QEvent*)
-$virtualMethod=5,4,0|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=void findText(const QString &subString, FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
 %% TODO: implementar
-%% $method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
+%% $method=|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
 $prototype=QMenu *createStandardContextMenu()
-$method=5,4,0|QMenu *|createStandardContextMenu|
+$method=|QMenu *|createStandardContextMenu|
 
 $prototype=void setFeaturePermission(const QUrl &securityOrigin, Feature feature, PermissionPolicy policy)
-$method=5,4,0|void|setFeaturePermission|const QUrl &,QWebEnginePage::Feature,QWebEnginePage::PermissionPolicy
+$method=|void|setFeaturePermission|const QUrl &,QWebEnginePage::Feature,QWebEnginePage::PermissionPolicy
 
 $prototype=void load(const QUrl &url)
-$method=5,4,0|void|load|const QUrl &
+$method=|void|load|const QUrl &
 
 $prototype=void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
-$method=5,4,0|void|setHtml|const QString &,const QUrl &=QUrl()
+$method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
 $prototype=void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
-$method=5,4,0|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
+$method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
 $prototype=void toHtml(const QWebEngineCallback<const QString &> &resultCallback) const
 %% TODO: implementar
-%% $method=5,4,0|void|toHtml|const QWebEngineCallback<const QString &> &
+%% $method=|void|toHtml|const QWebEngineCallback<const QString &> &
 
 $prototype=void toPlainText(const QWebEngineCallback<const QString &> &resultCallback) const
 %% TODO: implementar
-%% $method=5,4,0|void|toPlainText|const QWebEngineCallback<const QString &> &
+%% $method=|void|toPlainText|const QWebEngineCallback<const QString &> &
 
 $prototype=QString title() const
-$method=5,4,0|QString|title|
+$method=|QString|title|
 
 $prototype=QUrl url() const
-$method=5,4,0|QUrl|url|
+$method=|QUrl|url|
 
 $prototype=void setUrl(const QUrl &url)
-$method=5,4,0|void|setUrl|const QUrl &
+$method=|void|setUrl|const QUrl &
 
 $prototype=QUrl requestedUrl() const
-$method=5,4,0|QUrl|requestedUrl|
+$method=|QUrl|requestedUrl|
 
 $prototype=QUrl iconUrl() const
-$method=5,4,0|QUrl|iconUrl|
+$method=|QUrl|iconUrl|
 
 $prototype=qreal zoomFactor() const
-$method=5,4,0|qreal|zoomFactor|
+$method=|qreal|zoomFactor|
 
 $prototype=void setZoomFactor(qreal factor)
-$method=5,4,0|void|setZoomFactor|qreal
+$method=|void|setZoomFactor|qreal
 
 $prototype=void runJavaScript(const QString& scriptSource)
-$internalMethod=5,4,0|void|runJavaScript,runJavaScript1|const QString &
+$internalMethod=|void|runJavaScript,runJavaScript1|const QString &
 
 $prototype=void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
 %% TODO: implementar
-%% $internalMethod=5,4,0|void|runJavaScript,runJavaScript2|const QString &,const QWebEngineCallback<const QVariant &> &
+%% $internalMethod=|void|runJavaScript,runJavaScript2|const QString &,const QWebEngineCallback<const QVariant &> &
 
 //[1]void runJavaScript(const QString& scriptSource)
 //[2]void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
@@ -135,52 +136,52 @@ HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 $addMethod=runJavaScript
 
 $prototype=QWebEngineSettings *settings() const
-$method=5,4,0|QWebEngineSettings *|settings|
+$method=|QWebEngineSettings *|settings|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void loadStarted()
-$signalMethod=5,4,0|void|loadStarted|
+$signalMethod=|void|loadStarted|
 
 $prototype=void loadProgress( int progress )
-$signalMethod=5,4,0|void|loadProgress|int
+$signalMethod=|void|loadProgress|int
 
 $prototype=void loadFinished( bool ok )
-$signalMethod=5,4,0|void|loadFinished|bool
+$signalMethod=|void|loadFinished|bool
 
 $prototype=void linkHovered( const QString & url )
-$signalMethod=5,4,0|void|linkHovered|const QString &
+$signalMethod=|void|linkHovered|const QString &
 
 $prototype=void selectionChanged()
-$signalMethod=5,4,0|void|selectionChanged|
+$signalMethod=|void|selectionChanged|
 
 $prototype=void geometryChangeRequested( const QRect & geom )
-$signalMethod=5,4,0|void|geometryChangeRequested|const QRect &
+$signalMethod=|void|geometryChangeRequested|const QRect &
 
 $prototype=void windowCloseRequested()
-$signalMethod=5,4,0|void|windowCloseRequested|
+$signalMethod=|void|windowCloseRequested|
 
 $prototype=void featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
-$signalMethod=5,4,0|void|featurePermissionRequested|const QUrl &,QWebEnginePage::Feature
+$signalMethod=|void|featurePermissionRequested|const QUrl &,QWebEnginePage::Feature
 
 $prototype=void featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
-$signalMethod=5,4,0|void|featurePermissionRequestCanceled|const QUrl &,QWebEnginePage::Feature
+$signalMethod=|void|featurePermissionRequestCanceled|const QUrl &,QWebEnginePage::Feature
 
 $prototype=void authenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator )
-$signalMethod=5,4,0|void|authenticationRequired|const QUrl &,QAuthenticator *
+$signalMethod=|void|authenticationRequired|const QUrl &,QAuthenticator *
 
 $prototype=void proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator, const QString & proxyHost )
-$signalMethod=5,4,0|void|proxyAuthenticationRequired|const QUrl &,QAuthenticator *,const QString &
+$signalMethod=|void|proxyAuthenticationRequired|const QUrl &,QAuthenticator *,const QString &
 
 $prototype=void titleChanged( const QString & title )
-$signalMethod=5,4,0|void|titleChanged|const QString &
+$signalMethod=|void|titleChanged|const QString &
 
 $prototype=void urlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|urlChanged|const QUrl &
+$signalMethod=|void|urlChanged|const QUrl &
 
 $prototype=void iconUrlChanged( const QUrl & url )
-$signalMethod=5,4,0|void|iconUrlChanged|const QUrl &
+$signalMethod=|void|iconUrlChanged|const QUrl &
 
 #pragma ENDDUMP
