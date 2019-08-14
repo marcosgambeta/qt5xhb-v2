@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -23,37 +24,37 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtGui/QWindow>
 
 $prototype=explicit QWinThumbnailToolBar(QObject *parent = nullptr)
-$constructor=5,2,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QWindow *window() const
-$method=5,2,0|QWindow *|window|
+$method=|QWindow *|window|
 
 $prototype=void setWindow(QWindow *window)
-$method=5,2,0|void|setWindow|QWindow *
+$method=|void|setWindow|QWindow *
 
 $prototype=void addButton(QWinThumbnailToolButton *button)
-$method=5,2,0|void|addButton|QWinThumbnailToolButton *
+$method=|void|addButton|QWinThumbnailToolButton *
 
 $prototype=void removeButton(QWinThumbnailToolButton *button)
-$method=5,2,0|void|removeButton|QWinThumbnailToolButton *
+$method=|void|removeButton|QWinThumbnailToolButton *
 
 $prototype=void setButtons(const QList<QWinThumbnailToolButton *> &buttons)
-$method=5,2,0|void|setButtons|const QList<QWinThumbnailToolButton *> &
+$method=|void|setButtons|const QList<QWinThumbnailToolButton *> &
 
 $prototype=QList<QWinThumbnailToolButton *> buttons() const
-$method=5,2,0|QList<QWinThumbnailToolButton *>|buttons|
+$method=|QList<QWinThumbnailToolButton *>|buttons|
 
 $prototype=int count() const
-$method=5,2,0|int|count|
+$method=|int|count|
 
 $prototype=void clear()
-$method=5,2,0|void|clear|
+$method=|void|clear|
 
 #pragma ENDDUMP

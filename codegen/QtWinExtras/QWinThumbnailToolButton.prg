@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -25,66 +26,66 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=explicit QWinThumbnailToolButton(QObject *parent = nullptr)
-$constructor=5,2,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QString toolTip() const
-$method=5,2,0|QString|toolTip|
+$method=|QString|toolTip|
 
 $prototype=void setToolTip(const QString &toolTip)
-$method=5,2,0|void|setToolTip|const QString &
+$method=|void|setToolTip|const QString &
 
 $prototype=QIcon icon() const
-$method=5,2,0|QIcon|icon|
+$method=|QIcon|icon|
 
 $prototype=void setIcon(const QIcon &icon)
-$method=5,2,0|void|setIcon|const QIcon &
+$method=|void|setIcon|const QIcon &
 
 $prototype=bool isEnabled() const
-$method=5,2,0|bool|isEnabled|
+$method=|bool|isEnabled|
 
 $prototype=void setEnabled(bool enabled)
-$method=5,2,0|void|setEnabled|bool
+$method=|void|setEnabled|bool
 
 $prototype=bool isInteractive() const
-$method=5,2,0|bool|isInteractive|
+$method=|bool|isInteractive|
 
 $prototype=void setInteractive(bool interactive)
-$method=5,2,0|void|setInteractive|bool
+$method=|void|setInteractive|bool
 
 $prototype=bool isVisible() const
-$method=5,2,0|bool|isVisible|
+$method=|bool|isVisible|
 
 $prototype=void setVisible(bool visible)
-$method=5,2,0|void|setVisible|bool
+$method=|void|setVisible|bool
 
 $prototype=bool dismissOnClick() const
-$method=5,2,0|bool|dismissOnClick|
+$method=|bool|dismissOnClick|
 
 $prototype=void setDismissOnClick(bool dismiss)
-$method=5,2,0|void|setDismissOnClick|bool
+$method=|void|setDismissOnClick|bool
 
 $prototype=bool isFlat() const
-$method=5,2,0|bool|isFlat|
+$method=|bool|isFlat|
 
 $prototype=void setFlat(bool flat)
-$method=5,2,0|void|setFlat|bool
+$method=|void|setFlat|bool
 
 $prototype=void click()
-$method=5,2,0|void|click|
+$method=|void|click|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void clicked()
-$signalMethod=5,2,0|void|clicked|
+$signalMethod=|void|clicked|
 
 $prototype=void changed()
-$signalMethod=5,2,0|void|changed|
+$signalMethod=|void|changed|
 
 #pragma ENDDUMP

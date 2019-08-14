@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -23,17 +24,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QWinColorizationChangeEvent(QRgb color, bool opaque)
-$constructor=5,2,0|new|QRgb,bool
+$constructor=|new|QRgb,bool
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QRgb color() const
-$method=5,2,0|QRgb|color|
+$method=|QRgb|color|
 
 $prototype=bool opaqueBlend() const
-$method=5,2,0|bool|opaqueBlend|
+$method=|bool|opaqueBlend|
 
 #pragma ENDDUMP

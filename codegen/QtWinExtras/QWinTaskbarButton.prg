@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -23,41 +24,41 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 #include <QtGui/QWindow>
 #include <QtWinExtras/QWinTaskbarProgress>
 
 $prototype=explicit QWinTaskbarButton(QObject *parent = nullptr)
-$constructor=5,2,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QWindow *window() const
-$method=5,2,0|QWindow *|window|
+$method=|QWindow *|window|
 
 $prototype=void setWindow(QWindow *window)
-$method=5,2,0|void|setWindow|QWindow *
+$method=|void|setWindow|QWindow *
 
 $prototype=QIcon overlayIcon() const
-$method=5,2,0|QIcon|overlayIcon|
+$method=|QIcon|overlayIcon|
 
 $prototype=void setOverlayIcon(const QIcon &icon)
-$method=5,2,0|void|setOverlayIcon|const QIcon &
+$method=|void|setOverlayIcon|const QIcon &
 
 $prototype=void clearOverlayIcon()
-$method=5,2,0|void|clearOverlayIcon|
+$method=|void|clearOverlayIcon|
 
 $prototype=QString overlayAccessibleDescription() const
-$method=5,2,0|QString|overlayAccessibleDescription|
+$method=|QString|overlayAccessibleDescription|
 
 $prototype=void setOverlayAccessibleDescription(const QString &description)
-$method=5,2,0|void|setOverlayAccessibleDescription|const QString &
+$method=|void|setOverlayAccessibleDescription|const QString &
 
 $prototype=QWinTaskbarProgress *progress() const
-$method=5,2,0|QWinTaskbarProgress *|progress|
+$method=|QWinTaskbarProgress *|progress|
 
 $prototype=bool eventFilter(QObject *, QEvent *)
-$method=5,2,0|bool|eventFilter|QObject *,QEvent *
+$method=|bool|eventFilter|QObject *,QEvent *
 
 #pragma ENDDUMP

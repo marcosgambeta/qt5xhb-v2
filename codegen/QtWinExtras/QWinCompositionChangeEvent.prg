@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=explicit QWinCompositionChangeEvent(bool enabled)
-$constructor=5,2,0|new|bool
+$constructor=|new|bool
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=bool isCompositionEnabled() const
-$method=5,2,0|bool|isCompositionEnabled|
+$method=|bool|isCompositionEnabled|
 
 #pragma ENDDUMP

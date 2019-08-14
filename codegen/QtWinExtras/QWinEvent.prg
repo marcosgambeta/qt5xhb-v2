@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -23,11 +24,11 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=QWinEvent(int type)
-$constructor=5,2,0|new|int
+$constructor=|new|int
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -23,36 +24,36 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=explicit QWinJumpList(QObject *parent = nullptr)
-$constructor=5,2,0|new|QObject *=nullptr
+$constructor=|new|QObject *=nullptr
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=QString identifier() const
-$method=5,2,0|QString|identifier|
+$method=|QString|identifier|
 
 $prototype=void setIdentifier(const QString &identifier)
-$method=5,2,0|void|setIdentifier|const QString &
+$method=|void|setIdentifier|const QString &
 
 $prototype=QWinJumpListCategory *recent() const
-$method=5,2,0|QWinJumpListCategory *|recent|
+$method=|QWinJumpListCategory *|recent|
 
 $prototype=QWinJumpListCategory *frequent() const
-$method=5,2,0|QWinJumpListCategory *|frequent|
+$method=|QWinJumpListCategory *|frequent|
 
 $prototype=QWinJumpListCategory *tasks() const
-$method=5,2,0|QWinJumpListCategory *|tasks|
+$method=|QWinJumpListCategory *|tasks|
 
 $prototype=QList<QWinJumpListCategory *> categories() const
-$method=5,2,0|QList<QWinJumpListCategory *>|categories|
+$method=|QList<QWinJumpListCategory *>|categories|
 
 $prototype=void addCategory(QWinJumpListCategory *category)
-$internalMethod=5,2,0|void|addCategory,addCategory1|QWinJumpListCategory *
+$internalMethod=|void|addCategory,addCategory1|QWinJumpListCategory *
 
 $prototype=QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
-%% TODO: $internalMethod=5,2,0|QWinJumpListCategory *|addCategory,addCategory2|const QString &,const QList<QWinJumpListItem *>=QList<QWinJumpListItem *>()
+%% TODO: $internalMethod=|QWinJumpListCategory *|addCategory,addCategory2|const QString &,const QList<QWinJumpListItem *>=QList<QWinJumpListItem *>()
 
 //[1]void addCategory(QWinJumpListCategory *category)
 //[2]QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
@@ -75,6 +76,6 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 $addMethod=addCategory
 
 $prototype=void clear()
-$method=5,2,0|void|clear|
+$method=|void|clear|
 
 #pragma ENDDUMP

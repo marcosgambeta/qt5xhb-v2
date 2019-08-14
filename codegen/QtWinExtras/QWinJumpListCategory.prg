@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWinExtras
+$added=5,2,0
 
 $header
 
@@ -23,48 +24,48 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes
 
 $prototype=explicit QWinJumpListCategory(const QString &title = QString())
-$constructor=5,2,0|new|const QString &=QString()
+$constructor=|new|const QString &=QString()
 
-$deleteMethod=5,2,0
+$deleteMethod
 
 $prototype=Type type() const
-$method=5,2,0|QWinJumpListCategory::Type|type|
+$method=|QWinJumpListCategory::Type|type|
 
 $prototype=bool isVisible() const
-$method=5,2,0|bool|isVisible|
+$method=|bool|isVisible|
 
 $prototype=void setVisible(bool visible)
-$method=5,2,0|void|setVisible|bool
+$method=|void|setVisible|bool
 
 $prototype=QString title() const
-$method=5,2,0|QString|title|
+$method=|QString|title|
 
 $prototype=void setTitle(const QString &title)
-$method=5,2,0|void|setTitle|const QString &
+$method=|void|setTitle|const QString &
 
 $prototype=int count() const
-$method=5,2,0|int|count|
+$method=|int|count|
 
 $prototype=bool isEmpty() const
-$method=5,2,0|bool|isEmpty|
+$method=|bool|isEmpty|
 
 $prototype=QList<QWinJumpListItem *> items() const
-$method=5,2,0|QList<QWinJumpListItem *>|items|
+$method=|QList<QWinJumpListItem *>|items|
 
 $prototype=void addItem(QWinJumpListItem *item)
-$method=5,2,0|void|addItem|QWinJumpListItem *
+$method=|void|addItem|QWinJumpListItem *
 
 $prototype=QWinJumpListItem *addDestination(const QString &filePath)
-$method=5,2,0|QWinJumpListItem *|addDestination|const QString &
+$method=|QWinJumpListItem *|addDestination|const QString &
 
 $prototype=QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
-$internalMethod=5,2,0|QWinJumpListItem *|addLink,addLink1|const QString &,const QString &,const QStringList &=QStringList()
+$internalMethod=|QWinJumpListItem *|addLink,addLink1|const QString &,const QString &,const QStringList &=QStringList()
 
 $prototype=QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
-$internalMethod=5,2,0|QWinJumpListItem *|addLink,addLink2|const QIcon &,const QString &,const QString &,const QStringList &=QStringList()
+$internalMethod=|QWinJumpListItem *|addLink,addLink2|const QIcon &,const QString &,const QString &,const QStringList &=QStringList()
 
 //[1]QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
 //[2]QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
@@ -87,10 +88,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 $addMethod=addLink
 
 $prototype=QWinJumpListItem *addSeparator()
-$method=5,2,0|QWinJumpListItem *|addSeparator|
+$method=|QWinJumpListItem *|addSeparator|
 
 $prototype=void clear()
-$method=5,2,0|void|clear|
+$method=|void|clear|
 
 $extraMethods
 
