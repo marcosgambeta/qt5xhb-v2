@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtSerialPort
+$added=5,1,0
 
 $header
 
@@ -23,21 +24,21 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,1,0
+$includes
 
 #include <QtCore/QString>
 
 $prototype=QSerialPortInfo()
-$internalConstructor=5,1,0|new1|
+$internalConstructor=|new1|
 
 $prototype=QSerialPortInfo(const QSerialPort &port)
-$internalConstructor=5,1,0|new2|const QSerialPort &
+$internalConstructor=|new2|const QSerialPort &
 
 $prototype=QSerialPortInfo(const QString &name)
-$internalConstructor=5,1,0|new3|const QString &
+$internalConstructor=|new3|const QString &
 
 $prototype=QSerialPortInfo(const QSerialPortInfo &other)
-$internalConstructor=5,1,0|new4|const QSerialPortInfo &
+$internalConstructor=|new4|const QSerialPortInfo &
 
 //[1]QSerialPortInfo()
 //[2]QSerialPortInfo(const QSerialPort &port)
@@ -70,49 +71,49 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 #endif
 }
 
-$deleteMethod=5,1,0
+$deleteMethod
 
 $prototype=void swap(QSerialPortInfo &other)
-$method=5,1,0|void|swap|QSerialPortInfo &
+$method=|void|swap|QSerialPortInfo &
 
 $prototype=QString portName() const
-$method=5,1,0|QString|portName|
+$method=|QString|portName|
 
 $prototype=QString systemLocation() const
-$method=5,1,0|QString|systemLocation|
+$method=|QString|systemLocation|
 
 $prototype=QString description() const
-$method=5,1,0|QString|description|
+$method=|QString|description|
 
 $prototype=QString manufacturer() const
-$method=5,1,0|QString|manufacturer|
+$method=|QString|manufacturer|
 
 $prototype=quint16 vendorIdentifier() const
-$method=5,1,0|quint16|vendorIdentifier|
+$method=|quint16|vendorIdentifier|
 
 $prototype=quint16 productIdentifier() const
-$method=5,1,0|quint16|productIdentifier|
+$method=|quint16|productIdentifier|
 
 $prototype=bool hasVendorIdentifier() const
-$method=5,1,0|bool|hasVendorIdentifier|
+$method=|bool|hasVendorIdentifier|
 
 $prototype=bool hasProductIdentifier() const
-$method=5,1,0|bool|hasProductIdentifier|
+$method=|bool|hasProductIdentifier|
 
 $prototype=bool isNull() const
-$method=5,1,0|bool|isNull|
+$method=|bool|isNull|
 
 $prototype=bool isBusy() const
-$method=5,1,0|bool|isBusy|
+$method=|bool|isBusy|
 
 $prototype=bool isValid() const
-$method=5,1,0|bool|isValid|
+$method=|bool|isValid|
 
 $prototype=static QList<qint32> standardBaudRates()
-$staticMethod=5,1,0|QList<qint32>|standardBaudRates|
+$staticMethod=|QList<qint32>|standardBaudRates|
 
 $prototype=static QList<QSerialPortInfo> availablePorts()
-$staticMethod=5,1,0|QList<QSerialPortInfo>|availablePorts|
+$staticMethod=|QList<QSerialPortInfo>|availablePorts|
 
 $extraMethods
 
