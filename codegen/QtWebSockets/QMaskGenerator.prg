@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebSockets
+$added=5,3,0
 
 $header
 
@@ -23,14 +24,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=virtual bool seed() = 0
-$virtualMethod=5,3,0|bool|seed|
+$virtualMethod=|bool|seed|
 
 $prototype=virtual quint32 nextMask() = 0
-$virtualMethod=5,3,0|quint32|nextMask|
+$virtualMethod=|quint32|nextMask|
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebSockets
+$added=5,3,0
 
 $header
 
@@ -23,16 +24,16 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 #include <QtCore/QString>
 #include <QtCore/QLatin1String>
 
 $prototype=explicit QWebSocketCorsAuthenticator(const QString &origin)
-$internalConstructor=5,3,0|new1|const QString &
+$internalConstructor=|new1|const QString &
 
 $prototype=explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
-$internalConstructor=5,3,0|new2|const QWebSocketCorsAuthenticator &
+$internalConstructor=|new2|const QWebSocketCorsAuthenticator &
 
 //[1]explicit QWebSocketCorsAuthenticator(const QString &origin)
 //[2]explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
@@ -53,19 +54,19 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
   }
 }
 
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=void swap(QWebSocketCorsAuthenticator &other)
-$method=5,3,0|void|swap|QWebSocketCorsAuthenticator &
+$method=|void|swap|QWebSocketCorsAuthenticator &
 
 $prototype=QString origin() const
-$method=5,3,0|QString|origin|
+$method=|QString|origin|
 
 $prototype=bool allowed() const
-$method=5,3,0|bool|allowed|
+$method=|bool|allowed|
 
 $prototype=void setAllowed(bool allowed)
-$method=5,3,0|void|setAllowed|bool
+$method=|void|setAllowed|bool
 
 $extraMethods
 

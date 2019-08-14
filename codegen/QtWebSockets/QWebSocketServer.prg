@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtWebSockets
+$added=5,3,0
 
 $header
 
@@ -25,109 +26,109 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,3,0
+$includes
 
 #include <QtNetwork/QNetworkProxy>
 #include <QtWebSockets/QWebSocket>
 #include <QtWebSockets/QWebSocketCorsAuthenticator>
 
 $prototype=explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = nullptr)
-$constructor=5,3,0|new|const QString &,QWebSocketServer::SslMode,QObject *=nullptr
+$constructor=|new|const QString &,QWebSocketServer::SslMode,QObject *=nullptr
 
-$deleteMethod=5,3,0
+$deleteMethod
 
 $prototype=bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
-$method=5,3,0|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
+$method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
 $prototype=void close()
-$method=5,3,0|void|close|
+$method=|void|close|
 
 $prototype=bool isListening() const
-$method=5,3,0|bool|isListening|
+$method=|bool|isListening|
 
 $prototype=int maxPendingConnections() const
-$method=5,3,0|int|maxPendingConnections|
+$method=|int|maxPendingConnections|
 
 $prototype=void setMaxPendingConnections(int numConnections)
-$method=5,3,0|void|setMaxPendingConnections|int
+$method=|void|setMaxPendingConnections|int
 
 $prototype=quint16 serverPort() const
-$method=5,3,0|quint16|serverPort|
+$method=|quint16|serverPort|
 
 $prototype=QHostAddress serverAddress() const
-$method=5,3,0|QHostAddress|serverAddress|
+$method=|QHostAddress|serverAddress|
 
 $prototype=SslMode secureMode() const
-$method=5,3,0|QWebSocketServer::SslMode|secureMode|
+$method=|QWebSocketServer::SslMode|secureMode|
 
 $prototype=int socketDescriptor() const
-$method=5,3,0|int|socketDescriptor|
+$method=|int|socketDescriptor|
 
 $prototype=bool setSocketDescriptor(int socketDescriptor)
-$method=5,3,0|bool|setSocketDescriptor|int
+$method=|bool|setSocketDescriptor|int
 
 $prototype=bool hasPendingConnections() const
-$method=5,3,0|bool|hasPendingConnections|
+$method=|bool|hasPendingConnections|
 
 $prototype=virtual QWebSocket *nextPendingConnection()
-$virtualMethod=5,3,0|QWebSocket *|nextPendingConnection|
+$virtualMethod=|QWebSocket *|nextPendingConnection|
 
 $prototype=QWebSocketProtocol::CloseCode error() const
-$method=5,3,0|QWebSocketProtocol::CloseCode|error|
+$method=|QWebSocketProtocol::CloseCode|error|
 
 $prototype=QString errorString() const
-$method=5,3,0|QString|errorString|
+$method=|QString|errorString|
 
 $prototype=void pauseAccepting()
-$method=5,3,0|void|pauseAccepting|
+$method=|void|pauseAccepting|
 
 $prototype=void resumeAccepting()
-$method=5,3,0|void|resumeAccepting|
+$method=|void|resumeAccepting|
 
 $prototype=QString serverName() const
-$method=5,3,0|QString|serverName|
+$method=|QString|serverName|
 
 $prototype=void setServerName(const QString &serverName)
-$method=5,3,0|void|setServerName|const QString &
+$method=|void|setServerName|const QString &
 
 $prototype=QNetworkProxy proxy() const
-$method=5,3,0|QNetworkProxy|proxy|
+$method=|QNetworkProxy|proxy|
 
 $prototype=void setProxy(const QNetworkProxy &networkProxy)
-$method=5,3,0|void|setProxy|const QNetworkProxy &
+$method=|void|setProxy|const QNetworkProxy &
 
 $prototype=void setSslConfiguration(const QSslConfiguration &sslConfiguration)
-$method=5,3,0|void|setSslConfiguration|const QSslConfiguration &
+$method=|void|setSslConfiguration|const QSslConfiguration &
 
 $prototype=QSslConfiguration sslConfiguration() const
-$method=5,3,0|QSslConfiguration|sslConfiguration|
+$method=|QSslConfiguration|sslConfiguration|
 
 $prototype=QList<QWebSocketProtocol::Version> supportedVersions() const
-$method=5,3,0|QList<QWebSocketProtocol::Version>|supportedVersions|
+$method=|QList<QWebSocketProtocol::Version>|supportedVersions|
 
 %%
 %% SIGNALS
 %%
 
 $prototype=void acceptError( QAbstractSocket::SocketError socketError )
-$signalMethod=5,3,0|void|acceptError|QAbstractSocket::SocketError
+$signalMethod=|void|acceptError|QAbstractSocket::SocketError
 
 $prototype=void serverError( QWebSocketProtocol::CloseCode closeCode )
-$signalMethod=5,3,0|void|serverError|QWebSocketProtocol::CloseCode
+$signalMethod=|void|serverError|QWebSocketProtocol::CloseCode
 
 $prototype=void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
-$signalMethod=5,3,0|void|originAuthenticationRequired|QWebSocketCorsAuthenticator *
+$signalMethod=|void|originAuthenticationRequired|QWebSocketCorsAuthenticator *
 
 $prototype=void newConnection()
-$signalMethod=5,3,0|void|newConnection|
+$signalMethod=|void|newConnection|
 
 $prototype=void peerVerifyError( const QSslError & error )
-$signalMethod=5,3,0|void|peerVerifyError|const QSslError &
+$signalMethod=|void|peerVerifyError|const QSslError &
 
 $prototype=void sslErrors( const QList<QSslError> & errors )
-$signalMethod=5,3,0|void|sslErrors|const QList<QSslError> &
+$signalMethod=|void|sslErrors|const QList<QSslError> &
 
 $prototype=void closed()
-$signalMethod=5,3,0|void|closed|
+$signalMethod=|void|closed|
 
 #pragma ENDDUMP
