@@ -535,6 +535,8 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -598,6 +600,8 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

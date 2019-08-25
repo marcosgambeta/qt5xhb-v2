@@ -181,6 +181,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

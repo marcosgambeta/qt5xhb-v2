@@ -576,6 +576,8 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -637,6 +639,8 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -698,6 +702,8 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -761,6 +767,8 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
