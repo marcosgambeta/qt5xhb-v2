@@ -585,6 +585,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -646,6 +648,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -707,6 +711,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -768,6 +774,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -829,6 +837,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -892,6 +902,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -953,6 +965,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1014,6 +1028,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1075,6 +1091,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1136,6 +1154,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1197,6 +1217,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1258,6 +1280,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

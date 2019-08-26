@@ -609,6 +609,8 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -670,6 +672,8 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -733,6 +737,8 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -796,6 +802,8 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -861,6 +869,8 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

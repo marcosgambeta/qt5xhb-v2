@@ -1918,6 +1918,8 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

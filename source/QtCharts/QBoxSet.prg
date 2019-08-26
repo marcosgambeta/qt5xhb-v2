@@ -533,6 +533,8 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -594,6 +596,8 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -655,6 +659,8 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -716,6 +722,8 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -779,6 +787,8 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -840,6 +850,8 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -901,6 +913,8 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -962,6 +976,8 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1025,6 +1041,8 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1086,6 +1104,8 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

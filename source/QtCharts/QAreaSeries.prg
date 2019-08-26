@@ -904,6 +904,8 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -967,6 +969,8 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1030,6 +1034,8 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1093,6 +1099,8 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1158,6 +1166,8 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1221,6 +1231,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1284,6 +1296,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1347,6 +1361,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1410,6 +1426,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1473,6 +1491,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1536,6 +1556,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1599,6 +1621,8 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1660,6 +1684,8 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

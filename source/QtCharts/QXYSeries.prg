@@ -1242,6 +1242,8 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1305,6 +1307,8 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1368,6 +1372,8 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1433,6 +1439,8 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1496,6 +1504,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1559,6 +1569,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1622,6 +1634,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1685,6 +1699,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1748,6 +1764,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1811,6 +1829,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1874,6 +1894,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1937,6 +1959,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -2000,6 +2024,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -2065,6 +2091,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -2126,6 +2154,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -2189,6 +2219,8 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -2252,6 +2284,8 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

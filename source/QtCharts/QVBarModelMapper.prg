@@ -478,6 +478,8 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -539,6 +541,8 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -600,6 +604,8 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -661,6 +667,8 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -722,6 +730,8 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -783,6 +793,8 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

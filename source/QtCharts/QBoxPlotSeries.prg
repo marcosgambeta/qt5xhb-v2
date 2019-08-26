@@ -667,6 +667,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -753,6 +755,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -839,6 +843,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -900,6 +906,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -961,6 +969,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1024,6 +1034,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1085,6 +1097,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1148,6 +1162,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1213,6 +1229,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1274,6 +1292,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1337,6 +1357,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1400,6 +1422,8 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

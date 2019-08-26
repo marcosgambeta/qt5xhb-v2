@@ -930,6 +930,8 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -993,6 +995,8 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1054,6 +1058,8 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1117,6 +1123,8 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1182,6 +1190,8 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1245,6 +1255,8 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1308,6 +1320,8 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1394,6 +1408,8 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1455,6 +1471,8 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

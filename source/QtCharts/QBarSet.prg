@@ -861,6 +861,8 @@ HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -922,6 +924,8 @@ HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -985,6 +989,8 @@ HB_FUNC_STATIC( QBARSET_ONCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1048,6 +1054,8 @@ HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1111,6 +1119,8 @@ HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1176,6 +1186,8 @@ HB_FUNC_STATIC( QBARSET_ONHOVERED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1237,6 +1249,8 @@ HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1298,6 +1312,8 @@ HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1361,6 +1377,8 @@ HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1422,6 +1440,8 @@ HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1483,6 +1503,8 @@ HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1546,6 +1568,8 @@ HB_FUNC_STATIC( QBARSET_ONPRESSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1609,6 +1633,8 @@ HB_FUNC_STATIC( QBARSET_ONRELEASED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1672,6 +1698,8 @@ HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1737,6 +1765,8 @@ HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1802,6 +1832,8 @@ HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
