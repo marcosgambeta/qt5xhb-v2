@@ -812,6 +812,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -875,6 +877,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -938,6 +942,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -999,6 +1005,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1062,6 +1070,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1148,6 +1158,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1209,6 +1221,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
