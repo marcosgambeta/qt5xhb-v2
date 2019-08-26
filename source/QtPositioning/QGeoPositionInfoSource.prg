@@ -539,6 +539,8 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -600,6 +602,8 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -663,6 +667,8 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
