@@ -1933,6 +1933,8 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
