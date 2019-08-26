@@ -1395,6 +1395,8 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1546,6 +1548,8 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

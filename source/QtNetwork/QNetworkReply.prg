@@ -1085,6 +1085,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1232,6 +1234,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1295,6 +1299,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1356,6 +1362,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

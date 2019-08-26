@@ -2570,6 +2570,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
