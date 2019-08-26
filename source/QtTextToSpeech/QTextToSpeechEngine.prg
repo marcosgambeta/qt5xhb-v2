@@ -679,6 +679,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

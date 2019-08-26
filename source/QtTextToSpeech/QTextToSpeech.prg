@@ -724,6 +724,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -787,6 +789,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -850,6 +854,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -913,6 +919,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -976,6 +984,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1039,6 +1049,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1102,6 +1114,8 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
