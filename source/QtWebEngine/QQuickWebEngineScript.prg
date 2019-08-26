@@ -523,6 +523,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -586,6 +588,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -649,6 +653,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -712,6 +718,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -775,6 +783,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -838,6 +848,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

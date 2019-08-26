@@ -1055,6 +1055,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1124,6 +1126,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1185,6 +1189,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1246,6 +1252,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1307,6 +1315,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1368,6 +1378,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1429,6 +1441,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1490,6 +1504,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1551,6 +1567,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1612,6 +1630,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1673,6 +1693,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
