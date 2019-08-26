@@ -230,6 +230,8 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
