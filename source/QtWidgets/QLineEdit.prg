@@ -2060,6 +2060,8 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

@@ -6804,6 +6804,8 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -6867,6 +6869,8 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

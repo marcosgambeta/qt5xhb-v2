@@ -1523,6 +1523,8 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1586,6 +1588,8 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
