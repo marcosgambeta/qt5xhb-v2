@@ -1267,6 +1267,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1330,6 +1332,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1393,6 +1397,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1456,6 +1462,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1519,6 +1527,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1582,6 +1592,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1645,6 +1657,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1708,6 +1722,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1771,6 +1787,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1834,6 +1852,8 @@ HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
