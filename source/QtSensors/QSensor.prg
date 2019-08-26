@@ -1305,6 +1305,8 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1366,6 +1368,8 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1427,6 +1431,8 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1490,6 +1496,8 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1551,6 +1559,8 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1612,6 +1622,8 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1673,6 +1685,8 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1736,6 +1750,8 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1799,6 +1815,8 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1862,6 +1880,8 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1925,6 +1945,8 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1988,6 +2010,8 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -2051,6 +2075,8 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -2114,6 +2140,8 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

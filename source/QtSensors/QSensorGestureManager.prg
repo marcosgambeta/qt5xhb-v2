@@ -253,6 +253,8 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

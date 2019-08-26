@@ -235,6 +235,8 @@ HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
