@@ -773,6 +773,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -840,6 +842,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -903,6 +907,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -966,6 +972,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1029,6 +1037,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1094,6 +1104,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1159,6 +1171,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1224,6 +1238,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1285,6 +1301,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
