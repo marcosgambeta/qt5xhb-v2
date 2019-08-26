@@ -327,6 +327,8 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
