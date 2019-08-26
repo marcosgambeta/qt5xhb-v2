@@ -551,6 +551,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -614,6 +616,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -677,6 +681,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -740,6 +746,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -807,6 +815,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -870,6 +880,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -933,6 +945,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -994,6 +1008,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1057,6 +1073,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1120,6 +1138,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
