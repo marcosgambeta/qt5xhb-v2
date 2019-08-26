@@ -597,6 +597,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -658,6 +660,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -723,6 +727,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -786,6 +792,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -847,6 +855,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -912,6 +922,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -977,6 +989,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1042,6 +1056,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1107,6 +1123,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1170,6 +1188,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

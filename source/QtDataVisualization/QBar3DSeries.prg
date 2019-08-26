@@ -375,6 +375,8 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -438,6 +440,8 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -501,6 +505,8 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

@@ -281,6 +281,8 @@ HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

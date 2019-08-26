@@ -211,6 +211,8 @@ HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

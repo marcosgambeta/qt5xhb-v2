@@ -418,6 +418,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -481,6 +483,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -546,6 +550,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -609,6 +615,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -674,6 +682,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -739,6 +749,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -804,6 +816,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -869,6 +883,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -932,6 +948,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

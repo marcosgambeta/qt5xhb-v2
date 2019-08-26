@@ -955,6 +955,8 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1018,6 +1020,8 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1081,6 +1085,8 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1144,6 +1150,8 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1207,6 +1215,8 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1270,6 +1280,8 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1333,6 +1345,8 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1396,6 +1410,8 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1459,6 +1475,8 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -1522,6 +1540,8 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 

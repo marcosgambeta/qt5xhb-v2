@@ -579,6 +579,8 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -642,6 +644,8 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -705,6 +709,8 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -768,6 +774,8 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
