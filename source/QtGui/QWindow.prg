@@ -3071,6 +3071,8 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -3622,6 +3624,8 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
@@ -3746,6 +3750,8 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
   {
     hb_retl( false );
   }
+#else
+hb_retl( false );
 #endif
 }
 
