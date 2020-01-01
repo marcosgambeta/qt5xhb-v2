@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtScxml
+$added=5,8,0
 
 $header
 

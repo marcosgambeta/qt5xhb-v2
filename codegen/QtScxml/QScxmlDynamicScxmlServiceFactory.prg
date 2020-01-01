@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtScxml
+$added=5,8,0
 
 $header
 
@@ -32,5 +33,6 @@ $prototype=QScxmlDynamicScxmlServiceFactory(const QScxmlExecutableContent::Invok
 $deleteMethod
 
 $prototype=QScxmlInvokableService *invoke(QScxmlStateMachine *parentStateMachine) override
+$method=|QScxmlInvokableService *|invoke|QScxmlStateMachine *
 
 #pragma ENDDUMP

@@ -6,6 +6,7 @@
 
 $project=Qt5xHb
 $module=QtScxml
+$added=5,8,0
 
 $header
 
@@ -28,6 +29,7 @@ $destructor
 $includes
 
 $prototype=QScxmlInvokableService(QScxmlStateMachine *parentStateMachine, QScxmlInvokableServiceFactory *parent)
+$constructor=|new|QScxmlStateMachine *,QScxmlInvokableServiceFactory *
 
 $deleteMethod
 
@@ -36,25 +38,30 @@ $deleteMethod
 %%
 
 $prototype=QScxmlStateMachine *parentStateMachine() const
+$method=|QScxmlStateMachine *|parentStateMachine|
 
 %%
 %% Q_PROPERTY(QString id READ id CONSTANT)
 %%
 
 $prototype=virtual QString id() const = 0
+$virtualMethod=|QString|id|
 
 %%
 %% Q_PROPERTY(QString name READ name CONSTANT)
 %%
 
 $prototype=virtual QString name() const = 0
+$virtualMethod=|QString|name|
 
 %%
 %%
 %%
 
 $prototype=virtual bool start() = 0
+$virtualMethod=|bool|start|
 
 $prototype=virtual void postEvent(QScxmlEvent *event) = 0
+$virtualMethod=|void|postEvent|QScxmlEvent *
 
 #pragma ENDDUMP
