@@ -29,9 +29,11 @@ enum QTextDocument::FindFlag
 /*
 enum QTextDocument::ResourceType
 */
+#define QTextDocument_UnknownResource                                0
 #define QTextDocument_HtmlResource                                   1
 #define QTextDocument_ImageResource                                  2
 #define QTextDocument_StyleSheetResource                             3
+#define QTextDocument_MarkdownResource                               4
 #define QTextDocument_UserResource                                   100
 
 /*
@@ -40,5 +42,13 @@ enum QTextDocument::Stacks
 #define QTextDocument_UndoStack                                      0x01
 #define QTextDocument_RedoStack                                      0x02
 #define QTextDocument_UndoAndRedoStacks                              hb_bitor(QTextDocument_UndoStack,QTextDocument_RedoStack)
+
+/*
+enum QTextDocument::MarkdownFeature
+flags QTextDocument::MarkdownFeatures
+*/
+#define QTextDocument_MarkdownNoHTML                                 hb_bitor(0x0020,0x0040)
+#define QTextDocument_MarkdownDialectCommonMark                      0
+#define QTextDocument_MarkdownDialectGitHub                          hb_bitor(hb_bitor(hb_bitor(hb_bitor(hb_bitor(0x0004,0x0008),0x0400),0x0100),0x0200),0x0800)
 
 #endif /* QTEXTDOCUMENT_CH */
