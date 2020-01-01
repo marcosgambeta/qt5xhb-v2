@@ -106,6 +106,8 @@ CLASS QTextEdit INHERIT QAbstractScrollArea
    METHOD undo
    METHOD zoomIn
    METHOD zoomOut
+   METHOD setMarkdown
+   METHOD toMarkdown
 
    METHOD onCopyAvailable
    METHOD onCurrentCharFormatChanged
@@ -2237,6 +2239,60 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setMarkdown(const QString &markdown)
+*/
+HB_FUNC_STATIC( QTEXTEDIT_SETMARKDOWN )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+  QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+#endif
+      obj->setMarkdown ( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QString toMarkdown(QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub) const
+*/
+HB_FUNC_STATIC( QTEXTEDIT_TOMARKDOWN )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+  QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+#endif
+      RQSTRING( obj->toMarkdown ( ISNIL(1)? (QTextDocument::MarkdownFeatures) QTextDocument::MarkdownDialectGitHub : (QTextDocument::MarkdownFeatures) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
 }
 
 /*

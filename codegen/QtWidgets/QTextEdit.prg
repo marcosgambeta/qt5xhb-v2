@@ -340,6 +340,12 @@ $method=|void|zoomIn|int=1
 $prototype=void zoomOut ( int range = 1 )
 $method=|void|zoomOut|int=1
 
+$prototype=void setMarkdown(const QString &markdown)
+$method=5,14,0|void|setMarkdown|const QString &
+
+$prototype=QString toMarkdown(QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub) const
+$method=5,14,0|QString|toMarkdown|QTextDocument::MarkdownFeatures=QTextDocument::MarkdownDialectGitHub
+
 %%
 %% SIGNALS
 %%
