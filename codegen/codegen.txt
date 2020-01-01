@@ -288,6 +288,7 @@ QCompassReading                                      |QObject        |QtSensors
 QCompleter                                           |QObject        |QtWidgets
 QCompleter::CompletionMode                           |enum           |QtWidgets
 QCompleter::ModelSorting                             |enum           |QtWidgets
+QCompressedHelpInfo                                  |object         |QtHelp
 QContextMenuEvent                                    |QEvent         |QtGui
 QContextMenuEvent::Reason                            |enum           |QtGui
 QCoreApplication                                     |QObject        |QtCore
@@ -1105,6 +1106,7 @@ QScrollEvent                                         |QEvent         |QtGui
 QScrollEvent::ScrollState                            |enum           |QtGui
 QScrollPrepareEvent                                  |QEvent         |QtGui
 QSctpSocket                                          |QObject        |QtNetwork
+QScxmlEvent                                          |object         |QtScxml
 QSemaphore                                           |object         |QtCore
 QSensor                                              |QObject        |QtSensors
 QSensor::AxesOrientationMode                         |enum           |QtSensors
@@ -1431,6 +1433,7 @@ QTextCursor::SelectionType                           |enum           |QtGui
 QTextDecoder                                         |object         |QtCore
 QTextDocument                                        |QObject        |QtGui
 QTextDocument::FindFlags                             |enum           |QtGui
+QTextDocument::MarkdownFeatures                      |enum           |QtGui
 QTextDocument::MetaInformation                       |enum           |QtGui
 QTextDocument::Stacks                                |enum           |QtGui
 QTextDocumentFragment                                |object         |QtGui
@@ -1533,6 +1536,7 @@ QVariant::Type                                       |enum           |QtCore
 QVector2D                                            |object         |QtGui
 QVector3D                                            |object         |QtGui
 QVector4D                                            |object         |QtGui
+QVersionNumber                                       |object         |QtCore 
 QVideoEncoderSettings                                |object         |QtMultimedia
 QVideoFilterRunnable                                 |object         |QtMultimedia
 QVideoFilterRunnable::RunFlags                       |enum           |QtMultimedia
