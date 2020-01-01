@@ -97,6 +97,8 @@ CLASS QTextDocument INHERIT QObject
    METHOD undo
    METHOD redo
    METHOD setModified
+   METHOD setMarkdown
+   METHOD toMarkdown
 
    METHOD onContentsChange
    METHOD onContentsChanged
@@ -2009,6 +2011,60 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
 /*
 QTextDocumentPrivate *docHandle() const
 */
+
+/*
+void QTextDocument::setMarkdown(const QString &markdown, QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub)
+*/
+HB_FUNC_STATIC( QTEXTDOCUMENT_SETMARKDOWN )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    {
+#endif
+      obj->setMarkdown ( PQSTRING(1), ISNIL(2)? (QTextDocument::MarkdownFeatures) QTextDocument::MarkdownDialectGitHub : (QTextDocument::MarkdownFeatures) hb_parni(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QString QTextDocument::toMarkdown(QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub) const
+*/
+HB_FUNC_STATIC( QTEXTDOCUMENT_TOMARKDOWN )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+#endif
+      RQSTRING( obj->toMarkdown ( ISNIL(1)? (QTextDocument::MarkdownFeatures) QTextDocument::MarkdownDialectGitHub : (QTextDocument::MarkdownFeatures) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 void contentsChange( int from, int charsRemoves, int charsAdded )

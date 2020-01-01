@@ -356,6 +356,12 @@ $prototype=QTextDocumentPrivate *docHandle() const
 %% TODO: implementar ?
 %% $method=|QTextDocumentPrivate *|docHandle|
 
+$prototype=void QTextDocument::setMarkdown(const QString &markdown, QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub)
+$method=5,14,0|void|setMarkdown|const QString &,QTextDocument::MarkdownFeatures=QTextDocument::MarkdownDialectGitHub
+
+$prototype=QString QTextDocument::toMarkdown(QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub) const
+$method=5,14,0|QString|toMarkdown|QTextDocument::MarkdownFeatures=QTextDocument::MarkdownDialectGitHub
+
 %%
 %% SIGNALS
 %%
