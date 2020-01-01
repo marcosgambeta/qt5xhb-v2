@@ -20,6 +20,7 @@
 #define ISQAXSCRIPT(n)                                      _qt5xhb_isObjectDerivedFrom(n,"QAxScript")
 #define ISQAXSCRIPTENGINE(n)                                _qt5xhb_isObjectDerivedFrom(n,"QAxScriptEngine")
 #define ISQAXSCRIPTMANAGER(n)                               _qt5xhb_isObjectDerivedFrom(n,"QAxScriptManager")
+#define ISQAXSELECT(n)                                      _qt5xhb_isObjectDerivedFrom(n,"QAxSelect")
 #define ISQAXWIDGET(n)                                      _qt5xhb_isObjectDerivedFrom(n,"QAxWidget")
 
 #define PQAXBASE(n)                                         (QAxBase *) _qt5xhb_itemGetPtr(n)
@@ -29,6 +30,7 @@
 #define PQAXSCRIPT(n)                                       (QAxScript *) _qt5xhb_itemGetPtr(n)
 #define PQAXSCRIPTENGINE(n)                                 (QAxScriptEngine *) _qt5xhb_itemGetPtr(n)
 #define PQAXSCRIPTMANAGER(n)                                (QAxScriptManager *) _qt5xhb_itemGetPtr(n)
+#define PQAXSELECT(n)                                       (QAxSelect *) _qt5xhb_itemGetPtr(n)
 #define PQAXWIDGET(n)                                       (QAxWidget *) _qt5xhb_itemGetPtr(n)
 
 #define OPQAXBASE(n,v)                                      ISNIL(n)? v : (QAxBase *) _qt5xhb_itemGetPtr(n)
@@ -38,6 +40,7 @@
 #define OPQAXSCRIPT(n,v)                                    ISNIL(n)? v : (QAxScript *) _qt5xhb_itemGetPtr(n)
 #define OPQAXSCRIPTENGINE(n,v)                              ISNIL(n)? v : (QAxScriptEngine *) _qt5xhb_itemGetPtr(n)
 #define OPQAXSCRIPTMANAGER(n,v)                             ISNIL(n)? v : (QAxScriptManager *) _qt5xhb_itemGetPtr(n)
+#define OPQAXSELECT(n,v)                                    ISNIL(n)? v : (QAxSelect *) _qt5xhb_itemGetPtr(n)
 #define OPQAXWIDGET(n,v)                                    ISNIL(n)? v : (QAxWidget *) _qt5xhb_itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_ACTIVEQT_H */
