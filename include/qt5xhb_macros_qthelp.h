@@ -13,6 +13,7 @@
 #ifndef QT5XHB_MACROS_QTHELP_H
 #define QT5XHB_MACROS_QTHELP_H
 
+#define ISQCOMPRESSEDHELPINFO(n)                            _qt5xhb_isObjectDerivedFrom(n,"QCompressedHelpInfo")
 #define ISQHELPCONTENTITEM(n)                               _qt5xhb_isObjectDerivedFrom(n,"QHelpContentItem")
 #define ISQHELPCONTENTMODEL(n)                              _qt5xhb_isObjectDerivedFrom(n,"QHelpContentModel")
 #define ISQHELPCONTENTWIDGET(n)                             _qt5xhb_isObjectDerivedFrom(n,"QHelpContentWidget")
@@ -25,6 +26,7 @@
 #define ISQHELPSEARCHQUERYWIDGET(n)                         _qt5xhb_isObjectDerivedFrom(n,"QHelpSearchQueryWidget")
 #define ISQHELPSEARCHRESULTWIDGET(n)                        _qt5xhb_isObjectDerivedFrom(n,"QHelpSearchResultWidget")
 
+#define PQCOMPRESSEDHELPINFO(n)                             (QCompressedHelpInfo *) _qt5xhb_itemGetPtr(n)
 #define PQHELPCONTENTITEM(n)                                (QHelpContentItem *) _qt5xhb_itemGetPtr(n)
 #define PQHELPCONTENTMODEL(n)                               (QHelpContentModel *) _qt5xhb_itemGetPtr(n)
 #define PQHELPCONTENTWIDGET(n)                              (QHelpContentWidget *) _qt5xhb_itemGetPtr(n)
@@ -37,6 +39,7 @@
 #define PQHELPSEARCHQUERYWIDGET(n)                          (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtr(n)
 #define PQHELPSEARCHRESULTWIDGET(n)                         (QHelpSearchResultWidget *) _qt5xhb_itemGetPtr(n)
 
+#define OPQCOMPRESSEDHELPINFO(n,v)                          ISNIL(n)? v : (QCompressedHelpInfo *) _qt5xhb_itemGetPtr(n)
 #define OPQHELPCONTENTITEM(n,v)                             ISNIL(n)? v : (QHelpContentItem *) _qt5xhb_itemGetPtr(n)
 #define OPQHELPCONTENTMODEL(n,v)                            ISNIL(n)? v : (QHelpContentModel *) _qt5xhb_itemGetPtr(n)
 #define OPQHELPCONTENTWIDGET(n,v)                           ISNIL(n)? v : (QHelpContentWidget *) _qt5xhb_itemGetPtr(n)
