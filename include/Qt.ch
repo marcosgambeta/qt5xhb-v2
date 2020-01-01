@@ -1041,6 +1041,7 @@ enum Qt::TextFormat
 #define Qt_PlainText                                                 0
 #define Qt_RichText                                                  1
 #define Qt_AutoText                                                  2
+#define Qt_MarkdownText                                              3
 
 /*
 enum Qt::AspectRatioMode
