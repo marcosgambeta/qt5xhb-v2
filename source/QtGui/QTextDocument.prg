@@ -131,7 +131,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals3.h"
+#include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
 #include <QtGui/QTextDocument>
@@ -2075,22 +2075,23 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("contentsChange(int,int,int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("contentsChange(int,int,int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::contentsChange, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
@@ -2103,7 +2104,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2114,9 +2115,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2140,29 +2141,30 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("contentsChanged()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("contentsChanged()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::contentsChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2173,9 +2175,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2199,22 +2201,23 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("undoAvailable(bool)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("undoAvailable(bool)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::undoAvailable, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2223,7 +2226,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2234,9 +2237,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2260,22 +2263,23 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("redoAvailable(bool)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("redoAvailable(bool)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::redoAvailable, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2284,7 +2288,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2295,9 +2299,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2321,29 +2325,30 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("undoCommandAdded()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("undoCommandAdded()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::undoCommandAdded, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2354,9 +2359,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2380,22 +2385,23 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("modificationChanged(bool)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("modificationChanged(bool)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::modificationChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2404,7 +2410,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2415,9 +2421,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2441,23 +2447,24 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("cursorPositionChanged(QTextCursor)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("cursorPositionChanged(QTextCursor)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::cursorPositionChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QTextCursor & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QTEXTCURSOR" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QTEXTCURSOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2465,7 +2472,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2476,9 +2483,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2502,22 +2509,23 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("blockCountChanged(int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("blockCountChanged(int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::blockCountChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2526,7 +2534,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2537,9 +2545,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2563,29 +2571,30 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("documentLayoutChanged()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("documentLayoutChanged()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::documentLayoutChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTEXTDOCUMENT" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2596,9 +2605,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
