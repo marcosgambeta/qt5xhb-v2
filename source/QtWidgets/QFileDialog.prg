@@ -119,7 +119,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals3.h"
+#include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QFileDialog>
@@ -1827,22 +1827,23 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("currentChanged(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::currentChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1851,7 +1852,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1862,9 +1863,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1888,22 +1889,23 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("directoryEntered(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("directoryEntered(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::directoryEntered, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1912,7 +1914,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1923,9 +1925,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1949,22 +1951,23 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("fileSelected(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("fileSelected(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::fileSelected, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1973,7 +1976,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1984,9 +1987,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2010,22 +2013,23 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("filesSelected(QStringList)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("filesSelected(QStringList)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::filesSelected, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QStringList & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
             for(i=0;i<arg1.count();i++)
@@ -2041,7 +2045,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2052,9 +2056,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2078,22 +2082,23 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("filterSelected(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("filterSelected(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::filterSelected, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2102,7 +2107,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2113,9 +2118,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2139,23 +2144,24 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("urlSelected(QUrl)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("urlSelected(QUrl)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::urlSelected, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2163,7 +2169,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2174,9 +2180,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2200,22 +2206,23 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("urlsSelected(QList<QUrl>)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("urlsSelected(QList<QUrl>)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::urlsSelected, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QList<QUrl> & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             int i;
@@ -2247,7 +2254,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2258,9 +2265,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2284,23 +2291,24 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("currentUrlChanged(QUrl)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("currentUrlChanged(QUrl)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::currentUrlChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2308,7 +2316,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2319,9 +2327,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2345,23 +2353,24 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("directoryUrlEntered(QUrl)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("directoryUrlEntered(QUrl)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::directoryUrlEntered, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QURL" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2369,7 +2378,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2380,9 +2389,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }

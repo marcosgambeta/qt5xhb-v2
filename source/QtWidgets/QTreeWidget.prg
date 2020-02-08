@@ -90,7 +90,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals3.h"
+#include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QTreeWidget>
@@ -1094,24 +1094,25 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::currentItemChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, QTreeWidgetItem * arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
-            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QTREEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1120,7 +1121,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1131,9 +1132,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1157,23 +1158,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemActivated(QTreeWidgetItem*,int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QTreeWidgetItem*,int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemActivated, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1183,7 +1185,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1194,9 +1196,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1220,23 +1222,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemChanged(QTreeWidgetItem*,int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QTreeWidgetItem*,int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1246,7 +1249,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1257,9 +1260,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1283,23 +1286,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemClicked(QTreeWidgetItem*,int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QTreeWidgetItem*,int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemClicked, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1309,7 +1313,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1320,9 +1324,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1346,23 +1350,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemCollapsed(QTreeWidgetItem*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemCollapsed(QTreeWidgetItem*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemCollapsed, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1370,7 +1375,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1381,9 +1386,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1407,23 +1412,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemDoubleClicked(QTreeWidgetItem*,int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QTreeWidgetItem*,int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemDoubleClicked, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1433,7 +1439,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1444,9 +1450,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1470,23 +1476,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemEntered(QTreeWidgetItem*,int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QTreeWidgetItem*,int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemEntered, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1496,7 +1503,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1507,9 +1514,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1533,23 +1540,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemExpanded(QTreeWidgetItem*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemExpanded(QTreeWidgetItem*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemExpanded, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1557,7 +1565,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1568,9 +1576,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1594,23 +1602,24 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemPressed(QTreeWidgetItem*,int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QTreeWidgetItem*,int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemPressed, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) arg1, "QTREEWIDGETITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTREEWIDGETITEM" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1620,7 +1629,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1631,9 +1640,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1657,29 +1666,30 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemSelectionChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTREEWIDGET" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1690,9 +1700,9 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
