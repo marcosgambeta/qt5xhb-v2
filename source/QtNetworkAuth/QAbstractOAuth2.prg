@@ -63,7 +63,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals3.h"
+#include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -470,22 +470,23 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("clientIdentifierSharedKeyChanged(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("clientIdentifierSharedKeyChanged(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::clientIdentifierSharedKeyChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -494,7 +495,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -505,9 +506,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -535,25 +536,26 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("error(QString,QString,QUrl)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("error(QString,QString,QUrl)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::error, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1, const QString & arg2, const QUrl & arg3) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
-            PHB_ITEM pArg3 = Signals3_return_object( (void *) &arg3, "QURL" );
+            PHB_ITEM pArg3 = Signals4_return_object( (void *) &arg3, "QURL" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -563,7 +565,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -574,9 +576,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -604,23 +606,24 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("expirationAtChanged(QDateTime)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("expirationAtChanged(QDateTime)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::expirationAtChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QDateTime & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QDATETIME" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDATETIME" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -628,7 +631,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -639,9 +642,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -669,22 +672,23 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("responseTypeChanged(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("responseTypeChanged(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::responseTypeChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -693,7 +697,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -704,9 +708,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -734,22 +738,23 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("scopeChanged(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("scopeChanged(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::scopeChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -758,7 +763,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -769,9 +774,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -799,22 +804,23 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("stateChanged(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::stateChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -823,7 +829,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -834,9 +840,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -864,22 +870,23 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("userAgentChanged(QString)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("userAgentChanged(QString)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::userAgentChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -888,7 +895,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -899,9 +906,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
