@@ -89,7 +89,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals3.h"
+#include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
 #include <QtNetwork/QNetworkAccessManager>
@@ -1157,24 +1157,25 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::proxyAuthenticationRequired, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QNETWORKPROXY" );
-            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QAUTHENTICATOR" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKPROXY" );
+            PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QAUTHENTICATOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1183,7 +1184,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1194,9 +1195,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1220,24 +1221,25 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("authenticationRequired(QNetworkReply*,QAuthenticator*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("authenticationRequired(QNetworkReply*,QAuthenticator*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::authenticationRequired, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QNetworkReply * arg1, QAuthenticator * arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
-            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
-            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QAUTHENTICATOR" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QAUTHENTICATOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1246,7 +1248,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1257,9 +1259,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1283,23 +1285,24 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("finished(QNetworkReply*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("finished(QNetworkReply*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::finished, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QNetworkReply * arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
-            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1307,7 +1310,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1318,9 +1321,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1345,23 +1348,24 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("encrypted(QNetworkReply*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("encrypted(QNetworkReply*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::encrypted, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QNetworkReply * arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
-            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1369,7 +1373,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1380,9 +1384,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1409,23 +1413,24 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("sslErrors(QNetworkReply*,QList<QSslError>)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QNetworkReply*,QList<QSslError>)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::sslErrors, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QNetworkReply * arg1, const QList<QSslError> & arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
-            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg2 = hb_itemArrayNew(0);
             int i;
@@ -1458,7 +1463,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1469,9 +1474,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1496,24 +1501,25 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::preSharedKeyAuthenticationRequired, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QNetworkReply * arg1, QSslPreSharedKeyAuthenticator * arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
-            PHB_ITEM pArg1 = Signals3_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
-            PHB_ITEM pArg2 = Signals3_return_object( (void *) arg2, "QSSLPRESHAREDKEYAUTHENTICATOR" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
+            PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QSSLPRESHAREDKEYAUTHENTICATOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1522,7 +1528,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1533,9 +1539,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1562,29 +1568,30 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("networkSessionConnected()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("networkSessionConnected()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::networkSessionConnected, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1595,9 +1602,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1621,22 +1628,23 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkAccessManager::networkAccessibleChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QNetworkAccessManager::NetworkAccessibility arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKACCESSMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1645,7 +1653,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1656,9 +1664,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
