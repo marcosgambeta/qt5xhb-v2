@@ -81,7 +81,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals3.h"
+#include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
 #include <QtSql/QSqlTableModel>
@@ -941,22 +941,23 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("beforeDelete(int)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeDelete(int)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSqlTableModel::beforeDelete, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -965,7 +966,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -976,9 +977,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1002,23 +1003,24 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("beforeInsert(QSqlRecord)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeInsert(QSqlRecord)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSqlTableModel::beforeInsert, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (QSqlRecord & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QSQLRECORD" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSQLRECORD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1026,7 +1028,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1037,9 +1039,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1063,24 +1065,25 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("beforeUpdate(int,QSqlRecord)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeUpdate(int,QSqlRecord)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSqlTableModel::beforeUpdate, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (int arg1, QSqlRecord & arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QSQLRECORD" );
+            PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QSQLRECORD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1089,7 +1092,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1100,9 +1103,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1126,24 +1129,25 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("primeInsert(int,QSqlRecord)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("primeInsert(int,QSqlRecord)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSqlTableModel::primeInsert, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (int arg1, QSqlRecord & arg2) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = Signals3_return_object( (void *) &arg2, "QSQLRECORD" );
+            PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QSQLRECORD" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1152,7 +1156,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1163,9 +1167,9 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
