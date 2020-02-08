@@ -82,7 +82,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals3.h"
+#include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
 #include <QtQuick/QQuickWindow>
@@ -759,29 +759,30 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("afterRendering()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("afterRendering()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::afterRendering, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -792,9 +793,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -818,29 +819,30 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("beforeRendering()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeRendering()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::beforeRendering, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -851,9 +853,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -877,29 +879,30 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("beforeSynchronizing()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeSynchronizing()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::beforeSynchronizing, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -910,9 +913,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -936,23 +939,24 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::colorChanged, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
-            PHB_ITEM pArg1 = Signals3_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -960,7 +964,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -971,9 +975,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -997,29 +1001,30 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("frameSwapped()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("frameSwapped()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::frameSwapped, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1030,9 +1035,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1056,29 +1061,30 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("sceneGraphInitialized()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("sceneGraphInitialized()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::sceneGraphInitialized, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1089,9 +1095,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1115,29 +1121,30 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 
   if( sender != nullptr )
   {
-    int index = sender->metaObject()->indexOfSignal("sceneGraphInvalidated()");
+    int indexOfSignal = sender->metaObject()->indexOfSignal("sceneGraphInvalidated()");
+    int indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
-      if( Signals3_connection( sender, index ) )
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::sceneGraphInvalidated, 
-                                                              [sender,index]
+                                                              [sender, indexOfSignal, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals3_return_codeblock( sender, index );
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals3_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKWINDOW" );
             hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals3_store_connection( sender, index, connection );
+        Signals4_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1148,9 +1155,9 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals3_disconnection( sender, index );
+      Signals4_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals3_get_connection( sender, index ) );
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
