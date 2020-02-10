@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScriptEngine::signalHandlerException, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QScriptValue & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
