@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::currentIdChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::customButtonClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::helpRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1353,7 +1353,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::pageAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizard::pageRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

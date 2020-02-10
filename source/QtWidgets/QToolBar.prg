@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::actionTriggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::allowedAreasChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::ToolBarAreas arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::iconSizeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSize & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::movableChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::orientationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::Orientation arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::toolButtonStyleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::ToolButtonStyle arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::topLevelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBar::visibilityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

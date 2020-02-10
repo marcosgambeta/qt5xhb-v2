@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeEdit::dateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QDate & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeEdit::dateTimeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QDateTime & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1548,7 +1548,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeEdit::timeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QTime & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

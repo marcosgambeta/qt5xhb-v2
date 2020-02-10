@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWizardPage::completeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

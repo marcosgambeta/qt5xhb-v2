@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QKeySequenceEdit::editingFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QKeySequenceEdit::keySequenceChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QKeySequence & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

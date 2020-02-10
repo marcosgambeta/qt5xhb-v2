@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDialog::accepted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDialog::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDialog::rejected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

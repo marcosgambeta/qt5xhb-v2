@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::aboutToCompose, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::frameSwapped, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::aboutToResize, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLWidget::resized, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

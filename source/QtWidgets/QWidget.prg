@@ -6764,7 +6764,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::windowTitleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -6830,7 +6830,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::windowIconChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QIcon & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -6895,7 +6895,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::windowIconTextChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -6957,7 +6957,7 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWidget::customContextMenuRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

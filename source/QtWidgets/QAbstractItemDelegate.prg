@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemDelegate::closeEditor, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWidget * arg1, QAbstractItemDelegate::EndEditHint arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemDelegate::commitData, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWidget * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemDelegate::sizeHintChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

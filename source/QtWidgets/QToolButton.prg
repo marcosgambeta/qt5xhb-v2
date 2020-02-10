@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolButton::triggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

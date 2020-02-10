@@ -1335,7 +1335,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMessageBox::buttonClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

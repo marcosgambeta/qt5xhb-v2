@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSplashScreen::messageChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

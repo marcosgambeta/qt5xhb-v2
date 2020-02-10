@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLineEdit::cursorPositionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1963,7 +1963,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLineEdit::editingFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2024,7 +2024,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLineEdit::inputRejected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2087,7 +2087,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLineEdit::returnPressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2147,7 +2147,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLineEdit::selectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2207,7 +2207,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLineEdit::textChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2269,7 +2269,7 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLineEdit::textEdited, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -1752,7 +1752,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QComboBox::activated), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1814,7 +1814,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QComboBox::activated), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1876,7 +1876,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QComboBox::currentIndexChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1938,7 +1938,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QComboBox::currentIndexChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2000,7 +2000,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QComboBox::currentTextChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2062,7 +2062,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QComboBox::editTextChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2124,7 +2124,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QComboBox::highlighted), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2186,7 +2186,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QComboBox::highlighted), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

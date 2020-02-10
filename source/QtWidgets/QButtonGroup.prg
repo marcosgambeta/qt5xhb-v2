@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QButtonGroup::buttonClicked), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QButtonGroup::buttonPressed), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QButtonGroup::buttonReleased), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

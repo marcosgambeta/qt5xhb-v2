@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::currentChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::directoryEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1961,7 +1961,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::fileSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2023,7 +2023,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::filesSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QStringList & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2092,7 +2092,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::filterSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2154,7 +2154,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::urlSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2216,7 +2216,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::urlsSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QUrl> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2301,7 +2301,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::currentUrlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2363,7 +2363,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileDialog::directoryUrlEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::actionTriggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::rangeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::sliderMoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::sliderPressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::sliderReleased, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSlider::valueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

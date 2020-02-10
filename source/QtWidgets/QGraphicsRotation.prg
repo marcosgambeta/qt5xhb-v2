@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsRotation::angleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsRotation::axisChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsRotation::originChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

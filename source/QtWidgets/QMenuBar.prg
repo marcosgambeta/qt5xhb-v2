@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenuBar::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenuBar::triggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

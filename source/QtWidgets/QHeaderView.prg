@@ -1782,7 +1782,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::geometriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1846,7 +1846,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1908,7 +1908,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1972,7 +1972,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionDoubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2034,7 +2034,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2096,7 +2096,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionHandleDoubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2158,7 +2158,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionMoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2224,7 +2224,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionPressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2286,7 +2286,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sectionResized, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2352,7 +2352,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeaderView::sortIndicatorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, Qt::SortOrder arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

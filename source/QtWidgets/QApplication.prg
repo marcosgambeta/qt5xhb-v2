@@ -1700,7 +1700,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QApplication::focusChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWidget * arg1, QWidget * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1764,7 +1764,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QApplication::fontDatabaseChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1824,7 +1824,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QApplication::lastWindowClosed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::activeStackChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QUndoStack * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::canRedoChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::canUndoChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::cleanChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::indexChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::redoTextChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QUndoGroup::undoTextChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -1335,7 +1335,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMainWindow::iconSizeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSize & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1397,7 +1397,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMainWindow::toolButtonStyleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::ToolButtonStyle arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

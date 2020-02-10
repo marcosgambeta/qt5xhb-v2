@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFontComboBox::currentFontChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

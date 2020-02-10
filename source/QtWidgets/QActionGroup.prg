@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QActionGroup::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QActionGroup::triggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

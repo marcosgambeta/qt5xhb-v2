@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QStackedLayout::currentChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QStackedLayout::widgetRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

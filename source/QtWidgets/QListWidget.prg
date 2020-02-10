@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::currentItemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1, QListWidgetItem * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::currentRowChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::currentTextChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemActivated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1289,7 +1289,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemDoubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1351,7 +1351,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemPressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1475,7 +1475,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListWidget::itemSelectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

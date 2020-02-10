@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSystemTrayIcon::activated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSystemTrayIcon::ActivationReason arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSystemTrayIcon::messageClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

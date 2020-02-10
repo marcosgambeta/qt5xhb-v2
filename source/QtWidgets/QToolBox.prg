@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QToolBox::currentChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

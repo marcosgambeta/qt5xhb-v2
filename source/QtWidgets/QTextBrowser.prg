@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::anchorClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::backwardAvailable, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::forwardAvailable, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QUrl &>::of(&QTextBrowser::highlighted), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QTextBrowser::highlighted), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::historyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextBrowser::sourceChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -1340,7 +1340,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::doubleValueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1402,7 +1402,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::doubleValueSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1464,7 +1464,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::intValueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1526,7 +1526,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::intValueSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1588,7 +1588,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::textValueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1650,7 +1650,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputDialog::textValueSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

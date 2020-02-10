@@ -1491,7 +1491,7 @@ HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTabBar::currentChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1553,7 +1553,7 @@ HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTabBar::tabCloseRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1615,7 +1615,7 @@ HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTabBar::tabMoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

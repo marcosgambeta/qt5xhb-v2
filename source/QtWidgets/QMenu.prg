@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::aboutToHide, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1338,7 +1338,7 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::aboutToShow, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1398,7 +1398,7 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1460,7 +1460,7 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMenu::triggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

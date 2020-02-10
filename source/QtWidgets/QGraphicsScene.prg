@@ -1884,7 +1884,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsScene::changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QRectF> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1969,7 +1969,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsScene::sceneRectChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRectF & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2031,7 +2031,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGraphicsScene::selectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScroller::scrollerPropertiesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QScrollerProperties & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScroller::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QScroller::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

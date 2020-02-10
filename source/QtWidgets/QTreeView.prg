@@ -1605,7 +1605,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeView::collapsed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1667,7 +1667,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeView::expanded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

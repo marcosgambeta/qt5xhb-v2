@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QListView::indexesMoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndexList & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

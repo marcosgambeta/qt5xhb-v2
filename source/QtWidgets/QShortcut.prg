@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QShortcut::activated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QShortcut::activatedAmbiguously, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

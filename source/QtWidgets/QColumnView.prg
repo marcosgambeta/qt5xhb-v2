@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QColumnView::updatePreviewWidget, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::allowedAreasChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::DockWidgetAreas arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::dockLocationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::DockWidgetArea arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::featuresChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDockWidget::DockWidgetFeatures arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::topLevelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDockWidget::visibilityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -1645,7 +1645,7 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1705,7 +1705,7 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1765,7 +1765,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::toggled, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1827,7 +1827,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAction::triggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProgressDialog::canceled, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

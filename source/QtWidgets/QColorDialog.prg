@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QColorDialog::colorSelected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QColorDialog::currentColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSpinBox::editingFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::currentItemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, QTreeWidgetItem * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemActivated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1360,7 +1360,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemCollapsed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1422,7 +1422,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemDoubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1550,7 +1550,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemExpanded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemPressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1676,7 +1676,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeWidget::itemSelectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

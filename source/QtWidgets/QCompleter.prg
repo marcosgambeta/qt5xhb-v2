@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QCompleter::activated), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QModelIndex &>::of(&QCompleter::activated), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QCompleter::highlighted), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QModelIndex &>::of(&QCompleter::highlighted), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

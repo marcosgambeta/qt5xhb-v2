@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMdiArea::subWindowActivated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QMdiSubWindow * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

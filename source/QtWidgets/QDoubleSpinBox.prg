@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<double>::of(&QDoubleSpinBox::valueChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QDoubleSpinBox::valueChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

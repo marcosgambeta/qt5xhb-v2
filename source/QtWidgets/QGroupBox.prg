@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGroupBox::clicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGroupBox::toggled, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLCDNumber::overflow, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

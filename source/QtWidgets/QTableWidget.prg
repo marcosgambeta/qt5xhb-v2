@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellActivated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellDoubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1635,7 +1635,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::cellPressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1699,7 +1699,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::currentCellChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3, int arg4) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1767,7 +1767,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::currentItemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1, QTableWidgetItem * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1831,7 +1831,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemActivated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1893,7 +1893,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1955,7 +1955,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2017,7 +2017,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemDoubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2079,7 +2079,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2141,7 +2141,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemPressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2203,7 +2203,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTableWidget::itemSelectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

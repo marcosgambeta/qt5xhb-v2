@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QStatusBar::messageChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

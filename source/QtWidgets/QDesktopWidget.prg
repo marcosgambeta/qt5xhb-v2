@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesktopWidget::resized, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesktopWidget::screenCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesktopWidget::workAreaResized, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

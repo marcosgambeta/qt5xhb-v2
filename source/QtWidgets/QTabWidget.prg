@@ -1360,7 +1360,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTabWidget::currentChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1422,7 +1422,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTabWidget::tabCloseRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1485,7 +1485,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTabWidget::tabBarClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1551,7 +1551,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTabWidget::tabBarDoubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

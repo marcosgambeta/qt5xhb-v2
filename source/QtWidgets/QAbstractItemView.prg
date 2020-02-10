@@ -1937,7 +1937,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::activated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1999,7 +1999,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::clicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2061,7 +2061,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::doubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2123,7 +2123,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::entered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2185,7 +2185,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::pressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2247,7 +2247,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractItemView::viewportEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
