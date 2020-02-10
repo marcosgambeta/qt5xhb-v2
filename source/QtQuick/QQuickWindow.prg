@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::afterRendering, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::beforeRendering, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::beforeSynchronizing, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::colorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::frameSwapped, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::sceneGraphInitialized, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWindow::sceneGraphInvalidated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
