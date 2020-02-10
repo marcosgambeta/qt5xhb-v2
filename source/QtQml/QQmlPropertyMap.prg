@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQmlPropertyMap::valueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQmlEngine::quit, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

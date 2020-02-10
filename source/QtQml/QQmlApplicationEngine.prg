@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQmlApplicationEngine::objectCreated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QObject * arg1, const QUrl & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
