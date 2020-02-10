@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAxScript::entered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAxScript::error, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, const QString & arg2, int arg3, const QString & arg4) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<>::of(&QAxScript::finished), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QVariant &>::of(&QAxScript::finished), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVariant & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int,const QString &,const QString &,const QString &>::of(&QAxScript::finished), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, const QString & arg2, const QString & arg3, const QString & arg4) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAxScript::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
