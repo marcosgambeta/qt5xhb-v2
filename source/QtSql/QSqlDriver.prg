@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &>::of(&QSqlDriver::notification), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &,QSqlDriver::NotificationSource,const QVariant &>::of(&QSqlDriver::notification), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, QSqlDriver::NotificationSource arg2, const QVariant & arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
