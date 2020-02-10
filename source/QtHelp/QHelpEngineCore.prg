@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::currentFilterChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::setupFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::setupStarted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::warning, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

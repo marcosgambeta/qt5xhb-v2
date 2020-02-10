@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpIndexModel::indexCreated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpIndexModel::indexCreationStarted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

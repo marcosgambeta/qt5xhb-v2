@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpIndexWidget::linkActivated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
