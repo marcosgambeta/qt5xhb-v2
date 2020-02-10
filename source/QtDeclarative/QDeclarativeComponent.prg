@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDeclarativeComponent::progressChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDeclarativeComponent::statusChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDeclarativeComponent::Status arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

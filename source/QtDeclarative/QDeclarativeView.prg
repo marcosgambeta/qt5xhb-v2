@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDeclarativeView::sceneResized, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSize arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDeclarativeView::statusChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDeclarativeView::Status arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
