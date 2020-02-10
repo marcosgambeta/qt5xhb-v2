@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDBusPendingCallWatcher::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDBusPendingCallWatcher * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

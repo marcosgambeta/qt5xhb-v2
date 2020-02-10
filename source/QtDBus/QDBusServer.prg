@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDBusServer::newConnection, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QDBusConnection & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
