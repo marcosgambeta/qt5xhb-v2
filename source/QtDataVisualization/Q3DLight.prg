@@ -171,7 +171,7 @@ HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DLight::autoPositionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

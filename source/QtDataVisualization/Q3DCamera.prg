@@ -687,7 +687,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::cameraPresetChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DCamera::CameraPreset arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::maxZoomLevelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::minZoomLevelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::targetChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::wrapXRotationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::wrapYRotationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::xRotationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::yRotationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DCamera::zoomLevelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

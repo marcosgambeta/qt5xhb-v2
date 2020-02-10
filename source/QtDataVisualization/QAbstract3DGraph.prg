@@ -1753,7 +1753,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::activeInputHandlerChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DInputHandler * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1819,7 +1819,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::activeThemeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DTheme * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1885,7 +1885,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::aspectRatioChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1951,7 +1951,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::currentFpsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2017,7 +2017,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::horizontalAspectRatioChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2083,7 +2083,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::localeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QLocale & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2149,7 +2149,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::marginChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2215,7 +2215,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::measureFpsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2281,7 +2281,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::optimizationHintsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DGraph::OptimizationHints arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2347,7 +2347,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::orthoProjectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2413,7 +2413,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::polarChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2479,7 +2479,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::queriedGraphPositionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2545,7 +2545,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::radialLabelOffsetChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2611,7 +2611,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::reflectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2677,7 +2677,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::reflectivityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2743,7 +2743,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::selectedElementChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DGraph::ElementType arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2809,7 +2809,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::selectionModeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DGraph::SelectionFlags arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2875,7 +2875,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DGraph::shadowQualityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DGraph::ShadowQuality arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

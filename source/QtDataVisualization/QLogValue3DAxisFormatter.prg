@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValue3DAxisFormatter::autoSubGridChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValue3DAxisFormatter::baseChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValue3DAxisFormatter::showEdgeLabelsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

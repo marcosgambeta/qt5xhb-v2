@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::heightMapChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QImage & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::heightMapFileChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::minXValueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::maxXValueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::minZValueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::maxZValueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

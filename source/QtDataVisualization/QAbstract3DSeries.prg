@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::baseColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::baseGradientChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::colorStyleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DTheme::ColorStyle arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::itemLabelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::itemLabelFormatChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1378,7 +1378,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::itemLabelVisibilityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::meshChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DSeries::Mesh arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::meshRotationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QQuaternion & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1576,7 +1576,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::meshSmoothChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::multiHighlightColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1708,7 +1708,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::multiHighlightGradientChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1774,7 +1774,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::nameChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1840,7 +1840,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::singleHighlightColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1906,7 +1906,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::singleHighlightGradientChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1972,7 +1972,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::userDefinedMeshChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2038,7 +2038,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::visibilityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

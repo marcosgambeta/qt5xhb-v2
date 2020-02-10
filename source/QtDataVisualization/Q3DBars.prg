@@ -915,7 +915,7 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::multiSeriesUniformChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::barThicknessChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::barSpacingChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSizeF & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::barSpacingRelativeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1179,7 +1179,7 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::rowAxisChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QCategory3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::columnAxisChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QCategory3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::valueAxisChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::primarySeriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::selectedSeriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1509,7 +1509,7 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DBars::floorLevelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

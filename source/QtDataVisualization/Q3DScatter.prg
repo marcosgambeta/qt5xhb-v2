@@ -539,7 +539,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::axisXChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::axisYChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::axisZChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScatter::selectedSeriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QScatter3DSeries * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

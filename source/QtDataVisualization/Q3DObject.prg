@@ -241,7 +241,7 @@ HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DObject::positionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

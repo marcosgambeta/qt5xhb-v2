@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::arrayReset, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsInserted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::seriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QScatter3DSeries * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DInputHandler::inputViewChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DInputHandler::InputView arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DInputHandler::positionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DInputHandler::sceneChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DScene * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

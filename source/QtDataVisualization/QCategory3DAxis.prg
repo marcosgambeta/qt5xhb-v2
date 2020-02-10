@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCategory3DAxis::labelsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

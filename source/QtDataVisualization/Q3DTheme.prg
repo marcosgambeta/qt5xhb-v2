@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::ambientLightStrengthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1550,7 +1550,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::backgroundColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1616,7 +1616,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::backgroundEnabledChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::baseColorsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QColor> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1771,7 +1771,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::baseGradientsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QLinearGradient> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1860,7 +1860,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::colorStyleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DTheme::ColorStyle arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1926,7 +1926,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::fontChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1992,7 +1992,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::gridEnabledChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2058,7 +2058,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::gridLineColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2124,7 +2124,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::highlightLightStrengthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2190,7 +2190,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::labelBackgroundColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2256,7 +2256,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::labelBackgroundEnabledChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2322,7 +2322,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::labelBorderEnabledChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2388,7 +2388,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::labelTextColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2454,7 +2454,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::lightColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2520,7 +2520,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::lightStrengthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2586,7 +2586,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::multiHighlightColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2652,7 +2652,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::multiHighlightGradientChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2718,7 +2718,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::singleHighlightColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2784,7 +2784,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::singleHighlightGradientChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2850,7 +2850,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::typeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DTheme::Theme arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2916,7 +2916,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DTheme::windowColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

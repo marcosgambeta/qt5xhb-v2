@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::autoColumnCategoriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::autoRowCategoriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1522,7 +1522,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnCategoriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnRoleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1652,7 +1652,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnRolePatternChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1718,7 +1718,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnRoleReplaceChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1784,7 +1784,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::itemModelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QAbstractItemModel * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1850,7 +1850,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::multiMatchBehaviorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QItemModelBarDataProxy::MultiMatchBehavior arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1916,7 +1916,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rotationRoleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1982,7 +1982,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rotationRolePatternChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2048,7 +2048,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rotationRoleReplaceChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2114,7 +2114,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowCategoriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2178,7 +2178,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowRoleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2244,7 +2244,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowRolePatternChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2310,7 +2310,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowRoleReplaceChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2376,7 +2376,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::useModelCategoriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2442,7 +2442,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::valueRoleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2508,7 +2508,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::valueRolePatternChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2574,7 +2574,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::valueRoleReplaceChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

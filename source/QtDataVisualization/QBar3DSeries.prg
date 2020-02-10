@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::dataProxyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBarDataProxy * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::selectedBarChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::meshAngleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

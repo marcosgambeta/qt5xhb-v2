@@ -743,7 +743,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::activeCameraChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DCamera * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::activeLightChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Q3DLight * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::devicePixelRatioChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::graphPositionQueryChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::primarySubViewportChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::secondarySubviewOnTopChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::secondarySubViewportChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::selectionQueryPositionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::slicingActiveChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DScene::viewportChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

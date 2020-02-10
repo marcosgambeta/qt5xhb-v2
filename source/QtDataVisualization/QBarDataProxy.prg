@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::arrayReset, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::columnLabelsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::itemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::rowCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::rowLabelsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::rowsAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::rowsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::rowsInserted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::rowsRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBarDataProxy::seriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBar3DSeries * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

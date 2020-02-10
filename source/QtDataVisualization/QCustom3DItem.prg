@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::meshFileChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::positionAbsoluteChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::positionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::rotationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QQuaternion & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::scalingAbsoluteChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::scalingChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::shadowCastingChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1179,7 +1179,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::textureFileChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DItem::visibleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

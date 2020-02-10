@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DLabel::backgroundColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DLabel::backgroundEnabledChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DLabel::borderEnabledChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DLabel::facingCameraChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DLabel::fontChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DLabel::textChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DLabel::textColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

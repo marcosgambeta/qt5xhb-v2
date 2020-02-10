@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurface3DSeries::dataProxyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSurfaceDataProxy * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurface3DSeries::drawModeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSurface3DSeries::DrawFlags arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurface3DSeries::flatShadingEnabledChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurface3DSeries::flatShadingSupportedChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurface3DSeries::selectedPointChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurface3DSeries::textureChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QImage & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurface3DSeries::textureFileChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

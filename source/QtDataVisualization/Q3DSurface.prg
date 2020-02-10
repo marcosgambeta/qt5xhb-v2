@@ -596,7 +596,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::axisXChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::axisYChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::axisZChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::flipHorizontalGridChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &Q3DSurface::selectedSeriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSurface3DSeries * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

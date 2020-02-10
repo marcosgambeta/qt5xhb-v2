@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::arrayReset, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::columnCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::itemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::rowCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::rowsAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::rowsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::rowsInserted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::rowsRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSurfaceDataProxy::seriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSurface3DSeries * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

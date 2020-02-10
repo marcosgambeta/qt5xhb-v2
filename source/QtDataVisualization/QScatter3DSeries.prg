@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatter3DSeries::dataProxyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QScatterDataProxy * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatter3DSeries::itemSizeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatter3DSeries::selectedItemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

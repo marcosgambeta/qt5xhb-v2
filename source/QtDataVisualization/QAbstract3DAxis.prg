@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::titleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::labelsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::orientationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstract3DAxis::AxisOrientation arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::minChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::maxChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::rangeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1, float arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::autoAdjustRangeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::labelAutoRotationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (float arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::titleVisibilityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::titleFixedChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
