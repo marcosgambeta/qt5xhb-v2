@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOAuth2AuthorizationCodeFlow::accessTokenUrlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

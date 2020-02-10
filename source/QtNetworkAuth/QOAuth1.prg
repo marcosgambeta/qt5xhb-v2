@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOAuth1::clientSharedSecretChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOAuth1::signatureMethodChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QOAuth1::SignatureMethod arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOAuth1::temporaryCredentialsUrlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOAuth1::tokenCredentialsUrlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOAuth1::tokenSecretChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

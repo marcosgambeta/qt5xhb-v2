@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuthReplyHandler::callbackDataReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QByteArray & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuthReplyHandler::replyDataReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QByteArray & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

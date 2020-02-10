@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::clientIdentifierSharedKeyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::error, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QString & arg2, const QUrl & arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::expirationAtChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QDateTime & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::responseTypeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::scopeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth2::userAgentChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
