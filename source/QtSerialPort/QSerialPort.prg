@@ -1225,7 +1225,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::baudRateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint32 arg1, QSerialPort::Directions arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::dataBitsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSerialPort::DataBits arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::parityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSerialPort::Parity arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1425,7 +1425,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::stopBitsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSerialPort::StopBits arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1491,7 +1491,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::flowControlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSerialPort::FlowControl arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::dataErrorPolicyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSerialPort::DataErrorPolicy arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1623,7 +1623,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::dataTerminalReadyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1689,7 +1689,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::requestToSendChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1755,7 +1755,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSerialPort::SerialPortError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1821,7 +1821,7 @@ HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSerialPort::settingsRestoredOnCloseChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
