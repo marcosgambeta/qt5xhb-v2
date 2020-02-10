@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVirtualKeyboardAbstractInputMethod::selectionListChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QVirtualKeyboardSelectionListModel::Type arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QVirtualKeyboardSelectionListModel::Type arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVirtualKeyboardAbstractInputMethod::selectionListsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
