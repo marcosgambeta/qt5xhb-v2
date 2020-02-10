@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoPositionInfoSource::positionUpdated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QGeoPositionInfo & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoPositionInfoSource::updateTimeout, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QGeoPositionInfoSource::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

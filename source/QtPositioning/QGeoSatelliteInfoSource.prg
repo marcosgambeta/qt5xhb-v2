@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoSatelliteInfoSource::satellitesInViewUpdated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QGeoSatelliteInfo> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoSatelliteInfoSource::satellitesInUseUpdated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QGeoSatelliteInfo> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoSatelliteInfoSource::requestTimeout, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoSatelliteInfoSource::Error>::of(&QGeoSatelliteInfoSource::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QGeoSatelliteInfoSource::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

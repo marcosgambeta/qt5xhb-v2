@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoAreaMonitorSource::areaEntered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoAreaMonitorSource::areaExited, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoAreaMonitorSource::monitorExpired, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QGeoAreaMonitorInfo & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QGeoAreaMonitorSource::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
