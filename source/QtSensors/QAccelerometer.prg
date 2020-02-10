@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAccelerometer::accelerationModeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAccelerometer::AccelerationMode arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
