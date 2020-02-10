@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoRoutingManagerEngine::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QGeoRouteReply * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoRoutingManagerEngine::error, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QGeoRouteReply * arg1, QGeoRouteReply::Error arg2, QString arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

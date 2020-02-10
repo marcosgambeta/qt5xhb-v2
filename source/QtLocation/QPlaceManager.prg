@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QPlaceReply * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::error, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QPlaceReply * arg1, QPlaceReply::Error arg2, const QString & arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::placeAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::placeUpdated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::placeRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::categoryAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::categoryUpdated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::categoryRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceManager::dataChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

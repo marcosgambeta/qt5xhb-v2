@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoCodeReply::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoCodeReply::Error,const QString &>::of(&QGeoCodeReply::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QGeoCodeReply::Error arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

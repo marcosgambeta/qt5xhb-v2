@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGeoRouteReply::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QGeoRouteReply::Error,const QString &>::of(&QGeoRouteReply::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QGeoRouteReply::Error arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

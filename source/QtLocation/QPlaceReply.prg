@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPlaceReply::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QPlaceReply::Error arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
