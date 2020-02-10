@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::aboutToClose, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::connected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::disconnected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::proxyAuthenticationRequired, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::readChannelFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::textFrameReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, bool arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1568,7 +1568,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::binaryFrameReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QByteArray & arg1, bool arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1636,7 +1636,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::textMessageReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1702,7 +1702,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::binaryMessageReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QByteArray & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1768,7 +1768,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractSocket::SocketError>::of(&QWebSocket::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1834,7 +1834,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::pong, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (quint64 arg1, const QByteArray & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1902,7 +1902,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::bytesWritten, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1968,7 +1968,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocket::sslErrors, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

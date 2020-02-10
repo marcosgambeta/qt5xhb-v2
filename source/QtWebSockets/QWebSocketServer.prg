@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocketServer::acceptError, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocketServer::serverError, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebSocketProtocol::CloseCode arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocketServer::originAuthenticationRequired, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebSocketCorsAuthenticator * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -970,7 +970,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocketServer::newConnection, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocketServer::peerVerifyError, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSslError & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocketServer::sslErrors, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebSocketServer::closed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
