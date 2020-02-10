@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractEventDispatcher::aboutToBlock, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractEventDispatcher::awake, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

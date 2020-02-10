@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVariantAnimation::valueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVariant & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::selectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QItemSelection & arg1, const QItemSelection & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::currentChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::currentRowChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemSelectionModel::currentColumnChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

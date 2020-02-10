@@ -2256,7 +2256,7 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QObject::destroyed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2319,7 +2319,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QObject::objectNameChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

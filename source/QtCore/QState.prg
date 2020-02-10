@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSTATE_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QState::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QState::propertiesAssigned, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSequentialAnimationGroup::currentAnimationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractAnimation * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

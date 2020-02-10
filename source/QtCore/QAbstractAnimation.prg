@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractAnimation::currentLoopChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractAnimation::directionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractAnimation::Direction arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractAnimation::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractAnimation::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractAnimation::State arg1, QAbstractAnimation::State arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractState::entered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractState::exited, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

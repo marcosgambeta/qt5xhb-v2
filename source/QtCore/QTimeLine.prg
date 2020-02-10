@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTimeLine::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTimeLine::frameChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTimeLine::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTimeLine::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTimeLine::valueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

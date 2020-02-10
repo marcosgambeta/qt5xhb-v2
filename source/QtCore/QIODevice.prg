@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::aboutToClose, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::bytesWritten, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::readChannelFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIODevice::readyRead, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

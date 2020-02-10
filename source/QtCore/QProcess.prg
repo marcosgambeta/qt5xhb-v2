@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QProcess::ProcessError>::of(&QProcess::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QProcess::ProcessError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1592,7 +1592,7 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, QProcess::ExitStatus arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1656,7 +1656,7 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::readyReadStandardError, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1716,7 +1716,7 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::readyReadStandardOutput, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1776,7 +1776,7 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::started, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1836,7 +1836,7 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QProcess::ProcessState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QProcess::errorOccurred, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QProcess::ProcessError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

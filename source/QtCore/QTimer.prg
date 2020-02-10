@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTimer::timeout, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAnimationDriver::started, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAnimationDriver::stopped, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

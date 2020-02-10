@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileSystemWatcher::directoryChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QFileSystemWatcher::fileChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

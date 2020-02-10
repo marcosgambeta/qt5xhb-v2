@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTransition::triggered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCoreApplication::aboutToQuit, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QThread::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QThread::started, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
