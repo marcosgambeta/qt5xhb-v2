@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QPrinter*>::of(&QPrintDialog::accepted), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

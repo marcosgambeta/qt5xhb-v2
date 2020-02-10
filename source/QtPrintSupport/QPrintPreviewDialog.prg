@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPrintPreviewDialog::paintRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

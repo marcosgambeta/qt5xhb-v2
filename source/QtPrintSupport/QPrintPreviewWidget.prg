@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPrintPreviewWidget::paintRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPrintPreviewWidget::previewChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
