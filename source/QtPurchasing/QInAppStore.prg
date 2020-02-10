@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInAppStore::productRegistered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QInAppProduct * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInAppStore::productUnknown, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QInAppProduct::ProductType arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInAppStore::transactionReady, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QInAppTransaction * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
