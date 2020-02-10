@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineCookieStore::cookieAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QNetworkCookie & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineCookieStore::cookieRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QNetworkCookie & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
