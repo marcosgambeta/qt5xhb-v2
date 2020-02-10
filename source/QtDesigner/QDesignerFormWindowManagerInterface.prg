@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::activeFormWindowChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDesignerFormWindowInterface * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::formWindowAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDesignerFormWindowInterface * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::formWindowRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDesignerFormWindowInterface * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

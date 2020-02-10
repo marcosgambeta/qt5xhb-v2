@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerPropertyEditorInterface::propertyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
