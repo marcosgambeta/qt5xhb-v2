@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::brushChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::cleared, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::clicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::doubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::penChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::pressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -945,7 +945,7 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::released, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::valueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBoxSet::valuesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

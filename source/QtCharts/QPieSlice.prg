@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::angleSpanChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::borderColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::borderWidthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::brushChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1375,7 +1375,7 @@ HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::clicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::colorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1503,7 +1503,7 @@ HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::doubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1567,7 +1567,7 @@ HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1633,7 +1633,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::labelBrushChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1697,7 +1697,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::labelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1761,7 +1761,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::labelColorChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1825,7 +1825,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::labelFontChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1889,7 +1889,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::labelVisibleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1953,7 +1953,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::penChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2017,7 +2017,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::percentageChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2081,7 +2081,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::pressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2145,7 +2145,7 @@ HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::released, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2209,7 +2209,7 @@ HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::startAngleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2273,7 +2273,7 @@ HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPieSlice::valueChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

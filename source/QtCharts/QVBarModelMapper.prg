@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVBarModelMapper::firstBarSetColumnChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVBarModelMapper::firstRowChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVBarModelMapper::lastBarSetColumnChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVBarModelMapper::modelReplaced, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVBarModelMapper::rowCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QVBarModelMapper::seriesReplaced, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

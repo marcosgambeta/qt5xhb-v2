@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::brushChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::clicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::closeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::doubleClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::highChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::lowChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::openChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::penChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::pressed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::released, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCandlestickSet::timestampChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

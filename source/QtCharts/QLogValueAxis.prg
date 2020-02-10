@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValueAxis::baseChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValueAxis::labelFormatChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValueAxis::maxChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValueAxis::minChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValueAxis::minorTickCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValueAxis::rangeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1, qreal arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLogValueAxis::tickCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

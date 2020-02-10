@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCategoryAxis::categoriesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCategoryAxis::labelsPositionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QCategoryAxis::AxisLabelsPosition arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::brushChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::clicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::fontChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::hovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::labelBrushChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::labelChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::penChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::shapeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLegendMarker::visibleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

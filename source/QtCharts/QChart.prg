@@ -1878,7 +1878,7 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QChart::plotAreaChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRectF & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

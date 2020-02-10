@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::formatChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QString arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::maxChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDateTime arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::minChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDateTime arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::rangeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QDateTime arg1, QDateTime arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDateTimeAxis::tickCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
