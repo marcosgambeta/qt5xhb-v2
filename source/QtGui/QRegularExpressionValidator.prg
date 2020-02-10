@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRegularExpressionValidator::regularExpressionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRegularExpression & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

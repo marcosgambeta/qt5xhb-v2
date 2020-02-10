@@ -3033,7 +3033,7 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::activeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3096,7 +3096,7 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::contentOrientationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3158,7 +3158,7 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::focusObjectChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3220,7 +3220,7 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::heightChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3282,7 +3282,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::maximumHeightChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3344,7 +3344,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::maximumWidthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3406,7 +3406,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::minimumHeightChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3468,7 +3468,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::minimumWidthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3530,7 +3530,7 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::modalityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::WindowModality arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3593,7 +3593,7 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::opacityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3658,7 +3658,7 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::screenChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3721,7 +3721,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::visibilityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWindow::Visibility arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3786,7 +3786,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::visibleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3848,7 +3848,7 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::widthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3910,7 +3910,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::windowStateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::WindowState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -3972,7 +3972,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::windowTitleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -4034,7 +4034,7 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::xChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -4096,7 +4096,7 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWindow::yChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

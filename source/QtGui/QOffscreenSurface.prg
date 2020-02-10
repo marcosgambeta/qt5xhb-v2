@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOffscreenSurface::screenChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

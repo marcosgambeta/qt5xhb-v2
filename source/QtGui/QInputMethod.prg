@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputMethod::animatingChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputMethod::cursorRectangleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputMethod::inputDirectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::LayoutDirection arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputMethod::keyboardRectangleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputMethod::localeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QInputMethod::visibleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

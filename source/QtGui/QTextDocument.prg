@@ -2085,7 +2085,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::contentsChange, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2151,7 +2151,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::contentsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2211,7 +2211,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::undoAvailable, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2273,7 +2273,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::redoAvailable, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2335,7 +2335,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::undoCommandAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2395,7 +2395,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::modificationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2457,7 +2457,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::cursorPositionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QTextCursor & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2519,7 +2519,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::blockCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2581,7 +2581,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextDocument::documentLayoutChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

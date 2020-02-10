@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLDebugLogger::messageLogged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QOpenGLDebugMessage & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

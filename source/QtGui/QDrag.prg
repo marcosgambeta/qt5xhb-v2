@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDrag::actionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::DropAction arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDrag::targetChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

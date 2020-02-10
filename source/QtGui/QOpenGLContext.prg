@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QOpenGLContext::aboutToBeDestroyed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

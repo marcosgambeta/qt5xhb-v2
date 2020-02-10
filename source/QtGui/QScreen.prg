@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::geometryChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::physicalSizeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSizeF & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::physicalDotsPerInchChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::logicalDotsPerInchChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::virtualGeometryChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::primaryOrientationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::orientationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (Qt::ScreenOrientation arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScreen::refreshRateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

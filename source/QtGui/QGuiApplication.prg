@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGuiApplication::focusObjectChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGuiApplication::focusWindowChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWindow * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGuiApplication::fontDatabaseChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGuiApplication::lastWindowClosed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGuiApplication::screenAdded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

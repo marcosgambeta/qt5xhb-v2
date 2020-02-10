@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QStandardItemModel::itemChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QStandardItem * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

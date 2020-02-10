@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMovie::error, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QImageReader::ImageReaderError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMovie::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMovie::frameChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMovie::resized, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSize & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMovie::started, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMovie::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QMovie::MovieState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMovie::updated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

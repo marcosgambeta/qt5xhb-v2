@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::documentSizeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSizeF & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::pageCountChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::update, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRectF & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractTextDocumentLayout::updateBlock, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QTextBlock & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

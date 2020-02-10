@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QIntValidator::changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
