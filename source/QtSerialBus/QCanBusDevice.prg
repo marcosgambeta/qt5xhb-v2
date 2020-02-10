@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::errorOccurred, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QCanBusDevice::CanBusError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::framesReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::framesWritten, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCanBusDevice::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QCanBusDevice::CanBusDeviceState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

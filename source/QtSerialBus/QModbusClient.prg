@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QModbusClient::timeoutChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QModbusServer::dataWritten, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

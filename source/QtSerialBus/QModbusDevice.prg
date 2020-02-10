@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QModbusDevice::errorOccurred, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QModbusDevice::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QModbusDevice::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QModbusDevice::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
