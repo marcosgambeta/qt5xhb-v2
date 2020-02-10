@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWebEngineScript::injectionPointChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QQuickWebEngineScript::InjectionPoint arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWebEngineScript::nameChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWebEngineScript::runOnSubframesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWebEngineScript::sourceCodeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWebEngineScript::sourceUrlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWebEngineScript::worldIdChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QQuickWebEngineScript::ScriptWorldId arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
