@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWidget::statusChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QQuickWidget::Status arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QQuickWidget::sceneGraphError, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QQuickWindow::SceneGraphError arg1, const QString & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
