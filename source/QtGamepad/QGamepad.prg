@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisLeftXChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisLeftYChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisRightXChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisRightYChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonAChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonBChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonCenterChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonDownChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonGuideChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL1Changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1501,7 +1501,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL2Changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1567,7 +1567,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL3Changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1633,7 +1633,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonLeftChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1699,7 +1699,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR1Changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1765,7 +1765,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR2Changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1831,7 +1831,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR3Changed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1897,7 +1897,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonRightChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1963,7 +1963,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonSelectChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2029,7 +2029,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonStartChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2095,7 +2095,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonUpChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2161,7 +2161,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonXChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2227,7 +2227,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonYChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2293,7 +2293,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::connectedChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2359,7 +2359,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::deviceIdChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2425,7 +2425,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::nameChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QString arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
