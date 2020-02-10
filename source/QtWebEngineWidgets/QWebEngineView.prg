@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineView::loadStarted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineView::loadProgress, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineView::loadFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineView::titleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineView::selectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineView::urlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebEngineView::iconUrlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
