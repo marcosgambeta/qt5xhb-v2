@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothServiceDiscoveryAgent::serviceDiscovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QBluetoothServiceInfo & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothServiceDiscoveryAgent::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothServiceDiscoveryAgent::canceled, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QBluetoothServiceDiscoveryAgent::Error>::of(&QBluetoothServiceDiscoveryAgent::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothServiceDiscoveryAgent::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

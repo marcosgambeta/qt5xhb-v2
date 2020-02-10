@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothSocket::connected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothSocket::disconnected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothSocket::SocketError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothSocket::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothSocket::SocketState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

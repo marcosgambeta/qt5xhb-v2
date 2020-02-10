@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothLocalDevice::hostModeStateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothLocalDevice::HostMode arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothLocalDevice::pairingFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QBluetoothAddress & arg1, QBluetoothLocalDevice::Pairing arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothLocalDevice::pairingDisplayPinCode, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QBluetoothAddress & arg1, QString arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothLocalDevice::pairingDisplayConfirmation, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QBluetoothAddress & arg1, QString arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothLocalDevice::error, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothLocalDevice::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

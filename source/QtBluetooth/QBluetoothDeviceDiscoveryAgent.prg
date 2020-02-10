@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QBluetoothDeviceInfo & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothDeviceDiscoveryAgent::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QBluetoothDeviceDiscoveryAgent::Error>::of(&QBluetoothDeviceDiscoveryAgent::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothDeviceDiscoveryAgent::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothDeviceDiscoveryAgent::canceled, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothDeviceDiscoveryAgent::deviceUpdated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QBluetoothDeviceInfo & arg1, QBluetoothDeviceInfo::Fields arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

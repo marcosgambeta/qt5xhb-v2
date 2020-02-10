@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothTransferReply::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothTransferReply * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothTransferReply::transferProgress, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

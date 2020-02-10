@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBluetoothServer::newConnection, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QBluetoothServer::Error>::of(&QBluetoothServer::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QBluetoothServer::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
