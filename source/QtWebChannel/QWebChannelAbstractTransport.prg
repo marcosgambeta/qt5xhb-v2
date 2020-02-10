@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebChannelAbstractTransport::messageReceived, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QJsonObject & arg1, QWebChannelAbstractTransport * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
