@@ -1365,7 +1365,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::applicationCacheQuotaExceeded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebSecurityOrigin * arg1, quint64 arg2, quint64 arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1431,7 +1431,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::contentsChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1491,7 +1491,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::databaseQuotaExceeded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebFrame * arg1, QString arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1555,7 +1555,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::downloadRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QNetworkRequest & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::featurePermissionRequestCanceled, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebFrame * arg1, QWebPage::Feature arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1681,7 +1681,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::featurePermissionRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebFrame * arg1, QWebPage::Feature arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1745,7 +1745,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::frameCreated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebFrame * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1807,7 +1807,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::geometryChangeRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1869,7 +1869,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::linkClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1931,7 +1931,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::linkHovered, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QString & arg2, const QString & arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1997,7 +1997,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::loadFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2059,7 +2059,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::loadProgress, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2121,7 +2121,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::loadStarted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2181,7 +2181,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::menuBarVisibilityChangeRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2243,7 +2243,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::microFocusChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2303,7 +2303,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::printRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebFrame * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2365,7 +2365,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::repaintRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QRect & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2427,7 +2427,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::restoreFrameStateRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebFrame * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2489,7 +2489,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::saveFrameStateRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QWebFrame * arg1, QWebHistoryItem * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2553,7 +2553,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::scrollRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, const QRect & arg3) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2619,7 +2619,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::selectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2679,7 +2679,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::statusBarMessage, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2741,7 +2741,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::statusBarVisibilityChangeRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2803,7 +2803,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::toolBarVisibilityChangeRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2865,7 +2865,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::unsupportedContent, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QNetworkReply * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2927,7 +2927,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::viewportChangeRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2987,7 +2987,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebPage::windowCloseRequested, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

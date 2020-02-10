@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::iconChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::linkClicked, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::loadFinished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::loadProgress, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::loadStarted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::selectionChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1378,7 +1378,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::statusBarMessage, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1440,7 +1440,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::titleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1502,7 +1502,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWebView::urlChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
