@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::currentIndexChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::currentMediaChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QMediaContent & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::loadFailed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::loaded, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1123,7 +1123,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::mediaAboutToBeInserted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::mediaAboutToBeRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::mediaChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::mediaInserted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::mediaRemoved, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaPlaylist::playbackModeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QMediaPlaylist::PlaybackMode arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QRadioTuner::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::bandChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QRadioTuner::Band arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::frequencyChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::stereoStatusChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::searchingChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::signalStrengthChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1191,7 +1191,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::volumeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::mutedChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::stationFound, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1, QString arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QRadioTuner::antennaConnectedChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1441,7 +1441,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QRadioTuner::Error>::of(&QRadioTuner::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QRadioTuner::Error arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

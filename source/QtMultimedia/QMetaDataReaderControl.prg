@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<>::of(&QMetaDataReaderControl::metaDataChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QString &,const QVariant &>::of(&QMetaDataReaderControl::metaDataChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QVariant & arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMetaDataReaderControl::metaDataAvailableChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

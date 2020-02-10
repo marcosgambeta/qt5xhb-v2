@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioRoleControl::audioRoleChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAudio::Role arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

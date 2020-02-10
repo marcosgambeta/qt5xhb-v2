@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraCaptureDestinationControl::captureDestinationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QCameraImageCapture::CaptureDestinations arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

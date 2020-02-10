@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioOutput::notify, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioOutput::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAudio::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCameraCaptureBufferFormatControl::bufferFormatChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QVideoFrame::PixelFormat arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

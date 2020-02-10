@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaVideoProbeControl::flush, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaVideoProbeControl::videoFrameProbed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVideoFrame & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

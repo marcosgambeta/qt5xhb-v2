@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QMediaAvailabilityControl::availabilityChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QMultimedia::AvailabilityStatus arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

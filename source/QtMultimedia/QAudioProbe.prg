@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioProbe::audioBufferProbed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QAudioBuffer & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAudioProbe::flush, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
