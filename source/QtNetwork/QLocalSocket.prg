@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLocalSocket::connected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLocalSocket::disconnected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QLocalSocket::LocalSocketError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLocalSocket::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QLocalSocket::LocalSocketState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ONNEWCONNECTION )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QLocalServer::newConnection, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTcpServer::acceptError, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTcpServer::newConnection, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

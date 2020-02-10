@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSocket::connected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSocket::disconnected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSocket::hostFound, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSocket::proxyAuthenticationRequired, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1407,7 +1407,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractSocket::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketState arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

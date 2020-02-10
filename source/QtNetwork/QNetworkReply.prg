@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::downloadProgress, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QNetworkReply::NetworkError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::finished, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::metaDataChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::uploadProgress, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint64 arg1, qint64 arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::encrypted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1115,7 +1115,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::sslErrors, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::preSharedKeyAuthenticationRequired, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::redirected, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkReply::redirectAllowed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

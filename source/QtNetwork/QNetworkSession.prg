@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::closed, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<QNetworkSession::SessionError>::of(&QNetworkSession::error), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QNetworkSession::SessionError arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::newConfigurationActivated, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::opened, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::preferredConfigurationChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QNetworkConfiguration & arg1, bool arg2) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QNetworkSession::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QNetworkSession::usagePoliciesChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QNetworkSession::UsagePolicies arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -2287,7 +2287,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::encrypted, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2347,7 +2347,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::encryptedBytesWritten, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2409,7 +2409,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::modeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSslSocket::SslMode arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2471,7 +2471,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::peerVerifyError, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QSslError & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2534,7 +2534,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::preSharedKeyAuthenticationRequired, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -2599,7 +2599,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
