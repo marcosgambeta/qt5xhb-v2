@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeechEngine::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTextToSpeech::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 

@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::localeChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QLocale & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::pitchChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::rateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::stateChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (QTextToSpeech::State arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTextToSpeech::voiceChanged, 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (const QVoice & arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<int>::of(&QTextToSpeech::volumeChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<double>::of(&QTextToSpeech::volumeChanged), 
-                                                              [sender, indexOfSignal, indexOfCodeBlock]
+                                                              [sender, indexOfCodeBlock]
                                                               (double arg1) {
           PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
 
