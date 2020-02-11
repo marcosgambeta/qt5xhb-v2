@@ -72,6 +72,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
 #include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
@@ -84,6 +85,8 @@ HB_FUNC_STATIC( QSTYLE_DELETE )
 
   if( obj != nullptr )
   {
+    Events_disconnect_all_events (obj, true);
+    Signals4_disconnect_all_signals (obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
