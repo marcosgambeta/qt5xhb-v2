@@ -1,6 +1,6 @@
 /*
 
-  Qt5xHb Project - Example Program
+  Qt5xHb-C++11 Project - Example Program
 
   Copyright (C) 2020 Marcos Antonio Gambeta
 
@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/Qt5xHb
+  https://github.com/marcosgambeta/qt5xhb-cpp11
 
   Users Groups:
   https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
@@ -178,10 +178,6 @@ RETURN NIL
 // o método delete desconecta os sinais usados e destrói o objeto ConfigDialog
 
 METHOD delete () CLASS ConfigDialog
-
-   // desconecta sinais
-   ::oCloseButton:onClicked()
-   ::oContentsWidget:onCurrentItemChanged()
 
    // destrói o objeto ConfigDialog
    ::super:delete()
