@@ -33,8 +33,9 @@ bool Events::eventFilter(QObject *obj, QEvent *event)
   QEvent::Type eventtype = event->type();
 
   int found = -1;
+  const int listsize = list1.size();
 
-  for (int i = 0; i < list1.size(); ++i)
+  for (int i = 0; i < listsize; ++i)
   {
     if( ( (QObject *) list1.at(i) == (QObject *) obj ) &&
         ( (QEvent::Type) list2.at(i) == (QEvent::Type) eventtype ) &&
@@ -97,10 +98,13 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
 
   // verifica se já está na lista
   int found = -1;
+  const int listsize = s_events->list1.size();
 
-  for (i = 0; i < s_events->list1.size(); ++i)
+  for (i = 0; i < listsize; ++i)
   {
-    if( ( (QObject *) s_events->list1.at(i) == (QObject *) object ) && ( (QEvent::Type) s_events->list2.at(i) == (QEvent::Type) type ) && ( (bool) s_events->list4.at(i) == true ) )
+    if( ( (QObject *) s_events->list1.at(i) == (QObject *) object ) &&
+        ( (QEvent::Type) s_events->list2.at(i) == (QEvent::Type) type ) &&
+        ( (bool) s_events->list4.at(i) == true ) )
     {
       found = i;
       hb_itemRelease( codeblock );
@@ -164,9 +168,10 @@ bool Events_disconnect_event ( QObject * object, int type )
   }
 
   bool ret = false;
+  const int listsize = s_events->list1.size();
 
   // remove evento da lista de eventos
-  for (i = 0; i < s_events->list1.size(); ++i)
+  for (i = 0; i < listsize; ++i)
   {
     if( (QObject *) s_events->list1.at(i) == (QObject *) object )
     {
@@ -201,7 +206,9 @@ void Events_release_codeblocks ()
 {
   if( s_events != nullptr )
   {
-    for (int i = 0; i < s_events->list1.size(); ++i)
+    const int listsize = s_events->list1.size();
+
+    for (int i = 0; i < listsize; ++i)
     {
       if( (bool) s_events->list4.at(i) == true )
       {
@@ -226,8 +233,10 @@ void Events_disconnect_all_events (QObject * obj, bool children)
   {
     if( !children )
     {
+      const int listsize = s_events->list1.size();
+
       // percorre toda a lista de eventos
-      for (int i = 0; i < s_events->list1.size(); ++i)
+      for (int i = 0; i < listsize; ++i)
       {
         // elimina eventos ativos (true) ligados ao objeto (obj)
         if( ( (QObject *) s_events->list1.at(i) == (QObject *) obj ) && ( (bool) s_events->list4.at(i) == true ) )
@@ -254,11 +263,15 @@ void Events_disconnect_all_events (QObject * obj, bool children)
       // adiciona o pai na lista
       list << obj;
 
+      const int listsize = list.size();
+
       // percorre toda a lista de objetos
-      for (int i = 0; i < list.size(); ++i)
+      for (int i = 0; i < listsize; ++i)
       {
+        const int listsize2 = s_events->list1.size();
+
         // percorre toda a lista de eventos
-        for (int ii = 0; ii < s_events->list1.size(); ++ii)
+        for (int ii = 0; ii < listsize2; ++ii)
         {
           // elimina eventos ativos (true) ligados ao objeto list.at(i)
           if( ( (QObject *) s_events->list1.at(ii) == (QObject *) list.at(i) ) && ( (bool) s_events->list4.at(ii) == true ) )
@@ -289,7 +302,7 @@ void Events_disconnect_all_events (QObject * obj, bool children)
 
 HB_FUNC( QTXHB_EVENTS_SIZE )
 {
-  if( s_events )
+  if( s_events != nullptr )
   {
     hb_retni( s_events->list1.size() );
   }
@@ -307,12 +320,13 @@ HB_FUNC( QTXHB_EVENTS_SIZE )
 
 HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
 {
-  if( s_events )
+  if( s_events != nullptr )
   {
     // inicializa contador
     int count = 0;
+    const int listsize = s_events->list1.size();
     // percorre toda a lista de eventos
-    for (int i = 0; i < s_events->list1.size(); ++i)
+    for (int i = 0; i < listsize; ++i)
     {
       if( s_events->list4.at(i) )
       {
