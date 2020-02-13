@@ -52,8 +52,6 @@ STATIC FUNCTION dialog (oWindow)
    ? oFileDialog:onFileSelected({|oSender,cFile|qout(oSender:classname()),qout(cFile)})
 
    oFileDialog:exec()
-   
-   ? oFileDialog:onFileSelected()
 
    oFileDialog:delete()
 

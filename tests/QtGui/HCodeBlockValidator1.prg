@@ -104,9 +104,6 @@ STATIC FUNCTION dialogo (oParent)
 
    oDialog:exec()
 
-   ? oLineEdit1:onFocusOutEvent()
-   ? oLineEdit2:onFocusOutEvent()
-
    oDialog:delete()
 
 RETURN NIL

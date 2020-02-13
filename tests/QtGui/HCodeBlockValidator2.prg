@@ -121,9 +121,6 @@ STATIC FUNCTION dialogo (oParent)
       ? "inclusao cancelada"
    ENDIF
 
-   ? oButtonIncluir:onClicked()
-   ? oButtonCancelar:onClicked()
-
    oDialog:delete()
 
 RETURN NIL
