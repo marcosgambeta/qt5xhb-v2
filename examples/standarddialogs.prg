@@ -1,6 +1,6 @@
 /*
 
-  Qt5xHb-C++11 Project - Example Program
+  Qt5xHb/C++11 Project - Example Program
 
   Copyright (C) 2020 Marcos Antonio Gambeta
 
@@ -9,10 +9,6 @@
 
   Website:
   https://github.com/marcosgambeta/qt5xhb-cpp11
-
-  Users Groups:
-  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
-  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb-br [PORTUGUESE]
 
 */
 
