@@ -269,12 +269,13 @@ void Events_disconnect_all_events (QObject * obj, bool children)
       for (int i = 0; i < listsize; ++i)
       {
         const int listsize2 = s_events->list1.size();
+        const QObject * obj2 = (QObject *) list.at(i);
 
         // percorre toda a lista de eventos
         for (int ii = 0; ii < listsize2; ++ii)
         {
           // elimina eventos ativos (true) ligados ao objeto list.at(i)
-          if( ( (QObject *) s_events->list1.at(ii) == (QObject *) list.at(i) ) && ( (bool) s_events->list4.at(ii) == true ) )
+          if( ( (QObject *) s_events->list1.at(ii) == (QObject *) obj2 ) && ( (bool) s_events->list4.at(ii) == true ) )
           {
             hb_itemRelease( (PHB_ITEM) s_events->list3.at(ii) );
             s_events->list1[ii] = nullptr;
