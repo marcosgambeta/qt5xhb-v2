@@ -53,7 +53,6 @@ class Signals4: public QObject
   QVector<QObject*> list1;                // armazena ponteiro do objeto
   QVector<int> list2;                     // armazena indice do sinal
   QVector<PHB_ITEM> list3;                // armazena codeblock
-  QVector<bool> list4;                    // ativo (true) ou liberado (false)
   QVector<QMetaObject::Connection> list5; // handle da conexão
   QMutex * mutex;
 };
