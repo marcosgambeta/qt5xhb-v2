@@ -1,4 +1,4 @@
-# Qt5xHb-C++11
+# Qt5xHb/C++11
 
 Bindings libraries for Harbour/xHarbour and Qt Framework 5.
 
@@ -10,7 +10,7 @@ Alternative version of the Qt5xHb project.
 
 2. Download and compile the [x]Harbour of your choice: Harbour 3.2.0dev, Harbour 3.4.0dev (fork) or xHarbour.
 
-3. Download, configure and compile the Qt5xHb-C++11. 
+3. Download, configure and compile the Qt5xHb/C++11. 
 
 ## SDK's
 
@@ -40,4 +40,4 @@ Send you message to: marcosgambeta AT outlook DOT com
 
 Important:  
 Questions about the project will be responded **only by email**.  
-Qt5xHb-C++11 is FOSS (Free and Open Source Software) and not a commercial project.  
+Qt5xHb/C++11 is FOSS (Free and Open Source Software) and not a commercial project.  
