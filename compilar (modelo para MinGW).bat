@@ -1,5 +1,5 @@
 rem
-rem Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+rem Qt5xHb/C++11 - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 rem
 rem Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 rem
