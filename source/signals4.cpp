@@ -79,7 +79,7 @@ int Signals4_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock )
       s_signals->list2 << signal;
       s_signals->list3 << codeblock;
       QMetaObject::Connection connection;
-      s_signals->list5 << connection;
+      s_signals->list4 << connection;
       ret = s_signals->list1.size() - 1;
     }
     else // encontrou posicao livre
@@ -89,7 +89,7 @@ int Signals4_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock )
       s_signals->list2[i] = signal;
       s_signals->list3[i] = codeblock;
       QMetaObject::Connection connection;
-      s_signals->list5[i] = connection;
+      s_signals->list4[i] = connection;
       ret = i;
     }
 
@@ -135,7 +135,7 @@ bool Signals4_disconnect_signal ( QObject * object, int signal )
         s_signals->list2[i] = -1;
         s_signals->list3[i] = nullptr;
         QMetaObject::Connection connection;
-        s_signals->list5[i] = connection;
+        s_signals->list4[i] = connection;
         ret = true;
       }
     }
@@ -277,7 +277,7 @@ void Signals4_release_codeblocks ()
         s_signals->list2[i] = -1;
         s_signals->list3[i] = nullptr;
         QMetaObject::Connection connection;
-        s_signals->list5[i] = connection;
+        s_signals->list4[i] = connection;
       }
     }
   }
@@ -309,13 +309,13 @@ void Signals4_disconnect_all_signals (QObject * obj, bool children)
         if( ( (QObject *) s_signals->list1.at(i) == (QObject *) obj ) &&
             ( s_signals->list2.at(i) != obj->metaObject()->indexOfSignal("destroyed(QObject*)") ) )
         {
-          QObject::disconnect( s_signals->list5[i] );
+          QObject::disconnect( s_signals->list4[i] );
           hb_itemRelease( (PHB_ITEM) s_signals->list3.at(i) );
           s_signals->list1[i] = nullptr;
           s_signals->list2[i] = -1;
           s_signals->list3[i] = nullptr;
           QMetaObject::Connection connection;
-          s_signals->list5[i] = connection;
+          s_signals->list4[i] = connection;
         }
       }
     }
@@ -344,13 +344,13 @@ void Signals4_disconnect_all_signals (QObject * obj, bool children)
           if( ( (QObject *) s_signals->list1.at(ii) == (QObject *) list.at(i) ) &&
               ( s_signals->list2.at(ii) != list.at(i)->metaObject()->indexOfSignal("destroyed(QObject*)") ) )
           {
-            QObject::disconnect( s_signals->list5[ii] );
+            QObject::disconnect( s_signals->list4[ii] );
             hb_itemRelease( (PHB_ITEM) s_signals->list3.at(ii) );
             s_signals->list1[ii] = nullptr;
             s_signals->list2[ii] = -1;
             s_signals->list3[ii] = nullptr;
             QMetaObject::Connection connection;
-            s_signals->list5[ii] = connection;
+            s_signals->list4[ii] = connection;
           }
         }
       }
@@ -629,7 +629,7 @@ bool Signals4_store_connection ( QObject * object, int signal, QMetaObject::Conn
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
-      s_signals->list5[i] = connection;
+      s_signals->list4[i] = connection;
       stored = true;
       break;
     }
@@ -660,7 +660,7 @@ bool Signals4_store_connection ( int index, QMetaObject::Connection connection )
   //  }
   //}
 
-  s_signals->list5[index] = connection;
+  s_signals->list4[index] = connection;
 
   //return stored;
   return true;
@@ -684,7 +684,7 @@ QMetaObject::Connection Signals4_get_connection ( QObject * object, int signal )
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
-      connection = s_signals->list5.at(i);
+      connection = s_signals->list4.at(i);
       break;
     }
   }
