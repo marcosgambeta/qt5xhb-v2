@@ -82,8 +82,8 @@ QSerialPortInfo()
 void QSerialPortInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSerialPortInfo ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -93,8 +93,8 @@ QSerialPortInfo(const QSerialPort &port)
 void QSerialPortInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ( *PQSERIALPORT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSerialPortInfo ( *PQSERIALPORT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -104,8 +104,8 @@ QSerialPortInfo(const QString &name)
 void QSerialPortInfo_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSerialPortInfo ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -115,8 +115,8 @@ QSerialPortInfo(const QSerialPortInfo &other)
 void QSerialPortInfo_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ( *PQSERIALPORTINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSerialPortInfo ( *PQSERIALPORTINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
