@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDBusContext * o = new QDBusContext ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QDBusContext ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

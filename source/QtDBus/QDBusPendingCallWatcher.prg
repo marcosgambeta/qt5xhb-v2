@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDBUSPENDINGCALL(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QDBusPendingCallWatcher * o = new QDBusPendingCallWatcher ( *PQDBUSPENDINGCALL(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QDBusPendingCallWatcher ( *PQDBUSPENDINGCALL(1), OPQOBJECT(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

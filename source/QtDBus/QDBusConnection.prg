@@ -98,8 +98,8 @@ QDBusConnection(const QString &name)
 */
 void QDBusConnection_new1 ()
 {
-  QDBusConnection * o = new QDBusConnection ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusConnection ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -107,8 +107,8 @@ QDBusConnection(const QDBusConnection &other)
 */
 void QDBusConnection_new2 ()
 {
-  QDBusConnection * o = new QDBusConnection ( *PQDBUSCONNECTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusConnection ( *PQDBUSCONNECTION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDBusConnection(const QString &name)

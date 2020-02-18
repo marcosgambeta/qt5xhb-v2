@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
   if( ISBETWEEN(2,5) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && (ISQDBUSCONNECTION(4)||ISNIL(4)) && (ISQOBJECT(5)||ISNIL(5)) )
   {
-    QDBusInterface * o = new QDBusInterface ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) _qt5xhb_itemGetPtr(4), OPQOBJECT(5,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QDBusInterface ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) _qt5xhb_itemGetPtr(4), OPQOBJECT(5,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

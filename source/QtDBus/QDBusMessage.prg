@@ -84,8 +84,8 @@ QDBusMessage()
 */
 void QDBusMessage_new1 ()
 {
-  QDBusMessage * o = new QDBusMessage ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusMessage ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QDBusMessage(const QDBusMessage &other)
 */
 void QDBusMessage_new2 ()
 {
-  QDBusMessage * o = new QDBusMessage ( *PQDBUSMESSAGE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusMessage ( *PQDBUSMESSAGE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDBusMessage()

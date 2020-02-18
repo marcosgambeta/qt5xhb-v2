@@ -75,8 +75,8 @@ QDBusArgument()
 */
 void QDBusArgument_new1 ()
 {
-  QDBusArgument * o = new QDBusArgument ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusArgument ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QDBusArgument(const QDBusArgument &other)
 */
 void QDBusArgument_new2 ()
 {
-  QDBusArgument * o = new QDBusArgument ( *PQDBUSARGUMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusArgument ( *PQDBUSARGUMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDBusArgument()

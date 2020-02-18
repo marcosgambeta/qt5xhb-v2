@@ -68,8 +68,8 @@ QDBusUnixFileDescriptor()
 */
 void QDBusUnixFileDescriptor_new1 ()
 {
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusUnixFileDescriptor ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ explicit QDBusUnixFileDescriptor(int fileDescriptor)
 */
 void QDBusUnixFileDescriptor_new2 ()
 {
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ( PINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusUnixFileDescriptor ( PINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 */
 void QDBusUnixFileDescriptor_new3 ()
 {
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ( *PQDBUSUNIXFILEDESCRIPTOR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDBusUnixFileDescriptor ( *PQDBUSUNIXFILEDESCRIPTOR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDBusUnixFileDescriptor()

@@ -60,8 +60,8 @@ QDBusServer(const QString &address, QObject *parent = nullptr)
 */
 void QDBusServer_new1 ()
 {
-  QDBusServer * o = new QDBusServer ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDBusServer ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -69,8 +69,8 @@ QDBusServer(QObject *parent = nullptr)
 */
 void QDBusServer_new2 ()
 {
-  QDBusServer * o = new QDBusServer ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDBusServer ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDBusServer(const QString &address, QObject *parent = nullptr)
