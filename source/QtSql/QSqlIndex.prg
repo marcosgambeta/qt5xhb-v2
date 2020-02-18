@@ -59,8 +59,8 @@ explicit QSqlIndex ( const QString & cursorname = QString(), const QString & nam
 */
 void QSqlIndex_new1 ()
 {
-  QSqlIndex * o = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QSqlIndex ( const QSqlIndex & other )
 */
 void QSqlIndex_new2 ()
 {
-  QSqlIndex * o = new QSqlIndex ( *PQSQLINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlIndex ( *PQSQLINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )

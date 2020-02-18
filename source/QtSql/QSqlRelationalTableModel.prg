@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && (ISQSQLDATABASE(2)||ISNIL(2)) )
   {
-    QSqlRelationalTableModel * o = new QSqlRelationalTableModel ( OPQOBJECT(1,nullptr), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSqlRelationalTableModel ( OPQOBJECT(1,nullptr), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

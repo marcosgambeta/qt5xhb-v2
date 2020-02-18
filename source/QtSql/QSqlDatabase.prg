@@ -112,8 +112,8 @@ QSqlDatabase ()
 */
 void QSqlDatabase_new1 ()
 {
-  QSqlDatabase * o = new QSqlDatabase ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlDatabase ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -121,8 +121,8 @@ QSqlDatabase ( const QSqlDatabase & other )
 */
 void QSqlDatabase_new2 ()
 {
-  QSqlDatabase * o = new QSqlDatabase ( *PQSQLDATABASE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlDatabase ( *PQSQLDATABASE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSqlDatabase ()

@@ -65,8 +65,8 @@ QSqlRelation ()
 */
 void QSqlRelation_new1 ()
 {
-  QSqlRelation * o = new QSqlRelation ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlRelation ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QSqlRelation ( const QString & tableName, const QString & indexColumn, const QSt
 */
 void QSqlRelation_new2 ()
 {
-  QSqlRelation * o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSqlRelation ()

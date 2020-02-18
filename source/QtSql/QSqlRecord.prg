@@ -85,8 +85,8 @@ QSqlRecord ()
 */
 void QSqlRecord_new1 ()
 {
-  QSqlRecord * o = new QSqlRecord ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlRecord ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QSqlRecord ( const QSqlRecord & other )
 */
 void QSqlRecord_new2 ()
 {
-  QSqlRecord * o = new QSqlRecord ( *PQSQLRECORD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSqlRecord ( *PQSQLRECORD(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSqlRecord ()
