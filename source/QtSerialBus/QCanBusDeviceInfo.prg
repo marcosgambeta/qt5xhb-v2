@@ -77,8 +77,8 @@ QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
 void QCanBusDeviceInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBusDeviceInfo * o = new QCanBusDeviceInfo ( *PQCANBUSDEVICEINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QCanBusDeviceInfo ( *PQCANBUSDEVICEINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
