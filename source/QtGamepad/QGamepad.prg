@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QGAMEPAD_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QGamepad * o = new QGamepad ( OPINT(1,0), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QGamepad ( OPINT(1,0), OPQOBJECT(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {
