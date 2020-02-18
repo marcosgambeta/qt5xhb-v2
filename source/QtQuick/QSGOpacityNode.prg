@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGOpacityNode * o = new QSGOpacityNode ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSGOpacityNode ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

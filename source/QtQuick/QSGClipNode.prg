@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QSGCLIPNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGClipNode * o = new QSGClipNode ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSGClipNode ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

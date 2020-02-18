@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QSGNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGNode * o = new QSGNode ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QSGNode ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

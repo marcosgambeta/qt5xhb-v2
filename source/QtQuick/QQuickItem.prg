@@ -149,8 +149,8 @@ HB_FUNC_STATIC( QQUICKITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQQUICKITEM(1)||ISNIL(1)) )
   {
-    QQuickItem * o = new QQuickItem ( OPQQUICKITEM(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QQuickItem ( OPQQUICKITEM(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

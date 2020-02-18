@@ -73,8 +73,8 @@ QQuickView(QWindow * parent = nullptr)
 */
 void QQuickView_new1 ()
 {
-  QQuickView * o = new QQuickView ( OPQWINDOW(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQuickView ( OPQWINDOW(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +82,8 @@ QQuickView(QQmlEngine * engine, QWindow * parent)
 */
 void QQuickView_new2 ()
 {
-  QQuickView * o = new QQuickView ( PQQMLENGINE(1), PQWINDOW(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQuickView ( PQQMLENGINE(1), PQWINDOW(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ QQuickView(const QUrl & source, QWindow * parent = nullptr)
 */
 void QQuickView_new3 ()
 {
-  QQuickView * o = new QQuickView ( *PQURL(1), OPQWINDOW(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQuickView ( *PQURL(1), OPQWINDOW(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QQuickView(QWindow * parent = nullptr)

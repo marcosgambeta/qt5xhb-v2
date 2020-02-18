@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGGeometryNode * o = new QSGGeometryNode ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSGGeometryNode ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGTransformNode * o = new QSGTransformNode ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSGTransformNode ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {
