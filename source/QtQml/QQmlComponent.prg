@@ -74,8 +74,8 @@ QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
 */
 void QQmlComponent_new1 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -83,8 +83,8 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 
 */
 void QQmlComponent_new2 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -92,8 +92,8 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mod
 */
 void QQmlComponent_new3 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -101,8 +101,8 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = nullptr)
 */
 void QQmlComponent_new4 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -110,8 +110,8 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObje
 */
 void QQmlComponent_new5 ()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)

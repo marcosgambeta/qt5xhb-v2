@@ -67,8 +67,8 @@ QQmlScriptString()
 */
 void QQmlScriptString_new1 ()
 {
-  QQmlScriptString * o = new QQmlScriptString ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlScriptString ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QQmlScriptString(const QQmlScriptString & other)
 */
 void QQmlScriptString_new2 ()
 {
-  QQmlScriptString * o = new QQmlScriptString ( *PQQMLSCRIPTSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlScriptString ( *PQQMLSCRIPTSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QQmlScriptString()

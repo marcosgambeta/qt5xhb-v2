@@ -70,8 +70,8 @@ QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
 */
 void QQmlContext_new1 ()
 {
-  QQmlContext * o = new QQmlContext ( PQQMLENGINE(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlContext ( PQQMLENGINE(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -79,8 +79,8 @@ QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
 */
 void QQmlContext_new2 ()
 {
-  QQmlContext * o = new QQmlContext ( PQQMLCONTEXT(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlContext ( PQQMLCONTEXT(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)

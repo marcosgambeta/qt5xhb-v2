@@ -86,8 +86,8 @@ QQmlProperty()
 */
 void QQmlProperty_new1 ()
 {
-  QQmlProperty * o = new QQmlProperty ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -95,8 +95,8 @@ QQmlProperty(QObject * obj)
 */
 void QQmlProperty_new2 ()
 {
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ( PQOBJECT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -104,8 +104,8 @@ QQmlProperty(QObject * obj, QQmlContext * ctxt)
 */
 void QQmlProperty_new3 ()
 {
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQQMLCONTEXT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ( PQOBJECT(1), PQQMLCONTEXT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -113,8 +113,8 @@ QQmlProperty(QObject * obj, QQmlEngine * engine)
 */
 void QQmlProperty_new4 ()
 {
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQQMLENGINE(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ( PQOBJECT(1), PQQMLENGINE(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -122,8 +122,8 @@ QQmlProperty(QObject * obj, const QString & name)
 */
 void QQmlProperty_new5 ()
 {
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ( PQOBJECT(1), PQSTRING(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -131,8 +131,8 @@ QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 */
 void QQmlProperty_new6 ()
 {
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -140,8 +140,8 @@ QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 */
 void QQmlProperty_new7 ()
 {
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -149,8 +149,8 @@ QQmlProperty(const QQmlProperty & other)
 */
 void QQmlProperty_new8 ()
 {
-  QQmlProperty * o = new QQmlProperty ( *PQQMLPROPERTY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlProperty ( *PQQMLPROPERTY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QQmlProperty()

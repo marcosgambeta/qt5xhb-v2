@@ -72,8 +72,8 @@ QQmlError()
 */
 void QQmlError_new1 ()
 {
-  QQmlError * o = new QQmlError ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlError ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -81,8 +81,8 @@ QQmlError(const QQmlError & other)
 */
 void QQmlError_new2 ()
 {
-  QQmlError * o = new QQmlError ( *PQQMLERROR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQmlError ( *PQQMLERROR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QQmlError()

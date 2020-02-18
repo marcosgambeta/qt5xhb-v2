@@ -77,8 +77,8 @@ QQmlExpression()
 */
 void QQmlExpression_new1 ()
 {
-  QQmlExpression * o = new QQmlExpression ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlExpression ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -86,8 +86,8 @@ QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, 
 */
 void QQmlExpression_new2 ()
 {
-  QQmlExpression * o = new QQmlExpression ( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlExpression ( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -95,8 +95,8 @@ QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QO
 */
 void QQmlExpression_new3 ()
 {
-  QQmlExpression * o = new QQmlExpression ( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,nullptr), OPQOBJECT(3,nullptr), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQmlExpression ( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,nullptr), OPQOBJECT(3,nullptr), OPQOBJECT(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QQmlExpression()

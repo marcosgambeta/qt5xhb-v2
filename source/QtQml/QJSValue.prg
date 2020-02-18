@@ -103,8 +103,8 @@ QJSValue(SpecialValue value = UndefinedValue)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW1 )
 {
-  QJSValue * o = new QJSValue ( ISNIL(1)? (QJSValue::SpecialValue) QJSValue::UndefinedValue : (QJSValue::SpecialValue) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( ISNIL(1)? (QJSValue::SpecialValue) QJSValue::UndefinedValue : (QJSValue::SpecialValue) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QJSValue(const QJSValue & other)
 */
 void QJSValue_new2 ()
 {
-  QJSValue * o = new QJSValue ( *PQJSVALUE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( *PQJSVALUE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -121,8 +121,8 @@ QJSValue(bool value)
 */
 void QJSValue_new3 ()
 {
-  QJSValue * o = new QJSValue ( PBOOL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( PBOOL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -130,8 +130,8 @@ QJSValue(int value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW4 )
 {
-  QJSValue * o = new QJSValue ( PINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( PINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -139,8 +139,8 @@ QJSValue(uint value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW5 )
 {
-  QJSValue * o = new QJSValue ( PUINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( PUINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -148,8 +148,8 @@ QJSValue(double value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW6 )
 {
-  QJSValue * o = new QJSValue ( PDOUBLE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( PDOUBLE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -157,8 +157,8 @@ QJSValue(const QString & value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW7 )
 {
-  QJSValue * o = new QJSValue ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -166,8 +166,8 @@ QJSValue(const QLatin1String & value)
 */
 void QJSValue_new8 ()
 {
-  QJSValue * o = new QJSValue ( *PQLATIN1STRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( *PQLATIN1STRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -175,8 +175,8 @@ QJSValue(const char * value)
 */
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
 {
-  QJSValue * o = new QJSValue ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJSValue ( PCONSTCHAR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QJSValue(SpecialValue value = UndefinedValue)
