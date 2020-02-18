@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1) )
   {
-    QWebEngineHistoryItem * o = new QWebEngineHistoryItem ( *PQWEBENGINEHISTORYITEM(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QWebEngineHistoryItem ( *PQWEBENGINEHISTORYITEM(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {
