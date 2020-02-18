@@ -88,8 +88,8 @@ explicit QTextToSpeech(QObject *parent = nullptr)
 void QTextToSpeech_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * o = new QTextToSpeech ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTextToSpeech ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -99,8 +99,8 @@ explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
 void QTextToSpeech_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * o = new QTextToSpeech ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTextToSpeech ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
