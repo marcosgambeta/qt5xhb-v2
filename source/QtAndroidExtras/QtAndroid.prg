@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDACTIVITY )
     if( ISNUMPAR(0) )
   {
 #endif
-      QAndroidJniObject * ptr = new QAndroidJniObject( QtAndroid::androidActivity () );
+      auto ptr = new QAndroidJniObject( QtAndroid::androidActivity () );
       _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDSERVICE )
     if( ISNUMPAR(0) )
   {
 #endif
-      QAndroidJniObject * ptr = new QAndroidJniObject( QtAndroid::androidService () );
+      auto ptr = new QAndroidJniObject( QtAndroid::androidService () );
       _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDCONTEXT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QAndroidJniObject * ptr = new QAndroidJniObject( QtAndroid::androidContext () );
+      auto ptr = new QAndroidJniObject( QtAndroid::androidContext () );
       _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
