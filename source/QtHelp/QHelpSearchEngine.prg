@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
   if( ISBETWEEN(1,2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpSearchEngine * o = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {
