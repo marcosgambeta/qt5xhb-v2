@@ -59,8 +59,8 @@ QSvgWidget ( QWidget * parent = nullptr )
 */
 void QSvgWidget_new1 ()
 {
-  QSvgWidget * o = new QSvgWidget ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSvgWidget ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -68,8 +68,8 @@ QSvgWidget ( const QString & file, QWidget * parent = nullptr )
 */
 void QSvgWidget_new2 ()
 {
-  QSvgWidget * o = new QSvgWidget ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSvgWidget ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QSvgWidget ( QWidget * parent = nullptr )

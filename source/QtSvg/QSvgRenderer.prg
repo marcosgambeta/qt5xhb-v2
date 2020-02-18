@@ -72,8 +72,8 @@ QSvgRenderer ( QObject * parent = nullptr )
 */
 void QSvgRenderer_new1 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSvgRenderer ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -81,8 +81,8 @@ QSvgRenderer ( const QString & filename, QObject * parent = nullptr )
 */
 void QSvgRenderer_new2 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSvgRenderer ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +90,8 @@ QSvgRenderer ( const QByteArray & contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new3 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSvgRenderer ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -99,8 +99,8 @@ QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new4 ()
 {
-  QSvgRenderer * o = new QSvgRenderer ( PQXMLSTREAMREADER(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSvgRenderer ( PQXMLSTREAMREADER(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QSvgRenderer ( QObject * parent = nullptr )

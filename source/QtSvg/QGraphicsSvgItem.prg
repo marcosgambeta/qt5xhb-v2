@@ -66,8 +66,8 @@ QGraphicsSvgItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new1 ()
 {
-  QGraphicsSvgItem * o = new QGraphicsSvgItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsSvgItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new2 ()
 {
-  QGraphicsSvgItem * o = new QGraphicsSvgItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsSvgItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
