@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->appID () );
+      auto ptr = new QUuid( obj->appID () );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->classID ( PQSTRING(1) ) );
+      auto ptr = new QUuid( obj->classID ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->eventsID ( PQSTRING(1) ) );
+      auto ptr = new QUuid( obj->eventsID ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->interfaceID ( PQSTRING(1) ) );
+      auto ptr = new QUuid( obj->interfaceID ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->typeLibID () );
+      auto ptr = new QUuid( obj->typeLibID () );
       _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
