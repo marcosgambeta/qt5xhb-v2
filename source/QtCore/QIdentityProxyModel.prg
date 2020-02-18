@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QIdentityProxyModel * o = new QIdentityProxyModel ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QIdentityProxyModel ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

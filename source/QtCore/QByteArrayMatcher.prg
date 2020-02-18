@@ -65,8 +65,8 @@ QByteArrayMatcher ()
 */
 void QByteArrayMatcher_new1 ()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArrayMatcher ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QByteArrayMatcher ( const QByteArray & pattern )
 */
 void QByteArrayMatcher_new2 ()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QByteArrayMatcher ( const char * pattern, int length )
 */
 void QByteArrayMatcher_new3 ()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
 void QByteArrayMatcher_new4 ()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QByteArrayMatcher()

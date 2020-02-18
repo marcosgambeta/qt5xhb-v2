@@ -173,8 +173,8 @@ QByteArray ()
 */
 void QByteArray_new1 ()
 {
-  QByteArray * o = new QByteArray ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArray ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -182,8 +182,8 @@ QByteArray ( const char * str )
 */
 void QByteArray_new2 ()
 {
-  QByteArray * o = new QByteArray ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArray ( PCONSTCHAR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -191,8 +191,8 @@ QByteArray ( const char * data, int size )
 */
 void QByteArray_new3 ()
 {
-  QByteArray * o = new QByteArray ( PCONSTCHAR(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArray ( PCONSTCHAR(1), PINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -210,8 +210,8 @@ QByteArray ( const QByteArray & other )
 */
 void QByteArray_new5 ()
 {
-  QByteArray * o = new QByteArray ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QByteArray ( *PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QByteArray ()

@@ -67,8 +67,8 @@ QDebug(QIODevice *device)
 */
 void QDebug_new1 ()
 {
-  QDebug * o = new QDebug ( PQIODEVICE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDebug ( PQIODEVICE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QDebug(QtMsgType t)
 */
 void QDebug_new3 ()
 {
-  QDebug * o = new QDebug ( (QtMsgType) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDebug ( (QtMsgType) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -89,8 +89,8 @@ QDebug(const QDebug &o)
 */
 void QDebug_new4 ()
 {
-  QDebug * o = new QDebug ( *PQDEBUG(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDebug ( *PQDEBUG(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDebug(QIODevice *device)

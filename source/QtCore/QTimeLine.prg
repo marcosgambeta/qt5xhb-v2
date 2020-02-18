@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QTimeLine * o = new QTimeLine ( OPINT(1,1000), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QTimeLine ( OPINT(1,1000), OPQOBJECT(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

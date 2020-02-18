@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    QMessageAuthenticationCode * o = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) hb_parni(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) hb_parni(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

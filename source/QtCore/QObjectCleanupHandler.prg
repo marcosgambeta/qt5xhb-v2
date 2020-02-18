@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QObjectCleanupHandler * o = new QObjectCleanupHandler ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QObjectCleanupHandler ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

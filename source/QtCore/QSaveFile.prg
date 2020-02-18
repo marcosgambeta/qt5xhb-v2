@@ -64,8 +64,8 @@ QSaveFile(const QString &name)
 void QSaveFile_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSaveFile ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -75,8 +75,8 @@ QSaveFile(QObject *parent = nullptr)
 void QSaveFile_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSaveFile ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -86,8 +86,8 @@ QSaveFile(const QString &name, QObject *parent)
 void QSaveFile_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( PQSTRING(1), PQOBJECT(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSaveFile ( PQSTRING(1), PQOBJECT(2) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

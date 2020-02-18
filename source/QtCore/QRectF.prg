@@ -119,8 +119,8 @@ QRectF ()
 */
 void QRectF_new1 ()
 {
-  QRectF * o = new QRectF ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRectF ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -128,8 +128,8 @@ QRectF ( const QPointF & topLeft, const QSizeF & size )
 */
 void QRectF_new2 ()
 {
-  QRectF * o = new QRectF ( *PQPOINTF(1), *PQSIZEF(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRectF ( *PQPOINTF(1), *PQSIZEF(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -137,8 +137,8 @@ QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
 */
 void QRectF_new3 ()
 {
-  QRectF * o = new QRectF ( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRectF ( *PQPOINTF(1), *PQPOINTF(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -146,8 +146,8 @@ QRectF ( qreal x, qreal y, qreal width, qreal height )
 */
 void QRectF_new4 ()
 {
-  QRectF * o = new QRectF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRectF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -155,8 +155,8 @@ QRectF ( const QRect & rectangle )
 */
 void QRectF_new5 ()
 {
-  QRectF * o = new QRectF ( *PQRECT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRectF ( *PQRECT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QRectF ()

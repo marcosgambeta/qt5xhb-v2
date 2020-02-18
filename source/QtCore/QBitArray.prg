@@ -74,8 +74,8 @@ QBitArray ()
 */
 void QBitArray_new1 ()
 {
-  QBitArray * o = new QBitArray ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitArray ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QBitArray ( int size, bool value = false )
 */
 void QBitArray_new2 ()
 {
-  QBitArray * o = new QBitArray ( PINT(1), OPBOOL(2,false) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitArray ( PINT(1), OPBOOL(2,false) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QBitArray ( const QBitArray & other )
 */
 void QBitArray_new3 ()
 {
-  QBitArray * o = new QBitArray ( *PQBITARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitArray ( *PQBITARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QBitArray ()

@@ -55,8 +55,8 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QTimerEvent * o = new QTimerEvent ( PINT(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QTimerEvent ( PINT(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

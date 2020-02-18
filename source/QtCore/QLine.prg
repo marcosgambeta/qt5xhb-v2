@@ -77,8 +77,8 @@ QLine()
 */
 void QLine_new1 ()
 {
-  QLine * o = new QLine ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLine ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QLine(const QPoint & p1, const QPoint & p2)
 */
 void QLine_new2 ()
 {
-  QLine * o = new QLine ( *PQPOINT(1), *PQPOINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLine ( *PQPOINT(1), *PQPOINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -95,8 +95,8 @@ QLine(int x1, int y1, int x2, int y2)
 */
 void QLine_new3 ()
 {
-  QLine * o = new QLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QLine()

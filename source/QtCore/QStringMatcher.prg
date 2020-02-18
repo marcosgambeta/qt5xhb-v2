@@ -66,8 +66,8 @@ QStringMatcher()
 */
 void QStringMatcher_new1 ()
 {
-  QStringMatcher * o = new QStringMatcher ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStringMatcher ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive
 */
 void QStringMatcher_new2 ()
 {
-  QStringMatcher * o = new QStringMatcher ( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStringMatcher ( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensiti
 */
 void QStringMatcher_new3 ()
 {
-  QStringMatcher * o = new QStringMatcher ( PQCHAR(1), PINT(2), ISNIL(3)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStringMatcher ( PQCHAR(1), PINT(2), ISNIL(3)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QStringMatcher(const QStringMatcher &other)
 */
 void QStringMatcher_new4 ()
 {
-  QStringMatcher * o = new QStringMatcher ( *PQSTRINGMATCHER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStringMatcher ( *PQSTRINGMATCHER(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //QStringMatcher()

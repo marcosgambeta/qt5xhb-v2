@@ -67,8 +67,8 @@ QPoint()
 */
 void QPoint_new1 ()
 {
-  QPoint * o = new QPoint ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPoint ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QPoint(int xpos, int ypos)
 */
 void QPoint_new2 ()
 {
-  QPoint * o = new QPoint ( PINT(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPoint ( PINT(1), PINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QPoint()

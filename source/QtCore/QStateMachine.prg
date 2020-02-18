@@ -76,8 +76,8 @@ QStateMachine(QObject *parent = nullptr)
 */
 void QStateMachine_new1 ()
 {
-  QStateMachine * o = new QStateMachine ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStateMachine ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +85,8 @@ QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
 */
 void QStateMachine_new2 ()
 {
-  QStateMachine * o = new QStateMachine ( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStateMachine ( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QStateMachine(QObject *parent = nullptr)

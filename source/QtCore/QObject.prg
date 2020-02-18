@@ -287,8 +287,8 @@ HB_FUNC_STATIC( QOBJECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QObject * o = new QObject ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QObject ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

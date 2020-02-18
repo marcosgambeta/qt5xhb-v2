@@ -80,8 +80,8 @@ QFile()
 */
 void QFile_new1 ()
 {
-  QFile * o = new QFile ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFile ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -89,8 +89,8 @@ QFile(const QString &name)
 */
 void QFile_new2 ()
 {
-  QFile * o = new QFile ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFile ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -98,8 +98,8 @@ explicit QFile(QObject *parent)
 */
 void QFile_new3 ()
 {
-  QFile * o = new QFile ( PQOBJECT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFile ( PQOBJECT(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -107,8 +107,8 @@ QFile(const QString &name, QObject *parent)
 */
 void QFile_new4 ()
 {
-  QFile * o = new QFile ( PQSTRING(1), PQOBJECT(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFile ( PQSTRING(1), PQOBJECT(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QFile()

@@ -78,8 +78,8 @@ QMimeType()
 */
 void QMimeType_new1 ()
 {
-  QMimeType * o = new QMimeType ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMimeType ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QMimeType(const QMimeType &other)
 */
 void QMimeType_new2 ()
 {
-  QMimeType * o = new QMimeType ( *PQMIMETYPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMimeType ( *PQMIMETYPE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QMimeType()

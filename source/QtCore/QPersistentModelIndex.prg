@@ -76,8 +76,8 @@ QPersistentModelIndex()
 */
 void QPersistentModelIndex_new1 ()
 {
-  QPersistentModelIndex * o = new QPersistentModelIndex ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPersistentModelIndex ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QPersistentModelIndex(const QModelIndex &index)
 */
 void QPersistentModelIndex_new2 ()
 {
-  QPersistentModelIndex * o = new QPersistentModelIndex ( *PQMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPersistentModelIndex ( *PQMODELINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QPersistentModelIndex(const QPersistentModelIndex &other)
 */
 void QPersistentModelIndex_new3 ()
 {
-  QPersistentModelIndex * o = new QPersistentModelIndex ( *PQPERSISTENTMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPersistentModelIndex ( *PQPERSISTENTMODELINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QPersistentModelIndex()

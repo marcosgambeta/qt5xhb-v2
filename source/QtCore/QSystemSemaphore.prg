@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
-    QSystemSemaphore * o = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

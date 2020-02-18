@@ -60,8 +60,8 @@ QTemporaryFile()
 */
 void QTemporaryFile_new1 ()
 {
-  QTemporaryFile * o = new QTemporaryFile ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTemporaryFile ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -69,8 +69,8 @@ QTemporaryFile(const QString & templateName)
 */
 void QTemporaryFile_new2 ()
 {
-  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTemporaryFile ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QTemporaryFile(QObject * parent)
 */
 void QTemporaryFile_new3 ()
 {
-  QTemporaryFile * o = new QTemporaryFile ( PQOBJECT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTemporaryFile ( PQOBJECT(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -87,8 +87,8 @@ QTemporaryFile(const QString & templateName, QObject * parent)
 */
 void QTemporaryFile_new4 ()
 {
-  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), PQOBJECT(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTemporaryFile ( PQSTRING(1), PQOBJECT(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QTemporaryFile()

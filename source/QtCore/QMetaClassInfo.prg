@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaClassInfo * o = new QMetaClassInfo ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QMetaClassInfo ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

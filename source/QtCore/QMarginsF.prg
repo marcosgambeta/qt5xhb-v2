@@ -77,8 +77,8 @@ QMarginsF()
 void QMarginsF_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * o = new QMarginsF ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMarginsF ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 void QMarginsF_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * o = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -99,8 +99,8 @@ QMarginsF(const QMargins &margins)
 void QMarginsF_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * o = new QMarginsF ( *PQMARGINS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMarginsF ( *PQMARGINS(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QREADLOCKER_NEW )
 {
   if( ISNUMPAR(1) && ISQREADWRITELOCK(1) )
   {
-    QReadLocker * o = new QReadLocker ( PQREADWRITELOCK(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QReadLocker ( PQREADWRITELOCK(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

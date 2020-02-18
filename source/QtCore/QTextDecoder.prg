@@ -63,8 +63,8 @@ QTextDecoder(const QTextCodec * codec)
 */
 void QTextDecoder_new1 ()
 {
-  QTextDecoder * o = new QTextDecoder ( PQTEXTCODEC(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextDecoder ( PQTEXTCODEC(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
 void QTextDecoder_new2 ()
 {
-  QTextDecoder * o = new QTextDecoder ( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextDecoder ( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QTextDecoder(const QTextCodec * codec)

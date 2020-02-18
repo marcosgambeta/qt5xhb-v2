@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlStreamAttributes * o = new QXmlStreamAttributes ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QXmlStreamAttributes ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

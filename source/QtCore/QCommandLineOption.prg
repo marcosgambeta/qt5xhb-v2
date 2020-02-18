@@ -70,8 +70,8 @@ QCommandLineOption(const QString &name, const QString &description = QString(),c
 */
 void QCommandLineOption_new1 ()
 {
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QCommandLineOption ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QCommandLineOption(const QStringList &names, const QString &description = QStrin
 */
 void QCommandLineOption_new2 ()
 {
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRINGLIST(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QCommandLineOption ( PQSTRINGLIST(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -88,8 +88,8 @@ QCommandLineOption(const QCommandLineOption &other)
 */
 void QCommandLineOption_new3 ()
 {
-  QCommandLineOption * o = new QCommandLineOption ( *PQCOMMANDLINEOPTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QCommandLineOption ( *PQCOMMANDLINEOPTION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())

@@ -79,8 +79,8 @@ QDataStream()
 */
 void QDataStream_new1 ()
 {
-  QDataStream * o = new QDataStream ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDataStream ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -88,8 +88,8 @@ QDataStream(QIODevice *)
 */
 void QDataStream_new2 ()
 {
-  QDataStream * o = new QDataStream ( PQIODEVICE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDataStream ( PQIODEVICE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QDataStream(QByteArray *, QIODevice::OpenMode flags)
 */
 void QDataStream_new3 ()
 {
-  QDataStream * o = new QDataStream ( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDataStream ( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -106,8 +106,8 @@ QDataStream(const QByteArray &)
 */
 void QDataStream_new4 ()
 {
-  QDataStream * o = new QDataStream ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDataStream ( *PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDataStream()

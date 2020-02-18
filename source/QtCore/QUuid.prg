@@ -71,8 +71,8 @@ QUuid()
 */
 void QUuid_new1 ()
 {
-  QUuid * o = new QUuid ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QUuid ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QUuid(const QByteArray & text)
 */
 void QUuid_new2 ()
 {
-  QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QUuid ( *PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

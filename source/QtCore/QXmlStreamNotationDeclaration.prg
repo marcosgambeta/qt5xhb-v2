@@ -65,8 +65,8 @@ QXmlStreamNotationDeclaration()
 */
 void QXmlStreamNotationDeclaration_new1 ()
 {
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlStreamNotationDeclaration ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
 void QXmlStreamNotationDeclaration_new2 ()
 {
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlStreamNotationDeclaration ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlStreamNotationDeclaration()

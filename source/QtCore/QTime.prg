@@ -78,8 +78,8 @@ QTime()
 */
 void QTime_new1 ()
 {
-  QTime * o = new QTime ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTime ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QTime(int h, int m, int s = 0, int ms = 0)
 */
 void QTime_new2 ()
 {
-  QTime * o = new QTime ( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTime ( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QTime()

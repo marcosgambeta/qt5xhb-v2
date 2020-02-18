@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QMIMEDATABASE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMimeDatabase * o = new QMimeDatabase ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QMimeDatabase ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

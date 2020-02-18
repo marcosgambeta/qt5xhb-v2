@@ -72,8 +72,8 @@ QSize ()
 */
 void QSize_new1 ()
 {
-  QSize * o = new QSize ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSize ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -81,8 +81,8 @@ QSize ( int width, int height )
 */
 void QSize_new2 ()
 {
-  QSize * o = new QSize ( PINT(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSize ( PINT(1), PINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSize ()

@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QSocketNotifier * o = new QSocketNotifier ( PQINTPTR(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSocketNotifier ( PQINTPTR(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

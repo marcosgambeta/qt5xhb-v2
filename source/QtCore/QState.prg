@@ -71,8 +71,8 @@ QState ( QState * parent = nullptr )
 */
 void QState_new1 ()
 {
-  QState * o = new QState ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QState ( OPQSTATE(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -80,8 +80,8 @@ QState ( ChildMode childMode, QState * parent = nullptr )
 */
 void QState_new2 ()
 {
-  QState * o = new QState ( (QState::ChildMode) hb_parni(1), OPQSTATE(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QState ( (QState::ChildMode) hb_parni(1), OPQSTATE(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QState ( QState * parent = nullptr )

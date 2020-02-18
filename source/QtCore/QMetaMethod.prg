@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaMethod * o = new QMetaMethod ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QMetaMethod ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

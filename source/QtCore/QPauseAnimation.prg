@@ -55,8 +55,8 @@ QPauseAnimation ( QObject * parent = nullptr )
 */
 void QPauseAnimation_new1 ()
 {
-  QPauseAnimation * o = new QPauseAnimation ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPauseAnimation ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -64,8 +64,8 @@ QPauseAnimation ( int msecs, QObject * parent = nullptr )
 */
 void QPauseAnimation_new2 ()
 {
-  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPauseAnimation ( PINT(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QPauseAnimation ( QObject * parent = nullptr )

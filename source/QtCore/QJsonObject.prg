@@ -74,8 +74,8 @@ QJsonObject()
 */
 void QJsonObject_new1 ()
 {
-  QJsonObject * o = new QJsonObject ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJsonObject ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QJsonObject(const QJsonObject & other)
 */
 void QJsonObject_new2 ()
 {
-  QJsonObject * o = new QJsonObject ( *PQJSONOBJECT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJsonObject ( *PQJSONOBJECT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QJsonObject()

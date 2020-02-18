@@ -71,8 +71,8 @@ QProcessEnvironment()
 */
 void QProcessEnvironment_new1 ()
 {
-  QProcessEnvironment * o = new QProcessEnvironment ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QProcessEnvironment ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QProcessEnvironment(const QProcessEnvironment &other)
 */
 void QProcessEnvironment_new2 ()
 {
-  QProcessEnvironment * o = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QProcessEnvironment()

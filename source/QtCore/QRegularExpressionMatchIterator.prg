@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEW )
 {
   if( ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCHITERATOR(1) )
   {
-    QRegularExpressionMatchIterator * o = new QRegularExpressionMatchIterator ( *PQREGULAREXPRESSIONMATCHITERATOR(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QRegularExpressionMatchIterator ( *PQREGULAREXPRESSIONMATCHITERATOR(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

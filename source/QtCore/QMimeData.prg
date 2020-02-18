@@ -82,8 +82,8 @@ HB_FUNC_STATIC( QMIMEDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMimeData * o = new QMimeData ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QMimeData ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

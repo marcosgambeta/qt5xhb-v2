@@ -117,8 +117,8 @@ QDir(const QDir & dir)
 */
 void QDir_new1 ()
 {
-  QDir * o = new QDir ( *PQDIR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDir ( *PQDIR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -126,8 +126,8 @@ QDir(const QString & path = QString())
 */
 void QDir_new2 ()
 {
-  QDir * o = new QDir ( OPQSTRING(1,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDir ( OPQSTRING(1,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -135,8 +135,8 @@ QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlag
 */
 void QDir_new3 ()
 {
-  QDir * o = new QDir ( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QDir::SortFlags) QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) : (QDir::SortFlags) hb_parni(3), ISNIL(4)? (QDir::Filters) QDir::AllEntries : (QDir::Filters) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDir ( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QDir::SortFlags) QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) : (QDir::SortFlags) hb_parni(3), ISNIL(4)? (QDir::Filters) QDir::AllEntries : (QDir::Filters) hb_parni(4) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDir(const QDir & dir)

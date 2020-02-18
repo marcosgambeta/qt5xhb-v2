@@ -74,8 +74,8 @@ QModelIndex ()
 */
 void QModelIndex_new1 ()
 {
-  QModelIndex * o = new QModelIndex ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QModelIndex ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QModelIndex ( const QModelIndex & other )
 */
 void QModelIndex_new2 ()
 {
-  QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QModelIndex ( *PQMODELINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QModelIndex ()

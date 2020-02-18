@@ -66,8 +66,8 @@ QBuffer ( QObject * parent = nullptr )
 */
 void QBuffer_new1 ()
 {
-  QBuffer * o = new QBuffer ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBuffer ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QBuffer ( QByteArray * byteArray, QObject * parent = nullptr )
 */
 void QBuffer_new2 ()
 {
-  QBuffer * o = new QBuffer ( PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBuffer ( PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QBuffer ( QObject * parent = nullptr )

@@ -67,8 +67,8 @@ QXmlStreamEntityDeclaration()
 */
 void QXmlStreamEntityDeclaration_new1 ()
 {
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlStreamEntityDeclaration ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
 void QXmlStreamEntityDeclaration_new2 ()
 {
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlStreamEntityDeclaration()

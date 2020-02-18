@@ -70,8 +70,8 @@ QMargins()
 */
 void QMargins_new1 ()
 {
-  QMargins * o = new QMargins ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMargins ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QMargins(int left, int top, int right, int bottom)
 */
 void QMargins_new2 ()
 {
-  QMargins * o = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QMargins()

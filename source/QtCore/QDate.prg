@@ -87,8 +87,8 @@ QDate ()
 */
 void QDate_new1 ()
 {
-  QDate * o = new QDate ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDate ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QDate ( int y, int m, int d )
 */
 void QDate_new2 ()
 {
-  QDate * o = new QDate ( PINT(1), PINT(2), PINT(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDate ( PINT(1), PINT(2), PINT(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDate ()

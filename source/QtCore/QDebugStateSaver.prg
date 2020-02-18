@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
 {
   if( ISNUMPAR(1) && ISQDEBUG(1) )
   {
-    QDebugStateSaver * o = new QDebugStateSaver ( *PQDEBUG(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QDebugStateSaver ( *PQDEBUG(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

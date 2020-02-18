@@ -57,8 +57,8 @@ QHistoryState(QState *parent = nullptr)
 */
 void QHistoryState_new1 ()
 {
-  QHistoryState * o = new QHistoryState ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHistoryState ( OPQSTATE(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -66,8 +66,8 @@ QHistoryState(HistoryType type, QState *parent = nullptr)
 */
 void QHistoryState_new2 ()
 {
-  QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QHistoryState(QState *parent = nullptr)

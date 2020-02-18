@@ -64,8 +64,8 @@ QFileSystemWatcher(QObject * parent = nullptr)
 */
 void QFileSystemWatcher_new1 ()
 {
-  QFileSystemWatcher * o = new QFileSystemWatcher ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFileSystemWatcher ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -73,8 +73,8 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
 */
 void QFileSystemWatcher_new2 ()
 {
-  QFileSystemWatcher * o = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QFileSystemWatcher(QObject * parent = nullptr)

@@ -89,8 +89,8 @@ QTimeZone()
 void QTimeZone_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTimeZone ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -100,8 +100,8 @@ QTimeZone(const QByteArray &ianaId)
 void QTimeZone_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTimeZone ( *PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -111,8 +111,8 @@ QTimeZone(int offsetSeconds)
 void QTimeZone_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ( PINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTimeZone ( PINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -122,8 +122,8 @@ QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name,const
 void QTimeZone_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), ISNIL(5)? (QLocale::Country) QLocale::AnyCountry : (QLocale::Country) hb_parni(5), OPQSTRING(6,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTimeZone ( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), ISNIL(5)? (QLocale::Country) QLocale::AnyCountry : (QLocale::Country) hb_parni(5), OPQSTRING(6,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -133,8 +133,8 @@ QTimeZone(const QTimeZone &other)
 void QTimeZone_new5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ( *PQTIMEZONE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTimeZone ( *PQTIMEZONE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

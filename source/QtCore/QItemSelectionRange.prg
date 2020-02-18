@@ -80,8 +80,8 @@ QItemSelectionRange()
 */
 void QItemSelectionRange_new1 ()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QItemSelectionRange ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -89,8 +89,8 @@ QItemSelectionRange(const QItemSelectionRange &other)
 */
 void QItemSelectionRange_new2 ()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -98,8 +98,8 @@ QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
 void QItemSelectionRange_new3 ()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QItemSelectionRange ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -107,8 +107,8 @@ QItemSelectionRange(const QModelIndex &index)
 */
 void QItemSelectionRange_new4 ()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QItemSelectionRange ( *PQMODELINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QItemSelectionRange()

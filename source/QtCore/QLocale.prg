@@ -141,8 +141,8 @@ QLocale ()
 */
 void QLocale_new1 ()
 {
-  QLocale * o = new QLocale ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLocale ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -150,8 +150,8 @@ QLocale ( const QString & name )
 */
 void QLocale_new2 ()
 {
-  QLocale * o = new QLocale ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLocale ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -159,8 +159,8 @@ QLocale ( Language language, Country country = AnyCountry )
 */
 void QLocale_new3 ()
 {
-  QLocale * o = new QLocale ( (QLocale::Language) hb_parni(1), ISNIL(2)? (QLocale::Country) QLocale::AnyCountry : (QLocale::Country) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLocale ( (QLocale::Language) hb_parni(1), ISNIL(2)? (QLocale::Country) QLocale::AnyCountry : (QLocale::Country) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -168,8 +168,8 @@ QLocale ( Language language, Script script, Country country )
 */
 void QLocale_new4 ()
 {
-  QLocale * o = new QLocale ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLocale ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -177,8 +177,8 @@ QLocale ( const QLocale & other )
 */
 void QLocale_new5 ()
 {
-  QLocale * o = new QLocale ( *PQLOCALE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QLocale ( *PQLOCALE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1] QLocale ()

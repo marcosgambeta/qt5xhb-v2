@@ -89,8 +89,8 @@ QXmlStreamWriter()
 */
 void QXmlStreamWriter_new1 ()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlStreamWriter ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -98,8 +98,8 @@ QXmlStreamWriter(QIODevice * device)
 */
 void QXmlStreamWriter_new2 ()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlStreamWriter ( PQIODEVICE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -107,8 +107,8 @@ QXmlStreamWriter(QByteArray * array)
 */
 void QXmlStreamWriter_new3 ()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter ( PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlStreamWriter ( PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

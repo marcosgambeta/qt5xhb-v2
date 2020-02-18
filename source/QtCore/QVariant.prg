@@ -182,8 +182,8 @@ QVariant()
 */
 void QVariant_new1 ()
 {
-  QVariant * o = new QVariant ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -191,8 +191,8 @@ QVariant(Type type)
 */
 HB_FUNC_STATIC( QVARIANT_NEW2 )
 {
-  QVariant * o = new QVariant ( (QVariant::Type) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( (QVariant::Type) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -200,8 +200,8 @@ QVariant(int typeId, const void *copy)
 */
 void QVariant_new3 ()
 {
-  QVariant * o = new QVariant ( PINT(1), (const void *) hb_parptr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PINT(1), (const void *) hb_parptr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -209,8 +209,8 @@ QVariant(int typeId, const void *copy, uint flags)
 */
 void QVariant_new4 ()
 {
-  QVariant * o = new QVariant ( PINT(1), (const void *) hb_parptr(2), PUINT(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PINT(1), (const void *) hb_parptr(2), PUINT(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -218,8 +218,8 @@ QVariant(const QVariant &other)
 */
 void QVariant_new5 ()
 {
-  QVariant * o = new QVariant ( *PQVARIANT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQVARIANT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -239,8 +239,8 @@ QVariant(int i)
 */
 HB_FUNC_STATIC( QVARIANT_NEW7 )
 {
-  QVariant * o = new QVariant ( PINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -248,8 +248,8 @@ QVariant(uint ui)
 */
 HB_FUNC_STATIC( QVARIANT_NEW8 )
 {
-  QVariant * o = new QVariant ( PUINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PUINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -257,8 +257,8 @@ QVariant(qlonglong ll)
 */
 HB_FUNC_STATIC( QVARIANT_NEW9 )
 {
-  QVariant * o = new QVariant ( PQLONGLONG(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PQLONGLONG(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -266,8 +266,8 @@ QVariant(qulonglong ull)
 */
 HB_FUNC_STATIC( QVARIANT_NEW10 )
 {
-  QVariant * o = new QVariant ( PQULONGLONG(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PQULONGLONG(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -275,8 +275,8 @@ QVariant(bool b)
 */
 void QVariant_new11 ()
 {
-  QVariant * o = new QVariant ( PBOOL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PBOOL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -284,8 +284,8 @@ QVariant(double d)
 */
 HB_FUNC_STATIC( QVARIANT_NEW12 )
 {
-  QVariant * o = new QVariant ( PDOUBLE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PDOUBLE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -293,8 +293,8 @@ QVariant(float f)
 */
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
-  QVariant * o = new QVariant ( PFLOAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PFLOAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -303,8 +303,8 @@ QVariant(const char *str)
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
 #ifndef QT_NO_CAST_FROM_ASCII
-  QVariant * o = new QVariant ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PCONSTCHAR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -313,8 +313,8 @@ QVariant(const QByteArray &bytearray)
 */
 void QVariant_new15 ()
 {
-  QVariant * o = new QVariant ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -322,8 +322,8 @@ QVariant(const QBitArray &bitarray)
 */
 void QVariant_new16 ()
 {
-  QVariant * o = new QVariant ( *PQBITARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQBITARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -331,8 +331,8 @@ QVariant(const QString &string)
 */
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
-  QVariant * o = new QVariant ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -340,8 +340,8 @@ QVariant(QLatin1String string)
 */
 void QVariant_new18 ()
 {
-  QVariant * o = new QVariant ( *PQLATIN1STRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQLATIN1STRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -349,8 +349,8 @@ QVariant(const QStringList &stringlist)
 */
 HB_FUNC_STATIC( QVARIANT_NEW19 )
 {
-  QVariant * o = new QVariant ( PQSTRINGLIST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( PQSTRINGLIST(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -358,8 +358,8 @@ QVariant(QChar qchar)
 */
 void QVariant_new20 ()
 {
-  QVariant * o = new QVariant ( *PQCHAR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQCHAR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -367,8 +367,8 @@ QVariant(const QDate &date)
 */
 void QVariant_new21 ()
 {
-  QVariant * o = new QVariant ( *PQDATE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQDATE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -376,8 +376,8 @@ QVariant(const QTime &time)
 */
 void QVariant_new22 ()
 {
-  QVariant * o = new QVariant ( *PQTIME(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQTIME(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -385,8 +385,8 @@ QVariant(const QDateTime &datetime)
 */
 void QVariant_new23 ()
 {
-  QVariant * o = new QVariant ( *PQDATETIME(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQDATETIME(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -402,8 +402,8 @@ for (i1=0;i1<nLen1;i1++)
 {
   par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-  QVariant * o = new QVariant ( par1 );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( par1 );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -420,8 +420,8 @@ QVariant(const QSize &size)
 void QVariant_new27 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQSIZE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQSIZE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -431,8 +431,8 @@ QVariant(const QSizeF &size)
 void QVariant_new28 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQSIZEF(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQSIZEF(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -442,8 +442,8 @@ QVariant(const QPoint &pt)
 void QVariant_new29 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQPOINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQPOINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -453,8 +453,8 @@ QVariant(const QPointF &pt)
 void QVariant_new30 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQPOINTF(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQPOINTF(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -464,8 +464,8 @@ QVariant(const QLine &line)
 void QVariant_new31 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQLINE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQLINE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -475,8 +475,8 @@ QVariant(const QLineF &line)
 void QVariant_new32 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQLINEF(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQLINEF(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -486,8 +486,8 @@ QVariant(const QRect &rect)
 void QVariant_new33 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQRECT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQRECT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -497,8 +497,8 @@ QVariant(const QRectF &rect)
 void QVariant_new34 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQRECTF(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQRECTF(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -507,8 +507,8 @@ QVariant(const QLocale &locale)
 */
 void QVariant_new35 ()
 {
-  QVariant * o = new QVariant ( *PQLOCALE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQLOCALE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -517,8 +517,8 @@ QVariant(const QRegExp &regExp)
 void QVariant_new36 ()
 {
 #ifndef QT_NO_REGEXP
-  QVariant * o = new QVariant ( *PQREGEXP(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQREGEXP(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -528,8 +528,8 @@ QVariant(const QRegularExpression &re)
 void QVariant_new37 ()
 {
 #ifndef QT_NO_REGULAREXPRESSION
-  QVariant * o = new QVariant ( *PQREGULAREXPRESSION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQREGULAREXPRESSION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -538,8 +538,8 @@ QVariant(const QUrl &url)
 */
 void QVariant_new38 ()
 {
-  QVariant * o = new QVariant ( *PQURL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQURL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -547,8 +547,8 @@ QVariant(const QEasingCurve &easing)
 */
 void QVariant_new39 ()
 {
-  QVariant * o = new QVariant ( *PQEASINGCURVE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQEASINGCURVE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -556,8 +556,8 @@ QVariant(const QUuid &uuid)
 */
 void QVariant_new40 ()
 {
-  QVariant * o = new QVariant ( *PQUUID(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQUUID(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -565,8 +565,8 @@ QVariant(const QModelIndex &modelIndex)
 */
 void QVariant_new41 ()
 {
-  QVariant * o = new QVariant ( *PQMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQMODELINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -574,8 +574,8 @@ QVariant(const QJsonValue &jsonValue)
 */
 void QVariant_new42 ()
 {
-  QVariant * o = new QVariant ( *PQJSONVALUE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQJSONVALUE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -583,8 +583,8 @@ QVariant(const QJsonObject &jsonObject)
 */
 void QVariant_new43 ()
 {
-  QVariant * o = new QVariant ( *PQJSONOBJECT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQJSONOBJECT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -592,8 +592,8 @@ QVariant(const QJsonArray &jsonArray)
 */
 void QVariant_new44 ()
 {
-  QVariant * o = new QVariant ( *PQJSONARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQJSONARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -601,8 +601,8 @@ QVariant(const QJsonDocument &jsonDocument)
 */
 void QVariant_new45 ()
 {
-  QVariant * o = new QVariant ( *PQJSONDOCUMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVariant ( *PQJSONDOCUMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QVariant()

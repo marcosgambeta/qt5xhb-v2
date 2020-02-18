@@ -56,8 +56,8 @@ explicit QWinEventNotifier(QObject *parent = nullptr)
 void QWinEventNotifier_new1 ()
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * o = new QWinEventNotifier ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QWinEventNotifier ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

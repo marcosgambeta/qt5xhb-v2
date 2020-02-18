@@ -80,8 +80,8 @@ QJsonValueRef(QJsonArray *array, int idx)
 */
 void QJsonValueRef_new1 ()
 {
-  QJsonValueRef * o = new QJsonValueRef ( PQJSONARRAY(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJsonValueRef ( PQJSONARRAY(1), PINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -89,8 +89,8 @@ QJsonValueRef(QJsonObject *object, int idx)
 */
 void QJsonValueRef_new2 ()
 {
-  QJsonValueRef * o = new QJsonValueRef ( PQJSONOBJECT(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QJsonValueRef ( PQJSONOBJECT(1), PINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QJsonValueRef(QJsonArray *array, int idx)

@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    QSemaphore * o = new QSemaphore ( OPINT(1,0) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QSemaphore ( OPINT(1,0) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

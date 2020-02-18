@@ -58,8 +58,8 @@ QSignalTransition(QState *sourceState = nullptr)
 */
 void QSignalTransition_new1 ()
 {
-  QSignalTransition * o = new QSignalTransition ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSignalTransition ( OPQSTATE(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -67,8 +67,8 @@ QSignalTransition(const QObject *sender, const char *signal,QState *sourceState 
 */
 void QSignalTransition_new2 ()
 {
-  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,nullptr) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSignalTransition ( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSignalTransition(QState *sourceState = nullptr)
