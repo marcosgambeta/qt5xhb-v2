@@ -76,8 +76,8 @@ QDeclarativeView ( QWidget * parent = nullptr )
 */
 void QDeclarativeView_new1 ()
 {
-  QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeView ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +85,8 @@ QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
 */
 void QDeclarativeView_new2 ()
 {
-  QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeView ( QWidget * parent = nullptr )

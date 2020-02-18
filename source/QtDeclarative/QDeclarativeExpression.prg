@@ -76,8 +76,8 @@ QDeclarativeExpression ()
 */
 void QDeclarativeExpression_new1 ()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeExpression ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +85,8 @@ QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QStr
 */
 void QDeclarativeExpression_new2 ()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeExpression ()

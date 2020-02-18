@@ -69,8 +69,8 @@ QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
 */
 void QDeclarativeContext_new1 ()
 {
-  QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeContext ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nu
 */
 void QDeclarativeContext_new2 ()
 {
-  QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeContext ( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )

@@ -71,8 +71,8 @@ QDeclarativeError ()
 */
 void QDeclarativeError_new1 ()
 {
-  QDeclarativeError * o = new QDeclarativeError ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDeclarativeError ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QDeclarativeError ( const QDeclarativeError & other )
 */
 void QDeclarativeError_new2 ()
 {
-  QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDeclarativeError ()

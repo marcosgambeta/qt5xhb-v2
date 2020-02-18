@@ -71,8 +71,8 @@ QDeclarativeListReference ()
 */
 void QDeclarativeListReference_new1 ()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeListReference ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -80,8 +80,8 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 */
 void QDeclarativeListReference_new2 ()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeListReference ()

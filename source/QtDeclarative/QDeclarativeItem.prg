@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQDECLARATIVEITEM(1)||ISNIL(1)) )
   {
-    QDeclarativeItem * o = new QDeclarativeItem ( OPQDECLARATIVEITEM(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QDeclarativeItem ( OPQDECLARATIVEITEM(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

@@ -70,8 +70,8 @@ QDeclarativeScriptString ()
 */
 void QDeclarativeScriptString_new1 ()
 {
-  QDeclarativeScriptString * o = new QDeclarativeScriptString ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDeclarativeScriptString ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
 void QDeclarativeScriptString_new2 ()
 {
-  QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDeclarativeScriptString ()

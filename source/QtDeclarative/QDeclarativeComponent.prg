@@ -75,8 +75,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr 
 */
 void QDeclarativeComponent_new1 ()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -84,8 +84,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, Q
 */
 void QDeclarativeComponent_new2 ()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -93,8 +93,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject *
 */
 void QDeclarativeComponent_new3 ()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
