@@ -63,8 +63,8 @@ QPlaceEditorial()
 void QPlaceEditorial_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * o = new QPlaceEditorial ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceEditorial ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -74,8 +74,8 @@ QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
 void QPlaceEditorial_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * o = new QPlaceEditorial ( *PQPLACECONTENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceEditorial ( *PQPLACECONTENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

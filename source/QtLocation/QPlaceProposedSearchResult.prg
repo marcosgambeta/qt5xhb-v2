@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(0) )
   {
-    QPlaceProposedSearchResult * o = new QPlaceProposedSearchResult ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QPlaceProposedSearchResult ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

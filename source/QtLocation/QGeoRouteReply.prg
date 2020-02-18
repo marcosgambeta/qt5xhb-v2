@@ -71,8 +71,8 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QGeoRouteReply * o = new QGeoRouteReply ( (QGeoRouteReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QGeoRouteReply ( (QGeoRouteReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

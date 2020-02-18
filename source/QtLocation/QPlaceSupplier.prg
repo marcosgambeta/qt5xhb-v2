@@ -77,8 +77,8 @@ QPlaceSupplier()
 void QPlaceSupplier_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * o = new QPlaceSupplier ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceSupplier ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QPlaceSupplier(const QPlaceSupplier &other)
 void QPlaceSupplier_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * o = new QPlaceSupplier ( *PQPLACESUPPLIER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceSupplier ( *PQPLACESUPPLIER(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

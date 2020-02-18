@@ -82,8 +82,8 @@ QGeoManeuver()
 void QGeoManeuver_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoManeuver * o = new QGeoManeuver ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoManeuver ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -93,8 +93,8 @@ QGeoManeuver(const QGeoManeuver &other)
 void QGeoManeuver_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoManeuver * o = new QGeoManeuver ( *PQGEOMANEUVER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoManeuver ( *PQGEOMANEUVER(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

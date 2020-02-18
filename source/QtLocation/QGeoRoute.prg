@@ -89,8 +89,8 @@ QGeoRoute()
 void QGeoRoute_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoute * o = new QGeoRoute ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRoute ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -100,8 +100,8 @@ QGeoRoute(const QGeoRoute &other)
 void QGeoRoute_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoute * o = new QGeoRoute ( *PQGEOROUTE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRoute ( *PQGEOROUTE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

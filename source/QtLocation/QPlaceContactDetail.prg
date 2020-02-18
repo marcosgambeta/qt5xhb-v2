@@ -71,8 +71,8 @@ QPlaceContactDetail()
 void QPlaceContactDetail_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * o = new QPlaceContactDetail ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceContactDetail ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -82,8 +82,8 @@ QPlaceContactDetail(const QPlaceContactDetail &other)
 void QPlaceContactDetail_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * o = new QPlaceContactDetail ( *PQPLACECONTACTDETAIL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceContactDetail ( *PQPLACECONTACTDETAIL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

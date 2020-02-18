@@ -114,8 +114,8 @@ QPlace()
 void QPlace_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * o = new QPlace ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlace ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -125,8 +125,8 @@ QPlace(const QPlace &other)
 void QPlace_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * o = new QPlace ( *PQPLACE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlace ( *PQPLACE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

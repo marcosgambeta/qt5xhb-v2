@@ -106,8 +106,8 @@ QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination
 void QGeoRouteRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteRequest * o = new QGeoRouteRequest ( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRouteRequest ( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -117,8 +117,8 @@ QGeoRouteRequest(const QGeoRouteRequest &other)
 void QGeoRouteRequest_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteRequest * o = new QGeoRouteRequest ( *PQGEOROUTEREQUEST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRouteRequest ( *PQGEOROUTEREQUEST(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

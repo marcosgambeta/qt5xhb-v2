@@ -71,8 +71,8 @@ QPlaceAttribute()
 void QPlaceAttribute_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * o = new QPlaceAttribute ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceAttribute ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -82,8 +82,8 @@ QPlaceAttribute(const QPlaceAttribute &other)
 void QPlaceAttribute_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * o = new QPlaceAttribute ( *PQPLACEATTRIBUTE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPlaceAttribute ( *PQPLACEATTRIBUTE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
