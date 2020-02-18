@@ -66,8 +66,8 @@ explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
 void QOAuthHttpServerReplyHandler_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QOAuthHttpServerReplyHandler ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -77,8 +77,8 @@ explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
 void QOAuthHttpServerReplyHandler_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( PQUINT16(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QOAuthHttpServerReplyHandler ( PQUINT16(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -88,8 +88,8 @@ explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port,
 void QOAuthHttpServerReplyHandler_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QOAuthHttpServerReplyHandler ( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

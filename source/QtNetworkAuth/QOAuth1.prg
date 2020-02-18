@@ -77,8 +77,8 @@ explicit QOAuth1(QObject *parent = nullptr)
 void QOAuth1_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * o = new QOAuth1 ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QOAuth1 ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -88,8 +88,8 @@ explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
 void QOAuth1_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * o = new QOAuth1 ( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QOAuth1 ( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

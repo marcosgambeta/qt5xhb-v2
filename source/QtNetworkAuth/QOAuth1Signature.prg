@@ -93,8 +93,8 @@ QOAuth1Signature(const QOAuth1Signature &other)
 void QOAuth1Signature_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * o = new QOAuth1Signature ( *PQOAUTH1SIGNATURE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOAuth1Signature ( *PQOAUTH1SIGNATURE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
